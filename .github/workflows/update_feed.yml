@@ -1,0 +1,87 @@
+name: Update Academic Feed
+
+on:
+  schedule:
+    - cron: '*/15 * * * *'  # Every 15 minutes
+  workflow_dispatch:  # Manual trigger
+  push:
+    branches: [ main ]
+    paths:
+      - 'data/**'
+      - 'config.yml'
+      - 'src/**'
+
+jobs:
+  update-feed:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write  # Required for committing changes
+    
+    steps:
+    - name: Checkout repository
+      uses: actions/checkout@v4
+      with:
+        fetch-depth: 0  # Fetch full history for proper git operations
+    
+    - name: Set up Python
+      uses: actions/setup-python@v4
+      with:
+        python-version: '3.11'
+        cache: 'pip'
+    
+    - name: Install dependencies
+      run: |
+        pip install -r requirements.txt
+    
+    - name: Create output directory
+      run: |
+        mkdir -p output logs cache
+    
+    - name: Download Paperpile export
+      run: |
+        # Download fresh BibTeX export from Paperpile
+        curl -L "${{ secrets.PAPERPILE_EXPORT_URL }}" -o data/paperpile_export.bib || echo "Warning: Could not download Paperpile export, using cached version"
+    
+    - name: Generate feeds
+      env:
+        SEMANTIC_SCHOLAR_API_KEY: ${{ secrets.SEMANTIC_SCHOLAR_API_KEY }}
+      run: |
+        # Update config with API key if provided
+        if [ ! -z "$SEMANTIC_SCHOLAR_API_KEY" ]; then
+          python -c "
+import yaml
+with open('config.yml', 'r') as f:
+    config = yaml.safe_load(f)
+config['api']['semantic_scholar']['api_key'] = '$SEMANTIC_SCHOLAR_API_KEY'
+with open('config.yml', 'w') as f:
+    yaml.dump(config, f, default_flow_style=False)
+"
+        fi
+        
+        # Generate feeds
+        python -m src.main data/paperpile_export.bib -o output/ --feed-title "To Read - Research Papers" --feed-description "Academic papers from Paperpile enriched with metadata"
+    
+    - name: Check for changes
+      id: git-check
+      run: |
+        git add output/
+        if git diff --staged --quiet; then
+          echo "changes=false" >> $GITHUB_OUTPUT
+        else
+          echo "changes=true" >> $GITHUB_OUTPUT
+        fi
+    
+    - name: Commit and push changes
+      if: steps.git-check.outputs.changes == 'true'
+      run: |
+        git config --local user.email "action@github.com"
+        git config --local user.name "GitHub Action"
+        git commit -m "🤖 Update academic feeds - $(date -u '+%Y-%m-%d %H:%M:%S UTC')"
+        git push
+    
+    - name: Upload feeds as artifacts
+      uses: actions/upload-artifact@v3
+      with:
+        name: academic-feeds
+        path: output/
+        retention-days: 30
