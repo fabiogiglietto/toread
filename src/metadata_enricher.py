@@ -1295,8 +1295,15 @@ class MetadataEnricher:
         cache_stats = self.cache.get_cache_stats()
         self.logger.info(f"Cache stats: {cache_stats['valid_entries']} valid, {cache_stats['expired_entries']} expired entries")
         
-        # Start with all cached metadata
-        enriched = self.cache.get_all_cached_metadata(entries)
+        # Start with all cached metadata and convert back to EnrichedMetadata objects
+        cached_dicts = self.cache.get_all_cached_metadata(entries)
+        enriched = {}
+        for key, metadata_dict in cached_dicts.items():
+            try:
+                enriched[key] = EnrichedMetadata(**metadata_dict)
+            except Exception as e:
+                self.logger.warning(f"Failed to convert cached metadata for {key}: {e}")
+        
         cached_count = len(enriched)
         
         # Get entries that need enrichment

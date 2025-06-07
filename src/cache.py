@@ -8,7 +8,6 @@ from pathlib import Path
 from typing import Dict, Optional, Set
 from dataclasses import asdict
 from .bibtex_parser import BibEntry
-from .metadata_enricher import EnrichedMetadata
 
 
 class MetadataCache:
@@ -68,7 +67,7 @@ class MetadataCache:
         
         return True
     
-    def get_metadata(self, entry: BibEntry) -> Optional[EnrichedMetadata]:
+    def get_metadata(self, entry: BibEntry) -> Optional[Dict]:
         """Retrieve cached metadata for an entry."""
         if not self.is_cached(entry):
             return None
@@ -77,19 +76,24 @@ class MetadataCache:
         cached_item = self.cache_data[entry_hash]
         
         try:
-            # Convert dict back to EnrichedMetadata object
-            metadata_dict = cached_item['metadata']
-            return EnrichedMetadata(**metadata_dict)
+            # Return metadata as dict
+            return cached_item['metadata']
         except Exception as e:
             self.logger.warning(f"Failed to deserialize cached metadata: {e}")
             return None
     
-    def store_metadata(self, entry: BibEntry, metadata: EnrichedMetadata) -> None:
+    def store_metadata(self, entry: BibEntry, metadata) -> None:
         """Store enriched metadata in cache."""
         entry_hash = self._get_entry_hash(entry)
         
-        # Convert EnrichedMetadata to dict for JSON serialization
-        metadata_dict = asdict(metadata)
+        # Convert metadata to dict for JSON serialization
+        if hasattr(metadata, '__dict__'):
+            # If it's an object, convert to dict
+            from dataclasses import asdict
+            metadata_dict = asdict(metadata) if hasattr(metadata, '__dataclass_fields__') else metadata.__dict__
+        else:
+            # Already a dict
+            metadata_dict = metadata
         
         self.cache_data[entry_hash] = {
             'entry_key': entry.key,
@@ -110,7 +114,7 @@ class MetadataCache:
         self.logger.info(f"Found {len(uncached)} uncached entries out of {len(entries)} total")
         return uncached
     
-    def get_all_cached_metadata(self, entries: list[BibEntry]) -> Dict[str, EnrichedMetadata]:
+    def get_all_cached_metadata(self, entries: list[BibEntry]) -> Dict[str, Dict]:
         """Get all cached metadata for a list of entries."""
         cached_metadata = {}
         
