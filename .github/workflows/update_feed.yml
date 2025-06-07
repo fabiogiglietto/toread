@@ -42,23 +42,22 @@ jobs:
         # Download fresh BibTeX export from Paperpile
         curl -L "${{ secrets.PAPERPILE_EXPORT_URL }}" -o data/paperpile_export.bib || echo "Warning: Could not download Paperpile export, using cached version"
     
-    - name: Generate feeds
+    - name: Update config with API key
+      if: env.SEMANTIC_SCHOLAR_API_KEY != ''
       env:
         SEMANTIC_SCHOLAR_API_KEY: ${{ secrets.SEMANTIC_SCHOLAR_API_KEY }}
       run: |
-        # Update config with API key if provided
-        if [ ! -z "$SEMANTIC_SCHOLAR_API_KEY" ]; then
-          python -c "
-import yaml
-with open('config.yml', 'r') as f:
-    config = yaml.safe_load(f)
-config['api']['semantic_scholar']['api_key'] = '$SEMANTIC_SCHOLAR_API_KEY'
-with open('config.yml', 'w') as f:
-    yaml.dump(config, f, default_flow_style=False)
-"
-        fi
-        
-        # Generate feeds
+        python -c "
+        import yaml
+        with open('config.yml', 'r') as f:
+            config = yaml.safe_load(f)
+        config['api']['semantic_scholar']['api_key'] = '${{ secrets.SEMANTIC_SCHOLAR_API_KEY }}'
+        with open('config.yml', 'w') as f:
+            yaml.dump(config, f, default_flow_style=False)
+        "
+    
+    - name: Generate feeds
+      run: |
         python -m src.main data/paperpile_export.bib -o output/ --feed-title "To Read - Research Papers" --feed-description "Academic papers from Paperpile enriched with metadata"
     
     - name: Check for changes
