@@ -33,9 +33,9 @@ jobs:
       run: |
         pip install -r requirements.txt
     
-    - name: Create output directory
+    - name: Create directories
       run: |
-        mkdir -p output logs cache
+        mkdir -p data output logs cache
     
     - name: Download Paperpile export
       run: |
