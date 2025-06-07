@@ -86,7 +86,7 @@ jobs:
     - name: Check for changes
       id: git-check
       run: |
-        git add output/feed.json output/feed.xml
+        git add output/feed.json output/feed.xml 2>/dev/null || true
         if git diff --staged --quiet; then
           echo "changes=false" >> $GITHUB_OUTPUT
         else

@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" version="2.0">
+  <channel>
+    <title>ToRead - Academic Papers</title>
+    <link>https://github.com/user/toread</link>
+    <description>Academic papers from Paperpile exports</description>
+    <language>en-us</language>
+    <generator>ToRead RSS Generator</generator>
+    <lastBuildDate>Sat, 07 Jun 2025 12:36:17 +0000</lastBuildDate>
+    <pubDate>Sat, 07 Jun 2025 12:36:17 +0000</pubDate>
+    <item>
+      <title>Red-Teaming in the Public Interest</title>
+      <description>This report offers a vision for red-teaming in the public interest: a process that goes beyond system-centric testing of already built systems to consider the full range of ways the public can be involved in evaluating genAI harms.</description>
+      <guid isPermaLink="false">bibtex:Unknown2025-qj</guid>
+      <pubDate>Wed, 01 Jan 2025 00:00:00 +0000</pubDate>
+      <category>Techreport</category>
+      <content:encoded>&lt;![CDATA[&lt;h3&gt;Abstract&lt;/h3&gt;&lt;p&gt;This report offers a vision for red-teaming in the public interest: a process that goes beyond system-centric testing of already built systems to consider the full range of ways the public can be involved in evaluating genAI harms.&lt;/p&gt;&lt;h3&gt;Details&lt;/h3&gt;&lt;ul&gt;&lt;li&gt;&lt;strong&gt;Year:&lt;/strong&gt; 2025&lt;/li&gt;&lt;/ul&gt;&lt;h3&gt;Links&lt;/h3&gt;&lt;p&gt;&lt;a href=&quot;https://datasociety.net/wp-content/uploads/2025/02/Red-Teaming-in_the_Public_Interest_FINAL1.pdf&quot;&gt;PDF&lt;/a&gt;&lt;/p&gt;]]&gt;</content:encoded>
+    </item>
+  </channel>
+</rss>
