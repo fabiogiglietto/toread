@@ -1,0 +1,18 @@
+Collecting arxiv
+  Downloading arxiv-2.2.0-py3-none-any.whl (11 kB)
+Collecting feedparser~=6.0.10
+  Downloading feedparser-6.0.11-py3-none-any.whl (81 kB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 81.3/81.3 kB 595.0 kB/s eta 0:00:00
+Requirement already satisfied: requests~=2.32.0 in ./venv/lib/python3.11/site-packages (from arxiv) (2.32.3)
+Collecting sgmllib3k
+  Downloading sgmllib3k-1.0.0.tar.gz (5.8 kB)
+  Preparing metadata (setup.py): started
+  Preparing metadata (setup.py): finished with status 'done'
+Requirement already satisfied: charset-normalizer<4,>=2 in ./venv/lib/python3.11/site-packages (from requests~=2.32.0->arxiv) (3.4.2)
+Requirement already satisfied: idna<4,>=2.5 in ./venv/lib/python3.11/site-packages (from requests~=2.32.0->arxiv) (3.10)
+Requirement already satisfied: urllib3<3,>=1.21.1 in ./venv/lib/python3.11/site-packages (from requests~=2.32.0->arxiv) (2.4.0)
+Requirement already satisfied: certifi>=2017.4.17 in ./venv/lib/python3.11/site-packages (from requests~=2.32.0->arxiv) (2025.4.26)
+Installing collected packages: sgmllib3k, feedparser, arxiv
+  Running setup.py install for sgmllib3k: started
+  Running setup.py install for sgmllib3k: finished with status 'done'
+Successfully installed arxiv-2.2.0 feedparser-6.0.11 sgmllib3k-1.0.0

@@ -1,0 +1,110 @@
+# ToRead Configuration File
+# Configuration for converting Paperpile BibTeX exports to RSS feeds
+
+# Paperpile Configuration
+paperpile:
+  # Paperpile folder/library settings
+  folder_path: "/To Read"  # Specific folder within Paperpile library
+  export_url: "https://paperpile.com/eb/fsrPlkfsoH"
+  # Local cache settings
+  local_cache: "data/paperpile_export.bib"
+  auto_sync: true
+  sync_interval: 15  # minutes
+  # Include subfolders
+  include_subfolders: true
+
+# API Configuration
+api:
+  # Crossref API for academic metadata
+  crossref:
+    enabled: true
+    base_url: "https://api.crossref.org/works"
+    rate_limit: 1.0  # seconds between requests
+    timeout: 10
+    user_agent: "ToRead/1.0 (https://github.com/user/toread; mailto:user@example.com)"
+    fields: ["abstract", "published-print", "published-online", "subject"]
+    
+  # Semantic Scholar API for AI/ML papers
+  semantic_scholar:
+    enabled: true
+    base_url: "https://api.semanticscholar.org/graph/v1"
+    api_key: "igLzlRjWMo7oymQqDtf7Q6ttrMHsv2jr3MIYHQmz"  # Semantic Scholar API key
+    rate_limit: 1.0
+    timeout: 10
+    fields: ["abstract", "authors", "citations", "references", "venue", "year"]
+    max_papers_per_request: 500
+
+# Feed Output Settings
+feeds:
+  # Feed metadata
+  title: "To Read - Research Papers Feed"
+  description: "Academic papers and research articles from Paperpile 'To Read' folder, enriched with metadata"
+  link: "https://github.com/user/toread"
+  language: "en-us"
+  author: "ToRead Bot"
+  
+  # Output formats and files
+  json_feed:
+    enabled: true
+    output_file: "output/feed.json"
+    include_full_metadata: true  # Include all academic metadata
+    include_citation_metrics: true
+    include_pdf_links: true
+    
+  rss:
+    enabled: true
+    output_file: "output/feed.xml"
+    simplified: true  # Simplified format for compatibility
+    
+  # Content settings (applies to both formats)
+  max_items: 100  # 0 = unlimited
+  sort_by: "date_added"  # date_added, publication_date, title
+  sort_order: "desc"  # desc, asc
+  
+  include_abstract: true
+  abstract_max_length: 500  # characters, 0 = no limit
+  include_authors: true
+  include_full_citation: true
+  include_doi_links: true
+  include_pdf_links: true
+  
+  # Item categorization
+  auto_categories: true  # Generate categories from journal/venue
+  custom_categories: ["AI", "Machine Learning", "Research"]
+  
+  # Update behavior
+  auto_update: true
+  update_on_sync: true
+
+# Processing Options
+processing:
+  # Metadata enrichment settings
+  enable_enrichment: true
+  enrichment_sources:
+    - "crossref"
+    - "doi"
+    - "arxiv"
+    - "semantic_scholar"
+  
+  # Caching (future feature)
+  cache_metadata: true
+  cache_duration: 24  # hours
+  
+  # Error handling
+  continue_on_error: true
+  max_retries: 3
+  retry_delay: 2.0  # seconds
+
+# Logging Configuration
+logging:
+  level: "INFO"  # DEBUG, INFO, WARNING, ERROR, CRITICAL
+  format: "%(asctime)s - %(name)s - %(levelname)s - %(message)s"
+  file: "logs/toread.log"
+  console: true
+
+# Directory Configuration
+directories:
+  data: "data"      # Input BibTeX files
+  output: "output"  # Generated RSS feeds
+  logs: "logs"      # Log files
+  cache: "cache"    # Metadata cache (future feature)
