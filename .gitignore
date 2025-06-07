@@ -166,7 +166,7 @@ cython_debug/
 cache/  # Cache handled by GitHub Actions
 temp/
 
-# XML files (but allow specific feed files)
+# Ignore XML files except feeds
 *.xml
-!output/feed.xml   # Allow generated RSS feed
-!output/feed.json  # Allow generated JSON feed
+!output/feed.xml
+!output/feed.json
