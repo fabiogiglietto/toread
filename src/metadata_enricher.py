@@ -14,6 +14,7 @@ from urllib.parse import quote
 from requests.adapters import HTTPAdapter
 from urllib3.util.retry import Retry
 from .bibtex_parser import BibEntry
+from .cache import MetadataCache
 
 
 @dataclass
@@ -1192,8 +1193,17 @@ class ArxivClient:
 class MetadataEnricher:
     """Main enricher that coordinates multiple API clients."""
     
-    def __init__(self, crossref_config: Dict = None, semantic_scholar_config: Dict = None, arxiv_config: Dict = None):
+    def __init__(self, crossref_config: Dict = None, semantic_scholar_config: Dict = None, arxiv_config: Dict = None, cache_config: Dict = None):
         self.logger = logging.getLogger(__name__)
+        
+        # Initialize cache
+        if cache_config:
+            self.cache = MetadataCache(
+                cache_file=cache_config.get('cache_file', 'cache/metadata_cache.json'),
+                cache_duration_days=cache_config.get('cache_duration_days', 30)
+            )
+        else:
+            self.cache = MetadataCache()
         
         # Initialize clients
         self.crossref_client = None
@@ -1277,22 +1287,42 @@ class MetadataEnricher:
         return metadata
     
     def enrich_entries(self, entries: List[BibEntry]) -> Dict[str, Optional[EnrichedMetadata]]:
-        """Enrich multiple entries."""
-        enriched = {}
+        """Enrich multiple entries using cache to avoid redundant API calls."""
+        # Clean up expired cache entries
+        self.cache.cleanup_expired()
         
-        for entry in entries:
+        # Get cache statistics
+        cache_stats = self.cache.get_cache_stats()
+        self.logger.info(f"Cache stats: {cache_stats['valid_entries']} valid, {cache_stats['expired_entries']} expired entries")
+        
+        # Start with all cached metadata
+        enriched = self.cache.get_all_cached_metadata(entries)
+        cached_count = len(enriched)
+        
+        # Get entries that need enrichment
+        uncached_entries = self.cache.get_uncached_entries(entries)
+        
+        self.logger.info(f"Processing {len(entries)} entries: {cached_count} cached, {len(uncached_entries)} need enrichment")
+        
+        # Enrich only uncached entries
+        for entry in uncached_entries:
             try:
                 metadata = self.enrich_entry(entry)
                 enriched[entry.key] = metadata
                 
                 if metadata:
-                    self.logger.info(f"Successfully enriched entry: {entry.key} (source: {metadata.source})")
+                    # Store in cache for future use
+                    self.cache.store_metadata(entry, metadata)
+                    self.logger.info(f"Successfully enriched and cached entry: {entry.key} (source: {metadata.source})")
                 else:
                     self.logger.warning(f"Could not enrich entry: {entry.key}")
                     
             except Exception as e:
                 self.logger.error(f"Error enriching entry {entry.key}: {e}")
                 enriched[entry.key] = None
+        
+        # Save cache to disk
+        self.cache.save_cache()
         
         return enriched
     

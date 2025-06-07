@@ -14,9 +14,9 @@ class ToReadApp:
     """Main application class for converting BibTeX to RSS and JSON Feed formats."""
     
     def __init__(self, enrich_metadata: bool = True, crossref_config: dict = None, 
-                 semantic_scholar_config: dict = None, arxiv_config: dict = None):
+                 semantic_scholar_config: dict = None, arxiv_config: dict = None, cache_config: dict = None):
         self.bibtex_parser = BibTeXParser()
-        self.metadata_enricher = MetadataEnricher(crossref_config, semantic_scholar_config, arxiv_config) if enrich_metadata else None
+        self.metadata_enricher = MetadataEnricher(crossref_config, semantic_scholar_config, arxiv_config, cache_config) if enrich_metadata else None
         self.feed_generator = FeedGenerator()
     
     def convert_bibtex_to_feeds(self, bibtex_file: str, 
@@ -179,12 +179,18 @@ Examples:
         'rate_limit': 3.0  # ArXiv recommends 3 second delays
     }
     
+    cache_config = {
+        'cache_file': 'cache/metadata_cache.json',
+        'cache_duration_days': 30
+    }
+    
     # Create application instance
     app = ToReadApp(
         enrich_metadata=not args.no_enrich,
         crossref_config=crossref_config,
         semantic_scholar_config=semantic_scholar_config,
-        arxiv_config=arxiv_config
+        arxiv_config=arxiv_config,
+        cache_config=cache_config
     )
     
     # Set feed generator parameters

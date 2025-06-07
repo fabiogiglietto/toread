@@ -37,6 +37,15 @@ jobs:
       run: |
         mkdir -p data output logs cache
     
+    - name: Restore metadata cache
+      uses: actions/cache@v3
+      with:
+        path: cache/
+        key: toread-metadata-cache-v1-${{ github.ref }}-${{ github.sha }}
+        restore-keys: |
+          toread-metadata-cache-v1-${{ github.ref }}-
+          toread-metadata-cache-v1-
+    
     - name: Download Paperpile export
       run: |
         # Download fresh BibTeX export from Paperpile

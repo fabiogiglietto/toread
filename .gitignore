@@ -166,4 +166,5 @@ cython_debug/
 *.rss
 !output/feed.json  # Allow generated JSON feed
 !output/feed.xml   # Allow generated RSS feed
+cache/  # Cache handled by GitHub Actions
 temp/
