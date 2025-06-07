@@ -40,7 +40,15 @@ jobs:
     - name: Download Paperpile export
       run: |
         # Download fresh BibTeX export from Paperpile
-        curl -L "${{ secrets.PAPERPILE_EXPORT_URL }}" -o data/paperpile_export.bib || echo "Warning: Could not download Paperpile export, using cached version"
+        if [ ! -z "${{ secrets.PAPERPILE_EXPORT_URL }}" ]; then
+          curl -L "${{ secrets.PAPERPILE_EXPORT_URL }}" -o data/paperpile_export.bib || echo "Warning: Could not download from Paperpile"
+        fi
+        
+        # Check if we have a BibTeX file to process
+        if [ ! -f "data/paperpile_export.bib" ]; then
+          echo "No BibTeX file found. Creating empty file to prevent errors."
+          echo "% Empty BibTeX file - add PAPERPILE_EXPORT_URL secret to enable automatic downloads" > data/paperpile_export.bib
+        fi
     
     - name: Update config with API key
       if: env.SEMANTIC_SCHOLAR_API_KEY != ''
