@@ -162,7 +162,6 @@ cython_debug/
 
 # Application specific
 *.bib
-!data/paperpile_export.bib  # Allow the main export file
 *.xml
 *.rss
 output/
