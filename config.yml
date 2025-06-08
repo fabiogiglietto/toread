@@ -37,7 +37,7 @@ api:
 # Feed Output Settings
 feeds:
   # Feed metadata
-  title: "To Read - Research Papers Feed"
+  title: "FG's #toread list"
   description: "Academic papers and research articles from Paperpile 'To Read' folder, enriched with metadata"
   link: "https://github.com/user/toread"
   language: "en-us"
