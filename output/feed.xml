@@ -6,8 +6,8 @@
     <description>Academic papers from Paperpile enriched with metadata</description>
     <language>en-us</language>
     <generator>ToRead RSS Generator</generator>
-    <lastBuildDate>Fri, 27 Jun 2025 23:41:12 +0000</lastBuildDate>
-    <pubDate>Fri, 27 Jun 2025 23:41:12 +0000</pubDate>
+    <lastBuildDate>Fri, 27 Jun 2025 23:51:50 +0000</lastBuildDate>
+    <pubDate>Fri, 27 Jun 2025 23:51:50 +0000</pubDate>
     <item>
       <title>Forgetful by design? A critical audit of YouTube's search API for academic research</title>
       <description>This paper critically audits the search endpoint of YouTube's Data API (v3), a common tool for academic research. Through systematic weekly searches over six months using eleven queries, we identify major limitations regarding completeness, representativeness, consistency, and bias. Our findings reveal substantial differences between ranking parameters like relevance and date in terms of video recall and precision, with relevance often retrieving numerous off-topic videos. We also find severe te...</description>
@@ -69,8 +69,8 @@
       <guid isPermaLink="false">bibtex:Luceri2025-tr</guid>
       <pubDate>Wed, 01 Jan 2025 00:00:00 +0000</pubDate>
       <dc:creator>Luceri, Luca, Salkar, Tanishq Vijay, Balasubramanian, Ashwin, Pinto, Gabriela, Sun, Chenning, Ferrara, Emilio</dc:creator>
-      <category>Article</category>
       <category>arXiv [cs.SI]</category>
+      <category>Article</category>
       <content:encoded>&lt;![CDATA[&lt;h3&gt;Abstract&lt;/h3&gt;&lt;p&gt;Detecting coordinated inauthentic behavior (CIB) is central to the study of online influence operations. However, most methods focus on text-centric platforms, leaving video-first ecosystems like TikTok largely unexplored. To address this gap, we develop and evaluate a computational framework for detecting CIB on TikTok, leveraging a network-based approach adapted to the platform's unique content and interaction structures. Building on existing approaches, we construct user similarity networks based on shared behaviors, including synchronized posting, repeated use of similar captions, multimedia content reuse, and hashtag sequence overlap, and apply graph pruning techniques to identify dense networks of likely coordinated accounts. Analyzing a dataset of 793K TikTok videos related to the 2024 U.S. Presidential Election, we uncover a range of coordinated activities, from synchronized amplification of political narratives to semi-automated content replication using AI-generated voiceovers and split-screen video formats. Our findings show that while traditional coordination indicators generalize well to TikTok, other signals, such as those based on textual similarity of video transcripts or Duet and Stitch interactions, prove ineffective, highlighting the platform's distinct content norms and interaction mechanics. This work provides the first empirical foundation for studying and detecting CIB on TikTok, paving the way for future research into influence operations in short-form video platforms.&lt;/p&gt;&lt;h3&gt;Details&lt;/h3&gt;&lt;ul&gt;&lt;li&gt;&lt;strong&gt;Authors:&lt;/strong&gt; Luceri, Luca, Salkar, Tanishq Vijay, Balasubramanian, Ashwin, Pinto, Gabriela, Sun, Chenning, Ferrara, Emilio&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Journal:&lt;/strong&gt; arXiv [cs.SI]&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Year:&lt;/strong&gt; 2025&lt;/li&gt;&lt;/ul&gt;]]&gt;</content:encoded>
     </item>
     <item>
@@ -86,8 +86,8 @@ analyses, and/or (iii) study news ci...</description>
       <guid isPermaLink="false">bibtex:Gaisbauer2025-by</guid>
       <pubDate>Tue, 13 May 2025 00:00:00 </pubDate>
       <dc:creator>Gaisbauer, Felix, Pournaki, Armin, Ohme, Jakob</dc:creator>
-      <category>Article</category>
       <category>arXiv [cs.SI]</category>
+      <category>Article</category>
       <content:encoded>&lt;![CDATA[&lt;h3&gt;Abstract&lt;/h3&gt;&lt;p&gt;News sharing on digital platforms shapes the digital spaces millions of users
 navigate. Trace data from these platforms also enables researchers to study
 online news circulation. In this context, research on the types of news shared
@@ -109,10 +109,10 @@ outlets; some outlets catering different items to different audiences.&lt;/p&gt;
       <guid isPermaLink="false">bibtex:Yang2025-iv</guid>
       <pubDate>Mon, 05 May 2025 00:00:00 </pubDate>
       <dc:creator>Yang, Yunkang, Paudel, Ramesh, McShan, Jordan, Hindman, Matthew, Huang, H Howie, Broniatowski, David</dc:creator>
-      <category>Coordination</category>
-      <category>Article</category>
       <category>Social media</category>
+      <category>Coordination</category>
       <category>Facebook</category>
+      <category>Article</category>
       <category>Sci. Rep.</category>
       <content:encoded>&lt;![CDATA[&lt;h3&gt;Abstract&lt;/h3&gt;&lt;p&gt;Malicious actors regularly attempt to manipulate social media using coordinated posting. Many existing methods for detecting this coordination, though, have relied primarily on post-timing, which is trivially easy to change. In this paper, we make a significant methodological advancement in coordination detection, leveraging highly regular statistical patterns in the speed and frequency of sharing. We apply and validate this approach on Facebook, using 11.2 million link posts from a list of 16,169 most popular English-language Facebook pages that referenced at least one of the top eight US politicians in any post, a set of pages that produced more than 91\% of all user engagement in this category during our collection period. Our approach can be calibrated and adapted across contexts, platforms, and times, allowing researchers to build valid, testable, but still human-interpretable models of platform manipulations.&lt;/p&gt;&lt;h3&gt;Details&lt;/h3&gt;&lt;ul&gt;&lt;li&gt;&lt;strong&gt;Authors:&lt;/strong&gt; Yang, Yunkang, Paudel, Ramesh, McShan, Jordan, Hindman, Matthew, Huang, H Howie, Broniatowski, David&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Journal:&lt;/strong&gt; Sci. Rep.&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Year:&lt;/strong&gt; 2025&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Volume:&lt;/strong&gt; 15&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Pages:&lt;/strong&gt; 15684&lt;/li&gt;&lt;/ul&gt;&lt;h3&gt;Links&lt;/h3&gt;&lt;p&gt;&lt;a href=&quot;https://doi.org/10.1038/s41598-025-00233-w&quot;&gt;DOI&lt;/a&gt;&lt;/p&gt;]]&gt;</content:encoded>
     </item>
@@ -122,8 +122,8 @@ outlets; some outlets catering different items to different audiences.&lt;/p&gt;
       <guid isPermaLink="false">bibtex:Kristensen2025-ni</guid>
       <pubDate>Wed, 01 Jan 2025 00:00:00 +0000</pubDate>
       <dc:creator>Kristensen, Jakob Bæk, Kristensen, Jakob Bæk</dc:creator>
-      <category>Comun. Politica</category>
       <category>Article</category>
+      <category>Comun. Politica</category>
       <content:encoded>&lt;![CDATA[&lt;h3&gt;Details&lt;/h3&gt;&lt;ul&gt;&lt;li&gt;&lt;strong&gt;Authors:&lt;/strong&gt; Kristensen, Jakob Bæk, Kristensen, Jakob Bæk&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Journal:&lt;/strong&gt; Comun. Politica&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Year:&lt;/strong&gt; 2025&lt;/li&gt;&lt;/ul&gt;]]&gt;</content:encoded>
     </item>
     <item>
@@ -185,8 +185,8 @@ outlets; some outlets catering different items to different audiences.&lt;/p&gt;
       <guid isPermaLink="false">bibtex:Hartmann2025-px</guid>
       <pubDate>Wed, 01 Jan 2025 00:00:00 +0000</pubDate>
       <dc:creator>Hartmann, David, Wang, Sonja Mei, Pohlmann, Lena, Berendt, Bettina</dc:creator>
-      <category>Article</category>
       <category>J. Comput. Soc. Sci.</category>
+      <category>Article</category>
       <content:encoded>&lt;![CDATA[&lt;h3&gt;Abstract&lt;/h3&gt;&lt;p&gt;&lt;jats:title&gt;Abstract&lt;/jats:title&gt;
           &lt;jats:p&gt;This systematic review synthesizes research on echo chambers and filter bubbles to explore the reasons behind dissent regarding their existence, antecedents, and effects. It provides a taxonomy of conceptualizations and operationalizations, analyzing how measurement approaches and contextual factors influence outcomes. The review of 129 studies identifies variations in measurement approaches, as well as regional, political, cultural, and platform-specific biases, as key factors contributing to the lack of consensus. Studies based on homophily and computational social science methods often support the echo chamber hypothesis, while research on content exposure and broader media environments, such as surveys, tends to challenge it. Group behavior, cultural influences, instant messaging platforms, and short video platforms remain underexplored. The strong geographic focus on the United States further highlights the need for studies in multi-party systems and regions beyond the Global North. Future research should prioritize cross-platform studies, continuous algorithmic audits, and investigations into the causal links between polarization, fragmentation, and echo chambers to advance the field. This review also provides recommendations for using the EU’s Digital Services Act to enhance research in this area and conduct studies outside the US in multi-party systems. By addressing these gaps, this review contributes to a more comprehensive understanding of echo chambers, their measurement, and their societal impacts.&lt;/jats:p&gt;&lt;/p&gt;&lt;h3&gt;Details&lt;/h3&gt;&lt;ul&gt;&lt;li&gt;&lt;strong&gt;Authors:&lt;/strong&gt; Hartmann, David, Wang, Sonja Mei, Pohlmann, Lena, Berendt, Bettina&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Journal:&lt;/strong&gt; J. Comput. Soc. Sci.&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Year:&lt;/strong&gt; 2025&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Volume:&lt;/strong&gt; 8&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Pages:&lt;/strong&gt; 52&lt;/li&gt;&lt;/ul&gt;&lt;h3&gt;Links&lt;/h3&gt;&lt;p&gt;&lt;a href=&quot;https://doi.org/10.1007/s42001-025-00381-z&quot;&gt;DOI&lt;/a&gt;&lt;/p&gt;]]&gt;</content:encoded>
     </item>
@@ -198,13 +198,13 @@ outlets; some outlets catering different items to different audiences.&lt;/p&gt;
       <guid isPermaLink="false">bibtex:Smith2025-kc</guid>
       <pubDate>Thu, 27 Mar 2025 00:00:00 </pubDate>
       <dc:creator>Smith, Alyssa H, Green, Jon, F Welles, Brooke, Lazer, David</dc:creator>
-      <category>amplification</category>
-      <category>triad transitivity</category>
-      <category>Article</category>
-      <category>tertius iungens</category>
-      <category>PNAS Nexus</category>
       <category>social media</category>
       <category>social networks</category>
+      <category>amplification</category>
+      <category>tertius iungens</category>
+      <category>Article</category>
+      <category>triad transitivity</category>
+      <category>PNAS Nexus</category>
       <content:encoded>&lt;![CDATA[&lt;h3&gt;Abstract&lt;/h3&gt;&lt;p&gt;&lt;jats:title&gt;Abstract&lt;/jats:title&gt;
                &lt;jats:p&gt;As they evolve, social networks tend to form transitive triads more often than random chance and structural constraints would suggest. However, the mechanisms by which triads in these networks become transitive are largely unexplored. We leverage a unique combination of data and methods to demonstrate a causal link between amplification and triad transitivity in a directed social network. Additionally, we develop the concept of the “attention broker,” an extension of the previously theorized tertius iungens (or “third who joins”). We use an innovative technique to identify time-bounded Twitter/X following events, and then use difference-in-differences to show that attention brokers cause triad transitivity by amplifying content. Attention brokers intervene in the evolution of any sociotechnical system where individuals can amplify content while referencing its originator.&lt;/jats:p&gt;&lt;/p&gt;&lt;h3&gt;Details&lt;/h3&gt;&lt;ul&gt;&lt;li&gt;&lt;strong&gt;Authors:&lt;/strong&gt; Smith, Alyssa H, Green, Jon, F Welles, Brooke, Lazer, David&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Journal:&lt;/strong&gt; PNAS Nexus&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Year:&lt;/strong&gt; 2025&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Volume:&lt;/strong&gt; 4&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Pages:&lt;/strong&gt; gaf106&lt;/li&gt;&lt;/ul&gt;&lt;h3&gt;Links&lt;/h3&gt;&lt;p&gt;&lt;a href=&quot;https://doi.org/10.1093/pnasnexus/pgaf106&quot;&gt;DOI&lt;/a&gt;&lt;/p&gt;]]&gt;</content:encoded>
     </item>
@@ -216,12 +216,12 @@ outlets; some outlets catering different items to different audiences.&lt;/p&gt;
       <dc:creator>Gaw, Fatima, Agonos, Mariam Jayne, Ruijgrok, Kris, Suarez, Gerard Martin</dc:creator>
       <category>influence operations</category>
       <category>computational propaganda</category>
-      <category>Article</category>
-      <category>trolls</category>
       <category>elections</category>
-      <category>disinformation</category>
-      <category>Int. J. Commun.</category>
       <category>Philippines</category>
+      <category>disinformation</category>
+      <category>trolls</category>
+      <category>Article</category>
+      <category>Int. J. Commun.</category>
       <category>brokerage</category>
       <content:encoded>&lt;![CDATA[&lt;h3&gt;Abstract&lt;/h3&gt;&lt;p&gt;This study conceptualizes influence operations (IOs), an enterprise that orchestrates manipulative and inauthentic activities to achieve political advantage, as a contemporary form of brokerage during elections. It investigates the empirical case of IOs engaged in covert political campaigning in the 2022 Philippine General Elections through qualitative field research. Drawing from 22 in-depth interviews with IO leads and staff, we define IOs’ broker attributes, their brokerage processes, and the capital and value they generate through brokerage. We identify four mechanisms of brokerage by IOs: infrastructural capacity, reputation manipulation, relationship building at scale, and obscured accountability. These mechanisms complement the brokerage work by aboveboard campaigns and other brokers by compensating for their limitations and innovating campaign strategies. We argue that IOs are not extraneous deviations but are logical extensions of existing political infrastructures and should be understood as operating with other normative forms of political campaigning.&lt;/p&gt;&lt;h3&gt;Details&lt;/h3&gt;&lt;ul&gt;&lt;li&gt;&lt;strong&gt;Authors:&lt;/strong&gt; Gaw, Fatima, Agonos, Mariam Jayne, Ruijgrok, Kris, Suarez, Gerard Martin&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Journal:&lt;/strong&gt; Int. J. Commun.&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Year:&lt;/strong&gt; 2025&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Volume:&lt;/strong&gt; 19&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Pages:&lt;/strong&gt; 21&lt;/li&gt;&lt;/ul&gt;]]&gt;</content:encoded>
     </item>
@@ -232,8 +232,8 @@ outlets; some outlets catering different items to different audiences.&lt;/p&gt;
       <guid isPermaLink="false">bibtex:Arora2025-tx</guid>
       <pubDate>Wed, 26 Mar 2025 00:00:00 </pubDate>
       <dc:creator>Arora, Arnav, Yadav, Srishti, Antoniak, Maria, Belongie, Serge, Augenstein, Isabelle</dc:creator>
-      <category>arXiv [cs.CL]</category>
       <category>Article</category>
+      <category>arXiv [cs.CL]</category>
       <content:encoded>&lt;![CDATA[&lt;h3&gt;Abstract&lt;/h3&gt;&lt;p&gt;Automated frame analysis of political communication is a popular task in computational social science that is used to study how authors select aspects of a topic to frame its reception. So far, such studies have been narrow, in that they use a fixed set of pre-defined frames and focus only on the text, ignoring the visual contexts in which those texts appear. Especially for framing in the news, this leaves out valuable information about editorial choices, which include not just the written article but also accompanying photographs. To overcome such limitations, we present a method for conducting multi-modal, multi-label framing analysis at scale using large (vision-) language models. Grounding our work in framing theory, we extract latent meaning embedded in images used to convey a certain point and contrast that to the text by comparing the respective frames used. We also identify highly partisan framing of topics with issue-specific frame analysis found in prior qualitative work. We demonstrate a method for doing scalable integrative framing analysis of both text and image in news, providing a more complete picture for understanding media bias.&lt;/p&gt;&lt;h3&gt;Details&lt;/h3&gt;&lt;ul&gt;&lt;li&gt;&lt;strong&gt;Authors:&lt;/strong&gt; Arora, Arnav, Yadav, Srishti, Antoniak, Maria, Belongie, Serge, Augenstein, Isabelle&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Journal:&lt;/strong&gt; arXiv [cs.CL]&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Year:&lt;/strong&gt; 2025&lt;/li&gt;&lt;/ul&gt;&lt;h3&gt;Links&lt;/h3&gt;&lt;p&gt;&lt;a href=&quot;http://arxiv.org/abs/2503.20960v3&quot;&gt;arXiv&lt;/a&gt;&lt;/p&gt;]]&gt;</content:encoded>
     </item>
     <item>
@@ -268,8 +268,8 @@ outlets; some outlets catering different items to different audiences.&lt;/p&gt;
       <guid isPermaLink="false">bibtex:Sarmiento2025-as</guid>
       <pubDate>Mon, 13 Jan 2025 00:00:00 </pubDate>
       <dc:creator>Sarmiento, Hernan, Córdova, Ricardo, Ortiz, Jorge, Bravo-Marquez, Felipe, Santos, Marcelo, Valenzuela, Sebastián</dc:creator>
-      <category>ACM Trans. Web</category>
       <category>Article</category>
+      <category>ACM Trans. Web</category>
       <content:encoded>&lt;![CDATA[&lt;h3&gt;Abstract&lt;/h3&gt;&lt;p&gt;&lt;jats:p&gt;
             This study investigates the concept of
             &lt;jats:italic&gt;frames&lt;/jats:italic&gt;
@@ -344,8 +344,8 @@ The spread of misinformation, false news, and misleading claims threatens democr
       <guid isPermaLink="false">bibtex:Minici2024-tf</guid>
       <pubDate>Fri, 11 Apr 2025 00:00:00 </pubDate>
       <dc:creator>Minici, Marco, Luceri, Luca, Fabbri, Francesco, Ferrara, Emilio</dc:creator>
-      <category>Article</category>
       <category>arXiv [cs.SI]</category>
+      <category>Article</category>
       <content:encoded>&lt;![CDATA[&lt;h3&gt;Abstract&lt;/h3&gt;&lt;p&gt;&lt;jats:p&gt;Social media platforms have become vital spaces for public discourse, serving as modern agorás where a wide range of voices influence societal narratives. However, their open nature also makes them vulnerable to exploitation by malicious actors, including state-sponsored entities, who can conduct information operations (IOs) to manipulate public opinion.
 The spread of misinformation, false news, and misleading claims threatens democratic processes and societal cohesion, making it crucial to develop methods for the timely detection of inauthentic activity to protect the integrity of online discourse. In this work, we introduce a methodology designed to identify users orchestrating information operations, a.k.a. IO drivers, across various influence campaigns. Our framework, named IOHunter, leverages the combined strengths of Language Models and Graph Neural Networks to improve generalization in supervised, scarcely-supervised, and cross-IO contexts. Our approach achieves state-of-the-art performance across multiple sets of IOs originating from six countries, significantly surpassing existing approaches. This research marks a step toward developing Graph Foundation Models specifically tailored for the task of IO detection on social media platforms.&lt;/jats:p&gt;&lt;/p&gt;&lt;h3&gt;Details&lt;/h3&gt;&lt;ul&gt;&lt;li&gt;&lt;strong&gt;Authors:&lt;/strong&gt; Minici, Marco, Luceri, Luca, Fabbri, Francesco, Ferrara, Emilio&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Journal:&lt;/strong&gt; arXiv [cs.SI]&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Year:&lt;/strong&gt; 2024&lt;/li&gt;&lt;/ul&gt;&lt;h3&gt;Links&lt;/h3&gt;&lt;p&gt;&lt;a href=&quot;https://doi.org/10.1609/aaai.v39i27.35046&quot;&gt;DOI&lt;/a&gt;&lt;/p&gt;]]&gt;</content:encoded>
     </item>
@@ -356,8 +356,8 @@ The spread of misinformation, false news, and misleading claims threatens democr
       <guid isPermaLink="false">bibtex:Pante2025-pq</guid>
       <pubDate>Thu, 08 May 2025 00:00:00 </pubDate>
       <dc:creator>Pantè, Valeria, Axelrod, David, Flammini, Alessandro, Menczer, Filippo, Ferrara, Emilio, Luceri, Luca</dc:creator>
-      <category>Article</category>
       <category>arXiv [cs.SI]</category>
+      <category>Article</category>
       <content:encoded>&lt;![CDATA[&lt;h3&gt;Abstract&lt;/h3&gt;&lt;p&gt;Social media platforms have become key tools for coordinated influence operations, enabling state actors to manipulate public opinion through strategic, collective actions. While previous research has suggested collaboration between states, such research failed to leverage state-of-the-art coordination indicators or control datasets. In this study, we investigate inter-state coordination by analyzing multiple online behavioral traces and using sophisticated coordination detection models. By incorporating a control dataset to differentiate organic user activity from coordinated efforts, our findings reveal no evidence of inter-state coordination. These results challenge earlier claims and underscore the importance of robust methodologies and control datasets in accurately detecting online coordination.&lt;/p&gt;&lt;h3&gt;Details&lt;/h3&gt;&lt;ul&gt;&lt;li&gt;&lt;strong&gt;Authors:&lt;/strong&gt; Pantè, Valeria, Axelrod, David, Flammini, Alessandro, Menczer, Filippo, Ferrara, Emilio, Luceri, Luca&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Journal:&lt;/strong&gt; arXiv [cs.SI]&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Year:&lt;/strong&gt; 2025&lt;/li&gt;&lt;/ul&gt;&lt;h3&gt;Links&lt;/h3&gt;&lt;p&gt;&lt;a href=&quot;https://doi.org/10.1145/3701716.3715575&quot;&gt;DOI&lt;/a&gt;&lt;/p&gt;]]&gt;</content:encoded>
     </item>
     <item>
@@ -424,8 +424,8 @@ The spread of misinformation, false news, and misleading claims threatens democr
       <guid isPermaLink="false">bibtex:DiGiuseppe2025-es</guid>
       <pubDate>Wed, 01 Jan 2025 00:00:00 +0000</pubDate>
       <dc:creator>DiGiuseppe, Matthew, Flynn, Michael E</dc:creator>
-      <category>Article</category>
       <category>SocArXiv</category>
+      <category>Article</category>
       <content:encoded>&lt;![CDATA[&lt;h3&gt;Abstract&lt;/h3&gt;&lt;p&gt;&lt;p&gt;Survey researchers rely heavily on closed-ended questions to measure latent respondent characteristics like knowledge, policy positions, emotions, ideology, and various other traits. While closed-ended questions ease analysis and data collection, they necessarily limit the depth and variability of responses. Open-ended responses allow for greater depth and variability in responses but are labor-intensive to code. Large Language Models (LLMs) can solve some of these problems, but existing approaches to using LLMs have a number of limitations. In this paper, we propose and test a pairwise comparison method to scale open-ended survey responses on a continuous scale. The approach relies on LLMs to make pairwise comparisons of statements that identify which statement ``wins'' and ``loses''. With this information, we employ a Bayesian Bradley-Terry model to recover a `score' on a the relevant latent dimension for each statement. This approach allows for finer discrimination between items, better measures of uncertainty, reduces anchoring bias, and is more flexible than methods relying on Maximum Likelihood Estimation techniques. We demonstrate the utility of this approach on an open-ended question probing knowledge of interest rates in the US economy. A comparison of 6 LLMs of various sizes reveals that pairwise comparisons show greater consistency than zero-shot 0-10 ratings with larger models (&amp;amp;gt; 9-billion parameters). Further, comparison of pairwise decisions are consistent with high-knowledge crowd source workers.&lt;/p&gt;&lt;/p&gt;&lt;h3&gt;Details&lt;/h3&gt;&lt;ul&gt;&lt;li&gt;&lt;strong&gt;Authors:&lt;/strong&gt; DiGiuseppe, Matthew, Flynn, Michael E&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Journal:&lt;/strong&gt; SocArXiv&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Year:&lt;/strong&gt; 2025&lt;/li&gt;&lt;/ul&gt;&lt;h3&gt;Links&lt;/h3&gt;&lt;p&gt;&lt;a href=&quot;https://doi.org/10.31235/osf.io/39ajg&quot;&gt;DOI&lt;/a&gt;&lt;/p&gt;]]&gt;</content:encoded>
     </item>
     <item>
@@ -490,8 +490,8 @@ The spread of misinformation, false news, and misleading claims threatens democr
       <guid isPermaLink="false">bibtex:Munger2025-cz</guid>
       <pubDate>Thu, 02 Jan 2025 00:00:00 </pubDate>
       <dc:creator>Munger, Kevin</dc:creator>
-      <category>Polit. Commun.</category>
       <category>Article</category>
+      <category>Polit. Commun.</category>
       <content:encoded>&lt;![CDATA[&lt;h3&gt;Details&lt;/h3&gt;&lt;ul&gt;&lt;li&gt;&lt;strong&gt;Authors:&lt;/strong&gt; Munger, Kevin&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Journal:&lt;/strong&gt; Polit. Commun.&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Year:&lt;/strong&gt; 2025&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Volume:&lt;/strong&gt; 42&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Pages:&lt;/strong&gt; 201--207&lt;/li&gt;&lt;/ul&gt;&lt;h3&gt;Links&lt;/h3&gt;&lt;p&gt;&lt;a href=&quot;https://doi.org/10.1080/10584609.2024.2446351&quot;&gt;DOI&lt;/a&gt;&lt;/p&gt;]]&gt;</content:encoded>
     </item>
     <item>
@@ -501,8 +501,8 @@ The spread of misinformation, false news, and misleading claims threatens democr
       <guid isPermaLink="false">bibtex:Votta2025-xz</guid>
       <pubDate>Sun, 04 May 2025 00:00:00 </pubDate>
       <dc:creator>Votta, Fabio, Dobber, Tom, Guinaudeau, Benjamin, Helberger, Natali, de Vreese, Claes</dc:creator>
-      <category>Polit. Commun.</category>
       <category>Article</category>
+      <category>Polit. Commun.</category>
       <content:encoded>&lt;![CDATA[&lt;h3&gt;Details&lt;/h3&gt;&lt;ul&gt;&lt;li&gt;&lt;strong&gt;Authors:&lt;/strong&gt; Votta, Fabio, Dobber, Tom, Guinaudeau, Benjamin, Helberger, Natali, de Vreese, Claes&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Journal:&lt;/strong&gt; Polit. Commun.&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Year:&lt;/strong&gt; 2025&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Volume:&lt;/strong&gt; 42&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Pages:&lt;/strong&gt; 476--508&lt;/li&gt;&lt;/ul&gt;&lt;h3&gt;Links&lt;/h3&gt;&lt;p&gt;&lt;a href=&quot;https://doi.org/10.1080/10584609.2024.2439317&quot;&gt;DOI&lt;/a&gt;&lt;/p&gt;]]&gt;</content:encoded>
     </item>
     <item>
@@ -545,8 +545,8 @@ The spread of misinformation, false news, and misleading claims threatens democr
       <guid isPermaLink="false">bibtex:Cabbuag2024-me</guid>
       <pubDate>Thu, 05 Dec 2024 00:00:00 </pubDate>
       <dc:creator>Cabbuag, Samuel I, Abidin, Crystal</dc:creator>
-      <category>Int. J. Cult. Stud.</category>
       <category>Article</category>
+      <category>Int. J. Cult. Stud.</category>
       <content:encoded>&lt;![CDATA[&lt;h3&gt;Abstract&lt;/h3&gt;&lt;p&gt;&lt;jats:p&gt; Studies on digital platforms and online incivility have established that uses of humour can lean towards cyberbullying and hate speech. Focusing on TikTok's affordances and cultures of online incivility, this paper studies how TikTok influencers and their audiences manoeuvre legal-but-harmful humour. Specifically, we study how online incivility has become an accepted and negotiated practice in the Filipino context through the phenomenon of ‘dogshows’, where users throw jabs at individuals using derogatory humour and provocative memes. Through online observation and textual analysis of TikTok posts and their corresponding comment sections, we demonstrate how online incivility is subtly amplified through humour and play, and how Gen Z and young children became both objects and producers of these dogshows. We argue that while there is already peer surveillance at work on TikTok, there needs to be more deliberation between TikTok's policies and at-risk groups to make the platform a more civil space. &lt;/jats:p&gt;&lt;/p&gt;&lt;h3&gt;Details&lt;/h3&gt;&lt;ul&gt;&lt;li&gt;&lt;strong&gt;Authors:&lt;/strong&gt; Cabbuag, Samuel I, Abidin, Crystal&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Journal:&lt;/strong&gt; Int. J. Cult. Stud.&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Year:&lt;/strong&gt; 2024&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Pages:&lt;/strong&gt; 13678779241302826&lt;/li&gt;&lt;/ul&gt;&lt;h3&gt;Links&lt;/h3&gt;&lt;p&gt;&lt;a href=&quot;https://doi.org/10.1177/13678779241302826&quot;&gt;DOI&lt;/a&gt;&lt;/p&gt;]]&gt;</content:encoded>
     </item>
     <item>
@@ -603,12 +603,12 @@ error-correction frameworks.&lt;/p&gt;&lt;h3&gt;Details&lt;/h3&gt;&lt;ul&gt;&lt;
       <guid isPermaLink="false">bibtex:Bakshy2015-rn</guid>
       <pubDate>Fri, 05 Jun 2015 00:00:00 </pubDate>
       <dc:creator>Bakshy, Eytan, Messing, Solomon, Adamic, Lada A</dc:creator>
-      <category>Article</category>
-      <category>facebook</category>
-      <category>homophily</category>
-      <category>news</category>
       <category>Science</category>
+      <category>facebook</category>
+      <category>news</category>
       <category>newsfeed</category>
+      <category>Article</category>
+      <category>homophily</category>
       <content:encoded>&lt;![CDATA[&lt;h3&gt;Abstract&lt;/h3&gt;&lt;p&gt;&lt;jats:title&gt;Not getting all sides of the news?&lt;/jats:title&gt;&lt;jats:p&gt;People are increasingly turning away from mass media to social media as a way of learning news and civic information. Bakshy&lt;jats:italic&gt;et al.&lt;/jats:italic&gt;examined the news that millions of Facebook users' peers shared, what information these users were presented with, and what they ultimately consumed (see the Perspective by Lazer). Friends shared substantially less cross-cutting news from sources aligned with an opposing ideology. People encountered roughly 15% less cross-cutting content in news feeds due to algorithmic ranking and clicked through to 70% less of this cross-cutting content. Within the domain of political news encountered in social media, selective exposure appears to drive attention.&lt;/jats:p&gt;&lt;jats:p&gt;&lt;jats:italic&gt;Science&lt;/jats:italic&gt;, this issue p.&lt;jats:related-article xmlns:xlink=&quot;http://www.w3.org/1999/xlink&quot; ext-link-type=&quot;doi&quot; issue=&quot;6239&quot; page=&quot;1130&quot; related-article-type=&quot;in-this-issue&quot; vol=&quot;348&quot; xlink:href=&quot;10.1126/science.aaa1160&quot;&gt;1130&lt;/jats:related-article&gt;; see also p.&lt;jats:related-article xmlns:xlink=&quot;http://www.w3.org/1999/xlink&quot; ext-link-type=&quot;doi&quot; issue=&quot;6239&quot; page=&quot;1090&quot; related-article-type=&quot;in-this-issue&quot; vol=&quot;348&quot; xlink:href=&quot;10.1126/science.aab1422&quot;&gt;1090&lt;/jats:related-article&gt;&lt;/jats:p&gt;&lt;/p&gt;&lt;h3&gt;Details&lt;/h3&gt;&lt;ul&gt;&lt;li&gt;&lt;strong&gt;Authors:&lt;/strong&gt; Bakshy, Eytan, Messing, Solomon, Adamic, Lada A&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Journal:&lt;/strong&gt; Science&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Year:&lt;/strong&gt; 2015&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Volume:&lt;/strong&gt; 348&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Pages:&lt;/strong&gt; 1130--1132&lt;/li&gt;&lt;/ul&gt;&lt;h3&gt;Links&lt;/h3&gt;&lt;p&gt;&lt;a href=&quot;https://doi.org/10.1126/science.aaa1160&quot;&gt;DOI&lt;/a&gt;&lt;/p&gt;]]&gt;</content:encoded>
     </item>
     <item>
@@ -629,8 +629,8 @@ error-correction frameworks.&lt;/p&gt;&lt;h3&gt;Details&lt;/h3&gt;&lt;ul&gt;&lt;
       <guid isPermaLink="false">bibtex:Di-Marco2025-aa</guid>
       <pubDate>Sat, 31 May 2025 00:00:00 </pubDate>
       <dc:creator>Di Marco, Niccolò, Brunetti, Sara, Cinelli, Matteo, Quattrociocchi, Walter</dc:creator>
-      <category>ACM Trans. Web</category>
       <category>Article</category>
+      <category>ACM Trans. Web</category>
       <content:encoded>&lt;![CDATA[&lt;h3&gt;Abstract&lt;/h3&gt;&lt;p&gt;&lt;jats:p&gt;In the last few years, social media has gained an unprecedented amount of attention, playing a pivotal role in shaping the contemporary landscape of communication and connection. However, Coordinated inauthentic Behaviour (CIB), defined as orchestrated efforts by entities to deceive or mislead users about their identity and intentions, has emerged as a tactic to exploit the online discourse. In this study, we quantify the efficacy of CIB tactics by defining a general framework for evaluating the influence of a subset of nodes in a directed tree. We design two algorithms that provide optimal and greedy post-hoc placement strategies that lead to maximising the configuration influence. We then consider cascades from information spreading on X (formerly known as Twitter) to compare the observed behaviour with our algorithms. The results show that, according to our model, coordinated accounts are quite inefficient in terms of their network influence, thus suggesting that they may play a less pivotal role than expected. Moreover, the causes of these poor results may be found in two separate aspects: a bad placement strategy and a scarcity of resources.&lt;/jats:p&gt;&lt;/p&gt;&lt;h3&gt;Details&lt;/h3&gt;&lt;ul&gt;&lt;li&gt;&lt;strong&gt;Authors:&lt;/strong&gt; Di Marco, Niccolò, Brunetti, Sara, Cinelli, Matteo, Quattrociocchi, Walter&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Journal:&lt;/strong&gt; ACM Trans. Web&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Year:&lt;/strong&gt; 2025&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Volume:&lt;/strong&gt; 19&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Pages:&lt;/strong&gt; 1--19&lt;/li&gt;&lt;/ul&gt;&lt;h3&gt;Links&lt;/h3&gt;&lt;p&gt;&lt;a href=&quot;https://doi.org/10.1145/3700644&quot;&gt;DOI&lt;/a&gt;&lt;/p&gt;]]&gt;</content:encoded>
     </item>
     <item>
@@ -640,8 +640,8 @@ error-correction frameworks.&lt;/p&gt;&lt;h3&gt;Details&lt;/h3&gt;&lt;ul&gt;&lt;
       <guid isPermaLink="false">bibtex:Goel2025-iq</guid>
       <pubDate>Tue, 10 Jun 2025 00:00:00 </pubDate>
       <dc:creator>Goel, Pranav, Green, Jon, Lazer, David, Resnik, Philip S</dc:creator>
-      <category>Nat. Hum. Behav.</category>
       <category>Article</category>
+      <category>Nat. Hum. Behav.</category>
       <content:encoded>&lt;![CDATA[&lt;h3&gt;Abstract&lt;/h3&gt;&lt;p&gt;Much of the research quantifying volume and spread of online misinformation measures the construct at the source level, identifying a set of specific unreliable domains that account for a relatively small share of news consumption. This source-level dichotomy obscures the potential for users to repurpose factually true information from reliable sources to advance misleading narratives. We demonstrate this potentially far more prevalent form of misinformation by identifying articles from reliable sources that are frequently co-shared with (shared by users who also shared) 'fake' news on social media, and concurrently extracting narratives present in fake news content and claims fact checked as false. Specifically in this study, we use Twitter/X data from May 2018 to November 2021 matched to a US voter file. We find that narratives present in misinformation content are significantly more likely to occur in co-shared articles than in articles from the same reliable sources that are not co-shared, consistent with users using information from mainstream sources to enhance the credibility and reach of potentially misleading claims.&lt;/p&gt;&lt;h3&gt;Details&lt;/h3&gt;&lt;ul&gt;&lt;li&gt;&lt;strong&gt;Authors:&lt;/strong&gt; Goel, Pranav, Green, Jon, Lazer, David, Resnik, Philip S&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Journal:&lt;/strong&gt; Nat. Hum. Behav.&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Year:&lt;/strong&gt; 2025&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Pages:&lt;/strong&gt; 1--18&lt;/li&gt;&lt;/ul&gt;&lt;h3&gt;Links&lt;/h3&gt;&lt;p&gt;&lt;a href=&quot;https://doi.org/10.1038/s41562-025-02223-4&quot;&gt;DOI&lt;/a&gt;&lt;/p&gt;]]&gt;</content:encoded>
     </item>
     <item>
@@ -657,8 +657,8 @@ within political discourse remains largely underexplo...</description>
       <guid isPermaLink="false">bibtex:Paci2025-ag</guid>
       <pubDate>Sat, 07 Jun 2025 00:00:00 </pubDate>
       <dc:creator>Paci, Walter, Panunzi, Alessandro, Pezzelle, Sandro</dc:creator>
-      <category>arXiv [cs.CL]</category>
       <category>Article</category>
+      <category>arXiv [cs.CL]</category>
       <content:encoded>&lt;![CDATA[&lt;h3&gt;Abstract&lt;/h3&gt;&lt;p&gt;Implicit content plays a crucial role in political discourse, where speakers
 systematically employ pragmatic strategies such as implicatures and
 presuppositions to influence their audiences. Large Language Models (LLMs) have
@@ -694,14 +694,14 @@ https://github.com/WalterPaci/IMPAQTS-PID&lt;/p&gt;&lt;h3&gt;Details&lt;/h3&gt;&
       <guid isPermaLink="false">bibtex:Marwick2025-vx</guid>
       <pubDate>Wed, 01 Jan 2025 00:00:00 +0000</pubDate>
       <dc:creator>Marwick, Alice E, Furl, Katherine</dc:creator>
-      <category>Article</category>
-      <category>disinformation</category>
-      <category>extremism</category>
-      <category>Int. J. Commun.</category>
-      <category>evidence</category>
       <category>redpill</category>
-      <category>online radicalization</category>
       <category>Far-Right</category>
+      <category>extremism</category>
+      <category>disinformation</category>
+      <category>Article</category>
+      <category>Int. J. Commun.</category>
+      <category>online radicalization</category>
+      <category>evidence</category>
       <content:encoded>&lt;![CDATA[&lt;h3&gt;Abstract&lt;/h3&gt;&lt;p&gt;How do people come to believe Far-Right, extremist, and conspiratorial ideas they encounter online? This article examines how participants in primarily U.S.-based Far-Right online communities describe their adoption of “redpill” beliefs and the role of disinformation in these accounts. Applying the socio-technical theory of media effects, we conduct a qualitative content analysis of “redpilling narratives” gathered from Reddit, Gab, and Discord. While many users frame redpilling as a moment of conversion, others portray redpilling as a process, something achieved incrementally through years of community participation and “doing your own research.” In both cases, disinformation presented as evidence and the capacity to determine the veracity of presented evidence play important roles in redpilling oneself and others. By framing their beliefs as the rational and logical results of fully considering a plethora of evidence, redpill adherents can justify holding and promoting otherwise indefensible prejudices. The community’s creation, promotion, and repetition of Far-Right disinformation, much of which is historical or “scientific” in nature, play a crucial role in the adoption of Far-Right beliefs.&lt;/p&gt;&lt;h3&gt;Details&lt;/h3&gt;&lt;ul&gt;&lt;li&gt;&lt;strong&gt;Authors:&lt;/strong&gt; Marwick, Alice E, Furl, Katherine&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Journal:&lt;/strong&gt; Int. J. Commun.&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Year:&lt;/strong&gt; 2025&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Volume:&lt;/strong&gt; 19&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Pages:&lt;/strong&gt; 26&lt;/li&gt;&lt;/ul&gt;]]&gt;</content:encoded>
     </item>
     <item>
