@@ -29,8 +29,8 @@
         }
       ],
       "tags": [
-        "Article",
-        "arXiv [cs.IR]"
+        "arXiv [cs.IR]",
+        "Article"
       ],
       "content_html": "<h3>Abstract</h3><p>This paper critically audits the search endpoint of YouTube&#x27;s Data API (v3), a common tool for academic research. Through systematic weekly searches over six months using eleven queries, we identify major limitations regarding completeness, representativeness, consistency, and bias. Our findings reveal substantial differences between ranking parameters like relevance and date in terms of video recall and precision, with relevance often retrieving numerous off-topic videos. We also find severe temporal decay, as the number of findable videos for a specific period dramatically decreases after just 20-60 days from the publication date, potentially hampering many different research designs. Furthermore, search results lack consistency, with identical queries yielding different video sets over time, compromising replicability. A case study on the European Parliament elections highlights how these issues impact research outcomes. While the paper offers several mitigation strategies, it concludes that the API&#x27;s search function, potentially prioritizing ``freshness&#x27;&#x27; over comprehensive retrieval, is not adequate for robust academic research, especially concerning Digital Services Act requirements.</p><h3>Details</h3><ul><li><strong>Authors:</strong> Rieder, Bernhard, Padilla, Adrian, Coromina, Oscar</li><li><strong>Published in:</strong> arXiv [cs.IR]</li><li><strong>Year:</strong> 2025</li></ul>",
       "_academic": {
@@ -270,8 +270,8 @@
         }
       ],
       "tags": [
-        "SSRN Electronic Journal",
-        "Techreport"
+        "Techreport",
+        "SSRN Electronic Journal"
       ],
       "content_html": "<h3>Abstract</h3><p>We study the effects of social media political advertising by randomizing subsets of 36,906 Facebook users and 25,925 Instagram users to have political ads removed from their news feeds for six weeks before the 2020 US presidential election. We show that most presidential ads were targeted toward parties’ own supporters and that fundraising ads were most common. On both Facebook and Instagram, we found no detectable effects of removing political ads on political knowledge, polarization, perceived legitimacy of the election, political participation (including campaign contributions), candidate favorability, and turnout. This was true overall and for both Democrats and Republicans separately.</p><h3>Details</h3><ul><li><strong>Authors:</strong> Hunt Allcott, Matthew Gentzkow, Ro’ee Levy, Adriana Crespo-Tenorio, Natasha Dumas, Winter Mason, Devra Moehler, Pablo Barbera, Taylor Brown, Juan Carlos Cisneros, Drew Dimmery, Deen Freelon, Sandra González-Bailón, Andrew Guess, Young Mie Kim, David Lazer, Neil A. Malhotra, Sameer Nair-Desai, Brendan Nyhan, Ana Carolina Paixao de Queiroz, Jennifer Pan, Jaime Settle, Emily Thorson, Rebekah Tromble, Carlos Velasco, Benjamin Wittenbrink, Magdalena Wojcieszak, Shiqi Yang, Saam Zahedian, Annie Franco, Chad Kiewiet de Jonge, Talia Stroud, Joshua Aaron Tucker</li><li><strong>Published in:</strong> SSRN Electronic Journal</li><li><strong>Year:</strong> 2025</li><li><strong>Citations:</strong> 0</li><li><strong>References:</strong> 350</li></ul><h3>Links</h3><p><a href=\"https://doi.org/10.2139/ssrn.5259653\">DOI</a></p>",
       "_academic": {
@@ -380,11 +380,11 @@
         }
       ],
       "tags": [
-        "Scientific Reports",
+        "Social media",
         "Facebook",
-        "Coordination",
+        "Scientific Reports",
         "Article",
-        "Social media"
+        "Coordination"
       ],
       "content_html": "<h3>Abstract</h3><p>Malicious actors regularly attempt to manipulate social media using coordinated posting. Many existing methods for detecting this coordination, though, have relied primarily on post-timing, which is trivially easy to change. In this paper, we make a significant methodological advancement in coordination detection, leveraging highly regular statistical patterns in the speed and frequency of sharing. We apply and validate this approach on Facebook, using 11.2 million link posts from a list of 16,169 most popular English-language Facebook pages that referenced at least one of the top eight US politicians in any post, a set of pages that produced more than 91\\% of all user engagement in this category during our collection period. Our approach can be calibrated and adapted across contexts, platforms, and times, allowing researchers to build valid, testable, but still human-interpretable models of platform manipulations.</p><h3>Details</h3><ul><li><strong>Authors:</strong> Yunkang Yang, Ramesh Paudel, Jordan McShan, Matthew Hindman, H. Howie Huang, David Broniatowski</li><li><strong>Published in:</strong> Scientific Reports</li><li><strong>Year:</strong> 2025</li><li><strong>Volume:</strong> 15</li><li><strong>Pages:</strong> 15684</li><li><strong>Citations:</strong> 0</li><li><strong>References:</strong> 33</li></ul><h3>Links</h3><p><a href=\"https://doi.org/10.1038/s41598-025-00233-w\">DOI</a></p>",
       "_academic": {
@@ -613,11 +613,11 @@
       ],
       "tags": [
         "amplification",
-        "PNAS Nexus",
         "Article",
-        "tertius iungens",
         "social networks",
+        "PNAS Nexus",
         "triad transitivity",
+        "tertius iungens",
         "social media"
       ],
       "content_html": "<h3>Abstract</h3><p>&lt;jats:title&gt;Abstract&lt;/jats:title&gt;\n               &lt;jats:p&gt;As they evolve, social networks tend to form transitive triads more often than random chance and structural constraints would suggest. However, the mechanisms by which triads in these networks become transitive are largely unexplored. We leverage a unique combination of data and methods to demonstrate a causal link between amplification and triad transitivity in a directed social network. Additionally, we develop the concept of the “attention broker,” an extension of the previously theorized tertius iungens (or “third who joins”). We use an innovative technique to identify time-bounded Twitter/X following events, and then use difference-in-differences to show that attention brokers cause triad transitivity by amplifying content. Attention brokers intervene in the evolution of any sociotechnical system where individuals can amplify content while referencing its originator.&lt;/jats:p&gt;</p><h3>Details</h3><ul><li><strong>Authors:</strong> Alyssa H Smith, Jon Green, Brooke F. Welles, David Lazer</li><li><strong>Published in:</strong> PNAS Nexus</li><li><strong>Year:</strong> 2025</li><li><strong>Volume:</strong> 4</li><li><strong>Pages:</strong> gaf106</li><li><strong>Citations:</strong> 0</li><li><strong>References:</strong> 82</li></ul><h3>Links</h3><p><a href=\"https://doi.org/10.1093/pnasnexus/pgaf106\">DOI</a></p>",
@@ -653,15 +653,15 @@
         }
       ],
       "tags": [
-        "Philippines",
-        "trolls",
-        "computational propaganda",
-        "brokerage",
+        "elections",
         "Article",
-        "disinformation",
+        "brokerage",
         "influence operations",
         "Int. J. Commun.",
-        "elections"
+        "computational propaganda",
+        "disinformation",
+        "trolls",
+        "Philippines"
       ],
       "content_html": "<h3>Abstract</h3><p>This study conceptualizes influence operations (IOs), an enterprise that orchestrates manipulative and inauthentic activities to achieve political advantage, as a contemporary form of brokerage during elections. It investigates the empirical case of IOs engaged in covert political campaigning in the 2022 Philippine General Elections through qualitative field research. Drawing from 22 in-depth interviews with IO leads and staff, we define IOs’ broker attributes, their brokerage processes, and the capital and value they generate through brokerage. We identify four mechanisms of brokerage by IOs: infrastructural capacity, reputation manipulation, relationship building at scale, and obscured accountability. These mechanisms complement the brokerage work by aboveboard campaigns and other brokers by compensating for their limitations and innovating campaign strategies. We argue that IOs are not extraneous deviations but are logical extensions of existing political infrastructures and should be understood as operating with other normative forms of political campaigning.</p><h3>Details</h3><ul><li><strong>Authors:</strong> Gaw, Fatima, Agonos, Mariam Jayne, Ruijgrok, Kris, Suarez, Gerard Martin</li><li><strong>Published in:</strong> Int. J. Commun.</li><li><strong>Year:</strong> 2025</li><li><strong>Volume:</strong> 19</li><li><strong>Pages:</strong> 21</li></ul>",
       "_academic": {
@@ -695,11 +695,11 @@
         }
       ],
       "tags": [
-        "arXiv [cs.CL]",
         "Article",
+        "arXiv [cs.CL]",
+        "cs.CL",
         "cs.LG",
-        "cs.CY",
-        "cs.CL"
+        "cs.CY"
       ],
       "content_html": "<h3>Abstract</h3><p>Automated frame analysis of political communication is a popular task in computational social science that is used to study how authors select aspects of a topic to frame its reception. So far, such studies have been narrow, in that they use a fixed set of pre-defined frames and focus only on the text, ignoring the visual contexts in which those texts appear. Especially for framing in the news, this leaves out valuable information about editorial choices, which include not just the written article but also accompanying photographs. To overcome such limitations, we present a method for conducting multi-modal, multi-label framing analysis at scale using large (vision-) language models. Grounding our work in framing theory, we extract latent meaning embedded in images used to convey a certain point and contrast that to the text by comparing the respective frames used. We also identify highly partisan framing of topics with issue-specific frame analysis found in prior qualitative work. We demonstrate a method for doing scalable integrative framing analysis of both text and image in news, providing a more complete picture for understanding media bias.</p><h3>Details</h3><ul><li><strong>Authors:</strong> Arnav Arora, Srishti Yadav, Maria Antoniak, Serge Belongie, Isabelle Augenstein</li><li><strong>Published in:</strong> arXiv [cs.CL]</li><li><strong>Year:</strong> 2025</li></ul><h3>Links</h3><p><a href=\"http://arxiv.org/abs/2503.20960v3\">arXiv</a></p>",
       "_academic": {
@@ -807,8 +807,8 @@
         }
       ],
       "tags": [
-        "Article",
-        "ACM Transactions on the Web"
+        "ACM Transactions on the Web",
+        "Article"
       ],
       "content_html": "<h3>Abstract</h3><p>&lt;jats:p&gt;\n            This study investigates the concept of\n            &lt;jats:italic&gt;frames&lt;/jats:italic&gt;\n            in the realm of online polarization, with a focus on social media platforms. The research extends the understanding of how frames—emerging, complex, and often subtle concepts—become prominent in online conversations that are polarized. The study proposes a comprehensive methodology for identifying and characterizing these frames, integrating machine learning techniques, network analysis algorithms, and natural language processing tools. This method aims for generalizability across multiple platforms and types of user engagement. Two novel metrics,\n            &lt;jats:italic&gt;homogeneity&lt;/jats:italic&gt;\n            and\n            &lt;jats:italic&gt;relevancy&lt;/jats:italic&gt;\n            are introduced for the rigorous evaluation of identified frame candidates.\n          &lt;/jats:p&gt;\n          &lt;jats:p&gt;Grounded in several foundational presumptions, including the role of topics and multi-word expressions in framing, the study sheds light on how frames emerge and gain significance within digital communities. The research questions explored include the methods for identifying frames, the variability and significance of these frames, and the effectiveness of different computational techniques in this context.&lt;/jats:p&gt;\n          &lt;jats:p&gt;To validate the approach, we present a case study of the 2021 Chilean presidential election, using data from both Twitter and WhatsApp platforms. This real-world application allows for the examination of how frames fluctuate in response to events and the specific mechanisms of platforms. Overall, the study makes several key contributions to the field, offering new insights and methodologies for analyzing the complexities of online polarization. It serves as groundwork for future research on the dynamics of online communities, especially those associated with distinctly polarized events.&lt;/jats:p&gt;</p><h3>Details</h3><ul><li><strong>Authors:</strong> Hernan Sarmiento, Ricardo Córdova, Jorge Ortiz, Felipe Bravo-Marquez, Marcelo Santos, Sebastián Valenzuela</li><li><strong>Published in:</strong> ACM Transactions on the Web</li><li><strong>Year:</strong> 2025</li><li><strong>Pages:</strong> 3711912</li><li><strong>Citations:</strong> 0</li><li><strong>References:</strong> 104</li></ul><h3>Links</h3><p><a href=\"https://doi.org/10.1145/3711912\">DOI</a></p>",
       "_academic": {
@@ -1052,8 +1052,8 @@
         }
       ],
       "tags": [
-        "Article",
-        "Companion Proceedings of the ACM on Web Conference 2025"
+        "Companion Proceedings of the ACM on Web Conference 2025",
+        "Article"
       ],
       "content_html": "<h3>Abstract</h3><p>Social media platforms have become key tools for coordinated influence operations, enabling state actors to manipulate public opinion through strategic, collective actions. While previous research has suggested collaboration between states, such research failed to leverage state-of-the-art coordination indicators or control datasets. In this study, we investigate inter-state coordination by analyzing multiple online behavioral traces and using sophisticated coordination detection models. By incorporating a control dataset to differentiate organic user activity from coordinated efforts, our findings reveal no evidence of inter-state coordination. These results challenge earlier claims and underscore the importance of robust methodologies and control datasets in accurately detecting online coordination.</p><h3>Details</h3><ul><li><strong>Authors:</strong> Valeria Pantè, David Axelrod, Alessandro Flammini, Filippo Menczer, Emilio Ferrara, Luca Luceri</li><li><strong>Published in:</strong> Companion Proceedings of the ACM on Web Conference 2025</li><li><strong>Year:</strong> 2025</li><li><strong>Citations:</strong> 0</li><li><strong>References:</strong> 33</li></ul><h3>Links</h3><p><a href=\"https://doi.org/10.1145/3701716.3715575\">DOI</a></p>",
       "_academic": {
@@ -1170,8 +1170,8 @@
         }
       ],
       "tags": [
-        "Article",
-        "Convergence: The International Journal of Research into New Media Technologies"
+        "Convergence: The International Journal of Research into New Media Technologies",
+        "Article"
       ],
       "content_html": "<h3>Abstract</h3><p>&lt;jats:p&gt; This article examines the social technology company Meta’s public communication on problematic content, via their official ‘Meta Newsroom’, within the context of growing regulatory scrutiny. For nearly a decade, the Meta Newsroom has been a major outlet for Meta company announcements, and since 2016, the Newsroom has increasingly become a key source for company responses to concerns regarding mis/disinformation and other kinds of problematic content on Meta’s platforms. Using a mixed-methods approach informed by discourse analysis, this article critically examines Newsrooms posts from 2016 to early 2021. It asks: how is Meta framing ‘problems’ on its platforms? How is Meta identifying ‘solutions’ to those problems? And is Meta ‘nudging’ policymakers in specific conceptual directions? Overall, we find that Meta is framing content moderation issues through four key frames – ‘authenticity’, ‘political advertising’, ‘technological solutions’, and ‘enforcement’ – that benefit Meta, as they shift responsibility while also demonstrating that Meta is an active and capable problem-solver. &lt;/jats:p&gt;</p><h3>Details</h3><ul><li><strong>Authors:</strong> Edward Hurcombe, Ehsan Dehghan, Laura Vodden, Daniel Angus</li><li><strong>Published in:</strong> Convergence: The International Journal of Research into New Media Technologies</li><li><strong>Year:</strong> 2025</li><li><strong>Pages:</strong> 13548565251315521</li><li><strong>Citations:</strong> 0</li><li><strong>References:</strong> 81</li></ul><h3>Links</h3><p><a href=\"https://doi.org/10.1177/13548565251315521\">DOI</a></p>",
       "_academic": {
@@ -1401,8 +1401,8 @@
         }
       ],
       "tags": [
-        "Article",
-        "Digital Journalism"
+        "Digital Journalism",
+        "Article"
       ],
       "content_html": "<h3>Abstract</h3><p>This study examines the effects of a series of significant algorithm changes within Facebook’s News Feed on user engagement with news content on the platform between 2011-2020. By tracking public announcements, industry research, and leaks to the press, we constructed a timeline of algorithm changes and collected data on 1 million news articles from The Guardian over the 10-year period, alongside their associated Facebook engagement metrics (likes, comments, shares, etc.) using the CrowdTangle API. Using time series analysis techniques including cross-correlation, Granger causality, and anomaly detection, we modeled this data to test for the relationship between significant algorithmic ranking updates to Facebook’s News Feed algorithms and user engagement with Guardian articles on the platform. Our results show that strategic interventions to the News Feed algorithm significantly impacted engagement with hard news items, whereas opinion, lifestyle, sports, and arts content were less affected. This study challenges the notion of algorithms as ‘black boxes’ by demonstrating how Facebook’s deliberate adjustments influence user engagement with news content. We conclude by outlining the limitations and challenges for systemic auditing of social media algorithms, advocating for greater data access, and discussing the opportunities afforded by the EU’s Digital Services Act to advance this research agenda.</p><h3>Details</h3><ul><li><strong>Authors:</strong> Naoise McNally, Marco Bastos</li><li><strong>Published in:</strong> Digital Journalism</li><li><strong>Year:</strong> 2025</li><li><strong>Pages:</strong> 1--20</li><li><strong>Citations:</strong> 1</li><li><strong>References:</strong> 81</li></ul><h3>Links</h3><p><a href=\"https://doi.org/10.1080/21670811.2025.2450623\">DOI</a></p>",
       "_academic": {
@@ -1650,8 +1650,8 @@
         }
       ],
       "tags": [
-        "Article",
-        "Sociological Science"
+        "Sociological Science",
+        "Article"
       ],
       "content_html": "<h3>Abstract</h3><p>Social media creates the possibility for rapid, viral spread of content, but how many posts actually reach millions? And is misinformation special in how it propagates? We answer these questions by analyzing the virality of and exposure to information on Facebook during the U.S. 2020 presidential election. We examine the diffusion trees of the approximately 1 B posts that were re-shared at least once by U.S.-based adults from July 1, 2020, to February 1, 2021. We differentiate misinformation from non-misinformation posts to show that (1) misinformation diffused more slowly, relying on a small number of active users that spread misinformation via long chains of peer-to-peer diffusion that reached millions; non-misinformation spread primarily through one-to-many affordances (mainly, Pages); (2) the relative importance of peer-to-peer spread for misinformation was likely due to an enforcement gap in content moderation policies designed to target mostly Pages and Groups; and (3) periods of aggressive content moderation proximate to the election coincide with dramatic drops in the spread and reach of misinformation and (to a lesser extent) political content.</p><h3>Details</h3><ul><li><strong>Authors:</strong> Sandra González-Bailón, David Lazer, Pablo Barberá, William Godel, Hunt Allcott, Taylor Brown, Adriana Crespo-Tenorio, Deen Freelon, Matthew Gentzkow, Andrew Guess, Shanto Iyengar, Young Kim, Neil Malhotra, Devra Moehler, Brendan Nyhan, Jennifer Pan, Carlos Rivera, Jaime Settle, Emily Thorson, Rebekah Tromble, Arjun Wilkins, Magdalena Wojcieszak, Chad Kiewiet de Jonge, Annie Franco, Winter Mason, Natalie Stroud, Joshua Tucker</li><li><strong>Published in:</strong> Sociological Science</li><li><strong>Year:</strong> 2024</li><li><strong>Volume:</strong> 11</li><li><strong>Pages:</strong> 1124--1146</li><li><strong>Citations:</strong> 0</li><li><strong>References:</strong> 22</li></ul><h3>Links</h3><p><a href=\"https://doi.org/10.15195/v11.a41\">DOI</a></p>",
       "_academic": {
@@ -1788,8 +1788,8 @@
         }
       ],
       "tags": [
-        "arXiv [cs.CY]",
         "cs.CY",
+        "arXiv [cs.CY]",
         "Article"
       ],
       "content_html": "<h3>Abstract</h3><p>As the exploration of digital behavioral data revolutionizes communication\nresearch, understanding the nuances of data collection methodologies becomes\nincreasingly pertinent. This study focuses on one prominent data collection\napproach, web scraping, and more specifically, its application in the growing\nfield of research relying on web browsing data. We investigate discrepancies\nbetween content obtained directly during user interaction with a website\n(in-situ) and content scraped using the URLs of participants&#x27; logged visits\n(ex-situ) with various time delays (0, 30, 60, and 90 days). We find\nsubstantial disparities between the methodologies, uncovering that errors are\nnot uniformly distributed across news categories regardless of classification\nmethod (domain, URL, or content analysis). These biases compromise the\nprecision of measurements used in existing literature. The ex-situ collection\nenvironment is the primary source of the discrepancies (~33.8%), while the time\ndelays in the scraping process play a smaller role (adding ~6.5 percentage\npoints in 90 days). Our research emphasizes the need for data collection\nmethods that capture web content directly in the user&#x27;s environment. However,\nacknowledging its complexities, we further explore strategies to mitigate\nbiases in web-scraped browsing histories, offering recommendations for\nresearchers who rely on this method and laying the groundwork for developing\nerror-correction frameworks.</p><h3>Details</h3><ul><li><strong>Authors:</strong> Roberto Ulloa, Frank Mangold, Felix Schmidt, Judith Gilsbach, Sebastian Stier</li><li><strong>Published in:</strong> arXiv [cs.CY]</li><li><strong>Year:</strong> 2024</li></ul><h3>Links</h3><p><a href=\"http://arxiv.org/abs/2412.00479v1\">arXiv</a> | <a href=\"http://arxiv.org/pdf/2412.00479v1\">PDF</a></p>",
@@ -1823,11 +1823,11 @@
       ],
       "tags": [
         "news",
-        "newsfeed",
         "facebook",
-        "Science",
+        "homophily",
         "Article",
-        "homophily"
+        "Science",
+        "newsfeed"
       ],
       "content_html": "<h3>Abstract</h3><p>&lt;jats:title&gt;Not getting all sides of the news?&lt;/jats:title&gt;&lt;jats:p&gt;People are increasingly turning away from mass media to social media as a way of learning news and civic information. Bakshy&lt;jats:italic&gt;et al.&lt;/jats:italic&gt;examined the news that millions of Facebook users&#x27; peers shared, what information these users were presented with, and what they ultimately consumed (see the Perspective by Lazer). Friends shared substantially less cross-cutting news from sources aligned with an opposing ideology. People encountered roughly 15% less cross-cutting content in news feeds due to algorithmic ranking and clicked through to 70% less of this cross-cutting content. Within the domain of political news encountered in social media, selective exposure appears to drive attention.&lt;/jats:p&gt;&lt;jats:p&gt;&lt;jats:italic&gt;Science&lt;/jats:italic&gt;, this issue p.&lt;jats:related-article xmlns:xlink=&quot;http://www.w3.org/1999/xlink&quot; ext-link-type=&quot;doi&quot; issue=&quot;6239&quot; page=&quot;1130&quot; related-article-type=&quot;in-this-issue&quot; vol=&quot;348&quot; xlink:href=&quot;10.1126/science.aaa1160&quot;&gt;1130&lt;/jats:related-article&gt;; see also p.&lt;jats:related-article xmlns:xlink=&quot;http://www.w3.org/1999/xlink&quot; ext-link-type=&quot;doi&quot; issue=&quot;6239&quot; page=&quot;1090&quot; related-article-type=&quot;in-this-issue&quot; vol=&quot;348&quot; xlink:href=&quot;10.1126/science.aab1422&quot;&gt;1090&lt;/jats:related-article&gt;&lt;/jats:p&gt;</p><h3>Details</h3><ul><li><strong>Authors:</strong> Eytan Bakshy, Solomon Messing, Lada A. Adamic</li><li><strong>Published in:</strong> Science</li><li><strong>Year:</strong> 2015</li><li><strong>Volume:</strong> 348</li><li><strong>Pages:</strong> 1130--1132</li><li><strong>Citations:</strong> 1793</li><li><strong>References:</strong> 35</li></ul><h3>Links</h3><p><a href=\"https://doi.org/10.1126/science.aaa1160\">DOI</a></p>",
       "_academic": {
@@ -1899,8 +1899,8 @@
         }
       ],
       "tags": [
-        "Article",
-        "ACM Transactions on the Web"
+        "ACM Transactions on the Web",
+        "Article"
       ],
       "content_html": "<h3>Abstract</h3><p>&lt;jats:p&gt;In the last few years, social media has gained an unprecedented amount of attention, playing a pivotal role in shaping the contemporary landscape of communication and connection. However, Coordinated inauthentic Behaviour (CIB), defined as orchestrated efforts by entities to deceive or mislead users about their identity and intentions, has emerged as a tactic to exploit the online discourse. In this study, we quantify the efficacy of CIB tactics by defining a general framework for evaluating the influence of a subset of nodes in a directed tree. We design two algorithms that provide optimal and greedy post-hoc placement strategies that lead to maximising the configuration influence. We then consider cascades from information spreading on X (formerly known as Twitter) to compare the observed behaviour with our algorithms. The results show that, according to our model, coordinated accounts are quite inefficient in terms of their network influence, thus suggesting that they may play a less pivotal role than expected. Moreover, the causes of these poor results may be found in two separate aspects: a bad placement strategy and a scarcity of resources.&lt;/jats:p&gt;</p><h3>Details</h3><ul><li><strong>Authors:</strong> Niccolò Di Marco, Sara Brunetti, Matteo Cinelli, Walter Quattrociocchi</li><li><strong>Published in:</strong> ACM Transactions on the Web</li><li><strong>Year:</strong> 2025</li><li><strong>Volume:</strong> 19</li><li><strong>Pages:</strong> 1--19</li><li><strong>Citations:</strong> 2</li><li><strong>References:</strong> 78</li></ul><h3>Links</h3><p><a href=\"https://doi.org/10.1145/3700644\">DOI</a></p>",
       "_academic": {
@@ -1972,8 +1972,8 @@
       ],
       "tags": [
         "arXiv [cs.CL]",
-        "Article",
-        "cs.CL"
+        "cs.CL",
+        "Article"
       ],
       "content_html": "<h3>Abstract</h3><p>Implicit content plays a crucial role in political discourse, where speakers\nsystematically employ pragmatic strategies such as implicatures and\npresuppositions to influence their audiences. Large Language Models (LLMs) have\ndemonstrated strong performance in tasks requiring complex semantic and\npragmatic understanding, highlighting their potential for detecting and\nexplaining the meaning of implicit content. However, their ability to do this\nwithin political discourse remains largely underexplored. Leveraging, for the\nfirst time, the large IMPAQTS corpus, which comprises Italian political\nspeeches with the annotation of manipulative implicit content, we propose\nmethods to test the effectiveness of LLMs in this challenging problem. Through\na multiple-choice task and an open-ended generation task, we demonstrate that\nall tested models struggle to interpret presuppositions and implicatures. We\nconclude that current LLMs lack the key pragmatic capabilities necessary for\naccurately interpreting highly implicit language, such as that found in\npolitical discourse. At the same time, we highlight promising trends and future\ndirections for enhancing model performance. We release our data and code at\nhttps://github.com/WalterPaci/IMPAQTS-PID</p><h3>Details</h3><ul><li><strong>Authors:</strong> Walter Paci, Alessandro Panunzi, Sandro Pezzelle</li><li><strong>Published in:</strong> arXiv [cs.CL]</li><li><strong>Year:</strong> 2025</li></ul><h3>Links</h3><p><a href=\"http://arxiv.org/abs/2506.06775v1\">arXiv</a> | <a href=\"http://arxiv.org/pdf/2506.06775v1\">PDF</a></p>",
       "_academic": {
@@ -2038,14 +2038,14 @@
         }
       ],
       "tags": [
-        "Far-Right",
-        "redpill",
-        "extremism",
-        "Article",
-        "disinformation",
         "online radicalization",
+        "Article",
+        "extremism",
         "Int. J. Commun.",
-        "evidence"
+        "disinformation",
+        "redpill",
+        "evidence",
+        "Far-Right"
       ],
       "content_html": "<h3>Abstract</h3><p>How do people come to believe Far-Right, extremist, and conspiratorial ideas they encounter online? This article examines how participants in primarily U.S.-based Far-Right online communities describe their adoption of “redpill” beliefs and the role of disinformation in these accounts. Applying the socio-technical theory of media effects, we conduct a qualitative content analysis of “redpilling narratives” gathered from Reddit, Gab, and Discord. While many users frame redpilling as a moment of conversion, others portray redpilling as a process, something achieved incrementally through years of community participation and “doing your own research.” In both cases, disinformation presented as evidence and the capacity to determine the veracity of presented evidence play important roles in redpilling oneself and others. By framing their beliefs as the rational and logical results of fully considering a plethora of evidence, redpill adherents can justify holding and promoting otherwise indefensible prejudices. The community’s creation, promotion, and repetition of Far-Right disinformation, much of which is historical or “scientific” in nature, play a crucial role in the adoption of Far-Right beliefs.</p><h3>Details</h3><ul><li><strong>Authors:</strong> Marwick, Alice E, Furl, Katherine</li><li><strong>Published in:</strong> Int. J. Commun.</li><li><strong>Year:</strong> 2025</li><li><strong>Volume:</strong> 19</li><li><strong>Pages:</strong> 26</li></ul>",
       "_academic": {
@@ -2076,8 +2076,8 @@
         }
       ],
       "tags": [
-        "Article",
-        "The Journal of Politics"
+        "The Journal of Politics",
+        "Article"
       ],
       "content_html": "<h3>Details</h3><ul><li><strong>Authors:</strong> Tiago Ventura, Rajeshwari Majumdar, Jonathan Nagler, Joshua Tucker</li><li><strong>Published in:</strong> The Journal of Politics</li><li><strong>Year:</strong> 2025</li><li><strong>Citations:</strong> 0</li><li><strong>References:</strong> 73</li></ul><h3>Links</h3><p><a href=\"https://doi.org/10.1086/737172\">DOI</a></p>",
       "_academic": {
