@@ -6,8 +6,8 @@
     <description>Academic papers from Paperpile enriched with metadata</description>
     <language>en-us</language>
     <generator>ToRead RSS Generator</generator>
-    <lastBuildDate>Mon, 14 Jul 2025 11:41:35 +0000</lastBuildDate>
-    <pubDate>Mon, 14 Jul 2025 11:41:35 +0000</pubDate>
+    <lastBuildDate>Mon, 14 Jul 2025 11:52:46 +0000</lastBuildDate>
+    <pubDate>Mon, 14 Jul 2025 11:52:46 +0000</pubDate>
     <item>
       <title>Forgetful by design? A critical audit of YouTube's search API for academic research</title>
       <description>This paper critically audits the search endpoint of YouTube's Data API (v3), a common tool for academic research. Through systematic weekly searches over six months using eleven queries, we identify major limitations regarding completeness, representativeness, consistency, and bias. Our findings reveal substantial differences between ranking parameters like relevance and date in terms of video recall and precision, with relevance often retrieving numerous off-topic videos. We also find severe te...</description>
@@ -109,10 +109,10 @@ outlets; some outlets catering different items to different audiences.&lt;/p&gt;
       <guid isPermaLink="false">bibtex:Yang2025-iv</guid>
       <pubDate>Mon, 05 May 2025 00:00:00 </pubDate>
       <dc:creator>Yang, Yunkang, Paudel, Ramesh, McShan, Jordan, Hindman, Matthew, Huang, H Howie, Broniatowski, David</dc:creator>
+      <category>Coordination</category>
+      <category>Article</category>
       <category>Facebook</category>
       <category>Social media</category>
-      <category>Article</category>
-      <category>Coordination</category>
       <category>Sci. Rep.</category>
       <content:encoded>&lt;![CDATA[&lt;h3&gt;Abstract&lt;/h3&gt;&lt;p&gt;Malicious actors regularly attempt to manipulate social media using coordinated posting. Many existing methods for detecting this coordination, though, have relied primarily on post-timing, which is trivially easy to change. In this paper, we make a significant methodological advancement in coordination detection, leveraging highly regular statistical patterns in the speed and frequency of sharing. We apply and validate this approach on Facebook, using 11.2 million link posts from a list of 16,169 most popular English-language Facebook pages that referenced at least one of the top eight US politicians in any post, a set of pages that produced more than 91\% of all user engagement in this category during our collection period. Our approach can be calibrated and adapted across contexts, platforms, and times, allowing researchers to build valid, testable, but still human-interpretable models of platform manipulations.&lt;/p&gt;&lt;h3&gt;Details&lt;/h3&gt;&lt;ul&gt;&lt;li&gt;&lt;strong&gt;Authors:&lt;/strong&gt; Yang, Yunkang, Paudel, Ramesh, McShan, Jordan, Hindman, Matthew, Huang, H Howie, Broniatowski, David&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Journal:&lt;/strong&gt; Sci. Rep.&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Year:&lt;/strong&gt; 2025&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Volume:&lt;/strong&gt; 15&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Pages:&lt;/strong&gt; 15684&lt;/li&gt;&lt;/ul&gt;&lt;h3&gt;Links&lt;/h3&gt;&lt;p&gt;&lt;a href=&quot;https://doi.org/10.1038/s41598-025-00233-w&quot;&gt;DOI&lt;/a&gt;&lt;/p&gt;]]&gt;</content:encoded>
     </item>
@@ -198,12 +198,12 @@ outlets; some outlets catering different items to different audiences.&lt;/p&gt;
       <guid isPermaLink="false">bibtex:Smith2025-kc</guid>
       <pubDate>Thu, 27 Mar 2025 00:00:00 </pubDate>
       <dc:creator>Smith, Alyssa H, Green, Jon, F Welles, Brooke, Lazer, David</dc:creator>
+      <category>Article</category>
+      <category>social media</category>
       <category>amplification</category>
+      <category>social networks</category>
       <category>PNAS Nexus</category>
       <category>tertius iungens</category>
-      <category>social media</category>
-      <category>Article</category>
-      <category>social networks</category>
       <category>triad transitivity</category>
       <content:encoded>&lt;![CDATA[&lt;h3&gt;Abstract&lt;/h3&gt;&lt;p&gt;&lt;jats:title&gt;Abstract&lt;/jats:title&gt;
                &lt;jats:p&gt;As they evolve, social networks tend to form transitive triads more often than random chance and structural constraints would suggest. However, the mechanisms by which triads in these networks become transitive are largely unexplored. We leverage a unique combination of data and methods to demonstrate a causal link between amplification and triad transitivity in a directed social network. Additionally, we develop the concept of the “attention broker,” an extension of the previously theorized tertius iungens (or “third who joins”). We use an innovative technique to identify time-bounded Twitter/X following events, and then use difference-in-differences to show that attention brokers cause triad transitivity by amplifying content. Attention brokers intervene in the evolution of any sociotechnical system where individuals can amplify content while referencing its originator.&lt;/jats:p&gt;&lt;/p&gt;&lt;h3&gt;Details&lt;/h3&gt;&lt;ul&gt;&lt;li&gt;&lt;strong&gt;Authors:&lt;/strong&gt; Smith, Alyssa H, Green, Jon, F Welles, Brooke, Lazer, David&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Journal:&lt;/strong&gt; PNAS Nexus&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Year:&lt;/strong&gt; 2025&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Volume:&lt;/strong&gt; 4&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Pages:&lt;/strong&gt; gaf106&lt;/li&gt;&lt;/ul&gt;&lt;h3&gt;Links&lt;/h3&gt;&lt;p&gt;&lt;a href=&quot;https://doi.org/10.1093/pnasnexus/pgaf106&quot;&gt;DOI&lt;/a&gt;&lt;/p&gt;]]&gt;</content:encoded>
@@ -214,15 +214,15 @@ outlets; some outlets catering different items to different audiences.&lt;/p&gt;
       <guid isPermaLink="false">bibtex:Gaw2025-ru</guid>
       <pubDate>Wed, 01 Jan 2025 00:00:00 +0000</pubDate>
       <dc:creator>Gaw, Fatima, Agonos, Mariam Jayne, Ruijgrok, Kris, Suarez, Gerard Martin</dc:creator>
-      <category>trolls</category>
       <category>elections</category>
-      <category>computational propaganda</category>
-      <category>Int. J. Commun.</category>
-      <category>brokerage</category>
-      <category>Philippines</category>
-      <category>influence operations</category>
       <category>Article</category>
+      <category>Int. J. Commun.</category>
+      <category>Philippines</category>
+      <category>brokerage</category>
+      <category>computational propaganda</category>
       <category>disinformation</category>
+      <category>trolls</category>
+      <category>influence operations</category>
       <content:encoded>&lt;![CDATA[&lt;h3&gt;Abstract&lt;/h3&gt;&lt;p&gt;This study conceptualizes influence operations (IOs), an enterprise that orchestrates manipulative and inauthentic activities to achieve political advantage, as a contemporary form of brokerage during elections. It investigates the empirical case of IOs engaged in covert political campaigning in the 2022 Philippine General Elections through qualitative field research. Drawing from 22 in-depth interviews with IO leads and staff, we define IOs’ broker attributes, their brokerage processes, and the capital and value they generate through brokerage. We identify four mechanisms of brokerage by IOs: infrastructural capacity, reputation manipulation, relationship building at scale, and obscured accountability. These mechanisms complement the brokerage work by aboveboard campaigns and other brokers by compensating for their limitations and innovating campaign strategies. We argue that IOs are not extraneous deviations but are logical extensions of existing political infrastructures and should be understood as operating with other normative forms of political campaigning.&lt;/p&gt;&lt;h3&gt;Details&lt;/h3&gt;&lt;ul&gt;&lt;li&gt;&lt;strong&gt;Authors:&lt;/strong&gt; Gaw, Fatima, Agonos, Mariam Jayne, Ruijgrok, Kris, Suarez, Gerard Martin&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Journal:&lt;/strong&gt; Int. J. Commun.&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Year:&lt;/strong&gt; 2025&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Volume:&lt;/strong&gt; 19&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Pages:&lt;/strong&gt; 21&lt;/li&gt;&lt;/ul&gt;]]&gt;</content:encoded>
     </item>
     <item>
@@ -378,8 +378,8 @@ The spread of misinformation, false news, and misleading claims threatens democr
       <guid isPermaLink="false">bibtex:Luhring2025-od</guid>
       <pubDate>Tue, 14 Jan 2025 00:00:00 </pubDate>
       <dc:creator>Lühring, Jula, Metzler, Hannah, Lazzaroni, Ruggero, Shetty, Apeksha, Lasser, Jana</dc:creator>
-      <category>J. Quant. Descr. Digit. Media</category>
       <category>Article</category>
+      <category>J. Quant. Descr. Digit. Media</category>
       <content:encoded>&lt;![CDATA[&lt;h3&gt;Abstract&lt;/h3&gt;&lt;p&gt;&lt;jats:p&gt;Researchers need reliable and valid tools to identify cases of untrustworthy information when studying the spread of misinformation on digital platforms. A common approach is to assess the trustworthiness of sources rather than individual pieces of content. One of the most widely used and comprehensive databases for source trustworthiness ratings is provided by NewsGuard. Since creating the database in 2019, NewsGuard has continually added new sources and reassessed existing ones. While NewsGuard initially focused only on the US, the database has expanded to include sources from other countries. In addition to trustworthiness ratings, the NewsGuard database contains various contextual assessments of the sources, which are less often used in contemporary research on misinformation. In this work, we provide an analysis of the content of the NewsGuard database, focusing on the temporal stability and completeness of its ratings across countries, as well as the usefulness of information on political orientation and topics for misinformation studies. We find that trustworthiness ratings and source coverage have remained relatively stable since 2022, particularly for the US, France, Italy, Germany, and Canada, with US-based sources consistently scoring lower than those from other countries. Additional information on the political orientation and topics covered by sources is comprehensive and provides valuable assets for characterizing sources beyond trustworthiness. By evaluating the database over time and across countries, we identify potential pitfalls that compromise the validity of using NewsGuard as a tool for quantifying untrustworthy information, particularly if dichotomous &quot;trustworthy&quot;/&quot;untrustworthy&quot; labels are used. Lastly, we provide recommendations for digital media research on how to avoid these pitfalls and discuss appropriate use cases for the NewsGuard database and source-level approaches in general.&lt;/jats:p&gt;&lt;/p&gt;&lt;h3&gt;Details&lt;/h3&gt;&lt;ul&gt;&lt;li&gt;&lt;strong&gt;Authors:&lt;/strong&gt; Lühring, Jula, Metzler, Hannah, Lazzaroni, Ruggero, Shetty, Apeksha, Lasser, Jana&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Journal:&lt;/strong&gt; J. Quant. Descr. Digit. Media&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Year:&lt;/strong&gt; 2025&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Volume:&lt;/strong&gt; 5&lt;/li&gt;&lt;/ul&gt;&lt;h3&gt;Links&lt;/h3&gt;&lt;p&gt;&lt;a href=&quot;https://doi.org/10.51685/jqd.2025.003&quot;&gt;DOI&lt;/a&gt;&lt;/p&gt;]]&gt;</content:encoded>
     </item>
     <item>
@@ -444,8 +444,8 @@ The spread of misinformation, false news, and misleading claims threatens democr
       <guid isPermaLink="false">bibtex:Green2025-ap</guid>
       <pubDate>Mon, 20 Jan 2025 00:00:00 </pubDate>
       <dc:creator>Green, Jon, Mccabe, Stefan, Shugars, Sarah, Chwe, Hanyu, Horgan, Luke, Cao, Shuyang, Lazer, David</dc:creator>
-      <category>Article</category>
       <category>Am. Polit. Sci. Rev.</category>
+      <category>Article</category>
       <content:encoded>&lt;![CDATA[&lt;h3&gt;Abstract&lt;/h3&gt;&lt;p&gt;&lt;jats:p&gt;Information on social media is characterized by networked curation processes in which users select other users from whom to receive information, and those users in turn share information that promotes their identities and interests. We argue this allows for partisan “curation bubbles” of users who share and consume content with consistent appeal drawn from a variety of sources. Yet, research concerning the extent of filter bubbles, echo chambers, or other forms of politically segregated information consumption typically conceptualizes information’s partisan valence at the source level as opposed to the story level. This can lead domain-level measures of audience partisanship to mischaracterize the partisan appeal of sources’ constituent stories—especially for sources estimated to be more moderate. Accounting for networked curation aligns theory and measurement of political information consumption on social media.&lt;/jats:p&gt;&lt;/p&gt;&lt;h3&gt;Details&lt;/h3&gt;&lt;ul&gt;&lt;li&gt;&lt;strong&gt;Authors:&lt;/strong&gt; Green, Jon, Mccabe, Stefan, Shugars, Sarah, Chwe, Hanyu, Horgan, Luke, Cao, Shuyang, Lazer, David&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Journal:&lt;/strong&gt; Am. Polit. Sci. Rev.&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Year:&lt;/strong&gt; 2025&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Pages:&lt;/strong&gt; 1--19&lt;/li&gt;&lt;/ul&gt;&lt;h3&gt;Links&lt;/h3&gt;&lt;p&gt;&lt;a href=&quot;https://doi.org/10.1017/s0003055424000984&quot;&gt;DOI&lt;/a&gt;&lt;/p&gt;]]&gt;</content:encoded>
     </item>
     <item>
@@ -601,12 +601,12 @@ error-correction frameworks.&lt;/p&gt;&lt;h3&gt;Details&lt;/h3&gt;&lt;ul&gt;&lt;
       <guid isPermaLink="false">bibtex:Bakshy2015-rn</guid>
       <pubDate>Fri, 05 Jun 2015 00:00:00 </pubDate>
       <dc:creator>Bakshy, Eytan, Messing, Solomon, Adamic, Lada A</dc:creator>
-      <category>Science</category>
-      <category>newsfeed</category>
-      <category>news</category>
-      <category>facebook</category>
-      <category>homophily</category>
       <category>Article</category>
+      <category>newsfeed</category>
+      <category>Science</category>
+      <category>homophily</category>
+      <category>facebook</category>
+      <category>news</category>
       <content:encoded>&lt;![CDATA[&lt;h3&gt;Abstract&lt;/h3&gt;&lt;p&gt;&lt;jats:title&gt;Not getting all sides of the news?&lt;/jats:title&gt;&lt;jats:p&gt;People are increasingly turning away from mass media to social media as a way of learning news and civic information. Bakshy&lt;jats:italic&gt;et al.&lt;/jats:italic&gt;examined the news that millions of Facebook users' peers shared, what information these users were presented with, and what they ultimately consumed (see the Perspective by Lazer). Friends shared substantially less cross-cutting news from sources aligned with an opposing ideology. People encountered roughly 15% less cross-cutting content in news feeds due to algorithmic ranking and clicked through to 70% less of this cross-cutting content. Within the domain of political news encountered in social media, selective exposure appears to drive attention.&lt;/jats:p&gt;&lt;jats:p&gt;&lt;jats:italic&gt;Science&lt;/jats:italic&gt;, this issue p.&lt;jats:related-article xmlns:xlink=&quot;http://www.w3.org/1999/xlink&quot; ext-link-type=&quot;doi&quot; issue=&quot;6239&quot; page=&quot;1130&quot; related-article-type=&quot;in-this-issue&quot; vol=&quot;348&quot; xlink:href=&quot;10.1126/science.aaa1160&quot;&gt;1130&lt;/jats:related-article&gt;; see also p.&lt;jats:related-article xmlns:xlink=&quot;http://www.w3.org/1999/xlink&quot; ext-link-type=&quot;doi&quot; issue=&quot;6239&quot; page=&quot;1090&quot; related-article-type=&quot;in-this-issue&quot; vol=&quot;348&quot; xlink:href=&quot;10.1126/science.aab1422&quot;&gt;1090&lt;/jats:related-article&gt;&lt;/jats:p&gt;&lt;/p&gt;&lt;h3&gt;Details&lt;/h3&gt;&lt;ul&gt;&lt;li&gt;&lt;strong&gt;Authors:&lt;/strong&gt; Bakshy, Eytan, Messing, Solomon, Adamic, Lada A&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Journal:&lt;/strong&gt; Science&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Year:&lt;/strong&gt; 2015&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Volume:&lt;/strong&gt; 348&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Pages:&lt;/strong&gt; 1130--1132&lt;/li&gt;&lt;/ul&gt;&lt;h3&gt;Links&lt;/h3&gt;&lt;p&gt;&lt;a href=&quot;https://doi.org/10.1126/science.aaa1160&quot;&gt;DOI&lt;/a&gt;&lt;/p&gt;]]&gt;</content:encoded>
     </item>
     <item>
@@ -616,8 +616,8 @@ error-correction frameworks.&lt;/p&gt;&lt;h3&gt;Details&lt;/h3&gt;&lt;ul&gt;&lt;
       <guid isPermaLink="false">bibtex:Costello2024-kp</guid>
       <pubDate>Fri, 13 Sep 2024 00:00:00 </pubDate>
       <dc:creator>Costello, Thomas H, Pennycook, Gordon, Rand, David G</dc:creator>
-      <category>Science</category>
       <category>Article</category>
+      <category>Science</category>
       <content:encoded>&lt;![CDATA[&lt;h3&gt;Abstract&lt;/h3&gt;&lt;p&gt;&lt;jats:p&gt;Conspiracy theory beliefs are notoriously persistent. Influential hypotheses propose that they fulfill important psychological needs, thus resisting counterevidence. Yet previous failures in correcting conspiracy beliefs may be due to counterevidence being insufficiently compelling and tailored. To evaluate this possibility, we leveraged developments in generative artificial intelligence and engaged 2190 conspiracy believers in personalized evidence-based dialogues with GPT-4 Turbo. The intervention reduced conspiracy belief by ~20%. The effect remained 2 months later, generalized across a wide range of conspiracy theories, and occurred even among participants with deeply entrenched beliefs. Although the dialogues focused on a single conspiracy, they nonetheless diminished belief in unrelated conspiracies and shifted conspiracy-related behavioral intentions. These findings suggest that many conspiracy theory believers can revise their views if presented with sufficiently compelling evidence.&lt;/jats:p&gt;&lt;/p&gt;&lt;h3&gt;Details&lt;/h3&gt;&lt;ul&gt;&lt;li&gt;&lt;strong&gt;Authors:&lt;/strong&gt; Costello, Thomas H, Pennycook, Gordon, Rand, David G&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Journal:&lt;/strong&gt; Science&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Year:&lt;/strong&gt; 2024&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Volume:&lt;/strong&gt; 385&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Pages:&lt;/strong&gt; eadq1814&lt;/li&gt;&lt;/ul&gt;&lt;h3&gt;Links&lt;/h3&gt;&lt;p&gt;&lt;a href=&quot;https://doi.org/10.1126/science.adq1814&quot;&gt;DOI&lt;/a&gt;&lt;/p&gt;]]&gt;</content:encoded>
     </item>
     <item>
@@ -682,8 +682,8 @@ https://github.com/WalterPaci/IMPAQTS-PID&lt;/p&gt;&lt;h3&gt;Details&lt;/h3&gt;&
       <guid isPermaLink="false">bibtex:Kansaon2025-id</guid>
       <pubDate>Sat, 07 Jun 2025 00:00:00 </pubDate>
       <dc:creator>Kansaon, Daniel, Melo, Philipe de Freitas, Zannettou, Savvas, Benevenuto, Fabricio</dc:creator>
-      <category>Proceedings of the International AAAI Conference on Web and Social Media</category>
       <category>Article</category>
+      <category>Proceedings of the International AAAI Conference on Web and Social Media</category>
       <content:encoded>&lt;![CDATA[&lt;h3&gt;Abstract&lt;/h3&gt;&lt;p&gt;&lt;jats:p&gt;The growth of social networks has raised concerns about the misuse of these platforms by disinformation campaigns, social bots, and coordinated activities. Among these platforms, WhatsApp has become a focal point for this abuse, particularly in Brazil, one of the countries with the highest use of the platform. Despite acknowledging the presence of coordinated campaigns and implementing restrictions on the number of messages forwarded per user, the platform continues to be abused. Due to its private nature and the difficulty of collecting information, little is known about these campaigns and the messages they disseminate. Given this context, our study investigates the presence of coordinated activities on WhatsApp in Brazil, identifying their content and purpose, especially how these messages relate to recent Brazilian political events. To answer these questions, we analyzed 13 million messages from 1,444 political groups over seven months from July 2022 to January 2023. Using network analysis, our findings suggest a significant prevalence of coordinated activity in the propagation of news messages, 26% of which originate from misinformation sites. Furthermore, we found that images play a key role in coordinated activity, accounting for 15% of messages, which are also used to mislead. Finally, coordinated accounts were used to organize collective actions, including attacks and protests against election results.&lt;/jats:p&gt;&lt;/p&gt;&lt;h3&gt;Details&lt;/h3&gt;&lt;ul&gt;&lt;li&gt;&lt;strong&gt;Authors:&lt;/strong&gt; Kansaon, Daniel, Melo, Philipe de Freitas, Zannettou, Savvas, Benevenuto, Fabricio&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Journal:&lt;/strong&gt; Proceedings of the International AAAI Conference on Web and Social Media&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Year:&lt;/strong&gt; 2025&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Volume:&lt;/strong&gt; 19&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Pages:&lt;/strong&gt; 1007--1020&lt;/li&gt;&lt;/ul&gt;&lt;h3&gt;Links&lt;/h3&gt;&lt;p&gt;&lt;a href=&quot;https://doi.org/10.1609/icwsm.v19i1.35857&quot;&gt;DOI&lt;/a&gt;&lt;/p&gt;]]&gt;</content:encoded>
     </item>
     <item>
@@ -692,14 +692,14 @@ https://github.com/WalterPaci/IMPAQTS-PID&lt;/p&gt;&lt;h3&gt;Details&lt;/h3&gt;&
       <guid isPermaLink="false">bibtex:Marwick2025-vx</guid>
       <pubDate>Wed, 01 Jan 2025 00:00:00 +0000</pubDate>
       <dc:creator>Marwick, Alice E, Furl, Katherine</dc:creator>
-      <category>evidence</category>
-      <category>online radicalization</category>
-      <category>Int. J. Commun.</category>
       <category>Article</category>
-      <category>redpill</category>
-      <category>Far-Right</category>
+      <category>Int. J. Commun.</category>
       <category>extremism</category>
+      <category>redpill</category>
+      <category>online radicalization</category>
       <category>disinformation</category>
+      <category>Far-Right</category>
+      <category>evidence</category>
       <content:encoded>&lt;![CDATA[&lt;h3&gt;Abstract&lt;/h3&gt;&lt;p&gt;How do people come to believe Far-Right, extremist, and conspiratorial ideas they encounter online? This article examines how participants in primarily U.S.-based Far-Right online communities describe their adoption of “redpill” beliefs and the role of disinformation in these accounts. Applying the socio-technical theory of media effects, we conduct a qualitative content analysis of “redpilling narratives” gathered from Reddit, Gab, and Discord. While many users frame redpilling as a moment of conversion, others portray redpilling as a process, something achieved incrementally through years of community participation and “doing your own research.” In both cases, disinformation presented as evidence and the capacity to determine the veracity of presented evidence play important roles in redpilling oneself and others. By framing their beliefs as the rational and logical results of fully considering a plethora of evidence, redpill adherents can justify holding and promoting otherwise indefensible prejudices. The community’s creation, promotion, and repetition of Far-Right disinformation, much of which is historical or “scientific” in nature, play a crucial role in the adoption of Far-Right beliefs.&lt;/p&gt;&lt;h3&gt;Details&lt;/h3&gt;&lt;ul&gt;&lt;li&gt;&lt;strong&gt;Authors:&lt;/strong&gt; Marwick, Alice E, Furl, Katherine&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Journal:&lt;/strong&gt; Int. J. Commun.&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Year:&lt;/strong&gt; 2025&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Volume:&lt;/strong&gt; 19&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Pages:&lt;/strong&gt; 26&lt;/li&gt;&lt;/ul&gt;]]&gt;</content:encoded>
     </item>
     <item>
@@ -709,8 +709,8 @@ https://github.com/WalterPaci/IMPAQTS-PID&lt;/p&gt;&lt;h3&gt;Details&lt;/h3&gt;&
       <guid isPermaLink="false">bibtex:Ventura2025-sw</guid>
       <pubDate>Thu, 12 Jun 2025 00:00:00 </pubDate>
       <dc:creator>Ventura, Tiago, Majumdar, Rajeshwari, Nagler, Jonathan, Tucker, Joshua</dc:creator>
-      <category>J. Polit.</category>
       <category>Article</category>
+      <category>J. Polit.</category>
       <content:encoded>&lt;![CDATA[&lt;h3&gt;Details&lt;/h3&gt;&lt;ul&gt;&lt;li&gt;&lt;strong&gt;Authors:&lt;/strong&gt; Ventura, Tiago, Majumdar, Rajeshwari, Nagler, Jonathan, Tucker, Joshua&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Journal:&lt;/strong&gt; J. Polit.&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Year:&lt;/strong&gt; 2025&lt;/li&gt;&lt;/ul&gt;&lt;h3&gt;Links&lt;/h3&gt;&lt;p&gt;&lt;a href=&quot;https://doi.org/10.1086/737172&quot;&gt;DOI&lt;/a&gt;&lt;/p&gt;]]&gt;</content:encoded>
     </item>
     <item>
