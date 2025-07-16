@@ -151,8 +151,8 @@
         }
       ],
       "tags": [
-        "Techreport",
-        "Data & Society"
+        "Data & Society",
+        "Techreport"
       ],
       "content_html": "<h3>Abstract</h3><p>This report offers a vision for red-teaming in the public interest: a process that goes beyond system-centric testing of already built systems to consider the full range of ways the public can be involved in evaluating genAI harms.</p><h3>Details</h3><ul><li><strong>Authors:</strong> Ranjit Singh, Borhane Blili-Hamelin, Carol Anderson, Emnet Tafesse, Briana Vecchione, Beth Duckles, Jacob Metcalf</li><li><strong>Published in:</strong> Data &amp; Society</li><li><strong>Year:</strong> 2025</li></ul><h3>Links</h3><p><a href=\"https://datasociety.net/wp-content/uploads/2025/02/Red-Teaming-in_the_Public_Interest_FINAL1.pdf\">PDF</a></p>",
       "_academic": {
@@ -270,8 +270,8 @@
         }
       ],
       "tags": [
-        "Techreport",
-        "SSRN Electronic Journal"
+        "SSRN Electronic Journal",
+        "Techreport"
       ],
       "content_html": "<h3>Abstract</h3><p>We study the effects of social media political advertising by randomizing subsets of 36,906 Facebook users and 25,925 Instagram users to have political ads removed from their news feeds for six weeks before the 2020 US presidential election. We show that most presidential ads were targeted toward parties’ own supporters and that fundraising ads were most common. On both Facebook and Instagram, we found no detectable effects of removing political ads on political knowledge, polarization, perceived legitimacy of the election, political participation (including campaign contributions), candidate favorability, and turnout. This was true overall and for both Democrats and Republicans separately.</p><h3>Details</h3><ul><li><strong>Authors:</strong> Hunt Allcott, Matthew Gentzkow, Ro’ee Levy, Adriana Crespo-Tenorio, Natasha Dumas, Winter Mason, Devra Moehler, Pablo Barbera, Taylor Brown, Juan Carlos Cisneros, Drew Dimmery, Deen Freelon, Sandra González-Bailón, Andrew Guess, Young Mie Kim, David Lazer, Neil A. Malhotra, Sameer Nair-Desai, Brendan Nyhan, Ana Carolina Paixao de Queiroz, Jennifer Pan, Jaime Settle, Emily Thorson, Rebekah Tromble, Carlos Velasco, Benjamin Wittenbrink, Magdalena Wojcieszak, Shiqi Yang, Saam Zahedian, Annie Franco, Chad Kiewiet de Jonge, Talia Stroud, Joshua Aaron Tucker</li><li><strong>Published in:</strong> SSRN Electronic Journal</li><li><strong>Year:</strong> 2025</li><li><strong>Citations:</strong> 0</li><li><strong>References:</strong> 350</li></ul><h3>Links</h3><p><a href=\"https://doi.org/10.2139/ssrn.5259653\">DOI</a></p>",
       "_academic": {
@@ -337,8 +337,8 @@
         }
       ],
       "tags": [
-        "arXiv [cs.SI]",
         "cs.SI",
+        "arXiv [cs.SI]",
         "Article"
       ],
       "content_html": "<h3>Abstract</h3><p>News sharing on digital platforms shapes the digital spaces millions of users\nnavigate. Trace data from these platforms also enables researchers to study\nonline news circulation. In this context, research on the types of news shared\nby users of differential political leaning has received considerable attention.\nWe argue that most existing approaches (i) rely on an overly simplified\nmeasurement of political leaning, (ii) consider only the outlet level in their\nanalyses, and/or (iii) study news circulation among partisans by making ex-ante\ndistinctions between partisan and non-partisan news. In this methodological\ncontribution, we introduce a research pipeline that allows a systematic mapping\nof news sharing both with respect to source and content. As a proof of concept,\nwe demonstrate insights that otherwise remain unnoticed: Diversification of\nnews sharing along the second political dimension; topic-dependent sharing of\noutlets; some outlets catering different items to different audiences.</p><h3>Details</h3><ul><li><strong>Authors:</strong> Felix Gaisbauer, Armin Pournaki, Jakob Ohme</li><li><strong>Published in:</strong> arXiv [cs.SI]</li><li><strong>Year:</strong> 2025</li></ul><h3>Links</h3><p><a href=\"http://arxiv.org/abs/2505.08359v1\">arXiv</a> | <a href=\"http://arxiv.org/pdf/2505.08359v1\">PDF</a></p>",
@@ -381,8 +381,8 @@
       ],
       "tags": [
         "Facebook",
-        "Social media",
         "Coordination",
+        "Social media",
         "Scientific Reports",
         "Article"
       ],
@@ -612,13 +612,13 @@
         }
       ],
       "tags": [
-        "PNAS Nexus",
-        "social networks",
-        "amplification",
-        "tertius iungens",
         "triad transitivity",
+        "PNAS Nexus",
+        "tertius iungens",
+        "Article",
         "social media",
-        "Article"
+        "social networks",
+        "amplification"
       ],
       "content_html": "<h3>Abstract</h3><p>&lt;jats:title&gt;Abstract&lt;/jats:title&gt;\n               &lt;jats:p&gt;As they evolve, social networks tend to form transitive triads more often than random chance and structural constraints would suggest. However, the mechanisms by which triads in these networks become transitive are largely unexplored. We leverage a unique combination of data and methods to demonstrate a causal link between amplification and triad transitivity in a directed social network. Additionally, we develop the concept of the “attention broker,” an extension of the previously theorized tertius iungens (or “third who joins”). We use an innovative technique to identify time-bounded Twitter/X following events, and then use difference-in-differences to show that attention brokers cause triad transitivity by amplifying content. Attention brokers intervene in the evolution of any sociotechnical system where individuals can amplify content while referencing its originator.&lt;/jats:p&gt;</p><h3>Details</h3><ul><li><strong>Authors:</strong> Alyssa H Smith, Jon Green, Brooke F. Welles, David Lazer</li><li><strong>Published in:</strong> PNAS Nexus</li><li><strong>Year:</strong> 2025</li><li><strong>Volume:</strong> 4</li><li><strong>Pages:</strong> gaf106</li><li><strong>Citations:</strong> 0</li><li><strong>References:</strong> 82</li></ul><h3>Links</h3><p><a href=\"https://doi.org/10.1093/pnasnexus/pgaf106\">DOI</a></p>",
       "_academic": {
@@ -653,15 +653,15 @@
         }
       ],
       "tags": [
-        "Int. J. Commun.",
-        "computational propaganda",
-        "brokerage",
-        "Article",
-        "trolls",
         "Philippines",
+        "computational propaganda",
+        "elections",
+        "trolls",
         "disinformation",
+        "brokerage",
         "influence operations",
-        "elections"
+        "Int. J. Commun.",
+        "Article"
       ],
       "content_html": "<h3>Abstract</h3><p>This study conceptualizes influence operations (IOs), an enterprise that orchestrates manipulative and inauthentic activities to achieve political advantage, as a contemporary form of brokerage during elections. It investigates the empirical case of IOs engaged in covert political campaigning in the 2022 Philippine General Elections through qualitative field research. Drawing from 22 in-depth interviews with IO leads and staff, we define IOs’ broker attributes, their brokerage processes, and the capital and value they generate through brokerage. We identify four mechanisms of brokerage by IOs: infrastructural capacity, reputation manipulation, relationship building at scale, and obscured accountability. These mechanisms complement the brokerage work by aboveboard campaigns and other brokers by compensating for their limitations and innovating campaign strategies. We argue that IOs are not extraneous deviations but are logical extensions of existing political infrastructures and should be understood as operating with other normative forms of political campaigning.</p><h3>Details</h3><ul><li><strong>Authors:</strong> Gaw, Fatima, Agonos, Mariam Jayne, Ruijgrok, Kris, Suarez, Gerard Martin</li><li><strong>Published in:</strong> Int. J. Commun.</li><li><strong>Year:</strong> 2025</li><li><strong>Volume:</strong> 19</li><li><strong>Pages:</strong> 21</li></ul>",
       "_academic": {
@@ -696,8 +696,8 @@
       ],
       "tags": [
         "cs.LG",
-        "cs.CY",
         "cs.CL",
+        "cs.CY",
         "arXiv [cs.CL]",
         "Article"
       ],
@@ -1823,10 +1823,10 @@
         }
       ],
       "tags": [
-        "facebook",
         "Science",
         "news",
         "homophily",
+        "facebook",
         "newsfeed",
         "Article"
       ],
@@ -2039,13 +2039,13 @@
         }
       ],
       "tags": [
-        "evidence",
-        "Int. J. Commun.",
-        "redpill",
-        "online radicalization",
-        "disinformation",
         "extremism",
+        "evidence",
+        "disinformation",
+        "online radicalization",
         "Far-Right",
+        "redpill",
+        "Int. J. Commun.",
         "Article"
       ],
       "content_html": "<h3>Abstract</h3><p>How do people come to believe Far-Right, extremist, and conspiratorial ideas they encounter online? This article examines how participants in primarily U.S.-based Far-Right online communities describe their adoption of “redpill” beliefs and the role of disinformation in these accounts. Applying the socio-technical theory of media effects, we conduct a qualitative content analysis of “redpilling narratives” gathered from Reddit, Gab, and Discord. While many users frame redpilling as a moment of conversion, others portray redpilling as a process, something achieved incrementally through years of community participation and “doing your own research.” In both cases, disinformation presented as evidence and the capacity to determine the veracity of presented evidence play important roles in redpilling oneself and others. By framing their beliefs as the rational and logical results of fully considering a plethora of evidence, redpill adherents can justify holding and promoting otherwise indefensible prejudices. The community’s creation, promotion, and repetition of Far-Right disinformation, much of which is historical or “scientific” in nature, play a crucial role in the adoption of Far-Right beliefs.</p><h3>Details</h3><ul><li><strong>Authors:</strong> Marwick, Alice E, Furl, Katherine</li><li><strong>Published in:</strong> Int. J. Commun.</li><li><strong>Year:</strong> 2025</li><li><strong>Volume:</strong> 19</li><li><strong>Pages:</strong> 26</li></ul>",
@@ -2144,10 +2144,10 @@
         }
       ],
       "tags": [
-        "cs.CY",
-        "cs.CL",
-        "arXiv [cs.CL]",
         "cs.AI",
+        "cs.CL",
+        "cs.CY",
+        "arXiv [cs.CL]",
         "Article"
       ],
       "content_html": "<h3>Abstract</h3><p>Researchers have proposed the use of generative large language models (LLMs)\nto label data for research and applied settings. This literature emphasizes the\nimproved performance of these models relative to other natural language models,\nnoting that generative LLMs typically outperform other models and even humans\nacross several metrics. Previous literature has examined bias across many\napplications and contexts, but less work has focused specifically on bias in\ngenerative LLMs&#x27; responses to subjective annotation tasks. This bias could\nresult in labels applied by LLMs that disproportionately align with majority\ngroups over a more diverse set of viewpoints. In this paper, we evaluate how\nLLMs represent diverse viewpoints on these contentious tasks. Across four\nannotation tasks on four datasets, we show that LLMs do not show systematic\nsubstantial disagreement with annotators on the basis of demographics. Rather,\nwe find that multiple LLMs tend to be biased in the same directions on the same\ndemographic categories within the same datasets. Moreover, the disagreement\nbetween human annotators on the labeling task -- a measure of item difficulty\n-- is far more predictive of LLM agreement with human annotators. We conclude\nwith a discussion of the implications for researchers and practitioners using\nLLMs for automated data annotation tasks. Specifically, we emphasize that\nfairness evaluations must be contextual, model choice alone will not solve\npotential issues of bias, and item difficulty must be integrated into bias\nassessments.</p><h3>Details</h3><ul><li><strong>Authors:</strong> Megan A. Brown, Shubham Atreja, Libby Hemphill, Patrick Y. Wu</li><li><strong>Published in:</strong> arXiv [cs.CL]</li><li><strong>Year:</strong> 2025</li></ul><h3>Links</h3><p><a href=\"http://arxiv.org/abs/2503.23243v2\">arXiv</a> | <a href=\"http://arxiv.org/pdf/2503.23243v2\">PDF</a></p>",
