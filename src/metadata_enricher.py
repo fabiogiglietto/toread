@@ -1322,7 +1322,36 @@ class MetadataEnricher:
                     self.cache.store_metadata(entry, metadata)
                     self.logger.info(f"Successfully enriched and cached entry: {entry.key} (source: {metadata.source})")
                 else:
-                    self.logger.warning(f"Could not enrich entry: {entry.key}")
+                    # More verbose error logging to help diagnose issues
+                    error_details = []
+                    
+                    # Check what fields are available for enrichment
+                    if entry.doi:
+                        error_details.append(f"DOI: {entry.doi}")
+                    else:
+                        error_details.append("No DOI available")
+                    
+                    if entry.title:
+                        error_details.append(f"Title length: {len(entry.title)} chars")
+                    else:
+                        error_details.append("No title available")
+                    
+                    if entry.authors:
+                        error_details.append(f"Authors: {', '.join(entry.authors[:2])}{'...' if len(entry.authors) > 2 else ''}")
+                    else:
+                        error_details.append("No authors available")
+                    
+                    # Check which APIs are enabled
+                    api_status = []
+                    if self.crossref_client:
+                        api_status.append("Crossref enabled")
+                    if self.semantic_scholar_client:
+                        api_status.append("Semantic Scholar enabled")
+                    if self.arxiv_client:
+                        api_status.append("ArXiv enabled")
+                    
+                    error_msg = f"Could not enrich entry: {entry.key} | {' | '.join(error_details)} | APIs: {', '.join(api_status) if api_status else 'None enabled'}"
+                    self.logger.warning(error_msg)
                     
             except Exception as e:
                 self.logger.error(f"Error enriching entry {entry.key}: {e}")
@@ -1354,14 +1383,30 @@ class MetadataEnricher:
         # Try Semantic Scholar first (better search)
         if self.semantic_scholar_client:
             metadata = self.semantic_scholar_client.query_by_title(title, author, year)
-            if metadata and metadata.confidence_score and metadata.confidence_score > 0.8:
-                return metadata
+            if metadata:
+                if metadata.confidence_score and metadata.confidence_score > 0.8:
+                    self.logger.debug(f"Semantic Scholar title match found with confidence {metadata.confidence_score:.3f}")
+                    return metadata
+                elif metadata.confidence_score:
+                    self.logger.debug(f"Semantic Scholar title match rejected - low confidence {metadata.confidence_score:.3f} (threshold: 0.8)")
+                else:
+                    self.logger.debug("Semantic Scholar title match rejected - no confidence score")
+            else:
+                self.logger.debug("No Semantic Scholar title match found")
         
         # Try Crossref
         if self.crossref_client:
             metadata = self.crossref_client.query_by_title(title, author)
-            if metadata and metadata.confidence_score and metadata.confidence_score > 0.8:
-                return metadata
+            if metadata:
+                if metadata.confidence_score and metadata.confidence_score > 0.8:
+                    self.logger.debug(f"Crossref title match found with confidence {metadata.confidence_score:.3f}")
+                    return metadata
+                elif metadata.confidence_score:
+                    self.logger.debug(f"Crossref title match rejected - low confidence {metadata.confidence_score:.3f} (threshold: 0.8)")
+                else:
+                    self.logger.debug("Crossref title match rejected - no confidence score")
+            else:
+                self.logger.debug("No Crossref title match found")
         
         return None
     
