@@ -14,10 +14,12 @@ class ToReadApp:
     """Main application class for converting BibTeX to RSS and JSON Feed formats."""
     
     def __init__(self, enrich_metadata: bool = True, crossref_config: dict = None, 
-                 semantic_scholar_config: dict = None, arxiv_config: dict = None, cache_config: dict = None):
+                 semantic_scholar_config: dict = None, arxiv_config: dict = None, cache_config: dict = None,
+                 skip_cached_enrichment: bool = False):
         self.bibtex_parser = BibTeXParser()
         self.metadata_enricher = MetadataEnricher(crossref_config, semantic_scholar_config, arxiv_config, cache_config) if enrich_metadata else None
         self.feed_generator = FeedGenerator()
+        self.skip_cached_enrichment = skip_cached_enrichment
     
     def convert_bibtex_to_feeds(self, bibtex_file: str, 
                                json_output_file: Optional[str] = None,
@@ -40,14 +42,35 @@ class ToReadApp:
         # Enrich metadata if enabled
         enriched_metadata = None
         if self.metadata_enricher:
-            print("Enriching metadata...")
-            try:
-                enriched_metadata = self.metadata_enricher.enrich_entries(entries)
-                enriched_count = sum(1 for v in enriched_metadata.values() if v is not None)
-                print(f"Enriched metadata for {enriched_count}/{len(entries)} entries")
-            except Exception as e:
-                print(f"Warning: Error enriching metadata: {e}")
-                print("Continuing without metadata enrichment...")
+            if self.skip_cached_enrichment:
+                print("Running in cache-only mode - using existing cached metadata...")
+                try:
+                    # Get only cached metadata, don't enrich new entries
+                    cached_dicts = self.metadata_enricher.cache.get_all_cached_metadata(entries)
+                    enriched_metadata = {}
+                    for key, metadata_dict in cached_dicts.items():
+                        try:
+                            from .metadata_enricher import EnrichedMetadata
+                            enriched_metadata[key] = EnrichedMetadata(**metadata_dict)
+                        except Exception as e:
+                            print(f"Warning: Failed to load cached metadata for {key}: {e}")
+                            enriched_metadata[key] = None
+                    
+                    cached_count = sum(1 for v in enriched_metadata.values() if v is not None)
+                    print(f"Using cached metadata for {cached_count}/{len(entries)} entries")
+                except Exception as e:
+                    print(f"Warning: Error loading cached metadata: {e}")
+                    print("Falling back to full enrichment...")
+                    enriched_metadata = self.metadata_enricher.enrich_entries(entries)
+            else:
+                print("Enriching metadata...")
+                try:
+                    enriched_metadata = self.metadata_enricher.enrich_entries(entries)
+                    enriched_count = sum(1 for v in enriched_metadata.values() if v is not None)
+                    print(f"Enriched metadata for {enriched_count}/{len(entries)} entries")
+                except Exception as e:
+                    print(f"Warning: Error enriching metadata: {e}")
+                    print("Continuing without metadata enrichment...")
         
         # Generate JSON Feed (primary format)
         json_content = ""
@@ -83,10 +106,12 @@ def main():
         formatter_class=argparse.RawDescriptionHelpFormatter,
         epilog="""
 Examples:
-  %(prog)s input.bib                    # Convert to RSS and print to stdout
-  %(prog)s input.bib -o feed.xml        # Convert and save to file
-  %(prog)s input.bib --no-enrich        # Convert without metadata enrichment
-  %(prog)s input.bib --rate-limit 2.0   # Use 2 second delay between API calls
+  %(prog)s input.bib                           # Convert to RSS and print to stdout
+  %(prog)s input.bib -o output/                # Convert and save to directory
+  %(prog)s input.bib --no-enrich               # Convert without metadata enrichment
+  %(prog)s input.bib --rate-limit 2.0          # Use 2 second delay between API calls
+  %(prog)s input.bib --skip-cached-enrichment  # Use only cached metadata (fast mode)
+  %(prog)s input.bib --timeout 30              # Set 30 second timeout for API requests
         """
     )
     
@@ -121,6 +146,19 @@ Examples:
         type=float,
         default=1.0,
         help='Delay in seconds between API calls for metadata enrichment (default: 1.0)'
+    )
+    
+    parser.add_argument(
+        '--timeout',
+        type=int,
+        default=15,
+        help='Timeout in seconds for API requests (default: 15)'
+    )
+    
+    parser.add_argument(
+        '--skip-cached-enrichment',
+        action='store_true',
+        help='Skip enrichment for entries that already have cached metadata (faster for scheduled runs)'
     )
     
     parser.add_argument(
@@ -165,18 +203,21 @@ Examples:
     crossref_config = {
         'enabled': True,
         'rate_limit': args.rate_limit,
+        'timeout': args.timeout,
         'user_agent': f'ToRead/1.0 ({args.feed_link})'
     }
     
     semantic_scholar_config = {
         'enabled': True,
         'rate_limit': args.rate_limit,
+        'timeout': args.timeout,
         'api_key': 'igLzlRjWMo7oymQqDtf7Q6ttrMHsv2jr3MIYHQmz'
     }
     
     arxiv_config = {
         'enabled': True,
-        'rate_limit': 3.0  # ArXiv recommends 3 second delays
+        'rate_limit': max(3.0, args.rate_limit),  # ArXiv recommends 3 second delays minimum
+        'timeout': args.timeout
     }
     
     cache_config = {
@@ -190,7 +231,8 @@ Examples:
         crossref_config=crossref_config,
         semantic_scholar_config=semantic_scholar_config,
         arxiv_config=arxiv_config,
-        cache_config=cache_config
+        cache_config=cache_config,
+        skip_cached_enrichment=args.skip_cached_enrichment
     )
     
     # Set feed generator parameters

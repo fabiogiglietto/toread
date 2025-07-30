@@ -44,7 +44,7 @@ class CrossrefClient:
     def __init__(self, base_url: str = "https://api.crossref.org/works",
                  user_agent: str = "ToRead/1.0", rate_limit: float = 1.0,
                  max_retries: int = 3, backoff_factor: float = 0.5,
-                 timeout: int = 10):
+                 timeout: int = 15):
         self.base_url = base_url
         self.rate_limit = rate_limit
         self.max_retries = max_retries
@@ -454,7 +454,7 @@ class SemanticScholarClient:
     
     def __init__(self, api_key: str = None, base_url: str = "https://api.semanticscholar.org/graph/v1",
                  rate_limit: float = 1.0, max_retries: int = 3, backoff_factor: float = 0.5,
-                 timeout: int = 10):
+                 timeout: int = 15):
         self.api_key = api_key
         self.base_url = base_url
         self.rate_limit = rate_limit
@@ -1211,23 +1211,34 @@ class MetadataEnricher:
         self.arxiv_client = None
         self.institutional_enricher = InstitutionalReportEnricher()
         
+        # Circuit breaker for failed APIs (avoid repeated failures)
+        self.api_failure_counts = {
+            'crossref': 0,
+            'semantic_scholar': 0,
+            'arxiv': 0
+        }
+        self.max_consecutive_failures = 5
+        
         if crossref_config and crossref_config.get('enabled', True):
             self.crossref_client = CrossrefClient(
                 base_url=crossref_config.get('base_url', 'https://api.crossref.org/works'),
                 user_agent=crossref_config.get('user_agent', 'ToRead/1.0'),
-                rate_limit=crossref_config.get('rate_limit', 1.0)
+                rate_limit=crossref_config.get('rate_limit', 1.0),
+                timeout=crossref_config.get('timeout', 15)
             )
         
         if semantic_scholar_config and semantic_scholar_config.get('enabled', True):
             self.semantic_scholar_client = SemanticScholarClient(
                 api_key=semantic_scholar_config.get('api_key'),
                 base_url=semantic_scholar_config.get('base_url', 'https://api.semanticscholar.org/graph/v1'),
-                rate_limit=semantic_scholar_config.get('rate_limit', 1.0)
+                rate_limit=semantic_scholar_config.get('rate_limit', 1.0),
+                timeout=semantic_scholar_config.get('timeout', 15)
             )
         
         if arxiv_config and arxiv_config.get('enabled', True):
             self.arxiv_client = ArxivClient(
-                rate_limit=arxiv_config.get('rate_limit', 3.0)
+                rate_limit=arxiv_config.get('rate_limit', 3.0),
+                timeout=arxiv_config.get('timeout', 15)
             )
     
     def _is_arxiv_paper(self, entry: BibEntry) -> bool:
@@ -1364,49 +1375,73 @@ class MetadataEnricher:
     
     def _enrich_by_doi(self, doi: str) -> Optional[EnrichedMetadata]:
         """Try to enrich using DOI with multiple APIs."""
-        # Try Semantic Scholar first (often has better abstracts)
-        if self.semantic_scholar_client:
-            metadata = self.semantic_scholar_client.query_by_doi(doi)
-            if metadata:
-                return metadata
+        # Try Crossref first (more reliable and comprehensive)
+        if self.crossref_client and self.api_failure_counts['crossref'] < self.max_consecutive_failures:
+            try:
+                metadata = self.crossref_client.query_by_doi(doi)
+                if metadata:
+                    self.api_failure_counts['crossref'] = 0  # Reset on success
+                    return metadata
+                else:
+                    self.api_failure_counts['crossref'] += 1
+            except Exception as e:
+                self.api_failure_counts['crossref'] += 1
+                self.logger.debug(f"Crossref DOI query failed: {e}")
         
-        # Fall back to Crossref
-        if self.crossref_client:
-            metadata = self.crossref_client.query_by_doi(doi)
-            if metadata:
-                return metadata
+        # Fall back to Semantic Scholar
+        if self.semantic_scholar_client and self.api_failure_counts['semantic_scholar'] < self.max_consecutive_failures:
+            try:
+                metadata = self.semantic_scholar_client.query_by_doi(doi)
+                if metadata:
+                    self.api_failure_counts['semantic_scholar'] = 0  # Reset on success
+                    return metadata
+                else:
+                    self.api_failure_counts['semantic_scholar'] += 1
+            except Exception as e:
+                self.api_failure_counts['semantic_scholar'] += 1
+                self.logger.debug(f"Semantic Scholar DOI query failed: {e}")
         
         return None
     
     def _enrich_by_title(self, title: str, author: str = None, year: str = None) -> Optional[EnrichedMetadata]:
         """Try to enrich using title with multiple APIs."""
-        # Try Semantic Scholar first (better search)
-        if self.semantic_scholar_client:
-            metadata = self.semantic_scholar_client.query_by_title(title, author, year)
-            if metadata:
-                if metadata.confidence_score and metadata.confidence_score > 0.8:
-                    self.logger.debug(f"Semantic Scholar title match found with confidence {metadata.confidence_score:.3f}")
-                    return metadata
-                elif metadata.confidence_score:
-                    self.logger.debug(f"Semantic Scholar title match rejected - low confidence {metadata.confidence_score:.3f} (threshold: 0.8)")
+        # Try Crossref first (more reliable for title matching)
+        if self.crossref_client and self.api_failure_counts['crossref'] < self.max_consecutive_failures:
+            try:
+                metadata = self.crossref_client.query_by_title(title, author)
+                if metadata:
+                    if metadata.confidence_score and metadata.confidence_score > 0.75:  # Lowered threshold slightly
+                        self.logger.debug(f"Crossref title match found with confidence {metadata.confidence_score:.3f}")
+                        self.api_failure_counts['crossref'] = 0  # Reset on success
+                        return metadata
+                    elif metadata.confidence_score:
+                        self.logger.debug(f"Crossref title match rejected - low confidence {metadata.confidence_score:.3f} (threshold: 0.75)")
+                    else:
+                        self.logger.debug("Crossref title match rejected - no confidence score")
                 else:
-                    self.logger.debug("Semantic Scholar title match rejected - no confidence score")
-            else:
-                self.logger.debug("No Semantic Scholar title match found")
+                    self.logger.debug("No Crossref title match found")
+            except Exception as e:
+                self.api_failure_counts['crossref'] += 1
+                self.logger.debug(f"Crossref title query failed: {e}")
         
-        # Try Crossref
-        if self.crossref_client:
-            metadata = self.crossref_client.query_by_title(title, author)
-            if metadata:
-                if metadata.confidence_score and metadata.confidence_score > 0.8:
-                    self.logger.debug(f"Crossref title match found with confidence {metadata.confidence_score:.3f}")
-                    return metadata
-                elif metadata.confidence_score:
-                    self.logger.debug(f"Crossref title match rejected - low confidence {metadata.confidence_score:.3f} (threshold: 0.8)")
+        # Try Semantic Scholar (better search for newer papers)
+        if self.semantic_scholar_client and self.api_failure_counts['semantic_scholar'] < self.max_consecutive_failures:
+            try:
+                metadata = self.semantic_scholar_client.query_by_title(title, author, year)
+                if metadata:
+                    if metadata.confidence_score and metadata.confidence_score > 0.7:  # Lower threshold for S2
+                        self.logger.debug(f"Semantic Scholar title match found with confidence {metadata.confidence_score:.3f}")
+                        self.api_failure_counts['semantic_scholar'] = 0  # Reset on success
+                        return metadata
+                    elif metadata.confidence_score:
+                        self.logger.debug(f"Semantic Scholar title match rejected - low confidence {metadata.confidence_score:.3f} (threshold: 0.7)")
+                    else:
+                        self.logger.debug("Semantic Scholar title match rejected - no confidence score")
                 else:
-                    self.logger.debug("Crossref title match rejected - no confidence score")
-            else:
-                self.logger.debug("No Crossref title match found")
+                    self.logger.debug("No Semantic Scholar title match found")
+            except Exception as e:
+                self.api_failure_counts['semantic_scholar'] += 1
+                self.logger.debug(f"Semantic Scholar title query failed: {e}")
         
         return None
     
