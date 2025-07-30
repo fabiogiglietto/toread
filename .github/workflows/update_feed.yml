@@ -120,7 +120,27 @@ jobs:
         git config --local user.email "action@github.com"
         git config --local user.name "GitHub Action"
         git commit -m "🤖 Update academic feeds - $(date -u '+%Y-%m-%d %H:%M:%S UTC')"
-        git push
+        
+        # Handle potential conflicts by pulling before pushing
+        for i in {1..3}; do
+          if git push; then
+            echo "Successfully pushed changes"
+            break
+          else
+            echo "Push failed (attempt $i), pulling latest changes..."
+            git pull --rebase origin main
+            if [ $? -eq 0 ]; then
+              echo "Rebase successful, retrying push..."
+            else
+              echo "Rebase failed, attempt $i of 3"
+              if [ $i -eq 3 ]; then
+                echo "Failed to resolve conflicts after 3 attempts"
+                exit 1
+              fi
+              sleep 5
+            fi
+          fi
+        done
     
     - name: Upload feeds as artifacts
       uses: actions/upload-artifact@v4
