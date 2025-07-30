@@ -1317,13 +1317,13 @@ class MetadataEnricher:
         
         cached_count = len(enriched)
         
-        # Get entries that need enrichment
-        uncached_entries = self.cache.get_uncached_entries(entries)
+        # Get entries that need enrichment (includes weekly retry logic for failures)
+        retriable_entries = self.cache.get_retriable_entries(entries)
         
-        self.logger.info(f"Processing {len(entries)} entries: {cached_count} cached, {len(uncached_entries)} need enrichment")
+        self.logger.info(f"Processing {len(entries)} entries: {cached_count} cached, {len(retriable_entries)} need enrichment")
         
-        # Enrich only uncached entries
-        for entry in uncached_entries:
+        # Enrich only retriable entries
+        for entry in retriable_entries:
             try:
                 metadata = self.enrich_entry(entry)
                 enriched[entry.key] = metadata
@@ -1333,7 +1333,7 @@ class MetadataEnricher:
                     self.cache.store_metadata(entry, metadata)
                     self.logger.info(f"Successfully enriched and cached entry: {entry.key} (source: {metadata.source})")
                 else:
-                    # More verbose error logging to help diagnose issues
+                    # Store failure in cache to avoid retrying for a week
                     error_details = []
                     
                     # Check what fields are available for enrichment
@@ -1364,9 +1364,16 @@ class MetadataEnricher:
                     error_msg = f"Could not enrich entry: {entry.key} | {' | '.join(error_details)} | APIs: {', '.join(api_status) if api_status else 'None enabled'}"
                     self.logger.warning(error_msg)
                     
+                    # Store failure in cache to avoid retrying for a week
+                    self.cache.store_failure(entry, error_msg)
+                    
             except Exception as e:
-                self.logger.error(f"Error enriching entry {entry.key}: {e}")
+                error_msg = f"Error enriching entry {entry.key}: {e}"
+                self.logger.error(error_msg)
                 enriched[entry.key] = None
+                
+                # Store failure in cache to avoid retrying for a week
+                self.cache.store_failure(entry, error_msg)
         
         # Save cache to disk
         self.cache.save_cache()

@@ -67,6 +67,30 @@ class MetadataCache:
         
         return True
     
+    def should_retry_failed_entry(self, entry: BibEntry) -> bool:
+        """Check if a failed entry should be retried (once a week limit)."""
+        entry_hash = self._get_entry_hash(entry)
+        if entry_hash not in self.cache_data:
+            return True  # Not cached, should try
+        
+        cached_item = self.cache_data[entry_hash]
+        
+        # If it's not marked as failed, check if it has valid metadata
+        if not cached_item.get('failed', False):
+            return not self.is_cached(entry)
+        
+        # If it's marked as failed, check if enough time has passed
+        last_failure_time = datetime.fromisoformat(cached_item.get('last_failure_at', cached_item['cached_at']))
+        retry_interval = timedelta(days=7)  # Retry once a week
+        
+        if datetime.now() - last_failure_time > retry_interval:
+            self.logger.debug(f"Entry {entry.key} failed enrichment {(datetime.now() - last_failure_time).days} days ago, will retry")
+            return True
+        else:
+            days_remaining = 7 - (datetime.now() - last_failure_time).days
+            self.logger.debug(f"Entry {entry.key} failed recently, will retry in {days_remaining} days")
+            return False
+    
     def get_metadata(self, entry: BibEntry) -> Optional[Dict]:
         """Retrieve cached metadata for an entry."""
         if not self.is_cached(entry):
@@ -104,6 +128,22 @@ class MetadataCache:
         
         self.logger.debug(f"Cached metadata for entry: {entry.key}")
     
+    def store_failure(self, entry: BibEntry, error_reason: str = None) -> None:
+        """Store failed enrichment attempt with timestamp."""
+        entry_hash = self._get_entry_hash(entry)
+        
+        self.cache_data[entry_hash] = {
+            'entry_key': entry.key,
+            'entry_title': entry.title,
+            'cached_at': datetime.now().isoformat(),
+            'metadata': None,
+            'failed': True,
+            'failure_reason': error_reason or 'Enrichment failed',
+            'last_failure_at': datetime.now().isoformat()
+        }
+        
+        self.logger.debug(f"Cached failure for entry: {entry.key} - {error_reason}")
+    
     def get_uncached_entries(self, entries: list[BibEntry]) -> list[BibEntry]:
         """Filter entries to return only those without valid cached metadata."""
         uncached = []
@@ -113,6 +153,23 @@ class MetadataCache:
         
         self.logger.info(f"Found {len(uncached)} uncached entries out of {len(entries)} total")
         return uncached
+    
+    def get_retriable_entries(self, entries: list[BibEntry]) -> list[BibEntry]:
+        """Filter entries to return only those that should be retried for enrichment.
+        
+        This includes:
+        - Entries that have never been processed
+        - Entries with successful metadata that has expired
+        - Entries that failed enrichment more than a week ago
+        """
+        retriable = []
+        for entry in entries:
+            if self.should_retry_failed_entry(entry):
+                retriable.append(entry)
+        
+        cached_count = len(entries) - len(retriable)
+        self.logger.info(f"Found {len(retriable)} retriable entries out of {len(entries)} total ({cached_count} skipped due to recent cache/failures)")
+        return retriable
     
     def get_all_cached_metadata(self, entries: list[BibEntry]) -> Dict[str, Dict]:
         """Get all cached metadata for a list of entries."""
@@ -149,13 +206,29 @@ class MetadataCache:
         current_time = datetime.now()
         
         expired_count = 0
+        failed_count = 0
+        successful_count = 0
+        failed_retriable_count = 0
+        
         for cached_item in self.cache_data.values():
             cache_time = datetime.fromisoformat(cached_item['cached_at'])
             if current_time - cache_time > self.cache_duration:
                 expired_count += 1
+            
+            if cached_item.get('failed', False):
+                failed_count += 1
+                # Check if this failed entry can be retried
+                last_failure_time = datetime.fromisoformat(cached_item.get('last_failure_at', cached_item['cached_at']))
+                if current_time - last_failure_time > timedelta(days=7):
+                    failed_retriable_count += 1
+            else:
+                successful_count += 1
         
         return {
             'total_entries': total_entries,
             'valid_entries': total_entries - expired_count,
-            'expired_entries': expired_count
+            'expired_entries': expired_count,
+            'successful_entries': successful_count,
+            'failed_entries': failed_count,
+            'failed_retriable_entries': failed_retriable_count
         }
