@@ -25,40 +25,23 @@ class FeedGenerator:
         self.author_name = author_name
         self.author_url = author_url or feed_link
     
-    def _sort_entries_by_date(self, entries: List[BibEntry], 
-                             enriched_metadata: Optional[Dict[str, EnrichedMetadata]] = None) -> List[BibEntry]:
-        """Sort entries by publication date in reverse chronological order (newest first)."""
-        def get_sort_key(entry: BibEntry) -> tuple[int, int, int]:
-            """Get (year, month, day) tuple for sorting, with fallbacks for missing data."""
-            metadata = enriched_metadata.get(entry.key) if enriched_metadata else None
-            
-            # Try to get date from our existing date parsing logic
-            iso_date, _ = self._get_entry_date_iso(entry, metadata)
-            
-            if iso_date:
-                try:
-                    # Parse the ISO date to extract year, month, day
-                    date_part = iso_date.split('T')[0]  # Get date part before 'T'
-                    year, month, day = map(int, date_part.split('-'))
-                    return (year, month, day)
-                except:
-                    pass
-            
-            # Fallback: use entry year and month if available
-            year = int(entry.year) if entry.year and entry.year.isdigit() else 1900
-            month = int(entry.month) if entry.month and entry.month.isdigit() else 1
-            day = 15 if entry.month else 1  # Mid-month if we have month, otherwise January 1st
-            
-            return (year, month, day)
+    def _sort_entries_by_discovery_date(self, entries: List[BibEntry]) -> List[BibEntry]:
+        """Sort entries by discovery date in reverse chronological order (newest discoveries first)."""
+        def get_sort_key(entry: BibEntry) -> datetime:
+            """Get discovery date for sorting, with fallback to epoch if missing."""
+            if entry.discovery_date:
+                return entry.discovery_date
+            # Fallback for entries without discovery date
+            return datetime(1970, 1, 1, tzinfo=timezone.utc)
         
-        # Sort in reverse chronological order (newest first)
+        # Sort in reverse chronological order (newest discoveries first)
         return sorted(entries, key=get_sort_key, reverse=True)
     
     def generate_json_feed(self, entries: List[BibEntry], 
                           enriched_metadata: Optional[Dict[str, EnrichedMetadata]] = None) -> str:
         """Generate JSON Feed from bibliographic entries (primary format with full metadata)."""
-        # Sort entries by publication date (newest first)
-        sorted_entries = self._sort_entries_by_date(entries, enriched_metadata)
+        # Sort entries by discovery date (newest discoveries first)
+        sorted_entries = self._sort_entries_by_discovery_date(entries)
         
         feed = {
             "version": "https://jsonfeed.org/version/1.1",
@@ -87,8 +70,8 @@ class FeedGenerator:
     def generate_rss(self, entries: List[BibEntry], 
                     enriched_metadata: Optional[Dict[str, EnrichedMetadata]] = None) -> str:
         """Generate RSS XML from bibliographic entries (simplified format for compatibility)."""
-        # Sort entries by publication date (newest first)
-        sorted_entries = self._sort_entries_by_date(entries, enriched_metadata)
+        # Sort entries by discovery date (newest discoveries first)
+        sorted_entries = self._sort_entries_by_discovery_date(entries)
         
         # Create root RSS element
         rss = ET.Element("rss", version="2.0")
@@ -120,6 +103,11 @@ class FeedGenerator:
             "content_text": self._get_entry_description(entry, metadata),
             "date_published": date_published
         }
+        
+        # Add discovery date
+        if entry.discovery_date:
+            discovery_date_iso = entry.discovery_date.isoformat().replace('+00:00', 'Z')
+            item["_discovery_date"] = discovery_date_iso
         
         # Add estimation indicator if date is estimated
         if is_estimated and date_published:
@@ -208,6 +196,11 @@ class FeedGenerator:
         if content:
             content_elem = ET.SubElement(item, "content:encoded")
             content_elem.text = f"<![CDATA[{content}]]>"
+        
+        # Discovery date
+        if entry.discovery_date:
+            discovery_date_rss = entry.discovery_date.strftime("%a, %d %b %Y %H:%M:%S %z")
+            ET.SubElement(item, "dc:date").text = discovery_date_rss
         
         return item
     

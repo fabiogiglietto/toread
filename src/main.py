@@ -8,6 +8,7 @@ from typing import Optional
 from .bibtex_parser import BibTeXParser
 from .metadata_enricher import MetadataEnricher
 from .rss_generator import FeedGenerator
+from .cache import DiscoveryCache
 
 
 class ToReadApp:
@@ -20,6 +21,7 @@ class ToReadApp:
         self.metadata_enricher = MetadataEnricher(crossref_config, semantic_scholar_config, arxiv_config, cache_config) if enrich_metadata else None
         self.feed_generator = FeedGenerator()
         self.skip_cached_enrichment = skip_cached_enrichment
+        self.discovery_cache = DiscoveryCache("cache/discovery_cache.json")
     
     def convert_bibtex_to_feeds(self, bibtex_file: str, 
                                json_output_file: Optional[str] = None,
@@ -31,6 +33,11 @@ class ToReadApp:
         try:
             entries = self.bibtex_parser.parse_file(bibtex_file)
             print(f"Found {len(entries)} entries")
+            
+            # Set discovery dates for all entries
+            entries = self.bibtex_parser.set_discovery_dates(entries, self.discovery_cache)
+            self.discovery_cache.save_cache()
+            
         except Exception as e:
             print(f"Error parsing BibTeX file: {e}")
             return "", ""

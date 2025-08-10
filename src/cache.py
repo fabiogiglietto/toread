@@ -232,3 +232,72 @@ class MetadataCache:
             'failed_entries': failed_count,
             'failed_retriable_entries': failed_retriable_count
         }
+
+
+class DiscoveryCache:
+    """Cache for tracking when entries were first discovered."""
+    
+    def __init__(self, cache_file: str = "cache/discovery_cache.json"):
+        self.cache_file = Path(cache_file)
+        self.logger = logging.getLogger(__name__)
+        self.cache_data = {}
+        self.load_cache()
+    
+    def _get_entry_hash(self, entry: BibEntry) -> str:
+        """Generate a hash for a BibTeX entry based on key identifying fields."""
+        # Use the same hash as MetadataCache for consistency
+        content = f"{entry.title or ''}{','.join(entry.authors)}{entry.year or ''}{entry.doi or ''}"
+        return hashlib.sha256(content.encode('utf-8')).hexdigest()[:16]
+    
+    def load_cache(self) -> None:
+        """Load existing discovery cache from disk."""
+        if self.cache_file.exists():
+            try:
+                with open(self.cache_file, 'r', encoding='utf-8') as f:
+                    self.cache_data = json.load(f)
+                self.logger.info(f"Loaded discovery cache with {len(self.cache_data)} entries")
+            except Exception as e:
+                self.logger.warning(f"Failed to load discovery cache: {e}")
+                self.cache_data = {}
+        else:
+            self.cache_data = {}
+            self.cache_file.parent.mkdir(parents=True, exist_ok=True)
+    
+    def save_cache(self) -> None:
+        """Save current discovery cache to disk."""
+        try:
+            with open(self.cache_file, 'w', encoding='utf-8') as f:
+                json.dump(self.cache_data, f, indent=2, ensure_ascii=False)
+            self.logger.info(f"Saved discovery cache with {len(self.cache_data)} entries")
+        except Exception as e:
+            self.logger.error(f"Failed to save discovery cache: {e}")
+    
+    def get_discovery_date(self, entry: BibEntry) -> Optional[datetime]:
+        """Get the discovery date for an entry."""
+        entry_hash = self._get_entry_hash(entry)
+        if entry_hash not in self.cache_data:
+            return None
+        
+        try:
+            discovery_date_str = self.cache_data[entry_hash]['discovery_date']
+            return datetime.fromisoformat(discovery_date_str.replace('Z', '+00:00'))
+        except Exception as e:
+            self.logger.warning(f"Failed to parse discovery date for entry {entry.key}: {e}")
+            return None
+    
+    def store_discovery_date(self, entry: BibEntry, discovery_date: datetime) -> None:
+        """Store the discovery date for an entry."""
+        entry_hash = self._get_entry_hash(entry)
+        
+        self.cache_data[entry_hash] = {
+            'entry_key': entry.key,
+            'entry_title': entry.title,
+            'discovery_date': discovery_date.isoformat()
+        }
+        
+        self.logger.debug(f"Cached discovery date for entry: {entry.key}")
+    
+    def is_known_entry(self, entry: BibEntry) -> bool:
+        """Check if an entry has been seen before."""
+        entry_hash = self._get_entry_hash(entry)
+        return entry_hash in self.cache_data

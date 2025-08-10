@@ -5,6 +5,7 @@ import logging
 from typing import Dict, List, Optional
 from dataclasses import dataclass, field
 from pathlib import Path
+from datetime import datetime, timezone
 
 
 @dataclass
@@ -24,6 +25,7 @@ class BibEntry:
     volume: Optional[str] = None
     pages: Optional[str] = None
     publisher: Optional[str] = None
+    discovery_date: Optional[datetime] = None
     raw_fields: Dict[str, str] = field(default_factory=dict)
 
 
@@ -190,6 +192,47 @@ class BibTeXParser:
         entry.publisher = self._get_field_value(raw_fields, self.field_mappings['publisher'])
         if entry.publisher:
             entry.publisher = self._clean_latex_formatting(entry.publisher)
+    
+    def set_discovery_dates(self, entries: List[BibEntry], discovery_cache: Optional['DiscoveryCache'] = None) -> List[BibEntry]:
+        """Set discovery dates for entries, using cache for existing entries or publication date as fallback."""
+        for entry in entries:
+            # Check if we already have a cached discovery date for this entry
+            if discovery_cache:
+                cached_date = discovery_cache.get_discovery_date(entry)
+                if cached_date:
+                    entry.discovery_date = cached_date
+                    continue
+            
+            # This is a new entry - set discovery date
+            if entry.discovery_date is None:
+                # For the initial run, set discovery_date to publication_date for existing papers
+                # This assumes all current papers are being "discovered" at their publication date
+                pub_date = self._get_publication_datetime(entry)
+                if pub_date:
+                    entry.discovery_date = pub_date
+                else:
+                    # No publication date available, use current time
+                    entry.discovery_date = datetime.now(timezone.utc)
+                
+                # Store in cache for future runs
+                if discovery_cache:
+                    discovery_cache.store_discovery_date(entry, entry.discovery_date)
+        
+        return entries
+    
+    def _get_publication_datetime(self, entry: BibEntry) -> Optional[datetime]:
+        """Convert entry's publication date to datetime object."""
+        if not entry.year:
+            return None
+            
+        try:
+            year = int(entry.year)
+            month = int(entry.month) if entry.month and entry.month.isdigit() else 1
+            day = 15 if entry.month else 1  # Mid-month if we have month, otherwise January 1st
+            
+            return datetime(year, month, day, tzinfo=timezone.utc)
+        except (ValueError, TypeError):
+            return None
     
     def _get_field_value(self, fields: Dict[str, str], field_names: List[str]) -> Optional[str]:
         """Get the first available field value from a list of possible field names."""

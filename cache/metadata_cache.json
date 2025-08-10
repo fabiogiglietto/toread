@@ -1,0 +1,33 @@
+{
+  "b153554d9f487cdb": {
+    "entry_key": "Unknown2025-qj",
+    "entry_title": "Red-Teaming in the Public Interest",
+    "cached_at": "2025-07-27T10:08:48.621990",
+    "metadata": {
+      "abstract": "This report offers a vision for red-teaming in the public interest: a process that goes beyond system-centric testing of already built systems to consider the full range of ways the public can be involved in evaluating genAI harms.",
+      "keywords": [],
+      "doi": null,
+      "doi_url": null,
+      "url": "https://datasociety.net/library/red-teaming-in-the-public-interest/",
+      "arxiv_url": null,
+      "pdf_url": "https://datasociety.net/wp-content/uploads/2025/02/Red-Teaming-in_the_Public_Interest_FINAL1.pdf",
+      "publication_date": "2025",
+      "citation_count": null,
+      "reference_count": null,
+      "venue": "Data & Society",
+      "authors": [
+        "Ranjit Singh",
+        "Borhane Blili-Hamelin",
+        "Carol Anderson",
+        "Emnet Tafesse",
+        "Briana Vecchione",
+        "Beth Duckles",
+        "Jacob Metcalf"
+      ],
+      "subjects": [],
+      "is_open_access": true,
+      "source": "datasociety",
+      "confidence_score": null
+    }
+  }
+}
