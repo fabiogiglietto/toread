@@ -77,12 +77,18 @@ class FeedGenerator:
     
     def _create_json_item(self, entry: BibEntry, metadata: Optional[EnrichedMetadata] = None) -> Dict[str, Any]:
         """Create a JSON Feed item from a bibliographic entry."""
+        date_published, is_estimated = self._get_entry_date_iso(entry, metadata)
+        
         item = {
             "id": self._get_entry_guid(entry),
             "title": self._get_entry_title(entry),
             "content_text": self._get_entry_description(entry, metadata),
-            "date_published": self._get_entry_date_iso(entry, metadata)
+            "date_published": date_published
         }
+        
+        # Add estimation indicator if date is estimated
+        if is_estimated and date_published:
+            item["_date_estimated"] = True
         
         # Add URL if available
         url = self._get_entry_link(entry, metadata)
@@ -233,28 +239,17 @@ class FeedGenerator:
     
     def _get_entry_date(self, entry: BibEntry, metadata: Optional[EnrichedMetadata]) -> Optional[str]:
         """Get publication date in RSS format."""
-        # Try enriched metadata first
-        if metadata and metadata.publication_date:
-            try:
-                # Parse and format date
-                if len(metadata.publication_date) == 4:  # Year only
-                    date_obj = datetime(int(metadata.publication_date), 1, 1, tzinfo=timezone.utc)
-                else:
-                    date_obj = datetime.fromisoformat(metadata.publication_date.replace('Z', '+00:00'))
-                return date_obj.strftime("%a, %d %b %Y %H:%M:%S %z")
-            except:
-                pass
+        iso_date, is_estimated = self._get_entry_date_iso(entry, metadata)
         
-        # Fall back to entry year
-        year = entry.year
-        if year:
-            try:
-                date_obj = datetime(int(year), 1, 1, tzinfo=timezone.utc)
-                return date_obj.strftime("%a, %d %b %Y %H:%M:%S %z")
-            except:
-                pass
+        if not iso_date:
+            return None
         
-        return None
+        try:
+            # Convert ISO date to RSS format
+            date_obj = datetime.fromisoformat(iso_date.replace('Z', '+00:00'))
+            return date_obj.strftime("%a, %d %b %Y %H:%M:%S %z")
+        except:
+            return None
     
     def _get_entry_authors(self, entry: BibEntry) -> Optional[str]:
         """Get formatted authors string."""
@@ -356,32 +351,52 @@ class FeedGenerator:
         
         return '\n'.join(lines)
     
-    def _get_entry_date_iso(self, entry: BibEntry, metadata: Optional[EnrichedMetadata]) -> Optional[str]:
-        """Get publication date in ISO 8601 format for JSON Feed."""
-        # Try enriched metadata first
+    def _get_entry_date_iso(self, entry: BibEntry, metadata: Optional[EnrichedMetadata]) -> tuple[Optional[str], bool]:
+        """Get publication date in ISO 8601 format for JSON Feed.
+        
+        Returns:
+            tuple: (iso_date_string, is_estimated)
+        """
+        # Priority 1: Try enriched metadata with precise dates first
+        if metadata and metadata.publication_date:
+            try:
+                if '-' in metadata.publication_date:
+                    date_parts = metadata.publication_date.split('-')
+                    if len(date_parts) >= 3:
+                        # Full date from metadata (precise)
+                        return f"{metadata.publication_date}T00:00:00Z", False
+                    elif len(date_parts) == 2:
+                        # Year-month from metadata (estimated day)
+                        return f"{metadata.publication_date}-15T00:00:00Z", True
+            except:
+                pass
+        
+        # Priority 2: Try BibTeX month + year combination
+        if entry.year and entry.month:
+            try:
+                # Use BibTeX month information (estimated day)
+                return f"{entry.year}-{entry.month}-15T00:00:00Z", True
+            except:
+                pass
+        
+        # Priority 3: Try enriched metadata year-only
         if metadata and metadata.publication_date:
             try:
                 if len(metadata.publication_date) == 4:  # Year only
-                    return f"{metadata.publication_date}-01-01T00:00:00Z"
-                elif '-' in metadata.publication_date:
-                    # Try to parse existing date
-                    date_parts = metadata.publication_date.split('-')
-                    if len(date_parts) >= 3:
-                        return f"{metadata.publication_date}T00:00:00Z"
-                    elif len(date_parts) == 2:
-                        return f"{metadata.publication_date}-01T00:00:00Z"
+                    # Year-only from metadata (estimated month and day)
+                    return f"{metadata.publication_date}-01-01T00:00:00Z", True
             except:
                 pass
         
-        # Fall back to entry year
-        year = entry.year
-        if year:
+        # Priority 4: Fall back to BibTeX year only
+        if entry.year:
             try:
-                return f"{year}-01-01T00:00:00Z"
+                # Year-only from BibTeX (estimated month and day)
+                return f"{entry.year}-01-01T00:00:00Z", True
             except:
                 pass
         
-        return None
+        return None, False
     
     def _get_entry_authors_list(self, entry: BibEntry, metadata: Optional[EnrichedMetadata]) -> List[Dict[str, str]]:
         """Get authors as a list of objects for JSON Feed."""

@@ -15,6 +15,7 @@ class BibEntry:
     title: Optional[str] = None
     authors: List[str] = field(default_factory=list)
     year: Optional[str] = None
+    month: Optional[str] = None
     doi: Optional[str] = None
     url: Optional[str] = None
     abstract: Optional[str] = None
@@ -39,6 +40,7 @@ class BibTeXParser:
             'title': ['title', 'booktitle'],
             'authors': ['author', 'authors'],
             'year': ['year', 'date'],
+            'month': ['month'],
             'doi': ['doi'],
             'url': ['url', 'link', 'howpublished'],
             'abstract': ['abstract', 'summary'],
@@ -147,6 +149,11 @@ class BibTeXParser:
         entry.year = self._get_field_value(raw_fields, self.field_mappings['year'])
         if entry.year:
             entry.year = self._extract_year(entry.year)
+        
+        # Month
+        entry.month = self._get_field_value(raw_fields, self.field_mappings['month'])
+        if entry.month:
+            entry.month = self._clean_month(entry.month)
         
         # DOI
         entry.doi = self._get_field_value(raw_fields, self.field_mappings['doi'])
@@ -352,6 +359,40 @@ class BibTeXParser:
             return year_match.group()
         
         return year_str.strip()
+    
+    def _clean_month(self, month_str: str) -> Optional[str]:
+        """Clean and normalize month field to numeric format."""
+        if not month_str:
+            return None
+        
+        month_str = month_str.strip().lower()
+        
+        # Month name to number mapping
+        month_map = {
+            'january': '01', 'jan': '01',
+            'february': '02', 'feb': '02',
+            'march': '03', 'mar': '03',
+            'april': '04', 'apr': '04',
+            'may': '05',
+            'june': '06', 'jun': '06',
+            'july': '07', 'jul': '07',
+            'august': '08', 'aug': '08',
+            'september': '09', 'sep': '09', 'sept': '09',
+            'october': '10', 'oct': '10',
+            'november': '11', 'nov': '11',
+            'december': '12', 'dec': '12'
+        }
+        
+        # Try direct mapping first
+        if month_str in month_map:
+            return month_map[month_str]
+        
+        # Try to extract month number if already numeric
+        month_match = re.search(r'\b(0?[1-9]|1[0-2])\b', month_str)
+        if month_match:
+            return f"{int(month_match.group()):02d}"
+        
+        return None
     
     def _clean_doi(self, doi_str: str) -> str:
         """Clean and normalize DOI."""
