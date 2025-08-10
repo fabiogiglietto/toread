@@ -25,9 +25,41 @@ class FeedGenerator:
         self.author_name = author_name
         self.author_url = author_url or feed_link
     
+    def _sort_entries_by_date(self, entries: List[BibEntry], 
+                             enriched_metadata: Optional[Dict[str, EnrichedMetadata]] = None) -> List[BibEntry]:
+        """Sort entries by publication date in reverse chronological order (newest first)."""
+        def get_sort_key(entry: BibEntry) -> tuple[int, int, int]:
+            """Get (year, month, day) tuple for sorting, with fallbacks for missing data."""
+            metadata = enriched_metadata.get(entry.key) if enriched_metadata else None
+            
+            # Try to get date from our existing date parsing logic
+            iso_date, _ = self._get_entry_date_iso(entry, metadata)
+            
+            if iso_date:
+                try:
+                    # Parse the ISO date to extract year, month, day
+                    date_part = iso_date.split('T')[0]  # Get date part before 'T'
+                    year, month, day = map(int, date_part.split('-'))
+                    return (year, month, day)
+                except:
+                    pass
+            
+            # Fallback: use entry year and month if available
+            year = int(entry.year) if entry.year and entry.year.isdigit() else 1900
+            month = int(entry.month) if entry.month and entry.month.isdigit() else 1
+            day = 15 if entry.month else 1  # Mid-month if we have month, otherwise January 1st
+            
+            return (year, month, day)
+        
+        # Sort in reverse chronological order (newest first)
+        return sorted(entries, key=get_sort_key, reverse=True)
+    
     def generate_json_feed(self, entries: List[BibEntry], 
                           enriched_metadata: Optional[Dict[str, EnrichedMetadata]] = None) -> str:
         """Generate JSON Feed from bibliographic entries (primary format with full metadata)."""
+        # Sort entries by publication date (newest first)
+        sorted_entries = self._sort_entries_by_date(entries, enriched_metadata)
+        
         feed = {
             "version": "https://jsonfeed.org/version/1.1",
             "title": self.feed_title,
@@ -44,8 +76,8 @@ class FeedGenerator:
             "items": []
         }
         
-        # Add items for each entry
-        for entry in entries:
+        # Add items for each entry (now sorted)
+        for entry in sorted_entries:
             metadata = enriched_metadata.get(entry.key) if enriched_metadata else None
             item = self._create_json_item(entry, metadata)
             feed["items"].append(item)
@@ -55,6 +87,9 @@ class FeedGenerator:
     def generate_rss(self, entries: List[BibEntry], 
                     enriched_metadata: Optional[Dict[str, EnrichedMetadata]] = None) -> str:
         """Generate RSS XML from bibliographic entries (simplified format for compatibility)."""
+        # Sort entries by publication date (newest first)
+        sorted_entries = self._sort_entries_by_date(entries, enriched_metadata)
+        
         # Create root RSS element
         rss = ET.Element("rss", version="2.0")
         rss.set("xmlns:dc", "http://purl.org/dc/elements/1.1/")
@@ -66,8 +101,8 @@ class FeedGenerator:
         # Add channel metadata
         self._add_channel_metadata(channel)
         
-        # Add items for each entry
-        for entry in entries:
+        # Add items for each entry (now sorted)
+        for entry in sorted_entries:
             metadata = enriched_metadata.get(entry.key) if enriched_metadata else None
             item = self._create_rss_item(entry, metadata)
             channel.append(item)
