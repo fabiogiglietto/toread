@@ -72,16 +72,16 @@
         }
       ],
       "tags": [
-        "social media",
-        "election campaign",
-        "Article",
-        "fake accounts",
-        "Facebook",
         "inauthentic behavior",
-        "Meta",
-        "political communication",
+        "fake accounts",
+        "Article",
+        "Media Commun.",
         "manipulation",
-        "Media Commun."
+        "Meta",
+        "election campaign",
+        "social media",
+        "political communication",
+        "Facebook"
       ],
       "content_html": "<h3>Abstract</h3><p>Technology has reshaped political communication, allowing fake engagement to drive real influence in the democratic process. Hyperactive social media users, who are over-proportionally active in relation to the mean, are the new political activists, spreading partisan content at scale on social media platforms. Using The Authenticity Matrix tool, this study revealed Facebook accounts of hyperactive users exhibiting inauthentic behaviour that were used during the electoral campaign (May 10, 2024, to June 8, 2024) for the 2024 election of Romanian members of the European Parliament. The results indicate that, for some posts, up to 45\\% of shares were made by hyperactive users (four or more shares per post by the same account) and 33.9\\% by super-active users (10 or more times). This type of online behavior is considered by Meta as manipulation of “public opinion,” “political discussion,” and “public debate,” and Meta’s Community Standards is committed to preventing such behavior in the context of elections. Another key contribution of this research is the identification of dominant characteristics of hyperactive user accounts, using information publicly available on their social media profile, which provides insights into their specific features and helps users better identify them on social media. The article highlights that online social network platforms condemn these manipulative practices in theory, but they don’t take sufficient measures to effectively reduce them in order to limit their impact on our societies.</p><h3>Details</h3><ul><li><strong>Authors:</strong> Oprea, Bogdan, Pașnicu, Paula, Niculae, Alexandru-Ninel, Bonciu, Constantin-Cozmin, Tudorașcu-Dobre, Dragoș</li><li><strong>Published in:</strong> Media Commun.</li><li><strong>Year:</strong> 2025</li><li><strong>Volume:</strong> 13</li></ul>",
       "_academic": {
@@ -208,8 +208,8 @@
         }
       ],
       "tags": [
-        "Article",
-        "Res. Politics"
+        "Res. Politics",
+        "Article"
       ],
       "content_html": "<h3>Abstract</h3><p>We present ConflLlama, demonstrating how efficient fine-tuning of large language models can advance automated classification tasks in political science research. While classification of political events has traditionally relied on manual coding or rigid rule-based systems, modern language models offer the potential for more nuanced, context-aware analysis. However, deploying these models requires overcoming significant technical and resource barriers. We demonstrate how to adapt open-source language models to specialized political science tasks, using conflict event classification as our proof of concept. Through quantization and efficient fine-tuning techniques, we show state-of-the-art performance while minimizing computational requirements. Our approach achieves a macro-averaged AUC of 0.791 and a weighted F1-score of 0.753, representing a 37.6\\% improvement over the base model, with accuracy gains of up to 1463\\% in challenging classifications. We offer a roadmap for political scientists to adapt these methods to their own research domains, democratizing access to advanced NLP capabilities across the discipline. This work bridges the gap between cutting-edge AI developments and practical political science research needs, enabling broader adoption of these powerful analytical tools.</p><h3>Details</h3><ul><li><strong>Authors:</strong> Meher, Shreyas, Brandt, Patrick T</li><li><strong>Published in:</strong> Res. Politics</li><li><strong>Year:</strong> 2025</li><li><strong>Volume:</strong> 12</li></ul>",
       "_academic": {
@@ -377,8 +377,8 @@
         }
       ],
       "tags": [
-        "Article",
-        "arXiv [cs.IR]"
+        "arXiv [cs.IR]",
+        "Article"
       ],
       "content_html": "<h3>Abstract</h3><p>This paper critically audits the search endpoint of YouTube&#x27;s Data API (v3), a common tool for academic research. Through systematic weekly searches over six months using eleven queries, we identify major limitations regarding completeness, representativeness, consistency, and bias. Our findings reveal substantial differences between ranking parameters like relevance and date in terms of video recall and precision, with relevance often retrieving numerous off-topic videos. We also find severe temporal decay, as the number of findable videos for a specific period dramatically decreases after just 20-60 days from the publication date, potentially hampering many different research designs. Furthermore, search results lack consistency, with identical queries yielding different video sets over time, compromising replicability. A case study on the European Parliament elections highlights how these issues impact research outcomes. While the paper offers several mitigation strategies, it concludes that the API&#x27;s search function, potentially prioritizing ``freshness&#x27;&#x27; over comprehensive retrieval, is not adequate for robust academic research, especially concerning Digital Services Act requirements.</p><h3>Details</h3><ul><li><strong>Authors:</strong> Rieder, Bernhard, Padilla, Adrian, Coromina, Oscar</li><li><strong>Published in:</strong> arXiv [cs.IR]</li><li><strong>Year:</strong> 2025</li></ul>",
       "_academic": {
@@ -422,8 +422,8 @@
         }
       ],
       "tags": [
-        "Article",
-        "Sociol. Methods Res."
+        "Sociol. Methods Res.",
+        "Article"
       ],
       "content_html": "<h3>Abstract</h3><p>How can one understand the spread of ideas across text data? This is a key measurement problem in sociological inquiry, from the study of how interest groups shape media discourse, to the spread of policy across institutions, to the diffusion of organizational structures and institution themselves. To study how ideas and narratives diffuse across text, we must first develop a method to identify whether texts share the same information and narratives, rather than the same broad themes or exact features. We propose a novel approach to measure this quantity of interest, which we call “narrative similarity,” by using large language models to distill texts to their core ideas and then compare the similarity of claims rather than of words, phrases, or sentences. The result is an estimand much closer to narrative similarity than what is possible with past relevant alternatives, including exact text reuse, which returns lexically similar documents; topic modeling, which returns topically similar documents; or an array of alternative approaches. We devise an approach to providing out-of-sample measures of performance (precision, recall, F1) and show that our approach outperforms relevant alternatives by a large margin. We apply our approach to an important case study: The spread of Russian claims about the development of a Ukrainian bioweapons program in U.S. mainstream and fringe news websites. While we focus on news in this application, our approach can be applied more broadly to the study of propaganda, misinformation, diffusion of policy and cultural objects, among other topics.</p><h3>Details</h3><ul><li><strong>Authors:</strong> Waight, Hannah, Messing, Solomon, Shirikov, Anton, Roberts, Margaret E, Nagler, Jonathan, Greenfield, Jason, Brown, Megan A, Aslett, Kevin, Tucker, Joshua A</li><li><strong>Published in:</strong> Sociol. Methods Res.</li><li><strong>Year:</strong> 2025</li></ul>",
       "_academic": {
@@ -482,8 +482,8 @@
         }
       ],
       "tags": [
-        "Article",
-        "Nat. Hum. Behav."
+        "Nat. Hum. Behav.",
+        "Article"
       ],
       "content_html": "<h3>Abstract</h3><p>Much of the research quantifying volume and spread of online misinformation measures the construct at the source level, identifying a set of specific unreliable domains that account for a relatively small share of news consumption. This source-level dichotomy obscures the potential for users to repurpose factually true information from reliable sources to advance misleading narratives. We demonstrate this potentially far more prevalent form of misinformation by identifying articles from reliable sources that are frequently co-shared with (shared by users who also shared) &#x27;fake&#x27; news on social media, and concurrently extracting narratives present in fake news content and claims fact checked as false. Specifically in this study, we use Twitter/X data from May 2018 to November 2021 matched to a US voter file. We find that narratives present in misinformation content are significantly more likely to occur in co-shared articles than in articles from the same reliable sources that are not co-shared, consistent with users using information from mainstream sources to enhance the credibility and reach of potentially misleading claims.</p><h3>Details</h3><ul><li><strong>Authors:</strong> Goel, Pranav, Green, Jon, Lazer, David, Resnik, Philip S</li><li><strong>Published in:</strong> Nat. Hum. Behav.</li><li><strong>Year:</strong> 2025</li><li><strong>Pages:</strong> 1--18</li></ul>",
       "_academic": {
@@ -568,14 +568,14 @@
         }
       ],
       "tags": [
-        "extremism",
         "Far-Right",
         "Article",
+        "disinformation",
         "redpill",
-        "online radicalization",
-        "evidence",
         "Int. J. Commun.",
-        "disinformation"
+        "extremism",
+        "online radicalization",
+        "evidence"
       ],
       "content_html": "<h3>Abstract</h3><p>How do people come to believe Far-Right, extremist, and conspiratorial ideas they encounter online? This article examines how participants in primarily U.S.-based Far-Right online communities describe their adoption of “redpill” beliefs and the role of disinformation in these accounts. Applying the socio-technical theory of media effects, we conduct a qualitative content analysis of “redpilling narratives” gathered from Reddit, Gab, and Discord. While many users frame redpilling as a moment of conversion, others portray redpilling as a process, something achieved incrementally through years of community participation and “doing your own research.” In both cases, disinformation presented as evidence and the capacity to determine the veracity of presented evidence play important roles in redpilling oneself and others. By framing their beliefs as the rational and logical results of fully considering a plethora of evidence, redpill adherents can justify holding and promoting otherwise indefensible prejudices. The community’s creation, promotion, and repetition of Far-Right disinformation, much of which is historical or “scientific” in nature, play a crucial role in the adoption of Far-Right beliefs.</p><h3>Details</h3><ul><li><strong>Authors:</strong> Marwick, Alice E, Furl, Katherine</li><li><strong>Published in:</strong> Int. J. Commun.</li><li><strong>Year:</strong> 2025</li><li><strong>Volume:</strong> 19</li><li><strong>Pages:</strong> 26</li></ul>",
       "_academic": {
@@ -853,11 +853,11 @@
         }
       ],
       "tags": [
+        "Sci. Rep.",
         "Article",
-        "Facebook",
         "Coordination",
         "Social media",
-        "Sci. Rep."
+        "Facebook"
       ],
       "content_html": "<h3>Abstract</h3><p>Malicious actors regularly attempt to manipulate social media using coordinated posting. Many existing methods for detecting this coordination, though, have relied primarily on post-timing, which is trivially easy to change. In this paper, we make a significant methodological advancement in coordination detection, leveraging highly regular statistical patterns in the speed and frequency of sharing. We apply and validate this approach on Facebook, using 11.2 million link posts from a list of 16,169 most popular English-language Facebook pages that referenced at least one of the top eight US politicians in any post, a set of pages that produced more than 91\\% of all user engagement in this category during our collection period. Our approach can be calibrated and adapted across contexts, platforms, and times, allowing researchers to build valid, testable, but still human-interpretable models of platform manipulations.</p><h3>Details</h3><ul><li><strong>Authors:</strong> Yang, Yunkang, Paudel, Ramesh, McShan, Jordan, Hindman, Matthew, Huang, H Howie, Broniatowski, David</li><li><strong>Published in:</strong> Sci. Rep.</li><li><strong>Year:</strong> 2025</li><li><strong>Volume:</strong> 15</li><li><strong>Pages:</strong> 15684</li></ul>",
       "_academic": {
@@ -1102,13 +1102,13 @@
         }
       ],
       "tags": [
-        "social media",
         "Article",
-        "PNAS Nexus",
+        "triad transitivity",
         "social networks",
         "amplification",
-        "triad transitivity",
-        "tertius iungens"
+        "tertius iungens",
+        "PNAS Nexus",
+        "social media"
       ],
       "content_html": "<h3>Abstract</h3><p>As they evolve, social networks tend to form transitive triads more often than random chance and structural constraints would suggest. However, the mechanisms by which triads in these networks become transitive are largely unexplored. We leverage a unique combination of data and methods to demonstrate a causal link between amplification and triad transitivity in a directed social network. Additionally, we develop the concept of the ``attention broker,&#x27;&#x27; an extension of the previously theorized tertius iungens (or ``third who joins&#x27;&#x27;). We use an innovative technique to identify time-bounded Twitter/X following events, and then use difference-in-differences to show that attention brokers cause triad transitivity by amplifying content. Attention brokers intervene in the evolution of any sociotechnical system where individuals can amplify content while referencing its originator.</p><h3>Details</h3><ul><li><strong>Authors:</strong> Smith, Alyssa H, Green, Jon, F Welles, Brooke, Lazer, David</li><li><strong>Published in:</strong> PNAS Nexus</li><li><strong>Year:</strong> 2025</li><li><strong>Volume:</strong> 4</li><li><strong>Pages:</strong> gaf106</li></ul>",
       "_academic": {
@@ -1172,14 +1172,14 @@
       ],
       "tags": [
         "brokerage",
-        "Article",
-        "trolls",
         "computational propaganda",
-        "influence operations",
+        "trolls",
+        "Article",
+        "disinformation",
+        "elections",
         "Int. J. Commun.",
         "Philippines",
-        "elections",
-        "disinformation"
+        "influence operations"
       ],
       "content_html": "<h3>Abstract</h3><p>This study conceptualizes influence operations (IOs), an enterprise that orchestrates manipulative and inauthentic activities to achieve political advantage, as a contemporary form of brokerage during elections. It investigates the empirical case of IOs engaged in covert political campaigning in the 2022 Philippine General Elections through qualitative field research. Drawing from 22 in-depth interviews with IO leads and staff, we define IOs’ broker attributes, their brokerage processes, and the capital and value they generate through brokerage. We identify four mechanisms of brokerage by IOs: infrastructural capacity, reputation manipulation, relationship building at scale, and obscured accountability. These mechanisms complement the brokerage work by aboveboard campaigns and other brokers by compensating for their limitations and innovating campaign strategies. We argue that IOs are not extraneous deviations but are logical extensions of existing political infrastructures and should be understood as operating with other normative forms of political campaigning.</p><h3>Details</h3><ul><li><strong>Authors:</strong> Gaw, Fatima, Agonos, Mariam Jayne, Ruijgrok, Kris, Suarez, Gerard Martin</li><li><strong>Published in:</strong> Int. J. Commun.</li><li><strong>Year:</strong> 2025</li><li><strong>Volume:</strong> 19</li><li><strong>Pages:</strong> 21</li></ul>",
       "_academic": {
@@ -1213,12 +1213,12 @@
         }
       ],
       "tags": [
-        "Computers and Society (cs.CY)",
-        "Computation and Language (cs.CL)",
-        "arXiv [cs.CL]",
         "Misc",
-        "Machine Learning (cs.LG)",
-        "FOS: Computer and information sciences"
+        "Computation and Language (cs.CL)",
+        "FOS: Computer and information sciences",
+        "arXiv [cs.CL]",
+        "Computers and Society (cs.CY)",
+        "Machine Learning (cs.LG)"
       ],
       "content_html": "<h3>Abstract</h3><p>Automated frame analysis of political communication is a popular task in computational social science that is used to study how authors select aspects of a topic to frame its reception. So far, such studies have been narrow, in that they use a fixed set of pre-defined frames and focus only on the text, ignoring the visual contexts in which those texts appear. Especially for framing in the news, this leaves out valuable information about editorial choices, which include not just the written article but also accompanying photographs. To overcome such limitations, we present a method for conducting multi-modal, multi-label framing analysis at scale using large (vision-) language models. Grounding our work in framing theory, we extract latent meaning embedded in images used to convey a certain point and contrast that to the text by comparing the respective frames used. We also identify highly partisan framing of topics with issue-specific frame analysis found in prior qualitative work. We demonstrate a method for doing scalable integrative framing analysis of both text and image in news, providing a more complete picture for understanding media bias.</p><h3>Details</h3><ul><li><strong>Authors:</strong> Arora, Arnav, Yadav, Srishti, Antoniak, Maria, Belongie, Serge, Augenstein, Isabelle</li><li><strong>Published in:</strong> arXiv [cs.CL]</li><li><strong>Year:</strong> 2025</li></ul>",
       "_academic": {
@@ -2191,9 +2191,9 @@
       ],
       "tags": [
         "homophily",
+        "Article",
         "facebook",
         "Science",
-        "Article",
         "newsfeed",
         "news"
       ],
