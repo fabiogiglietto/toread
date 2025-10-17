@@ -6,8 +6,8 @@
     <description>Academic papers from Paperpile enriched with metadata</description>
     <language>en-us</language>
     <generator>ToRead RSS Generator</generator>
-    <lastBuildDate>Thu, 16 Oct 2025 23:51:11 +0000</lastBuildDate>
-    <pubDate>Thu, 16 Oct 2025 23:51:11 +0000</pubDate>
+    <lastBuildDate>Fri, 17 Oct 2025 01:36:01 +0000</lastBuildDate>
+    <pubDate>Fri, 17 Oct 2025 01:36:01 +0000</pubDate>
     <item>
       <title>The spread of pro- and anti-vaccine views by coordinated communities on facebook during COVID-19 pandemic</title>
       <description>Abstract The widespread dissemination of problematic vaccine-related content during the COVID-19 pandemic has posed serious challenges to public health and eroded institutional trust. This study investigates the interplay between manipulative social media actors, coordinated behaviors, and misleading information by analyzing coordinated link sharing behavior (CLSB) on Facebook in the United Kingdom and the United States. Drawing on a dataset of 3,469,719 public Facebook posts, we examine whether...</description>
@@ -69,15 +69,15 @@
       <pubDate>Mon, 15 Sep 2025 00:00:00 +0000</pubDate>
       <dc:creator>Oprea, Bogdan, Pașnicu, Paula, Niculae, Alexandru-Ninel, Bonciu, Constantin-Cozmin, Tudorașcu-Dobre, Dragoș</dc:creator>
       <category>Article</category>
-      <category>election campaign</category>
-      <category>fake accounts</category>
-      <category>Facebook</category>
-      <category>inauthentic behavior</category>
       <category>Media Commun.</category>
+      <category>election campaign</category>
       <category>social media</category>
       <category>political communication</category>
-      <category>Meta</category>
+      <category>fake accounts</category>
       <category>manipulation</category>
+      <category>Meta</category>
+      <category>inauthentic behavior</category>
+      <category>Facebook</category>
       <content:encoded>&lt;![CDATA[&lt;h3&gt;Abstract&lt;/h3&gt;&lt;p&gt;Technology has reshaped political communication, allowing fake engagement to drive real influence in the democratic process. Hyperactive social media users, who are over-proportionally active in relation to the mean, are the new political activists, spreading partisan content at scale on social media platforms. Using The Authenticity Matrix tool, this study revealed Facebook accounts of hyperactive users exhibiting inauthentic behaviour that were used during the electoral campaign (May 10, 2024, to June 8, 2024) for the 2024 election of Romanian members of the European Parliament. The results indicate that, for some posts, up to 45\% of shares were made by hyperactive users (four or more shares per post by the same account) and 33.9\% by super-active users (10 or more times). This type of online behavior is considered by Meta as manipulation of “public opinion,” “political discussion,” and “public debate,” and Meta’s Community Standards is committed to preventing such behavior in the context of elections. Another key contribution of this research is the identification of dominant characteristics of hyperactive user accounts, using information publicly available on their social media profile, which provides insights into their specific features and helps users better identify them on social media. The article highlights that online social network platforms condemn these manipulative practices in theory, but they don’t take sufficient measures to effectively reduce them in order to limit their impact on our societies.&lt;/p&gt;&lt;h3&gt;Details&lt;/h3&gt;&lt;ul&gt;&lt;li&gt;&lt;strong&gt;Authors:&lt;/strong&gt; Oprea, Bogdan, Pașnicu, Paula, Niculae, Alexandru-Ninel, Bonciu, Constantin-Cozmin, Tudorașcu-Dobre, Dragoș&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Journal:&lt;/strong&gt; Media Commun.&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Year:&lt;/strong&gt; 2025&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Volume:&lt;/strong&gt; 13&lt;/li&gt;&lt;/ul&gt;]]&gt;</content:encoded>
       <dc:date>Mon, 15 Sep 2025 00:00:00 +0000</dc:date>
     </item>
@@ -108,8 +108,8 @@
       <guid isPermaLink="false">bibtex:Zhao2025-ny</guid>
       <pubDate>Tue, 15 Jul 2025 00:00:00 +0000</pubDate>
       <dc:creator>Zhao, Bei, Ren, Wujiong, He, Yuan, Zhang, Hongzhong</dc:creator>
-      <category>Article</category>
       <category>Inf. Commun. Soc.</category>
+      <category>Article</category>
       <content:encoded>&lt;![CDATA[&lt;h3&gt;Details&lt;/h3&gt;&lt;ul&gt;&lt;li&gt;&lt;strong&gt;Authors:&lt;/strong&gt; Zhao, Bei, Ren, Wujiong, He, Yuan, Zhang, Hongzhong&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Journal:&lt;/strong&gt; Inf. Commun. Soc.&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Year:&lt;/strong&gt; 2025&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Pages:&lt;/strong&gt; 1--23&lt;/li&gt;&lt;/ul&gt;]]&gt;</content:encoded>
       <dc:date>Tue, 15 Jul 2025 00:00:00 +0000</dc:date>
     </item>
@@ -119,8 +119,8 @@
       <guid isPermaLink="false">bibtex:Meher2025-qb</guid>
       <pubDate>Tue, 15 Jul 2025 00:00:00 +0000</pubDate>
       <dc:creator>Meher, Shreyas, Brandt, Patrick T</dc:creator>
-      <category>Article</category>
       <category>Res. Politics</category>
+      <category>Article</category>
       <content:encoded>&lt;![CDATA[&lt;h3&gt;Abstract&lt;/h3&gt;&lt;p&gt;We present ConflLlama, demonstrating how efficient fine-tuning of large language models can advance automated classification tasks in political science research. While classification of political events has traditionally relied on manual coding or rigid rule-based systems, modern language models offer the potential for more nuanced, context-aware analysis. However, deploying these models requires overcoming significant technical and resource barriers. We demonstrate how to adapt open-source language models to specialized political science tasks, using conflict event classification as our proof of concept. Through quantization and efficient fine-tuning techniques, we show state-of-the-art performance while minimizing computational requirements. Our approach achieves a macro-averaged AUC of 0.791 and a weighted F1-score of 0.753, representing a 37.6\% improvement over the base model, with accuracy gains of up to 1463\% in challenging classifications. We offer a roadmap for political scientists to adapt these methods to their own research domains, democratizing access to advanced NLP capabilities across the discipline. This work bridges the gap between cutting-edge AI developments and practical political science research needs, enabling broader adoption of these powerful analytical tools.&lt;/p&gt;&lt;h3&gt;Details&lt;/h3&gt;&lt;ul&gt;&lt;li&gt;&lt;strong&gt;Authors:&lt;/strong&gt; Meher, Shreyas, Brandt, Patrick T&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Journal:&lt;/strong&gt; Res. Politics&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Year:&lt;/strong&gt; 2025&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Volume:&lt;/strong&gt; 12&lt;/li&gt;&lt;/ul&gt;]]&gt;</content:encoded>
       <dc:date>Tue, 15 Jul 2025 00:00:00 +0000</dc:date>
     </item>
@@ -250,14 +250,14 @@
       <guid isPermaLink="false">bibtex:Marwick2025-vx</guid>
       <pubDate>Sun, 15 Jun 2025 00:00:00 +0000</pubDate>
       <dc:creator>Marwick, Alice E, Furl, Katherine</dc:creator>
-      <category>Article</category>
-      <category>redpill</category>
-      <category>online radicalization</category>
-      <category>Far-Right</category>
       <category>Int. J. Commun.</category>
+      <category>Article</category>
+      <category>online radicalization</category>
       <category>disinformation</category>
-      <category>extremism</category>
+      <category>Far-Right</category>
       <category>evidence</category>
+      <category>redpill</category>
+      <category>extremism</category>
       <content:encoded>&lt;![CDATA[&lt;h3&gt;Abstract&lt;/h3&gt;&lt;p&gt;How do people come to believe Far-Right, extremist, and conspiratorial ideas they encounter online? This article examines how participants in primarily U.S.-based Far-Right online communities describe their adoption of “redpill” beliefs and the role of disinformation in these accounts. Applying the socio-technical theory of media effects, we conduct a qualitative content analysis of “redpilling narratives” gathered from Reddit, Gab, and Discord. While many users frame redpilling as a moment of conversion, others portray redpilling as a process, something achieved incrementally through years of community participation and “doing your own research.” In both cases, disinformation presented as evidence and the capacity to determine the veracity of presented evidence play important roles in redpilling oneself and others. By framing their beliefs as the rational and logical results of fully considering a plethora of evidence, redpill adherents can justify holding and promoting otherwise indefensible prejudices. The community’s creation, promotion, and repetition of Far-Right disinformation, much of which is historical or “scientific” in nature, play a crucial role in the adoption of Far-Right beliefs.&lt;/p&gt;&lt;h3&gt;Details&lt;/h3&gt;&lt;ul&gt;&lt;li&gt;&lt;strong&gt;Authors:&lt;/strong&gt; Marwick, Alice E, Furl, Katherine&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Journal:&lt;/strong&gt; Int. J. Commun.&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Year:&lt;/strong&gt; 2025&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Volume:&lt;/strong&gt; 19&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Pages:&lt;/strong&gt; 26&lt;/li&gt;&lt;/ul&gt;]]&gt;</content:encoded>
       <dc:date>Sun, 15 Jun 2025 00:00:00 +0000</dc:date>
     </item>
@@ -278,8 +278,8 @@
       <guid isPermaLink="false">bibtex:Entrena-Serrano2025-gw</guid>
       <pubDate>Sun, 15 Jun 2025 00:00:00 +0000</pubDate>
       <dc:creator>Entrena-Serrano, Carlos, Degeling, Martin, Romano, Salvatore, Çetin, Raziye Buse</dc:creator>
-      <category>Article</category>
       <category>arXiv [cs.CY]</category>
+      <category>Article</category>
       <content:encoded>&lt;![CDATA[&lt;h3&gt;Abstract&lt;/h3&gt;&lt;p&gt;Following the Digital Services Act of 2023, which requires Very Large Online Platforms (VLOPs) and Very Large Online Search Engines (VLOSEs) to facilitate data accessibility for independent research, TikTok augmented its Research API access within Europe in July 2023. This action was intended to ensure compliance with the DSA, bolster transparency, and address systemic risks. Nonetheless, research findings reveal that despite this expansion, notable limitations and inconsistencies persist within the data provided. Our experiment reveals that the API fails to provide metadata for one in eight videos provided through data donations, including official TikTok videos, advertisements, and content from specific accounts, without an apparent reason. The API data is incomplete, making it unreliable when working with data donations, a prominent methodology for algorithm audits and research on platform accountability. To monitor the functionality of the API and eventual fixes implemented by TikTok, we publish a dashboard with a daily check of the availability of 10 videos that were not retrievable in the last month. The video list includes very well-known accounts, notably that of Taylor Swift. The current API lacks the necessary capabilities for thorough independent research and scrutiny. It is crucial to support and safeguard researchers who utilize data scraping to independently validate the platform's data quality.&lt;/p&gt;&lt;h3&gt;Details&lt;/h3&gt;&lt;ul&gt;&lt;li&gt;&lt;strong&gt;Authors:&lt;/strong&gt; Entrena-Serrano, Carlos, Degeling, Martin, Romano, Salvatore, Çetin, Raziye Buse&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Journal:&lt;/strong&gt; arXiv [cs.CY]&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Year:&lt;/strong&gt; 2025&lt;/li&gt;&lt;/ul&gt;]]&gt;</content:encoded>
       <dc:date>Sun, 15 Jun 2025 00:00:00 +0000</dc:date>
     </item>
@@ -322,10 +322,10 @@
       <pubDate>Thu, 15 May 2025 00:00:00 +0000</pubDate>
       <dc:creator>Yang, Yunkang, Paudel, Ramesh, McShan, Jordan, Hindman, Matthew, Huang, H Howie, Broniatowski, David</dc:creator>
       <category>Article</category>
-      <category>Social media</category>
-      <category>Facebook</category>
-      <category>Coordination</category>
       <category>Sci. Rep.</category>
+      <category>Coordination</category>
+      <category>Facebook</category>
+      <category>Social media</category>
       <content:encoded>&lt;![CDATA[&lt;h3&gt;Abstract&lt;/h3&gt;&lt;p&gt;Malicious actors regularly attempt to manipulate social media using coordinated posting. Many existing methods for detecting this coordination, though, have relied primarily on post-timing, which is trivially easy to change. In this paper, we make a significant methodological advancement in coordination detection, leveraging highly regular statistical patterns in the speed and frequency of sharing. We apply and validate this approach on Facebook, using 11.2 million link posts from a list of 16,169 most popular English-language Facebook pages that referenced at least one of the top eight US politicians in any post, a set of pages that produced more than 91\% of all user engagement in this category during our collection period. Our approach can be calibrated and adapted across contexts, platforms, and times, allowing researchers to build valid, testable, but still human-interpretable models of platform manipulations.&lt;/p&gt;&lt;h3&gt;Details&lt;/h3&gt;&lt;ul&gt;&lt;li&gt;&lt;strong&gt;Authors:&lt;/strong&gt; Yang, Yunkang, Paudel, Ramesh, McShan, Jordan, Hindman, Matthew, Huang, H Howie, Broniatowski, David&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Journal:&lt;/strong&gt; Sci. Rep.&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Year:&lt;/strong&gt; 2025&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Volume:&lt;/strong&gt; 15&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Pages:&lt;/strong&gt; 15684&lt;/li&gt;&lt;/ul&gt;]]&gt;</content:encoded>
       <dc:date>Thu, 15 May 2025 00:00:00 +0000</dc:date>
     </item>
@@ -413,12 +413,12 @@
       <pubDate>Tue, 15 Apr 2025 00:00:00 +0000</pubDate>
       <dc:creator>Smith, Alyssa H, Green, Jon, F Welles, Brooke, Lazer, David</dc:creator>
       <category>Article</category>
-      <category>amplification</category>
-      <category>social media</category>
-      <category>social networks</category>
-      <category>PNAS Nexus</category>
-      <category>tertius iungens</category>
       <category>triad transitivity</category>
+      <category>social media</category>
+      <category>tertius iungens</category>
+      <category>amplification</category>
+      <category>PNAS Nexus</category>
+      <category>social networks</category>
       <content:encoded>&lt;![CDATA[&lt;h3&gt;Abstract&lt;/h3&gt;&lt;p&gt;As they evolve, social networks tend to form transitive triads more often than random chance and structural constraints would suggest. However, the mechanisms by which triads in these networks become transitive are largely unexplored. We leverage a unique combination of data and methods to demonstrate a causal link between amplification and triad transitivity in a directed social network. Additionally, we develop the concept of the ``attention broker,'' an extension of the previously theorized tertius iungens (or ``third who joins''). We use an innovative technique to identify time-bounded Twitter/X following events, and then use difference-in-differences to show that attention brokers cause triad transitivity by amplifying content. Attention brokers intervene in the evolution of any sociotechnical system where individuals can amplify content while referencing its originator.&lt;/p&gt;&lt;h3&gt;Details&lt;/h3&gt;&lt;ul&gt;&lt;li&gt;&lt;strong&gt;Authors:&lt;/strong&gt; Smith, Alyssa H, Green, Jon, F Welles, Brooke, Lazer, David&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Journal:&lt;/strong&gt; PNAS Nexus&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Year:&lt;/strong&gt; 2025&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Volume:&lt;/strong&gt; 4&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Pages:&lt;/strong&gt; gaf106&lt;/li&gt;&lt;/ul&gt;]]&gt;</content:encoded>
       <dc:date>Tue, 15 Apr 2025 00:00:00 +0000</dc:date>
     </item>
@@ -438,14 +438,14 @@
       <guid isPermaLink="false">bibtex:Gaw2025-ru</guid>
       <pubDate>Sat, 15 Mar 2025 00:00:00 +0000</pubDate>
       <dc:creator>Gaw, Fatima, Agonos, Mariam Jayne, Ruijgrok, Kris, Suarez, Gerard Martin</dc:creator>
-      <category>Article</category>
-      <category>brokerage</category>
-      <category>Philippines</category>
       <category>Int. J. Commun.</category>
-      <category>trolls</category>
-      <category>disinformation</category>
+      <category>Article</category>
       <category>influence operations</category>
+      <category>trolls</category>
+      <category>Philippines</category>
+      <category>brokerage</category>
       <category>elections</category>
+      <category>disinformation</category>
       <category>computational propaganda</category>
       <content:encoded>&lt;![CDATA[&lt;h3&gt;Abstract&lt;/h3&gt;&lt;p&gt;This study conceptualizes influence operations (IOs), an enterprise that orchestrates manipulative and inauthentic activities to achieve political advantage, as a contemporary form of brokerage during elections. It investigates the empirical case of IOs engaged in covert political campaigning in the 2022 Philippine General Elections through qualitative field research. Drawing from 22 in-depth interviews with IO leads and staff, we define IOs’ broker attributes, their brokerage processes, and the capital and value they generate through brokerage. We identify four mechanisms of brokerage by IOs: infrastructural capacity, reputation manipulation, relationship building at scale, and obscured accountability. These mechanisms complement the brokerage work by aboveboard campaigns and other brokers by compensating for their limitations and innovating campaign strategies. We argue that IOs are not extraneous deviations but are logical extensions of existing political infrastructures and should be understood as operating with other normative forms of political campaigning.&lt;/p&gt;&lt;h3&gt;Details&lt;/h3&gt;&lt;ul&gt;&lt;li&gt;&lt;strong&gt;Authors:&lt;/strong&gt; Gaw, Fatima, Agonos, Mariam Jayne, Ruijgrok, Kris, Suarez, Gerard Martin&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Journal:&lt;/strong&gt; Int. J. Commun.&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Year:&lt;/strong&gt; 2025&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Volume:&lt;/strong&gt; 19&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Pages:&lt;/strong&gt; 21&lt;/li&gt;&lt;/ul&gt;]]&gt;</content:encoded>
       <dc:date>Sat, 15 Mar 2025 00:00:00 +0000</dc:date>
@@ -456,12 +456,12 @@
       <guid isPermaLink="false">bibtex:Arora2025-tx</guid>
       <pubDate>Sat, 15 Mar 2025 00:00:00 +0000</pubDate>
       <dc:creator>Arora, Arnav, Yadav, Srishti, Antoniak, Maria, Belongie, Serge, Augenstein, Isabelle</dc:creator>
-      <category>Machine Learning (cs.LG)</category>
-      <category>arXiv [cs.CL]</category>
-      <category>FOS: Computer and information sciences</category>
-      <category>Computation and Language (cs.CL)</category>
-      <category>Misc</category>
       <category>Computers and Society (cs.CY)</category>
+      <category>Machine Learning (cs.LG)</category>
+      <category>Computation and Language (cs.CL)</category>
+      <category>arXiv [cs.CL]</category>
+      <category>Misc</category>
+      <category>FOS: Computer and information sciences</category>
       <content:encoded>&lt;![CDATA[&lt;h3&gt;Abstract&lt;/h3&gt;&lt;p&gt;Automated frame analysis of political communication is a popular task in computational social science that is used to study how authors select aspects of a topic to frame its reception. So far, such studies have been narrow, in that they use a fixed set of pre-defined frames and focus only on the text, ignoring the visual contexts in which those texts appear. Especially for framing in the news, this leaves out valuable information about editorial choices, which include not just the written article but also accompanying photographs. To overcome such limitations, we present a method for conducting multi-modal, multi-label framing analysis at scale using large (vision-) language models. Grounding our work in framing theory, we extract latent meaning embedded in images used to convey a certain point and contrast that to the text by comparing the respective frames used. We also identify highly partisan framing of topics with issue-specific frame analysis found in prior qualitative work. We demonstrate a method for doing scalable integrative framing analysis of both text and image in news, providing a more complete picture for understanding media bias.&lt;/p&gt;&lt;h3&gt;Details&lt;/h3&gt;&lt;ul&gt;&lt;li&gt;&lt;strong&gt;Authors:&lt;/strong&gt; Arora, Arnav, Yadav, Srishti, Antoniak, Maria, Belongie, Serge, Augenstein, Isabelle&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Journal:&lt;/strong&gt; arXiv [cs.CL]&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Year:&lt;/strong&gt; 2025&lt;/li&gt;&lt;/ul&gt;]]&gt;</content:encoded>
       <dc:date>Sat, 15 Mar 2025 00:00:00 +0000</dc:date>
     </item>
@@ -647,8 +647,8 @@
       <guid isPermaLink="false">bibtex:McNally2025-dn</guid>
       <pubDate>Wed, 15 Jan 2025 00:00:00 +0000</pubDate>
       <dc:creator>McNally, Naoise, Bastos, Marco</dc:creator>
-      <category>Article</category>
       <category>Digit. Journal.</category>
+      <category>Article</category>
       <content:encoded>&lt;![CDATA[&lt;h3&gt;Abstract&lt;/h3&gt;&lt;p&gt;This study examines the effects of a series of significant algorithm changes within Facebook’s News Feed on user engagement with news content on the platform between 2011-2020. By tracking public announcements, industry research, and leaks to the press, we constructed a timeline of algorithm changes and collected data on 1 million news articles from The Guardian over the 10-year period, alongside their associated Facebook engagement metrics (likes, comments, shares, etc.) using the CrowdTangle API. Using time series analysis techniques including cross-correlation, Granger causality, and anomaly detection, we modeled this data to test for the relationship between significant algorithmic ranking updates to Facebook’s News Feed algorithms and user engagement with Guardian articles on the platform. Our results show that strategic interventions to the News Feed algorithm significantly impacted engagement with hard news items, whereas opinion, lifestyle, sports, and arts content were less affected. This study challenges the notion of algorithms as ‘black boxes’ by demonstrating how Facebook’s deliberate adjustments influence user engagement with news content. We conclude by outlining the limitations and challenges for systemic auditing of social media algorithms, advocating for greater data access, and discussing the opportunities afforded by the EU’s Digital Services Act to advance this research agenda.&lt;/p&gt;&lt;h3&gt;Details&lt;/h3&gt;&lt;ul&gt;&lt;li&gt;&lt;strong&gt;Authors:&lt;/strong&gt; McNally, Naoise, Bastos, Marco&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Journal:&lt;/strong&gt; Digit. Journal.&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Year:&lt;/strong&gt; 2025&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Pages:&lt;/strong&gt; 1--20&lt;/li&gt;&lt;/ul&gt;]]&gt;</content:encoded>
       <dc:date>Wed, 15 Jan 2025 00:00:00 +0000</dc:date>
     </item>
@@ -711,8 +711,8 @@
       <guid isPermaLink="false">bibtex:Mosleh2024-op</guid>
       <pubDate>Sun, 15 Dec 2024 00:00:00 +0000</pubDate>
       <dc:creator>Mosleh, Mohsen, Allen, Jennifer Nancy Lee, Rand, David Gertler</dc:creator>
-      <category>Article</category>
       <category>PsyArXiv</category>
+      <category>Article</category>
       <content:encoded>&lt;![CDATA[&lt;h3&gt;Abstract&lt;/h3&gt;&lt;p&gt;In recent years, social media has become increasingly fragmented, as platforms evolve and new alternatives emerge. Yet most research studies a single platform—typically Twitter/X, or occasionally Facebook—leaving little known about the broader social media landscape. Here we shed new light on patterns of cross-platform variation in the high-stakes context of news sharing. We examine the relationship between user engagement and news domains’ political orientation and quality across seven platforms: Twitter/X, BlueSky, TruthSocial, Gab, GETTR, Mastodon, and LinkedIn. Using an exhaustive sampling strategy, we analyze all (over 10 million) posts containing links to news domains shared on these platforms during January 2024. We find that the news shared on platforms with more conservative user bases is significantly lower quality on average. Turning to patterns of engagement, we find—contrary to hypotheses of a consistent “right wing advantage” on social media—that the relationship between political lean and engagement is strongly heterogeneous across platforms. Conservative new posts receive more engagement on platforms where most content is conservative, and vice versa for liberal news posts, consistent with an “echo platform” perspective. In contrast, the relationship between news quality and engagement is strikingly consistent: across all platforms examined, lower-quality news posts received higher average engagement even though higher quality news is substantially more prevalent and garners far more total engagement across posts. This pattern holds despite accounting for poster-level variation, and is observed even in the absence of ranking algorithms, suggesting user preferences – not algorithmic – bias may underlie the underperformance of higher-quality news.&lt;/p&gt;&lt;h3&gt;Details&lt;/h3&gt;&lt;ul&gt;&lt;li&gt;&lt;strong&gt;Authors:&lt;/strong&gt; Mosleh, Mohsen, Allen, Jennifer Nancy Lee, Rand, David Gertler&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Journal:&lt;/strong&gt; PsyArXiv&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Year:&lt;/strong&gt; 2024&lt;/li&gt;&lt;/ul&gt;]]&gt;</content:encoded>
       <dc:date>Sun, 15 Dec 2024 00:00:00 +0000</dc:date>
     </item>
@@ -744,8 +744,8 @@
       <guid isPermaLink="false">bibtex:Ulloa2024-jm</guid>
       <pubDate>Fri, 15 Nov 2024 00:00:00 +0000</pubDate>
       <dc:creator>Ulloa, Roberto, Mangold, Frank, Schmidt, Felix, Gilsbach, Judith, Stier, Sebastian</dc:creator>
-      <category>Article</category>
       <category>arXiv [cs.CY]</category>
+      <category>Article</category>
       <content:encoded>&lt;![CDATA[&lt;h3&gt;Abstract&lt;/h3&gt;&lt;p&gt;As the exploration of digital behavioral data revolutionizes communication research, understanding the nuances of data collection methodologies becomes increasingly pertinent. This study focuses on one prominent data collection approach, web scraping, and more specifically, its application in the growing field of research relying on web browsing data. We investigate discrepancies between content obtained directly during user interaction with a website (in-situ) and content scraped using the URLs of participants' logged visits (ex-situ) with various time delays (0, 30, 60, and 90 days). We find substantial disparities between the methodologies, uncovering that errors are not uniformly distributed across news categories regardless of classification method (domain, URL, or content analysis). These biases compromise the precision of measurements used in existing literature. The ex-situ collection environment is the primary source of the discrepancies (~33.8\%), while the time delays in the scraping process play a smaller role (adding ~6.5 percentage points in 90 days). Our research emphasizes the need for data collection methods that capture web content directly in the user's environment. However, acknowledging its complexities, we further explore strategies to mitigate biases in web-scraped browsing histories, offering recommendations for researchers who rely on this method and laying the groundwork for developing error-correction frameworks.&lt;/p&gt;&lt;h3&gt;Details&lt;/h3&gt;&lt;ul&gt;&lt;li&gt;&lt;strong&gt;Authors:&lt;/strong&gt; Ulloa, Roberto, Mangold, Frank, Schmidt, Felix, Gilsbach, Judith, Stier, Sebastian&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Journal:&lt;/strong&gt; arXiv [cs.CY]&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Year:&lt;/strong&gt; 2024&lt;/li&gt;&lt;/ul&gt;]]&gt;</content:encoded>
       <dc:date>Fri, 15 Nov 2024 00:00:00 +0000</dc:date>
     </item>
