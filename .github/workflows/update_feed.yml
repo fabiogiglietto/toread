@@ -2,7 +2,7 @@ name: Update Academic Feed
 
 on:
   schedule:
-    - cron: '*/15 * * * *'  # Every 15 minutes
+    - cron: '*/30 * * * *'  # Every 30 minutes (reduces queue buildup)
   workflow_dispatch:  # Manual trigger
   push:
     branches: [ main ]
@@ -139,26 +139,31 @@ jobs:
         git config --local user.email "action@github.com"
         git config --local user.name "GitHub Action"
 
-        # Pull latest changes first to avoid conflicts
-        echo "Fetching latest changes before commit..."
-        git fetch origin main
+        # Prepare commit message once
+        COMMIT_MSG="🤖 Update academic feeds - $(date -u '+%Y-%m-%d %H:%M:%S UTC')"
 
-        # Reset to latest remote (our generated files will be re-applied)
-        echo "Syncing with remote..."
-        git reset --soft origin/main
-
-        # Re-add our generated files
-        git add output/feed.json output/feed.xml
-
-        # Commit with timestamp
-        git commit -m "🤖 Update academic feeds - $(date -u '+%Y-%m-%d %H:%M:%S UTC')" || {
-          echo "No changes to commit after sync"
-          exit 0
-        }
-
-        # Push with retry logic
+        # Push with retry logic - sync before each attempt
         for i in {1..5}; do
           echo "Push attempt $i of 5..."
+
+          # Sync with remote before each attempt
+          git fetch origin main
+          git reset --soft origin/main
+          git add output/feed.json output/feed.xml
+
+          # Check if there are actually changes to commit
+          if git diff --staged --quiet; then
+            echo "No changes after syncing with remote - feeds already up to date"
+            exit 0
+          fi
+
+          # Commit
+          git commit -m "$COMMIT_MSG" || {
+            echo "Failed to create commit"
+            exit 1
+          }
+
+          # Try to push
           if git push origin main; then
             echo "✅ Successfully pushed changes"
             exit 0
@@ -166,26 +171,18 @@ jobs:
 
           echo "❌ Push failed (attempt $i), likely due to concurrent update"
 
-          # If we're on the last attempt, fail
+          # If we're on the last attempt, exit gracefully
           if [ $i -eq 5 ]; then
-            echo "🚨 All push attempts failed - likely concurrent workflow"
-            echo "This is expected behavior with concurrency control enabled"
-            exit 0  # Exit gracefully, next run will pick up changes
+            echo "🚨 All push attempts failed after 5 tries"
+            echo "This is expected when another workflow pushed first"
+            echo "The next scheduled run will pick up any new changes"
+            exit 0  # Exit gracefully - concurrency control will prevent issues
           fi
 
-          # Wait with exponential backoff
+          # Wait with exponential backoff before retrying
           wait_time=$((5 * i))
           echo "Waiting ${wait_time}s before retry..."
           sleep $wait_time
-
-          # Sync again for next attempt
-          git fetch origin main
-          git reset --soft origin/main
-          git add output/feed.json output/feed.xml
-          git commit -m "🤖 Update academic feeds - $(date -u '+%Y-%m-%d %H:%M:%S UTC')" || {
-            echo "No new changes after resync"
-            exit 0
-          }
         done
     
     - name: Upload feeds as artifacts
