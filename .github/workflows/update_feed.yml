@@ -58,16 +58,45 @@ jobs:
           echo "Please add your Paperpile export URL as a GitHub secret"
           exit 1
         fi
-        
+
         echo "Downloading BibTeX export from Paperpile..."
-        curl -L "${{ secrets.PAPERPILE_EXPORT_URL }}" -o data/paperpile_export.bib
-        
-        if [ ! -f "data/paperpile_export.bib" ] || [ ! -s "data/paperpile_export.bib" ]; then
+        curl -L "${{ secrets.PAPERPILE_EXPORT_URL }}" -o /tmp/paperpile_export_new.bib
+
+        if [ ! -f "/tmp/paperpile_export_new.bib" ] || [ ! -s "/tmp/paperpile_export_new.bib" ]; then
           echo "Error: Failed to download BibTeX file or file is empty"
           exit 1
         fi
-        
-        echo "Successfully downloaded BibTeX file ($(wc -l < data/paperpile_export.bib) lines)"
+
+        echo "Successfully downloaded BibTeX file ($(wc -l < /tmp/paperpile_export_new.bib) lines)"
+
+    - name: Check if Paperpile export changed
+      id: bib-check
+      run: |
+        # Compare with previous version
+        if [ -f "data/paperpile_export.bib" ]; then
+          if diff -q data/paperpile_export.bib /tmp/paperpile_export_new.bib > /dev/null 2>&1; then
+            echo "📋 No changes detected in Paperpile export"
+            echo "changed=false" >> $GITHUB_OUTPUT
+            rm /tmp/paperpile_export_new.bib
+            exit 0
+          else
+            echo "📋 Paperpile export has changed - showing diff summary:"
+            diff --brief data/paperpile_export.bib /tmp/paperpile_export_new.bib || true
+
+            # Count entries in both files
+            old_count=$(grep -c "^@" data/paperpile_export.bib 2>/dev/null || echo "0")
+            new_count=$(grep -c "^@" /tmp/paperpile_export_new.bib 2>/dev/null || echo "0")
+            echo "Entries: $old_count → $new_count ($(($new_count - $old_count)))"
+          fi
+        else
+          echo "📋 First time download - no previous export to compare"
+          new_count=$(grep -c "^@" /tmp/paperpile_export_new.bib 2>/dev/null || echo "0")
+          echo "Entries: $new_count"
+        fi
+
+        # Move new file into place
+        mv /tmp/paperpile_export_new.bib data/paperpile_export.bib
+        echo "changed=true" >> $GITHUB_OUTPUT
     
     - name: Update config with API key
       if: env.SEMANTIC_SCHOLAR_API_KEY != ''
@@ -84,7 +113,7 @@ jobs:
         "
     
     - name: Generate feeds (fast mode for scheduled runs)
-      if: github.event_name == 'schedule'
+      if: github.event_name == 'schedule' && steps.bib-check.outputs.changed == 'true'
       run: |
         echo "Running in fast mode for scheduled execution..."
         for i in {1..3}; do
@@ -97,7 +126,7 @@ jobs:
         done
     
     - name: Generate feeds (full enrichment)
-      if: github.event_name != 'schedule'
+      if: github.event_name != 'schedule' && steps.bib-check.outputs.changed == 'true'
       run: |
         echo "Running full enrichment for manual/push triggers..."
         for i in {1..3}; do
@@ -108,24 +137,31 @@ jobs:
           echo "Attempt $i failed, retrying in 60s..."
           sleep 60
         done
+
+    - name: Skip feed generation (no changes)
+      if: steps.bib-check.outputs.changed != 'true'
+      run: |
+        echo "⏭️  Skipping feed generation - no changes in Paperpile export"
+        echo "This saves execution time and API quota!"
     
     - name: Check for changes
       id: git-check
       run: |
         # Ensure output directory exists and add generated files
         mkdir -p output
+        git add data/paperpile_export.bib 2>/dev/null || true
         git add output/feed.json output/feed.xml 2>/dev/null || true
-        
+
         # Check if there are any staged changes
         if git diff --staged --quiet; then
-          echo "📋 No changes detected in feeds"
+          echo "📋 No changes detected in feeds or BibTeX export"
           echo "changes=false" >> $GITHUB_OUTPUT
         else
-          echo "📋 Changes detected in feeds"
+          echo "📋 Changes detected - files to commit:"
           git diff --staged --name-only
           echo "changes=true" >> $GITHUB_OUTPUT
         fi
-        
+
         # Also check for any unstaged changes that might cause issues
         if ! git diff-index --quiet HEAD --; then
           echo "⚠️  Warning: Unstaged changes detected"
@@ -149,11 +185,11 @@ jobs:
           # Sync with remote before each attempt
           git fetch origin main
           git reset --soft origin/main
-          git add output/feed.json output/feed.xml
+          git add data/paperpile_export.bib output/feed.json output/feed.xml 2>/dev/null || true
 
           # Check if there are actually changes to commit
           if git diff --staged --quiet; then
-            echo "No changes after syncing with remote - feeds already up to date"
+            echo "No changes after syncing with remote - already up to date"
             exit 0
           fi
 
