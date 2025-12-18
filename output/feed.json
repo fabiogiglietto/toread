@@ -17,7 +17,7 @@
       "title": "Large language models for data annotation: A survey",
       "content_text": null,
       "date_published": null,
-      "_discovery_date": "2025-12-18T18:16:47.877201Z",
+      "_discovery_date": "2025-12-18T18:51:33.722477Z",
       "url": "https://share.google/aHRz5TZgI9RVsnDT7",
       "external_url": "https://share.google/aHRz5TZgI9RVsnDT7",
       "tags": [
@@ -33,7 +33,7 @@
       "title": "Untitled",
       "content_text": null,
       "date_published": null,
-      "_discovery_date": "2025-12-18T18:16:47.876995Z",
+      "_discovery_date": "2025-12-18T18:51:33.722299Z",
       "url": "https://sciety-labs.elifesciences.org/articles/by?article\\_doi=10.31235/osf.io/p6yh9\\_v1",
       "external_url": "https://sciety-labs.elifesciences.org/articles/by?article\\_doi=10.31235/osf.io/p6yh9\\_v1",
       "tags": [
@@ -49,7 +49,7 @@
       "title": "Untitled",
       "content_text": null,
       "date_published": null,
-      "_discovery_date": "2025-12-18T18:16:47.876995Z",
+      "_discovery_date": "2025-12-18T18:51:33.722299Z",
       "url": "https://www.sciencedirect.com/science/article/abs/pii/S2468696425000424",
       "external_url": "https://www.sciencedirect.com/science/article/abs/pii/S2468696425000424",
       "tags": [
@@ -65,7 +65,7 @@
       "title": "Untitled",
       "content_text": null,
       "date_published": null,
-      "_discovery_date": "2025-12-18T18:16:47.876995Z",
+      "_discovery_date": "2025-12-18T18:51:33.722299Z",
       "url": "https://academic.oup.com/pnasnexus/article/4/11/pgaf325/8285733",
       "external_url": "https://academic.oup.com/pnasnexus/article/4/11/pgaf325/8285733",
       "tags": [
@@ -81,7 +81,7 @@
       "title": "Untitled",
       "content_text": null,
       "date_published": null,
-      "_discovery_date": "2025-12-18T18:16:47.876995Z",
+      "_discovery_date": "2025-12-18T18:51:33.722299Z",
       "url": "https://datasociety.net/library/scam-gpt/",
       "external_url": "https://datasociety.net/library/scam-gpt/",
       "tags": [
@@ -97,7 +97,7 @@
       "title": "Volume 7 issue 2 article 4",
       "content_text": "The Journal of Communication Technology (JoCTEC) is an official journal of the Communication Technology division of the Association for Education in Journalism and Mass Communication (AEJMC). ***This is the official journal site. The older site (joctec.org) is no longer updated. ***",
       "date_published": null,
-      "_discovery_date": "2025-12-18T18:16:47.876961Z",
+      "_discovery_date": "2025-12-18T18:51:33.722268Z",
       "url": "https://www.joctec.net/all-issues/volume-7/volume-7-issue-2/volume-7-issue-2-article-4",
       "external_url": "https://www.joctec.net/all-issues/volume-7/volume-7-issue-2/volume-7-issue-2-article-4",
       "tags": [
@@ -125,12 +125,12 @@
       ],
       "tags": [
         "participatory research",
-        "evaluation",
-        "Proc. Natl. Acad. Sci. U. S. A.",
-        "Article",
         "AI",
+        "evaluation",
+        "citizen science",
+        "Proc. Natl. Acad. Sci. U. S. A.",
         "policy",
-        "citizen science"
+        "Article"
       ],
       "content_html": "<h3>Abstract</h3><p>As AI systems from decision-making algorithms to generative AI are deployed more widely, computer scientists and social scientists alike are being called on to provide trustworthy quantitative evaluations of AI safety and reliability. These calls have included demands from affected parties to be given a seat at the table of AI evaluation. What, if anything, can public involvement add to the science of AI? In this perspective, we summarize the sociotechnical challenge of evaluating AI systems, which often adapt to multiple layers of social context that shape their outcomes. We then offer guidance for improving the science of AI by engaging lived-experience experts in the design, data collection, and interpretation of scientific evaluations. This article reviews common models of public engagement in AI research alongside common concerns about participatory methods, including questions about generalizable knowledge, subjectivity, reliability, and practical logistics. To address these questions, we summarize the literature on participatory science, discuss case studies from AI in healthcare, and share our own experience evaluating AI in areas from policing systems to social media algorithms. Overall, we describe five parts of any quantitative evaluation where public participation can improve the science of AI: equipoise, explanation, measurement, inference, and interpretation. We conclude with reflections on the role that participatory science can play in trustworthy AI by supporting trustworthy science.</p><h3>Details</h3><ul><li><strong>Authors:</strong> Matias, J Nathan, Price, Megan</li><li><strong>Published in:</strong> Proc. Natl. Acad. Sci. U. S. A.</li><li><strong>Year:</strong> 2025</li><li><strong>Volume:</strong> 122</li><li><strong>Pages:</strong> e2421111122</li></ul>",
       "_academic": {
@@ -162,8 +162,8 @@
         }
       ],
       "tags": [
-        "Article",
-        "Discourse Context \\& Media"
+        "Discourse Context \\& Media",
+        "Article"
       ],
       "content_html": "<h3>Details</h3><ul><li><strong>Authors:</strong> Gardam, Caroline, Riedlinger, Michelle, Angus, Daniel, (Jane) Tan, Xue Ying</li><li><strong>Published in:</strong> Discourse Context \\&amp; Media</li><li><strong>Year:</strong> 2025</li><li><strong>Volume:</strong> 68</li><li><strong>Pages:</strong> 100946</li></ul>",
       "_academic": {
@@ -298,8 +298,8 @@
         }
       ],
       "tags": [
-        "J. Comput. Soc. Sci.",
-        "Article"
+        "Article",
+        "J. Comput. Soc. Sci."
       ],
       "content_html": "<h3>Abstract</h3><p>Abstract The widespread dissemination of problematic vaccine-related content during the COVID-19 pandemic has posed serious challenges to public health and eroded institutional trust. This study investigates the interplay between manipulative social media actors, coordinated behaviors, and misleading information by analyzing coordinated link sharing behavior (CLSB) on Facebook in the United Kingdom and the United States. Drawing on a dataset of 3,469,719 public Facebook posts, we examine whether anti-vaccine content was disseminated more systematically and inauthentically than pro-vaccine content. We also trace the evolution of coordinated narratives over time and their cross-national variations. Methodologically, we apply computational techniques, including transfer learning for sentiment classification and structural topic modeling, to detect pro- and anti-vaccine stances and to identify thematic patterns within coordinated networks. Our findings reveal that in the UK, anti-vaccine entities exhibited denser CLSB networks and greater engagement than their pro-vaccine counterparts, whereas the opposite trend was observed in the U.S. Furthermore, we identify key differences in vaccine discourse: UK anti-vaccine communities predominantly emphasized vaccine safety concerns, while U.S. communities focused more on individual freedom. These cross-national comparisons highlight how political and cultural contexts shape the structure and rhetoric of vaccine-related coordination online.</p><h3>Details</h3><ul><li><strong>Authors:</strong> Song, Yunya, Zhang, Yin, Zou, Sheng, Yang, Xian, Huang, Qintao</li><li><strong>Published in:</strong> J. Comput. Soc. Sci.</li><li><strong>Year:</strong> 2025</li><li><strong>Volume:</strong> 8</li></ul>",
       "_academic": {
@@ -562,8 +562,8 @@
         }
       ],
       "tags": [
-        "Article",
-        "arXiv [cs.MA]"
+        "arXiv [cs.MA]",
+        "Article"
       ],
       "content_html": "<h3>Abstract</h3><p>Generative agents are rapidly advancing in sophistication, raising urgent questions about how they might coordinate when deployed in online ecosystems. This is particularly consequential in information operations (IOs), influence campaigns that aim to manipulate public opinion on social media. While traditional IOs have been orchestrated by human operators and relied on manually crafted tactics, agentic AI promises to make campaigns more automated, adaptive, and difficult to detect. This work presents the first systematic study of emergent coordination among generative agents in simulated IO campaigns. Using generative agent-based modeling, we instantiate IO and organic agents in a simulated environment and evaluate coordination across operational regimes, from simple goal alignment to team knowledge and collective decision-making. As operational regimes become more structured, IO networks become denser and more clustered, interactions more reciprocal and positive, narratives more homogeneous, amplification more synchronized, and hashtag adoption faster and more sustained. Remarkably, simply revealing to agents which other agents share their goals can produce coordination levels nearly equivalent to those achieved through explicit deliberation and collective voting. Overall, we show that generative agents, even without human guidance, can reproduce coordination strategies characteristic of real-world IOs, underscoring the societal risks posed by increasingly automated, self-organizing IOs.</p><h3>Details</h3><ul><li><strong>Authors:</strong> Orlando, Gian Marco, Ye, Jinyi, La Gatta, Valerio, Saeedi, Mahdi, Moscato, Vincenzo, Ferrara, Emilio, Luceri, Luca</li><li><strong>Published in:</strong> arXiv [cs.MA]</li><li><strong>Year:</strong> 2025</li></ul>",
       "_academic": {
@@ -616,8 +616,8 @@
         }
       ],
       "tags": [
-        "Article",
-        "J. Public Policy Mark."
+        "J. Public Policy Mark.",
+        "Article"
       ],
       "content_html": "<h3>Abstract</h3><p>This article traces the social construction of misinformation-at-scale by charting the diverse content moderation methods adopted by social media companies between 2016-2021, when perceptions about social media harming public health and political outcomes became a major public issue. The concept of “misinformation” refers to false or inaccurate information. Misinformation-at scale occurs when false information is amplified online and shared by politicians, journalists, public figures, or other densely networked actors, whose engagement turns false claims into public controversies. This situation creates a paradox for social media companies and their users. On the one hand, the business model of social media companies is to increase engagement without consideration of the veracity of the content. As a result, content moderation methods have focused on reducing the speed and scale of misinformation, but not rooting it out entirely. On the other hand, users increasingly depend on social media companies for access to TALK (timely, accurate, local knowledge), which is difficult to discover, especially during breaking news or on contested subjects. This paper documents this history and discusses ways to address this challenge posed by misinformation-at-scale.</p><h3>Details</h3><ul><li><strong>Authors:</strong> Donovan, Joan</li><li><strong>Published in:</strong> J. Public Policy Mark.</li><li><strong>Year:</strong> 2025</li></ul>",
       "_academic": {
@@ -713,14 +713,14 @@
       ],
       "tags": [
         "fake accounts",
-        "political communication",
+        "Facebook",
         "social media",
         "inauthentic behavior",
-        "Facebook",
-        "Meta",
         "Media Commun.",
         "election campaign",
         "manipulation",
+        "political communication",
+        "Meta",
         "Article"
       ],
       "content_html": "<h3>Abstract</h3><p>Technology has reshaped political communication, allowing fake engagement to drive real influence in the democratic process. Hyperactive social media users, who are over-proportionally active in relation to the mean, are the new political activists, spreading partisan content at scale on social media platforms. Using The Authenticity Matrix tool, this study revealed Facebook accounts of hyperactive users exhibiting inauthentic behaviour that were used during the electoral campaign (May 10, 2024, to June 8, 2024) for the 2024 election of Romanian members of the European Parliament. The results indicate that, for some posts, up to 45\\% of shares were made by hyperactive users (four or more shares per post by the same account) and 33.9\\% by super-active users (10 or more times). This type of online behavior is considered by Meta as manipulation of “public opinion,” “political discussion,” and “public debate,” and Meta’s Community Standards is committed to preventing such behavior in the context of elections. Another key contribution of this research is the identification of dominant characteristics of hyperactive user accounts, using information publicly available on their social media profile, which provides insights into their specific features and helps users better identify them on social media. The article highlights that online social network platforms condemn these manipulative practices in theory, but they don’t take sufficient measures to effectively reduce them in order to limit their impact on our societies.</p><h3>Details</h3><ul><li><strong>Authors:</strong> Oprea, Bogdan, Pașnicu, Paula, Niculae, Alexandru-Ninel, Bonciu, Constantin-Cozmin, Tudorașcu-Dobre, Dragoș</li><li><strong>Published in:</strong> Media Commun.</li><li><strong>Year:</strong> 2025</li><li><strong>Volume:</strong> 13</li></ul>",
@@ -919,8 +919,8 @@
         }
       ],
       "tags": [
-        "Article",
-        "arXiv [cs.CL]"
+        "arXiv [cs.CL]",
+        "Article"
       ],
       "content_html": "<h3>Abstract</h3><p>Embedding-based similarity metrics between text sequences can be influenced not just by the content dimensions we most care about, but can also be biased by spurious attributes like the text&#x27;s source or language. These document confounders cause problems for many applications, but especially those that need to pool texts from different corpora. This paper shows that a debiasing algorithm that removes information about observed confounders from the encoder representations substantially reduces these biases at a minimal computational cost. Document similarity and clustering metrics improve across every embedding variant and task we evaluate -- often dramatically. Interestingly, performance on out-of-distribution benchmarks is not impacted, indicating that the embeddings are not otherwise degraded.</p><h3>Details</h3><ul><li><strong>Authors:</strong> Fan, Yu, Tian, Yang, Ravfogel, Shauli, Sachan, Mrinmaya, Ash, Elliott, Hoyle, Alexander</li><li><strong>Published in:</strong> arXiv [cs.CL]</li><li><strong>Year:</strong> 2025</li></ul>",
       "_academic": {
@@ -988,8 +988,8 @@
         }
       ],
       "tags": [
-        "Article",
-        "J. Inf. Technol. Politics"
+        "J. Inf. Technol. Politics",
+        "Article"
       ],
       "content_html": "<h3>Details</h3><ul><li><strong>Authors:</strong> Kuznetsova, Daria</li><li><strong>Published in:</strong> J. Inf. Technol. Politics</li><li><strong>Year:</strong> 2025</li><li><strong>Pages:</strong> 1--17</li></ul>",
       "_academic": {
@@ -1017,8 +1017,8 @@
         }
       ],
       "tags": [
-        "arXiv [cs.IR]",
-        "Article"
+        "Article",
+        "arXiv [cs.IR]"
       ],
       "content_html": "<h3>Abstract</h3><p>This paper critically audits the search endpoint of YouTube&#x27;s Data API (v3), a common tool for academic research. Through systematic weekly searches over six months using eleven queries, we identify major limitations regarding completeness, representativeness, consistency, and bias. Our findings reveal substantial differences between ranking parameters like relevance and date in terms of video recall and precision, with relevance often retrieving numerous off-topic videos. We also find severe temporal decay, as the number of findable videos for a specific period dramatically decreases after just 20-60 days from the publication date, potentially hampering many different research designs. Furthermore, search results lack consistency, with identical queries yielding different video sets over time, compromising replicability. A case study on the European Parliament elections highlights how these issues impact research outcomes. While the paper offers several mitigation strategies, it concludes that the API&#x27;s search function, potentially prioritizing ``freshness&#x27;&#x27; over comprehensive retrieval, is not adequate for robust academic research, especially concerning Digital Services Act requirements.</p><h3>Details</h3><ul><li><strong>Authors:</strong> Rieder, Bernhard, Padilla, Adrian, Coromina, Oscar</li><li><strong>Published in:</strong> arXiv [cs.IR]</li><li><strong>Year:</strong> 2025</li></ul>",
       "_academic": {
@@ -1062,8 +1062,8 @@
         }
       ],
       "tags": [
-        "Sociol. Methods Res.",
-        "Article"
+        "Article",
+        "Sociol. Methods Res."
       ],
       "content_html": "<h3>Abstract</h3><p>How can one understand the spread of ideas across text data? This is a key measurement problem in sociological inquiry, from the study of how interest groups shape media discourse, to the spread of policy across institutions, to the diffusion of organizational structures and institution themselves. To study how ideas and narratives diffuse across text, we must first develop a method to identify whether texts share the same information and narratives, rather than the same broad themes or exact features. We propose a novel approach to measure this quantity of interest, which we call “narrative similarity,” by using large language models to distill texts to their core ideas and then compare the similarity of claims rather than of words, phrases, or sentences. The result is an estimand much closer to narrative similarity than what is possible with past relevant alternatives, including exact text reuse, which returns lexically similar documents; topic modeling, which returns topically similar documents; or an array of alternative approaches. We devise an approach to providing out-of-sample measures of performance (precision, recall, F1) and show that our approach outperforms relevant alternatives by a large margin. We apply our approach to an important case study: The spread of Russian claims about the development of a Ukrainian bioweapons program in U.S. mainstream and fringe news websites. While we focus on news in this application, our approach can be applied more broadly to the study of propaganda, misinformation, diffusion of policy and cultural objects, among other topics.</p><h3>Details</h3><ul><li><strong>Authors:</strong> Waight, Hannah, Messing, Solomon, Shirikov, Anton, Roberts, Margaret E, Nagler, Jonathan, Greenfield, Jason, Brown, Megan A, Aslett, Kevin, Tucker, Joshua A</li><li><strong>Published in:</strong> Sociol. Methods Res.</li><li><strong>Year:</strong> 2025</li></ul>",
       "_academic": {
@@ -1151,8 +1151,8 @@
         }
       ],
       "tags": [
-        "Article",
-        "arXiv [cs.CL]"
+        "arXiv [cs.CL]",
+        "Article"
       ],
       "content_html": "<h3>Abstract</h3><p>Implicit content plays a crucial role in political discourse, where speakers systematically employ pragmatic strategies such as implicatures and presuppositions to influence their audiences. Large Language Models (LLMs) have demonstrated strong performance in tasks requiring complex semantic and pragmatic understanding, highlighting their potential for detecting and explaining the meaning of implicit content. However, their ability to do this within political discourse remains largely underexplored. Leveraging, for the first time, the large IMPAQTS corpus, which comprises Italian political speeches with the annotation of manipulative implicit content, we propose methods to test the effectiveness of LLMs in this challenging problem. Through a multiple-choice task and an open-ended generation task, we demonstrate that all tested models struggle to interpret presuppositions and implicatures. We conclude that current LLMs lack the key pragmatic capabilities necessary for accurately interpreting highly implicit language, such as that found in political discourse. At the same time, we highlight promising trends and future directions for enhancing model performance. We release our data and code at https://github.com/WalterPaci/IMPAQTS-PID</p><h3>Details</h3><ul><li><strong>Authors:</strong> Paci, Walter, Panunzi, Alessandro, Pezzelle, Sandro</li><li><strong>Published in:</strong> arXiv [cs.CL]</li><li><strong>Year:</strong> 2025</li></ul>",
       "_academic": {
@@ -1209,12 +1209,12 @@
       ],
       "tags": [
         "Far-Right",
+        "disinformation",
+        "evidence",
+        "online radicalization",
+        "redpill",
         "extremism",
         "Int. J. Commun.",
-        "online radicalization",
-        "disinformation",
-        "redpill",
-        "evidence",
         "Article"
       ],
       "content_html": "<h3>Abstract</h3><p>How do people come to believe Far-Right, extremist, and conspiratorial ideas they encounter online? This article examines how participants in primarily U.S.-based Far-Right online communities describe their adoption of “redpill” beliefs and the role of disinformation in these accounts. Applying the socio-technical theory of media effects, we conduct a qualitative content analysis of “redpilling narratives” gathered from Reddit, Gab, and Discord. While many users frame redpilling as a moment of conversion, others portray redpilling as a process, something achieved incrementally through years of community participation and “doing your own research.” In both cases, disinformation presented as evidence and the capacity to determine the veracity of presented evidence play important roles in redpilling oneself and others. By framing their beliefs as the rational and logical results of fully considering a plethora of evidence, redpill adherents can justify holding and promoting otherwise indefensible prejudices. The community’s creation, promotion, and repetition of Far-Right disinformation, much of which is historical or “scientific” in nature, play a crucial role in the adoption of Far-Right beliefs.</p><h3>Details</h3><ul><li><strong>Authors:</strong> Marwick, Alice E, Furl, Katherine</li><li><strong>Published in:</strong> Int. J. Commun.</li><li><strong>Year:</strong> 2025</li><li><strong>Volume:</strong> 19</li><li><strong>Pages:</strong> 26</li></ul>",
@@ -1493,10 +1493,10 @@
         }
       ],
       "tags": [
-        "Sci. Rep.",
         "Facebook",
-        "Coordination",
+        "Sci. Rep.",
         "Social media",
+        "Coordination",
         "Article"
       ],
       "content_html": "<h3>Abstract</h3><p>Malicious actors regularly attempt to manipulate social media using coordinated posting. Many existing methods for detecting this coordination, though, have relied primarily on post-timing, which is trivially easy to change. In this paper, we make a significant methodological advancement in coordination detection, leveraging highly regular statistical patterns in the speed and frequency of sharing. We apply and validate this approach on Facebook, using 11.2 million link posts from a list of 16,169 most popular English-language Facebook pages that referenced at least one of the top eight US politicians in any post, a set of pages that produced more than 91\\% of all user engagement in this category during our collection period. Our approach can be calibrated and adapted across contexts, platforms, and times, allowing researchers to build valid, testable, but still human-interpretable models of platform manipulations.</p><h3>Details</h3><ul><li><strong>Authors:</strong> Yang, Yunkang, Paudel, Ramesh, McShan, Jordan, Hindman, Matthew, Huang, H Howie, Broniatowski, David</li><li><strong>Published in:</strong> Sci. Rep.</li><li><strong>Year:</strong> 2025</li><li><strong>Volume:</strong> 15</li><li><strong>Pages:</strong> 15684</li></ul>",
@@ -1529,8 +1529,8 @@
         }
       ],
       "tags": [
-        "J. Comput. Soc. Sci.",
-        "Article"
+        "Article",
+        "J. Comput. Soc. Sci."
       ],
       "content_html": "<h3>Abstract</h3><p>Abstract This systematic review synthesizes research on echo chambers and filter bubbles to explore the reasons behind dissent regarding their existence, antecedents, and effects. It provides a taxonomy of conceptualizations and operationalizations, analyzing how measurement approaches and contextual factors influence outcomes. The review of 129 studies identifies variations in measurement approaches, as well as regional, political, cultural, and platform-specific biases, as key factors contributing to the lack of consensus. Studies based on homophily and computational social science methods often support the echo chamber hypothesis, while research on content exposure and broader media environments, such as surveys, tends to challenge it. Group behavior, cultural influences, instant messaging platforms, and short video platforms remain underexplored. The strong geographic focus on the United States further highlights the need for studies in multi-party systems and regions beyond the Global North. Future research should prioritize cross-platform studies, continuous algorithmic audits, and investigations into the causal links between polarization, fragmentation, and echo chambers to advance the field. This review also provides recommendations for using the EU’s Digital Services Act to enhance research in this area and conduct studies outside the US in multi-party systems. By addressing these gaps, this review contributes to a more comprehensive understanding of echo chambers, their measurement, and their societal impacts.</p><h3>Details</h3><ul><li><strong>Authors:</strong> Hartmann, David, Wang, Sonja Mei, Pohlmann, Lena, Berendt, Bettina</li><li><strong>Published in:</strong> J. Comput. Soc. Sci.</li><li><strong>Year:</strong> 2025</li><li><strong>Volume:</strong> 8</li><li><strong>Pages:</strong> 52</li></ul>",
       "_academic": {
@@ -1598,8 +1598,8 @@
         }
       ],
       "tags": [
-        "Article",
-        "ACM Trans. Web"
+        "ACM Trans. Web",
+        "Article"
       ],
       "content_html": "<h3>Abstract</h3><p>In the last few years, social media has gained an unprecedented amount of attention, playing a pivotal role in shaping the contemporary landscape of communication and connection. However, Coordinated inauthentic Behaviour (CIB), defined as orchestrated efforts by entities to deceive or mislead users about their identity and intentions, has emerged as a tactic to exploit the online discourse. In this study, we quantify the efficacy of CIB tactics by defining a general framework for evaluating the influence of a subset of nodes in a directed tree. We design two algorithms that provide optimal and greedy post-hoc placement strategies that lead to maximising the configuration influence. We then consider cascades from information spreading on X (formerly known as Twitter) to compare the observed behaviour with our algorithms. The results show that, according to our model, coordinated accounts are quite inefficient in terms of their network influence, thus suggesting that they may play a less pivotal role than expected. Moreover, the causes of these poor results may be found in two separate aspects: a bad placement strategy and a scarcity of resources.</p><h3>Details</h3><ul><li><strong>Authors:</strong> Di Marco, Niccolò, Brunetti, Sara, Cinelli, Matteo, Quattrociocchi, Walter</li><li><strong>Published in:</strong> ACM Trans. Web</li><li><strong>Year:</strong> 2025</li><li><strong>Volume:</strong> 19</li><li><strong>Pages:</strong> 1--19</li></ul>",
       "_academic": {
@@ -1742,12 +1742,12 @@
         }
       ],
       "tags": [
-        "tertius iungens",
-        "amplification",
         "social media",
+        "tertius iungens",
         "PNAS Nexus",
         "social networks",
         "triad transitivity",
+        "amplification",
         "Article"
       ],
       "content_html": "<h3>Abstract</h3><p>As they evolve, social networks tend to form transitive triads more often than random chance and structural constraints would suggest. However, the mechanisms by which triads in these networks become transitive are largely unexplored. We leverage a unique combination of data and methods to demonstrate a causal link between amplification and triad transitivity in a directed social network. Additionally, we develop the concept of the ``attention broker,&#x27;&#x27; an extension of the previously theorized tertius iungens (or ``third who joins&#x27;&#x27;). We use an innovative technique to identify time-bounded Twitter/X following events, and then use difference-in-differences to show that attention brokers cause triad transitivity by amplifying content. Attention brokers intervene in the evolution of any sociotechnical system where individuals can amplify content while referencing its originator.</p><h3>Details</h3><ul><li><strong>Authors:</strong> Smith, Alyssa H, Green, Jon, F Welles, Brooke, Lazer, David</li><li><strong>Published in:</strong> PNAS Nexus</li><li><strong>Year:</strong> 2025</li><li><strong>Volume:</strong> 4</li><li><strong>Pages:</strong> gaf106</li></ul>",
@@ -1811,15 +1811,15 @@
         }
       ],
       "tags": [
-        "influence operations",
         "elections",
-        "Int. J. Commun.",
-        "Philippines",
-        "disinformation",
         "trolls",
+        "disinformation",
+        "computational propaganda",
+        "influence operations",
+        "Int. J. Commun.",
         "brokerage",
-        "Article",
-        "computational propaganda"
+        "Philippines",
+        "Article"
       ],
       "content_html": "<h3>Abstract</h3><p>This study conceptualizes influence operations (IOs), an enterprise that orchestrates manipulative and inauthentic activities to achieve political advantage, as a contemporary form of brokerage during elections. It investigates the empirical case of IOs engaged in covert political campaigning in the 2022 Philippine General Elections through qualitative field research. Drawing from 22 in-depth interviews with IO leads and staff, we define IOs’ broker attributes, their brokerage processes, and the capital and value they generate through brokerage. We identify four mechanisms of brokerage by IOs: infrastructural capacity, reputation manipulation, relationship building at scale, and obscured accountability. These mechanisms complement the brokerage work by aboveboard campaigns and other brokers by compensating for their limitations and innovating campaign strategies. We argue that IOs are not extraneous deviations but are logical extensions of existing political infrastructures and should be understood as operating with other normative forms of political campaigning.</p><h3>Details</h3><ul><li><strong>Authors:</strong> Gaw, Fatima, Agonos, Mariam Jayne, Ruijgrok, Kris, Suarez, Gerard Martin</li><li><strong>Published in:</strong> Int. J. Commun.</li><li><strong>Year:</strong> 2025</li><li><strong>Volume:</strong> 19</li><li><strong>Pages:</strong> 21</li></ul>",
       "_academic": {
@@ -1853,12 +1853,12 @@
         }
       ],
       "tags": [
-        "Machine Learning (cs.LG)",
         "arXiv [cs.CL]",
-        "Computation and Language (cs.CL)",
+        "Misc",
         "FOS: Computer and information sciences",
+        "Computation and Language (cs.CL)",
         "Computers and Society (cs.CY)",
-        "Misc"
+        "Machine Learning (cs.LG)"
       ],
       "content_html": "<h3>Abstract</h3><p>Automated frame analysis of political communication is a popular task in computational social science that is used to study how authors select aspects of a topic to frame its reception. So far, such studies have been narrow, in that they use a fixed set of pre-defined frames and focus only on the text, ignoring the visual contexts in which those texts appear. Especially for framing in the news, this leaves out valuable information about editorial choices, which include not just the written article but also accompanying photographs. To overcome such limitations, we present a method for conducting multi-modal, multi-label framing analysis at scale using large (vision-) language models. Grounding our work in framing theory, we extract latent meaning embedded in images used to convey a certain point and contrast that to the text by comparing the respective frames used. We also identify highly partisan framing of topics with issue-specific frame analysis found in prior qualitative work. We demonstrate a method for doing scalable integrative framing analysis of both text and image in news, providing a more complete picture for understanding media bias.</p><h3>Details</h3><ul><li><strong>Authors:</strong> Arora, Arnav, Yadav, Srishti, Antoniak, Maria, Belongie, Serge, Augenstein, Isabelle</li><li><strong>Published in:</strong> arXiv [cs.CL]</li><li><strong>Year:</strong> 2025</li></ul>",
       "_academic": {
@@ -1888,8 +1888,8 @@
         }
       ],
       "tags": [
-        "Article",
-        "Int. J. Press Polit."
+        "Int. J. Press Polit.",
+        "Article"
       ],
       "content_html": "<h3>Abstract</h3><p>The global spread of political misinformation poses serious challenges to democracies, eroding trust and distorting public discourse. However, research has largely focused on WEIRD countries—Western, Educated, Industrialized, Rich, and Democratic—limiting our understanding of how misinformation operates across diverse political, cultural, and technological contexts. This special issue addresses these gaps through comparative, cross-platform, and interdisciplinary perspectives. The articles explore how political and media systems shape misinformation, the role of individual resilience, and how platform-specific features—across social media, messaging apps, and traditional media—affect the spread of false information. Studies from non-WEIRD regions offer insights into distinct vulnerabilities, emphasizing the need for context-sensitive approaches. Together, these contributions advance our understanding of misinformation as a global challenge and offer guidance for strengthening democratic resilience in varied information environments.</p><h3>Details</h3><ul><li><strong>Authors:</strong> Humprecht, Edda, Valenzuela, Sebastián, Esser, Frank, Tandoc, Edson</li><li><strong>Published in:</strong> Int. J. Press Polit.</li><li><strong>Year:</strong> 2025</li><li><strong>Pages:</strong> 19401612251327530</li></ul>",
       "_academic": {
@@ -1946,8 +1946,8 @@
         }
       ],
       "tags": [
-        "Article",
-        "arXiv [cs.CL]"
+        "arXiv [cs.CL]",
+        "Article"
       ],
       "content_html": "<h3>Abstract</h3><p>Researchers have proposed the use of generative large language models (LLMs) to label data for research and applied settings. This literature emphasizes the improved performance of these models relative to other natural language models, noting that generative LLMs typically outperform other models and even humans across several metrics. Previous literature has examined bias across many applications and contexts, but less work has focused specifically on bias in generative LLMs&#x27; responses to subjective annotation tasks. This bias could result in labels applied by LLMs that disproportionately align with majority groups over a more diverse set of viewpoints. In this paper, we evaluate how LLMs represent diverse viewpoints on these contentious tasks. Across four annotation tasks on four datasets, we show that LLMs do not show systematic substantial disagreement with annotators on the basis of demographics. Rather, we find that multiple LLMs tend to be biased in the same directions on the same demographic categories within the same datasets. Moreover, the disagreement between human annotators on the labeling task -- a measure of item difficulty -- is far more predictive of LLM agreement with human annotators. We conclude with a discussion of the implications for researchers and practitioners using LLMs for automated data annotation tasks. Specifically, we emphasize that fairness evaluations must be contextual, model choice alone will not solve potential issues of bias, and item difficulty must be integrated into bias assessments.</p><h3>Details</h3><ul><li><strong>Authors:</strong> Brown, Megan A, Atreja, Shubham, Hemphill, Libby, Wu, Patrick Y</li><li><strong>Published in:</strong> arXiv [cs.CL]</li><li><strong>Year:</strong> 2025</li></ul>",
       "_academic": {
@@ -2012,8 +2012,8 @@
         }
       ],
       "tags": [
-        "Article",
-        "Converg. Int. J. Res. New Media Technol."
+        "Converg. Int. J. Res. New Media Technol.",
+        "Article"
       ],
       "content_html": "<h3>Abstract</h3><p>This article examines the social technology company Meta’s public communication on problematic content, via their official ‘Meta Newsroom’, within the context of growing regulatory scrutiny. For nearly a decade, the Meta Newsroom has been a major outlet for Meta company announcements, and since 2016, the Newsroom has increasingly become a key source for company responses to concerns regarding mis/disinformation and other kinds of problematic content on Meta’s platforms. Using a mixed-methods approach informed by discourse analysis, this article critically examines Newsrooms posts from 2016 to early 2021. It asks: how is Meta framing ‘problems’ on its platforms? How is Meta identifying ‘solutions’ to those problems? And is Meta ‘nudging’ policymakers in specific conceptual directions? Overall, we find that Meta is framing content moderation issues through four key frames – ‘authenticity’, ‘political advertising’, ‘technological solutions’, and ‘enforcement’ – that benefit Meta, as they shift responsibility while also demonstrating that Meta is an active and capable problem-solver.</p><h3>Details</h3><ul><li><strong>Authors:</strong> Hurcombe, Edward, Dehghan, Ehsan, Vodden, Laura, Angus, Daniel</li><li><strong>Published in:</strong> Converg. Int. J. Res. New Media Technol.</li><li><strong>Year:</strong> 2025</li><li><strong>Pages:</strong> 13548565251315521</li></ul>",
       "_academic": {
@@ -2074,8 +2074,8 @@
         }
       ],
       "tags": [
-        "Article",
-        "ACM Trans. Web"
+        "ACM Trans. Web",
+        "Article"
       ],
       "content_html": "<h3>Abstract</h3><p>This study investigates the concept of frames in the realm of online polarization, with a focus on social media platforms. The research extends the understanding of how frames—emerging, complex, and often subtle concepts—become prominent in online conversations that are polarized. The study proposes a comprehensive methodology for identifying and characterizing these frames, integrating machine learning techniques, network analysis algorithms, and natural language processing tools. This method aims for generalizability across multiple platforms and types of user engagement. Two novel metrics, homogeneity and relevancy are introduced for the rigorous evaluation of identified frame candidates. Grounded in several foundational presumptions, including the role of topics and multi-word expressions in framing, the study sheds light on how frames emerge and gain significance within digital communities. The research questions explored include the methods for identifying frames, the variability and significance of these frames, and the effectiveness of different computational techniques in this context. To validate the approach, we present a case study of the 2021 Chilean presidential election, using data from both Twitter and WhatsApp platforms. This real-world application allows for the examination of how frames fluctuate in response to events and the specific mechanisms of platforms. Overall, the study makes several key contributions to the field, offering new insights and methodologies for analyzing the complexities of online polarization. It serves as groundwork for future research on the dynamics of online communities, especially those associated with distinctly polarized events.</p><h3>Details</h3><ul><li><strong>Authors:</strong> Sarmiento, Hernan, Córdova, Ricardo, Ortiz, Jorge, Bravo-Marquez, Felipe, Santos, Marcelo, Valenzuela, Sebastián</li><li><strong>Published in:</strong> ACM Trans. Web</li><li><strong>Year:</strong> 2025</li><li><strong>Pages:</strong> 3711912</li></ul>",
       "_academic": {
@@ -2163,8 +2163,8 @@
         }
       ],
       "tags": [
-        "Article",
-        "J. Quant. Descr. Digit. Media"
+        "J. Quant. Descr. Digit. Media",
+        "Article"
       ],
       "content_html": "<h3>Abstract</h3><p>Researchers need reliable and valid tools to identify cases of untrustworthy information when studying the spread of misinformation on digital platforms. A common approach is to assess the trustworthiness of sources rather than individual pieces of content. One of the most widely used and comprehensive databases for source trustworthiness ratings is provided by NewsGuard. Since creating the database in 2019, NewsGuard has continually added new sources and reassessed existing ones. While NewsGuard initially focused only on the US, the database has expanded to include sources from other countries. In addition to trustworthiness ratings, the NewsGuard database contains various contextual assessments of the sources, which are less often used in contemporary research on misinformation. In this work, we provide an analysis of the content of the NewsGuard database, focusing on the temporal stability and completeness of its ratings across countries, as well as the usefulness of information on political orientation and topics for misinformation studies. We find that trustworthiness ratings and source coverage have remained relatively stable since 2022, particularly for the US, France, Italy, Germany, and Canada, with US-based sources consistently scoring lower than those from other countries. Additional information on the political orientation and topics covered by sources is comprehensive and provides valuable assets for characterizing sources beyond trustworthiness. By evaluating the database over time and across countries, we identify potential pitfalls that compromise the validity of using NewsGuard as a tool for quantifying untrustworthy information, particularly if dichotomous ``trustworthy&#x27;&#x27;/``untrustworthy&#x27;&#x27; labels are used. Lastly, we provide recommendations for digital media research on how to avoid these pitfalls and discuss appropriate use cases for the NewsGuard database and source-level approaches in general.</p><h3>Details</h3><ul><li><strong>Authors:</strong> Lühring, Jula, Metzler, Hannah, Lazzaroni, Ruggero, Shetty, Apeksha, Lasser, Jana</li><li><strong>Published in:</strong> J. Quant. Descr. Digit. Media</li><li><strong>Year:</strong> 2025</li><li><strong>Volume:</strong> 5</li></ul>",
       "_academic": {
@@ -2189,8 +2189,8 @@
         }
       ],
       "tags": [
-        "Article",
-        "SAGE Open"
+        "SAGE Open",
+        "Article"
       ],
       "content_html": "<h3>Abstract</h3><p>Content moderation decisions can have variable impacts on the events and discourses they aim to regulate. This study analyzes Twitter data from before and after the removal of key Arizona Election Audit Twitter accounts in March of 2021. After collecting tweets that refer to the election audit in Arizona in this designated timeframe, a before/after comparison examines the structure of the networks, the volume of the participating population, and the themes of their discourse. Several significant changes are observed, including a drop in participation from accounts that were not deplatformed and a de-centralization of the Twitter network. Conspiracy theories remain in the discourse, but their themes become more diffuse, and their calls to action more abstract. Recruiting calls to join in on promoting and publicizing the audit mostly come to an end. The decision by Twitter to deplatform key election audit accounts appears to have greatly disrupted the hub structure at the center of the emergent network that formed as a response to the election audit. By intervening in the network, moderators successfully defused much of the Twitter-based participation in the Arizona Election Review of 2021. This instance demonstrates the efficacy of network-driven interventions in platform moderation, specifically for events or accounts that use social media to organize or encourage bad-faith attacks on civic instituions.</p><h3>Details</h3><ul><li><strong>Authors:</strong> Simeone, Michael, Corman, Steven R</li><li><strong>Published in:</strong> SAGE Open</li><li><strong>Year:</strong> 2025</li><li><strong>Volume:</strong> 15</li><li><strong>Pages:</strong> 21582440251314538</li></ul>",
       "_academic": {
@@ -2242,8 +2242,8 @@
         }
       ],
       "tags": [
-        "Article",
-        "SocArXiv"
+        "SocArXiv",
+        "Article"
       ],
       "content_html": "<h3>Abstract</h3><p>Survey researchers rely heavily on closed-ended questions to measure latent respondent characteristics like knowledge, policy positions, emotions, ideology, and various other traits. While closed-ended questions ease analysis and data collection, they necessarily limit the depth and variability of responses. Open-ended responses allow for greater depth and variability in responses but are labor-intensive to code. Large Language Models (LLMs) can solve some of these problems, but existing approaches to using LLMs have a number of limitations. In this paper, we propose and test a pairwise comparison method to scale open-ended survey responses on a continuous scale. The approach relies on LLMs to make pairwise comparisons of statements that identify which statement ``wins&#x27;&#x27; and ``loses&#x27;&#x27;. With this information, we employ a Bayesian Bradley-Terry model to recover a `score&#x27; on a the relevant latent dimension for each statement. This approach allows for finer discrimination between items, better measures of uncertainty, reduces anchoring bias, and is more flexible than methods relying on Maximum Likelihood Estimation techniques. We demonstrate the utility of this approach on an open-ended question probing knowledge of interest rates in the US economy. A comparison of 6 LLMs of various sizes reveals that pairwise comparisons show greater consistency than zero-shot 0-10 ratings with larger models (&gt; 9-billion parameters). Further, comparison of pairwise decisions are consistent with high-knowledge crowd source workers.</p><h3>Details</h3><ul><li><strong>Authors:</strong> DiGiuseppe, Matthew, Flynn, Michael E</li><li><strong>Published in:</strong> SocArXiv</li><li><strong>Year:</strong> 2025</li></ul>",
       "_academic": {
@@ -2266,8 +2266,8 @@
         }
       ],
       "tags": [
-        "Article",
-        "Int. J. Press Polit."
+        "Int. J. Press Polit.",
+        "Article"
       ],
       "content_html": "<h3>Abstract</h3><p>While there is a strong scholarly interest surrounding the content of political misinformation online, much of this research concerns misinformation in Western, Educated, Industrialized, Rich and Democratic (WEIRD) countries. Although such research has investigated the topical and stylistic characteristics of misinformation, its findings are frequently not interpreted systematically in relation to properties that journalists rely on to capture the attention of audiences, that is, in relation to news values. We close the gap on comparative studies of news values in misinformation with a perspective that emphasizes non-WEIRD countries. Relying on a dataset of URLs that were shared on Facebook in twenty-four countries and reported by users as containing false news, we compile a large corpus of online news items and use an array of computational tools to analyze its content with respect to a set of five news values (conflict, negativity, proximity, individualization, and informativeness). We find salient differences for almost all news values and regarding the WEIRD/non-WEIRD and flagged/unflagged distinction. Moreover, the prevalence of individual news values differs strongly for individual countries. However, while almost all differences are significant, the effects we encounter are mostly small.</p><h3>Details</h3><ul><li><strong>Authors:</strong> Nenno, Sami, Puschmann, Cornelius</li><li><strong>Published in:</strong> Int. J. Press Polit.</li><li><strong>Year:</strong> 2025</li><li><strong>Pages:</strong> 19401612241311893</li></ul>",
       "_academic": {
@@ -2333,8 +2333,8 @@
         }
       ],
       "tags": [
-        "Article",
-        "Int. J. Press Polit."
+        "Int. J. Press Polit.",
+        "Article"
       ],
       "content_html": "<h3>Abstract</h3><p>The spread of misinformation has emerged as a global concern. Academic attention has recently shifted to emphasize the role of political elites as drivers of misinformation. Yet, little is known of the relationship between party politics and the spread of misinformation—in part due to a dearth of cross-national empirical data needed for comparative study. This article examines which parties are more likely to spread misinformation, by drawing on a comprehensive database of 32M tweets from parliamentarians in 26 countries, spanning 6 years and several election periods. The dataset is combined with external databases such as Parlgov and V-Dem, linking the spread of misinformation to detailed information about political parties and cabinets, thus enabling a comparative politics approach to misinformation. Using multilevel analysis with random country intercepts, we find that radical-right populism is the strongest determinant for the propensity to spread misinformation. Populism, left-wing populism, and right-wing politics are not linked to the spread of misinformation. These results suggest that political misinformation should be understood as part and parcel of the current wave of radical right populism, and its opposition to liberal democratic institution.</p><h3>Details</h3><ul><li><strong>Authors:</strong> Törnberg, Petter, Chueri, Juliana</li><li><strong>Published in:</strong> Int. J. Press Polit.</li><li><strong>Year:</strong> 2025</li><li><strong>Pages:</strong> 19401612241311886</li></ul>",
       "_academic": {
@@ -2583,8 +2583,8 @@
         }
       ],
       "tags": [
-        "PsyArXiv",
-        "Article"
+        "Article",
+        "PsyArXiv"
       ],
       "content_html": "<h3>Abstract</h3><p>In recent years, social media has become increasingly fragmented, as platforms evolve and new alternatives emerge. Yet most research studies a single platform—typically Twitter/X, or occasionally Facebook—leaving little known about the broader social media landscape. Here we shed new light on patterns of cross-platform variation in the high-stakes context of news sharing. We examine the relationship between user engagement and news domains’ political orientation and quality across seven platforms: Twitter/X, BlueSky, TruthSocial, Gab, GETTR, Mastodon, and LinkedIn. Using an exhaustive sampling strategy, we analyze all (over 10 million) posts containing links to news domains shared on these platforms during January 2024. We find that the news shared on platforms with more conservative user bases is significantly lower quality on average. Turning to patterns of engagement, we find—contrary to hypotheses of a consistent “right wing advantage” on social media—that the relationship between political lean and engagement is strongly heterogeneous across platforms. Conservative new posts receive more engagement on platforms where most content is conservative, and vice versa for liberal news posts, consistent with an “echo platform” perspective. In contrast, the relationship between news quality and engagement is strikingly consistent: across all platforms examined, lower-quality news posts received higher average engagement even though higher quality news is substantially more prevalent and garners far more total engagement across posts. This pattern holds despite accounting for poster-level variation, and is observed even in the absence of ranking algorithms, suggesting user preferences – not algorithmic – bias may underlie the underperformance of higher-quality news.</p><h3>Details</h3><ul><li><strong>Authors:</strong> Mosleh, Mohsen, Allen, Jennifer Nancy Lee, Rand, David Gertler</li><li><strong>Published in:</strong> PsyArXiv</li><li><strong>Year:</strong> 2024</li></ul>",
       "_academic": {
@@ -2607,8 +2607,8 @@
         }
       ],
       "tags": [
-        "Article",
-        "Int. J. Cult. Stud."
+        "Int. J. Cult. Stud.",
+        "Article"
       ],
       "content_html": "<h3>Abstract</h3><p>Studies on digital platforms and online incivility have established that uses of humour can lean towards cyberbullying and hate speech. Focusing on TikTok&#x27;s affordances and cultures of online incivility, this paper studies how TikTok influencers and their audiences manoeuvre legal-but-harmful humour. Specifically, we study how online incivility has become an accepted and negotiated practice in the Filipino context through the phenomenon of ‘dogshows’, where users throw jabs at individuals using derogatory humour and provocative memes. Through online observation and textual analysis of TikTok posts and their corresponding comment sections, we demonstrate how online incivility is subtly amplified through humour and play, and how Gen Z and young children became both objects and producers of these dogshows. We argue that while there is already peer surveillance at work on TikTok, there needs to be more deliberation between TikTok&#x27;s policies and at-risk groups to make the platform a more civil space.</p><h3>Details</h3><ul><li><strong>Authors:</strong> Cabbuag, Samuel I, Abidin, Crystal</li><li><strong>Published in:</strong> Int. J. Cult. Stud.</li><li><strong>Year:</strong> 2024</li><li><strong>Pages:</strong> 13678779241302826</li></ul>",
       "_academic": {
@@ -2636,8 +2636,8 @@
         }
       ],
       "tags": [
-        "Article",
-        "New Media Soc."
+        "New Media Soc.",
+        "Article"
       ],
       "content_html": "<h3>Abstract</h3><p>Algorithms profoundly shape user experiences on digital platforms, raising concerns about their negative impacts and highlighting the importance of algorithm literacy. Research on individuals’ understanding of algorithms and their effects is expanding rapidly but lacks a cohesive framework. We conducted a systematic integrative literature review across social sciences and humanities (n = 169), addressing algorithm literacy in terms of its key conceptualizations and the endogenous, exogenous, and personal factors that influence it. We argue that existing research can be framed in terms of experiential learning cycles and outline how this approach can be beneficial for acquiring algorithm literacy. Finally, we propose a future research agenda that includes defining core competencies relevant to algorithm literacy, standardization of measures, integrating subjective and factual aspects of algorithm literacy, and task- and domain-specific approaches.</p><h3>Details</h3><ul><li><strong>Authors:</strong> Gagrčin, Emilija, Naab, Teresa K, Grub, Maria F</li><li><strong>Published in:</strong> New Media Soc.</li><li><strong>Year:</strong> 2024</li><li><strong>Pages:</strong> 14614448241291137</li></ul>",
       "_academic": {
@@ -2695,8 +2695,8 @@
         }
       ],
       "tags": [
-        "Article",
-        "New Media Soc."
+        "New Media Soc.",
+        "Article"
       ],
       "content_html": "<h3>Abstract</h3><p>TikTok has emerged as a powerful platform for the dissemination of mis- and disinformation about the war in Ukraine. During the initial three months after the Russian invasion in February 2022, videos under the hashtag \\#Ukraine garnered 36.9 billion views, with individual videos scaling up to 88 million views. Beyond the traditional methods of spreading misleading information through images and text, the medium of sound has emerged as a novel, platform-specific audiovisual technique. Our analysis distinguishes various war-related sounds utilized by both Ukraine and Russia and classifies them into a mis- and disinformation typology. We use computational propaganda features—automation, scalability, and anonymity—to explore how TikTok’s auditory practices are exploited to exacerbate information disorders in the context of ongoing war events. These practices include reusing sounds for coordinated campaigns, creating audio meme templates for rapid amplification and distribution, and deleting the original sounds to conceal the orchestrators’ identities. We conclude that TikTok’s recommendation system (the “for you” page) acts as a sound space where exposure is strategically navigated through users’ intervention, enabling semi-automated “soft” propaganda to thrive by leveraging its audio features.</p><h3>Details</h3><ul><li><strong>Authors:</strong> Bösch, Marcus, Divon, Tom</li><li><strong>Published in:</strong> New Media Soc.</li><li><strong>Year:</strong> 2024</li><li><strong>Volume:</strong> 26</li><li><strong>Pages:</strong> 5081--5106</li></ul>",
       "_academic": {
@@ -2761,8 +2761,8 @@
         }
       ],
       "tags": [
-        "Article",
-        "Ann. Am. Acad. Pol. Soc. Sci."
+        "Ann. Am. Acad. Pol. Soc. Sci.",
+        "Article"
       ],
       "content_html": "<h3>Abstract</h3><p>Social media data have become a mainstay of social science research since the first application programming interfaces (APIs) debuted in the mid-2000s. Over time, platforms have radically altered their data offerings, substantially determining the kinds of research that can be conducted. This article presents historical and normative analyses of the current state of platform data precarity, defined by Freelon (2018) as the post-API age . We recount a periodized history of social media data access spanning nearly 20 years, characterize the data access options currently offered by six prominent platforms, and make recommendations for improving platform data access. Our primary aim is to help social media researchers understand how access to social media data has evolved over the years and consider how platforms might help them conduct more rigorous research moving forward.</p><h3>Details</h3><ul><li><strong>Authors:</strong> Freelon, Deen, Monzer, Cristina, Jeon, Gayoung, Moy, Cameron, Williams, Natasha</li><li><strong>Published in:</strong> Ann. Am. Acad. Pol. Soc. Sci.</li><li><strong>Year:</strong> 2024</li><li><strong>Volume:</strong> 715</li><li><strong>Pages:</strong> 16--37</li></ul>",
       "_academic": {
@@ -2866,12 +2866,12 @@
         }
       ],
       "tags": [
+        "facebook",
         "news",
         "newsfeed",
-        "facebook",
         "Science",
-        "homophily",
-        "Article"
+        "Article",
+        "homophily"
       ],
       "content_html": "<h3>Abstract</h3><p>Exposure to news, opinion, and civic information increasingly occurs through social media. How do these online networks influence exposure to perspectives that cut across ideological lines? Using deidentified data, we examined how 10.1 million U.S. Facebook users interact with socially shared news. We directly measured ideological homophily in friend networks and examined the extent to which heterogeneous friends could potentially expose individuals to cross-cutting content. We then quantified the extent to which individuals encounter comparatively more or less diverse content while interacting via Facebook&#x27;s algorithmically ranked News Feed and further studied users&#x27; choices to click through to ideologically discordant content. Compared with algorithmic ranking, individuals&#x27; choices played a stronger role in limiting exposure to cross-cutting content.</p><h3>Details</h3><ul><li><strong>Authors:</strong> Bakshy, Eytan, Messing, Solomon, Adamic, Lada A</li><li><strong>Published in:</strong> Science</li><li><strong>Year:</strong> 2015</li><li><strong>Volume:</strong> 348</li><li><strong>Pages:</strong> 1130--1132</li></ul>",
       "_academic": {
