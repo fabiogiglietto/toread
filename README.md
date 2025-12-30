@@ -5,12 +5,14 @@ ToRead converts Paperpile BibTeX exports into RSS and JSON Feed formats, enriche
 ## Features
 
 - **Dual Format Output**: Generates both JSON Feed (primary) and RSS (compatibility)
-- **Rich Metadata Enrichment**: Integrates with Crossref and Semantic Scholar APIs
+- **Rich Metadata Enrichment**: Integrates with Crossref, OpenAlex, Semantic Scholar, and ArXiv APIs
 - **Smart Automatic Sync**: Monitors Paperpile exports every 30 minutes, only regenerates when content changes
 - **Performance Optimized**: Skips unnecessary processing when no new papers detected, saving execution time and API quota
-- **Academic Focus**: Includes citation counts, DOI links, PDF access, and venue information
+- **Academic Focus**: Includes citation counts, DOI links, PDF access, open access status, and venue information
 - **Robust Parsing**: Handles complex BibTeX files with LaTeX formatting and missing fields
+- **Fallback Links**: Papers without DOIs get Google Scholar search links as fallback
 - **Race Condition Prevention**: Concurrency control ensures safe automated updates
+- **Persistent Cache**: Metadata cache tracked in git for reliable cross-run persistence
 - **Extensible Architecture**: Easy to add new metadata sources and output formats
 
 ## Installation
@@ -59,6 +61,19 @@ Or in config.yml (supports environment variable substitution):
 api:
   semantic_scholar:
     api_key: "${SEMANTIC_SCHOLAR_API_KEY}"
+```
+
+#### OpenAlex API
+No API key required. Configure your email for "polite pool" access (faster responses):
+```bash
+export OPENALEX_EMAIL="your@email.com"
+```
+
+Or directly in config.yml:
+```yaml
+api:
+  openalex:
+    email: "your@email.com"
 ```
 
 #### Crossref API
@@ -176,22 +191,15 @@ Standard RSS 2.0 with Dublin Core extensions for academic metadata.
 
 ## API Setup Guide
 
-### Semantic Scholar API
+### Metadata Enrichment Priority
 
-1. **Sign up** at [semanticscholar.org/product/api](https://www.semanticscholar.org/product/api)
-2. **Get your API key** from the dashboard
-3. **Update config.yml:**
-```yaml
-api:
-  semantic_scholar:
-    api_key: "your_api_key_here"
-```
+ToRead queries APIs in this order (first successful match wins):
 
-**Benefits:**
-- Citation counts and metrics
-- Better abstract coverage
-- AI/ML paper specialization
-- Open access PDF links
+1. **Crossref** - Primary source for DOI lookups
+2. **OpenAlex** - Good coverage, open access detection
+3. **Semantic Scholar** - AI/ML papers, citation metrics
+4. **ArXiv** - Preprints and working papers
+5. **Google Scholar** - Fallback search link if all else fails
 
 ### Crossref API
 
@@ -209,6 +217,40 @@ api:
 - Publication dates and venues
 - Publisher information
 - DOI resolution
+
+### OpenAlex API
+
+No signup required. Free access to 240M+ scholarly works.
+
+```yaml
+api:
+  openalex:
+    email: "your@email.com"  # For faster "polite pool" access
+    rate_limit: 0.1  # 10 requests/second allowed
+```
+
+**Benefits:**
+- Open access detection and PDF URLs
+- Good abstract coverage (60%+ of works)
+- Citation counts
+- No API key required
+
+### Semantic Scholar API
+
+1. **Sign up** at [semanticscholar.org/product/api](https://www.semanticscholar.org/product/api)
+2. **Get your API key** from the dashboard
+3. **Update config.yml:**
+```yaml
+api:
+  semantic_scholar:
+    api_key: "your_api_key_here"
+```
+
+**Benefits:**
+- Citation counts and metrics
+- Better abstract coverage
+- AI/ML paper specialization
+- Open access PDF links
 
 ## Configuration Reference
 
@@ -229,10 +271,15 @@ api:
     enabled: true
     rate_limit: 1.0
     user_agent: "ToRead/1.0 (mailto:your@email.com)"
-    
+
+  openalex:
+    enabled: true
+    email: "your@email.com"  # For polite pool access
+    rate_limit: 0.1
+
   semantic_scholar:
     enabled: true
-    api_key: "YOUR_S2_API_KEY"
+    api_key: "${SEMANTIC_SCHOLAR_API_KEY}"
     rate_limit: 1.0
 
 # Feed Output Settings
@@ -240,17 +287,17 @@ feeds:
   title: "To Read - Research Papers Feed"
   description: "Academic papers from Paperpile enriched with metadata"
   link: "https://github.com/user/toread"
-  
+
   json_feed:
     enabled: true
     output_file: "output/feed.json"
     include_full_metadata: true
-    
+
   rss:
     enabled: true
     output_file: "output/feed.xml"
     simplified: true
-    
+
   max_items: 100
   include_abstract: true
   abstract_max_length: 500
@@ -390,8 +437,9 @@ toread/
 │   ├── __init__.py
 │   ├── test_bibtex_parser.py # 13 tests for BibTeX parsing
 │   ├── test_cache.py         # 12 tests for caching system
+│   ├── test_openalex.py      # 9 tests for OpenAlex client
 │   ├── test_rss_generator.py # 15 tests for feed generation
-│   └── test_utils.py         # 22 tests for text utilities
+│   └── test_utils.py         # 42 tests for text utilities
 ├── data/                     # Input BibTeX files
 ├── output/                   # Generated feeds
 ├── cache/                    # Metadata cache (JSON)
@@ -407,7 +455,7 @@ toread/
 # Install test dependencies
 pip install pytest pytest-cov
 
-# Run all 62 tests
+# Run all 91 tests
 pytest tests/
 
 # Run with coverage report
@@ -434,6 +482,7 @@ ToRead includes several security measures:
 | Variable | Purpose |
 |----------|---------|
 | `SEMANTIC_SCHOLAR_API_KEY` | Semantic Scholar API authentication |
+| `OPENALEX_EMAIL` | OpenAlex "polite pool" access (faster responses) |
 
 ## Troubleshooting
 
@@ -471,4 +520,6 @@ MIT License - see [LICENSE](LICENSE) file for details.
 - [JSON Feed](https://jsonfeed.org/) - Modern feed format specification
 - [Paperpile](https://paperpile.com/) - Reference management tool
 - [Crossref API](https://api.crossref.org/) - Academic metadata API
-- [Semantic Scholar API](https://api.semanticscholar.org/) - AI-powered academic search# Trigger workflow - Tue Dec 30 02:16:24 PM CET 2025
+- [OpenAlex](https://openalex.org/) - Open catalog of scholarly works
+- [Semantic Scholar API](https://api.semanticscholar.org/) - AI-powered academic search
+- [ArXiv](https://arxiv.org/) - Open-access preprint repository
