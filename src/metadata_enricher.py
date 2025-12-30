@@ -15,6 +15,13 @@ from requests.adapters import HTTPAdapter
 from urllib3.util.retry import Retry
 from .bibtex_parser import BibEntry
 from .cache import MetadataCache
+from .utils import (
+    clean_title_for_search,
+    calculate_text_similarity,
+    calculate_author_similarity,
+    calculate_crossref_author_similarity,
+    extract_first_author,
+)
 
 
 @dataclass
@@ -100,24 +107,6 @@ class CrossrefClient:
             return False
         # Basic pattern: 10.xxxx/yyyy
         return doi.startswith('10.') and '/' in doi[3:]
-    
-    def _clean_title_for_search(self, title: str) -> str:
-        """Clean title for better search results."""
-        import re
-        # Remove LaTeX commands and excessive punctuation
-        clean = re.sub(r'\\[a-zA-Z]+\{([^}]*)\}', r'\1', title)
-        clean = re.sub(r'[{}]', '', clean)
-        clean = re.sub(r'[^\w\s\-:]', ' ', clean)
-        clean = re.sub(r'\s+', ' ', clean).strip()
-        return clean
-    
-    def _extract_first_author(self, author_str: str) -> str:
-        """Extract first author name for search."""
-        if not author_str:
-            return ""
-        # Split by 'and' and take first
-        first = author_str.split(' and ')[0].split(',')[0].strip()
-        return first
     
     def query_by_doi(self, doi: str) -> Optional[EnrichedMetadata]:
         """Query Crossref by DOI with retry logic and comprehensive error handling."""
@@ -207,22 +196,22 @@ class CrossrefClient:
         if not title or not title.strip():
             self.logger.debug("Empty title provided")
             return None
-        
+
         # Clean title for search
-        clean_title = self._clean_title_for_search(title)
+        clean_title = clean_title_for_search(title)
         if len(clean_title) < 10:
             self.logger.debug(f"Title too short for reliable search: {title}")
             return None
-        
+
         params = {
             'query.title': clean_title,
             'rows': 10,  # Get more matches for better selection
             'select': 'DOI,title,author,published-print,published-online,abstract,subject,container-title,references-count,is-referenced-by-count,score'
         }
-        
+
         if author:
             # Use first author for search
-            first_author = self._extract_first_author(author)
+            first_author = extract_first_author(author)
             if first_author:
                 params['query.author'] = first_author
         
@@ -310,93 +299,33 @@ class CrossrefClient:
         best_match = None
         best_score = 0.0
         min_confidence = 0.7  # Minimum confidence threshold
-        
-        query_title_clean = self._clean_title_for_search(query_title)
-        
+
+        query_title_clean = clean_title_for_search(query_title)
+
         for item in items:
             score = 0.0
-            
+
             # Title similarity (70% weight)
             if 'title' in item and item['title']:
                 item_title = item['title'][0] if isinstance(item['title'], list) else str(item['title'])
-                title_sim = self._calculate_text_similarity(query_title_clean, self._clean_title_for_search(item_title))
+                title_sim = calculate_text_similarity(query_title_clean, clean_title_for_search(item_title))
                 score += title_sim * 0.7
-            
+
             # Author similarity (30% weight)
             if query_author and 'author' in item and item['author']:
-                author_sim = self._calculate_author_similarity(query_author, item['author'])
+                author_sim = calculate_crossref_author_similarity(query_author, item['author'])
                 score += author_sim * 0.3
-            
+
             # Use Crossref's own score if available (small boost)
             if 'score' in item and item['score']:
                 score += min(item['score'] / 100, 0.1)  # Small boost, max 0.1
-            
+
             if score > best_score and score > min_confidence:
                 best_score = score
                 best_match = {'item': item, 'confidence': score}
-        
+
         return best_match
-    
-    def _calculate_text_similarity(self, text1: str, text2: str) -> float:
-        """Calculate similarity between two texts using word overlap."""
-        if not text1 or not text2:
-            return 0.0
-            
-        words1 = set(text1.lower().split())
-        words2 = set(text2.lower().split())
-        
-        if not words1 or not words2:
-            return 0.0
-        
-        # Remove very common words that don't help with matching
-        stop_words = {'the', 'a', 'an', 'and', 'or', 'but', 'in', 'on', 'at', 'to', 'for', 'of', 'with', 'by'}
-        words1 = words1 - stop_words
-        words2 = words2 - stop_words
-        
-        if not words1 or not words2:
-            return 0.0
-        
-        intersection = words1.intersection(words2)
-        union = words1.union(words2)
-        
-        # Jaccard similarity
-        jaccard = len(intersection) / len(union) if union else 0.0
-        
-        # Add bonus for exact substring matches
-        text1_lower = text1.lower()
-        text2_lower = text2.lower()
-        if text1_lower in text2_lower or text2_lower in text1_lower:
-            jaccard += 0.2
-        
-        return min(jaccard, 1.0)
-    
-    def _calculate_author_similarity(self, query_author: str, crossref_authors: List[Dict]) -> float:
-        """Calculate similarity between query author and Crossref authors."""
-        if not query_author or not crossref_authors:
-            return 0.0
-        
-        # Extract author names from Crossref format
-        crossref_names = []
-        for author in crossref_authors:
-            if 'given' in author and 'family' in author:
-                crossref_names.append(f"{author['given']} {author['family']}")
-            elif 'family' in author:
-                crossref_names.append(author['family'])
-        
-        if not crossref_names:
-            return 0.0
-        
-        # Parse query authors (handle "and" separated list)
-        query_authors = [name.strip() for name in query_author.split(' and ')]
-        
-        max_similarity = 0.0
-        for q_author in query_authors:
-            for c_author in crossref_names:
-                similarity = self._calculate_text_similarity(q_author, c_author)
-                max_similarity = max(max_similarity, similarity)
-        
-        return max_similarity
-    
+
     def _parse_crossref_response(self, item: Dict) -> EnrichedMetadata:
         """Parse Crossref API response into EnrichedMetadata."""
         metadata = EnrichedMetadata(source="crossref")
@@ -603,21 +532,21 @@ class SemanticScholarClient:
         if not title or not title.strip():
             self.logger.debug("Empty title provided")
             return None
-        
+
         # Clean title for search
-        clean_title = self._clean_title_for_search(title)
+        clean_title = clean_title_for_search(title)
         if len(clean_title) < 10:
             self.logger.debug(f"Title too short for reliable search: {title}")
             return None
-        
+
         # Build search query
         query_parts = [clean_title]
         if author:
             # Use first author name
-            first_author = author.split(',')[0].strip() if ',' in author else author.split(' and ')[0].strip()
+            first_author = extract_first_author(author)
             if first_author:
                 query_parts.append(first_author)
-        
+
         query = ' '.join(query_parts)
         
         url = f"{self.base_url}/paper/search"
@@ -713,93 +642,34 @@ class SemanticScholarClient:
         
         return None
     
-    def _clean_title_for_search(self, title: str) -> str:
-        """Clean title for better search results."""
-        import re
-        # Remove LaTeX commands and excessive punctuation
-        clean = re.sub(r'\\[a-zA-Z]+\{([^}]*)\}', r'\1', title)
-        clean = re.sub(r'[{}]', '', clean)
-        clean = re.sub(r'[^\w\s\-:]', ' ', clean)
-        clean = re.sub(r'\s+', ' ', clean).strip()
-        return clean
-    
     def _find_best_semantic_match(self, query_title: str, query_author: str, papers: List[Dict]) -> Optional[Dict]:
         """Find the best matching paper from Semantic Scholar results."""
         best_match = None
         best_score = 0.0
         min_confidence = 0.6  # Lower threshold than Crossref since S2 search is better
-        
-        query_title_clean = self._clean_title_for_search(query_title)
-        
+
+        query_title_clean = clean_title_for_search(query_title)
+
         for paper in papers:
             score = 0.0
-            
+
             # Title similarity (70% weight)
             if paper.get('title'):
-                title_sim = self._calculate_text_similarity(query_title_clean, self._clean_title_for_search(paper['title']))
+                title_sim = calculate_text_similarity(query_title_clean, clean_title_for_search(paper['title']))
                 score += title_sim * 0.7
-            
+
             # Author similarity (30% weight)
             if query_author and paper.get('authors'):
                 author_names = [author.get('name', '') for author in paper['authors']]
-                author_sim = self._calculate_author_similarity(query_author, author_names)
+                author_sim = calculate_author_similarity(query_author, author_names)
                 score += author_sim * 0.3
-            
+
             if score > best_score and score > min_confidence:
                 best_score = score
                 best_match = {'paper': paper, 'confidence': score}
-        
+
         return best_match
-    
-    def _calculate_text_similarity(self, text1: str, text2: str) -> float:
-        """Calculate similarity between two texts using word overlap."""
-        if not text1 or not text2:
-            return 0.0
-            
-        words1 = set(text1.lower().split())
-        words2 = set(text2.lower().split())
-        
-        if not words1 or not words2:
-            return 0.0
-        
-        # Remove very common words
-        stop_words = {'the', 'a', 'an', 'and', 'or', 'but', 'in', 'on', 'at', 'to', 'for', 'of', 'with', 'by'}
-        words1 = words1 - stop_words
-        words2 = words2 - stop_words
-        
-        if not words1 or not words2:
-            return 0.0
-        
-        intersection = words1.intersection(words2)
-        union = words1.union(words2)
-        
-        # Jaccard similarity with substring bonus
-        jaccard = len(intersection) / len(union) if union else 0.0
-        
-        # Bonus for substring matches
-        text1_lower = text1.lower()
-        text2_lower = text2.lower()
-        if text1_lower in text2_lower or text2_lower in text1_lower:
-            jaccard += 0.2
-        
-        return min(jaccard, 1.0)
-    
-    def _calculate_author_similarity(self, query_author: str, paper_authors: List[str]) -> float:
-        """Calculate similarity between query author and paper authors."""
-        if not query_author or not paper_authors:
-            return 0.0
-        
-        # Parse query authors
-        query_authors = [name.strip() for name in query_author.split(' and ')]
-        
-        max_similarity = 0.0
-        for q_author in query_authors:
-            for p_author in paper_authors:
-                similarity = self._calculate_text_similarity(q_author, p_author)
-                max_similarity = max(max_similarity, similarity)
-        
-        return max_similarity
-    
+
     def _parse_semantic_scholar_response(self, paper: Dict) -> EnrichedMetadata:
         """Parse Semantic Scholar API response into EnrichedMetadata."""
         metadata = EnrichedMetadata(source="semantic_scholar")
@@ -929,23 +799,13 @@ class ArxivClient:
         if self.request_count % 20 == 0:
             self.logger.info(f"ArXiv: Made {self.request_count} requests")
     
-    def _clean_title_for_search(self, title: str) -> str:
-        """Clean title for ArXiv search."""
-        import re
-        # Remove LaTeX commands and excessive punctuation
-        clean = re.sub(r'\\[a-zA-Z]+\{([^}]*)\}', r'\1', title)
-        clean = re.sub(r'[{}]', '', clean)
-        clean = re.sub(r'[^\w\s\-:]', ' ', clean)
-        clean = re.sub(r'\s+', ' ', clean).strip()
-        return clean
-    
     def query_by_title(self, title: str, author: str = None) -> Optional[EnrichedMetadata]:
         """Query ArXiv by title with fuzzy matching."""
         if not title or not title.strip():
             self.logger.debug("Empty title provided")
             return None
-        
-        clean_title = self._clean_title_for_search(title)
+
+        clean_title = clean_title_for_search(title)
         if len(clean_title) < 10:
             self.logger.debug(f"Title too short for reliable search: {title}")
             return None
@@ -996,81 +856,32 @@ class ArxivClient:
         best_match = None
         best_score = 0.0
         min_confidence = 0.6
-        
-        query_title_clean = self._clean_title_for_search(query_title)
-        
+
+        query_title_clean = clean_title_for_search(query_title)
+
         for paper in papers:
             score = 0.0
-            
+
             # Title similarity (70% weight)
             if paper.title:
-                title_sim = self._calculate_text_similarity(
-                    query_title_clean, 
-                    self._clean_title_for_search(paper.title)
+                title_sim = calculate_text_similarity(
+                    query_title_clean,
+                    clean_title_for_search(paper.title)
                 )
                 score += title_sim * 0.7
-            
+
             # Author similarity (30% weight)
             if query_author and paper.authors:
                 author_names = [author.name for author in paper.authors]
-                author_sim = self._calculate_author_similarity(query_author, author_names)
+                author_sim = calculate_author_similarity(query_author, author_names)
                 score += author_sim * 0.3
-            
+
             if score > best_score and score > min_confidence:
                 best_score = score
                 best_match = {'paper': paper, 'confidence': score}
-        
+
         return best_match
-    
-    def _calculate_text_similarity(self, text1: str, text2: str) -> float:
-        """Calculate similarity between two texts using word overlap."""
-        if not text1 or not text2:
-            return 0.0
-            
-        words1 = set(text1.lower().split())
-        words2 = set(text2.lower().split())
-        
-        if not words1 or not words2:
-            return 0.0
-        
-        # Remove common words
-        stop_words = {'the', 'a', 'an', 'and', 'or', 'but', 'in', 'on', 'at', 'to', 'for', 'of', 'with', 'by'}
-        words1 = words1 - stop_words
-        words2 = words2 - stop_words
-        
-        if not words1 or not words2:
-            return 0.0
-        
-        intersection = words1.intersection(words2)
-        union = words1.union(words2)
-        
-        # Jaccard similarity with substring bonus
-        jaccard = len(intersection) / len(union) if union else 0.0
-        
-        # Bonus for substring matches
-        text1_lower = text1.lower()
-        text2_lower = text2.lower()
-        if text1_lower in text2_lower or text2_lower in text1_lower:
-            jaccard += 0.2
-        
-        return min(jaccard, 1.0)
-    
-    def _calculate_author_similarity(self, query_author: str, paper_authors: List[str]) -> float:
-        """Calculate similarity between query author and paper authors."""
-        if not query_author or not paper_authors:
-            return 0.0
-        
-        # Parse query authors
-        query_authors = [name.strip() for name in query_author.split(' and ')]
-        
-        max_similarity = 0.0
-        for q_author in query_authors:
-            for p_author in paper_authors:
-                similarity = self._calculate_text_similarity(q_author, p_author)
-                max_similarity = max(max_similarity, similarity)
-        
-        return max_similarity
-    
+
     def _parse_arxiv_response(self, paper) -> EnrichedMetadata:
         """Parse ArXiv paper into EnrichedMetadata."""
         metadata = EnrichedMetadata(source="arxiv")
@@ -1110,86 +921,8 @@ class ArxivClient:
             metadata.subjects = paper.categories
         
         return metadata
-    
-    def _find_best_match(self, query_title: str, query_author: str, papers: List[Dict]) -> Optional[Dict]:
-        """Find the best matching paper."""
-        best_match = None
-        best_score = 0.0
-        
-        query_title_clean = self._clean_text(query_title)
-        
-        for paper in papers:
-            score = 0.0
-            
-            # Title similarity (70% weight)
-            if paper.get('title'):
-                title_sim = self._calculate_text_similarity(query_title_clean, self._clean_text(paper['title']))
-                score += title_sim * 0.7
-            
-            # Author similarity (30% weight)
-            if query_author and paper.get('authors'):
-                author_names = [author.get('name', '') for author in paper['authors']]
-                author_sim = self._calculate_author_similarity(query_author, author_names)
-                score += author_sim * 0.3
-            
-            if score > best_score and score > 0.6:  # Minimum threshold
-                best_score = score
-                best_match = paper
-        
-        return best_match
-    
-    def _calculate_match_confidence(self, query_title: str, query_author: str, paper: Dict) -> float:
-        """Calculate confidence score for a match."""
-        score = 0.0
-        
-        if paper.get('title'):
-            title_sim = self._calculate_text_similarity(self._clean_text(query_title), self._clean_text(paper['title']))
-            score += title_sim * 0.7
-        
-        if query_author and paper.get('authors'):
-            author_names = [author.get('name', '') for author in paper['authors']]
-            author_sim = self._calculate_author_similarity(query_author, author_names)
-            score += author_sim * 0.3
-        
-        return min(score, 1.0)
-    
-    def _calculate_author_similarity(self, query_author: str, paper_authors: List[str]) -> float:
-        """Calculate similarity between query author and paper authors."""
-        if not query_author or not paper_authors:
-            return 0.0
-        
-        query_authors = [self._clean_text(name) for name in query_author.split(' and ')]
-        paper_authors_clean = [self._clean_text(name) for name in paper_authors]
-        
-        max_sim = 0.0
-        for q_author in query_authors:
-            for p_author in paper_authors_clean:
-                sim = self._calculate_text_similarity(q_author, p_author)
-                max_sim = max(max_sim, sim)
-        
-        return max_sim
-    
-    def _clean_text(self, text: str) -> str:
-        """Clean text for comparison."""
-        import re
-        text = text.lower().strip()
-        text = re.sub(r'[^\w\s]', ' ', text)
-        text = re.sub(r'\s+', ' ', text)
-        return text
-    
-    def _calculate_text_similarity(self, text1: str, text2: str) -> float:
-        """Calculate similarity between two texts using word overlap."""
-        words1 = set(text1.split())
-        words2 = set(text2.split())
-        
-        if not words1 or not words2:
-            return 0.0
-        
-        intersection = words1.intersection(words2)
-        union = words1.union(words2)
-        
-        return len(intersection) / len(union) if union else 0.0
-    
+
+
 class MetadataEnricher:
     """Main enricher that coordinates multiple API clients."""
     

@@ -205,11 +205,13 @@ class FeedGenerator:
         return item
     
     def _get_entry_title(self, entry: BibEntry) -> str:
-        """Extract title from entry."""
+        """Extract title from entry with HTML escaping for safety."""
         title = entry.title or 'Untitled'
         # Clean up LaTeX formatting
         title = title.replace('{', '').replace('}', '')
-        return title.strip()
+        # Escape HTML to prevent XSS
+        title = self._escape_html(title.strip())
+        return title
     
     def _get_entry_description(self, entry: BibEntry, metadata: Optional[EnrichedMetadata]) -> Optional[str]:
         """Get description for RSS item."""
@@ -276,7 +278,7 @@ class FeedGenerator:
             # Convert ISO date to RSS format
             date_obj = datetime.fromisoformat(iso_date.replace('Z', '+00:00'))
             return date_obj.strftime("%a, %d %b %Y %H:%M:%S %z")
-        except:
+        except (ValueError, TypeError, AttributeError):
             return None
     
     def _get_entry_authors(self, entry: BibEntry) -> Optional[str]:
@@ -346,22 +348,26 @@ class FeedGenerator:
                                "".join(f"<li>{detail}</li>" for detail in details) + 
                                "</ul>")
         
-        # Add links
+        # Add links (with URL validation)
         links = []
         if metadata:
-            if metadata.doi_url:
-                links.append(f'<a href="{metadata.doi_url}">DOI</a>')
-            if metadata.arxiv_url:
-                links.append(f'<a href="{metadata.arxiv_url}">arXiv</a>')
-            if metadata.pdf_url:
-                links.append(f'<a href="{metadata.pdf_url}">PDF</a>')
-        
-        if entry.url:
-            links.append(f'<a href="{entry.url}">URL</a>')
-        
+            doi_url = self._validate_url(metadata.doi_url)
+            if doi_url:
+                links.append(f'<a href="{doi_url}">DOI</a>')
+            arxiv_url = self._validate_url(metadata.arxiv_url)
+            if arxiv_url:
+                links.append(f'<a href="{arxiv_url}">arXiv</a>')
+            pdf_url = self._validate_url(metadata.pdf_url)
+            if pdf_url:
+                links.append(f'<a href="{pdf_url}">PDF</a>')
+
+        entry_url = self._validate_url(entry.url)
+        if entry_url:
+            links.append(f'<a href="{entry_url}">URL</a>')
+
         if links:
             content_parts.append("<h3>Links</h3><p>" + " | ".join(links) + "</p>")
-        
+
         return "".join(content_parts)
     
     def _prettify_xml(self, element: ET.Element) -> str:
@@ -514,22 +520,26 @@ class FeedGenerator:
                                "".join(f"<li>{detail}</li>" for detail in details) + 
                                "</ul>")
         
-        # Links
+        # Links (with URL validation)
         links = []
         if metadata:
-            if metadata.doi_url:
-                links.append(f'<a href="{metadata.doi_url}">DOI</a>')
-            if metadata.arxiv_url:
-                links.append(f'<a href="{metadata.arxiv_url}">arXiv</a>')
-            if metadata.pdf_url:
-                links.append(f'<a href="{metadata.pdf_url}">PDF</a>')
-        
-        if entry.url:
-            links.append(f'<a href="{entry.url}">URL</a>')
-        
+            doi_url = self._validate_url(metadata.doi_url)
+            if doi_url:
+                links.append(f'<a href="{doi_url}">DOI</a>')
+            arxiv_url = self._validate_url(metadata.arxiv_url)
+            if arxiv_url:
+                links.append(f'<a href="{arxiv_url}">arXiv</a>')
+            pdf_url = self._validate_url(metadata.pdf_url)
+            if pdf_url:
+                links.append(f'<a href="{pdf_url}">PDF</a>')
+
+        entry_url = self._validate_url(entry.url)
+        if entry_url:
+            links.append(f'<a href="{entry_url}">URL</a>')
+
         if links:
             content_parts.append("<h3>Links</h3><p>" + " | ".join(links) + "</p>")
-        
+
         return "".join(content_parts)
     
     def _get_academic_extensions(self, entry: BibEntry, metadata: Optional[EnrichedMetadata]) -> Dict[str, Any]:
@@ -578,9 +588,42 @@ class FeedGenerator:
         """Escape HTML characters in text."""
         if not text:
             return ""
-        
+
         return (text.replace("&", "&amp;")
                    .replace("<", "&lt;")
                    .replace(">", "&gt;")
                    .replace('"', "&quot;")
                    .replace("'", "&#x27;"))
+
+    def _validate_url(self, url: str) -> Optional[str]:
+        """Validate and sanitize URL to prevent XSS.
+
+        Only allows http(s) URLs and rejects javascript: and data: schemes.
+
+        Args:
+            url: URL string to validate
+
+        Returns:
+            Sanitized URL if valid, None otherwise
+        """
+        if not url:
+            return None
+
+        url = url.strip()
+
+        # Check for allowed schemes
+        allowed_schemes = ('http://', 'https://')
+        if not url.lower().startswith(allowed_schemes):
+            # Reject javascript:, data:, and other potentially dangerous schemes
+            if '://' in url or url.lower().startswith(('javascript:', 'data:', 'vbscript:')):
+                return None
+            # Assume https for scheme-less URLs that look like domains
+            if '.' in url and not url.startswith('/'):
+                url = f'https://{url}'
+            else:
+                return None
+
+        # Additional XSS prevention - escape any HTML in the URL
+        url = url.replace('"', '%22').replace("'", '%27').replace('<', '%3C').replace('>', '%3E')
+
+        return url

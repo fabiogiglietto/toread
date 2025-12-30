@@ -1,11 +1,16 @@
 """BibTeX parser module for converting Paperpile exports to structured data."""
 
+from __future__ import annotations
+
 import re
 import logging
-from typing import Dict, List, Optional
+from typing import Dict, List, Optional, TYPE_CHECKING
 from dataclasses import dataclass, field
 from pathlib import Path
 from datetime import datetime, timezone
+
+if TYPE_CHECKING:
+    from .cache import DiscoveryCache
 
 
 @dataclass
@@ -193,7 +198,7 @@ class BibTeXParser:
         if entry.publisher:
             entry.publisher = self._clean_latex_formatting(entry.publisher)
     
-    def set_discovery_dates(self, entries: List[BibEntry], discovery_cache: Optional['DiscoveryCache'] = None) -> List[BibEntry]:
+    def set_discovery_dates(self, entries: List[BibEntry], discovery_cache: Optional[DiscoveryCache] = None) -> List[BibEntry]:
         """Set discovery dates for entries, using cache for existing entries or publication date as fallback."""
         for entry in entries:
             # Check if we already have a cached discovery date for this entry

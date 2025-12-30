@@ -28,7 +28,7 @@ api:
   semantic_scholar:
     enabled: true
     base_url: "https://api.semanticscholar.org/graph/v1"
-    api_key: "igLzlRjWMo7oymQqDtf7Q6ttrMHsv2jr3MIYHQmz"  # Semantic Scholar API key
+    api_key: "${SEMANTIC_SCHOLAR_API_KEY}"  # Set via environment variable
     rate_limit: 1.0
     timeout: 10
     fields: ["abstract", "authors", "citations", "references", "venue", "year"]

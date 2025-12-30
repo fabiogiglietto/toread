@@ -1,14 +1,116 @@
 """Main module for the ToRead application."""
 
 import argparse
+import logging
+import os
+import re
 import sys
 from pathlib import Path
-from typing import Optional
+from typing import Optional, Dict, Any
+
+import yaml
 
 from .bibtex_parser import BibTeXParser
 from .metadata_enricher import MetadataEnricher
 from .rss_generator import FeedGenerator
 from .cache import DiscoveryCache
+
+
+def setup_logging(config: Dict[str, Any] = None, verbose: bool = False) -> None:
+    """Configure logging based on config file and command-line options.
+
+    Args:
+        config: Logging configuration from config.yml
+        verbose: If True, set level to DEBUG regardless of config
+    """
+    config = config or {}
+
+    # Determine log level
+    if verbose:
+        level = logging.DEBUG
+    else:
+        level_name = config.get('level', 'INFO').upper()
+        level = getattr(logging, level_name, logging.INFO)
+
+    # Log format
+    log_format = config.get(
+        'format',
+        '%(asctime)s - %(name)s - %(levelname)s - %(message)s'
+    )
+
+    # Configure root logger
+    handlers = []
+
+    # Console handler
+    if config.get('console', True):
+        console_handler = logging.StreamHandler(sys.stdout)
+        console_handler.setFormatter(logging.Formatter(log_format))
+        handlers.append(console_handler)
+
+    # File handler
+    log_file = config.get('file')
+    if log_file:
+        log_path = Path(log_file)
+        log_path.parent.mkdir(parents=True, exist_ok=True)
+        file_handler = logging.FileHandler(log_file, encoding='utf-8')
+        file_handler.setFormatter(logging.Formatter(log_format))
+        handlers.append(file_handler)
+
+    # Apply configuration
+    logging.basicConfig(
+        level=level,
+        format=log_format,
+        handlers=handlers,
+        force=True  # Override any existing configuration
+    )
+
+    # Reduce verbosity of third-party libraries
+    logging.getLogger('urllib3').setLevel(logging.WARNING)
+    logging.getLogger('requests').setLevel(logging.WARNING)
+
+
+def load_config(config_path: str = "config.yml") -> Dict[str, Any]:
+    """Load configuration from YAML file with environment variable substitution.
+
+    Supports ${VAR} syntax for environment variable substitution in config values.
+
+    Args:
+        config_path: Path to the config file
+
+    Returns:
+        Configuration dictionary, or empty dict if file not found
+    """
+    config_file = Path(config_path)
+    if not config_file.exists():
+        return {}
+
+    try:
+        with open(config_file, 'r', encoding='utf-8') as f:
+            config = yaml.safe_load(f) or {}
+
+        # Substitute environment variables
+        config = _substitute_env_vars(config)
+        return config
+
+    except Exception as e:
+        print(f"Warning: Failed to load config file {config_path}: {e}")
+        return {}
+
+
+def _substitute_env_vars(obj: Any) -> Any:
+    """Recursively substitute ${VAR} patterns with environment variables."""
+    if isinstance(obj, dict):
+        return {k: _substitute_env_vars(v) for k, v in obj.items()}
+    elif isinstance(obj, list):
+        return [_substitute_env_vars(item) for item in obj]
+    elif isinstance(obj, str):
+        # Match ${VAR_NAME} pattern
+        pattern = r'\$\{([^}]+)\}'
+        def replace(match):
+            var_name = match.group(1)
+            return os.environ.get(var_name, match.group(0))
+        return re.sub(pattern, replace, obj)
+    return obj
 
 
 class ToReadApp:
@@ -108,6 +210,12 @@ class ToReadApp:
 
 def main():
     """Main entry point for the command-line interface."""
+    # Load configuration from file
+    config = load_config()
+    api_config = config.get('api', {})
+    feeds_config = config.get('feeds', {})
+    dirs_config = config.get('directories', {})
+
     parser = argparse.ArgumentParser(
         description="Convert Paperpile BibTeX exports to RSS feeds",
         formatter_class=argparse.RawDescriptionHelpFormatter,
@@ -170,23 +278,39 @@ Examples:
     
     parser.add_argument(
         '--feed-title',
-        default='ToRead - Academic Papers',
+        default=feeds_config.get('title', 'ToRead - Academic Papers'),
         help='Title for the RSS feed'
     )
-    
+
     parser.add_argument(
         '--feed-description',
-        default='Academic papers from Paperpile exports',
+        default=feeds_config.get('description', 'Academic papers from Paperpile exports'),
         help='Description for the RSS feed'
     )
-    
+
     parser.add_argument(
         '--feed-link',
-        default='https://github.com/user/toread',
+        default=feeds_config.get('link', 'https://github.com/user/toread'),
         help='Link for the RSS feed'
     )
-    
+
+    parser.add_argument(
+        '--config',
+        default='config.yml',
+        help='Path to configuration file'
+    )
+
+    parser.add_argument(
+        '-v', '--verbose',
+        action='store_true',
+        help='Enable verbose (debug) logging'
+    )
+
     args = parser.parse_args()
+
+    # Setup logging
+    logging_config = config.get('logging', {})
+    setup_logging(logging_config, verbose=args.verbose)
     
     # Validate input file
     if not Path(args.bibtex_file).exists():
@@ -206,29 +330,34 @@ Examples:
         if not rss_output:
             rss_output = str(output_dir / "feed.xml")
     
-    # Create API configurations
+    # Create API configurations, merging config file with command-line args
+    crossref_cfg = api_config.get('crossref', {})
     crossref_config = {
-        'enabled': True,
-        'rate_limit': args.rate_limit,
-        'timeout': args.timeout,
-        'user_agent': f'ToRead/1.0 ({args.feed_link})'
+        'enabled': crossref_cfg.get('enabled', True),
+        'base_url': crossref_cfg.get('base_url', 'https://api.crossref.org/works'),
+        'rate_limit': args.rate_limit or crossref_cfg.get('rate_limit', 1.0),
+        'timeout': args.timeout or crossref_cfg.get('timeout', 15),
+        'user_agent': crossref_cfg.get('user_agent', f'ToRead/1.0 ({args.feed_link})')
     }
-    
+
+    ss_cfg = api_config.get('semantic_scholar', {})
     semantic_scholar_config = {
-        'enabled': True,
-        'rate_limit': args.rate_limit,
-        'timeout': args.timeout,
-        'api_key': 'igLzlRjWMo7oymQqDtf7Q6ttrMHsv2jr3MIYHQmz'
+        'enabled': ss_cfg.get('enabled', True),
+        'base_url': ss_cfg.get('base_url', 'https://api.semanticscholar.org/graph/v1'),
+        'rate_limit': args.rate_limit or ss_cfg.get('rate_limit', 1.0),
+        'timeout': args.timeout or ss_cfg.get('timeout', 15),
+        'api_key': os.environ.get('SEMANTIC_SCHOLAR_API_KEY') or ss_cfg.get('api_key')
     }
-    
+
     arxiv_config = {
         'enabled': True,
         'rate_limit': max(3.0, args.rate_limit),  # ArXiv recommends 3 second delays minimum
         'timeout': args.timeout
     }
-    
+
+    cache_dir = dirs_config.get('cache', 'cache')
     cache_config = {
-        'cache_file': 'cache/metadata_cache.json',
+        'cache_file': f'{cache_dir}/metadata_cache.json',
         'cache_duration_days': 30
     }
     
