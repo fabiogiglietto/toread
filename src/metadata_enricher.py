@@ -923,16 +923,365 @@ class ArxivClient:
         # Categories as subjects
         if paper.categories:
             metadata.subjects = paper.categories
-        
+
+        return metadata
+
+
+class OpenAlexClient:
+    """Client for querying OpenAlex API with robust error handling and rate limiting."""
+
+    def __init__(self, base_url: str = "https://api.openalex.org/works",
+                 email: str = None, rate_limit: float = 0.1,
+                 max_retries: int = 3, backoff_factor: float = 0.5,
+                 timeout: int = 15):
+        self.base_url = base_url
+        self.email = email
+        self.rate_limit = rate_limit  # OpenAlex allows 10 req/sec
+        self.max_retries = max_retries
+        self.backoff_factor = backoff_factor
+        self.timeout = timeout
+        self.logger = logging.getLogger(__name__)
+
+        # Setup session with retry strategy
+        self.session = requests.Session()
+        retry_strategy = Retry(
+            total=max_retries,
+            status_forcelist=[429, 500, 502, 503, 504],
+            allowed_methods=["HEAD", "GET", "OPTIONS"],
+            backoff_factor=backoff_factor
+        )
+        adapter = HTTPAdapter(max_retries=retry_strategy)
+        self.session.mount("http://", adapter)
+        self.session.mount("https://", adapter)
+
+        # Set up headers with polite pool email if provided
+        headers = {
+            'User-Agent': f'ToRead/1.0 (https://github.com/user/toread; mailto:{email})' if email else 'ToRead/1.0',
+            'Accept': 'application/json'
+        }
+        self.session.headers.update(headers)
+        self.last_request_time = 0
+        self.request_count = 0
+
+    def _rate_limit(self):
+        """Apply rate limiting between requests with jitter."""
+        elapsed = time.time() - self.last_request_time
+        if elapsed < self.rate_limit:
+            jitter = random.uniform(0, 0.05)
+            time.sleep(self.rate_limit - elapsed + jitter)
+        self.last_request_time = time.time()
+        self.request_count += 1
+
+        if self.request_count % 50 == 0:
+            self.logger.info(f"OpenAlex: Made {self.request_count} requests")
+
+    def _clean_doi(self, doi: str) -> str:
+        """Clean and normalize DOI."""
+        if not doi:
+            return ""
+        clean = doi.replace('https://doi.org/', '').replace('http://dx.doi.org/', '')
+        clean = clean.replace('doi:', '').strip()
+        return clean
+
+    def _reconstruct_abstract(self, inverted_index: dict) -> Optional[str]:
+        """Reconstruct abstract from OpenAlex inverted index format."""
+        if not inverted_index:
+            return None
+
+        # Build list of (position, word) tuples
+        words = []
+        for word, positions in inverted_index.items():
+            for pos in positions:
+                words.append((pos, word))
+
+        # Sort by position and join
+        words.sort(key=lambda x: x[0])
+        return ' '.join(word for _, word in words)
+
+    def query_by_doi(self, doi: str) -> Optional[EnrichedMetadata]:
+        """Query OpenAlex by DOI."""
+        if not doi or not doi.strip():
+            self.logger.debug("Empty DOI provided")
+            return None
+
+        clean_doi = self._clean_doi(doi)
+        if not clean_doi:
+            return None
+
+        # OpenAlex uses full DOI URL as identifier
+        url = f"{self.base_url}/https://doi.org/{clean_doi}"
+
+        for attempt in range(self.max_retries + 1):
+            try:
+                self._rate_limit()
+
+                response = self.session.get(url, timeout=self.timeout)
+
+                if response.status_code == 200:
+                    try:
+                        data = response.json()
+                        metadata = self._parse_response(data)
+                        if metadata:
+                            self.logger.debug(f"Successfully enriched DOI via OpenAlex: {doi}")
+                            return metadata
+                    except json.JSONDecodeError:
+                        self.logger.error(f"Invalid JSON response from OpenAlex for DOI: {doi}")
+                        return None
+
+                elif response.status_code == 404:
+                    self.logger.info(f"DOI not found in OpenAlex: {doi}")
+                    return None
+
+                elif response.status_code == 429:
+                    wait_time = (2 ** attempt) * self.backoff_factor
+                    self.logger.warning(f"Rate limited by OpenAlex, waiting {wait_time}s (attempt {attempt + 1})")
+                    time.sleep(wait_time)
+                    continue
+
+                elif response.status_code >= 500:
+                    if attempt < self.max_retries:
+                        wait_time = (2 ** attempt) * self.backoff_factor
+                        self.logger.warning(f"OpenAlex server error {response.status_code}, retrying in {wait_time}s")
+                        time.sleep(wait_time)
+                        continue
+                    else:
+                        self.logger.error(f"OpenAlex server error {response.status_code} for DOI: {doi}")
+                        return None
+
+                else:
+                    self.logger.warning(f"OpenAlex API error {response.status_code} for DOI: {doi}")
+                    return None
+
+            except requests.exceptions.Timeout:
+                if attempt < self.max_retries:
+                    wait_time = (2 ** attempt) * self.backoff_factor
+                    self.logger.warning(f"Timeout querying OpenAlex for DOI: {doi}, retrying in {wait_time}s")
+                    time.sleep(wait_time)
+                    continue
+                else:
+                    self.logger.error(f"Timeout querying OpenAlex for DOI: {doi}")
+                    return None
+
+            except requests.exceptions.ConnectionError:
+                if attempt < self.max_retries:
+                    wait_time = (2 ** attempt) * self.backoff_factor
+                    self.logger.warning(f"Connection error querying OpenAlex for DOI: {doi}, retrying in {wait_time}s")
+                    time.sleep(wait_time)
+                    continue
+                else:
+                    self.logger.error(f"Connection error querying OpenAlex for DOI: {doi}")
+                    return None
+
+            except Exception as e:
+                self.logger.error(f"Unexpected error querying OpenAlex for DOI {doi}: {e}")
+                return None
+
+        return None
+
+    def query_by_title(self, title: str, author: str = None) -> Optional[EnrichedMetadata]:
+        """Query OpenAlex by title with fuzzy matching."""
+        if not title or not title.strip():
+            self.logger.debug("Empty title provided")
+            return None
+
+        clean_title = clean_title_for_search(title)
+        if len(clean_title) < 10:
+            self.logger.debug(f"Title too short for reliable search: {title}")
+            return None
+
+        # Use title.search filter for better precision
+        params = {
+            'filter': f'title.search:{clean_title}',
+            'per_page': 10
+        }
+
+        # Add email for polite pool
+        if self.email:
+            params['mailto'] = self.email
+
+        for attempt in range(self.max_retries + 1):
+            try:
+                self._rate_limit()
+
+                response = self.session.get(self.base_url, params=params, timeout=self.timeout)
+
+                if response.status_code == 200:
+                    try:
+                        data = response.json()
+                        results = data.get('results', [])
+
+                        if not results:
+                            self.logger.info(f"No OpenAlex results for title: {title[:50]}...")
+                            return None
+
+                        best_match = self._find_best_match(title, author, results)
+                        if best_match:
+                            metadata = self._parse_response(best_match['work'])
+                            if metadata:
+                                metadata.confidence_score = best_match['confidence']
+                                self.logger.debug(f"Found OpenAlex match with confidence {best_match['confidence']:.2f}")
+                                return metadata
+                        else:
+                            self.logger.info(f"No suitable OpenAlex match for title: {title[:50]}...")
+                            return None
+
+                    except json.JSONDecodeError:
+                        self.logger.error(f"Invalid JSON response from OpenAlex for title: {title[:50]}...")
+                        return None
+
+                elif response.status_code == 429:
+                    wait_time = (2 ** attempt) * self.backoff_factor
+                    self.logger.warning(f"Rate limited by OpenAlex, waiting {wait_time}s")
+                    time.sleep(wait_time)
+                    continue
+
+                elif response.status_code >= 500:
+                    if attempt < self.max_retries:
+                        wait_time = (2 ** attempt) * self.backoff_factor
+                        self.logger.warning(f"OpenAlex server error {response.status_code}, retrying in {wait_time}s")
+                        time.sleep(wait_time)
+                        continue
+                    else:
+                        self.logger.error(f"OpenAlex server error {response.status_code} for title search")
+                        return None
+
+                else:
+                    self.logger.warning(f"OpenAlex API error {response.status_code} for title: {title[:50]}...")
+                    return None
+
+            except requests.exceptions.Timeout:
+                if attempt < self.max_retries:
+                    wait_time = (2 ** attempt) * self.backoff_factor
+                    self.logger.warning(f"Timeout querying OpenAlex for title, retrying in {wait_time}s")
+                    time.sleep(wait_time)
+                    continue
+                else:
+                    self.logger.error(f"Timeout querying OpenAlex for title")
+                    return None
+
+            except requests.exceptions.ConnectionError:
+                if attempt < self.max_retries:
+                    wait_time = (2 ** attempt) * self.backoff_factor
+                    self.logger.warning(f"Connection error querying OpenAlex for title, retrying in {wait_time}s")
+                    time.sleep(wait_time)
+                    continue
+                else:
+                    self.logger.error(f"Connection error querying OpenAlex for title")
+                    return None
+
+            except Exception as e:
+                self.logger.error(f"Unexpected error querying OpenAlex for title '{title[:50]}...': {e}")
+                return None
+
+        return None
+
+    def _find_best_match(self, query_title: str, query_author: str, works: List[Dict]) -> Optional[Dict]:
+        """Find the best matching work by title and author similarity."""
+        best_match = None
+        best_score = 0.0
+        min_confidence = 0.7
+
+        query_title_clean = clean_title_for_search(query_title)
+
+        for work in works:
+            score = 0.0
+
+            # Title similarity (70% weight)
+            work_title = work.get('title') or work.get('display_name', '')
+            if work_title:
+                title_sim = calculate_text_similarity(query_title_clean, clean_title_for_search(work_title))
+                score += title_sim * 0.7
+
+            # Author similarity (30% weight)
+            if query_author and work.get('authorships'):
+                author_names = [
+                    authorship.get('author', {}).get('display_name', '')
+                    for authorship in work['authorships']
+                    if authorship.get('author')
+                ]
+                if author_names:
+                    author_sim = calculate_author_similarity(query_author, author_names)
+                    score += author_sim * 0.3
+
+            if score > best_score and score >= min_confidence:
+                best_score = score
+                best_match = {'work': work, 'confidence': score}
+
+        return best_match
+
+    def _parse_response(self, work: Dict) -> EnrichedMetadata:
+        """Parse OpenAlex work response into EnrichedMetadata."""
+        metadata = EnrichedMetadata(source="openalex")
+
+        # DOI
+        if work.get('doi'):
+            doi = work['doi'].replace('https://doi.org/', '')
+            metadata.doi = doi
+            metadata.doi_url = work['doi']
+
+        # Abstract from inverted index
+        if work.get('abstract_inverted_index'):
+            metadata.abstract = self._reconstruct_abstract(work['abstract_inverted_index'])
+
+        # Authors
+        if work.get('authorships'):
+            authors = []
+            for authorship in work['authorships'][:20]:  # Limit to first 20 authors
+                author = authorship.get('author', {})
+                if author.get('display_name'):
+                    authors.append(author['display_name'])
+            metadata.authors = authors
+
+        # Publication date
+        if work.get('publication_date'):
+            metadata.publication_date = work['publication_date']
+
+        # Citation count
+        if work.get('cited_by_count') is not None:
+            metadata.citation_count = work['cited_by_count']
+
+        # Venue from primary location
+        primary_location = work.get('primary_location') or {}
+        source = primary_location.get('source') or {}
+        if source.get('display_name'):
+            metadata.venue = source['display_name']
+
+        # Open access info
+        open_access = work.get('open_access') or {}
+        if open_access.get('is_oa') is not None:
+            metadata.is_open_access = open_access['is_oa']
+
+        # PDF URL - try multiple locations
+        if open_access.get('oa_url'):
+            metadata.pdf_url = open_access['oa_url']
+        elif work.get('best_oa_location', {}).get('pdf_url'):
+            metadata.pdf_url = work['best_oa_location']['pdf_url']
+        elif primary_location.get('pdf_url'):
+            metadata.pdf_url = primary_location['pdf_url']
+
+        # Landing page URL
+        if primary_location.get('landing_page_url'):
+            metadata.url = primary_location['landing_page_url']
+
+        # Subjects/concepts
+        if work.get('concepts'):
+            subjects = [
+                concept.get('display_name')
+                for concept in work['concepts'][:5]  # Top 5 concepts
+                if concept.get('display_name') and concept.get('score', 0) > 0.3
+            ]
+            metadata.subjects = subjects
+
         return metadata
 
 
 class MetadataEnricher:
     """Main enricher that coordinates multiple API clients."""
-    
-    def __init__(self, crossref_config: Dict = None, semantic_scholar_config: Dict = None, arxiv_config: Dict = None, cache_config: Dict = None):
+
+    def __init__(self, crossref_config: Dict = None, semantic_scholar_config: Dict = None,
+                 arxiv_config: Dict = None, openalex_config: Dict = None, cache_config: Dict = None):
         self.logger = logging.getLogger(__name__)
-        
+
         # Initialize cache
         if cache_config:
             self.cache = MetadataCache(
@@ -941,21 +1290,23 @@ class MetadataEnricher:
             )
         else:
             self.cache = MetadataCache()
-        
+
         # Initialize clients
         self.crossref_client = None
         self.semantic_scholar_client = None
         self.arxiv_client = None
+        self.openalex_client = None
         self.institutional_enricher = InstitutionalReportEnricher()
-        
+
         # Circuit breaker for failed APIs (avoid repeated failures)
         self.api_failure_counts = {
             'crossref': 0,
             'semantic_scholar': 0,
-            'arxiv': 0
+            'arxiv': 0,
+            'openalex': 0
         }
         self.max_consecutive_failures = 5
-        
+
         if crossref_config and crossref_config.get('enabled', True):
             self.crossref_client = CrossrefClient(
                 base_url=crossref_config.get('base_url', 'https://api.crossref.org/works'),
@@ -963,7 +1314,7 @@ class MetadataEnricher:
                 rate_limit=crossref_config.get('rate_limit', 1.0),
                 timeout=crossref_config.get('timeout', 15)
             )
-        
+
         if semantic_scholar_config and semantic_scholar_config.get('enabled', True):
             self.semantic_scholar_client = SemanticScholarClient(
                 api_key=semantic_scholar_config.get('api_key'),
@@ -971,11 +1322,19 @@ class MetadataEnricher:
                 rate_limit=semantic_scholar_config.get('rate_limit', 1.0),
                 timeout=semantic_scholar_config.get('timeout', 15)
             )
-        
+
         if arxiv_config and arxiv_config.get('enabled', True):
             self.arxiv_client = ArxivClient(
                 rate_limit=arxiv_config.get('rate_limit', 3.0),
                 timeout=arxiv_config.get('timeout', 15)
+            )
+
+        if openalex_config and openalex_config.get('enabled', True):
+            self.openalex_client = OpenAlexClient(
+                base_url=openalex_config.get('base_url', 'https://api.openalex.org/works'),
+                email=openalex_config.get('email'),
+                rate_limit=openalex_config.get('rate_limit', 0.1),
+                timeout=openalex_config.get('timeout', 15)
             )
     
     def _is_arxiv_paper(self, entry: BibEntry) -> bool:
@@ -1166,7 +1525,20 @@ class MetadataEnricher:
             except Exception as e:
                 self.api_failure_counts['crossref'] += 1
                 self.logger.debug(f"Crossref DOI query failed: {e}")
-        
+
+        # Try OpenAlex (good coverage, open access info)
+        if self.openalex_client and self.api_failure_counts['openalex'] < self.max_consecutive_failures:
+            try:
+                metadata = self.openalex_client.query_by_doi(doi)
+                if metadata:
+                    self.api_failure_counts['openalex'] = 0  # Reset on success
+                    return metadata
+                else:
+                    self.api_failure_counts['openalex'] += 1
+            except Exception as e:
+                self.api_failure_counts['openalex'] += 1
+                self.logger.debug(f"OpenAlex DOI query failed: {e}")
+
         # Fall back to Semantic Scholar
         if self.semantic_scholar_client and self.api_failure_counts['semantic_scholar'] < self.max_consecutive_failures:
             try:
@@ -1179,7 +1551,7 @@ class MetadataEnricher:
             except Exception as e:
                 self.api_failure_counts['semantic_scholar'] += 1
                 self.logger.debug(f"Semantic Scholar DOI query failed: {e}")
-        
+
         return None
     
     def _enrich_by_title(self, title: str, author: str = None, year: str = None) -> Optional[EnrichedMetadata]:
@@ -1202,7 +1574,26 @@ class MetadataEnricher:
             except Exception as e:
                 self.api_failure_counts['crossref'] += 1
                 self.logger.debug(f"Crossref title query failed: {e}")
-        
+
+        # Try OpenAlex (good coverage, open access info)
+        if self.openalex_client and self.api_failure_counts['openalex'] < self.max_consecutive_failures:
+            try:
+                metadata = self.openalex_client.query_by_title(title, author)
+                if metadata:
+                    if metadata.confidence_score and metadata.confidence_score > 0.7:
+                        self.logger.debug(f"OpenAlex title match found with confidence {metadata.confidence_score:.3f}")
+                        self.api_failure_counts['openalex'] = 0  # Reset on success
+                        return metadata
+                    elif metadata.confidence_score:
+                        self.logger.debug(f"OpenAlex title match rejected - low confidence {metadata.confidence_score:.3f} (threshold: 0.7)")
+                    else:
+                        self.logger.debug("OpenAlex title match rejected - no confidence score")
+                else:
+                    self.logger.debug("No OpenAlex title match found")
+            except Exception as e:
+                self.api_failure_counts['openalex'] += 1
+                self.logger.debug(f"OpenAlex title query failed: {e}")
+
         # Try Semantic Scholar (better search for newer papers)
         if self.semantic_scholar_client and self.api_failure_counts['semantic_scholar'] < self.max_consecutive_failures:
             try:
@@ -1221,6 +1612,6 @@ class MetadataEnricher:
             except Exception as e:
                 self.api_failure_counts['semantic_scholar'] += 1
                 self.logger.debug(f"Semantic Scholar title query failed: {e}")
-        
+
         return None
     

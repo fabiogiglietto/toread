@@ -115,12 +115,15 @@ def _substitute_env_vars(obj: Any) -> Any:
 
 class ToReadApp:
     """Main application class for converting BibTeX to RSS and JSON Feed formats."""
-    
-    def __init__(self, enrich_metadata: bool = True, crossref_config: dict = None, 
-                 semantic_scholar_config: dict = None, arxiv_config: dict = None, cache_config: dict = None,
+
+    def __init__(self, enrich_metadata: bool = True, crossref_config: dict = None,
+                 semantic_scholar_config: dict = None, arxiv_config: dict = None,
+                 openalex_config: dict = None, cache_config: dict = None,
                  skip_cached_enrichment: bool = False):
         self.bibtex_parser = BibTeXParser()
-        self.metadata_enricher = MetadataEnricher(crossref_config, semantic_scholar_config, arxiv_config, cache_config) if enrich_metadata else None
+        self.metadata_enricher = MetadataEnricher(
+            crossref_config, semantic_scholar_config, arxiv_config, openalex_config, cache_config
+        ) if enrich_metadata else None
         self.feed_generator = FeedGenerator()
         self.skip_cached_enrichment = skip_cached_enrichment
         self.discovery_cache = DiscoveryCache("cache/discovery_cache.json")
@@ -355,6 +358,15 @@ Examples:
         'timeout': args.timeout
     }
 
+    openalex_cfg = api_config.get('openalex', {})
+    openalex_config = {
+        'enabled': openalex_cfg.get('enabled', True),
+        'base_url': openalex_cfg.get('base_url', 'https://api.openalex.org/works'),
+        'rate_limit': args.rate_limit or openalex_cfg.get('rate_limit', 0.1),
+        'timeout': args.timeout or openalex_cfg.get('timeout', 15),
+        'email': os.environ.get('OPENALEX_EMAIL') or openalex_cfg.get('email')
+    }
+
     cache_dir = dirs_config.get('cache', 'cache')
     cache_config = {
         'cache_file': f'{cache_dir}/metadata_cache.json',
@@ -367,6 +379,7 @@ Examples:
         crossref_config=crossref_config,
         semantic_scholar_config=semantic_scholar_config,
         arxiv_config=arxiv_config,
+        openalex_config=openalex_config,
         cache_config=cache_config,
         skip_cached_enrichment=args.skip_cached_enrichment
     )

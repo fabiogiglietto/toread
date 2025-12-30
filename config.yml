@@ -34,6 +34,14 @@ api:
     fields: ["abstract", "authors", "citations", "references", "venue", "year"]
     max_papers_per_request: 500
 
+  # OpenAlex API for open scholarly metadata
+  openalex:
+    enabled: true
+    base_url: "https://api.openalex.org/works"
+    email: "fabio.giglietto@uniurb.it"  # For polite pool access (faster responses)
+    rate_limit: 0.1  # 10 requests per second allowed
+    timeout: 15
+
 # Feed Output Settings
 feeds:
   # Feed metadata
@@ -82,9 +90,9 @@ processing:
   enable_enrichment: true
   enrichment_sources:
     - "crossref"
-    - "doi"
-    - "arxiv"
+    - "openalex"
     - "semantic_scholar"
+    - "arxiv"
   
   # Caching (future feature)
   cache_metadata: true
