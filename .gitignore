@@ -161,7 +161,8 @@ cython_debug/
 #   *.ipr
 
 # Application specific
-*.bib
+# Keep BibTeX files - needed for workflow caching
+# *.bib
 *.rss
 cache/  # Cache handled by GitHub Actions
 temp/
