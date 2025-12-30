@@ -34,6 +34,18 @@ python -m src.main input.bib --no-enrich -o output/
 
 # Custom rate limiting for API calls
 python -m src.main input.bib --rate-limit 2.0 -o output/
+
+# Verbose logging for debugging
+python -m src.main input.bib -v -o output/
+
+# Use custom config file
+python -m src.main input.bib --config custom-config.yml -o output/
+```
+
+### Environment Variables
+```bash
+# Semantic Scholar API key (recommended over config file)
+export SEMANTIC_SCHOLAR_API_KEY="your_api_key_here"
 ```
 
 ### Testing
@@ -41,11 +53,14 @@ python -m src.main input.bib --rate-limit 2.0 -o output/
 # Install test dependencies first
 pip install pytest pytest-cov
 
-# Run tests
+# Run all 62 tests
 pytest tests/
 
 # Run with coverage
 pytest --cov=src tests/
+
+# Run specific test module
+pytest tests/test_utils.py -v
 ```
 
 ## Architecture
@@ -59,9 +74,19 @@ pytest --cov=src tests/
 - Semantic Scholar API: Citation counts, AI/ML paper specialization, abstracts
 - ArXiv API: Preprint metadata and PDF links
 
-**FeedGenerator** (`src/rss_generator.py`): Dual-format feed generation:
+**FeedGenerator** (`src/rss_generator.py`): Dual-format feed generation with security features:
 - JSON Feed 1.1 (primary): Rich academic metadata with custom `_academic` extensions
 - RSS 2.0 (compatibility): Dublin Core extensions for academic metadata
+- XSS protection: HTML escaping and URL validation
+
+**Cache** (`src/cache.py`): Persistent caching system:
+- `MetadataCache`: Stores enriched metadata with 30-day expiration
+- `DiscoveryCache`: Tracks when entries were first discovered
+
+**Utils** (`src/utils.py`): Shared text matching utilities:
+- `clean_title_for_search()`: Cleans LaTeX and formatting from titles
+- `calculate_text_similarity()`: Jaccard similarity with stop word filtering
+- `calculate_author_similarity()`: Author name matching across formats
 
 ### Data Flow
 
@@ -76,6 +101,9 @@ Configuration is centralized in `config.yml` with sections for:
 - Feed metadata and output settings
 - Processing options and error handling
 - Paperpile integration settings
+- Logging configuration
+
+The config system supports environment variable substitution using `${VAR_NAME}` syntax. CLI arguments override config file values.
 
 ### API Integration
 
@@ -95,16 +123,32 @@ The metadata enricher uses a multi-source approach with fallbacks:
 
 - `requests`: HTTP client for API interactions
 - `arxiv`: Official ArXiv API client
+- `PyYAML`: Configuration file parsing
 - Core Python libraries for XML/JSON processing and argument parsing
 
 ## File Structure Notes
 
-- `data/`: Input BibTeX files and cache
-- `output/`: Generated feed files
+- `data/`: Input BibTeX files
+- `output/`: Generated feed files (feed.json, feed.xml)
+- `cache/`: Metadata and discovery caches (JSON)
 - `logs/`: Application logging
 - `src/`: Main application modules
-- `config.yml`: Central configuration file
+- `tests/`: Test suite (62 tests across 4 files)
+- `config.yml`: Central configuration file (supports env vars)
 
 ## Testing Approach
 
-When writing tests, follow the existing pattern of testing each component in isolation with mock API responses. The codebase uses pytest for testing framework.
+The test suite covers all core components with 62 tests:
+- `test_bibtex_parser.py`: BibTeX parsing, LaTeX handling, field extraction
+- `test_cache.py`: Cache persistence, expiration, retry logic
+- `test_rss_generator.py`: Feed generation, XSS protection, date handling
+- `test_utils.py`: Text similarity, author matching, title cleaning
+
+When writing new tests, follow the existing pattern of testing each component in isolation. Use pytest fixtures for common setup.
+
+## Security Considerations
+
+- API keys should be set via environment variables, not hardcoded
+- All HTML output is escaped to prevent XSS
+- URLs are validated to reject `javascript:` and `data:` schemes
+- Config file supports `${VAR}` syntax for secure credential injection

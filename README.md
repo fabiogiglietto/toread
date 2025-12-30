@@ -48,12 +48,17 @@ mkdir -p data output logs cache
 2. **Configure API access (optional but recommended):**
 
 #### Semantic Scholar API
+
+Set your API key via environment variable (recommended for security):
+```bash
+export SEMANTIC_SCHOLAR_API_KEY="your_api_key_here"
+```
+
+Or in config.yml (supports environment variable substitution):
 ```yaml
-# Free API key from https://www.semanticscholar.org/product/api
-# Update config.yml:
 api:
   semantic_scholar:
-    api_key: "YOUR_API_KEY_HERE"
+    api_key: "${SEMANTIC_SCHOLAR_API_KEY}"
 ```
 
 #### Crossref API
@@ -94,6 +99,15 @@ python -m src.main papers.bib \
 
 # Rate limiting for API calls
 python -m src.main papers.bib --rate-limit 2.0 -o output/
+
+# Enable verbose logging for debugging
+python -m src.main papers.bib -v -o output/
+
+# Use custom config file
+python -m src.main papers.bib --config my-config.yml -o output/
+
+# Skip enrichment for cached entries (faster for scheduled runs)
+python -m src.main papers.bib --skip-cached-enrichment -o output/
 ```
 
 ### Programmatic Usage
@@ -367,17 +381,22 @@ toread/
 ├── src/
 │   ├── __init__.py
 │   ├── bibtex_parser.py      # BibTeX parsing with error handling
-│   ├── metadata_enricher.py  # API clients for Crossref/Semantic Scholar
-│   ├── rss_generator.py      # JSON Feed + RSS generation
-│   └── main.py              # CLI application
+│   ├── metadata_enricher.py  # API clients for Crossref/Semantic Scholar/ArXiv
+│   ├── rss_generator.py      # JSON Feed + RSS generation with XSS protection
+│   ├── cache.py              # Metadata and discovery date caching
+│   ├── utils.py              # Shared text matching utilities
+│   └── main.py               # CLI application with config loading
 ├── tests/
-│   ├── test_bibtex_parser.py
-│   ├── test_metadata_enricher.py
-│   └── test_rss_generator.py
-├── data/                    # Input BibTeX files
-├── output/                  # Generated feeds
-├── logs/                    # Application logs
-├── config.yml              # Configuration
+│   ├── __init__.py
+│   ├── test_bibtex_parser.py # 13 tests for BibTeX parsing
+│   ├── test_cache.py         # 12 tests for caching system
+│   ├── test_rss_generator.py # 15 tests for feed generation
+│   └── test_utils.py         # 22 tests for text utilities
+├── data/                     # Input BibTeX files
+├── output/                   # Generated feeds
+├── cache/                    # Metadata cache (JSON)
+├── logs/                     # Application logs
+├── config.yml                # Configuration (supports env vars)
 ├── requirements.txt
 └── README.md
 ```
@@ -388,12 +407,33 @@ toread/
 # Install test dependencies
 pip install pytest pytest-cov
 
-# Run tests
+# Run all 62 tests
 pytest tests/
 
-# Run with coverage
+# Run with coverage report
 pytest --cov=src tests/
+
+# Run specific test file
+pytest tests/test_utils.py -v
+
+# Run tests matching a pattern
+pytest -k "test_xss" -v
 ```
+
+## Security
+
+ToRead includes several security measures:
+
+- **API Key Protection**: API keys should be set via environment variables, not hardcoded
+- **XSS Prevention**: All titles and content are HTML-escaped before output
+- **URL Validation**: Only `http://` and `https://` URLs are allowed in feeds; `javascript:` and `data:` schemes are rejected
+- **Input Sanitization**: BibTeX input is parsed safely with proper escaping
+
+### Environment Variables
+
+| Variable | Purpose |
+|----------|---------|
+| `SEMANTIC_SCHOLAR_API_KEY` | Semantic Scholar API authentication |
 
 ## Troubleshooting
 
