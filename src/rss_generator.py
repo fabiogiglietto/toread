@@ -7,6 +7,7 @@ from typing import List, Dict, Optional, Any
 from urllib.parse import quote
 from .bibtex_parser import BibEntry
 from .metadata_enricher import EnrichedMetadata
+from .utils import strip_jats_xml_tags, clean_url, extract_title_from_url, is_valid_title
 
 
 class FeedGenerator:
@@ -204,9 +205,29 @@ class FeedGenerator:
         
         return item
     
-    def _get_entry_title(self, entry: BibEntry) -> str:
-        """Extract title from entry with HTML escaping for safety."""
-        title = entry.title or 'Untitled'
+    def _get_entry_title(self, entry: BibEntry, metadata: Optional[EnrichedMetadata] = None) -> str:
+        """Extract title from entry with HTML escaping for safety.
+
+        Tries multiple sources in order:
+        1. Entry title (if valid)
+        2. URL-extracted title (if entry has URL)
+        3. Fallback to 'Untitled'
+        """
+        title = entry.title
+
+        # Check if we have a valid title
+        if not is_valid_title(title):
+            # Try to extract from URL
+            url = entry.url
+            if url:
+                url_title = extract_title_from_url(clean_url(url))
+                if url_title:
+                    title = url_title
+
+        # Final fallback
+        if not title:
+            title = 'Untitled'
+
         # Clean up LaTeX formatting
         title = title.replace('{', '').replace('}', '')
         # Escape HTML to prevent XSS
@@ -215,47 +236,51 @@ class FeedGenerator:
     
     def _get_entry_description(self, entry: BibEntry, metadata: Optional[EnrichedMetadata]) -> Optional[str]:
         """Get description for RSS item."""
+        abstract = None
+
         # Prefer enriched abstract
         if metadata and metadata.abstract:
-            return metadata.abstract[:500] + "..." if len(metadata.abstract) > 500 else metadata.abstract
-        
+            abstract = strip_jats_xml_tags(metadata.abstract)
         # Fall back to entry abstract
-        if entry.abstract:
-            return entry.abstract[:500] + "..." if len(entry.abstract) > 500 else entry.abstract
-        
+        elif entry.abstract:
+            abstract = strip_jats_xml_tags(entry.abstract)
+
+        if abstract:
+            return abstract[:500] + "..." if len(abstract) > 500 else abstract
+
         # Create summary from available fields
         summary_parts = []
-        
+
         if entry.journal:
             summary_parts.append(f"Published in {entry.journal}")
-        
+
         if entry.year:
             summary_parts.append(f"Year: {entry.year}")
-        
+
         if entry.authors:
             authors_str = ", ".join(entry.authors)
             authors_str = authors_str[:100] + "..." if len(authors_str) > 100 else authors_str
             summary_parts.append(f"Authors: {authors_str}")
-        
+
         return " | ".join(summary_parts) if summary_parts else None
     
     def _get_entry_link(self, entry: BibEntry, metadata: Optional[EnrichedMetadata]) -> Optional[str]:
         """Get link for RSS item."""
         # Prefer DOI
         if metadata and metadata.doi_url:
-            return metadata.doi_url
-        
+            return clean_url(metadata.doi_url)
+
         if entry.doi:
             return f"https://doi.org/{entry.doi}"
-        
+
         # Try arXiv
         if metadata and metadata.arxiv_url:
-            return metadata.arxiv_url
-        
+            return clean_url(metadata.arxiv_url)
+
         # Check for URL in entry
         if entry.url:
-            return entry.url
-        
+            return clean_url(entry.url)
+
         return None
     
     def _get_entry_guid(self, entry: BibEntry) -> str:
@@ -318,11 +343,12 @@ class FeedGenerator:
     def _get_entry_content(self, entry: BibEntry, metadata: Optional[EnrichedMetadata]) -> str:
         """Generate detailed content for the entry."""
         content_parts = []
-        
-        # Add abstract
-        abstract = (metadata.abstract if metadata and metadata.abstract 
+
+        # Add abstract (strip JATS tags)
+        abstract = (metadata.abstract if metadata and metadata.abstract
                    else entry.abstract)
         if abstract:
+            abstract = strip_jats_xml_tags(abstract)
             content_parts.append(f"<h3>Abstract</h3><p>{abstract}</p>")
         
         # Add bibliographic details
@@ -476,11 +502,12 @@ class FeedGenerator:
     def _get_json_content_html(self, entry: BibEntry, metadata: Optional[EnrichedMetadata]) -> str:
         """Generate rich HTML content for JSON Feed."""
         content_parts = []
-        
-        # Abstract
-        abstract = (metadata.abstract if metadata and metadata.abstract 
+
+        # Abstract (strip JATS tags first, then escape HTML)
+        abstract = (metadata.abstract if metadata and metadata.abstract
                    else entry.abstract)
         if abstract:
+            abstract = strip_jats_xml_tags(abstract)
             content_parts.append(f"<h3>Abstract</h3><p>{self._escape_html(abstract)}</p>")
         
         # Bibliographic details
@@ -545,11 +572,11 @@ class FeedGenerator:
     def _get_academic_extensions(self, entry: BibEntry, metadata: Optional[EnrichedMetadata]) -> Dict[str, Any]:
         """Get academic-specific metadata extensions for JSON Feed."""
         extensions = {}
-        
+
         # DOI
         if metadata and metadata.doi:
             extensions["doi"] = metadata.doi
-        
+
         # Citation metrics
         if metadata:
             if metadata.citation_count is not None:
@@ -558,31 +585,87 @@ class FeedGenerator:
                 extensions["reference_count"] = metadata.reference_count
             if metadata.is_open_access is not None:
                 extensions["open_access"] = metadata.is_open_access
-        
+
         # Entry type
         extensions["type"] = entry.entry_type
-        
+
         # Publisher
         if entry.publisher:
             extensions["publisher"] = entry.publisher
-        
+
         # Volume/Pages
         if entry.volume:
             extensions["volume"] = entry.volume
         if entry.pages:
             extensions["pages"] = entry.pages
-        
+
         # Keywords/Subjects
         if metadata and metadata.subjects:
             extensions["subjects"] = metadata.subjects
-        
+
         # Data source
         if metadata and metadata.source:
             extensions["metadata_source"] = metadata.source
             if metadata.confidence_score:
                 extensions["confidence_score"] = metadata.confidence_score
-        
+
+        # Data quality indicator
+        quality_score, quality_issues = self._calculate_quality_score(entry, metadata)
+        extensions["quality_score"] = quality_score
+        if quality_issues:
+            extensions["quality_issues"] = quality_issues
+
         return extensions
+
+    def _calculate_quality_score(self, entry: BibEntry, metadata: Optional[EnrichedMetadata]) -> tuple:
+        """Calculate a quality score for an entry based on available data.
+
+        Returns:
+            tuple: (score 0-100, list of issues)
+        """
+        score = 0
+        issues = []
+
+        # Title quality (25 points)
+        if is_valid_title(entry.title):
+            score += 25
+        else:
+            issues.append("missing_title")
+
+        # Authors (20 points)
+        if entry.authors:
+            score += 20
+        else:
+            issues.append("missing_authors")
+
+        # Abstract (20 points)
+        has_abstract = (entry.abstract or (metadata and metadata.abstract))
+        if has_abstract:
+            score += 20
+        else:
+            issues.append("missing_abstract")
+
+        # Publication date (15 points)
+        has_date = entry.year or (metadata and metadata.publication_date)
+        if has_date:
+            score += 15
+        else:
+            issues.append("missing_date")
+
+        # DOI or URL (10 points)
+        has_link = entry.doi or entry.url or (metadata and (metadata.doi_url or metadata.arxiv_url))
+        if has_link:
+            score += 10
+        else:
+            issues.append("missing_link")
+
+        # Enrichment success (10 points)
+        if metadata and metadata.source not in [None, "url"]:
+            score += 10
+        else:
+            issues.append("not_enriched")
+
+        return score, issues
     
     def _escape_html(self, text: str) -> str:
         """Escape HTML characters in text."""
@@ -609,7 +692,8 @@ class FeedGenerator:
         if not url:
             return None
 
-        url = url.strip()
+        # Clean LaTeX escapes first
+        url = clean_url(url).strip()
 
         # Check for allowed schemes
         allowed_schemes = ('http://', 'https://')

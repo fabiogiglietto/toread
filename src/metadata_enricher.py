@@ -21,6 +21,10 @@ from .utils import (
     calculate_author_similarity,
     calculate_crossref_author_similarity,
     extract_first_author,
+    strip_jats_xml_tags,
+    clean_url,
+    extract_title_from_url,
+    is_valid_title,
 )
 
 
@@ -329,15 +333,15 @@ class CrossrefClient:
     def _parse_crossref_response(self, item: Dict) -> EnrichedMetadata:
         """Parse Crossref API response into EnrichedMetadata."""
         metadata = EnrichedMetadata(source="crossref")
-        
+
         # DOI
         if 'DOI' in item:
             metadata.doi = item['DOI']
             metadata.doi_url = f"https://doi.org/{item['DOI']}"
-        
-        # Abstract
+
+        # Abstract - strip JATS XML tags
         if 'abstract' in item:
-            metadata.abstract = item['abstract']
+            metadata.abstract = strip_jats_xml_tags(item['abstract'])
         
         # Authors
         if 'author' in item:
@@ -1002,32 +1006,67 @@ class MetadataEnricher:
     def enrich_entry(self, entry: BibEntry) -> Optional[EnrichedMetadata]:
         """Enrich a single bibliographic entry."""
         metadata = None
-        
+
         # Check if this is an institutional report first
         if entry.entry_type.lower() == 'techreport':
             metadata = self.institutional_enricher.enrich_report(entry)
             if metadata:
                 return metadata
-        
+
         # Check if this is an ArXiv paper
         is_arxiv = self._is_arxiv_paper(entry)
-        
+
         if is_arxiv and self.arxiv_client:
             # For ArXiv papers, try ArXiv API first
             author = ', '.join(entry.authors) if entry.authors else None
             metadata = self.arxiv_client.query_by_title(entry.title, author)
             if metadata:
                 return metadata
-        
+
         # Try DOI-based enrichment (most reliable)
         if entry.doi:
             metadata = self._enrich_by_doi(entry.doi)
-        
+
         # If no DOI or DOI lookup failed, try title-based enrichment
-        if not metadata and entry.title:
+        if not metadata and entry.title and is_valid_title(entry.title):
             author = ', '.join(entry.authors) if entry.authors else None
             metadata = self._enrich_by_title(entry.title, author, entry.year)
-        
+
+        # Last resort: try to extract title from URL and search
+        if not metadata and entry.url:
+            metadata = self._enrich_by_url(entry)
+
+        return metadata
+
+    def _enrich_by_url(self, entry: BibEntry) -> Optional[EnrichedMetadata]:
+        """Try to enrich using URL-extracted information."""
+        if not entry.url:
+            return None
+
+        url = clean_url(entry.url)
+
+        # Try to extract title from URL
+        url_title = extract_title_from_url(url)
+        if url_title and len(url_title) >= 10:
+            self.logger.debug(f"Trying URL-extracted title: {url_title}")
+            author = ', '.join(entry.authors) if entry.authors else None
+            metadata = self._enrich_by_title(url_title, author, entry.year)
+            if metadata:
+                return metadata
+
+        # Create minimal metadata from URL if nothing else works
+        # This provides at least a valid URL link
+        metadata = EnrichedMetadata(source="url")
+        metadata.url = url
+
+        # Try to determine if it's open access based on URL domain
+        open_access_domains = ['arxiv.org', 'biorxiv.org', 'medrxiv.org', 'osf.io',
+                              'zenodo.org', 'ssrn.com', 'researchgate.net']
+        for domain in open_access_domains:
+            if domain in url.lower():
+                metadata.is_open_access = True
+                break
+
         return metadata
     
     def enrich_entries(self, entries: List[BibEntry]) -> Dict[str, Optional[EnrichedMetadata]]:

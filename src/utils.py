@@ -150,3 +150,175 @@ def extract_first_author(author_str: str) -> str:
     # Split by 'and' and take first, then take family name if comma-separated
     first = author_str.split(' and ')[0].split(',')[0].strip()
     return first
+
+
+def strip_jats_xml_tags(text: str) -> str:
+    """Strip JATS XML tags from text (commonly found in Crossref abstracts).
+
+    Handles tags like <jats:p>, <jats:title>, <jats:sec>, <jats:italic>, etc.
+    Also handles generic XML/HTML tags.
+
+    Args:
+        text: Text potentially containing JATS XML tags
+
+    Returns:
+        Clean text with tags removed
+    """
+    if not text:
+        return ""
+
+    # Replace closing block-level tags with space to preserve word boundaries
+    clean = re.sub(r'</jats:(?:p|title|sec|abstract)>', ' ', text)
+
+    # Remove remaining JATS namespace tags: <jats:p>, </jats:p>, <jats:italic>, etc.
+    clean = re.sub(r'</?jats:[^>]+>', '', clean)
+
+    # Replace closing block-level HTML tags with space
+    clean = re.sub(r'</(?:p|title|div|section|br)>', ' ', clean, flags=re.IGNORECASE)
+
+    # Remove other common XML/HTML tags
+    clean = re.sub(r'</?(?:p|title|sec|italic|bold|sub|sup|br|span|div|em|strong)[^>]*>', '', clean, flags=re.IGNORECASE)
+
+    # Remove any remaining XML-style tags
+    clean = re.sub(r'<[^>]+>', '', clean)
+
+    # Normalize whitespace (multiple spaces, newlines, etc.)
+    clean = re.sub(r'\s+', ' ', clean).strip()
+
+    return clean
+
+
+def clean_url(url: str) -> str:
+    """Clean LaTeX escapes and other artifacts from URLs.
+
+    Handles common issues like:
+    - LaTeX escaped underscores: \\_ -> _
+    - LaTeX escaped ampersands: \\& -> &
+    - LaTeX escaped percent: \\% -> %
+    - Escaped braces: \\{ \\} -> { }
+    - URL wrapper: \\url{...} -> ...
+
+    Args:
+        url: URL string potentially containing LaTeX escapes
+
+    Returns:
+        Clean URL
+    """
+    if not url:
+        return ""
+
+    url = url.strip()
+
+    # Remove LaTeX \url{} wrapper
+    url = re.sub(r'\\url\{([^}]*)\}', r'\1', url)
+
+    # Remove LaTeX escapes (backslash before special chars)
+    url = url.replace('\\_', '_')
+    url = url.replace('\\&', '&')
+    url = url.replace('\\%', '%')
+    url = url.replace('\\#', '#')
+    url = url.replace('\\{', '{')
+    url = url.replace('\\}', '}')
+    url = url.replace('\\~', '~')
+
+    # Handle double backslashes that might remain
+    url = url.replace('\\\\', '\\')
+
+    # Remove any remaining single backslashes before alphanumeric chars
+    # (but preserve %XX encoding)
+    url = re.sub(r'\\(?=[a-zA-Z_])', '', url)
+
+    return url
+
+
+def extract_title_from_url(url: str) -> str:
+    """Try to extract a meaningful title from a URL.
+
+    Handles common patterns from academic sites like:
+    - /papers/title-of-paper
+    - /article/title_of_paper.pdf
+    - ?title=some-title
+
+    Args:
+        url: URL to extract title from
+
+    Returns:
+        Extracted title or empty string if no title found
+    """
+    if not url:
+        return ""
+
+    from urllib.parse import urlparse, parse_qs, unquote
+
+    try:
+        parsed = urlparse(url)
+
+        # Try query parameters first (some sites use ?title=)
+        query_params = parse_qs(parsed.query)
+        for param in ['title', 'name', 't']:
+            if param in query_params:
+                return unquote(query_params[param][0]).replace('-', ' ').replace('_', ' ')
+
+        # Try path - get the last meaningful segment
+        path = parsed.path
+
+        # Remove file extension
+        path = re.sub(r'\.(pdf|html?|aspx?|php|xml)$', '', path, flags=re.IGNORECASE)
+
+        # Get last path segment
+        segments = [s for s in path.split('/') if s and not s.isdigit()]
+        if segments:
+            last_segment = segments[-1]
+
+            # Skip common non-title segments
+            skip_patterns = ['article', 'paper', 'abstract', 'view', 'content',
+                           'doi', 'full', 'download', 'index']
+            if last_segment.lower() not in skip_patterns:
+                # Clean up the segment
+                title = unquote(last_segment)
+                title = title.replace('-', ' ').replace('_', ' ')
+
+                # Only return if it looks like a title (has multiple words, not just numbers)
+                words = title.split()
+                if len(words) >= 2 and not all(w.isdigit() for w in words):
+                    # Capitalize first letter of each word
+                    return ' '.join(word.capitalize() for word in words)
+
+        return ""
+    except Exception:
+        return ""
+
+
+def is_valid_title(title: str) -> bool:
+    """Check if a title is meaningful (not just placeholder text).
+
+    Args:
+        title: Title to validate
+
+    Returns:
+        True if title appears to be valid
+    """
+    if not title:
+        return False
+
+    # Titles that are essentially empty
+    invalid_titles = {
+        'untitled', 'no title', 'unknown', 'n/a', 'na', 'none',
+        'title', 'paper', 'article', 'document', 'pdf',
+    }
+
+    title_lower = title.lower().strip()
+
+    # Check against known invalid titles
+    if title_lower in invalid_titles:
+        return False
+
+    # Too short to be meaningful
+    if len(title_lower) < 5:
+        return False
+
+    # Just numbers or special characters
+    if re.match(r'^[\d\W]+$', title):
+        return False
+
+    return True

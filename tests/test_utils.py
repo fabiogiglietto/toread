@@ -7,6 +7,10 @@ from src.utils import (
     calculate_author_similarity,
     calculate_crossref_author_similarity,
     extract_first_author,
+    strip_jats_xml_tags,
+    clean_url,
+    extract_title_from_url,
+    is_valid_title,
 )
 
 
@@ -175,3 +179,137 @@ class TestExtractFirstAuthor:
     def test_empty_string(self):
         """Empty string should return empty."""
         assert extract_first_author("") == ""
+
+
+class TestStripJatsXmlTags:
+    """Tests for strip_jats_xml_tags function."""
+
+    def test_strips_jats_p_tags(self):
+        """Should strip <jats:p> tags."""
+        text = "<jats:p>This is abstract text.</jats:p>"
+        result = strip_jats_xml_tags(text)
+        assert result == "This is abstract text."
+        assert "<jats:p>" not in result
+
+    def test_strips_multiple_jats_tags(self):
+        """Should strip multiple JATS tags."""
+        text = "<jats:title>Title</jats:title><jats:p>Paragraph 1</jats:p><jats:p>Paragraph 2</jats:p>"
+        result = strip_jats_xml_tags(text)
+        assert result == "Title Paragraph 1 Paragraph 2"
+        assert "<jats:" not in result
+
+    def test_strips_nested_tags(self):
+        """Should strip nested tags like <jats:italic>."""
+        text = "<jats:p>This has <jats:italic>emphasis</jats:italic> text.</jats:p>"
+        result = strip_jats_xml_tags(text)
+        assert result == "This has emphasis text."
+
+    def test_handles_empty_string(self):
+        """Empty string should return empty."""
+        assert strip_jats_xml_tags("") == ""
+        assert strip_jats_xml_tags(None) == ""
+
+    def test_normalizes_whitespace(self):
+        """Should normalize multiple spaces and newlines."""
+        text = "<jats:p>Line 1</jats:p>\n\n<jats:p>Line 2</jats:p>"
+        result = strip_jats_xml_tags(text)
+        assert "  " not in result
+        assert "\n" not in result
+
+
+class TestCleanUrl:
+    """Tests for clean_url function."""
+
+    def test_cleans_latex_underscore(self):
+        """Should clean LaTeX escaped underscores."""
+        url = "https://example.com/path\\_with\\_underscores"
+        result = clean_url(url)
+        assert result == "https://example.com/path_with_underscores"
+
+    def test_cleans_latex_ampersand(self):
+        """Should clean LaTeX escaped ampersands."""
+        url = "https://example.com/path?a=1\\&b=2"
+        result = clean_url(url)
+        assert result == "https://example.com/path?a=1&b=2"
+
+    def test_removes_url_wrapper(self):
+        """Should remove LaTeX \\url{} wrapper."""
+        url = "\\url{https://example.com/paper}"
+        result = clean_url(url)
+        assert result == "https://example.com/paper"
+
+    def test_handles_empty_string(self):
+        """Empty string should return empty."""
+        assert clean_url("") == ""
+        assert clean_url(None) == ""
+
+    def test_preserves_valid_url(self):
+        """Valid URL without escapes should be preserved."""
+        url = "https://example.com/normal-path"
+        result = clean_url(url)
+        assert result == url
+
+
+class TestExtractTitleFromUrl:
+    """Tests for extract_title_from_url function."""
+
+    def test_extracts_from_path(self):
+        """Should extract title from URL path."""
+        url = "https://example.com/papers/deep-learning-survey"
+        result = extract_title_from_url(url)
+        assert "Deep" in result
+        assert "Learning" in result
+
+    def test_handles_underscores(self):
+        """Should convert underscores to spaces."""
+        url = "https://example.com/paper/machine_learning_intro"
+        result = extract_title_from_url(url)
+        assert "_" not in result
+        assert "Machine" in result
+
+    def test_handles_empty_string(self):
+        """Empty string should return empty."""
+        assert extract_title_from_url("") == ""
+        assert extract_title_from_url(None) == ""
+
+    def test_skips_common_segments(self):
+        """Should skip common non-title segments like 'article'."""
+        url = "https://example.com/article"
+        result = extract_title_from_url(url)
+        assert result == ""
+
+    def test_removes_file_extension(self):
+        """Should remove common file extensions."""
+        url = "https://example.com/papers/my-paper.pdf"
+        result = extract_title_from_url(url)
+        assert ".pdf" not in result
+
+
+class TestIsValidTitle:
+    """Tests for is_valid_title function."""
+
+    def test_valid_title(self):
+        """Valid title should return True."""
+        assert is_valid_title("Deep Learning for Image Recognition")
+        assert is_valid_title("A Survey of Machine Learning")
+
+    def test_empty_title(self):
+        """Empty/null title should return False."""
+        assert not is_valid_title("")
+        assert not is_valid_title(None)
+
+    def test_placeholder_titles(self):
+        """Placeholder titles should return False."""
+        assert not is_valid_title("Untitled")
+        assert not is_valid_title("No Title")
+        assert not is_valid_title("N/A")
+
+    def test_too_short(self):
+        """Very short titles should return False."""
+        assert not is_valid_title("Hi")
+        assert not is_valid_title("Test")
+
+    def test_only_numbers(self):
+        """Titles with only numbers should return False."""
+        assert not is_valid_title("12345")
+        assert not is_valid_title("2023")

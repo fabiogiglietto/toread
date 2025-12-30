@@ -456,12 +456,21 @@ class BibTeXParser:
         """Clean and validate URL."""
         if not url_str:
             return ""
-        
+
         url = url_str.strip()
-        
+
         # Remove LaTeX \url{} wrapper
         url = re.sub(r'\\url\{([^}]*)\}', r'\1', url)
-        
+
+        # Remove LaTeX escapes
+        url = url.replace('\\_', '_')
+        url = url.replace('\\&', '&')
+        url = url.replace('\\%', '%')
+        url = url.replace('\\#', '#')
+        url = url.replace('\\{', '{')
+        url = url.replace('\\}', '}')
+        url = url.replace('\\~', '~')
+
         return url
     
     def _parse_keywords(self, keywords_str: str) -> List[str]:
