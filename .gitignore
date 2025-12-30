@@ -164,7 +164,8 @@ cython_debug/
 # Keep BibTeX files - needed for workflow caching
 # *.bib
 *.rss
-cache/  # Cache handled by GitHub Actions
+# Track cache in git for reliability
+# cache/
 temp/
 
 # Ignore XML files except feeds
