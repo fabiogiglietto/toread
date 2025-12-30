@@ -471,4 +471,4 @@ MIT License - see [LICENSE](LICENSE) file for details.
 - [JSON Feed](https://jsonfeed.org/) - Modern feed format specification
 - [Paperpile](https://paperpile.com/) - Reference management tool
 - [Crossref API](https://api.crossref.org/) - Academic metadata API
-- [Semantic Scholar API](https://api.semanticscholar.org/) - AI-powered academic search
+- [Semantic Scholar API](https://api.semanticscholar.org/) - AI-powered academic search# Trigger workflow - Tue Dec 30 02:16:24 PM CET 2025
