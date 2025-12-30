@@ -277,9 +277,22 @@ class FeedGenerator:
         if metadata and metadata.arxiv_url:
             return clean_url(metadata.arxiv_url)
 
+        # Try metadata URL (from institutional enricher or URL enricher)
+        if metadata and metadata.url:
+            return clean_url(metadata.url)
+
+        # Try PDF URL as fallback
+        if metadata and metadata.pdf_url:
+            return clean_url(metadata.pdf_url)
+
         # Check for URL in entry
         if entry.url:
             return clean_url(entry.url)
+
+        # Last resort: generate Google Scholar search URL
+        if entry.title:
+            search_query = quote(entry.title[:150])  # Limit query length
+            return f"https://scholar.google.com/scholar?q={search_query}"
 
         return None
     
