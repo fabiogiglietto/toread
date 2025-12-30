@@ -148,9 +148,10 @@ jobs:
       id: git-check
       run: |
         # Ensure output directory exists and add generated files
-        mkdir -p output
+        mkdir -p output cache
         git add data/paperpile_export.bib 2>/dev/null || true
         git add output/feed.json output/feed.xml 2>/dev/null || true
+        git add cache/ 2>/dev/null || true
 
         # Check if there are any staged changes
         if git diff --staged --quiet; then
@@ -185,7 +186,7 @@ jobs:
           # Sync with remote before each attempt
           git fetch origin main
           git reset --soft origin/main
-          git add data/paperpile_export.bib output/feed.json output/feed.xml 2>/dev/null || true
+          git add data/paperpile_export.bib output/feed.json output/feed.xml cache/ 2>/dev/null || true
 
           # Check if there are actually changes to commit
           if git diff --staged --quiet; then
