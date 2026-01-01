@@ -41,15 +41,10 @@ jobs:
     - name: Create directories
       run: |
         mkdir -p data output logs cache
-    
-    - name: Restore metadata cache
-      uses: actions/cache@v3
-      with:
-        path: cache/
-        key: toread-metadata-cache-v2-${{ hashFiles('data/paperpile_export.bib') }}
-        restore-keys: |
-          toread-metadata-cache-v2-
-    
+
+    # Note: Cache is tracked in git, no need for actions/cache which can overwrite
+    # the git-tracked cache with stale data
+
     - name: Download Paperpile export
       run: |
         # Download fresh BibTeX export from Paperpile
