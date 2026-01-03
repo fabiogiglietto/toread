@@ -2571,5 +2571,40 @@
       "source": "arxiv",
       "confidence_score": 0.7272727272727272
     }
+  },
+  "df48b78c330b92b4": {
+    "entry_key": "Pierri2025-hm",
+    "entry_title": "Research opportunities and challenges of the EU's Digital Services Act",
+    "cached_at": "2026-01-03T09:59:41.485103",
+    "metadata": {
+      "abstract": "The Digital Services Act (DSA) introduced by the European Union in 2022 offers a landmark framework for platform transparency, with Article 40 enabling vetted researchers to access data from major online platforms. Yet significant legal, technical, and organizational barriers still hinder effective research on systemic online risks. This piece outlines the key challenges emerging from the Article 40 process and proposes practical measures to ensure that the DSA fulfills its transparency and accountability goals.",
+      "keywords": [],
+      "doi": null,
+      "doi_url": null,
+      "url": null,
+      "arxiv_url": "http://arxiv.org/abs/2512.14223v1",
+      "pdf_url": "https://arxiv.org/pdf/2512.14223v1",
+      "publication_date": "2025-12-16",
+      "citation_count": null,
+      "reference_count": null,
+      "venue": null,
+      "authors": [
+        "Francesco Pierri",
+        "Theo Araujo",
+        "Sanne Kruikemeier",
+        "Philipp Lorenz-Spreen",
+        "Mariek M. P. Vanden Abeele",
+        "Laura Vandenbosch",
+        "Joana Gonçalves-Sa",
+        "Przemyslaw A. Grabowicz"
+      ],
+      "subjects": [
+        "cs.CY",
+        "cs.SI"
+      ],
+      "is_open_access": true,
+      "source": "arxiv",
+      "confidence_score": 0.7142857142857142
+    }
   }
 }

@@ -28,8 +28,9 @@ def clean_title_for_search(title: str) -> str:
     clean = re.sub(r'\\[a-zA-Z]+\{([^}]*)\}', r'\1', title)
     # Remove remaining braces
     clean = re.sub(r'[{}]', '', clean)
-    # Remove non-word characters except whitespace, hyphens, and colons
-    clean = re.sub(r'[^\w\s\-:]', ' ', clean)
+    # Remove non-word characters except whitespace, hyphens, colons, and apostrophes
+    # Apostrophes are important for possessives (e.g., "EU's") and contractions
+    clean = re.sub(r"[^\w\s\-:']", ' ', clean)
     # Normalize whitespace
     clean = re.sub(r'\s+', ' ', clean).strip()
 
