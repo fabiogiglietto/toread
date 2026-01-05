@@ -1,13 +1,25 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" version="2.0">
   <channel>
-    <title>FG's #toread list</title>
+    <title>To Read - Research Papers</title>
     <link>https://github.com/user/toread</link>
-    <description>Academic papers and research articles from Paperpile 'To Read' folder, enriched with metadata</description>
+    <description>Academic papers from Paperpile enriched with metadata</description>
     <language>en-us</language>
     <generator>ToRead RSS Generator</generator>
-    <lastBuildDate>Sat, 03 Jan 2026 08:59:41 +0000</lastBuildDate>
-    <pubDate>Sat, 03 Jan 2026 08:59:41 +0000</pubDate>
+    <lastBuildDate>Mon, 05 Jan 2026 08:18:25 +0000</lastBuildDate>
+    <pubDate>Mon, 05 Jan 2026 08:18:25 +0000</pubDate>
+    <item>
+      <title>The Generative AI Paradox: GenAI and the erosion of trust, the corrosion of information verification, and the demise of truth</title>
+      <description>Generative AI (GenAI) now produces text, images, audio, and video that can be perceptually convincing at scale and at negligible marginal cost. While public debate often frames the associated harms as ``deepfakes'' or incremental extensions of misinformation and fraud, this view misses a broader socio-technical shift: GenAI enables synthetic realities; coherent, interactive, and potentially personalized information environments in which content, identity, and social interaction are jointly manuf...</description>
+      <link>https://scholar.google.com/scholar?q=The%20Generative%20AI%20Paradox%3A%20GenAI%20and%20the%20erosion%20of%20trust%2C%20the%20corrosion%20of%20information%20verification%2C%20and%20the%20demise%20of%20truth</link>
+      <guid isPermaLink="false">bibtex:Emilio2026-ik</guid>
+      <pubDate>Thu, 15 Jan 2026 00:00:00 +0000</pubDate>
+      <dc:creator>Emilio, Ferrara</dc:creator>
+      <category>Article</category>
+      <category>arXiv [cs.CY]</category>
+      <content:encoded>&lt;![CDATA[&lt;h3&gt;Abstract&lt;/h3&gt;&lt;p&gt;Generative AI (GenAI) now produces text, images, audio, and video that can be perceptually convincing at scale and at negligible marginal cost. While public debate often frames the associated harms as ``deepfakes'' or incremental extensions of misinformation and fraud, this view misses a broader socio-technical shift: GenAI enables synthetic realities; coherent, interactive, and potentially personalized information environments in which content, identity, and social interaction are jointly manufactured and mutually reinforcing. We argue that the most consequential risk is not merely the production of isolated synthetic artifacts, but the progressive erosion of shared epistemic ground and institutional verification practices as synthetic content, synthetic identity, and synthetic interaction become easy to generate and hard to audit. This paper (i) formalizes synthetic reality as a layered stack (content, identity, interaction, institutions), (ii) expands a taxonomy of GenAI harms spanning personal, economic, informational, and socio-technical risks, (iii) articulates the qualitative shifts introduced by GenAI (cost collapse, throughput, customization, micro-segmentation, provenance gaps, and trust erosion), and (iv) synthesizes recent risk realizations (2023-2025) into a compact case bank illustrating how these mechanisms manifest in fraud, elections, harassment, documentation, and supply-chain compromise. We then propose a mitigation stack that treats provenance infrastructure, platform governance, institutional workflow redesign, and public resilience as complementary rather than substitutable, and outline a research agenda focused on measuring epistemic security. We conclude with the Generative AI Paradox: as synthetic media becomes ubiquitous, societies may rationally discount digital evidence altogether.&lt;/p&gt;&lt;h3&gt;Details&lt;/h3&gt;&lt;ul&gt;&lt;li&gt;&lt;strong&gt;Authors:&lt;/strong&gt; Emilio, Ferrara&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Journal:&lt;/strong&gt; arXiv [cs.CY]&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Year:&lt;/strong&gt; 2026&lt;/li&gt;&lt;/ul&gt;]]&gt;</content:encoded>
+      <dc:date>Thu, 15 Jan 2026 00:00:00 +0000</dc:date>
+    </item>
     <item>
       <title>Untitled</title>
       <link>https://datasociety.net/library/scam-gpt/</link>
@@ -70,11 +82,11 @@
       <dc:creator>Matias, J Nathan, Price, Megan</dc:creator>
       <category>AI</category>
       <category>Proc. Natl. Acad. Sci. U. S. A.</category>
-      <category>evaluation</category>
-      <category>Article</category>
       <category>participatory research</category>
-      <category>policy</category>
+      <category>evaluation</category>
       <category>citizen science</category>
+      <category>Article</category>
+      <category>policy</category>
       <content:encoded>&lt;![CDATA[&lt;h3&gt;Abstract&lt;/h3&gt;&lt;p&gt;As AI systems from decision-making algorithms to generative AI are deployed more widely, computer scientists and social scientists alike are being called on to provide trustworthy quantitative evaluations of AI safety and reliability. These calls have included demands from affected parties to be given a seat at the table of AI evaluation. What, if anything, can public involvement add to the science of AI? In this perspective, we summarize the sociotechnical challenge of evaluating AI systems, which often adapt to multiple layers of social context that shape their outcomes. We then offer guidance for improving the science of AI by engaging lived-experience experts in the design, data collection, and interpretation of scientific evaluations. This article reviews common models of public engagement in AI research alongside common concerns about participatory methods, including questions about generalizable knowledge, subjectivity, reliability, and practical logistics. To address these questions, we summarize the literature on participatory science, discuss case studies from AI in healthcare, and share our own experience evaluating AI in areas from policing systems to social media algorithms. Overall, we describe five parts of any quantitative evaluation where public participation can improve the science of AI: equipoise, explanation, measurement, inference, and interpretation. We conclude with reflections on the role that participatory science can play in trustworthy AI by supporting trustworthy science.&lt;/p&gt;&lt;h3&gt;Details&lt;/h3&gt;&lt;ul&gt;&lt;li&gt;&lt;strong&gt;Authors:&lt;/strong&gt; Matias, J Nathan, Price, Megan&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Journal:&lt;/strong&gt; Proc. Natl. Acad. Sci. U. S. A.&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Year:&lt;/strong&gt; 2025&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Volume:&lt;/strong&gt; 122&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Pages:&lt;/strong&gt; e2421111122&lt;/li&gt;&lt;/ul&gt;&lt;h3&gt;Links&lt;/h3&gt;&lt;p&gt;&lt;a href=&quot;https://doi.org/10.1073/pnas.2421111122&quot;&gt;DOI&lt;/a&gt;&lt;/p&gt;]]&gt;</content:encoded>
       <dc:date>Mon, 15 Dec 2025 00:00:00 +0000</dc:date>
     </item>
@@ -136,6 +148,18 @@
       <category>Article</category>
       <category>arXiv [cs.SI]</category>
       <content:encoded>&lt;![CDATA[&lt;h3&gt;Abstract&lt;/h3&gt;&lt;p&gt;In the era of widespread online content consumption, effective detection of coordinated efforts is crucial for mitigating potential threats arising from information manipulation. Despite advances in isolating inauthentic and automated actors, the actions of individual accounts involved in influence campaigns may not stand out as anomalous if analyzed independently of the coordinated group. Given the collaborative nature of information operations, coordinated campaigns are better characterized by evidence of similar temporal behavioral patterns that extend beyond coincidental synchronicity across a group of accounts. We propose a framework to model complex coordination patterns across multiple online modalities. This framework utilizes multiplex networks to first decompose online activities into different interaction layers, and subsequently aggregate evidence of online coordination across the layers. In addition, we propose a time-aware collaboration model to capture patterns of online coordination for each modality. The proposed time-aware model builds upon the node-normalized collaboration model and accounts for repetitions of coordinated actions over different time intervals by employing an exponential decay temporal kernel. We validate our approach on multiple datasets featuring different coordinated activities. Our results demonstrate that a multiplex time-aware model excels in the identification of coordinating groups, outperforming previously proposed methods in coordinated activity detection.&lt;/p&gt;&lt;h3&gt;Details&lt;/h3&gt;&lt;ul&gt;&lt;li&gt;&lt;strong&gt;Authors:&lt;/strong&gt; Iannucci, Letizia, Muratore, Elisa, Matakos, Antonis, Kivelä, Mikko&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Journal:&lt;/strong&gt; arXiv [cs.SI]&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Year:&lt;/strong&gt; 2025&lt;/li&gt;&lt;/ul&gt;&lt;h3&gt;Links&lt;/h3&gt;&lt;p&gt;&lt;a href=&quot;http://arxiv.org/abs/2512.19677v1&quot;&gt;arXiv&lt;/a&gt; | &lt;a href=&quot;https://arxiv.org/pdf/2512.19677v1&quot;&gt;PDF&lt;/a&gt;&lt;/p&gt;]]&gt;</content:encoded>
+      <dc:date>Mon, 15 Dec 2025 00:00:00 +0000</dc:date>
+    </item>
+    <item>
+      <title>Sky News Australia as network propaganda: how a niche cable channel became an international right-wing propaganda machine</title>
+      <description>In the past decade or so, the right-wing news channel, Sky News Australia , has pivoted to publishing online content that speaks to broadly right-wing audiences both in Australia and internationally. While the channel has long been regarded as comparatively unsuccessful, with low TV ratings, such unimpressive pay-TV audience ratings obscure a considerably more significant development elsewhere: Sky News Australia's content is shared and consumed increasingly widely in digital form, via social me...</description>
+      <link>https://scholar.google.com/scholar?q=Sky%20News%20Australia%20as%20network%20propaganda%3A%20how%20a%20niche%20cable%20channel%20became%20an%20international%20right-wing%20propaganda%20machine</link>
+      <guid isPermaLink="false">bibtex:Copland2025-em</guid>
+      <pubDate>Mon, 15 Dec 2025 00:00:00 +0000</pubDate>
+      <dc:creator>Copland, Simon, Bruns, Axel, Graham, Timothy</dc:creator>
+      <category>Article</category>
+      <category>Media Int. Aust.</category>
+      <content:encoded>&lt;![CDATA[&lt;h3&gt;Abstract&lt;/h3&gt;&lt;p&gt;In the past decade or so, the right-wing news channel, Sky News Australia , has pivoted to publishing online content that speaks to broadly right-wing audiences both in Australia and internationally. While the channel has long been regarded as comparatively unsuccessful, with low TV ratings, such unimpressive pay-TV audience ratings obscure a considerably more significant development elsewhere: Sky News Australia's content is shared and consumed increasingly widely in digital form, via social media. Positioning Sky News Australia as an example of a global system of network propaganda, this article examines how the channel has spread its content online. Studying a core period of Sky News Australia's digital growth during the 2020 COVID pandemic and US presidential race, we use a unique combination of digital methods to document how Sky News Australia has transitioned from a niche cable station to an international right-wing propaganda machine.&lt;/p&gt;&lt;h3&gt;Details&lt;/h3&gt;&lt;ul&gt;&lt;li&gt;&lt;strong&gt;Authors:&lt;/strong&gt; Copland, Simon, Bruns, Axel, Graham, Timothy&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Journal:&lt;/strong&gt; Media Int. Aust.&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Year:&lt;/strong&gt; 2025&lt;/li&gt;&lt;/ul&gt;]]&gt;</content:encoded>
       <dc:date>Mon, 15 Dec 2025 00:00:00 +0000</dc:date>
     </item>
     <item>
@@ -311,16 +335,16 @@
       <guid isPermaLink="false">bibtex:Oprea2025-lf</guid>
       <pubDate>Thu, 04 Sep 2025 00:00:00 +0000</pubDate>
       <dc:creator>Oprea, Bogdan, Pașnicu, Paula, Niculae, Alexandru-Ninel, Bonciu, Constantin-Cozmin, Tudorașcu-Dobre, Dragoș</dc:creator>
-      <category>Media Commun.</category>
-      <category>inauthentic behavior</category>
       <category>Facebook</category>
-      <category>manipulation</category>
-      <category>Meta</category>
-      <category>Article</category>
-      <category>fake accounts</category>
-      <category>social media</category>
+      <category>inauthentic behavior</category>
       <category>election campaign</category>
+      <category>fake accounts</category>
+      <category>manipulation</category>
       <category>political communication</category>
+      <category>Meta</category>
+      <category>Media Commun.</category>
+      <category>Article</category>
+      <category>social media</category>
       <content:encoded>&lt;![CDATA[&lt;h3&gt;Abstract&lt;/h3&gt;&lt;p&gt;Technology has reshaped political communication, allowing fake engagement to drive real influence in the democratic process. Hyperactive social media users, who are over-proportionally active in relation to the mean, are the new political activists, spreading partisan content at scale on social media platforms. Using The Authenticity Matrix tool, this study revealed Facebook accounts of hyperactive users exhibiting inauthentic behaviour that were used during the electoral campaign (May 10, 2024, to June 8, 2024) for the 2024 election of Romanian members of the European Parliament. The results indicate that, for some posts, up to 45% of shares were made by hyperactive users (four or more shares per post by the same account) and 33.9% by super-active users (10 or more times). This type of online behavior is considered by Meta as manipulation of “public opinion,” “political discussion,” and “public debate,” and Meta’s Community Standards is committed to preventing such behavior in the context of elections. Another key contribution of this research is the identification of dominant characteristics of hyperactive user accounts, using information publicly available on their social media profile, which provides insights into their specific features and helps users better identify them on social media. The article highlights that online social network platforms condemn these manipulative practices in theory, but they don’t take sufficient measures to effectively reduce them in order to limit their impact on our societies.&lt;/p&gt;&lt;h3&gt;Details&lt;/h3&gt;&lt;ul&gt;&lt;li&gt;&lt;strong&gt;Authors:&lt;/strong&gt; Oprea, Bogdan, Pașnicu, Paula, Niculae, Alexandru-Ninel, Bonciu, Constantin-Cozmin, Tudorașcu-Dobre, Dragoș&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Journal:&lt;/strong&gt; Media Commun.&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Year:&lt;/strong&gt; 2025&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Volume:&lt;/strong&gt; 13&lt;/li&gt;&lt;/ul&gt;&lt;h3&gt;Links&lt;/h3&gt;&lt;p&gt;&lt;a href=&quot;https://doi.org/10.17645/mac.10733&quot;&gt;DOI&lt;/a&gt;&lt;/p&gt;]]&gt;</content:encoded>
       <dc:date>Mon, 15 Sep 2025 00:00:00 +0000</dc:date>
     </item>
@@ -521,13 +545,13 @@
       <guid isPermaLink="false">bibtex:Marwick2025-vx</guid>
       <pubDate>Sun, 15 Jun 2025 00:00:00 +0000</pubDate>
       <dc:creator>Marwick, Alice E, Furl, Katherine</dc:creator>
-      <category>online radicalization</category>
       <category>disinformation</category>
-      <category>redpill</category>
       <category>extremism</category>
-      <category>Far-Right</category>
-      <category>Article</category>
       <category>Int. J. Commun.</category>
+      <category>redpill</category>
+      <category>online radicalization</category>
+      <category>Article</category>
+      <category>Far-Right</category>
       <category>evidence</category>
       <content:encoded>&lt;![CDATA[&lt;h3&gt;Abstract&lt;/h3&gt;&lt;p&gt;How do people come to believe Far-Right, extremist, and conspiratorial ideas they encounter online? This article examines how participants in primarily U.S.-based Far-Right online communities describe their adoption of “redpill” beliefs and the role of disinformation in these accounts. Applying the socio-technical theory of media effects, we conduct a qualitative content analysis of “redpilling narratives” gathered from Reddit, Gab, and Discord. While many users frame redpilling as a moment of conversion, others portray redpilling as a process, something achieved incrementally through years of community participation and “doing your own research.” In both cases, disinformation presented as evidence and the capacity to determine the veracity of presented evidence play important roles in redpilling oneself and others. By framing their beliefs as the rational and logical results of fully considering a plethora of evidence, redpill adherents can justify holding and promoting otherwise indefensible prejudices. The community’s creation, promotion, and repetition of Far-Right disinformation, much of which is historical or “scientific” in nature, play a crucial role in the adoption of Far-Right beliefs.&lt;/p&gt;&lt;h3&gt;Details&lt;/h3&gt;&lt;ul&gt;&lt;li&gt;&lt;strong&gt;Authors:&lt;/strong&gt; Marwick, Alice E, Furl, Katherine&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Journal:&lt;/strong&gt; Int. J. Commun.&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Year:&lt;/strong&gt; 2025&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Volume:&lt;/strong&gt; 19&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Pages:&lt;/strong&gt; 26&lt;/li&gt;&lt;/ul&gt;]]&gt;</content:encoded>
       <dc:date>Sun, 15 Jun 2025 00:00:00 +0000</dc:date>
@@ -598,11 +622,11 @@
       <guid isPermaLink="false">bibtex:Yang2025-iv</guid>
       <pubDate>Mon, 05 May 2025 00:00:00 +0000</pubDate>
       <dc:creator>Yang, Yunkang, Paudel, Ramesh, McShan, Jordan, Hindman, Matthew, Huang, H Howie, Broniatowski, David</dc:creator>
-      <category>Sci. Rep.</category>
       <category>Facebook</category>
       <category>Social media</category>
-      <category>Coordination</category>
+      <category>Sci. Rep.</category>
       <category>Article</category>
+      <category>Coordination</category>
       <content:encoded>&lt;![CDATA[&lt;h3&gt;Abstract&lt;/h3&gt;&lt;p&gt;Malicious actors regularly attempt to manipulate social media using coordinated posting. Many existing methods for detecting this coordination, though, have relied primarily on post-timing, which is trivially easy to change. In this paper, we make a significant methodological advancement in coordination detection, leveraging highly regular statistical patterns in the speed and frequency of sharing. We apply and validate this approach on Facebook, using 11.2 million link posts from a list of 16,169 most popular English-language Facebook pages that referenced at least one of the top eight US politicians in any post, a set of pages that produced more than 91\% of all user engagement in this category during our collection period. Our approach can be calibrated and adapted across contexts, platforms, and times, allowing researchers to build valid, testable, but still human-interpretable models of platform manipulations.&lt;/p&gt;&lt;h3&gt;Details&lt;/h3&gt;&lt;ul&gt;&lt;li&gt;&lt;strong&gt;Authors:&lt;/strong&gt; Yang, Yunkang, Paudel, Ramesh, McShan, Jordan, Hindman, Matthew, Huang, H Howie, Broniatowski, David&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Journal:&lt;/strong&gt; Sci. Rep.&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Year:&lt;/strong&gt; 2025&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Volume:&lt;/strong&gt; 15&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Pages:&lt;/strong&gt; 15684&lt;/li&gt;&lt;/ul&gt;&lt;h3&gt;Links&lt;/h3&gt;&lt;p&gt;&lt;a href=&quot;https://doi.org/10.1038/s41598-025-00233-w&quot;&gt;DOI&lt;/a&gt;&lt;/p&gt;]]&gt;</content:encoded>
       <dc:date>Thu, 15 May 2025 00:00:00 +0000</dc:date>
     </item>
@@ -709,12 +733,12 @@
       <guid isPermaLink="false">bibtex:Smith2025-kc</guid>
       <pubDate>Thu, 27 Mar 2025 00:00:00 +0000</pubDate>
       <dc:creator>Smith, Alyssa H, Green, Jon, F Welles, Brooke, Lazer, David</dc:creator>
-      <category>tertius iungens</category>
-      <category>triad transitivity</category>
       <category>social networks</category>
       <category>PNAS Nexus</category>
+      <category>tertius iungens</category>
       <category>amplification</category>
       <category>Article</category>
+      <category>triad transitivity</category>
       <category>social media</category>
       <content:encoded>&lt;![CDATA[&lt;h3&gt;Abstract&lt;/h3&gt;&lt;p&gt;Abstract As they evolve, social networks tend to form transitive triads more often than random chance and structural constraints would suggest. However, the mechanisms by which triads in these networks become transitive are largely unexplored. We leverage a unique combination of data and methods to demonstrate a causal link between amplification and triad transitivity in a directed social network. Additionally, we develop the concept of the “attention broker,” an extension of the previously theorized tertius iungens (or “third who joins”). We use an innovative technique to identify time-bounded Twitter/X following events, and then use difference-in-differences to show that attention brokers cause triad transitivity by amplifying content. Attention brokers intervene in the evolution of any sociotechnical system where individuals can amplify content while referencing its originator.&lt;/p&gt;&lt;h3&gt;Details&lt;/h3&gt;&lt;ul&gt;&lt;li&gt;&lt;strong&gt;Authors:&lt;/strong&gt; Smith, Alyssa H, Green, Jon, F Welles, Brooke, Lazer, David&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Journal:&lt;/strong&gt; PNAS Nexus&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Year:&lt;/strong&gt; 2025&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Volume:&lt;/strong&gt; 4&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Pages:&lt;/strong&gt; gaf106&lt;/li&gt;&lt;/ul&gt;&lt;h3&gt;Links&lt;/h3&gt;&lt;p&gt;&lt;a href=&quot;https://doi.org/10.1093/pnasnexus/pgaf106&quot;&gt;DOI&lt;/a&gt;&lt;/p&gt;]]&gt;</content:encoded>
       <dc:date>Tue, 15 Apr 2025 00:00:00 +0000</dc:date>
@@ -738,14 +762,14 @@
       <pubDate>Sat, 15 Mar 2025 00:00:00 +0000</pubDate>
       <dc:creator>Gaw, Fatima, Agonos, Mariam Jayne, Ruijgrok, Kris, Suarez, Gerard Martin</dc:creator>
       <category>disinformation</category>
+      <category>Philippines</category>
+      <category>elections</category>
+      <category>influence operations</category>
+      <category>Int. J. Commun.</category>
+      <category>brokerage</category>
+      <category>Article</category>
       <category>computational propaganda</category>
       <category>trolls</category>
-      <category>brokerage</category>
-      <category>Philippines</category>
-      <category>Article</category>
-      <category>Int. J. Commun.</category>
-      <category>influence operations</category>
-      <category>elections</category>
       <content:encoded>&lt;![CDATA[&lt;h3&gt;Abstract&lt;/h3&gt;&lt;p&gt;This study conceptualizes influence operations (IOs), an enterprise that orchestrates manipulative and inauthentic activities to achieve political advantage, as a contemporary form of brokerage during elections. It investigates the empirical case of IOs engaged in covert political campaigning in the 2022 Philippine General Elections through qualitative field research. Drawing from 22 in-depth interviews with IO leads and staff, we define IOs’ broker attributes, their brokerage processes, and the capital and value they generate through brokerage. We identify four mechanisms of brokerage by IOs: infrastructural capacity, reputation manipulation, relationship building at scale, and obscured accountability. These mechanisms complement the brokerage work by aboveboard campaigns and other brokers by compensating for their limitations and innovating campaign strategies. We argue that IOs are not extraneous deviations but are logical extensions of existing political infrastructures and should be understood as operating with other normative forms of political campaigning.&lt;/p&gt;&lt;h3&gt;Details&lt;/h3&gt;&lt;ul&gt;&lt;li&gt;&lt;strong&gt;Authors:&lt;/strong&gt; Gaw, Fatima, Agonos, Mariam Jayne, Ruijgrok, Kris, Suarez, Gerard Martin&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Journal:&lt;/strong&gt; Int. J. Commun.&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Year:&lt;/strong&gt; 2025&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Volume:&lt;/strong&gt; 19&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Pages:&lt;/strong&gt; 21&lt;/li&gt;&lt;/ul&gt;]]&gt;</content:encoded>
       <dc:date>Sat, 15 Mar 2025 00:00:00 +0000</dc:date>
     </item>
@@ -756,11 +780,11 @@
       <guid isPermaLink="false">bibtex:Arora2025-tx</guid>
       <pubDate>Wed, 26 Mar 2025 00:00:00 +0000</pubDate>
       <dc:creator>Arora, Arnav, Yadav, Srishti, Antoniak, Maria, Belongie, Serge, Augenstein, Isabelle</dc:creator>
-      <category>Computers and Society (cs.CY)</category>
-      <category>FOS: Computer and information sciences</category>
-      <category>arXiv [cs.CL]</category>
       <category>Machine Learning (cs.LG)</category>
       <category>Misc</category>
+      <category>arXiv [cs.CL]</category>
+      <category>FOS: Computer and information sciences</category>
+      <category>Computers and Society (cs.CY)</category>
       <category>Computation and Language (cs.CL)</category>
       <content:encoded>&lt;![CDATA[&lt;h3&gt;Abstract&lt;/h3&gt;&lt;p&gt;Automated frame analysis of political communication is a popular task in computational social science that is used to study how authors select aspects of a topic to frame its reception. So far, such studies have been narrow, in that they use a fixed set of pre-defined frames and focus only on the text, ignoring the visual contexts in which those texts appear. Especially for framing in the news, this leaves out valuable information about editorial choices, which include not just the written article but also accompanying photographs. To overcome such limitations, we present a method for conducting multi-modal, multi-label framing analysis at scale using large (vision-) language models. Grounding our work in framing theory, we extract latent meaning embedded in images used to convey a certain point and contrast that to the text by comparing the respective frames used. We also identify highly partisan framing of topics with issue-specific frame analysis found in prior qualitative work. We demonstrate a method for doing scalable integrative framing analysis of both text and image in news, providing a more complete picture for understanding media bias.&lt;/p&gt;&lt;h3&gt;Details&lt;/h3&gt;&lt;ul&gt;&lt;li&gt;&lt;strong&gt;Authors:&lt;/strong&gt; Arora, Arnav, Yadav, Srishti, Antoniak, Maria, Belongie, Serge, Augenstein, Isabelle&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Journal:&lt;/strong&gt; arXiv [cs.CL]&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Year:&lt;/strong&gt; 2025&lt;/li&gt;&lt;/ul&gt;&lt;h3&gt;Links&lt;/h3&gt;&lt;p&gt;&lt;a href=&quot;http://arxiv.org/abs/2503.20960v3&quot;&gt;arXiv&lt;/a&gt; | &lt;a href=&quot;https://arxiv.org/pdf/2503.20960v3&quot;&gt;PDF&lt;/a&gt;&lt;/p&gt;]]&gt;</content:encoded>
       <dc:date>Sat, 15 Mar 2025 00:00:00 +0000</dc:date>
@@ -1154,11 +1178,11 @@
       <guid isPermaLink="false">bibtex:Bakshy2015-rn</guid>
       <pubDate>Fri, 05 Jun 2015 00:00:00 +0000</pubDate>
       <dc:creator>Bakshy, Eytan, Messing, Solomon, Adamic, Lada A</dc:creator>
-      <category>Science</category>
       <category>news</category>
       <category>newsfeed</category>
-      <category>facebook</category>
+      <category>Science</category>
       <category>Article</category>
+      <category>facebook</category>
       <category>homophily</category>
       <content:encoded>&lt;![CDATA[&lt;h3&gt;Abstract&lt;/h3&gt;&lt;p&gt;Not getting all sides of the news? People are increasingly turning away from mass media to social media as a way of learning news and civic information. Bakshyet al.examined the news that millions of Facebook users' peers shared, what information these users were presented with, and what they ultimately consumed (see the Perspective by Lazer). Friends shared substantially less cross-cutting news from sources aligned with an opposing ideology. People encountered roughly 15% less cross-cutting content in news feeds due to algorithmic ranking and clicked through to 70% less of this cross-cutting content. Within the domain of political news encountered in social media, selective exposure appears to drive attention. Science, this issue p.1130; see also p.1090&lt;/p&gt;&lt;h3&gt;Details&lt;/h3&gt;&lt;ul&gt;&lt;li&gt;&lt;strong&gt;Authors:&lt;/strong&gt; Bakshy, Eytan, Messing, Solomon, Adamic, Lada A&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Journal:&lt;/strong&gt; Science&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Year:&lt;/strong&gt; 2015&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Volume:&lt;/strong&gt; 348&lt;/li&gt;&lt;li&gt;&lt;strong&gt;Pages:&lt;/strong&gt; 1130--1132&lt;/li&gt;&lt;/ul&gt;&lt;h3&gt;Links&lt;/h3&gt;&lt;p&gt;&lt;a href=&quot;https://doi.org/10.1126/science.aaa1160&quot;&gt;DOI&lt;/a&gt;&lt;/p&gt;]]&gt;</content:encoded>
       <dc:date>Mon, 15 Jun 2015 00:00:00 +0000</dc:date>
