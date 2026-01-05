@@ -1336,7 +1336,7 @@ class MetadataEnricher:
                 rate_limit=openalex_config.get('rate_limit', 0.1),
                 timeout=openalex_config.get('timeout', 15)
             )
-    
+
     def _is_arxiv_paper(self, entry: BibEntry) -> bool:
         """Check if this entry is from ArXiv."""
         # Check journal field

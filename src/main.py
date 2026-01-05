@@ -155,23 +155,46 @@ class ToReadApp:
         enriched_metadata = None
         if self.metadata_enricher:
             if self.skip_cached_enrichment:
-                print("Running in cache-only mode - using existing cached metadata...")
+                print("Running in fast mode - using cached metadata, enriching only new entries...")
                 try:
-                    # Get only cached metadata, don't enrich new entries
+                    from .metadata_enricher import EnrichedMetadata
+
+                    # Get cached metadata for entries that have cache
                     cached_dicts = self.metadata_enricher.cache.get_all_cached_metadata(entries)
                     enriched_metadata = {}
                     for key, metadata_dict in cached_dicts.items():
                         try:
-                            from .metadata_enricher import EnrichedMetadata
                             enriched_metadata[key] = EnrichedMetadata(**metadata_dict)
                         except Exception as e:
                             print(f"Warning: Failed to load cached metadata for {key}: {e}")
                             enriched_metadata[key] = None
-                    
+
                     cached_count = sum(1 for v in enriched_metadata.values() if v is not None)
-                    print(f"Using cached metadata for {cached_count}/{len(entries)} entries")
+
+                    # Find entries with NO cache at all (truly new entries)
+                    uncached_entries = [e for e in entries if e.key not in enriched_metadata]
+
+                    # Also check for entries that were cached as failures but might be retriable
+                    for entry in entries:
+                        if entry.key not in enriched_metadata:
+                            # Check if this entry has a failed cache entry
+                            if not self.metadata_enricher.cache.is_cached(entry):
+                                if entry not in uncached_entries:
+                                    uncached_entries.append(entry)
+
+                    if uncached_entries:
+                        print(f"Found {len(uncached_entries)} new entries without cache - enriching them...")
+                        new_metadata = self.metadata_enricher.enrich_entries(uncached_entries)
+                        # Merge new metadata with cached
+                        for key, metadata in new_metadata.items():
+                            enriched_metadata[key] = metadata
+                        new_count = sum(1 for k, v in new_metadata.items() if v is not None)
+                        print(f"Enriched {new_count}/{len(uncached_entries)} new entries")
+
+                    total_enriched = sum(1 for v in enriched_metadata.values() if v is not None)
+                    print(f"Total metadata: {total_enriched}/{len(entries)} entries ({cached_count} cached, {total_enriched - cached_count} newly enriched)")
                 except Exception as e:
-                    print(f"Warning: Error loading cached metadata: {e}")
+                    print(f"Warning: Error in fast mode: {e}")
                     print("Falling back to full enrichment...")
                     enriched_metadata = self.metadata_enricher.enrich_entries(entries)
             else:
