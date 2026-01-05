@@ -2662,5 +2662,32 @@
       "source": "arxiv",
       "confidence_score": 0.7999999999999999
     }
+  },
+  "7a324346d6db24a6": {
+    "entry_key": "Knupfer2025-vt",
+    "entry_title": "The logic of connective faction: How digitally networked elites and hyper-partisan media radicalize politics",
+    "cached_at": "2026-01-05T19:13:02.568149",
+    "metadata": {
+      "abstract": null,
+      "keywords": [],
+      "doi": "10.1080/10584609.2025.2604708",
+      "doi_url": "https://doi.org/10.1080/10584609.2025.2604708",
+      "url": null,
+      "arxiv_url": null,
+      "pdf_url": null,
+      "publication_date": "2025-12-23",
+      "citation_count": 0,
+      "reference_count": 114,
+      "venue": "Political Communication",
+      "authors": [
+        "Curd B. Knüpfer",
+        "Yunkang Yang",
+        "Mike Cowburn"
+      ],
+      "subjects": [],
+      "is_open_access": null,
+      "source": "crossref",
+      "confidence_score": 0.8374999999999999
+    }
   }
 }
