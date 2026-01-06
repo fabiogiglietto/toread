@@ -55,7 +55,7 @@ jobs:
         fi
 
         echo "Downloading BibTeX export from Paperpile..."
-        curl -L "${{ secrets.PAPERPILE_EXPORT_URL }}" -o /tmp/paperpile_export_new.bib
+        curl -L -H "Cache-Control: no-cache" -H "Pragma: no-cache" "${{ secrets.PAPERPILE_EXPORT_URL }}" -o /tmp/paperpile_export_new.bib
 
         if [ ! -f "/tmp/paperpile_export_new.bib" ] || [ ! -s "/tmp/paperpile_export_new.bib" ]; then
           echo "Error: Failed to download BibTeX file or file is empty"
