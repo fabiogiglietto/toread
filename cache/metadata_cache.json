@@ -2689,5 +2689,34 @@
       "source": "crossref",
       "confidence_score": 0.8374999999999999
     }
+  },
+  "dc0cfdf6e324df5e": {
+    "entry_key": "Arceneaux2026-xk",
+    "entry_title": "Social bots as agenda-builders: Evaluating the impact of algorithmic amplification on organizational messaging",
+    "cached_at": "2026-01-08T06:18:15.805937",
+    "metadata": {
+      "abstract": null,
+      "keywords": [],
+      "doi": "10.1080/1062726x.2025.2606676",
+      "doi_url": "https://doi.org/10.1080/1062726x.2025.2606676",
+      "url": null,
+      "arxiv_url": null,
+      "pdf_url": null,
+      "publication_date": "2026-01-04",
+      "citation_count": 0,
+      "reference_count": 103,
+      "venue": "Journal of Public Relations Research",
+      "authors": [
+        "Phillip Arceneaux",
+        "Joshua Anderson",
+        "Josephine Lukito",
+        "Mansi Shah",
+        "Spiro Kiousis"
+      ],
+      "subjects": [],
+      "is_open_access": null,
+      "source": "crossref",
+      "confidence_score": 0.8272727272727272
+    }
   }
 }
