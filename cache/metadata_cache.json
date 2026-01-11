@@ -2743,5 +2743,31 @@
       "source": "crossref",
       "confidence_score": 0.95
     }
+  },
+  "72956432e72418ef": {
+    "entry_key": "Poliakoff2026-fa",
+    "entry_title": "Prigozhin’s propaganda team: The st Petersburg internet research agency (2013–2021)",
+    "cached_at": "2026-01-11T08:45:23.365792",
+    "metadata": {
+      "abstract": null,
+      "keywords": [],
+      "doi": "10.1080/09668136.2025.2588334",
+      "doi_url": "https://doi.org/10.1080/09668136.2025.2588334",
+      "url": null,
+      "arxiv_url": null,
+      "pdf_url": null,
+      "publication_date": "2026-01-08",
+      "citation_count": 0,
+      "reference_count": 51,
+      "venue": "Europe-Asia Studies",
+      "authors": [
+        "Serge Poliakoff",
+        "Florian Toepfl"
+      ],
+      "subjects": [],
+      "is_open_access": null,
+      "source": "crossref",
+      "confidence_score": 0.86
+    }
   }
 }
