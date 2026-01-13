@@ -2801,5 +2801,54 @@
       "source": "arxiv",
       "confidence_score": 0.7214285714285714
     }
+  },
+  "ffe4ae12f33e3914": {
+    "entry_key": "Voelkel2026-lc",
+    "entry_title": "A registered report megastudy on the persuasiveness of the most-cited climate messages",
+    "cached_at": "2026-01-13T05:17:11.935539",
+    "metadata": {
+      "abstract": "It is important to understand how persuasive the most-cited climate change messaging strategies are. In five replication studies, we found limited evidence of persuasive effects of three highly cited strategies (N=3,216). We then conducted a registered report megastudy (N=13,544) testing the effects of the 10 most-cited climate change messaging strategies on Americans’ pro-environmental attitudes and behavior. Six messages significantly affected multiple preregistered attitudes, with effects ranging from one to four percentage points. Persuasiveness varied little across party lines, inconsistent with theories predicting heterogeneous effects for targeted messages. No message increased pro-environmental donations, suggesting costly behaviors are difficult to influence with messaging alone. Inference of mechanisms driving effects was limited as the most impactful messages influenced multiple mediating variables. Taken together, these results identify several persuasive strategies, while also highlighting the limits of short-form messages for increasing Americans’ support for action to address climate change.",
+      "keywords": [],
+      "doi": "10.31235/osf.io/xwceg_v2",
+      "doi_url": "https://doi.org/10.31235/osf.io/xwceg_v2",
+      "url": null,
+      "arxiv_url": null,
+      "pdf_url": null,
+      "publication_date": null,
+      "citation_count": 0,
+      "reference_count": 0,
+      "venue": null,
+      "authors": [
+        "Jan G. Voelkel",
+        "Ashwini Ashokkumar",
+        "Adina T. Abeles",
+        "Jarret Crawford",
+        "Kylie Fuller",
+        "Chrystal Redekopp",
+        "Renata Bongiorno",
+        "Troy H. Campbell",
+        "Ullrich K. H. Ecker",
+        "Matthew Feinberg",
+        "P. Sol Hart",
+        "Matthew Hornsey",
+        "John Jost",
+        "Aaron Kay",
+        "Anthony Leiserowitz",
+        "Stephan Lewandowsky",
+        "Edward Maibach",
+        "Erik Nisbet",
+        "Nicholas Pidgeon",
+        "Alexa Spence",
+        "Sander van der Linden",
+        "Christopher V. Wolsko",
+        "Jane K. Willenbring",
+        "neil malhotra",
+        "Robb Willer"
+      ],
+      "subjects": [],
+      "is_open_access": null,
+      "source": "crossref",
+      "confidence_score": 0.809375
+    }
   }
 }
