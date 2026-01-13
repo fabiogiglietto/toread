@@ -2850,5 +2850,32 @@
       "source": "crossref",
       "confidence_score": 0.809375
     }
+  },
+  "b7f74078a698644f": {
+    "entry_key": "Rieder2026-pp",
+    "entry_title": "The Tate-space on YouTube: Ambient ideology and the limits of platform moderation",
+    "cached_at": "2026-01-13T07:17:01.024158",
+    "metadata": {
+      "abstract": "This article investigates the persistence and transformation of Andrew Tate’s presence on YouTube following the removal of his official channels in August 2022. Combining two empirical approaches—a small-scale analysis of top-ranked videos from YouTube search results in 2022 and 2024, and a large-scale data set of over 112k videos—we examine how Tate-related content continues to circulate and how the platform moderates such material. Our findings show that Tate remains highly visible through a diffuse and decentralized network of actors who repackage his messaging into interviews, remixes, and YouTube-native formats. This configuration produces what we term the “Tate-space”: an ambient ideological environment where motivational rhetoric, aspirational masculinity, and far-right talking points converge. We find that YouTube’s substantial moderation efforts are outpaced by the speed and scale of recommendation-driven circulation and that deplatforming, while symbolically significant, fails to disrupt the cultural and logistical dynamics that sustain Tate’s influence.",
+      "keywords": [],
+      "doi": "10.1177/14614448251409209",
+      "doi_url": "https://doi.org/10.1177/14614448251409209",
+      "url": null,
+      "arxiv_url": null,
+      "pdf_url": null,
+      "publication_date": "2026-01-12",
+      "citation_count": 0,
+      "reference_count": 59,
+      "venue": "New Media &amp; Society",
+      "authors": [
+        "Bernhard Rieder",
+        "Bastian August",
+        "Brogan Latil"
+      ],
+      "subjects": [],
+      "is_open_access": null,
+      "source": "crossref",
+      "confidence_score": 0.8428571428571427
+    }
   }
 }
