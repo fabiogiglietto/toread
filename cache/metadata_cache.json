@@ -2877,5 +2877,32 @@
       "source": "crossref",
       "confidence_score": 0.8428571428571427
     }
+  },
+  "e9ab6226c2a1899a": {
+    "entry_key": "Lieu2025-nl",
+    "entry_title": "Testing the impact of fallacies and contrarian claims in climate change misinformation",
+    "cached_at": "2026-01-14T04:57:47.294737",
+    "metadata": {
+      "abstract": "Abstract Climate misinformation reduces public acceptance of climate change and undermines support for mitigation policies. This study explored the impact of different types of climate misinformation, examining through content‐based and logic‐based frameworks. The content‐based framework was based on a taxonomy of contrarian claims consisting of five categories—it's not real, it's not us, it's not bad, climate solutions won't work and scientists are not reliable. The logic‐based framework examined six rhetorical techniques used in science denial arguments—misrepresentation, false equivalence, oversimplification, red herring, cherry picking and slothful induction. We experimentally tested 30 misinformation examples, crossing five content categories with six fallacies. Participants rated the perceived veracity of misinformation as well as the likelihood of interacting with it. We found no main effect of fallacy on perceived veracity or likelihood to interact but did find a main effect of content category, with the fourth category (climate solutions won't work) perceived as most veracious. We also found that content categories interacted with political ideology, replicating past research into the polarizing effect of climate misinformation. Specifically, the most polarizing categories of misinformation were those targeting climate solutions or attacking climate scientists. Our results highlight the need to prioritize combatting misinformation that targets solutions and scientists.",
+      "keywords": [],
+      "doi": "10.1111/bjop.70049",
+      "doi_url": "https://doi.org/10.1111/bjop.70049",
+      "url": null,
+      "arxiv_url": null,
+      "pdf_url": null,
+      "publication_date": "2025-12-29",
+      "citation_count": 0,
+      "reference_count": 77,
+      "venue": "British Journal of Psychology",
+      "authors": [
+        "Renee Lieu",
+        "Oliver R. Hayes",
+        "John Cook"
+      ],
+      "subjects": [],
+      "is_open_access": null,
+      "source": "crossref",
+      "confidence_score": 0.8374999999999999
+    }
   }
 }
