@@ -2904,5 +2904,31 @@
       "source": "crossref",
       "confidence_score": 0.8374999999999999
     }
+  },
+  "374d46d14bdbc92c": {
+    "entry_key": "Bouchafra2026-ts",
+    "entry_title": "‘My Europe Builds Walls’: A cross-platform visual analysis of the Sweden Democrats’ 2024 EU election campaign",
+    "cached_at": "2026-01-16T05:45:44.310889",
+    "metadata": {
+      "abstract": "This article examines the visual securitising discourse of Sweden Democrats (SD) through a qualitatively centred analysis of the party’s 2024 European Union (EU) election campaign and its official election slogan ‘My Europe Builds Walls: Against Immigration, Against Criminal Gangs, Against Islamists’. Through a comparative, cross-platform multimodal critical discourse analysis (MCDA) of SD’s posts on Facebook, X and TikTok, this article explores the differences in campaign content across platforms, and analyses how these differences provide insights into the party’s understanding of its audiences and the platforms’ respective functionalities. The analysis shows how SD leveraged platform functionalities to balance textual and visual features, repost content, and incorporate hyperlinks on Facebook and X. Using these features, the party posted text-laden, argumentative and seemingly informative posts, which are likely to appeal not only to the customary format of content on the platforms but also to its respective audiences. Yet, although SD had larger followings and much more well-established accounts on both Facebook and X, the party posted the majority of its campaign material on TikTok, primarily in the form of memes. These memes tended to include securitising clips of non-white men engaging in violent protests, vandalism and violence directed towards the local community and law enforcement. We discuss the role these memes play in the SD election campaign and the potential implications such content might have.",
+      "keywords": [],
+      "doi": "10.1177/14614448251408336",
+      "doi_url": "https://doi.org/10.1177/14614448251408336",
+      "url": null,
+      "arxiv_url": null,
+      "pdf_url": null,
+      "publication_date": "2026-01-12",
+      "citation_count": 0,
+      "reference_count": 108,
+      "venue": "New Media &amp; Society",
+      "authors": [
+        "Salma Bouchafra",
+        "Mathilda Åkerlund"
+      ],
+      "subjects": [],
+      "is_open_access": null,
+      "source": "crossref",
+      "confidence_score": 0.86
+    }
   }
 }
