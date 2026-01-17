@@ -208,16 +208,9 @@ class BibTeXParser:
                     entry.discovery_date = cached_date
                     continue
             
-            # This is a new entry - set discovery date
+            # This is a new entry - set discovery date to now (when first seen)
             if entry.discovery_date is None:
-                # For the initial run, set discovery_date to publication_date for existing papers
-                # This assumes all current papers are being "discovered" at their publication date
-                pub_date = self._get_publication_datetime(entry)
-                if pub_date:
-                    entry.discovery_date = pub_date
-                else:
-                    # No publication date available, use current time
-                    entry.discovery_date = datetime.now(timezone.utc)
+                entry.discovery_date = datetime.now(timezone.utc)
                 
                 # Store in cache for future runs
                 if discovery_cache:
