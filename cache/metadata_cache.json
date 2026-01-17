@@ -2930,5 +2930,34 @@
       "source": "crossref",
       "confidence_score": 0.86
     }
+  },
+  "2bc41a22bfa663a6": {
+    "entry_key": "Dubey2026-bl",
+    "entry_title": "Investigating perceived trust and utility of balanced news chatbots among individuals with varying conspiracy beliefs",
+    "cached_at": "2026-01-17T05:41:24.987643",
+    "metadata": {
+      "abstract": null,
+      "keywords": [],
+      "doi": "10.1016/j.chb.2026.108920",
+      "doi_url": "https://doi.org/10.1016/j.chb.2026.108920",
+      "url": null,
+      "arxiv_url": null,
+      "pdf_url": null,
+      "publication_date": "2026",
+      "citation_count": 0,
+      "reference_count": 60,
+      "venue": "Computers in Human Behavior",
+      "authors": [
+        "Shreya Dubey",
+        "Paul E. Ketelaar",
+        "Tilman Dingler",
+        "Hannah K. Peetz",
+        "Hein T. van Schie"
+      ],
+      "subjects": [],
+      "is_open_access": null,
+      "source": "crossref",
+      "confidence_score": 0.8374999999999999
+    }
   }
 }
