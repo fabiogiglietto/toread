@@ -285,11 +285,11 @@
   "c5a7d0326e1f61c6": {
     "entry_key": "Kristensen2025-ni",
     "entry_title": "Platform polarization. Do alternative platforms drive discursive polarization?",
-    "cached_at": "2026-01-10T17:09:16.482772",
+    "cached_at": "2026-01-18T13:03:56.857103",
     "metadata": null,
     "failed": true,
     "failure_reason": "Could not enrich entry: Kristensen2025-ni | No DOI available | Title length: 78 chars | Authors: Kristensen, Jakob Bæk, Kristensen, Jakob Bæk | APIs: Crossref enabled, Semantic Scholar enabled, ArXiv enabled",
-    "last_failure_at": "2026-01-10T17:09:16.482779"
+    "last_failure_at": "2026-01-18T13:03:56.857112"
   },
   "772cd3d38224b24c": {
     "entry_key": "Bruns2025-fz",
@@ -401,11 +401,11 @@
   "65d46046ae1c898f": {
     "entry_key": "Gaw2025-ru",
     "entry_title": "Influence operations as brokerage: Political-economic infrastructures of manipulation in the 2022 Philippine elections",
-    "cached_at": "2026-01-10T17:09:19.253759",
+    "cached_at": "2026-01-18T13:03:59.643296",
     "metadata": null,
     "failed": true,
     "failure_reason": "Could not enrich entry: Gaw2025-ru | No DOI available | Title length: 118 chars | Authors: Gaw, Fatima, Agonos, Mariam Jayne... | APIs: Crossref enabled, Semantic Scholar enabled, ArXiv enabled",
-    "last_failure_at": "2026-01-10T17:09:19.253766"
+    "last_failure_at": "2026-01-18T13:03:59.643306"
   },
   "b9d99ea903d90252": {
     "entry_key": "Arora2025-tx",
@@ -1746,11 +1746,11 @@
   "b41f425da41887a0": {
     "entry_key": "Marwick2025-vx",
     "entry_title": "True costs of misinformation| mountains of evidence: Processual “redpilling” as a Socio-technical effect of disinformation",
-    "cached_at": "2026-01-10T17:09:22.315572",
+    "cached_at": "2026-01-18T13:04:02.677453",
     "metadata": null,
     "failed": true,
     "failure_reason": "Could not enrich entry: Marwick2025-vx | No DOI available | Title length: 122 chars | Authors: Marwick, Alice E, Furl, Katherine | APIs: Crossref enabled, Semantic Scholar enabled, ArXiv enabled",
-    "last_failure_at": "2026-01-10T17:09:22.315579"
+    "last_failure_at": "2026-01-18T13:04:02.677463"
   },
   "ecbad8cc957bc334": {
     "entry_key": "Meher2025-qb",
@@ -2958,6 +2958,32 @@
       "is_open_access": null,
       "source": "crossref",
       "confidence_score": 0.8374999999999999
+    }
+  },
+  "f2c3c073e07cd98e": {
+    "entry_key": "De2026-ld",
+    "entry_title": "The discursive flexibility of changecraft: Platform change discourse in Meta, TikTok, YouTube, and X",
+    "cached_at": "2026-01-18T13:04:04.734862",
+    "metadata": {
+      "abstract": "Social media platforms evolve rapidly. While platform studies have often analyzed specific policy or feature changes, there remains a lack of shared language to conceptualize how platforms themselves represent such changes. In this article, we analyze public communications from Meta, YouTube, X, and TikTok to examine how platforms construct and justify change. We explicate platform evolution as a technical but also deeply discursive process. Platforms frame their transformations in interesting ways, especially if these shifts consolidate power or deepen user dependence. We introduce the concept of changecraft : the strategic discursive practices through which platforms manage, legitimize, and normalize change. Changecraft encompasses the rendering of infrastructural shifts as visible, the framing of ideological pivots as continuity, and the deployment of patchworked updates to subtly reorient platform futures. This framework provides scholars a way to interrogate platform change not just by what changes but by how platforms seek to make change meaningful and acceptable to their publics.",
+      "keywords": [],
+      "doi": "10.1177/29768624251408212",
+      "doi_url": "https://doi.org/10.1177/29768624251408212",
+      "url": null,
+      "arxiv_url": null,
+      "pdf_url": null,
+      "publication_date": "2026",
+      "citation_count": 0,
+      "reference_count": 57,
+      "venue": "Platforms &amp; Society",
+      "authors": [
+        "Ankolika De",
+        "Kelley Cotter"
+      ],
+      "subjects": [],
+      "is_open_access": null,
+      "source": "crossref",
+      "confidence_score": 0.86
     }
   }
 }
