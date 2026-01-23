@@ -3015,5 +3015,50 @@
       "source": "arxiv",
       "confidence_score": 0.7272727272727272
     }
+  },
+  "80bccb19ed8cefb2": {
+    "entry_key": "Schroeder2025-pr",
+    "entry_title": "How malicious AI swarms can threaten democracy",
+    "cached_at": "2026-01-23T06:18:50.751579",
+    "metadata": {
+      "abstract": "Advances in AI portend a new era of sophisticated disinformation operations. While individual AI systems already create convincing—and at times misleading—information, an imminent development is the emergence of malicious AI swarms. These systems can coordinate covertly, infiltrate communities, evade traditional detectors, and run continuous A/B tests, with round-the-clock persistence. The result can include fabricated grassroots consensus, fragmented shared reality, mass harassment, voter micro-suppression or mobilization, contamination of AI training data, and erosion of institutional trust. With increasing vulnerabilities in democratic processes worldwide, we urge a three-pronged response: (1) platform-side defenses—always-on swarm-detection dashboards, pre-election highfidelity swarm-simulation stress-tests, transparency audits, and optional client-side “AI shields” for users; (2) model-side safeguards—standardized persuasion-risk tests, provenance-authenticating passkeys, and watermarking; and (3) system-level oversight—a UN-backed AI Influence Observatory.",
+      "keywords": [],
+      "doi": "10.31219/osf.io/qm9yk_v3",
+      "doi_url": "https://doi.org/10.31219/osf.io/qm9yk_v3",
+      "url": null,
+      "arxiv_url": null,
+      "pdf_url": null,
+      "publication_date": null,
+      "citation_count": 0,
+      "reference_count": 0,
+      "venue": null,
+      "authors": [
+        "Daniel Thilo Schroeder",
+        "Meeyoung Cha",
+        "Andrea Baronchelli",
+        "Nick Bostrom",
+        "Nicholas Christakis",
+        "David Garcia",
+        "Amit Goldenberg",
+        "Yara Kyrychenko",
+        "Kevin Leyton-Brown",
+        "Nina Lutz",
+        "Gary Marcus",
+        "Filippo Menczer",
+        "Gordon Pennycook",
+        "David Gertler Rand",
+        "Frank Schweitzer",
+        "Christopher Summerfield",
+        "Audrey Tang",
+        "Jay Joseph Van Bavel",
+        "Sander van der Linden",
+        "Dawn Song",
+        "Jonas R. Kunst"
+      ],
+      "subjects": [],
+      "is_open_access": null,
+      "source": "crossref",
+      "confidence_score": 0.8119999999999999
+    }
   }
 }
