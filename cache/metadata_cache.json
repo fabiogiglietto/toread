@@ -3060,5 +3060,32 @@
       "source": "crossref",
       "confidence_score": 0.8119999999999999
     }
+  },
+  "c5f27c414108d268": {
+    "entry_key": "Di-Domenico2026-zq",
+    "entry_title": "don't you know that you're toxic? how influencer‐driven misinformation fuels online toxicity",
+    "cached_at": "2026-01-25T09:11:59.687350",
+    "metadata": {
+      "abstract": "ABSTRACT Research on misinformation has focused on message content and cognitive bias, overlooking how source type shapes toxic engagement. This study addresses that gap by showing that influencer‐driven misinformation does not merely increase toxicity: it reconfigures its nature and persistence through relational and social influence mechanisms. Drawing on Source Credibility, Parasocial Interaction, and Social Influence theories, we analyse 101 brand‐related misinformation posts (48,821 comments) across major platforms using a mixed‐method design combining automated toxicity detection, topic modeling, and thematic analysis. Results reveal that influencers amplify toxicity under high engagement, sociopolitical salience, and low pseudonymity conditions, producing distinct patterns such as flame‐bait firestorms and toxic debunking. We identify two influencer‐specific mechanisms: brand‐related misinformation legitimation and community enmeshment, that sustain toxic echo chambers by converting credibility and parasocial bonds into collective antagonism. These findings advance marketing theory by reframing toxicity as a source‐amplified, relational phenomenon, and inform ecosystem‐level interventions structured around publishers, platforms, and people to mitigate influencer‐driven harm.",
+      "keywords": [],
+      "doi": "10.1002/mar.70106",
+      "doi_url": "https://doi.org/10.1002/mar.70106",
+      "url": null,
+      "arxiv_url": null,
+      "pdf_url": null,
+      "publication_date": "2026-01-19",
+      "citation_count": 0,
+      "reference_count": 139,
+      "venue": "Psychology &amp; Marketing",
+      "authors": [
+        "Giandomenico Di Domenico",
+        "Federico Mangió",
+        "Denitsa Dineva"
+      ],
+      "subjects": [],
+      "is_open_access": null,
+      "source": "crossref",
+      "confidence_score": 0.7875
+    }
   }
 }
