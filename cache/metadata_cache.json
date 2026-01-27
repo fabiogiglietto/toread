@@ -285,11 +285,11 @@
   "c5a7d0326e1f61c6": {
     "entry_key": "Kristensen2025-ni",
     "entry_title": "Platform polarization. Do alternative platforms drive discursive polarization?",
-    "cached_at": "2026-01-18T13:03:56.857103",
+    "cached_at": "2026-01-27T05:48:04.215091",
     "metadata": null,
     "failed": true,
     "failure_reason": "Could not enrich entry: Kristensen2025-ni | No DOI available | Title length: 78 chars | Authors: Kristensen, Jakob Bæk, Kristensen, Jakob Bæk | APIs: Crossref enabled, Semantic Scholar enabled, ArXiv enabled",
-    "last_failure_at": "2026-01-18T13:03:56.857112"
+    "last_failure_at": "2026-01-27T05:48:04.215098"
   },
   "772cd3d38224b24c": {
     "entry_key": "Bruns2025-fz",
@@ -401,11 +401,11 @@
   "65d46046ae1c898f": {
     "entry_key": "Gaw2025-ru",
     "entry_title": "Influence operations as brokerage: Political-economic infrastructures of manipulation in the 2022 Philippine elections",
-    "cached_at": "2026-01-18T13:03:59.643296",
+    "cached_at": "2026-01-27T05:48:07.145114",
     "metadata": null,
     "failed": true,
     "failure_reason": "Could not enrich entry: Gaw2025-ru | No DOI available | Title length: 118 chars | Authors: Gaw, Fatima, Agonos, Mariam Jayne... | APIs: Crossref enabled, Semantic Scholar enabled, ArXiv enabled",
-    "last_failure_at": "2026-01-18T13:03:59.643306"
+    "last_failure_at": "2026-01-27T05:48:07.145122"
   },
   "b9d99ea903d90252": {
     "entry_key": "Arora2025-tx",
@@ -1746,11 +1746,11 @@
   "b41f425da41887a0": {
     "entry_key": "Marwick2025-vx",
     "entry_title": "True costs of misinformation| mountains of evidence: Processual “redpilling” as a Socio-technical effect of disinformation",
-    "cached_at": "2026-01-18T13:04:02.677453",
+    "cached_at": "2026-01-27T05:48:10.077187",
     "metadata": null,
     "failed": true,
     "failure_reason": "Could not enrich entry: Marwick2025-vx | No DOI available | Title length: 122 chars | Authors: Marwick, Alice E, Furl, Katherine | APIs: Crossref enabled, Semantic Scholar enabled, ArXiv enabled",
-    "last_failure_at": "2026-01-18T13:04:02.677463"
+    "last_failure_at": "2026-01-27T05:48:10.077194"
   },
   "ecbad8cc957bc334": {
     "entry_key": "Meher2025-qb",
@@ -3086,6 +3086,32 @@
       "is_open_access": null,
       "source": "crossref",
       "confidence_score": 0.7875
+    }
+  },
+  "bb1e983fc3d493b2": {
+    "entry_key": "Hameleers2026-mc",
+    "entry_title": "Beyond textual disinformation: Comparing the effects of textual disinformation to AI-generated and video-based visual disinformation across different issues",
+    "cached_at": "2026-01-27T05:48:11.635065",
+    "metadata": {
+      "abstract": "Although visual and AI-generated disinformation have been associated with alarming political consequences, we currently lack a clear empirical understanding of the effects of different forms of visual disinformation. Against this background, we rely on a pre-registered experimental study in the United States ( N = 982) in which we exposed participants to various modes of textual and visual disinformation on two different issues: The disappearance of flight MH370 and the Russian invasion of Ukraine. Findings show that, for MH370, there was no difference in credibility between textual, AI-generated, or video-based disinformation. Yet, for the Russian invasion of Ukraine, video-based disinformation was perceived as more credible than textual or image-based disinformation. Our findings indicate that the consequences of visual disinformation are context-bound: Especially in the case of polarizing issues, the out-of-context placement of videos can serve as a plausible form of deceptive evidence.",
+      "keywords": [],
+      "doi": "10.1177/14614448251409208",
+      "doi_url": "https://doi.org/10.1177/14614448251409208",
+      "url": null,
+      "arxiv_url": null,
+      "pdf_url": null,
+      "publication_date": "2026-01-23",
+      "citation_count": 0,
+      "reference_count": 30,
+      "venue": "New Media &amp; Society",
+      "authors": [
+        "Michael Hameleers",
+        "Toni van der Meer"
+      ],
+      "subjects": [],
+      "is_open_access": null,
+      "source": "crossref",
+      "confidence_score": 0.9285714285714285
     }
   }
 }
