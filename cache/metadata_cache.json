@@ -3217,5 +3217,32 @@
       "source": "crossref",
       "confidence_score": 0.8176470588235294
     }
+  },
+  "339aaae04490c5e1": {
+    "entry_key": "Renault2025-kv",
+    "entry_title": "@Grok is this true? LLM-powered fact-checking on social media",
+    "cached_at": "2026-01-28T14:00:53.992684",
+    "metadata": {
+      "abstract": "Large language models (LLMs) are increasingly embedded directly into social media platforms, enabling users to request real-time fact-checks of online content. Using an exhaustive dataset of 1,671,841 English-language fact-checking requests made to Grok and Perplexity on X between February and September 2025, we provide the first large-scale empirical analysis of how LLM-based fact-checking operates in the wild. Fact-checking requests comprise 7.6% of all interactions with the LLM bots, and focus primarily on politics, economics, and current events. We document clear partisan asymmetries in usage. Users requesting fact-checks from Grok are much more likely to be Republican than Democratic, while the opposite is true for fact-check requests from Perplexity -- indicating emerging polarization in attitudes toward specific AI models. At the same time, both Democrats and Republicans are more likely to request fact-checks on posts authored by Republicans, and - consistent with prior work using professional fact-checkers and crowd judgments - posts from Republican-leaning accounts are more likely to be rated as inaccurate by both LLMs. Across posts rated by both LLM bots, evaluations from Grok and Perplexity agree 52.6% of the time and strongly disagree (one party rates a claim as true and the other as false) 13.6% of the time. For a sample of 100 fact-checked posts, 54.5% of Grok bot ratings and 57.7% of Perplexity bot ratings agreed with ratings of human fact-checkers, which is significantly lower than the inter-fact-checker agreement rate of 64.0%; but API-access versions of Grok had higher agreement with fact-checkers than did not significantly differ from inter-fact-checker agreement. Finally, in a preregistered survey experiment with 1,592 U.S. participants, exposure to LLM fact-checks meaningfully shifts belief accuracy, with effect sizes comparable to those observed in studies of professional fact-checking. However, responses to Grok fact-checks are polarized by partisanship when model identity is disclosed, whereas responses to Perplexity are not. Together, these findings show that LLM-based fact-checking is rapidly scaling, is generally informative although far from perfect, while also becoming entangled with polarization and partisanship. Our work highlights both the promise and the risks of integrating AI fact-checking into online public discourse.",
+      "keywords": [],
+      "doi": "10.31234/osf.io/85quw_v2",
+      "doi_url": "https://doi.org/10.31234/osf.io/85quw_v2",
+      "url": null,
+      "arxiv_url": null,
+      "pdf_url": null,
+      "publication_date": null,
+      "citation_count": 0,
+      "reference_count": 0,
+      "venue": null,
+      "authors": [
+        "Thomas Renault",
+        "Mohsen Mosleh",
+        "David Gertler Rand"
+      ],
+      "subjects": [],
+      "is_open_access": null,
+      "source": "crossref",
+      "confidence_score": 0.8749999999999999
+    }
   }
 }
