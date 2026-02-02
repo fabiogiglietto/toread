@@ -3277,5 +3277,33 @@
       "source": "url",
       "confidence_score": null
     }
+  },
+  "14e5fc755a52bae7": {
+    "entry_key": "Kim2026-wg",
+    "entry_title": "Targeted digital voter suppression efforts likely decrease voter turnout",
+    "cached_at": "2026-02-02T06:36:35.202305",
+    "metadata": {
+      "abstract": "In light of continued foreign interference in the US presidential elections, where undisclosed digital voter suppression advertising has been deployed, this study addresses the questions of who is exposed to these ads and whether and how such exposure influences voter turnout. Using a sample that resembles the US voting-age population, the study directly measures each individual’s ad exposure through a user-level real-time ad tracking tool, which is merged with the same individual’s survey responses to identify voter suppression content and its targeting patterns. By further matching individual-level exposure to voter suppression ads with the same individual’s verified voter turnout records, the study estimates the effects of voter suppression on actual turnout. The study findings from the 2016 US Presidential Election reveal clear geo-racial targeting patterns in voter suppression: non-Whites residing in the racial minority counties of battleground states were exposed to substantially more voter suppression ads than their counterparts. Moreover, exposure to voter suppression ads was associated with decreases in voter turnout at the population level, albeit small. The sharpest declines were observed among non-Whites residing in minority counties of battleground states, suggesting that the intensified turnout suppression among the targeted segments of the electorate may have played a role in shaping turnout.",
+      "keywords": [],
+      "doi": "10.1073/pnas.2519944123",
+      "doi_url": "https://doi.org/10.1073/pnas.2519944123",
+      "url": null,
+      "arxiv_url": null,
+      "pdf_url": null,
+      "publication_date": "2026-02-03",
+      "citation_count": 0,
+      "reference_count": 55,
+      "venue": "Proceedings of the National Academy of Sciences",
+      "authors": [
+        "Young Mie Kim",
+        "Ross Dahlke",
+        "Hyebin Song",
+        "Richard Heinrich"
+      ],
+      "subjects": [],
+      "is_open_access": null,
+      "source": "crossref",
+      "confidence_score": 0.83
+    }
   }
 }
