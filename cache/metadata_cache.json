@@ -2,64 +2,29 @@
   "c5a7d0326e1f61c6": {
     "entry_key": "Kristensen2025-ni",
     "entry_title": "Platform polarization. Do alternative platforms drive discursive polarization?",
-    "cached_at": "2026-01-27T05:48:04.215091",
+    "cached_at": "2026-02-03T13:55:49.430072",
     "metadata": null,
     "failed": true,
     "failure_reason": "Could not enrich entry: Kristensen2025-ni | No DOI available | Title length: 78 chars | Authors: Kristensen, Jakob Bæk, Kristensen, Jakob Bæk | APIs: Crossref enabled, Semantic Scholar enabled, ArXiv enabled",
-    "last_failure_at": "2026-01-27T05:48:04.215098"
+    "last_failure_at": "2026-02-03T13:55:49.430079"
   },
   "65d46046ae1c898f": {
     "entry_key": "Gaw2025-ru",
     "entry_title": "Influence operations as brokerage: Political-economic infrastructures of manipulation in the 2022 Philippine elections",
-    "cached_at": "2026-01-27T05:48:07.145114",
+    "cached_at": "2026-02-03T13:55:55.786211",
     "metadata": null,
     "failed": true,
     "failure_reason": "Could not enrich entry: Gaw2025-ru | No DOI available | Title length: 118 chars | Authors: Gaw, Fatima, Agonos, Mariam Jayne... | APIs: Crossref enabled, Semantic Scholar enabled, ArXiv enabled",
-    "last_failure_at": "2026-01-27T05:48:07.145122"
+    "last_failure_at": "2026-02-03T13:55:55.786218"
   },
   "b41f425da41887a0": {
     "entry_key": "Marwick2025-vx",
     "entry_title": "True costs of misinformation| mountains of evidence: Processual “redpilling” as a Socio-technical effect of disinformation",
-    "cached_at": "2026-01-27T05:48:10.077187",
+    "cached_at": "2026-02-03T13:55:52.284306",
     "metadata": null,
     "failed": true,
     "failure_reason": "Could not enrich entry: Marwick2025-vx | No DOI available | Title length: 122 chars | Authors: Marwick, Alice E, Furl, Katherine | APIs: Crossref enabled, Semantic Scholar enabled, ArXiv enabled",
-    "last_failure_at": "2026-01-27T05:48:10.077194"
-  },
-  "df48b78c330b92b4": {
-    "entry_key": "Pierri2025-hm",
-    "entry_title": "Research opportunities and challenges of the EU's Digital Services Act",
-    "cached_at": "2026-01-03T09:59:41.485103",
-    "metadata": {
-      "abstract": "The Digital Services Act (DSA) introduced by the European Union in 2022 offers a landmark framework for platform transparency, with Article 40 enabling vetted researchers to access data from major online platforms. Yet significant legal, technical, and organizational barriers still hinder effective research on systemic online risks. This piece outlines the key challenges emerging from the Article 40 process and proposes practical measures to ensure that the DSA fulfills its transparency and accountability goals.",
-      "keywords": [],
-      "doi": null,
-      "doi_url": null,
-      "url": null,
-      "arxiv_url": "http://arxiv.org/abs/2512.14223v1",
-      "pdf_url": "https://arxiv.org/pdf/2512.14223v1",
-      "publication_date": "2025-12-16",
-      "citation_count": null,
-      "reference_count": null,
-      "venue": null,
-      "authors": [
-        "Francesco Pierri",
-        "Theo Araujo",
-        "Sanne Kruikemeier",
-        "Philipp Lorenz-Spreen",
-        "Mariek M. P. Vanden Abeele",
-        "Laura Vandenbosch",
-        "Joana Gonçalves-Sa",
-        "Przemyslaw A. Grabowicz"
-      ],
-      "subjects": [
-        "cs.CY",
-        "cs.SI"
-      ],
-      "is_open_access": true,
-      "source": "arxiv",
-      "confidence_score": 0.7142857142857142
-    }
+    "last_failure_at": "2026-02-03T13:55:52.284314"
   },
   "a1200ca53e8d7d7c": {
     "entry_key": "Copland2025-em",
@@ -3304,6 +3269,68 @@
       "is_open_access": null,
       "source": "crossref",
       "confidence_score": 0.83
+    }
+  },
+  "df48b78c330b92b4": {
+    "entry_key": "Pierri2025-hm",
+    "entry_title": "Research opportunities and challenges of the EU's Digital Services Act",
+    "cached_at": "2026-02-03T13:55:44.958095",
+    "metadata": {
+      "abstract": "The Digital Services Act (DSA) introduced by the European Union in 2022 offers a landmark framework for platform transparency, with Article 40 enabling vetted researchers to access data from major online platforms. Yet significant legal, technical, and organizational barriers still hinder effective research on systemic online risks. This piece outlines the key challenges emerging from the Article 40 process and proposes practical measures to ensure that the DSA fulfills its transparency and accountability goals.",
+      "keywords": [],
+      "doi": null,
+      "doi_url": null,
+      "url": null,
+      "arxiv_url": "http://arxiv.org/abs/2512.14223v1",
+      "pdf_url": "https://arxiv.org/pdf/2512.14223v1",
+      "publication_date": "2025-12-16",
+      "citation_count": null,
+      "reference_count": null,
+      "venue": null,
+      "authors": [
+        "Francesco Pierri",
+        "Theo Araujo",
+        "Sanne Kruikemeier",
+        "Philipp Lorenz-Spreen",
+        "Mariek M. P. Vanden Abeele",
+        "Laura Vandenbosch",
+        "Joana Gonçalves-Sa",
+        "Przemyslaw A. Grabowicz"
+      ],
+      "subjects": [
+        "cs.CY",
+        "cs.SI"
+      ],
+      "is_open_access": true,
+      "source": "arxiv",
+      "confidence_score": 0.7142857142857142
+    }
+  },
+  "26dd34dc757b8317": {
+    "entry_key": "Hollingshead2026-vx",
+    "entry_title": "Same platform, different stories: TikTok and the battle over immigration narratives",
+    "cached_at": "2026-02-03T13:55:45.819694",
+    "metadata": {
+      "abstract": "In an era defined by overlapping global crises, immigration has become a key fault line in what scholars term a “polycrisis.” Within this context, social media platforms serve as digital battlegrounds for competing narratives about immigration, with TikTok occupying a distinct and understudied niche. This article examines how immigration-related content in Canada is framed on TikTok and how the platform’s logic of mimesis and interactivity, grounded in its affordances, shape immigration discourse. From a dataset of 5,305 public TikTok videos containing immigration-related terms and hashtags, we selected a sample of 344 English-language videos posted in 2025, each with over 100,000 plays and likely shown to Canadian users. Through a mixed-methods content analysis, we found that, contrary to expectations, the content leaned toward positive portrayals of immigration, accounting for 41% of the sample. Furthermore, despite expressing differing perspectives on immigration, users used TikTok’s affordances in comparable ways. That is, the same affordances that can support immigrants’ information seeking and sense of belonging through practical guidance and relatable storytelling, respectively, can be weaponized to amplify xenophobia by way of manipulated statistics and racist humour performed in skits and AI-generated videos. This highlights how TikTok’s affordances can simultaneously support digital inclusion and community building while also enabling exclusion and hostility. The findings, although rooted in Canada, hold broader relevance for understanding how short-video platforms mediate contentious issues across digitally connected societies.",
+      "keywords": [],
+      "doi": "10.17645/mac.11409",
+      "doi_url": "https://doi.org/10.17645/mac.11409",
+      "url": null,
+      "arxiv_url": null,
+      "pdf_url": null,
+      "publication_date": "2026-01-28",
+      "citation_count": 0,
+      "reference_count": 61,
+      "venue": "Media and Communication",
+      "authors": [
+        "William Hollingshead",
+        "Anatoliy Gruzd",
+        "Philip Mai"
+      ],
+      "subjects": [],
+      "is_open_access": null,
+      "source": "crossref",
+      "confidence_score": 0.8428571428571427
     }
   }
 }
