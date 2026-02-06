@@ -26,33 +26,6 @@
     "failure_reason": "Could not enrich entry: Marwick2025-vx | No DOI available | Title length: 122 chars | Authors: Marwick, Alice E, Furl, Katherine | APIs: Crossref enabled, Semantic Scholar enabled, ArXiv enabled",
     "last_failure_at": "2026-02-03T13:55:52.284314"
   },
-  "7a324346d6db24a6": {
-    "entry_key": "Knupfer2025-vt",
-    "entry_title": "The logic of connective faction: How digitally networked elites and hyper-partisan media radicalize politics",
-    "cached_at": "2026-01-05T19:13:02.568149",
-    "metadata": {
-      "abstract": null,
-      "keywords": [],
-      "doi": "10.1080/10584609.2025.2604708",
-      "doi_url": "https://doi.org/10.1080/10584609.2025.2604708",
-      "url": null,
-      "arxiv_url": null,
-      "pdf_url": null,
-      "publication_date": "2025-12-23",
-      "citation_count": 0,
-      "reference_count": 114,
-      "venue": "Political Communication",
-      "authors": [
-        "Curd B. Knüpfer",
-        "Yunkang Yang",
-        "Mike Cowburn"
-      ],
-      "subjects": [],
-      "is_open_access": null,
-      "source": "crossref",
-      "confidence_score": 0.8374999999999999
-    }
-  },
   "dc0cfdf6e324df5e": {
     "entry_key": "Arceneaux2026-xk",
     "entry_title": "Social bots as agenda-builders: Evaluating the impact of algorithmic amplification on organizational messaging",
@@ -3362,6 +3335,58 @@
       "is_open_access": true,
       "source": "arxiv",
       "confidence_score": 0.7749999999999999
+    }
+  },
+  "840d61aac82e11a3": {
+    "entry_key": "Lewandowsky2026-ob",
+    "entry_title": "Internet platforms must be held accountable for their actions",
+    "cached_at": "2026-02-06T12:31:50.455301",
+    "metadata": {
+      "abstract": null,
+      "keywords": [],
+      "doi": "10.1126/science.aee9835",
+      "doi_url": "https://doi.org/10.1126/science.aee9835",
+      "url": null,
+      "arxiv_url": null,
+      "pdf_url": null,
+      "publication_date": "2026-02-05",
+      "citation_count": 0,
+      "reference_count": 0,
+      "venue": "Science",
+      "authors": [
+        "Stephan Lewandowsky"
+      ],
+      "subjects": [],
+      "is_open_access": null,
+      "source": "crossref",
+      "confidence_score": 0.8999999999999999
+    }
+  },
+  "7a324346d6db24a6": {
+    "entry_key": "Knupfer2025-vt",
+    "entry_title": "The logic of connective faction: How digitally networked elites and hyper-partisan media radicalize politics",
+    "cached_at": "2026-02-06T12:31:53.299851",
+    "metadata": {
+      "abstract": null,
+      "keywords": [],
+      "doi": "10.1080/10584609.2025.2604708",
+      "doi_url": "https://doi.org/10.1080/10584609.2025.2604708",
+      "url": null,
+      "arxiv_url": null,
+      "pdf_url": null,
+      "publication_date": "2025-12-23",
+      "citation_count": 0,
+      "reference_count": 114,
+      "venue": "Political Communication",
+      "authors": [
+        "Curd B. Knüpfer",
+        "Yunkang Yang",
+        "Mike Cowburn"
+      ],
+      "subjects": [],
+      "is_open_access": null,
+      "source": "crossref",
+      "confidence_score": 0.8374999999999999
     }
   }
 }
