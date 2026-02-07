@@ -3388,5 +3388,32 @@
       "source": "crossref",
       "confidence_score": 0.8374999999999999
     }
+  },
+  "a8663d8c2d65801d": {
+    "entry_key": "Bollenbacher2026-vz",
+    "entry_title": "Effects of antivaccine tweets on COVID-19 vaccinations, cases, and deaths",
+    "cached_at": "2026-02-07T01:01:17.302422",
+    "metadata": {
+      "abstract": "Abstract Despite the wide availability of COVID-19 vaccines in the United States and their effectiveness in reducing hospitalizations and mortality during the pandemic, a majority of Americans chose not to be vaccinated during 2021. Recent work shows that vaccine misinformation affects intentions in controlled settings, but does not link it to real-world vaccination rates. Here, we present observational evidence of a causal relationship between exposure to antivaccine content and vaccination rates, and estimate the size of this effect. We present a compartmental epidemic model that includes vaccination, vaccine hesitancy, and exposure to antivaccine content. We fit the model to data to determine that a geographical pattern of exposure to online antivaccine content across US counties explains reduced vaccine uptake in the same counties. We find observational evidence that exposure to antivaccine content on Twitter caused about 14,000 people to refuse vaccination between February and August 2021 in the US, resulting in at least 545 additional cases and 8 additional deaths. This work provides a methodology for linking online speech with offline epidemic outcomes. Our findings should inform social media moderation policy as well as public health interventions.",
+      "keywords": [],
+      "doi": "10.1140/epjds/s13688-025-00606-1",
+      "doi_url": "https://doi.org/10.1140/epjds/s13688-025-00606-1",
+      "url": null,
+      "arxiv_url": null,
+      "pdf_url": null,
+      "publication_date": "2026-01-07",
+      "citation_count": 0,
+      "reference_count": 44,
+      "venue": "EPJ Data Science",
+      "authors": [
+        "John Bollenbacher",
+        "Filippo Menczer",
+        "John Bryden"
+      ],
+      "subjects": [],
+      "is_open_access": null,
+      "source": "crossref",
+      "confidence_score": 0.8428571428571427
+    }
   }
 }
