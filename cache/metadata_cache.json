@@ -26,35 +26,6 @@
     "failure_reason": "Could not enrich entry: Marwick2025-vx | No DOI available | Title length: 122 chars | Authors: Marwick, Alice E, Furl, Katherine | APIs: Crossref enabled, Semantic Scholar enabled, ArXiv enabled",
     "last_failure_at": "2026-02-03T13:55:52.284314"
   },
-  "dc0cfdf6e324df5e": {
-    "entry_key": "Arceneaux2026-xk",
-    "entry_title": "Social bots as agenda-builders: Evaluating the impact of algorithmic amplification on organizational messaging",
-    "cached_at": "2026-01-08T06:18:15.805937",
-    "metadata": {
-      "abstract": null,
-      "keywords": [],
-      "doi": "10.1080/1062726x.2025.2606676",
-      "doi_url": "https://doi.org/10.1080/1062726x.2025.2606676",
-      "url": null,
-      "arxiv_url": null,
-      "pdf_url": null,
-      "publication_date": "2026-01-04",
-      "citation_count": 0,
-      "reference_count": 103,
-      "venue": "Journal of Public Relations Research",
-      "authors": [
-        "Phillip Arceneaux",
-        "Joshua Anderson",
-        "Josephine Lukito",
-        "Mansi Shah",
-        "Spiro Kiousis"
-      ],
-      "subjects": [],
-      "is_open_access": null,
-      "source": "crossref",
-      "confidence_score": 0.8272727272727272
-    }
-  },
   "aa7cd706239eb8b9": {
     "entry_key": "Larsson2026-ro",
     "entry_title": "“Meet the new boss – Same as the old boss”: A longitudinal study of political post sentiment and Facebook engagement",
@@ -3414,6 +3385,94 @@
       "is_open_access": null,
       "source": "crossref",
       "confidence_score": 0.8428571428571427
+    }
+  },
+  "dc0cfdf6e324df5e": {
+    "entry_key": "Arceneaux2026-xk",
+    "entry_title": "Social bots as agenda-builders: Evaluating the impact of algorithmic amplification on organizational messaging",
+    "cached_at": "2026-02-08T18:59:43.848192",
+    "metadata": {
+      "abstract": null,
+      "keywords": [],
+      "doi": "10.1080/1062726x.2025.2606676",
+      "doi_url": "https://doi.org/10.1080/1062726x.2025.2606676",
+      "url": null,
+      "arxiv_url": null,
+      "pdf_url": null,
+      "publication_date": "2026-01-04",
+      "citation_count": 0,
+      "reference_count": 103,
+      "venue": "Journal of Public Relations Research",
+      "authors": [
+        "Phillip Arceneaux",
+        "Joshua Anderson",
+        "Josephine Lukito",
+        "Mansi Shah",
+        "Spiro Kiousis"
+      ],
+      "subjects": [],
+      "is_open_access": null,
+      "source": "crossref",
+      "confidence_score": 0.8272727272727272
+    }
+  },
+  "9318d8da1336a5f7": {
+    "entry_key": "Szabo2026-rd",
+    "entry_title": "Conversational Inoculation to enhance resistance to misinformation",
+    "cached_at": "2026-02-08T18:59:44.335143",
+    "metadata": {
+      "abstract": "Proliferation of misinformation is a globally acknowledged problem. Cognitive Inoculation helps build resistance to different forms of persuasion, such as misinformation. We investigate Conversational Inoculation, a method to help people build resistance to misinformation through dynamic conversations with a chatbot. We built a Web-based system to implement the method, and conducted a within-subject user experiment to compare it with two traditional inoculation methods. Our results validate Conversational Inoculation as a viable novel method, and show how it was able to enhance participants' resistance to misinformation. A qualitative analysis of the conversations between participants and the chatbot reveal independence and trust as factors that boosted the efficiency of Conversational Inoculation, and friction of interaction as a factor hindering it. We discuss the opportunities and challenges of using Conversational Inoculation to combat misinformation. Our work contributes a timely investigation and a promising research direction in scalable ways to combat misinformation.",
+      "keywords": [],
+      "doi": "10.1145/3772318.379095",
+      "doi_url": "https://doi.org/10.1145/3772318.379095",
+      "url": null,
+      "arxiv_url": "http://arxiv.org/abs/2601.22394v1",
+      "pdf_url": "https://arxiv.org/pdf/2601.22394v1",
+      "publication_date": "2026-01-29",
+      "citation_count": null,
+      "reference_count": null,
+      "venue": null,
+      "authors": [
+        "Dániel Szabó",
+        "Chi-Lan Yang",
+        "Aku Visuri",
+        "Jonas Oppenlaender",
+        "Bharathi Sekar",
+        "Koji Yatani",
+        "Simo Hosio"
+      ],
+      "subjects": [
+        "cs.HC"
+      ],
+      "is_open_access": true,
+      "source": "arxiv",
+      "confidence_score": 0.72
+    }
+  },
+  "58a00efe5577e253": {
+    "entry_key": "Rohrbach2026-rc",
+    "entry_title": "Conspiracy in the making: The role of journalistic strategies in the formation of new conspiracy beliefs",
+    "cached_at": "2026-02-08T18:59:46.621904",
+    "metadata": {
+      "abstract": null,
+      "keywords": [],
+      "doi": "10.1080/1461670x.2026.2623882",
+      "doi_url": "https://doi.org/10.1080/1461670x.2026.2623882",
+      "url": null,
+      "arxiv_url": null,
+      "pdf_url": null,
+      "publication_date": "2026",
+      "citation_count": 0,
+      "reference_count": 78,
+      "venue": "Journalism Studies",
+      "authors": [
+        "Tobias Rohrbach",
+        "Chiara Valli"
+      ],
+      "subjects": [],
+      "is_open_access": null,
+      "source": "crossref",
+      "confidence_score": 0.86
     }
   }
 }
