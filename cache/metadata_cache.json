@@ -3474,5 +3474,31 @@
       "source": "crossref",
       "confidence_score": 0.86
     }
+  },
+  "180162f4fddd68af": {
+    "entry_key": "Graham2026-fb",
+    "entry_title": "On the Internet no-one knows you’re not a bot: ‘Botting’ on Reddit as participatory culture",
+    "cached_at": "2026-02-08T20:48:50.142902",
+    "metadata": {
+      "abstract": "Repetitive online communication is often labelled a ‘bot problem’ by platforms, policymakers and users. However, repetitive posting does not exclusively indicate automation; humans also engage in bot-like posting for various purposes. We adopt the term ‘botting’ to describe repetitive posting enacted through manual, semi-automated, or fully automated means. While emerging research has linked manual botting practices to commercial or fame-seeking motivations, we extend this scholarship by examining botting on Reddit – a pseudonymous platform that lacks the affordances typically associated with monetisation or personal branding. Through a mixed-methods analysis, we examine a case study in which mass-scale, repetitive posting of the mushroom emoji emerged as ‘in-group’ behaviour within Reddit’s participatory culture, prompting a performative counterpublic response. Our findings challenge the binary between human and automated posting, and underscore the importance of situating research on AI-generated and automated content within the cultural and contextual frameworks that shape its production and reception.",
+      "keywords": [],
+      "doi": "10.1177/14614448251409210",
+      "doi_url": "https://doi.org/10.1177/14614448251409210",
+      "url": null,
+      "arxiv_url": null,
+      "pdf_url": null,
+      "publication_date": "2026-02-04",
+      "citation_count": 0,
+      "reference_count": 71,
+      "venue": "New Media &amp; Society",
+      "authors": [
+        "Timothy Graham",
+        "Dominique Carlon"
+      ],
+      "subjects": [],
+      "is_open_access": null,
+      "source": "crossref",
+      "confidence_score": 0.86
+    }
   }
 }
