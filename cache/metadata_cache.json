@@ -3500,5 +3500,34 @@
       "source": "crossref",
       "confidence_score": 0.86
     }
+  },
+  "728f9dde87c89f86": {
+    "entry_key": "van-der-Linden2026-jt",
+    "entry_title": "Prebunking misinformation techniques in social media feeds: Results from an Instagram field study",
+    "cached_at": "2026-02-09T06:52:59.374633",
+    "metadata": {
+      "abstract": "Boosting psychological defences against misleading content online is an active area of research, but transition from the lab to real-world uptake remains a challenge. We developed a 19-second prebunking video about emotionally manipulative content and showed it as a Story Feed ad to N = 375,597 Instagram users in the United Kingdom. Using an innovative method leveraging Instagram’s quiz functionality (N = 806), we found that treatment group users were 21 percentage points better than controls at identifying manipulation in a news headline, with effects persisting for five months. Treated users were also more likely to click on a link to learn more. We outline how inoculation campaigns can be scaled in real-world social media feeds.",
+      "keywords": [],
+      "doi": "10.37016/mr-2020-193",
+      "doi_url": "https://doi.org/10.37016/mr-2020-193",
+      "url": null,
+      "arxiv_url": null,
+      "pdf_url": null,
+      "publication_date": "2026-01-22",
+      "citation_count": 0,
+      "reference_count": 49,
+      "venue": "Harvard Kennedy School Misinformation Review",
+      "authors": [
+        "Sander van der Linden",
+        "Debra Louison-Lavoy",
+        "Nicholas Blazer",
+        "Nancy S. Noble",
+        "Jon Roozenbeek"
+      ],
+      "subjects": [],
+      "is_open_access": null,
+      "source": "crossref",
+      "confidence_score": 0.84
+    }
   }
 }
