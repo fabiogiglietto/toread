@@ -26,31 +26,6 @@
     "failure_reason": "Could not enrich entry: Marwick2025-vx | No DOI available | Title length: 122 chars | Authors: Marwick, Alice E, Furl, Katherine | APIs: Crossref enabled, Semantic Scholar enabled, ArXiv enabled",
     "last_failure_at": "2026-02-03T13:55:52.284314"
   },
-  "aa7cd706239eb8b9": {
-    "entry_key": "Larsson2026-ro",
-    "entry_title": "“Meet the new boss – Same as the old boss”: A longitudinal study of political post sentiment and Facebook engagement",
-    "cached_at": "2026-01-10T17:09:23.953744",
-    "metadata": {
-      "abstract": "This study investigates the dynamics of online political communication on Facebook, focusing on the Facebook posts made by the Norwegian Progress Party and its recent leaders, Siv Jensen and Sylvi Listhaug, over a decade-long period. Answering the call for longitudinal insights into political communication, we utilize a novel hybrid content analysis approach combining large language models (LLMs) and human classification, to assess the sentiment of Facebook posts — categorized as negative, positive, or neutral. Moreover, we assess the levels of engagement reached by posts featuring different sentiment. Our analysis reveals increased negative sentiment and engagement over time, particularly under Listhaug’s leadership, confirming the hypothesis that negative content drives higher engagement. Posts with negative sentiment consistently garnered more shares and comments, reflecting the strategic value of negativity in amplifying political messages. However, likes were more frequently associated with positive content, suggesting more nuanced engagement patterns. These findings contribute to our understanding the evolving landscape of digital politicking, highlighting the interplay between political actors’ communication strategies and audience engagement.",
-      "keywords": [],
-      "doi": "10.5210/fm.v31i1.14448",
-      "doi_url": "https://doi.org/10.5210/fm.v31i1.14448",
-      "url": null,
-      "arxiv_url": null,
-      "pdf_url": null,
-      "publication_date": "2026-01-08",
-      "citation_count": 0,
-      "reference_count": 0,
-      "venue": "First Monday",
-      "authors": [
-        "Anders Olof Larsson"
-      ],
-      "subjects": [],
-      "is_open_access": null,
-      "source": "crossref",
-      "confidence_score": 0.95
-    }
-  },
   "72956432e72418ef": {
     "entry_key": "Poliakoff2026-fa",
     "entry_title": "Prigozhin’s propaganda team: The st Petersburg internet research agency (2013–2021)",
@@ -3528,6 +3503,59 @@
       "is_open_access": null,
       "source": "crossref",
       "confidence_score": 0.84
+    }
+  },
+  "b14b30a2e84c11b8": {
+    "entry_key": "Lyons2026-ca",
+    "entry_title": "Exposure to low-credibility online health content is limited and is concentrated among older adults",
+    "cached_at": "2026-02-10T06:52:52.937738",
+    "metadata": {
+      "abstract": null,
+      "keywords": [],
+      "doi": "10.1038/s43587-025-01059-x",
+      "doi_url": "https://doi.org/10.1038/s43587-025-01059-x",
+      "url": null,
+      "arxiv_url": null,
+      "pdf_url": null,
+      "publication_date": "2026-02-04",
+      "citation_count": 0,
+      "reference_count": 31,
+      "venue": "Nature Aging",
+      "authors": [
+        "Benjamin Lyons",
+        "Andy J. King",
+        "Rebecca L. Barter",
+        "Kimberly A. Kaphingst"
+      ],
+      "subjects": [],
+      "is_open_access": null,
+      "source": "crossref",
+      "confidence_score": 0.825
+    }
+  },
+  "aa7cd706239eb8b9": {
+    "entry_key": "Larsson2026-ro",
+    "entry_title": "“Meet the new boss – Same as the old boss”: A longitudinal study of political post sentiment and Facebook engagement",
+    "cached_at": "2026-02-10T06:52:56.086142",
+    "metadata": {
+      "abstract": "This study investigates the dynamics of online political communication on Facebook, focusing on the Facebook posts made by the Norwegian Progress Party and its recent leaders, Siv Jensen and Sylvi Listhaug, over a decade-long period. Answering the call for longitudinal insights into political communication, we utilize a novel hybrid content analysis approach combining large language models (LLMs) and human classification, to assess the sentiment of Facebook posts — categorized as negative, positive, or neutral. Moreover, we assess the levels of engagement reached by posts featuring different sentiment. Our analysis reveals increased negative sentiment and engagement over time, particularly under Listhaug’s leadership, confirming the hypothesis that negative content drives higher engagement. Posts with negative sentiment consistently garnered more shares and comments, reflecting the strategic value of negativity in amplifying political messages. However, likes were more frequently associated with positive content, suggesting more nuanced engagement patterns. These findings contribute to our understanding the evolving landscape of digital politicking, highlighting the interplay between political actors’ communication strategies and audience engagement.",
+      "keywords": [],
+      "doi": "10.5210/fm.v31i1.14448",
+      "doi_url": "https://doi.org/10.5210/fm.v31i1.14448",
+      "url": null,
+      "arxiv_url": null,
+      "pdf_url": null,
+      "publication_date": "2026-01-08",
+      "citation_count": 0,
+      "reference_count": 0,
+      "venue": "First Monday",
+      "authors": [
+        "Anders Olof Larsson"
+      ],
+      "subjects": [],
+      "is_open_access": null,
+      "source": "crossref",
+      "confidence_score": 0.95
     }
   }
 }
