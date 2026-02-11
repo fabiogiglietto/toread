@@ -2,55 +2,29 @@
   "c5a7d0326e1f61c6": {
     "entry_key": "Kristensen2025-ni",
     "entry_title": "Platform polarization. Do alternative platforms drive discursive polarization?",
-    "cached_at": "2026-02-03T13:55:49.430072",
+    "cached_at": "2026-02-11T06:01:26.905377",
     "metadata": null,
     "failed": true,
     "failure_reason": "Could not enrich entry: Kristensen2025-ni | No DOI available | Title length: 78 chars | Authors: Kristensen, Jakob Bæk, Kristensen, Jakob Bæk | APIs: Crossref enabled, Semantic Scholar enabled, ArXiv enabled",
-    "last_failure_at": "2026-02-03T13:55:49.430079"
+    "last_failure_at": "2026-02-11T06:01:26.905384"
   },
   "65d46046ae1c898f": {
     "entry_key": "Gaw2025-ru",
     "entry_title": "Influence operations as brokerage: Political-economic infrastructures of manipulation in the 2022 Philippine elections",
-    "cached_at": "2026-02-03T13:55:55.786211",
+    "cached_at": "2026-02-11T06:01:32.910234",
     "metadata": null,
     "failed": true,
     "failure_reason": "Could not enrich entry: Gaw2025-ru | No DOI available | Title length: 118 chars | Authors: Gaw, Fatima, Agonos, Mariam Jayne... | APIs: Crossref enabled, Semantic Scholar enabled, ArXiv enabled",
-    "last_failure_at": "2026-02-03T13:55:55.786218"
+    "last_failure_at": "2026-02-11T06:01:32.910242"
   },
   "b41f425da41887a0": {
     "entry_key": "Marwick2025-vx",
     "entry_title": "True costs of misinformation| mountains of evidence: Processual “redpilling” as a Socio-technical effect of disinformation",
-    "cached_at": "2026-02-03T13:55:52.284306",
+    "cached_at": "2026-02-11T06:01:29.848227",
     "metadata": null,
     "failed": true,
     "failure_reason": "Could not enrich entry: Marwick2025-vx | No DOI available | Title length: 122 chars | Authors: Marwick, Alice E, Furl, Katherine | APIs: Crossref enabled, Semantic Scholar enabled, ArXiv enabled",
-    "last_failure_at": "2026-02-03T13:55:52.284314"
-  },
-  "72956432e72418ef": {
-    "entry_key": "Poliakoff2026-fa",
-    "entry_title": "Prigozhin’s propaganda team: The st Petersburg internet research agency (2013–2021)",
-    "cached_at": "2026-01-11T08:45:23.365792",
-    "metadata": {
-      "abstract": null,
-      "keywords": [],
-      "doi": "10.1080/09668136.2025.2588334",
-      "doi_url": "https://doi.org/10.1080/09668136.2025.2588334",
-      "url": null,
-      "arxiv_url": null,
-      "pdf_url": null,
-      "publication_date": "2026-01-08",
-      "citation_count": 0,
-      "reference_count": 51,
-      "venue": "Europe-Asia Studies",
-      "authors": [
-        "Serge Poliakoff",
-        "Florian Toepfl"
-      ],
-      "subjects": [],
-      "is_open_access": null,
-      "source": "crossref",
-      "confidence_score": 0.86
-    }
+    "last_failure_at": "2026-02-11T06:01:29.848235"
   },
   "70df243b9adbd73e": {
     "entry_key": "Iris2026-pg",
@@ -3556,6 +3530,59 @@
       "is_open_access": null,
       "source": "crossref",
       "confidence_score": 0.95
+    }
+  },
+  "72956432e72418ef": {
+    "entry_key": "Poliakoff2026-fa",
+    "entry_title": "Prigozhin’s propaganda team: The st Petersburg internet research agency (2013–2021)",
+    "cached_at": "2026-02-11T06:01:20.064296",
+    "metadata": {
+      "abstract": null,
+      "keywords": [],
+      "doi": "10.1080/09668136.2025.2588334",
+      "doi_url": "https://doi.org/10.1080/09668136.2025.2588334",
+      "url": null,
+      "arxiv_url": null,
+      "pdf_url": null,
+      "publication_date": "2026-01-02",
+      "citation_count": 0,
+      "reference_count": 51,
+      "venue": "Europe-Asia Studies",
+      "authors": [
+        "Serge Poliakoff",
+        "Florian Toepfl"
+      ],
+      "subjects": [],
+      "is_open_access": null,
+      "source": "crossref",
+      "confidence_score": 0.86
+    }
+  },
+  "0d7010138f1044be": {
+    "entry_key": "Yoo2026-ev",
+    "entry_title": "The role of the term “fake news” in U.s. alternative media: Shaping political discourse and hyperpartisanship",
+    "cached_at": "2026-02-11T06:01:22.995473",
+    "metadata": {
+      "abstract": "This study examines how the term “fake news” is strategically deployed in U.S. alternative media by analyzing Newsmax and Occupy Democrats as right- and left-leaning outlets. Drawing on Hallin’s sphere model and Egelhofer et al.’s coding categories, it uses manual content analysis and latent Dirichlet allocation topic modeling to identify rhetorical functions and patterns. Findings show that the term “fake news” functions mainly as a weaponized label to delegitimize opponents rather than describe misinformation. The results show how alternative media redraw boundaries between consensus, controversy, and deviance, underscoring their role in intensifying partisan discourse and redefining political communication.",
+      "keywords": [],
+      "doi": "10.1177/10776990251410599",
+      "doi_url": "https://doi.org/10.1177/10776990251410599",
+      "url": null,
+      "arxiv_url": null,
+      "pdf_url": null,
+      "publication_date": "2026-01-22",
+      "citation_count": 0,
+      "reference_count": 56,
+      "venue": "Journalism &amp; Mass Communication Quarterly",
+      "authors": [
+        "Joseph J. Yoo",
+        "Hannah Lee",
+        "Soontae An"
+      ],
+      "subjects": [],
+      "is_open_access": null,
+      "source": "crossref",
+      "confidence_score": 0.8428571428571427
     }
   }
 }
