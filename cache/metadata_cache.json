@@ -26,114 +26,6 @@
     "failure_reason": "Could not enrich entry: Marwick2025-vx | No DOI available | Title length: 122 chars | Authors: Marwick, Alice E, Furl, Katherine | APIs: Crossref enabled, Semantic Scholar enabled, ArXiv enabled",
     "last_failure_at": "2026-02-11T06:01:29.848235"
   },
-  "70df243b9adbd73e": {
-    "entry_key": "Iris2026-pg",
-    "entry_title": "Cross-national evidence of disproportionate media visibility for the Radical Right in the 2024 European elections",
-    "cached_at": "2026-01-12T14:50:41.337728",
-    "metadata": {
-      "abstract": "This study provides a systematic comparative analysis of media visibility of different political families during the 2024 European Parliament elections. We analyzed close to 21,500 unique news from leading national outlets in Austria, Germany, Ireland, Poland, and Portugal - countries with diverse political contexts and levels of media trust. Combining computational and human classification, we identified parties, political leaders, and groups from the article's URLs and titles, and clustered them according to European Parliament political families and broad political leanings. Cross-country comparison shows that the Mainstream and the Radical Right were mentioned more often than the other political groups. Moreover, the Radical Right received disproportionate attention relative to electoral results (from 2019 or 2024) and electoral projections, particularly in Austria, Germany, and Ireland. This imbalance increased in the final weeks of the campaign, when media influence on undecided voters is greatest. Outlet-level analysis shows that coverage of right-leaning entities dominated across news sources, especially those generating the highest traffic, suggesting a structural rather than outlet-specific pattern. Media visibility is a central resource, and this systematic mapping of online coverage highlights how traditional media can contribute to structural asymmetries in democratic competition.",
-      "keywords": [],
-      "doi": null,
-      "doi_url": null,
-      "url": null,
-      "arxiv_url": "http://arxiv.org/abs/2601.05826v1",
-      "pdf_url": "https://arxiv.org/pdf/2601.05826v1",
-      "publication_date": "2026-01-09",
-      "citation_count": null,
-      "reference_count": null,
-      "venue": null,
-      "authors": [
-        "Íris Damião",
-        "João Franco",
-        "Mariana Silva",
-        "Paulo Almeida",
-        "Pedro C. Magalhães",
-        "Joana Gonçalves-Sá"
-      ],
-      "subjects": [
-        "cs.CY"
-      ],
-      "is_open_access": true,
-      "source": "arxiv",
-      "confidence_score": 0.7214285714285714
-    }
-  },
-  "ffe4ae12f33e3914": {
-    "entry_key": "Voelkel2026-lc",
-    "entry_title": "A registered report megastudy on the persuasiveness of the most-cited climate messages",
-    "cached_at": "2026-01-13T05:17:11.935539",
-    "metadata": {
-      "abstract": "It is important to understand how persuasive the most-cited climate change messaging strategies are. In five replication studies, we found limited evidence of persuasive effects of three highly cited strategies (N=3,216). We then conducted a registered report megastudy (N=13,544) testing the effects of the 10 most-cited climate change messaging strategies on Americans’ pro-environmental attitudes and behavior. Six messages significantly affected multiple preregistered attitudes, with effects ranging from one to four percentage points. Persuasiveness varied little across party lines, inconsistent with theories predicting heterogeneous effects for targeted messages. No message increased pro-environmental donations, suggesting costly behaviors are difficult to influence with messaging alone. Inference of mechanisms driving effects was limited as the most impactful messages influenced multiple mediating variables. Taken together, these results identify several persuasive strategies, while also highlighting the limits of short-form messages for increasing Americans’ support for action to address climate change.",
-      "keywords": [],
-      "doi": "10.31235/osf.io/xwceg_v2",
-      "doi_url": "https://doi.org/10.31235/osf.io/xwceg_v2",
-      "url": null,
-      "arxiv_url": null,
-      "pdf_url": null,
-      "publication_date": null,
-      "citation_count": 0,
-      "reference_count": 0,
-      "venue": null,
-      "authors": [
-        "Jan G. Voelkel",
-        "Ashwini Ashokkumar",
-        "Adina T. Abeles",
-        "Jarret Crawford",
-        "Kylie Fuller",
-        "Chrystal Redekopp",
-        "Renata Bongiorno",
-        "Troy H. Campbell",
-        "Ullrich K. H. Ecker",
-        "Matthew Feinberg",
-        "P. Sol Hart",
-        "Matthew Hornsey",
-        "John Jost",
-        "Aaron Kay",
-        "Anthony Leiserowitz",
-        "Stephan Lewandowsky",
-        "Edward Maibach",
-        "Erik Nisbet",
-        "Nicholas Pidgeon",
-        "Alexa Spence",
-        "Sander van der Linden",
-        "Christopher V. Wolsko",
-        "Jane K. Willenbring",
-        "neil malhotra",
-        "Robb Willer"
-      ],
-      "subjects": [],
-      "is_open_access": null,
-      "source": "crossref",
-      "confidence_score": 0.809375
-    }
-  },
-  "b7f74078a698644f": {
-    "entry_key": "Rieder2026-pp",
-    "entry_title": "The Tate-space on YouTube: Ambient ideology and the limits of platform moderation",
-    "cached_at": "2026-01-13T07:17:01.024158",
-    "metadata": {
-      "abstract": "This article investigates the persistence and transformation of Andrew Tate’s presence on YouTube following the removal of his official channels in August 2022. Combining two empirical approaches—a small-scale analysis of top-ranked videos from YouTube search results in 2022 and 2024, and a large-scale data set of over 112k videos—we examine how Tate-related content continues to circulate and how the platform moderates such material. Our findings show that Tate remains highly visible through a diffuse and decentralized network of actors who repackage his messaging into interviews, remixes, and YouTube-native formats. This configuration produces what we term the “Tate-space”: an ambient ideological environment where motivational rhetoric, aspirational masculinity, and far-right talking points converge. We find that YouTube’s substantial moderation efforts are outpaced by the speed and scale of recommendation-driven circulation and that deplatforming, while symbolically significant, fails to disrupt the cultural and logistical dynamics that sustain Tate’s influence.",
-      "keywords": [],
-      "doi": "10.1177/14614448251409209",
-      "doi_url": "https://doi.org/10.1177/14614448251409209",
-      "url": null,
-      "arxiv_url": null,
-      "pdf_url": null,
-      "publication_date": "2026-01-12",
-      "citation_count": 0,
-      "reference_count": 59,
-      "venue": "New Media &amp; Society",
-      "authors": [
-        "Bernhard Rieder",
-        "Bastian August",
-        "Brogan Latil"
-      ],
-      "subjects": [],
-      "is_open_access": null,
-      "source": "crossref",
-      "confidence_score": 0.8428571428571427
-    }
-  },
   "e9ab6226c2a1899a": {
     "entry_key": "Lieu2025-nl",
     "entry_title": "Testing the impact of fallacies and contrarian claims in climate change misinformation",
@@ -3578,6 +3470,143 @@
         "Joseph J. Yoo",
         "Hannah Lee",
         "Soontae An"
+      ],
+      "subjects": [],
+      "is_open_access": null,
+      "source": "crossref",
+      "confidence_score": 0.8428571428571427
+    }
+  },
+  "e0b18cc686e6bac2": {
+    "entry_key": "Dehghan2026-sy",
+    "entry_title": "The entangled dynamics leading to the sedimentation of polarisation on political Reddit",
+    "cached_at": "2026-02-12T19:43:06.799516",
+    "metadata": {
+      "abstract": null,
+      "keywords": [],
+      "doi": "10.1080/1369118x.2026.2623523",
+      "doi_url": "https://doi.org/10.1080/1369118x.2026.2623523",
+      "url": null,
+      "arxiv_url": null,
+      "pdf_url": null,
+      "publication_date": "2026-02-05",
+      "citation_count": 0,
+      "reference_count": 75,
+      "venue": "Information, Communication &amp; Society",
+      "authors": [
+        "Ehsan Dehghan",
+        "Dominique Carlon",
+        "Kateryna Kasianenko",
+        "Ashwin Nagappa",
+        "Vish Padinjaredath Suresh"
+      ],
+      "subjects": [],
+      "is_open_access": null,
+      "source": "crossref",
+      "confidence_score": 0.85
+    }
+  },
+  "70df243b9adbd73e": {
+    "entry_key": "Iris2026-pg",
+    "entry_title": "Cross-national evidence of disproportionate media visibility for the Radical Right in the 2024 European elections",
+    "cached_at": "2026-02-12T19:43:07.021340",
+    "metadata": {
+      "abstract": "This study provides a systematic comparative analysis of media visibility of different political families during the 2024 European Parliament elections. We analyzed close to 21,500 unique news from leading national outlets in Austria, Germany, Ireland, Poland, and Portugal - countries with diverse political contexts and levels of media trust. Combining computational and human classification, we identified parties, political leaders, and groups from the article's URLs and titles, and clustered them according to European Parliament political families and broad political leanings. Cross-country comparison shows that the Mainstream and the Radical Right were mentioned more often than the other political groups. Moreover, the Radical Right received disproportionate attention relative to electoral results (from 2019 or 2024) and electoral projections, particularly in Austria, Germany, and Ireland. This imbalance increased in the final weeks of the campaign, when media influence on undecided voters is greatest. Outlet-level analysis shows that coverage of right-leaning entities dominated across news sources, especially those generating the highest traffic, suggesting a structural rather than outlet-specific pattern. Media visibility is a central resource, and this systematic mapping of online coverage highlights how traditional media can contribute to structural asymmetries in democratic competition.",
+      "keywords": [],
+      "doi": null,
+      "doi_url": null,
+      "url": null,
+      "arxiv_url": "http://arxiv.org/abs/2601.05826v1",
+      "pdf_url": "https://arxiv.org/pdf/2601.05826v1",
+      "publication_date": "2026-01-09",
+      "citation_count": null,
+      "reference_count": null,
+      "venue": null,
+      "authors": [
+        "Íris Damião",
+        "João Franco",
+        "Mariana Silva",
+        "Paulo Almeida",
+        "Pedro C. Magalhães",
+        "Joana Gonçalves-Sá"
+      ],
+      "subjects": [
+        "cs.CY"
+      ],
+      "is_open_access": true,
+      "source": "arxiv",
+      "confidence_score": 0.7214285714285714
+    }
+  },
+  "ffe4ae12f33e3914": {
+    "entry_key": "Voelkel2026-lc",
+    "entry_title": "A registered report megastudy on the persuasiveness of the most-cited climate messages",
+    "cached_at": "2026-02-12T19:43:09.751786",
+    "metadata": {
+      "abstract": "It is important to understand how persuasive the most-cited climate change messaging strategies are. In five replication studies, we found limited evidence of persuasive effects of three highly cited strategies (N=3,216). We then conducted a registered report megastudy (N=13,544) testing the effects of the 10 most-cited climate change messaging strategies on Americans’ pro-environmental attitudes and behavior. Six messages significantly affected multiple preregistered attitudes, with effects ranging from one to four percentage points. Persuasiveness varied little across party lines, inconsistent with theories predicting heterogeneous effects for targeted messages. No message increased pro-environmental donations, suggesting costly behaviors are difficult to influence with messaging alone. Inference of mechanisms driving effects was limited as the most impactful messages influenced multiple mediating variables. Taken together, these results identify several persuasive strategies, while also highlighting the limits of short-form messages for increasing Americans’ support for action to address climate change.",
+      "keywords": [],
+      "doi": "10.31235/osf.io/xwceg_v2",
+      "doi_url": "https://doi.org/10.31235/osf.io/xwceg_v2",
+      "url": null,
+      "arxiv_url": null,
+      "pdf_url": null,
+      "publication_date": null,
+      "citation_count": 0,
+      "reference_count": 0,
+      "venue": null,
+      "authors": [
+        "Jan G. Voelkel",
+        "Ashwini Ashokkumar",
+        "Adina T. Abeles",
+        "Jarret Crawford",
+        "Kylie Fuller",
+        "Chrystal Redekopp",
+        "Renata Bongiorno",
+        "Troy H. Campbell",
+        "Ullrich K. H. Ecker",
+        "Matthew Feinberg",
+        "P. Sol Hart",
+        "Matthew Hornsey",
+        "John Jost",
+        "Aaron Kay",
+        "Anthony Leiserowitz",
+        "Stephan Lewandowsky",
+        "Edward Maibach",
+        "Erik Nisbet",
+        "Nicholas Pidgeon",
+        "Alexa Spence",
+        "Sander van der Linden",
+        "Christopher V. Wolsko",
+        "Jane K. Willenbring",
+        "neil malhotra",
+        "Robb Willer"
+      ],
+      "subjects": [],
+      "is_open_access": null,
+      "source": "crossref",
+      "confidence_score": 0.809375
+    }
+  },
+  "b7f74078a698644f": {
+    "entry_key": "Rieder2026-pp",
+    "entry_title": "The Tate-space on YouTube: Ambient ideology and the limits of platform moderation",
+    "cached_at": "2026-02-12T19:43:12.662687",
+    "metadata": {
+      "abstract": "This article investigates the persistence and transformation of Andrew Tate’s presence on YouTube following the removal of his official channels in August 2022. Combining two empirical approaches—a small-scale analysis of top-ranked videos from YouTube search results in 2022 and 2024, and a large-scale data set of over 112k videos—we examine how Tate-related content continues to circulate and how the platform moderates such material. Our findings show that Tate remains highly visible through a diffuse and decentralized network of actors who repackage his messaging into interviews, remixes, and YouTube-native formats. This configuration produces what we term the “Tate-space”: an ambient ideological environment where motivational rhetoric, aspirational masculinity, and far-right talking points converge. We find that YouTube’s substantial moderation efforts are outpaced by the speed and scale of recommendation-driven circulation and that deplatforming, while symbolically significant, fails to disrupt the cultural and logistical dynamics that sustain Tate’s influence.",
+      "keywords": [],
+      "doi": "10.1177/14614448251409209",
+      "doi_url": "https://doi.org/10.1177/14614448251409209",
+      "url": null,
+      "arxiv_url": null,
+      "pdf_url": null,
+      "publication_date": "2026-01-12",
+      "citation_count": 0,
+      "reference_count": 59,
+      "venue": "New Media &amp; Society",
+      "authors": [
+        "Bernhard Rieder",
+        "Bastian August",
+        "Brogan Latil"
       ],
       "subjects": [],
       "is_open_access": null,
