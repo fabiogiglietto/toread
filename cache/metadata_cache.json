@@ -26,59 +26,6 @@
     "failure_reason": "Could not enrich entry: Marwick2025-vx | No DOI available | Title length: 122 chars | Authors: Marwick, Alice E, Furl, Katherine | APIs: Crossref enabled, Semantic Scholar enabled, ArXiv enabled",
     "last_failure_at": "2026-02-11T06:01:29.848235"
   },
-  "e9ab6226c2a1899a": {
-    "entry_key": "Lieu2025-nl",
-    "entry_title": "Testing the impact of fallacies and contrarian claims in climate change misinformation",
-    "cached_at": "2026-01-14T04:57:47.294737",
-    "metadata": {
-      "abstract": "Abstract Climate misinformation reduces public acceptance of climate change and undermines support for mitigation policies. This study explored the impact of different types of climate misinformation, examining through content‐based and logic‐based frameworks. The content‐based framework was based on a taxonomy of contrarian claims consisting of five categories—it's not real, it's not us, it's not bad, climate solutions won't work and scientists are not reliable. The logic‐based framework examined six rhetorical techniques used in science denial arguments—misrepresentation, false equivalence, oversimplification, red herring, cherry picking and slothful induction. We experimentally tested 30 misinformation examples, crossing five content categories with six fallacies. Participants rated the perceived veracity of misinformation as well as the likelihood of interacting with it. We found no main effect of fallacy on perceived veracity or likelihood to interact but did find a main effect of content category, with the fourth category (climate solutions won't work) perceived as most veracious. We also found that content categories interacted with political ideology, replicating past research into the polarizing effect of climate misinformation. Specifically, the most polarizing categories of misinformation were those targeting climate solutions or attacking climate scientists. Our results highlight the need to prioritize combatting misinformation that targets solutions and scientists.",
-      "keywords": [],
-      "doi": "10.1111/bjop.70049",
-      "doi_url": "https://doi.org/10.1111/bjop.70049",
-      "url": null,
-      "arxiv_url": null,
-      "pdf_url": null,
-      "publication_date": "2025-12-29",
-      "citation_count": 0,
-      "reference_count": 77,
-      "venue": "British Journal of Psychology",
-      "authors": [
-        "Renee Lieu",
-        "Oliver R. Hayes",
-        "John Cook"
-      ],
-      "subjects": [],
-      "is_open_access": null,
-      "source": "crossref",
-      "confidence_score": 0.8374999999999999
-    }
-  },
-  "374d46d14bdbc92c": {
-    "entry_key": "Bouchafra2026-ts",
-    "entry_title": "‘My Europe Builds Walls’: A cross-platform visual analysis of the Sweden Democrats’ 2024 EU election campaign",
-    "cached_at": "2026-01-16T05:45:44.310889",
-    "metadata": {
-      "abstract": "This article examines the visual securitising discourse of Sweden Democrats (SD) through a qualitatively centred analysis of the party’s 2024 European Union (EU) election campaign and its official election slogan ‘My Europe Builds Walls: Against Immigration, Against Criminal Gangs, Against Islamists’. Through a comparative, cross-platform multimodal critical discourse analysis (MCDA) of SD’s posts on Facebook, X and TikTok, this article explores the differences in campaign content across platforms, and analyses how these differences provide insights into the party’s understanding of its audiences and the platforms’ respective functionalities. The analysis shows how SD leveraged platform functionalities to balance textual and visual features, repost content, and incorporate hyperlinks on Facebook and X. Using these features, the party posted text-laden, argumentative and seemingly informative posts, which are likely to appeal not only to the customary format of content on the platforms but also to its respective audiences. Yet, although SD had larger followings and much more well-established accounts on both Facebook and X, the party posted the majority of its campaign material on TikTok, primarily in the form of memes. These memes tended to include securitising clips of non-white men engaging in violent protests, vandalism and violence directed towards the local community and law enforcement. We discuss the role these memes play in the SD election campaign and the potential implications such content might have.",
-      "keywords": [],
-      "doi": "10.1177/14614448251408336",
-      "doi_url": "https://doi.org/10.1177/14614448251408336",
-      "url": null,
-      "arxiv_url": null,
-      "pdf_url": null,
-      "publication_date": "2026-01-12",
-      "citation_count": 0,
-      "reference_count": 108,
-      "venue": "New Media &amp; Society",
-      "authors": [
-        "Salma Bouchafra",
-        "Mathilda Åkerlund"
-      ],
-      "subjects": [],
-      "is_open_access": null,
-      "source": "crossref",
-      "confidence_score": 0.86
-    }
-  },
   "2bc41a22bfa663a6": {
     "entry_key": "Dubey2026-bl",
     "entry_title": "Investigating perceived trust and utility of balanced news chatbots among individuals with varying conspiracy beliefs",
@@ -3612,6 +3559,85 @@
       "is_open_access": null,
       "source": "crossref",
       "confidence_score": 0.8428571428571427
+    }
+  },
+  "bfa1f148354f42bd": {
+    "entry_key": "Heiss2026-qv",
+    "entry_title": "Addressing social media platforms’ influence on academic research",
+    "cached_at": "2026-02-15T07:10:31.271902",
+    "metadata": {
+      "abstract": "Social media platforms play a central role in shaping today’s information ecosystem, yet access to both their internal data and even publicly visible content remains tightly restricted for academic researchers. This stands in sharp contrast to other industries such as food and pharmaceuticals where researchers can independently study product ingredients and effects. As a result, academic research on social media faces an unprecedented dependency on industry-controlled data, increasing the risk of bias and potentially distorting the evidence needed for effective regulation and policymaking. Drawing on research from other disciplines, we examine how industry influence operates and how researchers’ reliance on platforms for data may amplify industry influence. We identify four challenges in collaborations between researchers and social media platforms: restricted data access, selective funding, hard-to-detect influence, and institutional entanglements. These challenges risk undermining the independence and transparency of research in a field of growing societal relevance. Addressing these challenges requires policymakers to regulate data access, as illustrated by the EU’s Digital Services Act (DSA), which mandates data access for vetted researchers while safeguarding user privacy. In addition, new independent funding mechanisms could help ensure that research agendas remain free from platform interests. In parallel, the social science community must adopt stronger ethical standards and invest in “research on research” to detect and mitigate potential biases in policy-relevant research. With a dual approach – policy reforms and critical academic debates – we can ensure that research on social media platforms serves the public interest rather than platform priorities.",
+      "keywords": [],
+      "doi": "10.31235/osf.io/ny2tx_v2",
+      "doi_url": "https://doi.org/10.31235/osf.io/ny2tx_v2",
+      "url": null,
+      "arxiv_url": null,
+      "pdf_url": null,
+      "publication_date": null,
+      "citation_count": 0,
+      "reference_count": 0,
+      "venue": null,
+      "authors": [
+        "Raffael Heiss",
+        "Isabelle Freiling"
+      ],
+      "subjects": [],
+      "is_open_access": null,
+      "source": "crossref",
+      "confidence_score": 0.86
+    }
+  },
+  "e9ab6226c2a1899a": {
+    "entry_key": "Lieu2025-nl",
+    "entry_title": "Testing the impact of fallacies and contrarian claims in climate change misinformation",
+    "cached_at": "2026-02-15T07:10:34.115498",
+    "metadata": {
+      "abstract": "Abstract Climate misinformation reduces public acceptance of climate change and undermines support for mitigation policies. This study explored the impact of different types of climate misinformation, examining through content‐based and logic‐based frameworks. The content‐based framework was based on a taxonomy of contrarian claims consisting of five categories—it's not real, it's not us, it's not bad, climate solutions won't work and scientists are not reliable. The logic‐based framework examined six rhetorical techniques used in science denial arguments—misrepresentation, false equivalence, oversimplification, red herring, cherry picking and slothful induction. We experimentally tested 30 misinformation examples, crossing five content categories with six fallacies. Participants rated the perceived veracity of misinformation as well as the likelihood of interacting with it. We found no main effect of fallacy on perceived veracity or likelihood to interact but did find a main effect of content category, with the fourth category (climate solutions won't work) perceived as most veracious. We also found that content categories interacted with political ideology, replicating past research into the polarizing effect of climate misinformation. Specifically, the most polarizing categories of misinformation were those targeting climate solutions or attacking climate scientists. Our results highlight the need to prioritize combatting misinformation that targets solutions and scientists.",
+      "keywords": [],
+      "doi": "10.1111/bjop.70049",
+      "doi_url": "https://doi.org/10.1111/bjop.70049",
+      "url": null,
+      "arxiv_url": null,
+      "pdf_url": null,
+      "publication_date": "2025-12-29",
+      "citation_count": 0,
+      "reference_count": 77,
+      "venue": "British Journal of Psychology",
+      "authors": [
+        "Renee Lieu",
+        "Oliver R. Hayes",
+        "John Cook"
+      ],
+      "subjects": [],
+      "is_open_access": null,
+      "source": "crossref",
+      "confidence_score": 0.8374999999999999
+    }
+  },
+  "374d46d14bdbc92c": {
+    "entry_key": "Bouchafra2026-ts",
+    "entry_title": "‘My Europe Builds Walls’: A cross-platform visual analysis of the Sweden Democrats’ 2024 EU election campaign",
+    "cached_at": "2026-02-15T07:10:37.159269",
+    "metadata": {
+      "abstract": "This article examines the visual securitising discourse of Sweden Democrats (SD) through a qualitatively centred analysis of the party’s 2024 European Union (EU) election campaign and its official election slogan ‘My Europe Builds Walls: Against Immigration, Against Criminal Gangs, Against Islamists’. Through a comparative, cross-platform multimodal critical discourse analysis (MCDA) of SD’s posts on Facebook, X and TikTok, this article explores the differences in campaign content across platforms, and analyses how these differences provide insights into the party’s understanding of its audiences and the platforms’ respective functionalities. The analysis shows how SD leveraged platform functionalities to balance textual and visual features, repost content, and incorporate hyperlinks on Facebook and X. Using these features, the party posted text-laden, argumentative and seemingly informative posts, which are likely to appeal not only to the customary format of content on the platforms but also to its respective audiences. Yet, although SD had larger followings and much more well-established accounts on both Facebook and X, the party posted the majority of its campaign material on TikTok, primarily in the form of memes. These memes tended to include securitising clips of non-white men engaging in violent protests, vandalism and violence directed towards the local community and law enforcement. We discuss the role these memes play in the SD election campaign and the potential implications such content might have.",
+      "keywords": [],
+      "doi": "10.1177/14614448251408336",
+      "doi_url": "https://doi.org/10.1177/14614448251408336",
+      "url": null,
+      "arxiv_url": null,
+      "pdf_url": null,
+      "publication_date": "2026-01-12",
+      "citation_count": 0,
+      "reference_count": 108,
+      "venue": "New Media &amp; Society",
+      "authors": [
+        "Salma Bouchafra",
+        "Mathilda Åkerlund"
+      ],
+      "subjects": [],
+      "is_open_access": null,
+      "source": "crossref",
+      "confidence_score": 0.86
     }
   }
 }
