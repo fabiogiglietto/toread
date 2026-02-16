@@ -26,35 +26,6 @@
     "failure_reason": "Could not enrich entry: Marwick2025-vx | No DOI available | Title length: 122 chars | Authors: Marwick, Alice E, Furl, Katherine | APIs: Crossref enabled, Semantic Scholar enabled, ArXiv enabled",
     "last_failure_at": "2026-02-11T06:01:29.848235"
   },
-  "2bc41a22bfa663a6": {
-    "entry_key": "Dubey2026-bl",
-    "entry_title": "Investigating perceived trust and utility of balanced news chatbots among individuals with varying conspiracy beliefs",
-    "cached_at": "2026-01-17T05:41:24.987643",
-    "metadata": {
-      "abstract": null,
-      "keywords": [],
-      "doi": "10.1016/j.chb.2026.108920",
-      "doi_url": "https://doi.org/10.1016/j.chb.2026.108920",
-      "url": null,
-      "arxiv_url": null,
-      "pdf_url": null,
-      "publication_date": "2026",
-      "citation_count": 0,
-      "reference_count": 60,
-      "venue": "Computers in Human Behavior",
-      "authors": [
-        "Shreya Dubey",
-        "Paul E. Ketelaar",
-        "Tilman Dingler",
-        "Hannah K. Peetz",
-        "Hein T. van Schie"
-      ],
-      "subjects": [],
-      "is_open_access": null,
-      "source": "crossref",
-      "confidence_score": 0.8374999999999999
-    }
-  },
   "f2c3c073e07cd98e": {
     "entry_key": "De2026-ld",
     "entry_title": "The discursive flexibility of changecraft: Platform change discourse in Meta, TikTok, YouTube, and X",
@@ -3638,6 +3609,89 @@
       "is_open_access": null,
       "source": "crossref",
       "confidence_score": 0.86
+    }
+  },
+  "2bc41a22bfa663a6": {
+    "entry_key": "Dubey2026-bl",
+    "entry_title": "Investigating perceived trust and utility of balanced news chatbots among individuals with varying conspiracy beliefs",
+    "cached_at": "2026-02-16T20:52:22.114755",
+    "metadata": {
+      "abstract": null,
+      "keywords": [],
+      "doi": "10.1016/j.chb.2026.108920",
+      "doi_url": "https://doi.org/10.1016/j.chb.2026.108920",
+      "url": null,
+      "arxiv_url": null,
+      "pdf_url": null,
+      "publication_date": "2026",
+      "citation_count": 0,
+      "reference_count": 65,
+      "venue": "Computers in Human Behavior",
+      "authors": [
+        "Shreya Dubey",
+        "Paul E. Ketelaar",
+        "Tilman Dingler",
+        "Hannah K. Peetz",
+        "Hein T. van Schie"
+      ],
+      "subjects": [],
+      "is_open_access": null,
+      "source": "crossref",
+      "confidence_score": 0.8374999999999999
+    }
+  },
+  "49c30357bb6a21c7": {
+    "entry_key": "Inacio-da-Silva2026-zf",
+    "entry_title": "Identifying potentially irregular electoral ads in Facebook during the Brazilian elections",
+    "cached_at": "2026-02-16T20:52:24.780089",
+    "metadata": {
+      "abstract": "The 2016 United States presidential election was marked by the abuse of targeted advertising on Facebook. Concerned with the risk of the same kind of abuse to happen in the 2018 Brazilian elections, we designed and deployed an independent auditing system to monitor political ads on Meta in Brazil. To do that we first adapted a browser plugin to gather ads from the timeline of volunteers using Facebook. We managed to convince more than 2,000 volunteers to help our project and install our tool. Then, we use a Convolution Neural Network (CNN) to detect political Meta ads using word embeddings. To evaluate our approach, we manually label a data collection of 10k ads as political or non-political and then we provide an in-depth evaluation of proposed approach for identifying political ads by comparing it with classic supervised machine learning methods. Finally, we deployed a real system that shows the ads identified as related to politics during the 2018 National Brazilian elections. We also investigated early electoral advertisement before the 2020 local Brazilian elections using our model on unsponsored content (regular posts in groups and pages). We noticed that not all political ads we detected were present in the Meta Ad Library for political ads on 2018. Additionally, we found possible early electoral advertisements in 2020, which is forbidden in Brazil. Our results emphasize the importance of enforcement mechanisms for declaring political ads and the need for independent auditing platforms.",
+      "keywords": [],
+      "doi": "10.1145/3796545",
+      "doi_url": "https://doi.org/10.1145/3796545",
+      "url": null,
+      "arxiv_url": null,
+      "pdf_url": null,
+      "publication_date": "2026-02-06",
+      "citation_count": 0,
+      "reference_count": 68,
+      "venue": "ACM Transactions on the Web",
+      "authors": [
+        "Marcio Inacio da Silva",
+        "Lucas de Oliveira",
+        "Pedro Olmo Vaz de Melo",
+        "Oana Goga",
+        "Fabrício Benevenuto"
+      ],
+      "subjects": [],
+      "is_open_access": null,
+      "source": "crossref",
+      "confidence_score": 0.8529411764705882
+    }
+  },
+  "602e20151b2badb6": {
+    "entry_key": "Choi2026-bz",
+    "entry_title": "The modality-congruent carryover effect: How difficulty in identifying (deep)fake news impacts self-confidence in truth discernment and susceptibility to subsequent disinformation",
+    "cached_at": "2026-02-16T20:52:27.820413",
+    "metadata": {
+      "abstract": "With the proliferation of (deep)fake news, individuals will increasingly find it difficult to discern whether content is created by human journalists or artificial intelligence. A two-wave online experiment investigated the carryover effects of news authentication during the initial (deep)fake news exposure on responses to subsequent (deep)fake news. Participants encountered celebrity (deep)fake news in text and video formats on social media. The results showed that the difficulty induced by news authentication lowered self-confidence in truth discernment, which, in turn, decreased the perceived credibility and engagement intentions toward subsequent unrelated fake news of the same modality.",
+      "keywords": [],
+      "doi": "10.1177/10776990251413726",
+      "doi_url": "https://doi.org/10.1177/10776990251413726",
+      "url": null,
+      "arxiv_url": null,
+      "pdf_url": null,
+      "publication_date": "2026-02-10",
+      "citation_count": 0,
+      "reference_count": 82,
+      "venue": "Journalism &amp; Mass Communication Quarterly",
+      "authors": [
+        "Sukyoung Choi"
+      ],
+      "subjects": [],
+      "is_open_access": null,
+      "source": "crossref",
+      "confidence_score": 0.8999999999999999
     }
   }
 }
