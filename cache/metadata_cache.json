@@ -3693,5 +3693,28 @@
       "source": "crossref",
       "confidence_score": 0.8999999999999999
     }
+  },
+  "67c3382e8e499851": {
+    "entry_key": "Philipp2026-tl",
+    "entry_title": "Election research in the age of regulated data access under the EU Digital Services Act",
+    "cached_at": "2026-02-17T06:14:20.479932",
+    "metadata": {
+      "abstract": null,
+      "keywords": [],
+      "doi": null,
+      "doi_url": null,
+      "url": "https://policyreview.info/articles/analysis/election-research-data-access-dsa",
+      "arxiv_url": null,
+      "pdf_url": null,
+      "publication_date": null,
+      "citation_count": null,
+      "reference_count": null,
+      "venue": null,
+      "authors": [],
+      "subjects": [],
+      "is_open_access": null,
+      "source": "url",
+      "confidence_score": null
+    }
   }
 }
