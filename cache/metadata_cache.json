@@ -26,32 +26,6 @@
     "failure_reason": "Could not enrich entry: Marwick2025-vx | No DOI available | Title length: 122 chars | Authors: Marwick, Alice E, Furl, Katherine | APIs: Crossref enabled, Semantic Scholar enabled, ArXiv enabled",
     "last_failure_at": "2026-02-11T06:01:29.848235"
   },
-  "f2c3c073e07cd98e": {
-    "entry_key": "De2026-ld",
-    "entry_title": "The discursive flexibility of changecraft: Platform change discourse in Meta, TikTok, YouTube, and X",
-    "cached_at": "2026-01-18T13:04:04.734862",
-    "metadata": {
-      "abstract": "Social media platforms evolve rapidly. While platform studies have often analyzed specific policy or feature changes, there remains a lack of shared language to conceptualize how platforms themselves represent such changes. In this article, we analyze public communications from Meta, YouTube, X, and TikTok to examine how platforms construct and justify change. We explicate platform evolution as a technical but also deeply discursive process. Platforms frame their transformations in interesting ways, especially if these shifts consolidate power or deepen user dependence. We introduce the concept of changecraft : the strategic discursive practices through which platforms manage, legitimize, and normalize change. Changecraft encompasses the rendering of infrastructural shifts as visible, the framing of ideological pivots as continuity, and the deployment of patchworked updates to subtly reorient platform futures. This framework provides scholars a way to interrogate platform change not just by what changes but by how platforms seek to make change meaningful and acceptable to their publics.",
-      "keywords": [],
-      "doi": "10.1177/29768624251408212",
-      "doi_url": "https://doi.org/10.1177/29768624251408212",
-      "url": null,
-      "arxiv_url": null,
-      "pdf_url": null,
-      "publication_date": "2026",
-      "citation_count": 0,
-      "reference_count": 57,
-      "venue": "Platforms &amp; Society",
-      "authors": [
-        "Ankolika De",
-        "Kelley Cotter"
-      ],
-      "subjects": [],
-      "is_open_access": null,
-      "source": "crossref",
-      "confidence_score": 0.86
-    }
-  },
   "3eacf232e98df15d": {
     "entry_key": "Bak-Coleman2026-mk",
     "entry_title": "Industry influence in high-profile social media research",
@@ -3715,6 +3689,57 @@
       "is_open_access": null,
       "source": "url",
       "confidence_score": null
+    }
+  },
+  "f2c3c073e07cd98e": {
+    "entry_key": "De2026-ld",
+    "entry_title": "The discursive flexibility of changecraft: Platform change discourse in Meta, TikTok, YouTube, and X",
+    "cached_at": "2026-02-18T05:19:50.391215",
+    "metadata": {
+      "abstract": "Social media platforms evolve rapidly. While platform studies have often analyzed specific policy or feature changes, there remains a lack of shared language to conceptualize how platforms themselves represent such changes. In this article, we analyze public communications from Meta, YouTube, X, and TikTok to examine how platforms construct and justify change. We explicate platform evolution as a technical but also deeply discursive process. Platforms frame their transformations in interesting ways, especially if these shifts consolidate power or deepen user dependence. We introduce the concept of changecraft : the strategic discursive practices through which platforms manage, legitimize, and normalize change. Changecraft encompasses the rendering of infrastructural shifts as visible, the framing of ideological pivots as continuity, and the deployment of patchworked updates to subtly reorient platform futures. This framework provides scholars a way to interrogate platform change not just by what changes but by how platforms seek to make change meaningful and acceptable to their publics.",
+      "keywords": [],
+      "doi": "10.1177/29768624251408212",
+      "doi_url": "https://doi.org/10.1177/29768624251408212",
+      "url": null,
+      "arxiv_url": null,
+      "pdf_url": null,
+      "publication_date": "2026",
+      "citation_count": 0,
+      "reference_count": 57,
+      "venue": "Platforms &amp; Society",
+      "authors": [
+        "Ankolika De",
+        "Kelley Cotter"
+      ],
+      "subjects": [],
+      "is_open_access": null,
+      "source": "crossref",
+      "confidence_score": 0.86
+    }
+  },
+  "c35a283f3579db9d": {
+    "entry_key": "Shi2026-ko",
+    "entry_title": "The Governance-Embedded Interactive Media Effect: the role of AI-generated disclosure in user credibility and engagement based on fact-checking videos on Chinese TikTok (Douyin)",
+    "cached_at": "2026-02-18T05:19:53.251937",
+    "metadata": {
+      "abstract": null,
+      "keywords": [],
+      "doi": "10.1080/17544750.2026.2623075",
+      "doi_url": "https://doi.org/10.1080/17544750.2026.2623075",
+      "url": null,
+      "arxiv_url": null,
+      "pdf_url": null,
+      "publication_date": "2026-02-13",
+      "citation_count": 0,
+      "reference_count": 49,
+      "venue": "Chinese Journal of Communication",
+      "authors": [
+        "Yiru Shi"
+      ],
+      "subjects": [],
+      "is_open_access": null,
+      "source": "crossref",
+      "confidence_score": 0.8999999999999999
     }
   }
 }
