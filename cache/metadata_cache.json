@@ -2,29 +2,29 @@
   "c5a7d0326e1f61c6": {
     "entry_key": "Kristensen2025-ni",
     "entry_title": "Platform polarization. Do alternative platforms drive discursive polarization?",
-    "cached_at": "2026-02-11T06:01:26.905377",
+    "cached_at": "2026-02-18T06:35:42.317437",
     "metadata": null,
     "failed": true,
     "failure_reason": "Could not enrich entry: Kristensen2025-ni | No DOI available | Title length: 78 chars | Authors: Kristensen, Jakob Bæk, Kristensen, Jakob Bæk | APIs: Crossref enabled, Semantic Scholar enabled, ArXiv enabled",
-    "last_failure_at": "2026-02-11T06:01:26.905384"
+    "last_failure_at": "2026-02-18T06:35:42.317445"
   },
   "65d46046ae1c898f": {
     "entry_key": "Gaw2025-ru",
     "entry_title": "Influence operations as brokerage: Political-economic infrastructures of manipulation in the 2022 Philippine elections",
-    "cached_at": "2026-02-11T06:01:32.910234",
+    "cached_at": "2026-02-18T06:35:48.264368",
     "metadata": null,
     "failed": true,
     "failure_reason": "Could not enrich entry: Gaw2025-ru | No DOI available | Title length: 118 chars | Authors: Gaw, Fatima, Agonos, Mariam Jayne... | APIs: Crossref enabled, Semantic Scholar enabled, ArXiv enabled",
-    "last_failure_at": "2026-02-11T06:01:32.910242"
+    "last_failure_at": "2026-02-18T06:35:48.264377"
   },
   "b41f425da41887a0": {
     "entry_key": "Marwick2025-vx",
     "entry_title": "True costs of misinformation| mountains of evidence: Processual “redpilling” as a Socio-technical effect of disinformation",
-    "cached_at": "2026-02-11T06:01:29.848227",
+    "cached_at": "2026-02-18T06:35:45.138908",
     "metadata": null,
     "failed": true,
     "failure_reason": "Could not enrich entry: Marwick2025-vx | No DOI available | Title length: 122 chars | Authors: Marwick, Alice E, Furl, Katherine | APIs: Crossref enabled, Semantic Scholar enabled, ArXiv enabled",
-    "last_failure_at": "2026-02-11T06:01:29.848235"
+    "last_failure_at": "2026-02-18T06:35:45.138918"
   },
   "3eacf232e98df15d": {
     "entry_key": "Bak-Coleman2026-mk",
@@ -3740,6 +3740,34 @@
       "is_open_access": null,
       "source": "crossref",
       "confidence_score": 0.8999999999999999
+    }
+  },
+  "25585654a9878a3d": {
+    "entry_key": "Dierickx2026-tw",
+    "entry_title": "What is a fact in the age of generative AI? Fact-checking as an epistemological lens",
+    "cached_at": "2026-02-18T06:35:38.405243",
+    "metadata": {
+      "abstract": null,
+      "keywords": [],
+      "doi": "10.1080/1369118x.2026.2630697",
+      "doi_url": "https://doi.org/10.1080/1369118x.2026.2630697",
+      "url": null,
+      "arxiv_url": null,
+      "pdf_url": null,
+      "publication_date": "2026-02-16",
+      "citation_count": 0,
+      "reference_count": 76,
+      "venue": "Information, Communication &amp; Society",
+      "authors": [
+        "Laurence Dierickx",
+        "Andreas L. Opdahl",
+        "Fredrik Bjerknes",
+        "Carl-Gustav Lindén"
+      ],
+      "subjects": [],
+      "is_open_access": null,
+      "source": "crossref",
+      "confidence_score": 0.83
     }
   }
 }
