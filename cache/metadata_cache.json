@@ -3769,5 +3769,31 @@
       "source": "crossref",
       "confidence_score": 0.83
     }
+  },
+  "8238adeeb16e0d15": {
+    "entry_key": "Stanusch2026-ec",
+    "entry_title": "How AI is imagined by industry during the Sam Altman controversy",
+    "cached_at": "2026-02-18T17:45:33.114759",
+    "metadata": {
+      "abstract": null,
+      "keywords": [],
+      "doi": "10.31124/advance.174979411.18178682/v1",
+      "doi_url": "https://doi.org/10.31124/advance.174979411.18178682/v1",
+      "url": null,
+      "arxiv_url": null,
+      "pdf_url": null,
+      "publication_date": null,
+      "citation_count": 1,
+      "reference_count": 0,
+      "venue": null,
+      "authors": [
+        "Natalia Stanusch",
+        "Richard Rogers"
+      ],
+      "subjects": [],
+      "is_open_access": null,
+      "source": "crossref",
+      "confidence_score": 0.86
+    }
   }
 }
