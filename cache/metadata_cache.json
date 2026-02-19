@@ -3795,5 +3795,33 @@
       "source": "crossref",
       "confidence_score": 0.86
     }
+  },
+  "53df38ca99f7b779": {
+    "entry_key": "Gauthier2026-iq",
+    "entry_title": "The political effects of X’s feed algorithm",
+    "cached_at": "2026-02-19T06:33:48.407558",
+    "metadata": {
+      "abstract": null,
+      "keywords": [],
+      "doi": "10.1038/s41586-026-10098-2",
+      "doi_url": "https://doi.org/10.1038/s41586-026-10098-2",
+      "url": null,
+      "arxiv_url": null,
+      "pdf_url": null,
+      "publication_date": "2026-02-18",
+      "citation_count": 0,
+      "reference_count": 47,
+      "venue": "Nature",
+      "authors": [
+        "Germain Gauthier",
+        "Roland Hodler",
+        "Philine Widmer",
+        "Ekaterina Zhuravskaya"
+      ],
+      "subjects": [],
+      "is_open_access": null,
+      "source": "crossref",
+      "confidence_score": 0.8333333333333333
+    }
   }
 }
