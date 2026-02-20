@@ -3849,5 +3849,37 @@
       "source": "crossref",
       "confidence_score": 0.86
     }
+  },
+  "7a846947acf48197": {
+    "entry_key": "Balluff2026-if",
+    "entry_title": "Newer, larger, better? A critique of the unreflective LLM adoption in communication research",
+    "cached_at": "2026-02-20T13:52:33.877963",
+    "metadata": {
+      "abstract": null,
+      "keywords": [],
+      "doi": "10.1080/10584609.2026.2618486",
+      "doi_url": "https://doi.org/10.1080/10584609.2026.2618486",
+      "url": null,
+      "arxiv_url": null,
+      "pdf_url": null,
+      "publication_date": "2026-02-20",
+      "citation_count": 0,
+      "reference_count": 38,
+      "venue": "Political Communication",
+      "authors": [
+        "Paul Balluff",
+        "Justin Chun-ting Ho",
+        "Johannes B. Gruber",
+        "Sean Palicki",
+        "Alexis Palmer",
+        "Luca Rossi",
+        "Irina Shklovski",
+        "Chung-hong Chan"
+      ],
+      "subjects": [],
+      "is_open_access": null,
+      "source": "crossref",
+      "confidence_score": 0.8157894736842105
+    }
   }
 }
