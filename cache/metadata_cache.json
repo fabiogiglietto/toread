@@ -3823,5 +3823,31 @@
       "source": "crossref",
       "confidence_score": 0.8333333333333333
     }
+  },
+  "c4b0b0077b06cd02": {
+    "entry_key": "Farkas2026-lr",
+    "entry_title": "Defending fact-checking partnerships with platform companies: ‘We can't fight alone against disinformation’",
+    "cached_at": "2026-02-20T06:11:27.919654",
+    "metadata": {
+      "abstract": "This article investigates how professional fact-checkers defend collaborations with major platform companies such as Meta, Alphabet, and ByteDance. Drawing on 12 qualitative interviews with European fact-checkers, the study applies rhetorical apologia theory to analyse recurring justificatory arguments. We identify four modes of differentiation and three modes of transcendence employed by fact-checkers. Arguments of differentiation involve distancing fact-checking from platform company partners to emphasise editorial independence; distinguishing between different platform companies to legitimise partnerships with certain actors while rejecting others (notably TikTok owned by ByteDance); separating platform companies as a whole and specific employees within them; and contrasting platform funding with state funding to defend the former as less compromising for editorial autonomy. Arguments of transcendence invoke counter-factual scenarios of unmitigated misinformation; appealing to broader alliances against disinformation; and highlighting the potential for improving platform companies from within. These findings contribute to existing scholarship by unpacking how fact-checkers negotiate the complex institutional dependencies of platform company partnerships by simultaneously acknowledging risks and asserting pragmatic necessity. As such, the study provides a deeper understanding of the challenges facing fact-checking organisations and their efforts to establish legitimacy as epistemic authorities in the boundary terrain shared with other key actors in today's media landscape.",
+      "keywords": [],
+      "doi": "10.1177/02673231261422085",
+      "doi_url": "https://doi.org/10.1177/02673231261422085",
+      "url": null,
+      "arxiv_url": null,
+      "pdf_url": null,
+      "publication_date": "2026-02-16",
+      "citation_count": 0,
+      "reference_count": 50,
+      "venue": "European Journal of Communication",
+      "authors": [
+        "Johan Farkas",
+        "Mette Bengtsson"
+      ],
+      "subjects": [],
+      "is_open_access": null,
+      "source": "crossref",
+      "confidence_score": 0.86
+    }
   }
 }
