@@ -26,81 +26,6 @@
     "failure_reason": "Could not enrich entry: Marwick2025-vx | No DOI available | Title length: 122 chars | Authors: Marwick, Alice E, Furl, Katherine | APIs: Crossref enabled, Semantic Scholar enabled, ArXiv enabled",
     "last_failure_at": "2026-02-18T06:35:45.138918"
   },
-  "3eacf232e98df15d": {
-    "entry_key": "Bak-Coleman2026-mk",
-    "entry_title": "Industry influence in high-profile social media research",
-    "cached_at": "2026-01-22T06:56:37.253279",
-    "metadata": {
-      "abstract": "To what extent is social media research independent from industry influence? Leveraging openly available data, we show that half of the research published in top journals has disclosable ties to industry in the form of prior funding, collaboration, or employment. However, the majority of these ties go undisclosed in the published research. These trends do not arise from broad scientific engagement with industry, but rather from a select group of scientists who maintain long-lasting relationships with industry. Undisclosed ties to industry are common not just among authors, but among reviewers and academic editors during manuscript evaluation. Further, industry-tied research garners more attention within the academy, among policymakers, on social media, and in the news. Finally, we find evidence that industry ties are associated with a topical focus away from impacts of platform-scale features. Together, these findings suggest industry influence in social media research is extensive, impactful, and often opaque. Going forward there is a need to strengthen disclosure norms and implement policies to ensure the visibility of independent research, and the integrity of industry supported research.",
-      "keywords": [],
-      "doi": null,
-      "doi_url": null,
-      "url": null,
-      "arxiv_url": "http://arxiv.org/abs/2601.11507v1",
-      "pdf_url": "https://arxiv.org/pdf/2601.11507v1",
-      "publication_date": "2026-01-16",
-      "citation_count": null,
-      "reference_count": null,
-      "venue": null,
-      "authors": [
-        "Joseph Bak-Coleman",
-        "Jevin West",
-        "Cailin O'Connor",
-        "Carl T. Bergstrom"
-      ],
-      "subjects": [
-        "cs.SI"
-      ],
-      "is_open_access": true,
-      "source": "arxiv",
-      "confidence_score": 0.7272727272727272
-    }
-  },
-  "80bccb19ed8cefb2": {
-    "entry_key": "Schroeder2025-pr",
-    "entry_title": "How malicious AI swarms can threaten democracy",
-    "cached_at": "2026-01-23T06:18:50.751579",
-    "metadata": {
-      "abstract": "Advances in AI portend a new era of sophisticated disinformation operations. While individual AI systems already create convincing—and at times misleading—information, an imminent development is the emergence of malicious AI swarms. These systems can coordinate covertly, infiltrate communities, evade traditional detectors, and run continuous A/B tests, with round-the-clock persistence. The result can include fabricated grassroots consensus, fragmented shared reality, mass harassment, voter micro-suppression or mobilization, contamination of AI training data, and erosion of institutional trust. With increasing vulnerabilities in democratic processes worldwide, we urge a three-pronged response: (1) platform-side defenses—always-on swarm-detection dashboards, pre-election highfidelity swarm-simulation stress-tests, transparency audits, and optional client-side “AI shields” for users; (2) model-side safeguards—standardized persuasion-risk tests, provenance-authenticating passkeys, and watermarking; and (3) system-level oversight—a UN-backed AI Influence Observatory.",
-      "keywords": [],
-      "doi": "10.31219/osf.io/qm9yk_v3",
-      "doi_url": "https://doi.org/10.31219/osf.io/qm9yk_v3",
-      "url": null,
-      "arxiv_url": null,
-      "pdf_url": null,
-      "publication_date": null,
-      "citation_count": 0,
-      "reference_count": 0,
-      "venue": null,
-      "authors": [
-        "Daniel Thilo Schroeder",
-        "Meeyoung Cha",
-        "Andrea Baronchelli",
-        "Nick Bostrom",
-        "Nicholas Christakis",
-        "David Garcia",
-        "Amit Goldenberg",
-        "Yara Kyrychenko",
-        "Kevin Leyton-Brown",
-        "Nina Lutz",
-        "Gary Marcus",
-        "Filippo Menczer",
-        "Gordon Pennycook",
-        "David Gertler Rand",
-        "Frank Schweitzer",
-        "Christopher Summerfield",
-        "Audrey Tang",
-        "Jay Joseph Van Bavel",
-        "Sander van der Linden",
-        "Dawn Song",
-        "Jonas R. Kunst"
-      ],
-      "subjects": [],
-      "is_open_access": null,
-      "source": "crossref",
-      "confidence_score": 0.8119999999999999
-    }
-  },
   "c5f27c414108d268": {
     "entry_key": "Di-Domenico2026-zq",
     "entry_title": "don't you know that you're toxic? how influencer‐driven misinformation fuels online toxicity",
@@ -3880,6 +3805,67 @@
       "is_open_access": null,
       "source": "crossref",
       "confidence_score": 0.8157894736842105
+    }
+  },
+  "3eacf232e98df15d": {
+    "entry_key": "Bak-Coleman2026-mk",
+    "entry_title": "Industry influence in high-profile social media research",
+    "cached_at": "2026-02-22T07:52:05.700711",
+    "metadata": {
+      "abstract": "To what extent is social media research independent from industry influence? Leveraging openly available data, we show that half of the research published in top journals has disclosable ties to industry in the form of prior funding, collaboration, or employment. However, the majority of these ties go undisclosed in the published research. These trends do not arise from broad scientific engagement with industry, but rather from a select group of scientists who maintain long-lasting relationships with industry. Undisclosed ties to industry are common not just among authors, but among reviewers and academic editors during manuscript evaluation. Further, industry-tied research garners more attention within the academy, among policymakers, on social media, and in the news. Finally, we find evidence that industry ties are associated with a topical focus away from impacts of platform-scale features. Together, these findings suggest industry influence in social media research is extensive, impactful, and often opaque. Going forward there is a need to strengthen disclosure norms and implement policies to ensure the visibility of independent research, and the integrity of industry supported research.",
+      "keywords": [],
+      "doi": null,
+      "doi_url": null,
+      "url": null,
+      "arxiv_url": "http://arxiv.org/abs/2601.11507v1",
+      "pdf_url": "https://arxiv.org/pdf/2601.11507v1",
+      "publication_date": "2026-01-16",
+      "citation_count": null,
+      "reference_count": null,
+      "venue": null,
+      "authors": [
+        "Joseph Bak-Coleman",
+        "Jevin West",
+        "Cailin O'Connor",
+        "Carl T. Bergstrom"
+      ],
+      "subjects": [
+        "cs.SI"
+      ],
+      "is_open_access": true,
+      "source": "arxiv",
+      "confidence_score": 0.7272727272727272
+    }
+  },
+  "6d7232062ec16bcb": {
+    "entry_key": "Scalco2026-bd",
+    "entry_title": "How to detect information voids using longitudinal data from social media and web searches",
+    "cached_at": "2026-02-22T07:52:08.852577",
+    "metadata": {
+      "abstract": "The model of the attention economy, where content producers compete for the attention of users, relies on two key forces: information supply and demand. This study leverages the feedback loop between these forces to develop a method for detecting and quantifying information voids, i.e., periods in which little or no reliable information is available on a given topic. Using a case study on COVID-19 vaccines rollout in six European countries, and drawing on data from multiple platforms including Facebook, Google, Twitter, Wikipedia, and online news outlets, we examine how information voids emerge, persist and correlate with a decline in the proportion of high-quality information circulating online. By conceptualising information voids as a specific regime of information spreading, we also quantify their counterpart, information overabundance, which constitute a central component of the current definition of infodemic. We show that information voids are associated with a higher prevalence of misinformation, thus representing problematic hotspots in which individuals are more likely to be misled by low-quality online content. Overall, our findings provide empirical support for the inclusion of information voids in mechanistic explanations of misinformation emergence.",
+      "keywords": [],
+      "doi": null,
+      "doi_url": null,
+      "url": null,
+      "arxiv_url": "http://arxiv.org/abs/2602.15476v1",
+      "pdf_url": "https://arxiv.org/pdf/2602.15476v1",
+      "publication_date": "2026-02-17",
+      "citation_count": null,
+      "reference_count": null,
+      "venue": null,
+      "authors": [
+        "Irene Scalco",
+        "Francesco Gesualdo",
+        "Roy Cerqueti",
+        "Matteo Cinelli"
+      ],
+      "subjects": [
+        "cs.CY",
+        "physics.soc-ph"
+      ],
+      "is_open_access": true,
+      "source": "arxiv",
+      "confidence_score": 0.7333333333333333
     }
   }
 }
