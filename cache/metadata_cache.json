@@ -2,56 +2,29 @@
   "c5a7d0326e1f61c6": {
     "entry_key": "Kristensen2025-ni",
     "entry_title": "Platform polarization. Do alternative platforms drive discursive polarization?",
-    "cached_at": "2026-02-18T06:35:42.317437",
+    "cached_at": "2026-02-25T06:36:55.549358",
     "metadata": null,
     "failed": true,
     "failure_reason": "Could not enrich entry: Kristensen2025-ni | No DOI available | Title length: 78 chars | Authors: Kristensen, Jakob Bæk, Kristensen, Jakob Bæk | APIs: Crossref enabled, Semantic Scholar enabled, ArXiv enabled",
-    "last_failure_at": "2026-02-18T06:35:42.317445"
+    "last_failure_at": "2026-02-25T06:36:55.549364"
   },
   "65d46046ae1c898f": {
     "entry_key": "Gaw2025-ru",
     "entry_title": "Influence operations as brokerage: Political-economic infrastructures of manipulation in the 2022 Philippine elections",
-    "cached_at": "2026-02-18T06:35:48.264368",
+    "cached_at": "2026-02-25T06:36:58.436926",
     "metadata": null,
     "failed": true,
     "failure_reason": "Could not enrich entry: Gaw2025-ru | No DOI available | Title length: 118 chars | Authors: Gaw, Fatima, Agonos, Mariam Jayne... | APIs: Crossref enabled, Semantic Scholar enabled, ArXiv enabled",
-    "last_failure_at": "2026-02-18T06:35:48.264377"
+    "last_failure_at": "2026-02-25T06:36:58.436933"
   },
   "b41f425da41887a0": {
     "entry_key": "Marwick2025-vx",
     "entry_title": "True costs of misinformation| mountains of evidence: Processual “redpilling” as a Socio-technical effect of disinformation",
-    "cached_at": "2026-02-18T06:35:45.138908",
+    "cached_at": "2026-02-25T06:37:01.600975",
     "metadata": null,
     "failed": true,
     "failure_reason": "Could not enrich entry: Marwick2025-vx | No DOI available | Title length: 122 chars | Authors: Marwick, Alice E, Furl, Katherine | APIs: Crossref enabled, Semantic Scholar enabled, ArXiv enabled",
-    "last_failure_at": "2026-02-18T06:35:45.138918"
-  },
-  "c5f27c414108d268": {
-    "entry_key": "Di-Domenico2026-zq",
-    "entry_title": "don't you know that you're toxic? how influencer‐driven misinformation fuels online toxicity",
-    "cached_at": "2026-01-25T09:11:59.687350",
-    "metadata": {
-      "abstract": "ABSTRACT Research on misinformation has focused on message content and cognitive bias, overlooking how source type shapes toxic engagement. This study addresses that gap by showing that influencer‐driven misinformation does not merely increase toxicity: it reconfigures its nature and persistence through relational and social influence mechanisms. Drawing on Source Credibility, Parasocial Interaction, and Social Influence theories, we analyse 101 brand‐related misinformation posts (48,821 comments) across major platforms using a mixed‐method design combining automated toxicity detection, topic modeling, and thematic analysis. Results reveal that influencers amplify toxicity under high engagement, sociopolitical salience, and low pseudonymity conditions, producing distinct patterns such as flame‐bait firestorms and toxic debunking. We identify two influencer‐specific mechanisms: brand‐related misinformation legitimation and community enmeshment, that sustain toxic echo chambers by converting credibility and parasocial bonds into collective antagonism. These findings advance marketing theory by reframing toxicity as a source‐amplified, relational phenomenon, and inform ecosystem‐level interventions structured around publishers, platforms, and people to mitigate influencer‐driven harm.",
-      "keywords": [],
-      "doi": "10.1002/mar.70106",
-      "doi_url": "https://doi.org/10.1002/mar.70106",
-      "url": null,
-      "arxiv_url": null,
-      "pdf_url": null,
-      "publication_date": "2026-01-19",
-      "citation_count": 0,
-      "reference_count": 139,
-      "venue": "Psychology &amp; Marketing",
-      "authors": [
-        "Giandomenico Di Domenico",
-        "Federico Mangió",
-        "Denitsa Dineva"
-      ],
-      "subjects": [],
-      "is_open_access": null,
-      "source": "crossref",
-      "confidence_score": 0.7875
-    }
+    "last_failure_at": "2026-02-25T06:37:01.600982"
   },
   "bb1e983fc3d493b2": {
     "entry_key": "Hameleers2026-mc",
@@ -3866,6 +3839,60 @@
       "is_open_access": true,
       "source": "arxiv",
       "confidence_score": 0.7333333333333333
+    }
+  },
+  "c5f27c414108d268": {
+    "entry_key": "Di-Domenico2026-zq",
+    "entry_title": "don't you know that you're toxic? how influencer‐driven misinformation fuels online toxicity",
+    "cached_at": "2026-02-25T06:37:04.884475",
+    "metadata": {
+      "abstract": "ABSTRACT Research on misinformation has focused on message content and cognitive bias, overlooking how source type shapes toxic engagement. This study addresses that gap by showing that influencer‐driven misinformation does not merely increase toxicity: it reconfigures its nature and persistence through relational and social influence mechanisms. Drawing on Source Credibility, Parasocial Interaction, and Social Influence theories, we analyse 101 brand‐related misinformation posts (48,821 comments) across major platforms using a mixed‐method design combining automated toxicity detection, topic modeling, and thematic analysis. Results reveal that influencers amplify toxicity under high engagement, sociopolitical salience, and low pseudonymity conditions, producing distinct patterns such as flame‐bait firestorms and toxic debunking. We identify two influencer‐specific mechanisms: brand‐related misinformation legitimation and community enmeshment, that sustain toxic echo chambers by converting credibility and parasocial bonds into collective antagonism. These findings advance marketing theory by reframing toxicity as a source‐amplified, relational phenomenon, and inform ecosystem‐level interventions structured around publishers, platforms, and people to mitigate influencer‐driven harm.",
+      "keywords": [],
+      "doi": "10.1002/mar.70106",
+      "doi_url": "https://doi.org/10.1002/mar.70106",
+      "url": null,
+      "arxiv_url": null,
+      "pdf_url": null,
+      "publication_date": "2026-01-19",
+      "citation_count": 0,
+      "reference_count": 139,
+      "venue": "Psychology &amp; Marketing",
+      "authors": [
+        "Giandomenico Di Domenico",
+        "Federico Mangió",
+        "Denitsa Dineva"
+      ],
+      "subjects": [],
+      "is_open_access": null,
+      "source": "crossref",
+      "confidence_score": 0.7875
+    }
+  },
+  "2584b21be139cef0": {
+    "entry_key": "Tai2026-qk",
+    "entry_title": "Elected officials’ online sharing of misinformation: Institutional and ideological checks",
+    "cached_at": "2026-02-25T06:37:07.319932",
+    "metadata": {
+      "abstract": null,
+      "keywords": [],
+      "doi": "10.1080/10584609.2026.2613661",
+      "doi_url": "https://doi.org/10.1080/10584609.2026.2613661",
+      "url": null,
+      "arxiv_url": null,
+      "pdf_url": null,
+      "publication_date": "2026-02-04",
+      "citation_count": 0,
+      "reference_count": 86,
+      "venue": "Political Communication",
+      "authors": [
+        "Yuehong Cassandra Tai",
+        "Yu-Ru Lin",
+        "Bruce A. Desmarais"
+      ],
+      "subjects": [],
+      "is_open_access": null,
+      "source": "crossref",
+      "confidence_score": 0.8333333333333333
     }
   }
 }
