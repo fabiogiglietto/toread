@@ -3894,5 +3894,37 @@
       "source": "crossref",
       "confidence_score": 0.8333333333333333
     }
+  },
+  "29d7f292b81de3ba": {
+    "entry_key": "DeVerna2025-dl",
+    "entry_title": "Large language models require curated context for reliable political fact-checking -- even with reasoning and web search",
+    "cached_at": "2026-02-26T05:15:14.726968",
+    "metadata": {
+      "abstract": "Large language models (LLMs) have raised hopes for automated end-to-end fact-checking, but prior studies report mixed results. As mainstream chatbots increasingly ship with reasoning capabilities and web search tools -- and millions of users already rely on them for verification -- rigorous evaluation is urgent. We evaluate 15 recent LLMs from OpenAI, Google, Meta, and DeepSeek on more than 6,000 claims fact-checked by PolitiFact, comparing standard models with reasoning- and web-search variants. Standard models perform poorly, reasoning offers minimal benefits, and web search provides only moderate gains, despite fact-checks being available on the web. In contrast, a curated RAG system using PolitiFact summaries improved macro F1 by 233% on average across model variants. These findings suggest that giving models access to curated high-quality context is a promising path for automated fact-checking.",
+      "keywords": [],
+      "doi": null,
+      "doi_url": null,
+      "url": null,
+      "arxiv_url": "http://arxiv.org/abs/2511.18749v1",
+      "pdf_url": "https://arxiv.org/pdf/2511.18749v1",
+      "publication_date": "2025-11-24",
+      "citation_count": null,
+      "reference_count": null,
+      "venue": null,
+      "authors": [
+        "Matthew R. DeVerna",
+        "Kai-Cheng Yang",
+        "Harry Yaojun Yan",
+        "Filippo Menczer"
+      ],
+      "subjects": [
+        "cs.CL",
+        "cs.CY",
+        "cs.IR"
+      ],
+      "is_open_access": true,
+      "source": "arxiv",
+      "confidence_score": 0.7272727272727272
+    }
   }
 }
