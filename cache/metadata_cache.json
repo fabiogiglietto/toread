@@ -26,136 +26,6 @@
     "failure_reason": "Could not enrich entry: Marwick2025-vx | No DOI available | Title length: 122 chars | Authors: Marwick, Alice E, Furl, Katherine | APIs: Crossref enabled, Semantic Scholar enabled, ArXiv enabled",
     "last_failure_at": "2026-02-25T06:37:01.600982"
   },
-  "bb1e983fc3d493b2": {
-    "entry_key": "Hameleers2026-mc",
-    "entry_title": "Beyond textual disinformation: Comparing the effects of textual disinformation to AI-generated and video-based visual disinformation across different issues",
-    "cached_at": "2026-01-27T05:48:11.635065",
-    "metadata": {
-      "abstract": "Although visual and AI-generated disinformation have been associated with alarming political consequences, we currently lack a clear empirical understanding of the effects of different forms of visual disinformation. Against this background, we rely on a pre-registered experimental study in the United States ( N = 982) in which we exposed participants to various modes of textual and visual disinformation on two different issues: The disappearance of flight MH370 and the Russian invasion of Ukraine. Findings show that, for MH370, there was no difference in credibility between textual, AI-generated, or video-based disinformation. Yet, for the Russian invasion of Ukraine, video-based disinformation was perceived as more credible than textual or image-based disinformation. Our findings indicate that the consequences of visual disinformation are context-bound: Especially in the case of polarizing issues, the out-of-context placement of videos can serve as a plausible form of deceptive evidence.",
-      "keywords": [],
-      "doi": "10.1177/14614448251409208",
-      "doi_url": "https://doi.org/10.1177/14614448251409208",
-      "url": null,
-      "arxiv_url": null,
-      "pdf_url": null,
-      "publication_date": "2026-01-23",
-      "citation_count": 0,
-      "reference_count": 30,
-      "venue": "New Media &amp; Society",
-      "authors": [
-        "Michael Hameleers",
-        "Toni van der Meer"
-      ],
-      "subjects": [],
-      "is_open_access": null,
-      "source": "crossref",
-      "confidence_score": 0.9285714285714285
-    }
-  },
-  "9cc1b35ddb68bcf1": {
-    "entry_key": "Schroeder2026-im",
-    "entry_title": "How malicious AI swarms can threaten democracy",
-    "cached_at": "2026-01-27T06:19:49.780137",
-    "metadata": {
-      "abstract": "Advances in AI portend a new era of sophisticated disinformation operations. While individual AI systems already create convincing—and at times misleading—information, an imminent development is the emergence of malicious AI swarms. These systems can coordinate covertly, infiltrate communities, evade traditional detectors, and run continuous A/B tests, with round-the-clock persistence. The result can include fabricated grassroots consensus, fragmented shared reality, mass harassment, voter micro-suppression or mobilization, contamination of AI training data, and erosion of institutional trust. With increasing vulnerabilities in democratic processes worldwide, we urge a three-pronged response: (1) platform-side defenses—always-on swarm-detection dashboards, pre-election highfidelity swarm-simulation stress-tests, transparency audits, and optional client-side “AI shields” for users; (2) model-side safeguards—standardized persuasion-risk tests, provenance-authenticating passkeys, and watermarking; and (3) system-level oversight—a UN-backed AI Influence Observatory.",
-      "keywords": [],
-      "doi": "10.31219/osf.io/qm9yk_v3",
-      "doi_url": "https://doi.org/10.31219/osf.io/qm9yk_v3",
-      "url": null,
-      "arxiv_url": null,
-      "pdf_url": null,
-      "publication_date": null,
-      "citation_count": 0,
-      "reference_count": 0,
-      "venue": null,
-      "authors": [
-        "Daniel Thilo Schroeder",
-        "Meeyoung Cha",
-        "Andrea Baronchelli",
-        "Nick Bostrom",
-        "Nicholas Christakis",
-        "David Garcia",
-        "Amit Goldenberg",
-        "Yara Kyrychenko",
-        "Kevin Leyton-Brown",
-        "Nina Lutz",
-        "Gary Marcus",
-        "Filippo Menczer",
-        "Gordon Pennycook",
-        "David Gertler Rand",
-        "Frank Schweitzer",
-        "Christopher Summerfield",
-        "Audrey Tang",
-        "Jay Joseph Van Bavel",
-        "Sander van der Linden",
-        "Dawn Song",
-        "Jonas R. Kunst"
-      ],
-      "subjects": [],
-      "is_open_access": null,
-      "source": "crossref",
-      "confidence_score": 0.8113207547169811
-    }
-  },
-  "e516b275ba585653": {
-    "entry_key": "Gillespie2026-aa",
-    "entry_title": "AI red-teaming is a sociotechnical problem",
-    "cached_at": "2026-01-27T06:19:52.834557",
-    "metadata": {
-      "abstract": "As generative AI technologies find more and more real-world applications, the importance of testing their performance and safety is paramount. “Red-teaming” has quickly become the primary approach to testing AI models—prioritized by AI companies, and enshrined in AI policy and regulation. Members of red teams act as adversaries, probing AI systems to test their safety mechanisms and uncover vulnerabilities. Yet we know far too little about this work or its implications. In this article, we highlight the importance of understanding the values and assumptions behind red-teaming, the labor arrangements involved, and the psychological impacts on red-teamers, drawing insights from lessons learned around the work of content moderation. Red-teaming should be a deeply interdisciplinary concern. To avoid repeating the mistakes of the recent past, we call for a coordinated network of scholars, from the full range of the computational and social sciences, to study the technical, social, critical, and policy dimensions of red-teaming and of the emerging sociotechnical system that is AI.",
-      "keywords": [],
-      "doi": "10.1145/3731657",
-      "doi_url": "https://doi.org/10.1145/3731657",
-      "url": null,
-      "arxiv_url": null,
-      "pdf_url": null,
-      "publication_date": "2026-01-21",
-      "citation_count": 0,
-      "reference_count": 42,
-      "venue": "Communications of the ACM",
-      "authors": [
-        "Tarleton Gillespie",
-        "Ryland Shaw",
-        "Mary L. Gray",
-        "Jina Suh"
-      ],
-      "subjects": [],
-      "is_open_access": null,
-      "source": "crossref",
-      "confidence_score": 0.83
-    }
-  },
-  "f55c9973287766f0": {
-    "entry_key": "Balluff2026-bv",
-    "entry_title": "The Austrian political advertisement scandal: Patterns of “journalism for sale”",
-    "cached_at": "2026-01-27T10:52:07.914011",
-    "metadata": {
-      "abstract": "Mounting concern surrounds the influence of political actors on journalism, especially as media outlets face increasing financial pressures. These circumstances can give rise to instances of media capture, a mutually corrupting relationship between political actors and media organizations. However, empirical evidence substantiating such mechanisms and their consequences remains limited, particularly in the context of Western democracies. This chapter investigates a recent case in which a former Austrian chancellor allegedly colluded with a tabloid newspaper to receive better news coverage in exchange for increased ad placements by government institutions. We employ automated content analysis to investigate political news articles from seventeen prominent Austrian news outlets spanning 2012–2021 ( n = 222,659). Adopting a difference-in-differences approach, we find a substantial increase in media visibility of the former Austrian chancellor within the news outlet that is alleged to have received bribes, as well as a decrease in favorability for challenger candidates. Although this study does not aim to prove or disprove the involvement of specific political actors or media organizations in unethical or illegal activities, it introduces an innovative method for detecting unusual patterns in media reporting. Findings are discussed in the context of current threats to media independence and underscore the crucial need to protect journalistic integrity and ensure unbiased information for the public.",
-      "keywords": [],
-      "doi": "10.1177/19401612241285672",
-      "doi_url": "https://doi.org/10.1177/19401612241285672",
-      "url": null,
-      "arxiv_url": null,
-      "pdf_url": null,
-      "publication_date": "2026",
-      "citation_count": 5,
-      "reference_count": 99,
-      "venue": "The International Journal of Press/Politics",
-      "authors": [
-        "Paul Balluff",
-        "Jakob-Moritz Eberl",
-        "Sarina Joy Oberhänsli",
-        "Jana Bernhard-Harrer",
-        "Hajo G. Boomgaarden",
-        "Andreas Fahr",
-        "Martin Huber"
-      ],
-      "subjects": [],
-      "is_open_access": null,
-      "source": "crossref",
-      "confidence_score": 0.8176470588235294
-    }
-  },
   "339aaae04490c5e1": {
     "entry_key": "Renault2025-kv",
     "entry_title": "@Grok is this true? LLM-powered fact-checking on social media",
@@ -3925,6 +3795,169 @@
       "is_open_access": true,
       "source": "arxiv",
       "confidence_score": 0.7272727272727272
+    }
+  },
+  "bb1e983fc3d493b2": {
+    "entry_key": "Hameleers2026-mc",
+    "entry_title": "Beyond textual disinformation: Comparing the effects of textual disinformation to AI-generated and video-based visual disinformation across different issues",
+    "cached_at": "2026-02-27T06:09:01.013543",
+    "metadata": {
+      "abstract": "Although visual and AI-generated disinformation have been associated with alarming political consequences, we currently lack a clear empirical understanding of the effects of different forms of visual disinformation. Against this background, we rely on a pre-registered experimental study in the United States ( N = 982) in which we exposed participants to various modes of textual and visual disinformation on two different issues: The disappearance of flight MH370 and the Russian invasion of Ukraine. Findings show that, for MH370, there was no difference in credibility between textual, AI-generated, or video-based disinformation. Yet, for the Russian invasion of Ukraine, video-based disinformation was perceived as more credible than textual or image-based disinformation. Our findings indicate that the consequences of visual disinformation are context-bound: Especially in the case of polarizing issues, the out-of-context placement of videos can serve as a plausible form of deceptive evidence.",
+      "keywords": [],
+      "doi": "10.1177/14614448251409208",
+      "doi_url": "https://doi.org/10.1177/14614448251409208",
+      "url": null,
+      "arxiv_url": null,
+      "pdf_url": null,
+      "publication_date": "2026-01-23",
+      "citation_count": 0,
+      "reference_count": 30,
+      "venue": "New Media &amp; Society",
+      "authors": [
+        "Michael Hameleers",
+        "Toni van der Meer"
+      ],
+      "subjects": [],
+      "is_open_access": null,
+      "source": "crossref",
+      "confidence_score": 0.9285714285714285
+    }
+  },
+  "9cc1b35ddb68bcf1": {
+    "entry_key": "Schroeder2026-im",
+    "entry_title": "How malicious AI swarms can threaten democracy",
+    "cached_at": "2026-02-27T06:09:03.803014",
+    "metadata": {
+      "abstract": "Advances in AI portend a new era of sophisticated disinformation operations. While individual AI systems already create convincing—and at times misleading—information, an imminent development is the emergence of malicious AI swarms. These systems can coordinate covertly, infiltrate communities, evade traditional detectors, and run continuous A/B tests, with round-the-clock persistence. The result can include fabricated grassroots consensus, fragmented shared reality, mass harassment, voter micro-suppression or mobilization, contamination of AI training data, and erosion of institutional trust. With increasing vulnerabilities in democratic processes worldwide, we urge a three-pronged response: (1) platform-side defenses—always-on swarm-detection dashboards, pre-election highfidelity swarm-simulation stress-tests, transparency audits, and optional client-side “AI shields” for users; (2) model-side safeguards—standardized persuasion-risk tests, provenance-authenticating passkeys, and watermarking; and (3) system-level oversight—a UN-backed AI Influence Observatory.",
+      "keywords": [],
+      "doi": "10.31219/osf.io/qm9yk_v1",
+      "doi_url": "https://doi.org/10.31219/osf.io/qm9yk_v1",
+      "url": null,
+      "arxiv_url": null,
+      "pdf_url": null,
+      "publication_date": null,
+      "citation_count": 2,
+      "reference_count": 0,
+      "venue": null,
+      "authors": [
+        "Daniel Thilo Schroeder",
+        "Meeyoung Cha",
+        "Andrea Baronchelli",
+        "Nick Bostrom",
+        "Nicholas Christakis",
+        "David Garcia",
+        "Amit Goldenberg",
+        "Yara Kyrychenko",
+        "Kevin Leyton-Brown",
+        "Nina Lutz",
+        "Gary Marcus",
+        "Filippo Menczer",
+        "Gordon Pennycook",
+        "David Gertler Rand",
+        "Frank Schweitzer",
+        "Christopher Summerfield",
+        "Audrey Tang",
+        "Jay Joseph Van Bavel",
+        "Sander van der Linden",
+        "Dawn Song",
+        "Jonas R. Kunst"
+      ],
+      "subjects": [],
+      "is_open_access": null,
+      "source": "crossref",
+      "confidence_score": 0.8113207547169811
+    }
+  },
+  "e516b275ba585653": {
+    "entry_key": "Gillespie2026-aa",
+    "entry_title": "AI red-teaming is a sociotechnical problem",
+    "cached_at": "2026-02-27T06:09:06.853346",
+    "metadata": {
+      "abstract": "As generative AI technologies find more and more real-world applications, the importance of testing their performance and safety is paramount. “Red-teaming” has quickly become the primary approach to testing AI models—prioritized by AI companies, and enshrined in AI policy and regulation. Members of red teams act as adversaries, probing AI systems to test their safety mechanisms and uncover vulnerabilities. Yet we know far too little about this work or its implications. In this article, we highlight the importance of understanding the values and assumptions behind red-teaming, the labor arrangements involved, and the psychological impacts on red-teamers, drawing insights from lessons learned around the work of content moderation. Red-teaming should be a deeply interdisciplinary concern. To avoid repeating the mistakes of the recent past, we call for a coordinated network of scholars, from the full range of the computational and social sciences, to study the technical, social, critical, and policy dimensions of red-teaming and of the emerging sociotechnical system that is AI.",
+      "keywords": [],
+      "doi": "10.1145/3731657",
+      "doi_url": "https://doi.org/10.1145/3731657",
+      "url": null,
+      "arxiv_url": null,
+      "pdf_url": null,
+      "publication_date": "2026",
+      "citation_count": 0,
+      "reference_count": 42,
+      "venue": "Communications of the ACM",
+      "authors": [
+        "Tarleton Gillespie",
+        "Ryland Shaw",
+        "Mary L. Gray",
+        "Jina Suh"
+      ],
+      "subjects": [],
+      "is_open_access": null,
+      "source": "crossref",
+      "confidence_score": 0.83
+    }
+  },
+  "f55c9973287766f0": {
+    "entry_key": "Balluff2026-bv",
+    "entry_title": "The Austrian political advertisement scandal: Patterns of “journalism for sale”",
+    "cached_at": "2026-02-27T06:09:09.902201",
+    "metadata": {
+      "abstract": "Mounting concern surrounds the influence of political actors on journalism, especially as media outlets face increasing financial pressures. These circumstances can give rise to instances of media capture, a mutually corrupting relationship between political actors and media organizations. However, empirical evidence substantiating such mechanisms and their consequences remains limited, particularly in the context of Western democracies. This chapter investigates a recent case in which a former Austrian chancellor allegedly colluded with a tabloid newspaper to receive better news coverage in exchange for increased ad placements by government institutions. We employ automated content analysis to investigate political news articles from seventeen prominent Austrian news outlets spanning 2012–2021 ( n = 222,659). Adopting a difference-in-differences approach, we find a substantial increase in media visibility of the former Austrian chancellor within the news outlet that is alleged to have received bribes, as well as a decrease in favorability for challenger candidates. Although this study does not aim to prove or disprove the involvement of specific political actors or media organizations in unethical or illegal activities, it introduces an innovative method for detecting unusual patterns in media reporting. Findings are discussed in the context of current threats to media independence and underscore the crucial need to protect journalistic integrity and ensure unbiased information for the public.",
+      "keywords": [],
+      "doi": "10.1177/19401612241285672",
+      "doi_url": "https://doi.org/10.1177/19401612241285672",
+      "url": null,
+      "arxiv_url": null,
+      "pdf_url": null,
+      "publication_date": "2026",
+      "citation_count": 5,
+      "reference_count": 99,
+      "venue": "The International Journal of Press/Politics",
+      "authors": [
+        "Paul Balluff",
+        "Jakob-Moritz Eberl",
+        "Sarina Joy Oberhänsli",
+        "Jana Bernhard-Harrer",
+        "Hajo G. Boomgaarden",
+        "Andreas Fahr",
+        "Martin Huber"
+      ],
+      "subjects": [],
+      "is_open_access": null,
+      "source": "crossref",
+      "confidence_score": 0.8176470588235294
+    }
+  },
+  "c6869c5da4414521": {
+    "entry_key": "Ober2026-vd",
+    "entry_title": "Integrating topic modeling and LLM prompt engineering into a human-driven approach to analyze interview transcripts",
+    "cached_at": "2026-02-27T06:09:13.293506",
+    "metadata": {
+      "abstract": "Topic modeling has become a widely used unsupervised machine learning method for extracting latent themes from large textual datasets. However, the interpretability of these themes often relies heavily on human judgment, which can limit transparency and reproducibility. Recent advances in large language models (LLMs) and prompt engineering offer new opportunities to enhance the interpretability and scalability of topic modeling outputs. This study presents a hybrid, human-in-the-loop methodological framework that integrates topic modeling, LLM prompting, and human-derived codes to support rigorous qualitative analysis. We apply this framework to focus group interviews with 13 U.S. teachers discussing the conceptualization and assessment of communication and digital literacy skills within competency-based education (CBE) contexts. The multi-stage process includes semantic clustering, LLM-assisted topic labeling, and iterative codebook refinement, enabling both scale and interpretive depth. Our findings demonstrate that this approach supports construct alignment, thematic stability, and methodological transparency, while preserving the contextual richness of qualitative data. We also highlight the importance of human oversight in guiding LLM outputs and ensuring theoretical coherence. This work contributes to emerging best practices for integrating AI tools into qualitative educational research by offering a replicable approach for analyzing complex, open-ended data that maintains both scalability and interpretability. The framework demonstrates how computational tools can augment human interpretive expertise while maintaining the epistemological integrity essential to qualitative inquiry. Supplemental materials are available at: https://doi.org/10.17605/osf.io/4q6w8.",
+      "keywords": [],
+      "doi": "10.5281/zenodo.18733521",
+      "doi_url": "https://doi.org/10.5281/zenodo.18733521",
+      "url": "https://doi.org/10.5281/zenodo.18733521",
+      "arxiv_url": null,
+      "pdf_url": "https://doi.org/10.5281/zenodo.18733521",
+      "publication_date": "2026-02-22",
+      "citation_count": 0,
+      "reference_count": null,
+      "venue": "Zenodo (CERN European Organization for Nuclear Research)",
+      "authors": [
+        "Teresa Ober",
+        "Karyssa A. Courey",
+        "Michael Flor"
+      ],
+      "subjects": [
+        "Interpretability",
+        "Computer science",
+        "Construct (python library)",
+        "Topic model",
+        "Conceptualization"
+      ],
+      "is_open_access": true,
+      "source": "openalex",
+      "confidence_score": 0.7333333333333333
     }
   }
 }

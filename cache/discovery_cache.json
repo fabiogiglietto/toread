@@ -713,5 +713,10 @@
     "entry_key": "DeVerna2025-dl",
     "entry_title": "Large language models require curated context for reliable political fact-checking -- even with reasoning and web search",
     "discovery_date": "2026-02-26T05:15:14.418067+00:00"
+  },
+  "c6869c5da4414521": {
+    "entry_key": "Ober2026-vd",
+    "entry_title": "Integrating topic modeling and LLM prompt engineering into a human-driven approach to analyze interview transcripts",
+    "discovery_date": "2026-02-27T06:09:00.657393+00:00"
   }
 }
