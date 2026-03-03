@@ -3932,5 +3932,33 @@
       "source": "openalex",
       "confidence_score": 0.7333333333333333
     }
+  },
+  "36e3e8c95293bf02": {
+    "entry_key": "Ferrara2026-io",
+    "entry_title": "ECHO: Encoding Communities via High-order Operators",
+    "cached_at": "2026-03-03T07:13:16.416604",
+    "metadata": {
+      "abstract": "Community detection in attributed networks faces a fundamental divide: topological algorithms ignore semantic features, while Graph Neural Networks (GNNs) encounter devastating computational bottlenecks. Specifically, GNNs suffer from a Semantic Wall of feature over smoothing in dense or heterophilic networks, and a Systems Wall driven by the O(N^2) memory constraints of pairwise clustering. To dismantle these barriers, we introduce ECHO (Encoding Communities via High order Operators), a scalable, self supervised architecture that reframes community detection as an adaptive, multi scale diffusion process. ECHO features a Topology Aware Router that automatically analyzes structural heuristics sparsity, density, and assortativity to route graphs through the optimal inductive bias, preventing heterophilic poisoning while ensuring semantic densification. Coupled with a memory sharded full batch contrastive objective and a novel chunked O(N \\cdot K) similarity extraction method, ECHO completely bypasses traditional O(N^2) memory bottlenecks without sacrificing the mathematical precision of global gradients. Extensive evaluations demonstrate that this topology feature synergy consistently overcomes the classical resolution limit. On synthetic LFR benchmarks scaled up to 1 million nodes, ECHO achieves scale invariant accuracy despite severe topological noise. Furthermore, on massive real world social networks with over 1.6 million nodes and 30 million edges, it completes clustering in mere minutes with throughputs exceeding 2,800 nodes per second matching the speed of highly optimized purely topological baselines. The implementation utilizes a unified framework that automatically engages memory sharded optimization to support adoption across varying hardware constraints. GitHub Repository: https://github.com/emilioferrara/ECHO-GNN",
+      "keywords": [],
+      "doi": null,
+      "doi_url": null,
+      "url": null,
+      "arxiv_url": "http://arxiv.org/abs/2602.22446v1",
+      "pdf_url": "https://arxiv.org/pdf/2602.22446v1",
+      "publication_date": "2026-02-25",
+      "citation_count": null,
+      "reference_count": null,
+      "venue": null,
+      "authors": [
+        "Emilio Ferrara"
+      ],
+      "subjects": [
+        "cs.LG",
+        "cs.AI"
+      ],
+      "is_open_access": true,
+      "source": "arxiv",
+      "confidence_score": 0.7999999999999999
+    }
   }
 }

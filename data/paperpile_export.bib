@@ -951,6 +951,48 @@
                   explanations of misinformation emergence.}
 }
 
+@ARTICLE{Ferrara2026-io,
+  title        = {{ECHO}: Encoding Communities via High-order Operators},
+  author       = {Ferrara, Emilio},
+  journaltitle = {arXiv [cs.LG]},
+  date         = {2026-02-25},
+  eprinttype   = {arXiv},
+  eprintclass  = {cs.LG},
+  abstract     = {Community detection in attributed networks faces a fundamental
+                  divide: topological algorithms ignore semantic features, while
+                  Graph Neural Networks (GNNs) encounter devastating
+                  computational bottlenecks. Specifically, GNNs suffer from a
+                  Semantic Wall of feature over smoothing in dense or
+                  heterophilic networks, and a Systems Wall driven by the
+                  O(N\textasciicircum2) memory constraints of pairwise
+                  clustering. To dismantle these barriers, we introduce ECHO
+                  (Encoding Communities via High order Operators), a scalable,
+                  self supervised architecture that reframes community detection
+                  as an adaptive, multi scale diffusion process. ECHO features a
+                  Topology Aware Router that automatically analyzes structural
+                  heuristics sparsity, density, and assortativity to route
+                  graphs through the optimal inductive bias, preventing
+                  heterophilic poisoning while ensuring semantic densification.
+                  Coupled with a memory sharded full batch contrastive objective
+                  and a novel chunked O(N \cdot K) similarity extraction method,
+                  ECHO completely bypasses traditional O(N\textasciicircum2)
+                  memory bottlenecks without sacrificing the mathematical
+                  precision of global gradients. Extensive evaluations
+                  demonstrate that this topology feature synergy consistently
+                  overcomes the classical resolution limit. On synthetic LFR
+                  benchmarks scaled up to 1 million nodes, ECHO achieves scale
+                  invariant accuracy despite severe topological noise.
+                  Furthermore, on massive real world social networks with over
+                  1.6 million nodes and 30 million edges, it completes
+                  clustering in mere minutes with throughputs exceeding 2,800
+                  nodes per second matching the speed of highly optimized purely
+                  topological baselines. The implementation utilizes a unified
+                  framework that automatically engages memory sharded
+                  optimization to support adoption across varying hardware
+                  constraints. GitHub Repository:
+                  https://github.com/emilioferrara/ECHO-GNN}
+}
+
 @ARTICLE{Di-Domenico2026-zq,
   title        = {\textit{don't you know that you're toxic?} how
                   influencer‐driven misinformation fuels online toxicity},
