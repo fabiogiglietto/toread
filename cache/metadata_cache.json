@@ -26,68 +26,6 @@
     "failure_reason": "Could not enrich entry: Marwick2025-vx | No DOI available | Title length: 122 chars | Authors: Marwick, Alice E, Furl, Katherine | APIs: Crossref enabled, Semantic Scholar enabled, ArXiv enabled",
     "last_failure_at": "2026-03-05T05:12:12.719733"
   },
-  "df48b78c330b92b4": {
-    "entry_key": "Pierri2025-hm",
-    "entry_title": "Research opportunities and challenges of the EU's Digital Services Act",
-    "cached_at": "2026-02-03T13:55:44.958095",
-    "metadata": {
-      "abstract": "The Digital Services Act (DSA) introduced by the European Union in 2022 offers a landmark framework for platform transparency, with Article 40 enabling vetted researchers to access data from major online platforms. Yet significant legal, technical, and organizational barriers still hinder effective research on systemic online risks. This piece outlines the key challenges emerging from the Article 40 process and proposes practical measures to ensure that the DSA fulfills its transparency and accountability goals.",
-      "keywords": [],
-      "doi": null,
-      "doi_url": null,
-      "url": null,
-      "arxiv_url": "http://arxiv.org/abs/2512.14223v1",
-      "pdf_url": "https://arxiv.org/pdf/2512.14223v1",
-      "publication_date": "2025-12-16",
-      "citation_count": null,
-      "reference_count": null,
-      "venue": null,
-      "authors": [
-        "Francesco Pierri",
-        "Theo Araujo",
-        "Sanne Kruikemeier",
-        "Philipp Lorenz-Spreen",
-        "Mariek M. P. Vanden Abeele",
-        "Laura Vandenbosch",
-        "Joana Gonçalves-Sa",
-        "Przemyslaw A. Grabowicz"
-      ],
-      "subjects": [
-        "cs.CY",
-        "cs.SI"
-      ],
-      "is_open_access": true,
-      "source": "arxiv",
-      "confidence_score": 0.7142857142857142
-    }
-  },
-  "26dd34dc757b8317": {
-    "entry_key": "Hollingshead2026-vx",
-    "entry_title": "Same platform, different stories: TikTok and the battle over immigration narratives",
-    "cached_at": "2026-02-03T13:55:45.819694",
-    "metadata": {
-      "abstract": "In an era defined by overlapping global crises, immigration has become a key fault line in what scholars term a “polycrisis.” Within this context, social media platforms serve as digital battlegrounds for competing narratives about immigration, with TikTok occupying a distinct and understudied niche. This article examines how immigration-related content in Canada is framed on TikTok and how the platform’s logic of mimesis and interactivity, grounded in its affordances, shape immigration discourse. From a dataset of 5,305 public TikTok videos containing immigration-related terms and hashtags, we selected a sample of 344 English-language videos posted in 2025, each with over 100,000 plays and likely shown to Canadian users. Through a mixed-methods content analysis, we found that, contrary to expectations, the content leaned toward positive portrayals of immigration, accounting for 41% of the sample. Furthermore, despite expressing differing perspectives on immigration, users used TikTok’s affordances in comparable ways. That is, the same affordances that can support immigrants’ information seeking and sense of belonging through practical guidance and relatable storytelling, respectively, can be weaponized to amplify xenophobia by way of manipulated statistics and racist humour performed in skits and AI-generated videos. This highlights how TikTok’s affordances can simultaneously support digital inclusion and community building while also enabling exclusion and hostility. The findings, although rooted in Canada, hold broader relevance for understanding how short-video platforms mediate contentious issues across digitally connected societies.",
-      "keywords": [],
-      "doi": "10.17645/mac.11409",
-      "doi_url": "https://doi.org/10.17645/mac.11409",
-      "url": null,
-      "arxiv_url": null,
-      "pdf_url": null,
-      "publication_date": "2026-01-28",
-      "citation_count": 0,
-      "reference_count": 61,
-      "venue": "Media and Communication",
-      "authors": [
-        "William Hollingshead",
-        "Anatoliy Gruzd",
-        "Philip Mai"
-      ],
-      "subjects": [],
-      "is_open_access": null,
-      "source": "crossref",
-      "confidence_score": 0.8428571428571427
-    }
-  },
   "a1200ca53e8d7d7c": {
     "entry_key": "Copland2025-em",
     "entry_title": "Sky News Australia as network propaganda: how a niche cable channel became an international right-wing propaganda machine",
@@ -3958,5 +3896,97 @@
     "failed": true,
     "failure_reason": "Could not enrich entry: noauthor_undated-fm | No DOI available | Title length: 26 chars | No authors available | APIs: Crossref enabled, Semantic Scholar enabled, ArXiv enabled",
     "last_failure_at": "2026-03-05T05:12:19.266017"
+  },
+  "df48b78c330b92b4": {
+    "entry_key": "Pierri2025-hm",
+    "entry_title": "Research opportunities and challenges of the EU's Digital Services Act",
+    "cached_at": "2026-03-05T20:57:12.747158",
+    "metadata": {
+      "abstract": "The Digital Services Act (DSA) introduced by the European Union in 2022 offers a landmark framework for platform transparency, with Article 40 enabling vetted researchers to access data from major online platforms. Yet significant legal, technical, and organizational barriers still hinder effective research on systemic online risks. This piece outlines the key challenges emerging from the Article 40 process and proposes practical measures to ensure that the DSA fulfills its transparency and accountability goals.",
+      "keywords": [],
+      "doi": null,
+      "doi_url": null,
+      "url": null,
+      "arxiv_url": "http://arxiv.org/abs/2512.14223v1",
+      "pdf_url": "https://arxiv.org/pdf/2512.14223v1",
+      "publication_date": "2025-12-16",
+      "citation_count": null,
+      "reference_count": null,
+      "venue": null,
+      "authors": [
+        "Francesco Pierri",
+        "Theo Araujo",
+        "Sanne Kruikemeier",
+        "Philipp Lorenz-Spreen",
+        "Mariek M. P. Vanden Abeele",
+        "Laura Vandenbosch",
+        "Joana Gonçalves-Sa",
+        "Przemyslaw A. Grabowicz"
+      ],
+      "subjects": [
+        "cs.CY",
+        "cs.SI"
+      ],
+      "is_open_access": true,
+      "source": "arxiv",
+      "confidence_score": 0.7142857142857142
+    }
+  },
+  "43cacb58212f6871": {
+    "entry_key": "DiGiuseppe2026-pu",
+    "entry_title": "Perceived political bias in LLMs reduces persuasive abilities",
+    "cached_at": "2026-03-05T20:57:16.038888",
+    "metadata": {
+      "abstract": "Conversational AI has been proposed as a scalable way to correct public misconceptions and spread misinformation. Yet its effectiveness may depend on perceptions of its political neutrality. As LLMs enter partisan conflict, elites increasingly portray them as ideologically aligned. We test whether these credibility attacks reduce LLM-based persuasion. In a preregistered U.S. survey experiment (N=2144), participants completed a three-round conversation with ChatGPT about a personally held economic policy misconception. Compared to a neutral control, a short message indicating that the LLM was biased against the respondent's party attenuated persuasion by 28%. Transcript analysis indicates that the warnings alter the interaction: respondents push back more and engage less receptively. These findings suggest that the persuasive impact of conversational AI is politically contingent, constrained by perceptions of partisan alignment.",
+      "keywords": [],
+      "doi": null,
+      "doi_url": null,
+      "url": null,
+      "arxiv_url": "http://arxiv.org/abs/2602.18092v1",
+      "pdf_url": "https://arxiv.org/pdf/2602.18092v1",
+      "publication_date": "2026-02-20",
+      "citation_count": null,
+      "reference_count": null,
+      "venue": null,
+      "authors": [
+        "Matthew DiGiuseppe",
+        "Joshua Robison"
+      ],
+      "subjects": [
+        "cs.CL",
+        "cs.AI",
+        "cs.CY"
+      ],
+      "is_open_access": true,
+      "source": "arxiv",
+      "confidence_score": 0.76
+    }
+  },
+  "26dd34dc757b8317": {
+    "entry_key": "Hollingshead2026-vx",
+    "entry_title": "Same platform, different stories: TikTok and the battle over immigration narratives",
+    "cached_at": "2026-03-05T20:57:16.546945",
+    "metadata": {
+      "abstract": "In an era defined by overlapping global crises, immigration has become a key fault line in what scholars term a “polycrisis.” Within this context, social media platforms serve as digital battlegrounds for competing narratives about immigration, with TikTok occupying a distinct and understudied niche. This article examines how immigration-related content in Canada is framed on TikTok and how the platform’s logic of mimesis and interactivity, grounded in its affordances, shape immigration discourse. From a dataset of 5,305 public TikTok videos containing immigration-related terms and hashtags, we selected a sample of 344 English-language videos posted in 2025, each with over 100,000 plays and likely shown to Canadian users. Through a mixed-methods content analysis, we found that, contrary to expectations, the content leaned toward positive portrayals of immigration, accounting for 41% of the sample. Furthermore, despite expressing differing perspectives on immigration, users used TikTok’s affordances in comparable ways. That is, the same affordances that can support immigrants’ information seeking and sense of belonging through practical guidance and relatable storytelling, respectively, can be weaponized to amplify xenophobia by way of manipulated statistics and racist humour performed in skits and AI-generated videos. This highlights how TikTok’s affordances can simultaneously support digital inclusion and community building while also enabling exclusion and hostility. The findings, although rooted in Canada, hold broader relevance for understanding how short-video platforms mediate contentious issues across digitally connected societies.",
+      "keywords": [],
+      "doi": "10.17645/mac.11409",
+      "doi_url": "https://doi.org/10.17645/mac.11409",
+      "url": null,
+      "arxiv_url": null,
+      "pdf_url": null,
+      "publication_date": "2026-01-28",
+      "citation_count": 0,
+      "reference_count": 61,
+      "venue": "Media and Communication",
+      "authors": [
+        "William Hollingshead",
+        "Anatoliy Gruzd",
+        "Philip Mai"
+      ],
+      "subjects": [],
+      "is_open_access": null,
+      "source": "crossref",
+      "confidence_score": 0.8428571428571427
+    }
   }
 }
