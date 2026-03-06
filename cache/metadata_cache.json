@@ -3988,5 +3988,43 @@
       "source": "crossref",
       "confidence_score": 0.8428571428571427
     }
+  },
+  "639a771e905921df": {
+    "entry_key": "Hourigan2026-oc",
+    "entry_title": "Everyday encounters with misinformation online: examining sources, topics and modes",
+    "cached_at": "2026-03-06T07:10:12.588866",
+    "metadata": {
+      "abstract": null,
+      "keywords": [],
+      "doi": "10.1080/1369118x.2026.2636132",
+      "doi_url": "https://doi.org/10.1080/1369118x.2026.2636132",
+      "url": null,
+      "arxiv_url": null,
+      "pdf_url": null,
+      "publication_date": "2026-02-26",
+      "citation_count": 0,
+      "reference_count": 46,
+      "venue": "Information, Communication &amp; Society",
+      "authors": [
+        "Aimee Hourigan",
+        "T.J. Thomson",
+        "Tanya Notley",
+        "Sora Park",
+        "Michael Dezuanni"
+      ],
+      "subjects": [],
+      "is_open_access": null,
+      "source": "crossref",
+      "confidence_score": 0.825
+    }
+  },
+  "f2d56655e70a51d3": {
+    "entry_key": "Baym2026-tr",
+    "entry_title": "It’s Bad: What Now?",
+    "cached_at": "2026-03-06T07:10:16.380112",
+    "metadata": null,
+    "failed": true,
+    "failure_reason": "Could not enrich entry: Baym2026-tr | No DOI available | Title length: 19 chars | Authors: Baym, Nancy | APIs: Crossref enabled, Semantic Scholar enabled, ArXiv enabled",
+    "last_failure_at": "2026-03-06T07:10:16.380121"
   }
 }
