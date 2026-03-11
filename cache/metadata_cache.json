@@ -26,228 +26,6 @@
     "failure_reason": "Could not enrich entry: Marwick2025-vx | No DOI available | Title length: 122 chars | Authors: Marwick, Alice E, Furl, Katherine | APIs: Crossref enabled, Semantic Scholar enabled, ArXiv enabled",
     "last_failure_at": "2026-03-05T05:12:12.719733"
   },
-  "840d61aac82e11a3": {
-    "entry_key": "Lewandowsky2026-ob",
-    "entry_title": "Internet platforms must be held accountable for their actions",
-    "cached_at": "2026-02-06T12:31:50.455301",
-    "metadata": {
-      "abstract": null,
-      "keywords": [],
-      "doi": "10.1126/science.aee9835",
-      "doi_url": "https://doi.org/10.1126/science.aee9835",
-      "url": null,
-      "arxiv_url": null,
-      "pdf_url": null,
-      "publication_date": "2026-02-05",
-      "citation_count": 0,
-      "reference_count": 0,
-      "venue": "Science",
-      "authors": [
-        "Stephan Lewandowsky"
-      ],
-      "subjects": [],
-      "is_open_access": null,
-      "source": "crossref",
-      "confidence_score": 0.8999999999999999
-    }
-  },
-  "7a324346d6db24a6": {
-    "entry_key": "Knupfer2025-vt",
-    "entry_title": "The logic of connective faction: How digitally networked elites and hyper-partisan media radicalize politics",
-    "cached_at": "2026-02-06T12:31:53.299851",
-    "metadata": {
-      "abstract": null,
-      "keywords": [],
-      "doi": "10.1080/10584609.2025.2604708",
-      "doi_url": "https://doi.org/10.1080/10584609.2025.2604708",
-      "url": null,
-      "arxiv_url": null,
-      "pdf_url": null,
-      "publication_date": "2025-12-23",
-      "citation_count": 0,
-      "reference_count": 114,
-      "venue": "Political Communication",
-      "authors": [
-        "Curd B. Knüpfer",
-        "Yunkang Yang",
-        "Mike Cowburn"
-      ],
-      "subjects": [],
-      "is_open_access": null,
-      "source": "crossref",
-      "confidence_score": 0.8374999999999999
-    }
-  },
-  "a8663d8c2d65801d": {
-    "entry_key": "Bollenbacher2026-vz",
-    "entry_title": "Effects of antivaccine tweets on COVID-19 vaccinations, cases, and deaths",
-    "cached_at": "2026-02-07T01:01:17.302422",
-    "metadata": {
-      "abstract": "Abstract Despite the wide availability of COVID-19 vaccines in the United States and their effectiveness in reducing hospitalizations and mortality during the pandemic, a majority of Americans chose not to be vaccinated during 2021. Recent work shows that vaccine misinformation affects intentions in controlled settings, but does not link it to real-world vaccination rates. Here, we present observational evidence of a causal relationship between exposure to antivaccine content and vaccination rates, and estimate the size of this effect. We present a compartmental epidemic model that includes vaccination, vaccine hesitancy, and exposure to antivaccine content. We fit the model to data to determine that a geographical pattern of exposure to online antivaccine content across US counties explains reduced vaccine uptake in the same counties. We find observational evidence that exposure to antivaccine content on Twitter caused about 14,000 people to refuse vaccination between February and August 2021 in the US, resulting in at least 545 additional cases and 8 additional deaths. This work provides a methodology for linking online speech with offline epidemic outcomes. Our findings should inform social media moderation policy as well as public health interventions.",
-      "keywords": [],
-      "doi": "10.1140/epjds/s13688-025-00606-1",
-      "doi_url": "https://doi.org/10.1140/epjds/s13688-025-00606-1",
-      "url": null,
-      "arxiv_url": null,
-      "pdf_url": null,
-      "publication_date": "2026-01-07",
-      "citation_count": 0,
-      "reference_count": 44,
-      "venue": "EPJ Data Science",
-      "authors": [
-        "John Bollenbacher",
-        "Filippo Menczer",
-        "John Bryden"
-      ],
-      "subjects": [],
-      "is_open_access": null,
-      "source": "crossref",
-      "confidence_score": 0.8428571428571427
-    }
-  },
-  "dc0cfdf6e324df5e": {
-    "entry_key": "Arceneaux2026-xk",
-    "entry_title": "Social bots as agenda-builders: Evaluating the impact of algorithmic amplification on organizational messaging",
-    "cached_at": "2026-02-08T18:59:43.848192",
-    "metadata": {
-      "abstract": null,
-      "keywords": [],
-      "doi": "10.1080/1062726x.2025.2606676",
-      "doi_url": "https://doi.org/10.1080/1062726x.2025.2606676",
-      "url": null,
-      "arxiv_url": null,
-      "pdf_url": null,
-      "publication_date": "2026-01-04",
-      "citation_count": 0,
-      "reference_count": 103,
-      "venue": "Journal of Public Relations Research",
-      "authors": [
-        "Phillip Arceneaux",
-        "Joshua Anderson",
-        "Josephine Lukito",
-        "Mansi Shah",
-        "Spiro Kiousis"
-      ],
-      "subjects": [],
-      "is_open_access": null,
-      "source": "crossref",
-      "confidence_score": 0.8272727272727272
-    }
-  },
-  "9318d8da1336a5f7": {
-    "entry_key": "Szabo2026-rd",
-    "entry_title": "Conversational Inoculation to enhance resistance to misinformation",
-    "cached_at": "2026-02-08T18:59:44.335143",
-    "metadata": {
-      "abstract": "Proliferation of misinformation is a globally acknowledged problem. Cognitive Inoculation helps build resistance to different forms of persuasion, such as misinformation. We investigate Conversational Inoculation, a method to help people build resistance to misinformation through dynamic conversations with a chatbot. We built a Web-based system to implement the method, and conducted a within-subject user experiment to compare it with two traditional inoculation methods. Our results validate Conversational Inoculation as a viable novel method, and show how it was able to enhance participants' resistance to misinformation. A qualitative analysis of the conversations between participants and the chatbot reveal independence and trust as factors that boosted the efficiency of Conversational Inoculation, and friction of interaction as a factor hindering it. We discuss the opportunities and challenges of using Conversational Inoculation to combat misinformation. Our work contributes a timely investigation and a promising research direction in scalable ways to combat misinformation.",
-      "keywords": [],
-      "doi": "10.1145/3772318.379095",
-      "doi_url": "https://doi.org/10.1145/3772318.379095",
-      "url": null,
-      "arxiv_url": "http://arxiv.org/abs/2601.22394v1",
-      "pdf_url": "https://arxiv.org/pdf/2601.22394v1",
-      "publication_date": "2026-01-29",
-      "citation_count": null,
-      "reference_count": null,
-      "venue": null,
-      "authors": [
-        "Dániel Szabó",
-        "Chi-Lan Yang",
-        "Aku Visuri",
-        "Jonas Oppenlaender",
-        "Bharathi Sekar",
-        "Koji Yatani",
-        "Simo Hosio"
-      ],
-      "subjects": [
-        "cs.HC"
-      ],
-      "is_open_access": true,
-      "source": "arxiv",
-      "confidence_score": 0.72
-    }
-  },
-  "58a00efe5577e253": {
-    "entry_key": "Rohrbach2026-rc",
-    "entry_title": "Conspiracy in the making: The role of journalistic strategies in the formation of new conspiracy beliefs",
-    "cached_at": "2026-02-08T18:59:46.621904",
-    "metadata": {
-      "abstract": null,
-      "keywords": [],
-      "doi": "10.1080/1461670x.2026.2623882",
-      "doi_url": "https://doi.org/10.1080/1461670x.2026.2623882",
-      "url": null,
-      "arxiv_url": null,
-      "pdf_url": null,
-      "publication_date": "2026",
-      "citation_count": 0,
-      "reference_count": 78,
-      "venue": "Journalism Studies",
-      "authors": [
-        "Tobias Rohrbach",
-        "Chiara Valli"
-      ],
-      "subjects": [],
-      "is_open_access": null,
-      "source": "crossref",
-      "confidence_score": 0.86
-    }
-  },
-  "180162f4fddd68af": {
-    "entry_key": "Graham2026-fb",
-    "entry_title": "On the Internet no-one knows you’re not a bot: ‘Botting’ on Reddit as participatory culture",
-    "cached_at": "2026-02-08T20:48:50.142902",
-    "metadata": {
-      "abstract": "Repetitive online communication is often labelled a ‘bot problem’ by platforms, policymakers and users. However, repetitive posting does not exclusively indicate automation; humans also engage in bot-like posting for various purposes. We adopt the term ‘botting’ to describe repetitive posting enacted through manual, semi-automated, or fully automated means. While emerging research has linked manual botting practices to commercial or fame-seeking motivations, we extend this scholarship by examining botting on Reddit – a pseudonymous platform that lacks the affordances typically associated with monetisation or personal branding. Through a mixed-methods analysis, we examine a case study in which mass-scale, repetitive posting of the mushroom emoji emerged as ‘in-group’ behaviour within Reddit’s participatory culture, prompting a performative counterpublic response. Our findings challenge the binary between human and automated posting, and underscore the importance of situating research on AI-generated and automated content within the cultural and contextual frameworks that shape its production and reception.",
-      "keywords": [],
-      "doi": "10.1177/14614448251409210",
-      "doi_url": "https://doi.org/10.1177/14614448251409210",
-      "url": null,
-      "arxiv_url": null,
-      "pdf_url": null,
-      "publication_date": "2026-02-04",
-      "citation_count": 0,
-      "reference_count": 71,
-      "venue": "New Media &amp; Society",
-      "authors": [
-        "Timothy Graham",
-        "Dominique Carlon"
-      ],
-      "subjects": [],
-      "is_open_access": null,
-      "source": "crossref",
-      "confidence_score": 0.86
-    }
-  },
-  "728f9dde87c89f86": {
-    "entry_key": "van-der-Linden2026-jt",
-    "entry_title": "Prebunking misinformation techniques in social media feeds: Results from an Instagram field study",
-    "cached_at": "2026-02-09T06:52:59.374633",
-    "metadata": {
-      "abstract": "Boosting psychological defences against misleading content online is an active area of research, but transition from the lab to real-world uptake remains a challenge. We developed a 19-second prebunking video about emotionally manipulative content and showed it as a Story Feed ad to N = 375,597 Instagram users in the United Kingdom. Using an innovative method leveraging Instagram’s quiz functionality (N = 806), we found that treatment group users were 21 percentage points better than controls at identifying manipulation in a news headline, with effects persisting for five months. Treated users were also more likely to click on a link to learn more. We outline how inoculation campaigns can be scaled in real-world social media feeds.",
-      "keywords": [],
-      "doi": "10.37016/mr-2020-193",
-      "doi_url": "https://doi.org/10.37016/mr-2020-193",
-      "url": null,
-      "arxiv_url": null,
-      "pdf_url": null,
-      "publication_date": "2026-01-22",
-      "citation_count": 0,
-      "reference_count": 49,
-      "venue": "Harvard Kennedy School Misinformation Review",
-      "authors": [
-        "Sander van der Linden",
-        "Debra Louison-Lavoy",
-        "Nicholas Blazer",
-        "Nancy S. Noble",
-        "Jon Roozenbeek"
-      ],
-      "subjects": [],
-      "is_open_access": null,
-      "source": "crossref",
-      "confidence_score": 0.84
-    }
-  },
   "b14b30a2e84c11b8": {
     "entry_key": "Lyons2026-ca",
     "entry_title": "Exposure to low-credibility online health content is limited and is concentrated among older adults",
@@ -4025,6 +3803,262 @@
       "is_open_access": true,
       "source": "arxiv",
       "confidence_score": 0.7749999999999999
+    }
+  },
+  "9318d8da1336a5f7": {
+    "entry_key": "Szabo2026-rd",
+    "entry_title": "Conversational Inoculation to enhance resistance to misinformation",
+    "cached_at": "2026-03-11T09:32:00.629133",
+    "metadata": {
+      "abstract": "Proliferation of misinformation is a globally acknowledged problem. Cognitive Inoculation helps build resistance to different forms of persuasion, such as misinformation. We investigate Conversational Inoculation, a method to help people build resistance to misinformation through dynamic conversations with a chatbot. We built a Web-based system to implement the method, and conducted a within-subject user experiment to compare it with two traditional inoculation methods. Our results validate Conversational Inoculation as a viable novel method, and show how it was able to enhance participants' resistance to misinformation. A qualitative analysis of the conversations between participants and the chatbot reveal independence and trust as factors that boosted the efficiency of Conversational Inoculation, and friction of interaction as a factor hindering it. We discuss the opportunities and challenges of using Conversational Inoculation to combat misinformation. Our work contributes a timely investigation and a promising research direction in scalable ways to combat misinformation.",
+      "keywords": [],
+      "doi": "10.1145/3772318.379095",
+      "doi_url": "https://doi.org/10.1145/3772318.379095",
+      "url": null,
+      "arxiv_url": "http://arxiv.org/abs/2601.22394v1",
+      "pdf_url": "https://arxiv.org/pdf/2601.22394v1",
+      "publication_date": "2026-01-29",
+      "citation_count": null,
+      "reference_count": null,
+      "venue": null,
+      "authors": [
+        "Dániel Szabó",
+        "Chi-Lan Yang",
+        "Aku Visuri",
+        "Jonas Oppenlaender",
+        "Bharathi Sekar",
+        "Koji Yatani",
+        "Simo Hosio"
+      ],
+      "subjects": [
+        "cs.HC"
+      ],
+      "is_open_access": true,
+      "source": "arxiv",
+      "confidence_score": 0.72
+    }
+  },
+  "7a324346d6db24a6": {
+    "entry_key": "Knupfer2025-vt",
+    "entry_title": "The logic of connective faction: How digitally networked elites and hyper-partisan media radicalize politics",
+    "cached_at": "2026-03-11T09:32:04.444107",
+    "metadata": {
+      "abstract": null,
+      "keywords": [],
+      "doi": "10.1080/10584609.2025.2604708",
+      "doi_url": "https://doi.org/10.1080/10584609.2025.2604708",
+      "url": null,
+      "arxiv_url": null,
+      "pdf_url": null,
+      "publication_date": "2025-12-23",
+      "citation_count": 2,
+      "reference_count": 114,
+      "venue": "Political Communication",
+      "authors": [
+        "Curd B. Knüpfer",
+        "Yunkang Yang",
+        "Mike Cowburn"
+      ],
+      "subjects": [],
+      "is_open_access": null,
+      "source": "crossref",
+      "confidence_score": 0.8374999999999999
+    }
+  },
+  "dc0cfdf6e324df5e": {
+    "entry_key": "Arceneaux2026-xk",
+    "entry_title": "Social bots as agenda-builders: Evaluating the impact of algorithmic amplification on organizational messaging",
+    "cached_at": "2026-03-11T09:32:05.506480",
+    "metadata": {
+      "abstract": null,
+      "keywords": [],
+      "doi": "10.1080/1062726x.2025.2606676",
+      "doi_url": "https://doi.org/10.1080/1062726x.2025.2606676",
+      "url": null,
+      "arxiv_url": null,
+      "pdf_url": null,
+      "publication_date": "2026-01-04",
+      "citation_count": 0,
+      "reference_count": 103,
+      "venue": "Journal of Public Relations Research",
+      "authors": [
+        "Phillip Arceneaux",
+        "Joshua Anderson",
+        "Josephine Lukito",
+        "Mansi Shah",
+        "Spiro Kiousis"
+      ],
+      "subjects": [],
+      "is_open_access": null,
+      "source": "crossref",
+      "confidence_score": 0.8272727272727272
+    }
+  },
+  "58a00efe5577e253": {
+    "entry_key": "Rohrbach2026-rc",
+    "entry_title": "Conspiracy in the making: The role of journalistic strategies in the formation of new conspiracy beliefs",
+    "cached_at": "2026-03-11T09:32:08.792591",
+    "metadata": {
+      "abstract": null,
+      "keywords": [],
+      "doi": "10.1080/1461670x.2026.2623882",
+      "doi_url": "https://doi.org/10.1080/1461670x.2026.2623882",
+      "url": null,
+      "arxiv_url": null,
+      "pdf_url": null,
+      "publication_date": "2026",
+      "citation_count": 0,
+      "reference_count": 78,
+      "venue": "Journalism Studies",
+      "authors": [
+        "Tobias Rohrbach",
+        "Chiara Valli"
+      ],
+      "subjects": [],
+      "is_open_access": null,
+      "source": "crossref",
+      "confidence_score": 0.86
+    }
+  },
+  "e618cb54ce598e1d": {
+    "entry_key": "Hackenburg2025-dj",
+    "entry_title": "The levers of political persuasion with conversational artificial intelligence",
+    "cached_at": "2026-03-11T09:32:12.425428",
+    "metadata": {
+      "abstract": "There are widespread fears that conversational artificial intelligence (AI) could soon exert unprecedented influence over human beliefs. In this work, in three large-scale experiments ( N = 76,977 participants), we deployed 19 large language models (LLMs)—including some post-trained explicitly for persuasion—to evaluate their persuasiveness on 707 political issues. We then checked the factual accuracy of 466,769 resulting LLM claims. We show that the persuasive power of current and near-future AI is likely to stem more from post-training and prompting methods—which boosted persuasiveness by as much as 51 and 27%, respectively—than from personalization or increasing model scale, which had smaller effects. We further show that these methods increased persuasion by exploiting LLMs’ ability to rapidly access and strategically deploy information and that, notably, where they increased AI persuasiveness, they also systematically decreased factual accuracy.",
+      "keywords": [],
+      "doi": "10.1126/science.aea3884",
+      "doi_url": "https://doi.org/10.1126/science.aea3884",
+      "url": null,
+      "arxiv_url": null,
+      "pdf_url": null,
+      "publication_date": "2025-12-04",
+      "citation_count": 10,
+      "reference_count": 87,
+      "venue": "Science",
+      "authors": [
+        "Kobi Hackenburg",
+        "Ben M. Tappin",
+        "Luke Hewitt",
+        "Ed Saunders",
+        "Sid Black",
+        "Hause Lin",
+        "Catherine Fist",
+        "Helen Margetts",
+        "David G. Rand",
+        "Christopher Summerfield"
+      ],
+      "subjects": [],
+      "is_open_access": null,
+      "source": "crossref",
+      "confidence_score": 0.8130434782608695
+    }
+  },
+  "840d61aac82e11a3": {
+    "entry_key": "Lewandowsky2026-ob",
+    "entry_title": "Internet platforms must be held accountable for their actions",
+    "cached_at": "2026-03-11T09:32:15.383327",
+    "metadata": {
+      "abstract": null,
+      "keywords": [],
+      "doi": "10.1126/science.aee9835",
+      "doi_url": "https://doi.org/10.1126/science.aee9835",
+      "url": null,
+      "arxiv_url": null,
+      "pdf_url": null,
+      "publication_date": "2026-02-05",
+      "citation_count": 0,
+      "reference_count": 0,
+      "venue": "Science",
+      "authors": [
+        "Stephan Lewandowsky"
+      ],
+      "subjects": [],
+      "is_open_access": null,
+      "source": "crossref",
+      "confidence_score": 0.8999999999999999
+    }
+  },
+  "a8663d8c2d65801d": {
+    "entry_key": "Bollenbacher2026-vz",
+    "entry_title": "Effects of antivaccine tweets on COVID-19 vaccinations, cases, and deaths",
+    "cached_at": "2026-03-11T09:32:17.676629",
+    "metadata": {
+      "abstract": "Abstract Despite the wide availability of COVID-19 vaccines in the United States and their effectiveness in reducing hospitalizations and mortality during the pandemic, a majority of Americans chose not to be vaccinated during 2021. Recent work shows that vaccine misinformation affects intentions in controlled settings, but does not link it to real-world vaccination rates. Here, we present observational evidence of a causal relationship between exposure to antivaccine content and vaccination rates, and estimate the size of this effect. We present a compartmental epidemic model that includes vaccination, vaccine hesitancy, and exposure to antivaccine content. We fit the model to data to determine that a geographical pattern of exposure to online antivaccine content across US counties explains reduced vaccine uptake in the same counties. We find observational evidence that exposure to antivaccine content on Twitter caused about 14,000 people to refuse vaccination between February and August 2021 in the US, resulting in at least 545 additional cases and 8 additional deaths. This work provides a methodology for linking online speech with offline epidemic outcomes. Our findings should inform social media moderation policy as well as public health interventions.",
+      "keywords": [],
+      "doi": "10.1140/epjds/s13688-025-00606-1",
+      "doi_url": "https://doi.org/10.1140/epjds/s13688-025-00606-1",
+      "url": null,
+      "arxiv_url": null,
+      "pdf_url": null,
+      "publication_date": "2026-01-07",
+      "citation_count": 0,
+      "reference_count": 44,
+      "venue": "EPJ Data Science",
+      "authors": [
+        "John Bollenbacher",
+        "Filippo Menczer",
+        "John Bryden"
+      ],
+      "subjects": [],
+      "is_open_access": null,
+      "source": "crossref",
+      "confidence_score": 0.8428571428571427
+    }
+  },
+  "180162f4fddd68af": {
+    "entry_key": "Graham2026-fb",
+    "entry_title": "On the Internet no-one knows you’re not a bot: ‘Botting’ on Reddit as participatory culture",
+    "cached_at": "2026-03-11T09:32:20.742747",
+    "metadata": {
+      "abstract": "Repetitive online communication is often labelled a ‘bot problem’ by platforms, policymakers and users. However, repetitive posting does not exclusively indicate automation; humans also engage in bot-like posting for various purposes. We adopt the term ‘botting’ to describe repetitive posting enacted through manual, semi-automated, or fully automated means. While emerging research has linked manual botting practices to commercial or fame-seeking motivations, we extend this scholarship by examining botting on Reddit – a pseudonymous platform that lacks the affordances typically associated with monetisation or personal branding. Through a mixed-methods analysis, we examine a case study in which mass-scale, repetitive posting of the mushroom emoji emerged as ‘in-group’ behaviour within Reddit’s participatory culture, prompting a performative counterpublic response. Our findings challenge the binary between human and automated posting, and underscore the importance of situating research on AI-generated and automated content within the cultural and contextual frameworks that shape its production and reception.",
+      "keywords": [],
+      "doi": "10.1177/14614448251409210",
+      "doi_url": "https://doi.org/10.1177/14614448251409210",
+      "url": null,
+      "arxiv_url": null,
+      "pdf_url": null,
+      "publication_date": "2026-02-04",
+      "citation_count": 0,
+      "reference_count": 71,
+      "venue": "New Media &amp; Society",
+      "authors": [
+        "Timothy Graham",
+        "Dominique Carlon"
+      ],
+      "subjects": [],
+      "is_open_access": null,
+      "source": "crossref",
+      "confidence_score": 0.86
+    }
+  },
+  "728f9dde87c89f86": {
+    "entry_key": "van-der-Linden2026-jt",
+    "entry_title": "Prebunking misinformation techniques in social media feeds: Results from an Instagram field study",
+    "cached_at": "2026-03-11T09:32:24.681115",
+    "metadata": {
+      "abstract": "Boosting psychological defences against misleading content online is an active area of research, but transition from the lab to real-world uptake remains a challenge. We developed a 19-second prebunking video about emotionally manipulative content and showed it as a Story Feed ad to N = 375,597 Instagram users in the United Kingdom. Using an innovative method leveraging Instagram’s quiz functionality (N = 806), we found that treatment group users were 21 percentage points better than controls at identifying manipulation in a news headline, with effects persisting for five months. Treated users were also more likely to click on a link to learn more. We outline how inoculation campaigns can be scaled in real-world social media feeds.",
+      "keywords": [],
+      "doi": "10.37016/mr-2020-193",
+      "doi_url": "https://doi.org/10.37016/mr-2020-193",
+      "url": null,
+      "arxiv_url": null,
+      "pdf_url": null,
+      "publication_date": "2026-01-22",
+      "citation_count": 0,
+      "reference_count": 49,
+      "venue": "Harvard Kennedy School Misinformation Review",
+      "authors": [
+        "Sander van der Linden",
+        "Debra Louison-Lavoy",
+        "Nicholas Blazer",
+        "Nancy S. Noble",
+        "Jon Roozenbeek"
+      ],
+      "subjects": [],
+      "is_open_access": null,
+      "source": "crossref",
+      "confidence_score": 0.84
     }
   }
 }
