@@ -26,59 +26,6 @@
     "failure_reason": "Could not enrich entry: Marwick2025-vx | No DOI available | Title length: 122 chars | Authors: Marwick, Alice E, Furl, Katherine | APIs: Crossref enabled, Semantic Scholar enabled, ArXiv enabled",
     "last_failure_at": "2026-03-12T08:47:35.556926"
   },
-  "72956432e72418ef": {
-    "entry_key": "Poliakoff2026-fa",
-    "entry_title": "Prigozhin’s propaganda team: The st Petersburg internet research agency (2013–2021)",
-    "cached_at": "2026-02-11T06:01:20.064296",
-    "metadata": {
-      "abstract": null,
-      "keywords": [],
-      "doi": "10.1080/09668136.2025.2588334",
-      "doi_url": "https://doi.org/10.1080/09668136.2025.2588334",
-      "url": null,
-      "arxiv_url": null,
-      "pdf_url": null,
-      "publication_date": "2026-01-02",
-      "citation_count": 0,
-      "reference_count": 51,
-      "venue": "Europe-Asia Studies",
-      "authors": [
-        "Serge Poliakoff",
-        "Florian Toepfl"
-      ],
-      "subjects": [],
-      "is_open_access": null,
-      "source": "crossref",
-      "confidence_score": 0.86
-    }
-  },
-  "0d7010138f1044be": {
-    "entry_key": "Yoo2026-ev",
-    "entry_title": "The role of the term “fake news” in U.s. alternative media: Shaping political discourse and hyperpartisanship",
-    "cached_at": "2026-02-11T06:01:22.995473",
-    "metadata": {
-      "abstract": "This study examines how the term “fake news” is strategically deployed in U.S. alternative media by analyzing Newsmax and Occupy Democrats as right- and left-leaning outlets. Drawing on Hallin’s sphere model and Egelhofer et al.’s coding categories, it uses manual content analysis and latent Dirichlet allocation topic modeling to identify rhetorical functions and patterns. Findings show that the term “fake news” functions mainly as a weaponized label to delegitimize opponents rather than describe misinformation. The results show how alternative media redraw boundaries between consensus, controversy, and deviance, underscoring their role in intensifying partisan discourse and redefining political communication.",
-      "keywords": [],
-      "doi": "10.1177/10776990251410599",
-      "doi_url": "https://doi.org/10.1177/10776990251410599",
-      "url": null,
-      "arxiv_url": null,
-      "pdf_url": null,
-      "publication_date": "2026-01-22",
-      "citation_count": 0,
-      "reference_count": 56,
-      "venue": "Journalism &amp; Mass Communication Quarterly",
-      "authors": [
-        "Joseph J. Yoo",
-        "Hannah Lee",
-        "Soontae An"
-      ],
-      "subjects": [],
-      "is_open_access": null,
-      "source": "crossref",
-      "confidence_score": 0.8428571428571427
-    }
-  },
   "e0b18cc686e6bac2": {
     "entry_key": "Dehghan2026-sy",
     "entry_title": "The entangled dynamics leading to the sedimentation of polarisation on political Reddit",
@@ -3659,11 +3606,27 @@
   "f2d56655e70a51d3": {
     "entry_key": "Baym2026-tr",
     "entry_title": "It’s Bad: What Now?",
-    "cached_at": "2026-03-06T07:10:16.380112",
-    "metadata": null,
-    "failed": true,
-    "failure_reason": "Could not enrich entry: Baym2026-tr | No DOI available | Title length: 19 chars | Authors: Baym, Nancy | APIs: Crossref enabled, Semantic Scholar enabled, ArXiv enabled",
-    "last_failure_at": "2026-03-06T07:10:16.380121"
+    "cached_at": "2026-03-13T08:42:59.451828",
+    "metadata": {
+      "abstract": "This essay reflects on a decade of worsening social media harms—inequality, algorithmic power, precarious labor, and data extraction—arguing for renewed interdisciplinary and collaborative approaches to create just sociotechnical futures.",
+      "keywords": [],
+      "doi": "10.1177/20563051261432484",
+      "doi_url": "https://doi.org/10.1177/20563051261432484",
+      "url": null,
+      "arxiv_url": null,
+      "pdf_url": null,
+      "publication_date": "2026",
+      "citation_count": 0,
+      "reference_count": 7,
+      "venue": "Social Media + Society",
+      "authors": [
+        "Nancy K. Baym"
+      ],
+      "subjects": [],
+      "is_open_access": null,
+      "source": "crossref",
+      "confidence_score": 0.8749999999999999
+    }
   },
   "a1200ca53e8d7d7c": {
     "entry_key": "Copland2025-em",
@@ -4069,5 +4032,67 @@
       "source": "crossref",
       "confidence_score": 0.825
     }
+  },
+  "72956432e72418ef": {
+    "entry_key": "Poliakoff2026-fa",
+    "entry_title": "Prigozhin’s propaganda team: The st Petersburg internet research agency (2013–2021)",
+    "cached_at": "2026-03-13T08:42:51.057206",
+    "metadata": {
+      "abstract": null,
+      "keywords": [],
+      "doi": "10.1080/09668136.2025.2588334",
+      "doi_url": "https://doi.org/10.1080/09668136.2025.2588334",
+      "url": null,
+      "arxiv_url": null,
+      "pdf_url": null,
+      "publication_date": "2026-01-02",
+      "citation_count": 0,
+      "reference_count": 51,
+      "venue": "Europe-Asia Studies",
+      "authors": [
+        "Serge Poliakoff",
+        "Florian Toepfl"
+      ],
+      "subjects": [],
+      "is_open_access": null,
+      "source": "crossref",
+      "confidence_score": 0.86
+    }
+  },
+  "0d7010138f1044be": {
+    "entry_key": "Yoo2026-ev",
+    "entry_title": "The role of the term “fake news” in U.s. alternative media: Shaping political discourse and hyperpartisanship",
+    "cached_at": "2026-03-13T08:42:53.817591",
+    "metadata": {
+      "abstract": "This study examines how the term “fake news” is strategically deployed in U.S. alternative media by analyzing Newsmax and Occupy Democrats as right- and left-leaning outlets. Drawing on Hallin’s sphere model and Egelhofer et al.’s coding categories, it uses manual content analysis and latent Dirichlet allocation topic modeling to identify rhetorical functions and patterns. Findings show that the term “fake news” functions mainly as a weaponized label to delegitimize opponents rather than describe misinformation. The results show how alternative media redraw boundaries between consensus, controversy, and deviance, underscoring their role in intensifying partisan discourse and redefining political communication.",
+      "keywords": [],
+      "doi": "10.1177/10776990251410599",
+      "doi_url": "https://doi.org/10.1177/10776990251410599",
+      "url": null,
+      "arxiv_url": null,
+      "pdf_url": null,
+      "publication_date": "2026-01-22",
+      "citation_count": 0,
+      "reference_count": 56,
+      "venue": "Journalism &amp; Mass Communication Quarterly",
+      "authors": [
+        "Joseph J. Yoo",
+        "Hannah Lee",
+        "Soontae An"
+      ],
+      "subjects": [],
+      "is_open_access": null,
+      "source": "crossref",
+      "confidence_score": 0.8428571428571427
+    }
+  },
+  "7a5bca5477086046": {
+    "entry_key": "Schiffrin_undated-gi",
+    "entry_title": "Deepfake financial fraud: The global regulation of ai-driven scams",
+    "cached_at": "2026-03-13T08:42:57.252316",
+    "metadata": null,
+    "failed": true,
+    "failure_reason": "Could not enrich entry: Schiffrin_undated-gi | No DOI available | Title length: 66 chars | Authors: Schiffrin, Anya, Marwick, Alice E... | APIs: Crossref enabled, Semantic Scholar enabled, ArXiv enabled",
+    "last_failure_at": "2026-03-13T08:42:57.252325"
   }
 }
