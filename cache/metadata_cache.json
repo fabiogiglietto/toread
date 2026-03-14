@@ -4094,5 +4094,33 @@
     "failed": true,
     "failure_reason": "Could not enrich entry: Schiffrin_undated-gi | No DOI available | Title length: 66 chars | Authors: Schiffrin, Anya, Marwick, Alice E... | APIs: Crossref enabled, Semantic Scholar enabled, ArXiv enabled",
     "last_failure_at": "2026-03-13T08:42:57.252325"
+  },
+  "e5a19719609563d7": {
+    "entry_key": "Kulichkina2026-zk",
+    "entry_title": "Connective action and digital repression during China’s COVID-19 protests: a computational analysis of multilingual coordinated activity on Twitter",
+    "cached_at": "2026-03-14T09:23:35.672079",
+    "metadata": {
+      "abstract": "Abstract In authoritarian contexts, social media serve as critical platforms for coordinating both protest and repression. This study centers on the unprecedented COVID-19 protests in the People’s Republic of China, which were extensively tweeted and suppressed through contesting narratives. We explore prominent themes, temporal dynamics, and linguistic patterns of coordinated communication during these events. Using a coordination detection algorithm, we identified 13,557 Twitter accounts involved in 739,819 instances of coordinated sharing during the protests. We then applied topic modeling to categorize the coordinated tweets into topics supporting either the protests or repression. Drawing on the theory of authoritarian publics, we classified protest-supporting topics into three categories: leadership-critical , policy-critical , and descriptive . Similarly, building on the digital repression typology, we categorized repression-supporting topics into government propaganda , distracting information , and demoralizing content . Within protest-supporting content, policy-critical tweets were the most widely shared across three analyzed languages. Leadership-critical tweets were more prominent in traditional Chinese, while descriptive tweets were more common in simplified Chinese. Repression-supporting content was most prevalent in English, followed by simplified Chinese, with demoralizing and distracting information dominating discourse. Government propaganda was the least frequent and appeared primarily in simplified Chinese. Community detection revealed that 85.4% of coordinated tweets were amplified by ten major communities, each organized around a single language and goal—either supporting protests or promoting repression. By combining multiple computational approaches, this study offers a comprehensive framework for content-centered analysis of online protest-repression dynamics and contributes to our understanding of connective action and digital repression in authoritarian contexts.",
+      "keywords": [],
+      "doi": "10.1140/epjds/s13688-026-00637-2",
+      "doi_url": "https://doi.org/10.1140/epjds/s13688-026-00637-2",
+      "url": null,
+      "arxiv_url": null,
+      "pdf_url": null,
+      "publication_date": "2026-03-13",
+      "citation_count": 0,
+      "reference_count": 58,
+      "venue": "EPJ Data Science",
+      "authors": [
+        "Aytalina Kulichkina",
+        "Paul Balluff",
+        "Nicola Righetti",
+        "Annie Waldherr"
+      ],
+      "subjects": [],
+      "is_open_access": null,
+      "source": "crossref",
+      "confidence_score": 0.8333333333333333
+    }
   }
 }
