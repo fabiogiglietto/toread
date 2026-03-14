@@ -4122,5 +4122,39 @@
       "source": "crossref",
       "confidence_score": 0.8333333333333333
     }
+  },
+  "f766b42dffbe1516": {
+    "entry_key": "Lee2026-je",
+    "entry_title": "LLMs can infer political alignment from online conversations",
+    "cached_at": "2026-03-14T13:25:43.701994",
+    "metadata": {
+      "abstract": "Due to the correlational structure in our traits such as identities, cultures, and political attitudes, seemingly innocuous preferences such as following a band or using a specific slang, can reveal private traits. This possibility, especially when combined with massive, public social data and advanced computational methods, poses a fundamental privacy risk. Given our increasing data exposure online and the rapid advancement of AI are increasing the misuse potential of such risk, it is therefore critical to understand capacity of large language models (LLMs) to exploit it. Here, using online discussions on Debate.org and Reddit, we show that LLMs can reliably infer hidden political alignment, significantly outperforming traditional machine learning models. Prediction accuracy further improves as we aggregate multiple text-level inferences into a user-level prediction, and as we use more politics-adjacent domains. We demonstrate that LLMs leverage the words that can be highly predictive of political alignment while not being explicitly political. Our findings underscore the capacity and risks of LLMs for exploiting socio-cultural correlates.",
+      "keywords": [],
+      "doi": null,
+      "doi_url": null,
+      "url": null,
+      "arxiv_url": "http://arxiv.org/abs/2603.11253v1",
+      "pdf_url": "https://arxiv.org/pdf/2603.11253v1",
+      "publication_date": "2026-03-11",
+      "citation_count": null,
+      "reference_count": null,
+      "venue": null,
+      "authors": [
+        "Byunghwee Lee",
+        "Sangyeon Kim",
+        "Filippo Menczer",
+        "Yong-Yeol Ahn",
+        "Haewoon Kwak",
+        "Jisun An"
+      ],
+      "subjects": [
+        "cs.SI",
+        "cs.CL",
+        "cs.CY"
+      ],
+      "is_open_access": true,
+      "source": "arxiv",
+      "confidence_score": 0.725
+    }
   }
 }
