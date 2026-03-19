@@ -2,135 +2,29 @@
   "c5a7d0326e1f61c6": {
     "entry_key": "Kristensen2025-ni",
     "entry_title": "Platform polarization. Do alternative platforms drive discursive polarization?",
-    "cached_at": "2026-03-12T08:47:29.561871",
+    "cached_at": "2026-03-19T18:08:13.763667",
     "metadata": null,
     "failed": true,
     "failure_reason": "Could not enrich entry: Kristensen2025-ni | No DOI available | Title length: 78 chars | Authors: Kristensen, Jakob Bæk, Kristensen, Jakob Bæk | APIs: Crossref enabled, Semantic Scholar enabled, ArXiv enabled",
-    "last_failure_at": "2026-03-12T08:47:29.561878"
+    "last_failure_at": "2026-03-19T18:08:13.763684"
   },
   "65d46046ae1c898f": {
     "entry_key": "Gaw2025-ru",
     "entry_title": "Influence operations as brokerage: Political-economic infrastructures of manipulation in the 2022 Philippine elections",
-    "cached_at": "2026-03-12T08:47:32.541055",
+    "cached_at": "2026-03-19T18:08:19.950436",
     "metadata": null,
     "failed": true,
     "failure_reason": "Could not enrich entry: Gaw2025-ru | No DOI available | Title length: 118 chars | Authors: Gaw, Fatima, Agonos, Mariam Jayne... | APIs: Crossref enabled, Semantic Scholar enabled, ArXiv enabled",
-    "last_failure_at": "2026-03-12T08:47:32.541064"
+    "last_failure_at": "2026-03-19T18:08:19.950446"
   },
   "b41f425da41887a0": {
     "entry_key": "Marwick2025-vx",
     "entry_title": "True costs of misinformation| mountains of evidence: Processual “redpilling” as a Socio-technical effect of disinformation",
-    "cached_at": "2026-03-12T08:47:35.556919",
+    "cached_at": "2026-03-19T18:08:16.847942",
     "metadata": null,
     "failed": true,
     "failure_reason": "Could not enrich entry: Marwick2025-vx | No DOI available | Title length: 122 chars | Authors: Marwick, Alice E, Furl, Katherine | APIs: Crossref enabled, Semantic Scholar enabled, ArXiv enabled",
-    "last_failure_at": "2026-03-12T08:47:35.556926"
-  },
-  "2bc41a22bfa663a6": {
-    "entry_key": "Dubey2026-bl",
-    "entry_title": "Investigating perceived trust and utility of balanced news chatbots among individuals with varying conspiracy beliefs",
-    "cached_at": "2026-02-16T20:52:22.114755",
-    "metadata": {
-      "abstract": null,
-      "keywords": [],
-      "doi": "10.1016/j.chb.2026.108920",
-      "doi_url": "https://doi.org/10.1016/j.chb.2026.108920",
-      "url": null,
-      "arxiv_url": null,
-      "pdf_url": null,
-      "publication_date": "2026",
-      "citation_count": 0,
-      "reference_count": 65,
-      "venue": "Computers in Human Behavior",
-      "authors": [
-        "Shreya Dubey",
-        "Paul E. Ketelaar",
-        "Tilman Dingler",
-        "Hannah K. Peetz",
-        "Hein T. van Schie"
-      ],
-      "subjects": [],
-      "is_open_access": null,
-      "source": "crossref",
-      "confidence_score": 0.8374999999999999
-    }
-  },
-  "49c30357bb6a21c7": {
-    "entry_key": "Inacio-da-Silva2026-zf",
-    "entry_title": "Identifying potentially irregular electoral ads in Facebook during the Brazilian elections",
-    "cached_at": "2026-02-16T20:52:24.780089",
-    "metadata": {
-      "abstract": "The 2016 United States presidential election was marked by the abuse of targeted advertising on Facebook. Concerned with the risk of the same kind of abuse to happen in the 2018 Brazilian elections, we designed and deployed an independent auditing system to monitor political ads on Meta in Brazil. To do that we first adapted a browser plugin to gather ads from the timeline of volunteers using Facebook. We managed to convince more than 2,000 volunteers to help our project and install our tool. Then, we use a Convolution Neural Network (CNN) to detect political Meta ads using word embeddings. To evaluate our approach, we manually label a data collection of 10k ads as political or non-political and then we provide an in-depth evaluation of proposed approach for identifying political ads by comparing it with classic supervised machine learning methods. Finally, we deployed a real system that shows the ads identified as related to politics during the 2018 National Brazilian elections. We also investigated early electoral advertisement before the 2020 local Brazilian elections using our model on unsponsored content (regular posts in groups and pages). We noticed that not all political ads we detected were present in the Meta Ad Library for political ads on 2018. Additionally, we found possible early electoral advertisements in 2020, which is forbidden in Brazil. Our results emphasize the importance of enforcement mechanisms for declaring political ads and the need for independent auditing platforms.",
-      "keywords": [],
-      "doi": "10.1145/3796545",
-      "doi_url": "https://doi.org/10.1145/3796545",
-      "url": null,
-      "arxiv_url": null,
-      "pdf_url": null,
-      "publication_date": "2026-02-06",
-      "citation_count": 0,
-      "reference_count": 68,
-      "venue": "ACM Transactions on the Web",
-      "authors": [
-        "Marcio Inacio da Silva",
-        "Lucas de Oliveira",
-        "Pedro Olmo Vaz de Melo",
-        "Oana Goga",
-        "Fabrício Benevenuto"
-      ],
-      "subjects": [],
-      "is_open_access": null,
-      "source": "crossref",
-      "confidence_score": 0.8529411764705882
-    }
-  },
-  "602e20151b2badb6": {
-    "entry_key": "Choi2026-bz",
-    "entry_title": "The modality-congruent carryover effect: How difficulty in identifying (deep)fake news impacts self-confidence in truth discernment and susceptibility to subsequent disinformation",
-    "cached_at": "2026-02-16T20:52:27.820413",
-    "metadata": {
-      "abstract": "With the proliferation of (deep)fake news, individuals will increasingly find it difficult to discern whether content is created by human journalists or artificial intelligence. A two-wave online experiment investigated the carryover effects of news authentication during the initial (deep)fake news exposure on responses to subsequent (deep)fake news. Participants encountered celebrity (deep)fake news in text and video formats on social media. The results showed that the difficulty induced by news authentication lowered self-confidence in truth discernment, which, in turn, decreased the perceived credibility and engagement intentions toward subsequent unrelated fake news of the same modality.",
-      "keywords": [],
-      "doi": "10.1177/10776990251413726",
-      "doi_url": "https://doi.org/10.1177/10776990251413726",
-      "url": null,
-      "arxiv_url": null,
-      "pdf_url": null,
-      "publication_date": "2026-02-10",
-      "citation_count": 0,
-      "reference_count": 82,
-      "venue": "Journalism &amp; Mass Communication Quarterly",
-      "authors": [
-        "Sukyoung Choi"
-      ],
-      "subjects": [],
-      "is_open_access": null,
-      "source": "crossref",
-      "confidence_score": 0.8999999999999999
-    }
-  },
-  "67c3382e8e499851": {
-    "entry_key": "Philipp2026-tl",
-    "entry_title": "Election research in the age of regulated data access under the EU Digital Services Act",
-    "cached_at": "2026-02-17T06:14:20.479932",
-    "metadata": {
-      "abstract": null,
-      "keywords": [],
-      "doi": null,
-      "doi_url": null,
-      "url": "https://policyreview.info/articles/analysis/election-research-data-access-dsa",
-      "arxiv_url": null,
-      "pdf_url": null,
-      "publication_date": null,
-      "citation_count": null,
-      "reference_count": null,
-      "venue": null,
-      "authors": [],
-      "subjects": [],
-      "is_open_access": null,
-      "source": "url",
-      "confidence_score": null
-    }
+    "last_failure_at": "2026-03-19T18:08:16.847949"
   },
   "f2c3c073e07cd98e": {
     "entry_key": "De2026-ld",
@@ -3249,22 +3143,22 @@
     }
   },
   "e3b0c44298fc1c14": {
-    "entry_key": "noauthor_undated-ue",
+    "entry_key": "noauthor_undated-bz",
     "entry_title": null,
-    "cached_at": "2026-03-12T08:47:35.557016",
+    "cached_at": "2026-03-19T18:08:29.139228",
     "metadata": null,
     "failed": true,
-    "failure_reason": "Could not enrich entry: noauthor_undated-ue | No DOI available | No title available | No authors available | APIs: Crossref enabled, Semantic Scholar enabled, ArXiv enabled",
-    "last_failure_at": "2026-03-12T08:47:35.557021"
+    "failure_reason": "Could not enrich entry: noauthor_undated-bz | No DOI available | No title available | No authors available | APIs: Crossref enabled, Semantic Scholar enabled, ArXiv enabled",
+    "last_failure_at": "2026-03-19T18:08:29.139233"
   },
   "657c6670d7b624b8": {
     "entry_key": "noauthor_undated-fm",
     "entry_title": "Volume 7 issue 2 article 4",
-    "cached_at": "2026-03-12T08:47:26.481739",
+    "cached_at": "2026-03-19T18:08:29.139141",
     "metadata": null,
     "failed": true,
     "failure_reason": "Could not enrich entry: noauthor_undated-fm | No DOI available | Title length: 26 chars | No authors available | APIs: Crossref enabled, Semantic Scholar enabled, ArXiv enabled",
-    "last_failure_at": "2026-03-12T08:47:26.481747"
+    "last_failure_at": "2026-03-19T18:08:29.139151"
   },
   "df48b78c330b92b4": {
     "entry_key": "Pierri2025-hm",
@@ -3758,11 +3652,29 @@
   "72361c89632594a5": {
     "entry_key": "Rossini2026-jn",
     "entry_title": "Amplifying division: Electoral misinformation and political intolerance in Brazil",
-    "cached_at": "2026-03-12T08:47:23.498749",
-    "metadata": null,
-    "failed": true,
-    "failure_reason": "Could not enrich entry: Rossini2026-jn | No DOI available | Title length: 81 chars | Authors: Rossini, Patrícia, Kalogeropoulos, Antonis... | APIs: Crossref enabled, Semantic Scholar enabled, ArXiv enabled",
-    "last_failure_at": "2026-03-12T08:47:23.498759"
+    "cached_at": "2026-03-19T18:08:22.559267",
+    "metadata": {
+      "abstract": "This study examines the relationship between misinformation and political intolerance during the 2022 Brazilian Election. Using a three-wave survey, we show that citizens who believe false claims about electoral fraud become more intolerant toward political opponents over time. Beliefs in electoral misinformation consistently predicted increases in intolerance over the course of the election. We find an indirect effect for using messaging apps for news and intolerance, mediated by beliefs in electoral misinformation, suggesting that citizens who rely on messaging apps for news are not only more susceptible to believing misinformation but also to its detrimental effects on democracy. These findings highlight electoral misinformation as a key driver of intolerant attitudes in polarized democracies, operating not only by eroding trust in institutions but also by undermining citizens’ commitment to democratic norms.",
+      "keywords": [],
+      "doi": "10.1177/20563051261419393",
+      "doi_url": "https://doi.org/10.1177/20563051261419393",
+      "url": null,
+      "arxiv_url": null,
+      "pdf_url": null,
+      "publication_date": "2026",
+      "citation_count": 0,
+      "reference_count": 73,
+      "venue": "Social Media + Society",
+      "authors": [
+        "Patrícia Rossini",
+        "Antonis Kalogeropoulos",
+        "Camila Mont’Alverne"
+      ],
+      "subjects": [],
+      "is_open_access": null,
+      "source": "crossref",
+      "confidence_score": 0.8428571428571427
+    }
   },
   "aa7cd706239eb8b9": {
     "entry_key": "Larsson2026-ro",
@@ -4214,6 +4126,149 @@
       "is_open_access": null,
       "source": "crossref",
       "confidence_score": 0.86
+    }
+  },
+  "2bc41a22bfa663a6": {
+    "entry_key": "Dubey2026-bl",
+    "entry_title": "Investigating perceived trust and utility of balanced news chatbots among individuals with varying conspiracy beliefs",
+    "cached_at": "2026-03-19T18:07:58.968781",
+    "metadata": {
+      "abstract": null,
+      "keywords": [],
+      "doi": "10.1016/j.chb.2026.108920",
+      "doi_url": "https://doi.org/10.1016/j.chb.2026.108920",
+      "url": null,
+      "arxiv_url": null,
+      "pdf_url": null,
+      "publication_date": "2026",
+      "citation_count": 1,
+      "reference_count": 65,
+      "venue": "Computers in Human Behavior",
+      "authors": [
+        "Shreya Dubey",
+        "Paul E. Ketelaar",
+        "Tilman Dingler",
+        "Hannah K. Peetz",
+        "Hein T. van Schie"
+      ],
+      "subjects": [],
+      "is_open_access": null,
+      "source": "crossref",
+      "confidence_score": 0.8374999999999999
+    }
+  },
+  "49c30357bb6a21c7": {
+    "entry_key": "Inacio-da-Silva2026-zf",
+    "entry_title": "Identifying potentially irregular electoral ads in Facebook during the Brazilian elections",
+    "cached_at": "2026-03-19T18:08:02.002076",
+    "metadata": {
+      "abstract": "The 2016 United States presidential election was marked by the abuse of targeted advertising on Facebook. Concerned with the risk of the same kind of abuse to happen in the 2018 Brazilian elections, we designed and deployed an independent auditing system to monitor political ads on Meta in Brazil. To do that we first adapted a browser plugin to gather ads from the timeline of volunteers using Facebook. We managed to convince more than 2,000 volunteers to help our project and install our tool. Then, we use a Convolution Neural Network (CNN) to detect political Meta ads using word embeddings. To evaluate our approach, we manually label a data collection of 10k ads as political or non-political and then we provide an in-depth evaluation of proposed approach for identifying political ads by comparing it with classic supervised machine learning methods. Finally, we deployed a real system that shows the ads identified as related to politics during the 2018 National Brazilian elections. We also investigated early electoral advertisement before the 2020 local Brazilian elections using our model on unsponsored content (regular posts in groups and pages). We noticed that not all political ads we detected were present in the Meta Ad Library for political ads on 2018. Additionally, we found possible early electoral advertisements in 2020, which is forbidden in Brazil. Our results emphasize the importance of enforcement mechanisms for declaring political ads and the need for independent auditing platforms.",
+      "keywords": [],
+      "doi": "10.1145/3796545",
+      "doi_url": "https://doi.org/10.1145/3796545",
+      "url": null,
+      "arxiv_url": null,
+      "pdf_url": null,
+      "publication_date": "2026-02-06",
+      "citation_count": 0,
+      "reference_count": 68,
+      "venue": "ACM Transactions on the Web",
+      "authors": [
+        "Marcio Inacio da Silva",
+        "Lucas de Oliveira",
+        "Pedro Olmo Vaz de Melo",
+        "Oana Goga",
+        "Fabrício Benevenuto"
+      ],
+      "subjects": [],
+      "is_open_access": null,
+      "source": "crossref",
+      "confidence_score": 0.8529411764705882
+    }
+  },
+  "602e20151b2badb6": {
+    "entry_key": "Choi2026-bz",
+    "entry_title": "The modality-congruent carryover effect: How difficulty in identifying (deep)fake news impacts self-confidence in truth discernment and susceptibility to subsequent disinformation",
+    "cached_at": "2026-03-19T18:08:04.767196",
+    "metadata": {
+      "abstract": "With the proliferation of (deep)fake news, individuals will increasingly find it difficult to discern whether content is created by human journalists or artificial intelligence. A two-wave online experiment investigated the carryover effects of news authentication during the initial (deep)fake news exposure on responses to subsequent (deep)fake news. Participants encountered celebrity (deep)fake news in text and video formats on social media. The results showed that the difficulty induced by news authentication lowered self-confidence in truth discernment, which, in turn, decreased the perceived credibility and engagement intentions toward subsequent unrelated fake news of the same modality.",
+      "keywords": [],
+      "doi": "10.1177/10776990251413726",
+      "doi_url": "https://doi.org/10.1177/10776990251413726",
+      "url": null,
+      "arxiv_url": null,
+      "pdf_url": null,
+      "publication_date": "2026-02-10",
+      "citation_count": 0,
+      "reference_count": 82,
+      "venue": "Journalism &amp; Mass Communication Quarterly",
+      "authors": [
+        "Sukyoung Choi"
+      ],
+      "subjects": [],
+      "is_open_access": null,
+      "source": "crossref",
+      "confidence_score": 0.8999999999999999
+    }
+  },
+  "c7e448afdb4bc121": {
+    "entry_key": "Stagnaro2025-pz",
+    "entry_title": "Representativeness and response validity across nine opt-in online samples",
+    "cached_at": "2026-03-19T18:08:10.303688",
+    "metadata": {
+      "abstract": "The study of human behavior has shifted in the last fifteen years, with increasing reliance on opt-in non-probability online data sources. We offer an analysis of nine such data sources (total N = 13,053), aiming to inform researchers conducting experiments or correlational studies. We assess response validity (attentiveness, effort, honesty, speeding, and attrition), the extent to which samples represent the underlying population (observable demographics, measured attitude representativeness, and responding to experimental treatments), and professionalism (number of studies taken, frequency of taking studies, and modality of device on which the study is taken). We document substantial variation across these samples on each dimension. Samples that employ demographic quotas display relatively higher amounts of representativeness across multiple indicators (beyond demographics) but often exhibit less response validity. However, the inclusion of two attention checks early in a study enhances response validity without negatively impacting representativeness. We offer guidance for choosing opt-in samples, depending on the purpose of the research and resource constraints.",
+      "keywords": [],
+      "doi": "10.31234/osf.io/h9j2d",
+      "doi_url": "https://doi.org/10.31234/osf.io/h9j2d",
+      "url": null,
+      "arxiv_url": null,
+      "pdf_url": null,
+      "publication_date": null,
+      "citation_count": 47,
+      "reference_count": 0,
+      "venue": null,
+      "authors": [
+        "Michael Nicholas Stagnaro",
+        "James Druckman",
+        "Adam J. Berinsky",
+        "Antonio Alonso Arechar",
+        "Robb Willer",
+        "David Gertler Rand"
+      ],
+      "subjects": [],
+      "is_open_access": null,
+      "source": "crossref",
+      "confidence_score": 0.8352941176470587
+    }
+  },
+  "67c3382e8e499851": {
+    "entry_key": "Philipp2026-tl",
+    "entry_title": "Election research in the age of regulated data access under the EU Digital Services Act",
+    "cached_at": "2026-03-19T18:08:25.665653",
+    "metadata": {
+      "abstract": null,
+      "keywords": [],
+      "doi": "10.14763/2026.1.2080",
+      "doi_url": "https://doi.org/10.14763/2026.1.2080",
+      "url": null,
+      "arxiv_url": null,
+      "pdf_url": null,
+      "publication_date": "2026-02-16",
+      "citation_count": 0,
+      "reference_count": 0,
+      "venue": "Internet Policy Review",
+      "authors": [
+        "Philipp Darius",
+        "Johannes Breuer",
+        "Simon Kruschinski",
+        "Felicia Loecherbach",
+        "Jasmin Riedl",
+        "Sebastian Stier"
+      ],
+      "subjects": [],
+      "is_open_access": null,
+      "source": "crossref",
+      "confidence_score": 0.823076923076923
     }
   }
 }
