@@ -26,165 +26,6 @@
     "failure_reason": "Could not enrich entry: Marwick2025-vx | No DOI available | Title length: 122 chars | Authors: Marwick, Alice E, Furl, Katherine | APIs: Crossref enabled, Semantic Scholar enabled, ArXiv enabled",
     "last_failure_at": "2026-03-19T18:08:16.847949"
   },
-  "f2c3c073e07cd98e": {
-    "entry_key": "De2026-ld",
-    "entry_title": "The discursive flexibility of changecraft: Platform change discourse in Meta, TikTok, YouTube, and X",
-    "cached_at": "2026-02-18T05:19:50.391215",
-    "metadata": {
-      "abstract": "Social media platforms evolve rapidly. While platform studies have often analyzed specific policy or feature changes, there remains a lack of shared language to conceptualize how platforms themselves represent such changes. In this article, we analyze public communications from Meta, YouTube, X, and TikTok to examine how platforms construct and justify change. We explicate platform evolution as a technical but also deeply discursive process. Platforms frame their transformations in interesting ways, especially if these shifts consolidate power or deepen user dependence. We introduce the concept of changecraft : the strategic discursive practices through which platforms manage, legitimize, and normalize change. Changecraft encompasses the rendering of infrastructural shifts as visible, the framing of ideological pivots as continuity, and the deployment of patchworked updates to subtly reorient platform futures. This framework provides scholars a way to interrogate platform change not just by what changes but by how platforms seek to make change meaningful and acceptable to their publics.",
-      "keywords": [],
-      "doi": "10.1177/29768624251408212",
-      "doi_url": "https://doi.org/10.1177/29768624251408212",
-      "url": null,
-      "arxiv_url": null,
-      "pdf_url": null,
-      "publication_date": "2026",
-      "citation_count": 0,
-      "reference_count": 57,
-      "venue": "Platforms &amp; Society",
-      "authors": [
-        "Ankolika De",
-        "Kelley Cotter"
-      ],
-      "subjects": [],
-      "is_open_access": null,
-      "source": "crossref",
-      "confidence_score": 0.86
-    }
-  },
-  "c35a283f3579db9d": {
-    "entry_key": "Shi2026-ko",
-    "entry_title": "The Governance-Embedded Interactive Media Effect: the role of AI-generated disclosure in user credibility and engagement based on fact-checking videos on Chinese TikTok (Douyin)",
-    "cached_at": "2026-02-18T05:19:53.251937",
-    "metadata": {
-      "abstract": null,
-      "keywords": [],
-      "doi": "10.1080/17544750.2026.2623075",
-      "doi_url": "https://doi.org/10.1080/17544750.2026.2623075",
-      "url": null,
-      "arxiv_url": null,
-      "pdf_url": null,
-      "publication_date": "2026-02-13",
-      "citation_count": 0,
-      "reference_count": 49,
-      "venue": "Chinese Journal of Communication",
-      "authors": [
-        "Yiru Shi"
-      ],
-      "subjects": [],
-      "is_open_access": null,
-      "source": "crossref",
-      "confidence_score": 0.8999999999999999
-    }
-  },
-  "25585654a9878a3d": {
-    "entry_key": "Dierickx2026-tw",
-    "entry_title": "What is a fact in the age of generative AI? Fact-checking as an epistemological lens",
-    "cached_at": "2026-02-18T06:35:38.405243",
-    "metadata": {
-      "abstract": null,
-      "keywords": [],
-      "doi": "10.1080/1369118x.2026.2630697",
-      "doi_url": "https://doi.org/10.1080/1369118x.2026.2630697",
-      "url": null,
-      "arxiv_url": null,
-      "pdf_url": null,
-      "publication_date": "2026-02-16",
-      "citation_count": 0,
-      "reference_count": 76,
-      "venue": "Information, Communication &amp; Society",
-      "authors": [
-        "Laurence Dierickx",
-        "Andreas L. Opdahl",
-        "Fredrik Bjerknes",
-        "Carl-Gustav Lindén"
-      ],
-      "subjects": [],
-      "is_open_access": null,
-      "source": "crossref",
-      "confidence_score": 0.83
-    }
-  },
-  "8238adeeb16e0d15": {
-    "entry_key": "Stanusch2026-ec",
-    "entry_title": "How AI is imagined by industry during the Sam Altman controversy",
-    "cached_at": "2026-02-18T17:45:33.114759",
-    "metadata": {
-      "abstract": null,
-      "keywords": [],
-      "doi": "10.31124/advance.174979411.18178682/v1",
-      "doi_url": "https://doi.org/10.31124/advance.174979411.18178682/v1",
-      "url": null,
-      "arxiv_url": null,
-      "pdf_url": null,
-      "publication_date": null,
-      "citation_count": 1,
-      "reference_count": 0,
-      "venue": null,
-      "authors": [
-        "Natalia Stanusch",
-        "Richard Rogers"
-      ],
-      "subjects": [],
-      "is_open_access": null,
-      "source": "crossref",
-      "confidence_score": 0.86
-    }
-  },
-  "53df38ca99f7b779": {
-    "entry_key": "Gauthier2026-iq",
-    "entry_title": "The political effects of X’s feed algorithm",
-    "cached_at": "2026-02-19T06:33:48.407558",
-    "metadata": {
-      "abstract": null,
-      "keywords": [],
-      "doi": "10.1038/s41586-026-10098-2",
-      "doi_url": "https://doi.org/10.1038/s41586-026-10098-2",
-      "url": null,
-      "arxiv_url": null,
-      "pdf_url": null,
-      "publication_date": "2026-02-18",
-      "citation_count": 0,
-      "reference_count": 47,
-      "venue": "Nature",
-      "authors": [
-        "Germain Gauthier",
-        "Roland Hodler",
-        "Philine Widmer",
-        "Ekaterina Zhuravskaya"
-      ],
-      "subjects": [],
-      "is_open_access": null,
-      "source": "crossref",
-      "confidence_score": 0.8333333333333333
-    }
-  },
-  "c4b0b0077b06cd02": {
-    "entry_key": "Farkas2026-lr",
-    "entry_title": "Defending fact-checking partnerships with platform companies: ‘We can't fight alone against disinformation’",
-    "cached_at": "2026-02-20T06:11:27.919654",
-    "metadata": {
-      "abstract": "This article investigates how professional fact-checkers defend collaborations with major platform companies such as Meta, Alphabet, and ByteDance. Drawing on 12 qualitative interviews with European fact-checkers, the study applies rhetorical apologia theory to analyse recurring justificatory arguments. We identify four modes of differentiation and three modes of transcendence employed by fact-checkers. Arguments of differentiation involve distancing fact-checking from platform company partners to emphasise editorial independence; distinguishing between different platform companies to legitimise partnerships with certain actors while rejecting others (notably TikTok owned by ByteDance); separating platform companies as a whole and specific employees within them; and contrasting platform funding with state funding to defend the former as less compromising for editorial autonomy. Arguments of transcendence invoke counter-factual scenarios of unmitigated misinformation; appealing to broader alliances against disinformation; and highlighting the potential for improving platform companies from within. These findings contribute to existing scholarship by unpacking how fact-checkers negotiate the complex institutional dependencies of platform company partnerships by simultaneously acknowledging risks and asserting pragmatic necessity. As such, the study provides a deeper understanding of the challenges facing fact-checking organisations and their efforts to establish legitimacy as epistemic authorities in the boundary terrain shared with other key actors in today's media landscape.",
-      "keywords": [],
-      "doi": "10.1177/02673231261422085",
-      "doi_url": "https://doi.org/10.1177/02673231261422085",
-      "url": null,
-      "arxiv_url": null,
-      "pdf_url": null,
-      "publication_date": "2026-02-16",
-      "citation_count": 0,
-      "reference_count": 50,
-      "venue": "European Journal of Communication",
-      "authors": [
-        "Johan Farkas",
-        "Mette Bengtsson"
-      ],
-      "subjects": [],
-      "is_open_access": null,
-      "source": "crossref",
-      "confidence_score": 0.86
-    }
-  },
   "7a846947acf48197": {
     "entry_key": "Balluff2026-if",
     "entry_title": "Newer, larger, better? A critique of the unreflective LLM adoption in communication research",
@@ -3785,11 +3626,11 @@
   "7a5bca5477086046": {
     "entry_key": "Schiffrin_undated-gi",
     "entry_title": "Deepfake financial fraud: The global regulation of ai-driven scams",
-    "cached_at": "2026-03-13T08:42:57.252316",
+    "cached_at": "2026-03-22T08:21:01.629500",
     "metadata": null,
     "failed": true,
     "failure_reason": "Could not enrich entry: Schiffrin_undated-gi | No DOI available | Title length: 66 chars | Authors: Schiffrin, Anya, Marwick, Alice E... | APIs: Crossref enabled, Semantic Scholar enabled, ArXiv enabled",
-    "last_failure_at": "2026-03-13T08:42:57.252325"
+    "last_failure_at": "2026-03-22T08:21:01.629507"
   },
   "e5a19719609563d7": {
     "entry_key": "Kulichkina2026-zk",
@@ -4269,6 +4110,222 @@
       "is_open_access": null,
       "source": "crossref",
       "confidence_score": 0.823076923076923
+    }
+  },
+  "fd4659dec0367388": {
+    "entry_key": "Ahuja2025-ku",
+    "entry_title": "Dark patterns and the EU digital services act: Mapping autonomy violations and design factors",
+    "cached_at": "2026-03-22T08:20:48.793796",
+    "metadata": {
+      "abstract": null,
+      "keywords": [],
+      "doi": "10.2139/ssrn.5555765",
+      "doi_url": "https://doi.org/10.2139/ssrn.5555765",
+      "url": null,
+      "arxiv_url": null,
+      "pdf_url": null,
+      "publication_date": null,
+      "citation_count": 0,
+      "reference_count": 0,
+      "venue": null,
+      "authors": [
+        "Sanju Ahuja",
+        "Johanna Gunawan",
+        "Nataliia Bielova",
+        "Cristiana Santos"
+      ],
+      "subjects": [],
+      "is_open_access": null,
+      "source": "crossref",
+      "confidence_score": 0.8333333333333333
+    }
+  },
+  "88f2087844cd43bc": {
+    "entry_key": "Wang2026-ub",
+    "entry_title": "The failed migration of academic Twitter: A case study of precocious adopters",
+    "cached_at": "2026-03-22T08:21:01.224211",
+    "metadata": {
+      "abstract": "Following changes in Twitter's ownership in 2022 and subsequent changes to content moderation policies, many in academia looked to move their discourse elsewhere and migration to Mastodon was pursued by some. Our study examines the behavior of a self-organized group of early academic adopters who joined Mastodon following changes in Twitter's ownership. Utilizing publicly available user account data drawn from a voluntarily curated list of academics, we track the posting activity of these early adopters on Mastodon over a one year period. We also study follower-followee and interaction relationships to map internal networks, finding that the subset of academics who migrated to Mastodon were well-connected. However, this strong internal connectivity was insufficient to prevent users from returning to Twitter/X. Our analyses show that early adopters struggled to maintain engagement, shaped by Mastodon's decentralized design and competition from alternatives such as Bluesky and Threads. The migration effort lost momentum after an initial surge, as most early adopters reduced activity or returned to Twitter. Our survival analysis further reveals that retention is strongly linked to diverse cross-server engagement and topic-server communities. Users with large pre-existing Twitter presence face significantly higher attrition risk, highlighting the challenge of replicating established social connections in decentralized ecosystem. By examining the coordinated migration attempt of early adopters, we find that even this highly motivated group faced substantial challenges, suggesting that later or less coordinated efforts would likely encounter even greater barriers.",
+      "keywords": [],
+      "doi": null,
+      "doi_url": null,
+      "url": null,
+      "arxiv_url": "http://arxiv.org/abs/2406.04005v3",
+      "pdf_url": "https://arxiv.org/pdf/2406.04005v3",
+      "publication_date": "2024-06-06",
+      "citation_count": null,
+      "reference_count": null,
+      "venue": null,
+      "authors": [
+        "Xinyu Wang",
+        "Sai Koneru",
+        "Sarah Rajtmajer"
+      ],
+      "subjects": [
+        "cs.SI"
+      ],
+      "is_open_access": true,
+      "source": "arxiv",
+      "confidence_score": 0.7428571428571428
+    }
+  },
+  "c4b0b0077b06cd02": {
+    "entry_key": "Farkas2026-lr",
+    "entry_title": "Defending fact-checking partnerships with platform companies: ‘We can't fight alone against disinformation’",
+    "cached_at": "2026-03-22T08:21:04.345340",
+    "metadata": {
+      "abstract": "This article investigates how professional fact-checkers defend collaborations with major platform companies such as Meta, Alphabet, and ByteDance. Drawing on 12 qualitative interviews with European fact-checkers, the study applies rhetorical apologia theory to analyse recurring justificatory arguments. We identify four modes of differentiation and three modes of transcendence employed by fact-checkers. Arguments of differentiation involve distancing fact-checking from platform company partners to emphasise editorial independence; distinguishing between different platform companies to legitimise partnerships with certain actors while rejecting others (notably TikTok owned by ByteDance); separating platform companies as a whole and specific employees within them; and contrasting platform funding with state funding to defend the former as less compromising for editorial autonomy. Arguments of transcendence invoke counter-factual scenarios of unmitigated misinformation; appealing to broader alliances against disinformation; and highlighting the potential for improving platform companies from within. These findings contribute to existing scholarship by unpacking how fact-checkers negotiate the complex institutional dependencies of platform company partnerships by simultaneously acknowledging risks and asserting pragmatic necessity. As such, the study provides a deeper understanding of the challenges facing fact-checking organisations and their efforts to establish legitimacy as epistemic authorities in the boundary terrain shared with other key actors in today's media landscape.",
+      "keywords": [],
+      "doi": "10.1177/02673231261422085",
+      "doi_url": "https://doi.org/10.1177/02673231261422085",
+      "url": null,
+      "arxiv_url": null,
+      "pdf_url": null,
+      "publication_date": "2026-02-16",
+      "citation_count": 0,
+      "reference_count": 50,
+      "venue": "European Journal of Communication",
+      "authors": [
+        "Johan Farkas",
+        "Mette Bengtsson"
+      ],
+      "subjects": [],
+      "is_open_access": null,
+      "source": "crossref",
+      "confidence_score": 0.86
+    }
+  },
+  "c35a283f3579db9d": {
+    "entry_key": "Shi2026-ko",
+    "entry_title": "The Governance-Embedded Interactive Media Effect: the role of AI-generated disclosure in user credibility and engagement based on fact-checking videos on Chinese TikTok (Douyin)",
+    "cached_at": "2026-03-22T08:21:07.408970",
+    "metadata": {
+      "abstract": null,
+      "keywords": [],
+      "doi": "10.1080/17544750.2026.2623075",
+      "doi_url": "https://doi.org/10.1080/17544750.2026.2623075",
+      "url": null,
+      "arxiv_url": null,
+      "pdf_url": null,
+      "publication_date": "2026-02-13",
+      "citation_count": 0,
+      "reference_count": 49,
+      "venue": "Chinese Journal of Communication",
+      "authors": [
+        "Yiru Shi"
+      ],
+      "subjects": [],
+      "is_open_access": null,
+      "source": "crossref",
+      "confidence_score": 0.8999999999999999
+    }
+  },
+  "8238adeeb16e0d15": {
+    "entry_key": "Stanusch2026-ec",
+    "entry_title": "How AI is imagined by industry during the Sam Altman controversy",
+    "cached_at": "2026-03-22T08:21:10.385763",
+    "metadata": {
+      "abstract": null,
+      "keywords": [],
+      "doi": "10.31124/advance.174979411.18178682/v1",
+      "doi_url": "https://doi.org/10.31124/advance.174979411.18178682/v1",
+      "url": null,
+      "arxiv_url": null,
+      "pdf_url": null,
+      "publication_date": null,
+      "citation_count": 1,
+      "reference_count": 0,
+      "venue": null,
+      "authors": [
+        "Natalia Stanusch",
+        "Richard Rogers"
+      ],
+      "subjects": [],
+      "is_open_access": null,
+      "source": "crossref",
+      "confidence_score": 0.86
+    }
+  },
+  "f2c3c073e07cd98e": {
+    "entry_key": "De2026-ld",
+    "entry_title": "The discursive flexibility of changecraft: Platform change discourse in Meta, TikTok, YouTube, and X",
+    "cached_at": "2026-03-22T08:21:13.438697",
+    "metadata": {
+      "abstract": "Social media platforms evolve rapidly. While platform studies have often analyzed specific policy or feature changes, there remains a lack of shared language to conceptualize how platforms themselves represent such changes. In this article, we analyze public communications from Meta, YouTube, X, and TikTok to examine how platforms construct and justify change. We explicate platform evolution as a technical but also deeply discursive process. Platforms frame their transformations in interesting ways, especially if these shifts consolidate power or deepen user dependence. We introduce the concept of changecraft : the strategic discursive practices through which platforms manage, legitimize, and normalize change. Changecraft encompasses the rendering of infrastructural shifts as visible, the framing of ideological pivots as continuity, and the deployment of patchworked updates to subtly reorient platform futures. This framework provides scholars a way to interrogate platform change not just by what changes but by how platforms seek to make change meaningful and acceptable to their publics.",
+      "keywords": [],
+      "doi": "10.1177/29768624251408212",
+      "doi_url": "https://doi.org/10.1177/29768624251408212",
+      "url": null,
+      "arxiv_url": null,
+      "pdf_url": null,
+      "publication_date": "2026",
+      "citation_count": 0,
+      "reference_count": 57,
+      "venue": "Platforms &amp; Society",
+      "authors": [
+        "Ankolika De",
+        "Kelley Cotter"
+      ],
+      "subjects": [],
+      "is_open_access": null,
+      "source": "crossref",
+      "confidence_score": 0.86
+    }
+  },
+  "25585654a9878a3d": {
+    "entry_key": "Dierickx2026-tw",
+    "entry_title": "What is a fact in the age of generative AI? Fact-checking as an epistemological lens",
+    "cached_at": "2026-03-22T08:21:16.468904",
+    "metadata": {
+      "abstract": null,
+      "keywords": [],
+      "doi": "10.1080/1369118x.2026.2630697",
+      "doi_url": "https://doi.org/10.1080/1369118x.2026.2630697",
+      "url": null,
+      "arxiv_url": null,
+      "pdf_url": null,
+      "publication_date": "2026-02-16",
+      "citation_count": 0,
+      "reference_count": 76,
+      "venue": "Information, Communication &amp; Society",
+      "authors": [
+        "Laurence Dierickx",
+        "Andreas L. Opdahl",
+        "Fredrik Bjerknes",
+        "Carl-Gustav Lindén"
+      ],
+      "subjects": [],
+      "is_open_access": null,
+      "source": "crossref",
+      "confidence_score": 0.83
+    }
+  },
+  "53df38ca99f7b779": {
+    "entry_key": "Gauthier2026-iq",
+    "entry_title": "The political effects of X’s feed algorithm",
+    "cached_at": "2026-03-22T08:21:19.462200",
+    "metadata": {
+      "abstract": null,
+      "keywords": [],
+      "doi": "10.1038/s41586-026-10098-2",
+      "doi_url": "https://doi.org/10.1038/s41586-026-10098-2",
+      "url": null,
+      "arxiv_url": null,
+      "pdf_url": null,
+      "publication_date": "2026-02-18",
+      "citation_count": 1,
+      "reference_count": 47,
+      "venue": "Nature",
+      "authors": [
+        "Germain Gauthier",
+        "Roland Hodler",
+        "Philine Widmer",
+        "Ekaterina Zhuravskaya"
+      ],
+      "subjects": [],
+      "is_open_access": null,
+      "source": "crossref",
+      "confidence_score": 0.8333333333333333
     }
   }
 }
