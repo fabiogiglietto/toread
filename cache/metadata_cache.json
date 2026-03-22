@@ -26,38 +26,6 @@
     "failure_reason": "Could not enrich entry: Marwick2025-vx | No DOI available | Title length: 122 chars | Authors: Marwick, Alice E, Furl, Katherine | APIs: Crossref enabled, Semantic Scholar enabled, ArXiv enabled",
     "last_failure_at": "2026-03-19T18:08:16.847949"
   },
-  "7a846947acf48197": {
-    "entry_key": "Balluff2026-if",
-    "entry_title": "Newer, larger, better? A critique of the unreflective LLM adoption in communication research",
-    "cached_at": "2026-02-20T13:52:33.877963",
-    "metadata": {
-      "abstract": null,
-      "keywords": [],
-      "doi": "10.1080/10584609.2026.2618486",
-      "doi_url": "https://doi.org/10.1080/10584609.2026.2618486",
-      "url": null,
-      "arxiv_url": null,
-      "pdf_url": null,
-      "publication_date": "2026-02-20",
-      "citation_count": 0,
-      "reference_count": 38,
-      "venue": "Political Communication",
-      "authors": [
-        "Paul Balluff",
-        "Justin Chun-ting Ho",
-        "Johannes B. Gruber",
-        "Sean Palicki",
-        "Alexis Palmer",
-        "Luca Rossi",
-        "Irina Shklovski",
-        "Chung-hong Chan"
-      ],
-      "subjects": [],
-      "is_open_access": null,
-      "source": "crossref",
-      "confidence_score": 0.8157894736842105
-    }
-  },
   "3eacf232e98df15d": {
     "entry_key": "Bak-Coleman2026-mk",
     "entry_title": "Industry influence in high-profile social media research",
@@ -4326,6 +4294,68 @@
       "is_open_access": null,
       "source": "crossref",
       "confidence_score": 0.8333333333333333
+    }
+  },
+  "466ae68d0651c694": {
+    "entry_key": "Efstratiou2026-ij",
+    "entry_title": "Information pathways in online science communication: The role of platform actors and news media",
+    "cached_at": "2026-03-22T16:51:47.507379",
+    "metadata": {
+      "abstract": "Online discussions of science involve complex interactions among experts, news media, and social media users as they interpret and disseminate scientific findings. While prior work has examined these actors in isolation, their interplay in shaping science communication remains poorly understood. Using the COVID-19 pandemic as a case study, we analyze 1.24M tweets and 211k news articles that reference pandemic-related scientific papers. We find that the most influential Twitter accounts in this discourse are predominantly individuals with medical or research credentials. However, we also identify a coordinated network that disproportionately amplifies a small set of prominent credentialed experts who advance contrarian, anti-consensus positions on vaccines, lockdowns, and related topics. The papers promoted by these influential actors substantially overlap with those covered by news media, but with key differences: pro-consensus experts primarily engage with studies featured by mainstream and medical outlets, whereas contrarian experts align more closely with papers promoted by low-quality, pseudoscientific, or conspiratorial sources. Notably, news outlets tend to report on scientific studies after they have been highlighted by social media superspreaders. Together, these findings reveal multi-level pathways of information flow and coordinated amplification structures that shape science communication across social media and news, offering new insights into the dynamics of the broader information ecosystem.",
+      "keywords": [],
+      "doi": null,
+      "doi_url": null,
+      "url": null,
+      "arxiv_url": "http://arxiv.org/abs/2603.17249v1",
+      "pdf_url": "https://arxiv.org/pdf/2603.17249v1",
+      "publication_date": "2026-03-18",
+      "citation_count": null,
+      "reference_count": null,
+      "venue": null,
+      "authors": [
+        "Alexandros Efstratiou",
+        "Giuseppe Russo",
+        "Luca Luceri"
+      ],
+      "subjects": [
+        "cs.SI",
+        "cs.CY"
+      ],
+      "is_open_access": true,
+      "source": "arxiv",
+      "confidence_score": 0.7428571428571428
+    }
+  },
+  "7a846947acf48197": {
+    "entry_key": "Balluff2026-if",
+    "entry_title": "Newer, larger, better? A critique of the unreflective LLM adoption in communication research",
+    "cached_at": "2026-03-22T16:51:47.684857",
+    "metadata": {
+      "abstract": null,
+      "keywords": [],
+      "doi": "10.1080/10584609.2026.2618486",
+      "doi_url": "https://doi.org/10.1080/10584609.2026.2618486",
+      "url": null,
+      "arxiv_url": null,
+      "pdf_url": null,
+      "publication_date": "2026-02-20",
+      "citation_count": 0,
+      "reference_count": 38,
+      "venue": "Political Communication",
+      "authors": [
+        "Paul Balluff",
+        "Justin Chun-ting Ho",
+        "Johannes B. Gruber",
+        "Sean Palicki",
+        "Alexis Palmer",
+        "Luca Rossi",
+        "Irina Shklovski",
+        "Chung-hong Chan"
+      ],
+      "subjects": [],
+      "is_open_access": null,
+      "source": "crossref",
+      "confidence_score": 0.8157894736842105
     }
   }
 }
