@@ -4357,5 +4357,43 @@
       "source": "crossref",
       "confidence_score": 0.8333333333333333
     }
+  },
+  "97e05290715b1b92": {
+    "entry_key": "Ventura2026-yc",
+    "entry_title": "The partisan effects of social media bans",
+    "cached_at": "2026-03-27T17:13:57.518224",
+    "metadata": {
+      "abstract": "What happens to information environments when democracies ban social media platforms? While a large literature examines information control under authoritarianism, democratic governments have increasingly intervened in major online platforms. We study a prominent case: Brazil's 2024 national ban on the social media platform X. Using an event-study design, we estimate the causal effects of the ban and examine how partisan identity shaped responses. Drawing on a large sample of politically engaged users and ideal-point estimates of ideology, we find strong partisan asymmetries. Conservative users not aligned with the government were more likely to circumvent the ban, and right-leaning news domains became markedly more prevalent on the platform. We describe this dynamic as a ``sorting ratchet\": the ban segmented the digital public sphere along partisan lines, with effects that persisted even after restrictions were lifted. Platform bans in democratic settings may therefore deepen polarization and durably reshape information environments.",
+      "keywords": [],
+      "doi": "10.31235/osf.io/4stfw_v1",
+      "doi_url": "https://doi.org/10.31235/osf.io/4stfw_v1",
+      "url": null,
+      "arxiv_url": null,
+      "pdf_url": null,
+      "publication_date": null,
+      "citation_count": 0,
+      "reference_count": 0,
+      "venue": null,
+      "authors": [
+        "Tiago Ventura",
+        "Christopher Barrie",
+        "Margaret E. Roberts",
+        "Christopher Schwarz",
+        "Joshua A Tucker"
+      ],
+      "subjects": [],
+      "is_open_access": null,
+      "source": "crossref",
+      "confidence_score": 0.8272727272727272
+    }
+  },
+  "b909c3af063ea494": {
+    "entry_key": "noauthor_undated-bm",
+    "entry_title": "cib.pdf",
+    "cached_at": "2026-03-27T17:13:57.518497",
+    "metadata": null,
+    "failed": true,
+    "failure_reason": "Could not enrich entry: noauthor_undated-bm | No DOI available | Title length: 7 chars | No authors available | APIs: Crossref enabled, Semantic Scholar enabled, ArXiv enabled",
+    "last_failure_at": "2026-03-27T17:13:57.518502"
   }
 }
