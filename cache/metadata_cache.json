@@ -2,144 +2,29 @@
   "c5a7d0326e1f61c6": {
     "entry_key": "Kristensen2025-ni",
     "entry_title": "Platform polarization. Do alternative platforms drive discursive polarization?",
-    "cached_at": "2026-03-19T18:08:13.763667",
+    "cached_at": "2026-03-27T14:03:01.034645",
     "metadata": null,
     "failed": true,
     "failure_reason": "Could not enrich entry: Kristensen2025-ni | No DOI available | Title length: 78 chars | Authors: Kristensen, Jakob Bæk, Kristensen, Jakob Bæk | APIs: Crossref enabled, Semantic Scholar enabled, ArXiv enabled",
-    "last_failure_at": "2026-03-19T18:08:13.763684"
+    "last_failure_at": "2026-03-27T14:03:01.034654"
   },
   "65d46046ae1c898f": {
     "entry_key": "Gaw2025-ru",
     "entry_title": "Influence operations as brokerage: Political-economic infrastructures of manipulation in the 2022 Philippine elections",
-    "cached_at": "2026-03-19T18:08:19.950436",
+    "cached_at": "2026-03-27T14:03:05.950274",
     "metadata": null,
     "failed": true,
     "failure_reason": "Could not enrich entry: Gaw2025-ru | No DOI available | Title length: 118 chars | Authors: Gaw, Fatima, Agonos, Mariam Jayne... | APIs: Crossref enabled, Semantic Scholar enabled, ArXiv enabled",
-    "last_failure_at": "2026-03-19T18:08:19.950446"
+    "last_failure_at": "2026-03-27T14:03:05.950283"
   },
   "b41f425da41887a0": {
     "entry_key": "Marwick2025-vx",
     "entry_title": "True costs of misinformation| mountains of evidence: Processual “redpilling” as a Socio-technical effect of disinformation",
-    "cached_at": "2026-03-19T18:08:16.847942",
+    "cached_at": "2026-03-27T14:03:08.962774",
     "metadata": null,
     "failed": true,
     "failure_reason": "Could not enrich entry: Marwick2025-vx | No DOI available | Title length: 122 chars | Authors: Marwick, Alice E, Furl, Katherine | APIs: Crossref enabled, Semantic Scholar enabled, ArXiv enabled",
-    "last_failure_at": "2026-03-19T18:08:16.847949"
-  },
-  "3eacf232e98df15d": {
-    "entry_key": "Bak-Coleman2026-mk",
-    "entry_title": "Industry influence in high-profile social media research",
-    "cached_at": "2026-02-22T07:52:05.700711",
-    "metadata": {
-      "abstract": "To what extent is social media research independent from industry influence? Leveraging openly available data, we show that half of the research published in top journals has disclosable ties to industry in the form of prior funding, collaboration, or employment. However, the majority of these ties go undisclosed in the published research. These trends do not arise from broad scientific engagement with industry, but rather from a select group of scientists who maintain long-lasting relationships with industry. Undisclosed ties to industry are common not just among authors, but among reviewers and academic editors during manuscript evaluation. Further, industry-tied research garners more attention within the academy, among policymakers, on social media, and in the news. Finally, we find evidence that industry ties are associated with a topical focus away from impacts of platform-scale features. Together, these findings suggest industry influence in social media research is extensive, impactful, and often opaque. Going forward there is a need to strengthen disclosure norms and implement policies to ensure the visibility of independent research, and the integrity of industry supported research.",
-      "keywords": [],
-      "doi": null,
-      "doi_url": null,
-      "url": null,
-      "arxiv_url": "http://arxiv.org/abs/2601.11507v1",
-      "pdf_url": "https://arxiv.org/pdf/2601.11507v1",
-      "publication_date": "2026-01-16",
-      "citation_count": null,
-      "reference_count": null,
-      "venue": null,
-      "authors": [
-        "Joseph Bak-Coleman",
-        "Jevin West",
-        "Cailin O'Connor",
-        "Carl T. Bergstrom"
-      ],
-      "subjects": [
-        "cs.SI"
-      ],
-      "is_open_access": true,
-      "source": "arxiv",
-      "confidence_score": 0.7272727272727272
-    }
-  },
-  "6d7232062ec16bcb": {
-    "entry_key": "Scalco2026-bd",
-    "entry_title": "How to detect information voids using longitudinal data from social media and web searches",
-    "cached_at": "2026-02-22T07:52:08.852577",
-    "metadata": {
-      "abstract": "The model of the attention economy, where content producers compete for the attention of users, relies on two key forces: information supply and demand. This study leverages the feedback loop between these forces to develop a method for detecting and quantifying information voids, i.e., periods in which little or no reliable information is available on a given topic. Using a case study on COVID-19 vaccines rollout in six European countries, and drawing on data from multiple platforms including Facebook, Google, Twitter, Wikipedia, and online news outlets, we examine how information voids emerge, persist and correlate with a decline in the proportion of high-quality information circulating online. By conceptualising information voids as a specific regime of information spreading, we also quantify their counterpart, information overabundance, which constitute a central component of the current definition of infodemic. We show that information voids are associated with a higher prevalence of misinformation, thus representing problematic hotspots in which individuals are more likely to be misled by low-quality online content. Overall, our findings provide empirical support for the inclusion of information voids in mechanistic explanations of misinformation emergence.",
-      "keywords": [],
-      "doi": null,
-      "doi_url": null,
-      "url": null,
-      "arxiv_url": "http://arxiv.org/abs/2602.15476v1",
-      "pdf_url": "https://arxiv.org/pdf/2602.15476v1",
-      "publication_date": "2026-02-17",
-      "citation_count": null,
-      "reference_count": null,
-      "venue": null,
-      "authors": [
-        "Irene Scalco",
-        "Francesco Gesualdo",
-        "Roy Cerqueti",
-        "Matteo Cinelli"
-      ],
-      "subjects": [
-        "cs.CY",
-        "physics.soc-ph"
-      ],
-      "is_open_access": true,
-      "source": "arxiv",
-      "confidence_score": 0.7333333333333333
-    }
-  },
-  "c5f27c414108d268": {
-    "entry_key": "Di-Domenico2026-zq",
-    "entry_title": "don't you know that you're toxic? how influencer‐driven misinformation fuels online toxicity",
-    "cached_at": "2026-02-25T06:37:04.884475",
-    "metadata": {
-      "abstract": "ABSTRACT Research on misinformation has focused on message content and cognitive bias, overlooking how source type shapes toxic engagement. This study addresses that gap by showing that influencer‐driven misinformation does not merely increase toxicity: it reconfigures its nature and persistence through relational and social influence mechanisms. Drawing on Source Credibility, Parasocial Interaction, and Social Influence theories, we analyse 101 brand‐related misinformation posts (48,821 comments) across major platforms using a mixed‐method design combining automated toxicity detection, topic modeling, and thematic analysis. Results reveal that influencers amplify toxicity under high engagement, sociopolitical salience, and low pseudonymity conditions, producing distinct patterns such as flame‐bait firestorms and toxic debunking. We identify two influencer‐specific mechanisms: brand‐related misinformation legitimation and community enmeshment, that sustain toxic echo chambers by converting credibility and parasocial bonds into collective antagonism. These findings advance marketing theory by reframing toxicity as a source‐amplified, relational phenomenon, and inform ecosystem‐level interventions structured around publishers, platforms, and people to mitigate influencer‐driven harm.",
-      "keywords": [],
-      "doi": "10.1002/mar.70106",
-      "doi_url": "https://doi.org/10.1002/mar.70106",
-      "url": null,
-      "arxiv_url": null,
-      "pdf_url": null,
-      "publication_date": "2026-01-19",
-      "citation_count": 0,
-      "reference_count": 139,
-      "venue": "Psychology &amp; Marketing",
-      "authors": [
-        "Giandomenico Di Domenico",
-        "Federico Mangió",
-        "Denitsa Dineva"
-      ],
-      "subjects": [],
-      "is_open_access": null,
-      "source": "crossref",
-      "confidence_score": 0.7875
-    }
-  },
-  "2584b21be139cef0": {
-    "entry_key": "Tai2026-qk",
-    "entry_title": "Elected officials’ online sharing of misinformation: Institutional and ideological checks",
-    "cached_at": "2026-02-25T06:37:07.319932",
-    "metadata": {
-      "abstract": null,
-      "keywords": [],
-      "doi": "10.1080/10584609.2026.2613661",
-      "doi_url": "https://doi.org/10.1080/10584609.2026.2613661",
-      "url": null,
-      "arxiv_url": null,
-      "pdf_url": null,
-      "publication_date": "2026-02-04",
-      "citation_count": 0,
-      "reference_count": 86,
-      "venue": "Political Communication",
-      "authors": [
-        "Yuehong Cassandra Tai",
-        "Yu-Ru Lin",
-        "Bruce A. Desmarais"
-      ],
-      "subjects": [],
-      "is_open_access": null,
-      "source": "crossref",
-      "confidence_score": 0.8333333333333333
-    }
+    "last_failure_at": "2026-03-27T14:03:08.962782"
   },
   "29d7f292b81de3ba": {
     "entry_key": "DeVerna2025-dl",
@@ -2952,22 +2837,22 @@
     }
   },
   "e3b0c44298fc1c14": {
-    "entry_key": "noauthor_undated-bz",
+    "entry_key": "noauthor_undated-ue",
     "entry_title": null,
-    "cached_at": "2026-03-19T18:08:29.139228",
+    "cached_at": "2026-03-27T14:03:08.962947",
     "metadata": null,
     "failed": true,
-    "failure_reason": "Could not enrich entry: noauthor_undated-bz | No DOI available | No title available | No authors available | APIs: Crossref enabled, Semantic Scholar enabled, ArXiv enabled",
-    "last_failure_at": "2026-03-19T18:08:29.139233"
+    "failure_reason": "Could not enrich entry: noauthor_undated-ue | No DOI available | No title available | No authors available | APIs: Crossref enabled, Semantic Scholar enabled, ArXiv enabled",
+    "last_failure_at": "2026-03-27T14:03:08.962949"
   },
   "657c6670d7b624b8": {
     "entry_key": "noauthor_undated-fm",
     "entry_title": "Volume 7 issue 2 article 4",
-    "cached_at": "2026-03-19T18:08:29.139141",
+    "cached_at": "2026-03-27T14:02:58.075204",
     "metadata": null,
     "failed": true,
     "failure_reason": "Could not enrich entry: noauthor_undated-fm | No DOI available | Title length: 26 chars | No authors available | APIs: Crossref enabled, Semantic Scholar enabled, ArXiv enabled",
-    "last_failure_at": "2026-03-19T18:08:29.139151"
+    "last_failure_at": "2026-03-27T14:02:58.075214"
   },
   "df48b78c330b92b4": {
     "entry_key": "Pierri2025-hm",
@@ -4356,6 +4241,121 @@
       "is_open_access": null,
       "source": "crossref",
       "confidence_score": 0.8157894736842105
+    }
+  },
+  "6d7232062ec16bcb": {
+    "entry_key": "Scalco2026-bd",
+    "entry_title": "How to detect information voids using longitudinal data from social media and web searches",
+    "cached_at": "2026-03-27T14:03:09.356349",
+    "metadata": {
+      "abstract": "The model of the attention economy, where content producers compete for the attention of users, relies on two key forces: information supply and demand. This study leverages the feedback loop between these forces to develop a method for detecting and quantifying information voids, i.e., periods in which little or no reliable information is available on a given topic. Using a case study on COVID-19 vaccines rollout in six European countries, and drawing on data from multiple platforms including Facebook, Google, Twitter, Wikipedia, and online news outlets, we examine how information voids emerge, persist and correlate with a decline in the proportion of high-quality information circulating online. By conceptualising information voids as a specific regime of information spreading, we also quantify their counterpart, information overabundance, which constitute a central component of the current definition of infodemic. We show that information voids are associated with a higher prevalence of misinformation, thus representing problematic hotspots in which individuals are more likely to be misled by low-quality online content. Overall, our findings provide empirical support for the inclusion of information voids in mechanistic explanations of misinformation emergence.",
+      "keywords": [],
+      "doi": null,
+      "doi_url": null,
+      "url": null,
+      "arxiv_url": "http://arxiv.org/abs/2602.15476v1",
+      "pdf_url": "https://arxiv.org/pdf/2602.15476v1",
+      "publication_date": "2026-02-17",
+      "citation_count": null,
+      "reference_count": null,
+      "venue": null,
+      "authors": [
+        "Irene Scalco",
+        "Francesco Gesualdo",
+        "Roy Cerqueti",
+        "Matteo Cinelli"
+      ],
+      "subjects": [
+        "cs.CY",
+        "physics.soc-ph"
+      ],
+      "is_open_access": true,
+      "source": "arxiv",
+      "confidence_score": 0.7333333333333333
+    }
+  },
+  "3eacf232e98df15d": {
+    "entry_key": "Bak-Coleman2026-mk",
+    "entry_title": "Industry influence in high-profile social media research",
+    "cached_at": "2026-03-27T14:03:12.545034",
+    "metadata": {
+      "abstract": "To what extent is social media research independent from industry influence? Leveraging openly available data, we show that half of the research published in top journals has disclosable ties to industry in the form of prior funding, collaboration, or employment. However, the majority of these ties go undisclosed in the published research. These trends do not arise from broad scientific engagement with industry, but rather from a select group of scientists who maintain long-lasting relationships with industry. Undisclosed ties to industry are common not just among authors, but among reviewers and academic editors during manuscript evaluation. Further, industry-tied research garners more attention within the academy, among policymakers, on social media, and in the news. Finally, we find evidence that industry ties are associated with a topical focus away from impacts of platform-scale features. Together, these findings suggest industry influence in social media research is extensive, impactful, and often opaque. Going forward there is a need to strengthen disclosure norms and implement policies to ensure the visibility of independent research, and the integrity of industry supported research.",
+      "keywords": [],
+      "doi": null,
+      "doi_url": null,
+      "url": null,
+      "arxiv_url": "http://arxiv.org/abs/2601.11507v1",
+      "pdf_url": "https://arxiv.org/pdf/2601.11507v1",
+      "publication_date": "2026-01-16",
+      "citation_count": null,
+      "reference_count": null,
+      "venue": null,
+      "authors": [
+        "Joseph Bak-Coleman",
+        "Jevin West",
+        "Cailin O'Connor",
+        "Carl T. Bergstrom"
+      ],
+      "subjects": [
+        "cs.SI"
+      ],
+      "is_open_access": true,
+      "source": "arxiv",
+      "confidence_score": 0.7272727272727272
+    }
+  },
+  "c5f27c414108d268": {
+    "entry_key": "Di-Domenico2026-zq",
+    "entry_title": "don't you know that you're toxic? how influencer‐driven misinformation fuels online toxicity",
+    "cached_at": "2026-03-27T14:03:13.869116",
+    "metadata": {
+      "abstract": "ABSTRACT Research on misinformation has focused on message content and cognitive bias, overlooking how source type shapes toxic engagement. This study addresses that gap by showing that influencer‐driven misinformation does not merely increase toxicity: it reconfigures its nature and persistence through relational and social influence mechanisms. Drawing on Source Credibility, Parasocial Interaction, and Social Influence theories, we analyse 101 brand‐related misinformation posts (48,821 comments) across major platforms using a mixed‐method design combining automated toxicity detection, topic modeling, and thematic analysis. Results reveal that influencers amplify toxicity under high engagement, sociopolitical salience, and low pseudonymity conditions, producing distinct patterns such as flame‐bait firestorms and toxic debunking. We identify two influencer‐specific mechanisms: brand‐related misinformation legitimation and community enmeshment, that sustain toxic echo chambers by converting credibility and parasocial bonds into collective antagonism. These findings advance marketing theory by reframing toxicity as a source‐amplified, relational phenomenon, and inform ecosystem‐level interventions structured around publishers, platforms, and people to mitigate influencer‐driven harm.",
+      "keywords": [],
+      "doi": "10.1002/mar.70106",
+      "doi_url": "https://doi.org/10.1002/mar.70106",
+      "url": null,
+      "arxiv_url": null,
+      "pdf_url": null,
+      "publication_date": "2026-01-19",
+      "citation_count": 0,
+      "reference_count": 139,
+      "venue": "Psychology &amp; Marketing",
+      "authors": [
+        "Giandomenico Di Domenico",
+        "Federico Mangió",
+        "Denitsa Dineva"
+      ],
+      "subjects": [],
+      "is_open_access": null,
+      "source": "crossref",
+      "confidence_score": 0.7875
+    }
+  },
+  "2584b21be139cef0": {
+    "entry_key": "Tai2026-qk",
+    "entry_title": "Elected officials’ online sharing of misinformation: Institutional and ideological checks",
+    "cached_at": "2026-03-27T14:03:17.596757",
+    "metadata": {
+      "abstract": null,
+      "keywords": [],
+      "doi": "10.1080/10584609.2026.2613661",
+      "doi_url": "https://doi.org/10.1080/10584609.2026.2613661",
+      "url": null,
+      "arxiv_url": null,
+      "pdf_url": null,
+      "publication_date": "2026-02-04",
+      "citation_count": 0,
+      "reference_count": 85,
+      "venue": "Political Communication",
+      "authors": [
+        "Yuehong Cassandra Tai",
+        "Yu-Ru Lin",
+        "Bruce A. Desmarais"
+      ],
+      "subjects": [],
+      "is_open_access": null,
+      "source": "crossref",
+      "confidence_score": 0.8333333333333333
     }
   }
 }
