@@ -4424,5 +4424,14 @@
       "source": "crossref",
       "confidence_score": 0.8176470588235294
     }
+  },
+  "9195fcc80574052b": {
+    "entry_key": "Vincent_undated-re",
+    "entry_title": "What our second measurement says about misinformation on major platforms in Europe",
+    "cached_at": "2026-04-01T06:08:22.290768",
+    "metadata": null,
+    "failed": true,
+    "failure_reason": "Could not enrich entry: Vincent_undated-re | No DOI available | Title length: 82 chars | Authors: Vincent, Emmanuel, Crisan, Daiana | APIs: Crossref enabled, Semantic Scholar enabled, ArXiv enabled",
+    "last_failure_at": "2026-04-01T06:08:22.290775"
   }
 }
