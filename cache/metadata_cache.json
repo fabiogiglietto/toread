@@ -44,127 +44,6 @@
     "failure_reason": "Could not enrich entry: noauthor_undated-fm | No DOI available | Title length: 26 chars | No authors available | APIs: Crossref enabled, Semantic Scholar enabled, ArXiv enabled",
     "last_failure_at": "2026-04-04T11:54:00.721560"
   },
-  "df48b78c330b92b4": {
-    "entry_key": "Pierri2025-hm",
-    "entry_title": "Research opportunities and challenges of the EU's Digital Services Act",
-    "cached_at": "2026-03-05T20:57:12.747158",
-    "metadata": {
-      "abstract": "The Digital Services Act (DSA) introduced by the European Union in 2022 offers a landmark framework for platform transparency, with Article 40 enabling vetted researchers to access data from major online platforms. Yet significant legal, technical, and organizational barriers still hinder effective research on systemic online risks. This piece outlines the key challenges emerging from the Article 40 process and proposes practical measures to ensure that the DSA fulfills its transparency and accountability goals.",
-      "keywords": [],
-      "doi": null,
-      "doi_url": null,
-      "url": null,
-      "arxiv_url": "http://arxiv.org/abs/2512.14223v1",
-      "pdf_url": "https://arxiv.org/pdf/2512.14223v1",
-      "publication_date": "2025-12-16",
-      "citation_count": null,
-      "reference_count": null,
-      "venue": null,
-      "authors": [
-        "Francesco Pierri",
-        "Theo Araujo",
-        "Sanne Kruikemeier",
-        "Philipp Lorenz-Spreen",
-        "Mariek M. P. Vanden Abeele",
-        "Laura Vandenbosch",
-        "Joana Gonçalves-Sa",
-        "Przemyslaw A. Grabowicz"
-      ],
-      "subjects": [
-        "cs.CY",
-        "cs.SI"
-      ],
-      "is_open_access": true,
-      "source": "arxiv",
-      "confidence_score": 0.7142857142857142
-    }
-  },
-  "43cacb58212f6871": {
-    "entry_key": "DiGiuseppe2026-pu",
-    "entry_title": "Perceived political bias in LLMs reduces persuasive abilities",
-    "cached_at": "2026-03-05T20:57:16.038888",
-    "metadata": {
-      "abstract": "Conversational AI has been proposed as a scalable way to correct public misconceptions and spread misinformation. Yet its effectiveness may depend on perceptions of its political neutrality. As LLMs enter partisan conflict, elites increasingly portray them as ideologically aligned. We test whether these credibility attacks reduce LLM-based persuasion. In a preregistered U.S. survey experiment (N=2144), participants completed a three-round conversation with ChatGPT about a personally held economic policy misconception. Compared to a neutral control, a short message indicating that the LLM was biased against the respondent's party attenuated persuasion by 28%. Transcript analysis indicates that the warnings alter the interaction: respondents push back more and engage less receptively. These findings suggest that the persuasive impact of conversational AI is politically contingent, constrained by perceptions of partisan alignment.",
-      "keywords": [],
-      "doi": null,
-      "doi_url": null,
-      "url": null,
-      "arxiv_url": "http://arxiv.org/abs/2602.18092v1",
-      "pdf_url": "https://arxiv.org/pdf/2602.18092v1",
-      "publication_date": "2026-02-20",
-      "citation_count": null,
-      "reference_count": null,
-      "venue": null,
-      "authors": [
-        "Matthew DiGiuseppe",
-        "Joshua Robison"
-      ],
-      "subjects": [
-        "cs.CL",
-        "cs.AI",
-        "cs.CY"
-      ],
-      "is_open_access": true,
-      "source": "arxiv",
-      "confidence_score": 0.76
-    }
-  },
-  "26dd34dc757b8317": {
-    "entry_key": "Hollingshead2026-vx",
-    "entry_title": "Same platform, different stories: TikTok and the battle over immigration narratives",
-    "cached_at": "2026-03-05T20:57:16.546945",
-    "metadata": {
-      "abstract": "In an era defined by overlapping global crises, immigration has become a key fault line in what scholars term a “polycrisis.” Within this context, social media platforms serve as digital battlegrounds for competing narratives about immigration, with TikTok occupying a distinct and understudied niche. This article examines how immigration-related content in Canada is framed on TikTok and how the platform’s logic of mimesis and interactivity, grounded in its affordances, shape immigration discourse. From a dataset of 5,305 public TikTok videos containing immigration-related terms and hashtags, we selected a sample of 344 English-language videos posted in 2025, each with over 100,000 plays and likely shown to Canadian users. Through a mixed-methods content analysis, we found that, contrary to expectations, the content leaned toward positive portrayals of immigration, accounting for 41% of the sample. Furthermore, despite expressing differing perspectives on immigration, users used TikTok’s affordances in comparable ways. That is, the same affordances that can support immigrants’ information seeking and sense of belonging through practical guidance and relatable storytelling, respectively, can be weaponized to amplify xenophobia by way of manipulated statistics and racist humour performed in skits and AI-generated videos. This highlights how TikTok’s affordances can simultaneously support digital inclusion and community building while also enabling exclusion and hostility. The findings, although rooted in Canada, hold broader relevance for understanding how short-video platforms mediate contentious issues across digitally connected societies.",
-      "keywords": [],
-      "doi": "10.17645/mac.11409",
-      "doi_url": "https://doi.org/10.17645/mac.11409",
-      "url": null,
-      "arxiv_url": null,
-      "pdf_url": null,
-      "publication_date": "2026-01-28",
-      "citation_count": 0,
-      "reference_count": 61,
-      "venue": "Media and Communication",
-      "authors": [
-        "William Hollingshead",
-        "Anatoliy Gruzd",
-        "Philip Mai"
-      ],
-      "subjects": [],
-      "is_open_access": null,
-      "source": "crossref",
-      "confidence_score": 0.8428571428571427
-    }
-  },
-  "639a771e905921df": {
-    "entry_key": "Hourigan2026-oc",
-    "entry_title": "Everyday encounters with misinformation online: examining sources, topics and modes",
-    "cached_at": "2026-03-06T07:10:12.588866",
-    "metadata": {
-      "abstract": null,
-      "keywords": [],
-      "doi": "10.1080/1369118x.2026.2636132",
-      "doi_url": "https://doi.org/10.1080/1369118x.2026.2636132",
-      "url": null,
-      "arxiv_url": null,
-      "pdf_url": null,
-      "publication_date": "2026-02-26",
-      "citation_count": 0,
-      "reference_count": 46,
-      "venue": "Information, Communication &amp; Society",
-      "authors": [
-        "Aimee Hourigan",
-        "T.J. Thomson",
-        "Tanya Notley",
-        "Sora Park",
-        "Michael Dezuanni"
-      ],
-      "subjects": [],
-      "is_open_access": null,
-      "source": "crossref",
-      "confidence_score": 0.825
-    }
-  },
   "f2d56655e70a51d3": {
     "entry_key": "Baym2026-tr",
     "entry_title": "It’s Bad: What Now?",
@@ -188,93 +67,6 @@
       "is_open_access": null,
       "source": "crossref",
       "confidence_score": 0.8749999999999999
-    }
-  },
-  "a1200ca53e8d7d7c": {
-    "entry_key": "Copland2025-em",
-    "entry_title": "Sky News Australia as network propaganda: how a niche cable channel became an international right-wing propaganda machine",
-    "cached_at": "2026-03-06T15:56:47.056349",
-    "metadata": {
-      "abstract": "In the past decade or so, the right-wing news channel, Sky News Australia , has pivoted to publishing online content that speaks to broadly right-wing audiences both in Australia and internationally. While the channel has long been regarded as comparatively unsuccessful, with low TV ratings, such unimpressive pay-TV audience ratings obscure a considerably more significant development elsewhere: Sky News Australia's content is shared and consumed increasingly widely in digital form, via social media. Positioning Sky News Australia as an example of a global system of network propaganda, this article examines how the channel has spread its content online. Studying a core period of Sky News Australia's digital growth during the 2020 COVID pandemic and US presidential race, we use a unique combination of digital methods to document how Sky News Australia has transitioned from a niche cable station to an international right-wing propaganda machine.",
-      "keywords": [],
-      "doi": "10.1177/1329878x251406899",
-      "doi_url": "https://doi.org/10.1177/1329878x251406899",
-      "url": null,
-      "arxiv_url": null,
-      "pdf_url": null,
-      "publication_date": "2025-12-24",
-      "citation_count": 0,
-      "reference_count": 26,
-      "venue": "Media International Australia",
-      "authors": [
-        "Simon Copland",
-        "Axel Bruns",
-        "Timothy Graham"
-      ],
-      "subjects": [],
-      "is_open_access": null,
-      "source": "crossref",
-      "confidence_score": 0.8428571428571427
-    }
-  },
-  "c97d82f1ad871982": {
-    "entry_key": "Emilio2026-ik",
-    "entry_title": "The Generative AI Paradox: GenAI and the erosion of trust, the corrosion of information verification, and the demise of truth",
-    "cached_at": "2026-03-06T15:56:47.556609",
-    "metadata": {
-      "abstract": "Generative AI (GenAI) now produces text, images, audio, and video that can be perceptually convincing at scale and at negligible marginal cost. While public debate often frames the associated harms as \"deepfakes\" or incremental extensions of misinformation and fraud, this view misses a broader socio-technical shift: GenAI enables synthetic realities; coherent, interactive, and potentially personalized information environments in which content, identity, and social interaction are jointly manufactured and mutually reinforcing. We argue that the most consequential risk is not merely the production of isolated synthetic artifacts, but the progressive erosion of shared epistemic ground and institutional verification practices as synthetic content, synthetic identity, and synthetic interaction become easy to generate and hard to audit. This paper (i) formalizes synthetic reality as a layered stack (content, identity, interaction, institutions), (ii) expands a taxonomy of GenAI harms spanning personal, economic, informational, and socio-technical risks, (iii) articulates the qualitative shifts introduced by GenAI (cost collapse, throughput, customization, micro-segmentation, provenance gaps, and trust erosion), and (iv) synthesizes recent risk realizations (2023-2025) into a compact case bank illustrating how these mechanisms manifest in fraud, elections, harassment, documentation, and supply-chain compromise. We then propose a mitigation stack that treats provenance infrastructure, platform governance, institutional workflow redesign, and public resilience as complementary rather than substitutable, and outline a research agenda focused on measuring epistemic security. We conclude with the Generative AI Paradox: as synthetic media becomes ubiquitous, societies may rationally discount digital evidence altogether.",
-      "keywords": [],
-      "doi": null,
-      "doi_url": null,
-      "url": null,
-      "arxiv_url": "http://arxiv.org/abs/2601.00306v1",
-      "pdf_url": "https://arxiv.org/pdf/2601.00306v1",
-      "publication_date": "2026-01-01",
-      "citation_count": null,
-      "reference_count": null,
-      "venue": null,
-      "authors": [
-        "Emilio Ferrara"
-      ],
-      "subjects": [
-        "cs.CY",
-        "cs.AI",
-        "cs.HC"
-      ],
-      "is_open_access": true,
-      "source": "arxiv",
-      "confidence_score": 0.7999999999999999
-    }
-  },
-  "667a9bec772d1fb6": {
-    "entry_key": "Elfes2026-jb",
-    "entry_title": "On narrative: The rhetorical mechanisms of online polarisation",
-    "cached_at": "2026-03-06T15:56:50.946732",
-    "metadata": {
-      "abstract": "Polarisation research has demonstrated how people cluster in homogeneous groups with opposing opinions. However, this effect emerges not only through interaction between people, limiting communication between groups, but also between narratives, shaping opinions and partisan identities. Yet, how polarised groups collectively construct and negotiate opposing interpretations of reality, and whether narratives move between groups despite limited interactions, remains unexplored. To address this gap, we formalise the concept of narrative polarisation and demonstrate its measurement in 212 YouTube videos and 90,029 comments on the Israeli-Palestinian conflict. Based on structural narrative theory and implemented through a large language model, we extract the narrative roles assigned to central actors in two partisan information environments. We find that while videos produce highly polarised narratives, comments significantly reduce narrative polarisation, harmonising discourse on the surface level. However, on a deeper narrative level, recurring narrative motifs reveal additional differences between partisan groups.",
-      "keywords": [],
-      "doi": null,
-      "doi_url": null,
-      "url": null,
-      "arxiv_url": "http://arxiv.org/abs/2601.07398v1",
-      "pdf_url": "https://arxiv.org/pdf/2601.07398v1",
-      "publication_date": "2026-01-12",
-      "citation_count": null,
-      "reference_count": null,
-      "venue": null,
-      "authors": [
-        "Jan Elfes",
-        "Marco Bastos",
-        "Luca Maria Aiello"
-      ],
-      "subjects": [
-        "cs.CY",
-        "cs.CL",
-        "cs.SI"
-      ],
-      "is_open_access": true,
-      "source": "arxiv",
-      "confidence_score": 0.7749999999999999
     }
   },
   "9318d8da1336a5f7": {
@@ -669,11 +461,11 @@
   "7a5bca5477086046": {
     "entry_key": "Schiffrin_undated-gi",
     "entry_title": "Deepfake financial fraud: The global regulation of ai-driven scams",
-    "cached_at": "2026-03-30T06:12:42.204911",
+    "cached_at": "2026-04-06T09:45:11.208121",
     "metadata": null,
     "failed": true,
     "failure_reason": "Could not enrich entry: Schiffrin_undated-gi | No DOI available | Title length: 66 chars | Authors: Schiffrin, Anya, Marwick, Alice E... | APIs: Crossref enabled, Semantic Scholar enabled, ArXiv enabled",
-    "last_failure_at": "2026-03-30T06:12:42.204919"
+    "last_failure_at": "2026-04-06T09:45:11.208131"
   },
   "e5a19719609563d7": {
     "entry_key": "Kulichkina2026-zk",
@@ -4458,6 +4250,214 @@
       "is_open_access": null,
       "source": "crossref",
       "confidence_score": 0.8272727272727272
+    }
+  },
+  "639a771e905921df": {
+    "entry_key": "Hourigan2026-oc",
+    "entry_title": "Everyday encounters with misinformation online: examining sources, topics and modes",
+    "cached_at": "2026-04-06T09:45:12.816808",
+    "metadata": {
+      "abstract": null,
+      "keywords": [],
+      "doi": "10.1080/1369118x.2026.2636132",
+      "doi_url": "https://doi.org/10.1080/1369118x.2026.2636132",
+      "url": null,
+      "arxiv_url": null,
+      "pdf_url": null,
+      "publication_date": "2026-02-26",
+      "citation_count": 0,
+      "reference_count": 46,
+      "venue": "Information, Communication &amp; Society",
+      "authors": [
+        "Aimee Hourigan",
+        "T.J. Thomson",
+        "Tanya Notley",
+        "Sora Park",
+        "Michael Dezuanni"
+      ],
+      "subjects": [],
+      "is_open_access": null,
+      "source": "crossref",
+      "confidence_score": 0.825
+    }
+  },
+  "df48b78c330b92b4": {
+    "entry_key": "Pierri2025-hm",
+    "entry_title": "Research opportunities and challenges of the EU's Digital Services Act",
+    "cached_at": "2026-04-06T09:45:13.122558",
+    "metadata": {
+      "abstract": "The Digital Services Act (DSA) introduced by the European Union in 2022 offers a landmark framework for platform transparency, with Article 40 enabling vetted researchers to access data from major online platforms. Yet significant legal, technical, and organizational barriers still hinder effective research on systemic online risks. This piece outlines the key challenges emerging from the Article 40 process and proposes practical measures to ensure that the DSA fulfills its transparency and accountability goals.",
+      "keywords": [],
+      "doi": null,
+      "doi_url": null,
+      "url": null,
+      "arxiv_url": "http://arxiv.org/abs/2512.14223v1",
+      "pdf_url": "https://arxiv.org/pdf/2512.14223v1",
+      "publication_date": "2025-12-16",
+      "citation_count": null,
+      "reference_count": null,
+      "venue": null,
+      "authors": [
+        "Francesco Pierri",
+        "Theo Araujo",
+        "Sanne Kruikemeier",
+        "Philipp Lorenz-Spreen",
+        "Mariek M. P. Vanden Abeele",
+        "Laura Vandenbosch",
+        "Joana Gonçalves-Sa",
+        "Przemyslaw A. Grabowicz"
+      ],
+      "subjects": [
+        "cs.CY",
+        "cs.SI"
+      ],
+      "is_open_access": true,
+      "source": "arxiv",
+      "confidence_score": 0.7142857142857142
+    }
+  },
+  "a1200ca53e8d7d7c": {
+    "entry_key": "Copland2025-em",
+    "entry_title": "Sky News Australia as network propaganda: how a niche cable channel became an international right-wing propaganda machine",
+    "cached_at": "2026-04-06T09:45:17.280487",
+    "metadata": {
+      "abstract": "In the past decade or so, the right-wing news channel, Sky News Australia , has pivoted to publishing online content that speaks to broadly right-wing audiences both in Australia and internationally. While the channel has long been regarded as comparatively unsuccessful, with low TV ratings, such unimpressive pay-TV audience ratings obscure a considerably more significant development elsewhere: Sky News Australia's content is shared and consumed increasingly widely in digital form, via social media. Positioning Sky News Australia as an example of a global system of network propaganda, this article examines how the channel has spread its content online. Studying a core period of Sky News Australia's digital growth during the 2020 COVID pandemic and US presidential race, we use a unique combination of digital methods to document how Sky News Australia has transitioned from a niche cable station to an international right-wing propaganda machine.",
+      "keywords": [],
+      "doi": "10.1177/1329878x251406899",
+      "doi_url": "https://doi.org/10.1177/1329878x251406899",
+      "url": null,
+      "arxiv_url": null,
+      "pdf_url": null,
+      "publication_date": "2025-12-24",
+      "citation_count": 0,
+      "reference_count": 26,
+      "venue": "Media International Australia",
+      "authors": [
+        "Simon Copland",
+        "Axel Bruns",
+        "Timothy Graham"
+      ],
+      "subjects": [],
+      "is_open_access": null,
+      "source": "crossref",
+      "confidence_score": 0.8428571428571427
+    }
+  },
+  "c97d82f1ad871982": {
+    "entry_key": "Emilio2026-ik",
+    "entry_title": "The Generative AI Paradox: GenAI and the erosion of trust, the corrosion of information verification, and the demise of truth",
+    "cached_at": "2026-04-06T09:45:17.480846",
+    "metadata": {
+      "abstract": "Generative AI (GenAI) now produces text, images, audio, and video that can be perceptually convincing at scale and at negligible marginal cost. While public debate often frames the associated harms as \"deepfakes\" or incremental extensions of misinformation and fraud, this view misses a broader socio-technical shift: GenAI enables synthetic realities; coherent, interactive, and potentially personalized information environments in which content, identity, and social interaction are jointly manufactured and mutually reinforcing. We argue that the most consequential risk is not merely the production of isolated synthetic artifacts, but the progressive erosion of shared epistemic ground and institutional verification practices as synthetic content, synthetic identity, and synthetic interaction become easy to generate and hard to audit. This paper (i) formalizes synthetic reality as a layered stack (content, identity, interaction, institutions), (ii) expands a taxonomy of GenAI harms spanning personal, economic, informational, and socio-technical risks, (iii) articulates the qualitative shifts introduced by GenAI (cost collapse, throughput, customization, micro-segmentation, provenance gaps, and trust erosion), and (iv) synthesizes recent risk realizations (2023-2025) into a compact case bank illustrating how these mechanisms manifest in fraud, elections, harassment, documentation, and supply-chain compromise. We then propose a mitigation stack that treats provenance infrastructure, platform governance, institutional workflow redesign, and public resilience as complementary rather than substitutable, and outline a research agenda focused on measuring epistemic security. We conclude with the Generative AI Paradox: as synthetic media becomes ubiquitous, societies may rationally discount digital evidence altogether.",
+      "keywords": [],
+      "doi": null,
+      "doi_url": null,
+      "url": null,
+      "arxiv_url": "http://arxiv.org/abs/2601.00306v1",
+      "pdf_url": "https://arxiv.org/pdf/2601.00306v1",
+      "publication_date": "2026-01-01",
+      "citation_count": null,
+      "reference_count": null,
+      "venue": null,
+      "authors": [
+        "Emilio Ferrara"
+      ],
+      "subjects": [
+        "cs.CY",
+        "cs.AI",
+        "cs.HC"
+      ],
+      "is_open_access": true,
+      "source": "arxiv",
+      "confidence_score": 0.7999999999999999
+    }
+  },
+  "26dd34dc757b8317": {
+    "entry_key": "Hollingshead2026-vx",
+    "entry_title": "Same platform, different stories: TikTok and the battle over immigration narratives",
+    "cached_at": "2026-04-06T09:45:18.740112",
+    "metadata": {
+      "abstract": "In an era defined by overlapping global crises, immigration has become a key fault line in what scholars term a “polycrisis.” Within this context, social media platforms serve as digital battlegrounds for competing narratives about immigration, with TikTok occupying a distinct and understudied niche. This article examines how immigration-related content in Canada is framed on TikTok and how the platform’s logic of mimesis and interactivity, grounded in its affordances, shape immigration discourse. From a dataset of 5,305 public TikTok videos containing immigration-related terms and hashtags, we selected a sample of 344 English-language videos posted in 2025, each with over 100,000 plays and likely shown to Canadian users. Through a mixed-methods content analysis, we found that, contrary to expectations, the content leaned toward positive portrayals of immigration, accounting for 41% of the sample. Furthermore, despite expressing differing perspectives on immigration, users used TikTok’s affordances in comparable ways. That is, the same affordances that can support immigrants’ information seeking and sense of belonging through practical guidance and relatable storytelling, respectively, can be weaponized to amplify xenophobia by way of manipulated statistics and racist humour performed in skits and AI-generated videos. This highlights how TikTok’s affordances can simultaneously support digital inclusion and community building while also enabling exclusion and hostility. The findings, although rooted in Canada, hold broader relevance for understanding how short-video platforms mediate contentious issues across digitally connected societies.",
+      "keywords": [],
+      "doi": "10.17645/mac.11409",
+      "doi_url": "https://doi.org/10.17645/mac.11409",
+      "url": null,
+      "arxiv_url": null,
+      "pdf_url": null,
+      "publication_date": "2026-01-28",
+      "citation_count": 1,
+      "reference_count": 61,
+      "venue": "Media and Communication",
+      "authors": [
+        "William Hollingshead",
+        "Anatoliy Gruzd",
+        "Philip Mai"
+      ],
+      "subjects": [],
+      "is_open_access": null,
+      "source": "crossref",
+      "confidence_score": 0.8428571428571427
+    }
+  },
+  "667a9bec772d1fb6": {
+    "entry_key": "Elfes2026-jb",
+    "entry_title": "On narrative: The rhetorical mechanisms of online polarisation",
+    "cached_at": "2026-04-06T09:45:20.684519",
+    "metadata": {
+      "abstract": "Polarisation research has demonstrated how people cluster in homogeneous groups with opposing opinions. However, this effect emerges not only through interaction between people, limiting communication between groups, but also between narratives, shaping opinions and partisan identities. Yet, how polarised groups collectively construct and negotiate opposing interpretations of reality, and whether narratives move between groups despite limited interactions, remains unexplored. To address this gap, we formalise the concept of narrative polarisation and demonstrate its measurement in 212 YouTube videos and 90,029 comments on the Israeli-Palestinian conflict. Based on structural narrative theory and implemented through a large language model, we extract the narrative roles assigned to central actors in two partisan information environments. We find that while videos produce highly polarised narratives, comments significantly reduce narrative polarisation, harmonising discourse on the surface level. However, on a deeper narrative level, recurring narrative motifs reveal additional differences between partisan groups.",
+      "keywords": [],
+      "doi": null,
+      "doi_url": null,
+      "url": null,
+      "arxiv_url": "http://arxiv.org/abs/2601.07398v1",
+      "pdf_url": "https://arxiv.org/pdf/2601.07398v1",
+      "publication_date": "2026-01-12",
+      "citation_count": null,
+      "reference_count": null,
+      "venue": null,
+      "authors": [
+        "Jan Elfes",
+        "Marco Bastos",
+        "Luca Maria Aiello"
+      ],
+      "subjects": [
+        "cs.CY",
+        "cs.CL",
+        "cs.SI"
+      ],
+      "is_open_access": true,
+      "source": "arxiv",
+      "confidence_score": 0.7749999999999999
+    }
+  },
+  "43cacb58212f6871": {
+    "entry_key": "DiGiuseppe2026-pu",
+    "entry_title": "Perceived political bias in LLMs reduces persuasive abilities",
+    "cached_at": "2026-04-06T09:45:23.917942",
+    "metadata": {
+      "abstract": "Conversational AI has been proposed as a scalable way to correct public misconceptions and spread misinformation. Yet its effectiveness may depend on perceptions of its political neutrality. As LLMs enter partisan conflict, elites increasingly portray them as ideologically aligned. We test whether these credibility attacks reduce LLM-based persuasion. In a preregistered U.S. survey experiment (N=2144), participants completed a three-round conversation with ChatGPT about a personally held economic policy misconception. Compared to a neutral control, a short message indicating that the LLM was biased against the respondent's party attenuated persuasion by 28%. Transcript analysis indicates that the warnings alter the interaction: respondents push back more and engage less receptively. These findings suggest that the persuasive impact of conversational AI is politically contingent, constrained by perceptions of partisan alignment.",
+      "keywords": [],
+      "doi": null,
+      "doi_url": null,
+      "url": null,
+      "arxiv_url": "http://arxiv.org/abs/2602.18092v1",
+      "pdf_url": "https://arxiv.org/pdf/2602.18092v1",
+      "publication_date": "2026-02-20",
+      "citation_count": null,
+      "reference_count": null,
+      "venue": null,
+      "authors": [
+        "Matthew DiGiuseppe",
+        "Joshua Robison"
+      ],
+      "subjects": [
+        "cs.CL",
+        "cs.AI",
+        "cs.CY"
+      ],
+      "is_open_access": true,
+      "source": "arxiv",
+      "confidence_score": 0.76
     }
   }
 }
