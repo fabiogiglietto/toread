@@ -4459,5 +4459,33 @@
       "source": "arxiv",
       "confidence_score": 0.76
     }
+  },
+  "6329180da1f9f3e0": {
+    "entry_key": "Bravo2026-ue",
+    "entry_title": "Visualizing climate change in the media: a systematic literature review, challenges, and future research",
+    "cached_at": "2026-04-07T09:56:49.663633",
+    "metadata": {
+      "abstract": "Abstract Climate change visualizations in the media play a crucial role in conveying information, raising awareness, and motivating action. This study combines systematic and scoping literature review (2005–2024) with content analysis to analyze current research on climate change visualizations of traditional and digital media. The findings show that most existing research concentrates on traditional media, with limited focus on social media and a predominance of studies focused on Western countries. Framing theory emerges as the predominant theoretical framework, especially in qualitative studies. By analyzing and comparing a large corpus of scientific studies, this study identifies predominant topics, methodologies trends, and research gaps, while also highlighting key challenges and implications for future research.",
+      "keywords": [],
+      "doi": "10.1093/anncom/wlag011",
+      "doi_url": "https://doi.org/10.1093/anncom/wlag011",
+      "url": null,
+      "arxiv_url": null,
+      "pdf_url": null,
+      "publication_date": "2026-03-28",
+      "citation_count": 0,
+      "reference_count": 84,
+      "venue": "Annals of the International Communication Association",
+      "authors": [
+        "Isaac Bravo",
+        "Stefanie Walter",
+        "Katharina Prasse",
+        "Margret Keuper"
+      ],
+      "subjects": [],
+      "is_open_access": null,
+      "source": "crossref",
+      "confidence_score": 0.8333333333333333
+    }
   }
 }
