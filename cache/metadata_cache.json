@@ -4487,5 +4487,33 @@
       "source": "crossref",
       "confidence_score": 0.8333333333333333
     }
+  },
+  "569ea685d926c37d": {
+    "entry_key": "Marwick2026-qd",
+    "entry_title": "Disinformation as cultural narrative: Conceptualizing disinformation as cross-platform, identity-affirming, cathartic stories",
+    "cached_at": "2026-04-07T11:43:35.451433",
+    "metadata": {
+      "abstract": null,
+      "keywords": [],
+      "doi": "10.1080/10584609.2026.2644198",
+      "doi_url": "https://doi.org/10.1080/10584609.2026.2644198",
+      "url": null,
+      "arxiv_url": null,
+      "pdf_url": null,
+      "publication_date": "2026-04-06",
+      "citation_count": 0,
+      "reference_count": 83,
+      "venue": "Political Communication",
+      "authors": [
+        "Alice E. Marwick",
+        "Elaine Schnabel",
+        "Shannon McGregor",
+        "Carolyn Schmitt"
+      ],
+      "subjects": [],
+      "is_open_access": null,
+      "source": "crossref",
+      "confidence_score": 0.83
+    }
   }
 }
