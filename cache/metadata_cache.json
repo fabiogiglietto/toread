@@ -1605,11 +1605,11 @@
   "9195fcc80574052b": {
     "entry_key": "Vincent_undated-re",
     "entry_title": "What our second measurement says about misinformation on major platforms in Europe",
-    "cached_at": "2026-04-01T06:08:22.290768",
+    "cached_at": "2026-04-09T17:34:29.830197",
     "metadata": null,
     "failed": true,
     "failure_reason": "Could not enrich entry: Vincent_undated-re | No DOI available | Title length: 82 chars | Authors: Vincent, Emmanuel, Crisan, Daiana | APIs: Crossref enabled, Semantic Scholar enabled, ArXiv enabled",
-    "last_failure_at": "2026-04-01T06:08:22.290775"
+    "last_failure_at": "2026-04-09T17:34:29.830205"
   },
   "b153554d9f487cdb": {
     "entry_key": "Unknown2025-qj",
@@ -4514,6 +4514,32 @@
       "is_open_access": null,
       "source": "crossref",
       "confidence_score": 0.83
+    }
+  },
+  "053b6b972dea788b": {
+    "entry_key": "Peters2026-mo",
+    "entry_title": "Little mentioning, moderate attention, great relevance: The quality of online platform data in the Digital Services Act",
+    "cached_at": "2026-04-09T17:34:32.624966",
+    "metadata": {
+      "abstract": "Questions regarding the quality of online platform data have gained significant attention and research focus in recent years. Inaccurate, incomplete, or inconsistent data are some of the many examples of data quality problems. At the same time, digital platforms have restricted access to their data in recent years. This strategy by digital platforms has now increasingly become the subject of political efforts of regulation, especially the Digital Services Act (DSA) of the European Union. Therefore, we argue that the quality of online platform data cannot solely be understood as a methodological, internal research construct but also as a contested concept in which various actors from politics, the tech industry, and academia negotiate and represent specific interests. To assess the role of data quality in and around the DSA, we analyze the content of the DSA itself, in particular Art. 40 and the respective Delegated Regulation (DR), as well as the feedback submitted to the European Commission's Call for Evidence and the Delegated Regulation draft. We then apply quantitative content analysis, multiple correspondence analysis, and thematic analysis. Results indicate that data quality plays little to no role in the official EU documents, namely, the DSA and the Delegated Regulation draft. In the public feedback, however, data quality concerns have been raised by various stakeholders in academia. Based on the results, we argue that data quality should play a more prominent role in the debate to fulfill the DSA aims of assessing systemic risks in the EU.",
+      "keywords": [],
+      "doi": "10.1177/29768624261438624",
+      "doi_url": "https://doi.org/10.1177/29768624261438624",
+      "url": null,
+      "arxiv_url": null,
+      "pdf_url": null,
+      "publication_date": "2026",
+      "citation_count": 0,
+      "reference_count": 57,
+      "venue": "Platforms &amp; Society",
+      "authors": [
+        "Yannik Peters",
+        "Katrin Weller"
+      ],
+      "subjects": [],
+      "is_open_access": null,
+      "source": "crossref",
+      "confidence_score": 0.86
     }
   }
 }
