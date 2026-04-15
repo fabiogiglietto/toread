@@ -2,72 +2,47 @@
   "c5a7d0326e1f61c6": {
     "entry_key": "Kristensen2025-ni",
     "entry_title": "Platform polarization. Do alternative platforms drive discursive polarization?",
-    "cached_at": "2026-04-04T11:53:42.897776",
+    "cached_at": "2026-04-15T06:15:22.923975",
     "metadata": null,
     "failed": true,
     "failure_reason": "Could not enrich entry: Kristensen2025-ni | No DOI available | Title length: 78 chars | Authors: Kristensen, Jakob Bæk, Kristensen, Jakob Bæk | APIs: Crossref enabled, Semantic Scholar enabled, ArXiv enabled",
-    "last_failure_at": "2026-04-04T11:53:42.897782"
+    "last_failure_at": "2026-04-15T06:15:22.923984"
   },
   "65d46046ae1c898f": {
     "entry_key": "Gaw2025-ru",
     "entry_title": "Influence operations as brokerage: Political-economic infrastructures of manipulation in the 2022 Philippine elections",
-    "cached_at": "2026-04-04T11:53:57.649469",
+    "cached_at": "2026-04-15T06:15:34.563730",
     "metadata": null,
     "failed": true,
     "failure_reason": "Could not enrich entry: Gaw2025-ru | No DOI available | Title length: 118 chars | Authors: Gaw, Fatima, Agonos, Mariam Jayne... | APIs: Crossref enabled, Semantic Scholar enabled, ArXiv enabled",
-    "last_failure_at": "2026-04-04T11:53:57.649475"
+    "last_failure_at": "2026-04-15T06:15:34.563741"
   },
   "b41f425da41887a0": {
     "entry_key": "Marwick2025-vx",
     "entry_title": "True costs of misinformation| mountains of evidence: Processual “redpilling” as a Socio-technical effect of disinformation",
-    "cached_at": "2026-04-04T11:53:54.435074",
+    "cached_at": "2026-04-15T06:15:28.306364",
     "metadata": null,
     "failed": true,
     "failure_reason": "Could not enrich entry: Marwick2025-vx | No DOI available | Title length: 122 chars | Authors: Marwick, Alice E, Furl, Katherine | APIs: Crossref enabled, Semantic Scholar enabled, ArXiv enabled",
-    "last_failure_at": "2026-04-04T11:53:54.435081"
+    "last_failure_at": "2026-04-15T06:15:28.306374"
   },
   "e3b0c44298fc1c14": {
     "entry_key": "noauthor_undated-bz",
     "entry_title": null,
-    "cached_at": "2026-04-04T11:54:00.721663",
+    "cached_at": "2026-04-15T06:15:40.601858",
     "metadata": null,
     "failed": true,
     "failure_reason": "Could not enrich entry: noauthor_undated-bz | No DOI available | No title available | No authors available | APIs: Crossref enabled, Semantic Scholar enabled, ArXiv enabled",
-    "last_failure_at": "2026-04-04T11:54:00.721668"
+    "last_failure_at": "2026-04-15T06:15:40.601861"
   },
   "657c6670d7b624b8": {
     "entry_key": "noauthor_undated-fm",
     "entry_title": "Volume 7 issue 2 article 4",
-    "cached_at": "2026-04-04T11:54:00.721551",
+    "cached_at": "2026-04-15T06:15:40.601772",
     "metadata": null,
     "failed": true,
     "failure_reason": "Could not enrich entry: noauthor_undated-fm | No DOI available | Title length: 26 chars | No authors available | APIs: Crossref enabled, Semantic Scholar enabled, ArXiv enabled",
-    "last_failure_at": "2026-04-04T11:54:00.721560"
-  },
-  "f2d56655e70a51d3": {
-    "entry_key": "Baym2026-tr",
-    "entry_title": "It’s Bad: What Now?",
-    "cached_at": "2026-03-13T08:42:59.451828",
-    "metadata": {
-      "abstract": "This essay reflects on a decade of worsening social media harms—inequality, algorithmic power, precarious labor, and data extraction—arguing for renewed interdisciplinary and collaborative approaches to create just sociotechnical futures.",
-      "keywords": [],
-      "doi": "10.1177/20563051261432484",
-      "doi_url": "https://doi.org/10.1177/20563051261432484",
-      "url": null,
-      "arxiv_url": null,
-      "pdf_url": null,
-      "publication_date": "2026",
-      "citation_count": 0,
-      "reference_count": 7,
-      "venue": "Social Media + Society",
-      "authors": [
-        "Nancy K. Baym"
-      ],
-      "subjects": [],
-      "is_open_access": null,
-      "source": "crossref",
-      "confidence_score": 0.8749999999999999
-    }
+    "last_failure_at": "2026-04-15T06:15:40.601779"
   },
   "72361c89632594a5": {
     "entry_key": "Rossini2026-jn",
@@ -96,182 +71,14 @@
       "confidence_score": 0.8428571428571427
     }
   },
-  "aa7cd706239eb8b9": {
-    "entry_key": "Larsson2026-ro",
-    "entry_title": "“Meet the new boss – Same as the old boss”: A longitudinal study of political post sentiment and Facebook engagement",
-    "cached_at": "2026-03-12T08:47:37.700508",
-    "metadata": {
-      "abstract": "This study investigates the dynamics of online political communication on Facebook, focusing on the Facebook posts made by the Norwegian Progress Party and its recent leaders, Siv Jensen and Sylvi Listhaug, over a decade-long period. Answering the call for longitudinal insights into political communication, we utilize a novel hybrid content analysis approach combining large language models (LLMs) and human classification, to assess the sentiment of Facebook posts — categorized as negative, positive, or neutral. Moreover, we assess the levels of engagement reached by posts featuring different sentiment. Our analysis reveals increased negative sentiment and engagement over time, particularly under Listhaug’s leadership, confirming the hypothesis that negative content drives higher engagement. Posts with negative sentiment consistently garnered more shares and comments, reflecting the strategic value of negativity in amplifying political messages. However, likes were more frequently associated with positive content, suggesting more nuanced engagement patterns. These findings contribute to our understanding the evolving landscape of digital politicking, highlighting the interplay between political actors’ communication strategies and audience engagement.",
-      "keywords": [],
-      "doi": "10.5210/fm.v31i1.14448",
-      "doi_url": "https://doi.org/10.5210/fm.v31i1.14448",
-      "url": null,
-      "arxiv_url": null,
-      "pdf_url": null,
-      "publication_date": "2026-01-08",
-      "citation_count": 0,
-      "reference_count": 0,
-      "venue": "First Monday",
-      "authors": [
-        "Anders Olof Larsson"
-      ],
-      "subjects": [],
-      "is_open_access": null,
-      "source": "crossref",
-      "confidence_score": 0.95
-    }
-  },
-  "b14b30a2e84c11b8": {
-    "entry_key": "Lyons2026-ca",
-    "entry_title": "Exposure to low-credibility online health content is limited and is concentrated among older adults",
-    "cached_at": "2026-03-12T08:47:41.096747",
-    "metadata": {
-      "abstract": null,
-      "keywords": [],
-      "doi": "10.1038/s43587-025-01059-x",
-      "doi_url": "https://doi.org/10.1038/s43587-025-01059-x",
-      "url": null,
-      "arxiv_url": null,
-      "pdf_url": null,
-      "publication_date": "2026-02-04",
-      "citation_count": 1,
-      "reference_count": 31,
-      "venue": "Nature Aging",
-      "authors": [
-        "Benjamin Lyons",
-        "Andy J. King",
-        "Rebecca L. Barter",
-        "Kimberly A. Kaphingst"
-      ],
-      "subjects": [],
-      "is_open_access": null,
-      "source": "crossref",
-      "confidence_score": 0.825
-    }
-  },
-  "72956432e72418ef": {
-    "entry_key": "Poliakoff2026-fa",
-    "entry_title": "Prigozhin’s propaganda team: The st Petersburg internet research agency (2013–2021)",
-    "cached_at": "2026-03-13T08:42:51.057206",
-    "metadata": {
-      "abstract": null,
-      "keywords": [],
-      "doi": "10.1080/09668136.2025.2588334",
-      "doi_url": "https://doi.org/10.1080/09668136.2025.2588334",
-      "url": null,
-      "arxiv_url": null,
-      "pdf_url": null,
-      "publication_date": "2026-01-02",
-      "citation_count": 0,
-      "reference_count": 51,
-      "venue": "Europe-Asia Studies",
-      "authors": [
-        "Serge Poliakoff",
-        "Florian Toepfl"
-      ],
-      "subjects": [],
-      "is_open_access": null,
-      "source": "crossref",
-      "confidence_score": 0.86
-    }
-  },
-  "0d7010138f1044be": {
-    "entry_key": "Yoo2026-ev",
-    "entry_title": "The role of the term “fake news” in U.s. alternative media: Shaping political discourse and hyperpartisanship",
-    "cached_at": "2026-03-13T08:42:53.817591",
-    "metadata": {
-      "abstract": "This study examines how the term “fake news” is strategically deployed in U.S. alternative media by analyzing Newsmax and Occupy Democrats as right- and left-leaning outlets. Drawing on Hallin’s sphere model and Egelhofer et al.’s coding categories, it uses manual content analysis and latent Dirichlet allocation topic modeling to identify rhetorical functions and patterns. Findings show that the term “fake news” functions mainly as a weaponized label to delegitimize opponents rather than describe misinformation. The results show how alternative media redraw boundaries between consensus, controversy, and deviance, underscoring their role in intensifying partisan discourse and redefining political communication.",
-      "keywords": [],
-      "doi": "10.1177/10776990251410599",
-      "doi_url": "https://doi.org/10.1177/10776990251410599",
-      "url": null,
-      "arxiv_url": null,
-      "pdf_url": null,
-      "publication_date": "2026-01-22",
-      "citation_count": 0,
-      "reference_count": 56,
-      "venue": "Journalism &amp; Mass Communication Quarterly",
-      "authors": [
-        "Joseph J. Yoo",
-        "Hannah Lee",
-        "Soontae An"
-      ],
-      "subjects": [],
-      "is_open_access": null,
-      "source": "crossref",
-      "confidence_score": 0.8428571428571427
-    }
-  },
   "7a5bca5477086046": {
     "entry_key": "Schiffrin_undated-gi",
     "entry_title": "Deepfake financial fraud: The global regulation of ai-driven scams",
-    "cached_at": "2026-04-06T09:45:11.208121",
+    "cached_at": "2026-04-15T06:15:31.357258",
     "metadata": null,
     "failed": true,
     "failure_reason": "Could not enrich entry: Schiffrin_undated-gi | No DOI available | Title length: 66 chars | Authors: Schiffrin, Anya, Marwick, Alice E... | APIs: Crossref enabled, Semantic Scholar enabled, ArXiv enabled",
-    "last_failure_at": "2026-04-06T09:45:11.208131"
-  },
-  "e5a19719609563d7": {
-    "entry_key": "Kulichkina2026-zk",
-    "entry_title": "Connective action and digital repression during China’s COVID-19 protests: a computational analysis of multilingual coordinated activity on Twitter",
-    "cached_at": "2026-03-14T09:23:35.672079",
-    "metadata": {
-      "abstract": "Abstract In authoritarian contexts, social media serve as critical platforms for coordinating both protest and repression. This study centers on the unprecedented COVID-19 protests in the People’s Republic of China, which were extensively tweeted and suppressed through contesting narratives. We explore prominent themes, temporal dynamics, and linguistic patterns of coordinated communication during these events. Using a coordination detection algorithm, we identified 13,557 Twitter accounts involved in 739,819 instances of coordinated sharing during the protests. We then applied topic modeling to categorize the coordinated tweets into topics supporting either the protests or repression. Drawing on the theory of authoritarian publics, we classified protest-supporting topics into three categories: leadership-critical , policy-critical , and descriptive . Similarly, building on the digital repression typology, we categorized repression-supporting topics into government propaganda , distracting information , and demoralizing content . Within protest-supporting content, policy-critical tweets were the most widely shared across three analyzed languages. Leadership-critical tweets were more prominent in traditional Chinese, while descriptive tweets were more common in simplified Chinese. Repression-supporting content was most prevalent in English, followed by simplified Chinese, with demoralizing and distracting information dominating discourse. Government propaganda was the least frequent and appeared primarily in simplified Chinese. Community detection revealed that 85.4% of coordinated tweets were amplified by ten major communities, each organized around a single language and goal—either supporting protests or promoting repression. By combining multiple computational approaches, this study offers a comprehensive framework for content-centered analysis of online protest-repression dynamics and contributes to our understanding of connective action and digital repression in authoritarian contexts.",
-      "keywords": [],
-      "doi": "10.1140/epjds/s13688-026-00637-2",
-      "doi_url": "https://doi.org/10.1140/epjds/s13688-026-00637-2",
-      "url": null,
-      "arxiv_url": null,
-      "pdf_url": null,
-      "publication_date": "2026-03-13",
-      "citation_count": 0,
-      "reference_count": 58,
-      "venue": "EPJ Data Science",
-      "authors": [
-        "Aytalina Kulichkina",
-        "Paul Balluff",
-        "Nicola Righetti",
-        "Annie Waldherr"
-      ],
-      "subjects": [],
-      "is_open_access": null,
-      "source": "crossref",
-      "confidence_score": 0.8333333333333333
-    }
-  },
-  "f766b42dffbe1516": {
-    "entry_key": "Lee2026-je",
-    "entry_title": "LLMs can infer political alignment from online conversations",
-    "cached_at": "2026-03-14T13:25:43.701994",
-    "metadata": {
-      "abstract": "Due to the correlational structure in our traits such as identities, cultures, and political attitudes, seemingly innocuous preferences such as following a band or using a specific slang, can reveal private traits. This possibility, especially when combined with massive, public social data and advanced computational methods, poses a fundamental privacy risk. Given our increasing data exposure online and the rapid advancement of AI are increasing the misuse potential of such risk, it is therefore critical to understand capacity of large language models (LLMs) to exploit it. Here, using online discussions on Debate.org and Reddit, we show that LLMs can reliably infer hidden political alignment, significantly outperforming traditional machine learning models. Prediction accuracy further improves as we aggregate multiple text-level inferences into a user-level prediction, and as we use more politics-adjacent domains. We demonstrate that LLMs leverage the words that can be highly predictive of political alignment while not being explicitly political. Our findings underscore the capacity and risks of LLMs for exploiting socio-cultural correlates.",
-      "keywords": [],
-      "doi": null,
-      "doi_url": null,
-      "url": null,
-      "arxiv_url": "http://arxiv.org/abs/2603.11253v1",
-      "pdf_url": "https://arxiv.org/pdf/2603.11253v1",
-      "publication_date": "2026-03-11",
-      "citation_count": null,
-      "reference_count": null,
-      "venue": null,
-      "authors": [
-        "Byunghwee Lee",
-        "Sangyeon Kim",
-        "Filippo Menczer",
-        "Yong-Yeol Ahn",
-        "Haewoon Kwak",
-        "Jisun An"
-      ],
-      "subjects": [
-        "cs.SI",
-        "cs.CL",
-        "cs.CY"
-      ],
-      "is_open_access": true,
-      "source": "arxiv",
-      "confidence_score": 0.725
-    }
+    "last_failure_at": "2026-04-15T06:15:31.357267"
   },
   "e0b18cc686e6bac2": {
     "entry_key": "Dehghan2026-sy",
@@ -1116,11 +923,11 @@
   "b909c3af063ea494": {
     "entry_key": "noauthor_undated-bm",
     "entry_title": "cib.pdf",
-    "cached_at": "2026-04-04T11:48:55.180133",
+    "cached_at": "2026-04-15T06:15:06.078440",
     "metadata": null,
     "failed": true,
     "failure_reason": "Could not enrich entry: noauthor_undated-bm | No DOI available | Title length: 7 chars | No authors available | APIs: Crossref enabled, Semantic Scholar enabled, ArXiv enabled",
-    "last_failure_at": "2026-04-04T11:48:55.180138"
+    "last_failure_at": "2026-04-15T06:15:06.078444"
   },
   "29d7f292b81de3ba": {
     "entry_key": "DeVerna2025-dl",
@@ -4623,6 +4430,226 @@
       "is_open_access": null,
       "source": "crossref",
       "confidence_score": 0.84
+    }
+  },
+  "f766b42dffbe1516": {
+    "entry_key": "Lee2026-je",
+    "entry_title": "LLMs can infer political alignment from online conversations",
+    "cached_at": "2026-04-15T06:15:06.364770",
+    "metadata": {
+      "abstract": "Due to the correlational structure in our traits such as identities, cultures, and political attitudes, seemingly innocuous preferences like following a band or using a specific slang can reveal private traits. This possibility, especially when combined with massive, public social data and advanced computational methods, poses a fundamental privacy risk. As our data exposure online and the rapid advancement of AI are increasing the risk of misuse, it is critical to understand the capacity of large language models (LLMs) to exploit such potential. Here, using online discussions on DebateOrg and Reddit, we show that LLMs can reliably infer hidden political alignment, significantly outperforming traditional machine learning models. Prediction accuracy further improves as we aggregate multiple text-level inferences into a user-level prediction, and as we use more politics-adjacent domains. We demonstrate that LLMs leverage words that are highly predictive of political alignment while not being explicitly political. Our findings underscore the capacity and risks of LLMs for exploiting socio-cultural correlates.",
+      "keywords": [],
+      "doi": null,
+      "doi_url": null,
+      "url": null,
+      "arxiv_url": "http://arxiv.org/abs/2603.11253v2",
+      "pdf_url": "https://arxiv.org/pdf/2603.11253v2",
+      "publication_date": "2026-03-11",
+      "citation_count": null,
+      "reference_count": null,
+      "venue": null,
+      "authors": [
+        "Byunghwee Lee",
+        "Sangyeon Kim",
+        "Filippo Menczer",
+        "Yong-Yeol Ahn",
+        "Haewoon Kwak",
+        "Jisun An"
+      ],
+      "subjects": [
+        "cs.SI",
+        "cs.CL",
+        "cs.CY"
+      ],
+      "is_open_access": true,
+      "source": "arxiv",
+      "confidence_score": 0.725
+    }
+  },
+  "b14b30a2e84c11b8": {
+    "entry_key": "Lyons2026-ca",
+    "entry_title": "Exposure to low-credibility online health content is limited and is concentrated among older adults",
+    "cached_at": "2026-04-15T06:15:07.495552",
+    "metadata": {
+      "abstract": null,
+      "keywords": [],
+      "doi": "10.1038/s43587-025-01059-x",
+      "doi_url": "https://doi.org/10.1038/s43587-025-01059-x",
+      "url": null,
+      "arxiv_url": null,
+      "pdf_url": null,
+      "publication_date": "2026-02-04",
+      "citation_count": 1,
+      "reference_count": 31,
+      "venue": "Nature Aging",
+      "authors": [
+        "Benjamin Lyons",
+        "Andy J. King",
+        "Rebecca L. Barter",
+        "Kimberly A. Kaphingst"
+      ],
+      "subjects": [],
+      "is_open_access": null,
+      "source": "crossref",
+      "confidence_score": 0.825
+    }
+  },
+  "72956432e72418ef": {
+    "entry_key": "Poliakoff2026-fa",
+    "entry_title": "Prigozhin’s propaganda team: The st Petersburg internet research agency (2013–2021)",
+    "cached_at": "2026-04-15T06:15:09.937856",
+    "metadata": {
+      "abstract": null,
+      "keywords": [],
+      "doi": "10.1080/09668136.2025.2588334",
+      "doi_url": "https://doi.org/10.1080/09668136.2025.2588334",
+      "url": null,
+      "arxiv_url": null,
+      "pdf_url": null,
+      "publication_date": "2026-01-02",
+      "citation_count": 0,
+      "reference_count": 51,
+      "venue": "Europe-Asia Studies",
+      "authors": [
+        "Serge Poliakoff",
+        "Florian Toepfl"
+      ],
+      "subjects": [],
+      "is_open_access": null,
+      "source": "crossref",
+      "confidence_score": 0.86
+    }
+  },
+  "161e106bac6645bb": {
+    "entry_key": "van-Eck2026-xg",
+    "entry_title": "What to do about polarization? Evaluating the evidence base of recommendations for depolarization",
+    "cached_at": "2026-04-15T06:15:12.761501",
+    "metadata": {
+      "abstract": "Abstract The flourishing research on polarization abounds with more or less explicit calls for depolarization and includes various recommendations for how to depolarize, prompting questions about both the evidence base and the normative assumptions guiding the scholars’ conclusions. To assess both, we conducted a systematic literature review of social science literature on (de)polarization. Our findings reveal that most scholarship focuses on polarization, neglecting a systematic examination of depolarization. Although studies do provide evidence for both some factors that drive polarization and depolarization, the recommendations explicitly endorsed by the researchers remain disconnected from the empirical evidence provided in their studies. Recommendations seem to be more closely linked to normative assumptions about desirable ways of communicating, envisioning societies that align with deliberative democracy. We call for making both the normative and evidence base of one’s conclusions more explicit and reflect the connection between the two.",
+      "keywords": [],
+      "doi": "10.1093/anncom/wlag012",
+      "doi_url": "https://doi.org/10.1093/anncom/wlag012",
+      "url": null,
+      "arxiv_url": null,
+      "pdf_url": null,
+      "publication_date": "2026-04-09",
+      "citation_count": 0,
+      "reference_count": 80,
+      "venue": "Annals of the International Communication Association",
+      "authors": [
+        "Christel W van Eck",
+        "Hendrik M A Meyer",
+        "Michael Brüggemann"
+      ],
+      "subjects": [],
+      "is_open_access": null,
+      "source": "crossref",
+      "confidence_score": 0.8545454545454545
+    }
+  },
+  "e5a19719609563d7": {
+    "entry_key": "Kulichkina2026-zk",
+    "entry_title": "Connective action and digital repression during China’s COVID-19 protests: a computational analysis of multilingual coordinated activity on Twitter",
+    "cached_at": "2026-04-15T06:15:15.917317",
+    "metadata": {
+      "abstract": "Abstract In authoritarian contexts, social media serve as critical platforms for coordinating both protest and repression. This study centers on the unprecedented COVID-19 protests in the People’s Republic of China, which were extensively tweeted and suppressed through contesting narratives. We explore prominent themes, temporal dynamics, and linguistic patterns of coordinated communication during these events. Using a coordination detection algorithm, we identified 13,557 Twitter accounts involved in 739,819 instances of coordinated sharing during the protests. We then applied topic modeling to categorize the coordinated tweets into topics supporting either the protests or repression. Drawing on the theory of authoritarian publics, we classified protest-supporting topics into three categories: leadership-critical , policy-critical , and descriptive . Similarly, building on the digital repression typology, we categorized repression-supporting topics into government propaganda , distracting information , and demoralizing content . Within protest-supporting content, policy-critical tweets were the most widely shared across three analyzed languages. Leadership-critical tweets were more prominent in traditional Chinese, while descriptive tweets were more common in simplified Chinese. Repression-supporting content was most prevalent in English, followed by simplified Chinese, with demoralizing and distracting information dominating discourse. Government propaganda was the least frequent and appeared primarily in simplified Chinese. Community detection revealed that 85.4% of coordinated tweets were amplified by ten major communities, each organized around a single language and goal—either supporting protests or promoting repression. By combining multiple computational approaches, this study offers a comprehensive framework for content-centered analysis of online protest-repression dynamics and contributes to our understanding of connective action and digital repression in authoritarian contexts.",
+      "keywords": [],
+      "doi": "10.1140/epjds/s13688-026-00637-2",
+      "doi_url": "https://doi.org/10.1140/epjds/s13688-026-00637-2",
+      "url": null,
+      "arxiv_url": null,
+      "pdf_url": null,
+      "publication_date": "2026-03-13",
+      "citation_count": 0,
+      "reference_count": 58,
+      "venue": "EPJ Data Science",
+      "authors": [
+        "Aytalina Kulichkina",
+        "Paul Balluff",
+        "Nicola Righetti",
+        "Annie Waldherr"
+      ],
+      "subjects": [],
+      "is_open_access": null,
+      "source": "crossref",
+      "confidence_score": 0.8333333333333333
+    }
+  },
+  "0d7010138f1044be": {
+    "entry_key": "Yoo2026-ev",
+    "entry_title": "The role of the term “fake news” in U.s. alternative media: Shaping political discourse and hyperpartisanship",
+    "cached_at": "2026-04-15T06:15:20.073512",
+    "metadata": {
+      "abstract": "This study examines how the term “fake news” is strategically deployed in U.S. alternative media by analyzing Newsmax and Occupy Democrats as right- and left-leaning outlets. Drawing on Hallin’s sphere model and Egelhofer et al.’s coding categories, it uses manual content analysis and latent Dirichlet allocation topic modeling to identify rhetorical functions and patterns. Findings show that the term “fake news” functions mainly as a weaponized label to delegitimize opponents rather than describe misinformation. The results show how alternative media redraw boundaries between consensus, controversy, and deviance, underscoring their role in intensifying partisan discourse and redefining political communication.",
+      "keywords": [],
+      "doi": "10.1177/10776990251410599",
+      "doi_url": "https://doi.org/10.1177/10776990251410599",
+      "url": null,
+      "arxiv_url": null,
+      "pdf_url": null,
+      "publication_date": "2026-01-22",
+      "citation_count": 0,
+      "reference_count": 56,
+      "venue": "Journalism &amp; Mass Communication Quarterly",
+      "authors": [
+        "Joseph J. Yoo",
+        "Hannah Lee",
+        "Soontae An"
+      ],
+      "subjects": [],
+      "is_open_access": null,
+      "source": "crossref",
+      "confidence_score": 0.8428571428571427
+    }
+  },
+  "aa7cd706239eb8b9": {
+    "entry_key": "Larsson2026-ro",
+    "entry_title": "“Meet the new boss – Same as the old boss”: A longitudinal study of political post sentiment and Facebook engagement",
+    "cached_at": "2026-04-15T06:15:25.347197",
+    "metadata": {
+      "abstract": "This study investigates the dynamics of online political communication on Facebook, focusing on the Facebook posts made by the Norwegian Progress Party and its recent leaders, Siv Jensen and Sylvi Listhaug, over a decade-long period. Answering the call for longitudinal insights into political communication, we utilize a novel hybrid content analysis approach combining large language models (LLMs) and human classification, to assess the sentiment of Facebook posts — categorized as negative, positive, or neutral. Moreover, we assess the levels of engagement reached by posts featuring different sentiment. Our analysis reveals increased negative sentiment and engagement over time, particularly under Listhaug’s leadership, confirming the hypothesis that negative content drives higher engagement. Posts with negative sentiment consistently garnered more shares and comments, reflecting the strategic value of negativity in amplifying political messages. However, likes were more frequently associated with positive content, suggesting more nuanced engagement patterns. These findings contribute to our understanding the evolving landscape of digital politicking, highlighting the interplay between political actors’ communication strategies and audience engagement.",
+      "keywords": [],
+      "doi": "10.5210/fm.v31i1.14448",
+      "doi_url": "https://doi.org/10.5210/fm.v31i1.14448",
+      "url": null,
+      "arxiv_url": null,
+      "pdf_url": null,
+      "publication_date": "2026-01-08",
+      "citation_count": 0,
+      "reference_count": 0,
+      "venue": "First Monday",
+      "authors": [
+        "Anders Olof Larsson"
+      ],
+      "subjects": [],
+      "is_open_access": null,
+      "source": "crossref",
+      "confidence_score": 0.95
+    }
+  },
+  "f2d56655e70a51d3": {
+    "entry_key": "Baym2026-tr",
+    "entry_title": "It’s Bad: What Now?",
+    "cached_at": "2026-04-15T06:15:37.129403",
+    "metadata": {
+      "abstract": "This essay reflects on a decade of worsening social media harms—inequality, algorithmic power, precarious labor, and data extraction—arguing for renewed interdisciplinary and collaborative approaches to create just sociotechnical futures.",
+      "keywords": [],
+      "doi": "10.1177/20563051261432484",
+      "doi_url": "https://doi.org/10.1177/20563051261432484",
+      "url": null,
+      "arxiv_url": null,
+      "pdf_url": null,
+      "publication_date": "2026",
+      "citation_count": 0,
+      "reference_count": 7,
+      "venue": "Social Media + Society",
+      "authors": [
+        "Nancy K. Baym"
+      ],
+      "subjects": [],
+      "is_open_access": null,
+      "source": "crossref",
+      "confidence_score": 0.8749999999999999
     }
   }
 }
