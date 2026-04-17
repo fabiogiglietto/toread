@@ -4676,5 +4676,30 @@
       "source": "crossref",
       "confidence_score": 0.86
     }
+  },
+  "6abbf835954368b9": {
+    "entry_key": "Marwick2026-ss",
+    "entry_title": "Broken connections: Fieldnotes from the old internet",
+    "cached_at": "2026-04-17T16:41:10.413781",
+    "metadata": {
+      "abstract": "This essay reflects on the lived experience of early internet culture to interrogate what has been lost in the transition to today’s platform-dominated online environment. Drawing on autobiographical fieldnotes from the 1990s and early 2000s—Prodigy forums, IRC channels, university bulletin boards, and most centrally LiveJournal—I revisit a period when online communication fostered intimacy, community, and meaningful social ties among strangers and friends alike. LiveJournal, in particular, offered an infrastructure for sustained reciprocal writing, affective labor, and audience management that enabled deep connection and mutual support. Its social dynamics illuminate a mode of computer-mediated communication that was less commercialized, less surveilled, and more oriented toward collective meaning-making than contemporary social media. By contrast, today’s social platforms feel alienating, extractive, and hostile to vulnerability. The political economy of social media, driven by advertising, surveillance, consolidation, and algorithmic optimization, has foreclosed the kinds of small, semi-private, socially coherent spaces that once enabled genuine community formation. Rather than imagining social media as infrastructure requiring stewardship, safety, and care, the industry has prioritized virality, scale, and profit, producing environments shaped by harassment, polarization, and corporate capture. Reflecting on these shifts, the essay argues that the trajectory of social media was never inevitable. Alternative design choices and governance models might have cultivated a richer, more humane digital public sphere. If online community has a future, it will not lie in replicating legacy platforms, but in reimagining communication infrastructures that support vulnerability, reciprocity, and small-scale sociality, the qualities that once made the early internet feel like home.",
+      "keywords": [],
+      "doi": "10.1177/20563051261434796",
+      "doi_url": "https://doi.org/10.1177/20563051261434796",
+      "url": null,
+      "arxiv_url": null,
+      "pdf_url": null,
+      "publication_date": "2026",
+      "citation_count": 0,
+      "reference_count": 1,
+      "venue": "Social Media + Society",
+      "authors": [
+        "Alice E. Marwick"
+      ],
+      "subjects": [],
+      "is_open_access": null,
+      "source": "crossref",
+      "confidence_score": 0.86
+    }
   }
 }
