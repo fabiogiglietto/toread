@@ -4726,5 +4726,30 @@
       "source": "crossref",
       "confidence_score": 0.823076923076923
     }
+  },
+  "be1e2cc637dc19b7": {
+    "entry_key": "Swartz2026-zb",
+    "entry_title": "Social media in the scam age",
+    "cached_at": "2026-04-19T12:34:29.452755",
+    "metadata": {
+      "abstract": "This essay examines scams as a central organizing logic of contemporary social media rather than peripheral criminal activity. Drawing on research in cryptocurrency and financial technology alongside childhood experiences in 1990s Miami, the piece argues that social media is entering a “scam age” where boundaries between legitimate and illegitimate economic activity increasingly blur and the technological and social systems that make those distinctions are being rebuilt. It calls for social media scholars to explore the work that scams—and the idea of “scams”—do in the production of social media, the future, and the future of social media.",
+      "keywords": [],
+      "doi": "10.1177/20563051261437922",
+      "doi_url": "https://doi.org/10.1177/20563051261437922",
+      "url": null,
+      "arxiv_url": null,
+      "pdf_url": null,
+      "publication_date": "2026",
+      "citation_count": 0,
+      "reference_count": 0,
+      "venue": "Social Media + Society",
+      "authors": [
+        "Lana Swartz"
+      ],
+      "subjects": [],
+      "is_open_access": null,
+      "source": "crossref",
+      "confidence_score": 0.8999999999999999
+    }
   }
 }
