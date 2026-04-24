@@ -4780,5 +4780,31 @@
       "source": "crossref",
       "confidence_score": 0.8333333333333333
     }
+  },
+  "0f1f978a541ffd0c": {
+    "entry_key": "Tornberg2026-lc",
+    "entry_title": "Towards a Post-Social Media Studies",
+    "cached_at": "2026-04-24T11:07:03.109366",
+    "metadata": {
+      "abstract": "For two decades, \"social media\" has been the master lens through which scholars have understood digital communication—an era defined by user-generated content, networked publics, and participatory culture. That era is drawing to a close. This paper argues that three interrelated dynamics are dissolving the social media paradigm: an algorithmic shift from social-graph-based to interest-based recommendation, which is remaking the active \"user\" into a passive \"viewer\"; the generative AI revolution, which is replacing user-generated content with synthetic media and decoupling platforms from any dependence on human participation; and an exodus from public platforms toward private, closed spaces. Together, these dynamics are giving rise to three distinct post-social formations: algorithmically governed broadcasting platforms, semi-private spheres and micro-communities, and AI-mediated communication as a new media form in its own right. Understanding this transformation demands a fundamental reorientation of the field—new conceptual tools that move beyond networked publics and participatory culture, new methods suited to synthetic and ephemeral media environments, and renewed attention to the political stakes of communication systems that no longer require human participation.",
+      "keywords": [],
+      "doi": "10.31235/osf.io/6nue7_v1",
+      "doi_url": "https://doi.org/10.31235/osf.io/6nue7_v1",
+      "url": null,
+      "arxiv_url": null,
+      "pdf_url": null,
+      "publication_date": null,
+      "citation_count": 0,
+      "reference_count": 0,
+      "venue": null,
+      "authors": [
+        "Petter Törnberg",
+        "Richard Rogers"
+      ],
+      "subjects": [],
+      "is_open_access": null,
+      "source": "crossref",
+      "confidence_score": 0.86
+    }
   }
 }
