@@ -433,11 +433,11 @@
   "9195fcc80574052b": {
     "entry_key": "Vincent_undated-re",
     "entry_title": "What our second measurement says about misinformation on major platforms in Europe",
-    "cached_at": "2026-04-17T14:01:11.676035",
+    "cached_at": "2026-04-25T08:39:37.346090",
     "metadata": null,
     "failed": true,
     "failure_reason": "Could not enrich entry: Vincent_undated-re | No DOI available | Title length: 82 chars | Authors: Vincent, Emmanuel, Crisan, Daiana | APIs: Crossref enabled, Semantic Scholar enabled, ArXiv enabled",
-    "last_failure_at": "2026-04-17T14:01:11.676041"
+    "last_failure_at": "2026-04-25T08:39:37.346097"
   },
   "b153554d9f487cdb": {
     "entry_key": "Unknown2025-qj",
@@ -4805,6 +4805,31 @@
       "is_open_access": null,
       "source": "crossref",
       "confidence_score": 0.86
+    }
+  },
+  "b91474d33e6ce482": {
+    "entry_key": "Gerbaudo2026-fo",
+    "entry_title": "TikTok and the algorithmic transformation of social media publics: From social networks to social interest clusters",
+    "cached_at": "2026-04-25T08:39:39.791501",
+    "metadata": {
+      "abstract": "The rise of TikTok has sparked a debate on the consequences of algorithmic content curation for social experience. My thesis is that TikTok represents a second generation of social media, which differs from first-generation social media in the way users are exposed to content. While first-generation social media revolved around ‘networked publics’ formed by explicit interpersonal connections, second-generation social media introduces ‘clustered publics’. These are statistically constructed ‘neighbourhoods’ of users, in which people are brought together based on their past online behaviour and their similarity in interest and taste. Clustering users around shared interests has proven very effective in driving online engagement, leading other platforms to mimic TikTok, in what can be described as ‘TikTokification’. However, this transformation of online publics carries a series of problematic implications: the depersonalisation of online experience; a growing opacity of the structures of online communication; and the further subcultural fragmentation of an already divided digital public sphere.",
+      "keywords": [],
+      "doi": "10.1177/14614448241304106",
+      "doi_url": "https://doi.org/10.1177/14614448241304106",
+      "url": null,
+      "arxiv_url": null,
+      "pdf_url": null,
+      "publication_date": "2026",
+      "citation_count": 38,
+      "reference_count": 94,
+      "venue": "New Media &amp; Society",
+      "authors": [
+        "Paolo Gerbaudo"
+      ],
+      "subjects": [],
+      "is_open_access": null,
+      "source": "crossref",
+      "confidence_score": 0.8999999999999999
     }
   }
 }
