@@ -4880,5 +4880,34 @@
       "source": "crossref",
       "confidence_score": 0.8272727272727272
     }
+  },
+  "f2650ebca7ce5e67": {
+    "entry_key": "Rothut2026-or",
+    "entry_title": "Protest movements and the mainstreaming of radical and extremist ideologies: the case of COVID-19 protests",
+    "cached_at": "2026-05-05T18:11:20.721584",
+    "metadata": {
+      "abstract": null,
+      "keywords": [],
+      "doi": "10.1080/1369118x.2026.2654668",
+      "doi_url": "https://doi.org/10.1080/1369118x.2026.2654668",
+      "url": null,
+      "arxiv_url": null,
+      "pdf_url": null,
+      "publication_date": "2026-04-16",
+      "citation_count": 0,
+      "reference_count": 77,
+      "venue": "Information, Communication &amp; Society",
+      "authors": [
+        "Sophia Rothut",
+        "Heidi Schulze",
+        "Diana Rieger",
+        "Maximilian Lechner",
+        "Brigitte Naderer"
+      ],
+      "subjects": [],
+      "is_open_access": null,
+      "source": "crossref",
+      "confidence_score": 0.8272727272727272
+    }
   }
 }
