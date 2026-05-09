@@ -4912,5 +4912,36 @@
       "source": "crossref",
       "confidence_score": 0.83
     }
+  },
+  "dc3ad3b0088dce44": {
+    "entry_key": "Yang2026-tq",
+    "entry_title": "A systematic review of social science studies analyzing social media data, 2010-2024",
+    "cached_at": "2026-05-09T17:26:24.453255",
+    "metadata": {
+      "abstract": "Social media platforms have long served as important data sources for social scientists. Policies around academic access to platform data, however, have seen substantial changes in recent years. These shifts have introduced profound uncertainty for scholarship relying on social media data. We evaluate the potential research impact of such changes by conducting a systematic analysis of scholarship published between 2010 and 2024 in 59 journals, representing five social science disciplines as well as leading interdisciplinary journals. Using a multi-method design that includes human-in-the-loop AI annotation, we find that 0.78% of papers in our corpus (3.15% when focusing exclusively on social science journals) use social media data for empirical research, with substantial variance across disciplines—ranging from less than 1% in Economics to approximately 13% in Communication. Twitter/X and Facebook are, respectively, the first and second most popular data sources across all disciplines, throughout the 15 years of our study. Further, the percentage of papers using social media data has dramatically increased over this period, tripling its share of social science publications, although this share has plateaued and even declined in the last few years. This recent decline has been driven by Twitter/X and Facebook in particular, and suggests that the empirical study of social media may be on the cusp of significant changes. These changes might affect the study of real-time events and phenomena with widespread sociopolitical ramifications, such as the COVID-19 pandemic and misleading information surrounding the 2016 U.S. presidential election, which we observe to be some of the major topics studied by social scientists using social media data.",
+      "keywords": [],
+      "doi": "10.31235/osf.io/yexp6_v1",
+      "doi_url": "https://doi.org/10.31235/osf.io/yexp6_v1",
+      "url": null,
+      "arxiv_url": null,
+      "pdf_url": null,
+      "publication_date": null,
+      "citation_count": 0,
+      "reference_count": 0,
+      "venue": null,
+      "authors": [
+        "Kai-Cheng Yang",
+        "Pranav Goel",
+        "Meredith L. Pruden",
+        "Qunfang Wu",
+        "Colby Eagan",
+        "David Lazer",
+        "Deen Freelon"
+      ],
+      "subjects": [],
+      "is_open_access": null,
+      "source": "crossref",
+      "confidence_score": 0.81875
+    }
   }
 }
