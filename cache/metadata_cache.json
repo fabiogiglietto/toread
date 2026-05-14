@@ -4952,5 +4952,36 @@
       "source": "crossref",
       "confidence_score": 0.84
     }
+  },
+  "e89ae89da5b33c17": {
+    "entry_key": "Waight2026-ts",
+    "entry_title": "State media control influences large language models",
+    "cached_at": "2026-05-14T05:47:09.919980",
+    "metadata": {
+      "abstract": null,
+      "keywords": [],
+      "doi": "10.1038/s41586-026-10506-7",
+      "doi_url": "https://doi.org/10.1038/s41586-026-10506-7",
+      "url": null,
+      "arxiv_url": null,
+      "pdf_url": null,
+      "publication_date": "2026-05-13",
+      "citation_count": 0,
+      "reference_count": 109,
+      "venue": "Nature",
+      "authors": [
+        "Hannah Waight",
+        "Eddie Yang",
+        "Yin Yuan",
+        "Solomon Messing",
+        "Margaret E. Roberts",
+        "Brandon M. Stewart",
+        "Joshua A. Tucker"
+      ],
+      "subjects": [],
+      "is_open_access": null,
+      "source": "crossref",
+      "confidence_score": 0.8166666666666667
+    }
   }
 }
