@@ -4983,5 +4983,91 @@
       "source": "crossref",
       "confidence_score": 0.8166666666666667
     }
+  },
+  "0f9fb852640bb108": {
+    "entry_key": "Nguyen2026-vm",
+    "entry_title": "Generative AI, large language models, and their agentic framing in news media",
+    "cached_at": "2026-05-15T05:52:05.972694",
+    "metadata": {
+      "abstract": "Abstract News reporting on generative artificial intelligence (GenAI) and large language models (LLMs) plays a central role in shaping the public epistemology of these technologies, as journalism co-produces public agendas and narratives. Central to these debates are framing practices that portray LLM-based technologies as mentalistic, often through metaphors that attribute human-like cognitive capabilities or even experiences to AI systems (e.g. AI “thinks” or “feels”). While anthropomorphic framing has a long history in technology discourse, such practices carry particular social, cultural, and political weight when they contribute to inflated perceptions of AI capabilities. The present study analyses LLM-centric news framing with a focus on mentalistic representations, examining their thematic contexts, valence, and metaphorical patterns from a comparative, cross-cultural perspective. It combines computational text analysis with manual content analysis to critically explore 18,032 English-language news articles published between 2022 and 2024 across 15 outlets in Europe, Asia, and North America. The findings show that mentalistic framings are present but not uniformly dominant, varying across editorial cultures and journalistic styles. Situated against news media’s growing organisational and economic entanglement with GenAI, the study contributes to debates on AI imaginaries, public epistemology, and journalism’s role in fostering critical AI literacy.",
+      "keywords": [],
+      "doi": "10.1007/s00146-026-03070-1",
+      "doi_url": "https://doi.org/10.1007/s00146-026-03070-1",
+      "url": null,
+      "arxiv_url": null,
+      "pdf_url": null,
+      "publication_date": "2026-05-11",
+      "citation_count": 0,
+      "reference_count": 59,
+      "venue": "AI &amp; SOCIETY",
+      "authors": [
+        "Dennis Nguyen",
+        "Magdalena Wischnewski"
+      ],
+      "subjects": [],
+      "is_open_access": null,
+      "source": "crossref",
+      "confidence_score": 0.86
+    }
+  },
+  "62f0bcbc334e2887": {
+    "entry_key": "Mahl2026-hc",
+    "entry_title": "Conspiracy theories and misinformation in digital media: An international expert assessment of challenges, trends, and interventions",
+    "cached_at": "2026-05-15T05:52:07.854241",
+    "metadata": {
+      "abstract": "Abstract The rise of conspiracy theories and misinformation in digital media has sparked intense debates among scholars, journalists, and policymakers about the challenges posed by these phenomena and potential responses. However, these discussions tend to remain narrowly focused on specific issues, stakeholders, or individual-level strategies, with limited attention paid to anticipatory impact assessment. To address these shortcomings, we conducted an integrative, three-wave Delphi study involving an expert panel of 47 scholars and practitioners from 13 countries to identify current challenges, anticipate problematic trends, and develop actionable interventions. The challenges, trends, and interventions discussed span ten thematic areas, including governance of and by platforms, platform design, journalism and news media ecosystems, research and science communication ecosystems, societal dynamics, socio-political institutions, and individual behavior. The paper concludes with methodological reflections, discussing the possibilities and limitations of Delphi methods in addressing complex, interdisciplinary issues.",
+      "keywords": [],
+      "doi": "10.1515/commun-2024-0123",
+      "doi_url": "https://doi.org/10.1515/commun-2024-0123",
+      "url": null,
+      "arxiv_url": null,
+      "pdf_url": null,
+      "publication_date": "2026-03-06",
+      "citation_count": 2,
+      "reference_count": 61,
+      "venue": "Communications",
+      "authors": [
+        "Daniela Mahl",
+        "Sabrina H. Kessler",
+        "Mike S. Schäfer",
+        "Anna Jobin",
+        "Jing Zeng",
+        "Fanny Georgi"
+      ],
+      "subjects": [],
+      "is_open_access": null,
+      "source": "crossref",
+      "confidence_score": 0.82
+    }
+  },
+  "bfa15f04ae472444": {
+    "entry_key": "Spampatti2026-kx",
+    "entry_title": "Six insights from climate psychology for the study of misinformation",
+    "cached_at": "2026-05-15T05:52:11.798995",
+    "metadata": {
+      "abstract": "Climate change and misinformation are interconnected global crises shaped by tensions between individual, collective, and vested interests. Drawing on climate psychology, which has matured under organised denial and opposition, we distill six insights for misinformation research to strengthen policy relevance, systems thinking, and resilience to attacks.",
+      "keywords": [],
+      "doi": "10.31234/osf.io/swdrq_v1",
+      "doi_url": "https://doi.org/10.31234/osf.io/swdrq_v1",
+      "url": null,
+      "arxiv_url": null,
+      "pdf_url": null,
+      "publication_date": null,
+      "citation_count": 0,
+      "reference_count": 0,
+      "venue": null,
+      "authors": [
+        "Tobia Spampatti",
+        "Bojana Većkalov",
+        "Sandra Jeanette Geiger",
+        "Sander van der Linden",
+        "Stephan Lewandowsky",
+        "Matthew Hornsey"
+      ],
+      "subjects": [],
+      "is_open_access": null,
+      "source": "crossref",
+      "confidence_score": 0.8352941176470587
+    }
   }
 }
