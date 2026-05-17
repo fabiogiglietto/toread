@@ -216,7 +216,17 @@ jobs:
           echo "Waiting ${wait_time}s before retry..."
           sleep $wait_time
         done
-    
+
+    # Pipeline orchestration — see PIPELINE.md. When the feed changes, kick off
+    # the downstream chain: research-radio -> github.io -> fg-zettelkasten.
+    - name: Trigger downstream pipeline (research-radio)
+      if: steps.git-check.outputs.changes == 'true'
+      uses: peter-evans/repository-dispatch@v3
+      with:
+        token: ${{ secrets.PIPELINE_DISPATCH_TOKEN }}
+        repository: fabiogiglietto/research-radio
+        event-type: pipeline-tick
+
     - name: Upload feeds as artifacts
       uses: actions/upload-artifact@v4
       with:
