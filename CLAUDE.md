@@ -6,6 +6,15 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 
 ToRead is an academic paper feed generator that converts Paperpile BibTeX exports into RSS and JSON Feed formats, enriched with metadata from academic APIs (Crossref, OpenAlex, Semantic Scholar, ArXiv). The application processes academic bibliographic data and generates feeds for consumption by feed readers and academic workflow tools.
 
+## Pipeline position
+
+ToRead is the **root** of a four-repo pipeline:
+`toread` → `research-radio` → `fabiogiglietto.github.io` → `fg-zettelkasten`.
+Its `output/feed.json` is the published API for the three downstream repos.
+
+- `PIPELINE.md` — the cross-repo dependency DAG and orchestration model.
+- `SCHEMA.md` — the `feed.json` contract. Treat changes to it as breaking.
+
 ## Development Commands
 
 ### Virtual Environment
