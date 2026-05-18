@@ -5221,5 +5221,32 @@
       "source": "openalex",
       "confidence_score": 0.7374999999999999
     }
+  },
+  "396042ac60bfc00b": {
+    "entry_key": "Askanius2026-de",
+    "entry_title": "The alternative influence network (AIN) of far-right YouTubers in Sweden: Connectivity and hybridisation of online extremism during the Covid-19 pandemic",
+    "cached_at": "2026-05-18T07:38:11.273795",
+    "metadata": {
+      "abstract": "Abstract This study maps the composition and tactics of the alternative influence network (AIN) of far-right actors in Sweden on YouTube in a two-year period of the Covid-19 pandemic (2020–2022). To understand how YouTube enables a cohesive network of far-right ideas and actors, we ask: How does the extra-parliamentarian far-right in Sweden connect across influencers, groups and organisations, and alternative news media on the platform? Second, how do far-right actors in this network combine activist tactics and influencer techniques, and how does this fusion drive the hybridisation of online extremism in social media? We draw on a mixed-methods approach combining social network analysis and a qualitative case study of the media practices of key actors, focusing on how they merge activism with engagement-driven influencer tactics and profit-oriented content production. The study shows that far-right actors strategically engage hyperlinking, guest appearances, and personal endorsements to establish a network of mutual support and collaboration. Through these connective practices, they fuse commercial (self-)branding strategies, marketing, and monetisation schemes with political propaganda techniques. In contextualising our findings, we focus on how these developments reflect new forms of professionalisation and hybridisation of contemporary forms of online extremism at this critical juncture of political instability and democratic backsliding across the world.",
+      "keywords": [],
+      "doi": "10.2478/nor-2026-0008",
+      "doi_url": "https://doi.org/10.2478/nor-2026-0008",
+      "url": null,
+      "arxiv_url": null,
+      "pdf_url": null,
+      "publication_date": "2026-05-01",
+      "citation_count": 0,
+      "reference_count": 46,
+      "venue": "Nordicom Review",
+      "authors": [
+        "Tina Askanius",
+        "Jullietta Stoencheva",
+        "Hernan Mondani"
+      ],
+      "subjects": [],
+      "is_open_access": null,
+      "source": "crossref",
+      "confidence_score": 0.8428571428571427
+    }
   }
 }
