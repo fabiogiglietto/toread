@@ -217,10 +217,13 @@ jobs:
           sleep $wait_time
         done
 
-    # Pipeline orchestration — see PIPELINE.md. When the feed changes, kick off
-    # the downstream chain: research-radio -> github.io -> fg-zettelkasten.
+    # Pipeline orchestration — see PIPELINE.md. Fire the downstream chain
+    # (research-radio -> github.io -> fg-zettelkasten) only when the Paperpile
+    # library itself changed — i.e. new or edited papers. bib-check is false
+    # for cache-only metadata refreshes (e.g. citation-count updates), so those
+    # no longer cascade.
     - name: Trigger downstream pipeline (research-radio)
-      if: steps.git-check.outputs.changes == 'true'
+      if: steps.bib-check.outputs.changed == 'true'
       uses: peter-evans/repository-dispatch@v4
       with:
         token: ${{ secrets.PIPELINE_DISPATCH_TOKEN }}

@@ -67,12 +67,14 @@ Convert the timers into a dispatch chain that runs strictly in topological
 order, only when there is genuinely new upstream data:
 
 ```
-toread  ──(feed.json changed)──▶  research-radio  ──▶  github.io  ──▶  fg-zettelkasten
+toread  ──(new/edited papers)──▶  research-radio  ──▶  github.io  ──▶  fg-zettelkasten
 ```
 
 - `toread` keeps its 30-min cron (it polls Paperpile — it is the clock). When a
-  run produces a **changed** `feed.json`, a final step sends a
-  `repository_dispatch` event (`pipeline-tick`) to `research-radio`.
+  run detects a change in the **Paperpile library** — new or edited papers — a
+  final step sends a `repository_dispatch` event (`pipeline-tick`) to
+  `research-radio`. Cache-only metadata refreshes (e.g. citation counts) do
+  **not** cascade, so the pipeline runs for new papers only.
 - `research-radio`, `github.io` each run on that event, then **always**
   dispatch `pipeline-tick` to the next repo — so a toread change propagates the
   whole way down even through a stage that itself committed nothing (e.g.
@@ -81,10 +83,17 @@ toread  ──(feed.json changed)──▶  research-radio  ──▶  github.io
 - Every repo **keeps a daily fallback cron** in case a dispatch is missed.
 
 **Setup requirement:** cross-repo `repository_dispatch` cannot use the default
-`GITHUB_TOKEN`. Create one fine-grained PAT with **Actions: read & write** on
-all four repos and store it as the secret `PIPELINE_DISPATCH_TOKEN` in `toread`,
-`research-radio`, and `github.io` (fg-zettelkasten does not dispatch, so it does
-not need the secret).
+`GITHUB_TOKEN`. Create one fine-grained PAT and store it as the secret
+`PIPELINE_DISPATCH_TOKEN`:
+
+- **Repository access:** all **four** repos — `toread`, `research-radio`,
+  `github.io` (the dispatchers) *and* `fg-zettelkasten` (a dispatch target).
+  The PAT needs access to every repo it dispatches *to*.
+- **Permission:** `Contents` → **Read and write** (`POST /repos/.../dispatches`
+  requires it; `Metadata: read` is auto-added).
+- **Store the secret** in `toread`, `research-radio`, and `github.io` only —
+  `fg-zettelkasten` is the end of the chain and dispatches nothing, so it does
+  not need the secret stored (but the PAT still needs *access* to it).
 
 ## Changing the contract
 
