@@ -13,90 +13,94 @@ Repos:
 
 ## Dependency DAG
 
+The four repos form a chain, but **fg-zettelkasten runs twice** — because of a
+genuine cycle. research-radio scaffolds its podcast script from a
+fg-zettelkasten *summary*; a fg-zettelkasten *note* (and the Slack digest)
+links the research-radio *podcast*. So the summary must be produced before the
+podcast, and the note/Slack after it. fg-zettelkasten's work is split into a
+`summarize` stage (early) and an `update` stage (late):
+
 ```
-        toread  (Paperpile → output/feed.json)
-          │
-          ▼
-   research-radio  (feed.json → docs/episodes.json + audio Releases)
-          │
-          ▼
- fabiogiglietto.github.io  (feed.json + episodes → site)
-          │
-          ▼
-   fg-zettelkasten  (feed.json + episodes.json + github.io topics → vault)
+toread                       Paperpile -> output/feed.json
+  |  new / edited papers
+  v
+fg-zettelkasten : summarize   feed -> data/summaries/<key>.json     (stage 1)
+  |
+  v
+research-radio                summary scaffold + PDF -> podcast, docs/episodes.json
+  |
+  v
+fabiogiglietto.github.io      feed + episodes -> website
+  |
+  v
+fg-zettelkasten : update      summaries + episodes + topics -> vault notes + Slack
 ```
 
-`toread` is the only repo with an external input (Paperpile). Each downstream
-repo consumes the **published artifacts** of the repos above it — fetched live
-from their `raw.githubusercontent.com` URLs / GitHub Releases, never from a
-local sibling working copy. This keeps the four repos decoupled and
-independently deployable.
+Each stage consumes the **published artifacts** of the stages above it —
+fetched live from GitHub (raw URLs, the Contents API, or Releases), never from
+a local sibling working copy. This keeps the repos decoupled and independently
+deployable.
 
-Direct dependencies:
-
-| Repo               | Consumes                                                        |
-|--------------------|-----------------------------------------------------------------|
-| toread             | Paperpile BibTeX export                                         |
-| research-radio     | toread `feed.json`                                              |
-| github.io          | toread `feed.json`, research-radio `episodes.json`              |
-| fg-zettelkasten    | toread `feed.json`, research-radio `episodes.json`, github.io   |
+| Stage                      | Consumes                                                        | Produces                              |
+|----------------------------|-----------------------------------------------------------------|---------------------------------------|
+| toread                     | Paperpile BibTeX export                                         | `output/feed.json`                    |
+| fg-zettelkasten : summarize| feed, Paperpile Drive PDFs                                      | `data/summaries/<key>.json`           |
+| research-radio             | feed, fg-zettelkasten summaries, Drive PDFs                     | `docs/episodes.json` + audio Releases |
+| github.io                  | feed, research-radio episodes                                   | the website                           |
+| fg-zettelkasten : update   | feed, summaries, research-radio episodes, github.io topics      | `vault/` notes + Slack digest         |
 
 Everything joins on the paper's BibTeX key (`bibtex:AuthorYear-xx`). The feed
 contract is specified in `SCHEMA.md`.
 
-## Orchestration
+## Orchestration — event-driven chain
 
-### Current state — independent cron
+`toread` polls Paperpile every 30 min (it is the clock). When a run detects a
+change in the **Paperpile library** — new or edited papers, via the `bib-check`
+step; cache-only metadata refreshes such as citation-count updates do **not**
+cascade — it fires a `repository_dispatch` event down the chain. Each stage
+runs on its event and dispatches the next, so the pipeline runs in strict
+topological order and only when there is genuinely new input.
 
-Each repo schedules its own GitHub Actions workflow on a fixed UTC time:
+| Hop                              | Event type           |
+|----------------------------------|----------------------|
+| toread → fg-zettelkasten         | `pipeline-summarize` |
+| fg-zettelkasten → research-radio | `pipeline-tick`      |
+| research-radio → github.io       | `pipeline-tick`      |
+| github.io → fg-zettelkasten      | `pipeline-finalize`  |
 
-| Repo            | Workflow              | Schedule                          |
-|-----------------|-----------------------|-----------------------------------|
-| toread          | `update_feed.yml`     | every 30 min                      |
-| research-radio  | `check_papers.yml`    | hourly                            |
-| github.io       | `update-site.yml`     | daily 06:00                       |
-| fg-zettelkasten | `update-vault.yml`    | daily 05:00, recluster Mon 04:00  |
+`fg-zettelkasten`'s `update-vault.yml` listens for both events and branches on
+`github.event.action`:
 
-Downstream repos run on a timer and *hope* upstream has already published.
-github.io and fg-zettelkasten can read a feed that a mid-flight toread run is
-about to replace. Time-based ordering is best-effort, not guaranteed.
+- `pipeline-summarize` → run `summarize`, commit `data/summaries/`, then
+  dispatch `pipeline-tick` to research-radio.
+- `pipeline-finalize` → run `update` (themes, notes with the real podcast link,
+  Slack digest). End of chain — dispatches nothing.
 
-### Target state — event-driven chain
+Every repo keeps a **daily fallback cron** in case a dispatch is missed. The
+fg-zettelkasten `update` cron is self-sufficient: run on its own it summarizes
+any paper the `summarize` stage did not reach, so a dropped event self-heals.
 
-Convert the timers into a dispatch chain that runs strictly in topological
-order, only when there is genuinely new upstream data:
-
-```
-toread  ──(new/edited papers)──▶  research-radio  ──▶  github.io  ──▶  fg-zettelkasten
-```
-
-- `toread` keeps its 30-min cron (it polls Paperpile — it is the clock). When a
-  run detects a change in the **Paperpile library** — new or edited papers — a
-  final step sends a `repository_dispatch` event (`pipeline-tick`) to
-  `research-radio`. Cache-only metadata refreshes (e.g. citation counts) do
-  **not** cascade, so the pipeline runs for new papers only.
-- `research-radio`, `github.io` each run on that event, then **always**
-  dispatch `pipeline-tick` to the next repo — so a toread change propagates the
-  whole way down even through a stage that itself committed nothing (e.g.
-  research-radio is rate-limited to one episode per 24 h and often no-ops).
-- `fg-zettelkasten` is the end of the chain and dispatches nothing.
-- Every repo **keeps a daily fallback cron** in case a dispatch is missed.
-
-**Setup requirement:** cross-repo `repository_dispatch` cannot use the default
-`GITHUB_TOKEN`. Create one fine-grained PAT and store it as the secret
+**Setup — `PIPELINE_DISPATCH_TOKEN`:** cross-repo `repository_dispatch` cannot
+use the default `GITHUB_TOKEN`. One fine-grained PAT, stored as the secret
 `PIPELINE_DISPATCH_TOKEN`:
 
-- **Repository access:** all **four** repos — `toread`, `research-radio`,
-  `github.io` (the dispatchers) *and* `fg-zettelkasten` (a dispatch target).
-  The PAT needs access to every repo it dispatches *to*.
+- **Repository access:** all four repos.
 - **Permission:** `Contents` → **Read and write** (`POST /repos/.../dispatches`
   requires it; `Metadata: read` is auto-added).
-- **Store the secret** in `toread`, `research-radio`, and `github.io` only —
-  `fg-zettelkasten` is the end of the chain and dispatches nothing, so it does
-  not need the secret stored (but the PAT still needs *access* to it).
+- **Store the secret in** `toread`, `fg-zettelkasten`, `research-radio`, and
+  `github.io` — every repo that dispatches. (fg-zettelkasten dispatches
+  research-radio on the summarize leg, so it needs the secret too.)
 
 ## Changing the contract
 
-The feed (`SCHEMA.md`) and the episodes JSON are the pipeline's APIs. Additive
-changes are safe; renaming/removing a field or changing the `id` format is
-breaking — update the schema doc and all consumers before publishing.
+The pipeline's APIs are the published artifacts:
+
+- **`output/feed.json`** — JSON Feed + `_academic` extensions; see `SCHEMA.md`.
+- **`data/summaries/<key>.json`** — fg-zettelkasten structured summaries;
+  research-radio reads the fields `key_claims`, `contributions`, `methods`,
+  `findings`, `framing` as a script scaffold.
+- **`docs/episodes.json`** — research-radio episode metadata + audio URLs.
+
+Additive changes are safe; renaming/removing a field or changing the `id`
+format is breaking — update the relevant doc and all consumers before
+publishing.
