@@ -5187,5 +5187,39 @@
       "source": "crossref",
       "confidence_score": 0.8999999999999999
     }
+  },
+  "b36e9284a1248271": {
+    "entry_key": "Ng2026-og",
+    "entry_title": "Social theory should be a structural prior for agentic AI: A formal framework for multi-Agent Social Systems",
+    "cached_at": "2026-05-18T06:02:56.892592",
+    "metadata": {
+      "abstract": "Agentic AI systems are increasingly deployed not in isolation, but inside social environments populated by other agents and humans, such as in social media platforms, multi-agent LLM pipelines or autonomous robotics fleets. In these settings, system behavior emerges not from individual agents alone, but from the multi-agent interactions over time. Emergent dynamics of individuals in a social group have been long studied by social scientists in human contexts. \\textbf{This position paper argues that agentic AI systems must be modeled with social theory as a structural prior, and formalizes a Multi-Agent Social Systems (MASS) framework for how agents interact and influence to generate system-level outcomes.} We represent MASS as a class of dynamical system of information generation, local influence and interaction structure, formulated by four structural priors anchored in social theory: strategic heterogeneity, networked-constrained dependence, co-evolution and distributional instability. We demonstrate the importance of each structural prior through formal propositions, and articulate a research agenda for how MASS should be modeled, evaluated and governed.",
+      "keywords": [],
+      "doi": null,
+      "doi_url": null,
+      "url": "https://arxiv.org/abs/2605.07069",
+      "arxiv_url": null,
+      "pdf_url": "https://arxiv.org/pdf/2605.07069",
+      "publication_date": "2026-05-08",
+      "citation_count": 0,
+      "reference_count": null,
+      "venue": "ArXiv.org",
+      "authors": [
+        "Lynnette Hui Xian Ng",
+        "Iain J. Cruickshank",
+        "Adrian Xuan Wei Lim",
+        "Kathleen M. Carley"
+      ],
+      "subjects": [
+        "Social system",
+        "Epistemology",
+        "Sociology",
+        "Social relation",
+        "Social dynamics"
+      ],
+      "is_open_access": true,
+      "source": "openalex",
+      "confidence_score": 0.7374999999999999
+    }
   }
 }
