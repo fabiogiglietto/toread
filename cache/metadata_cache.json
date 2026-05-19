@@ -5248,5 +5248,32 @@
       "source": "crossref",
       "confidence_score": 0.8428571428571427
     }
+  },
+  "6025ea6fc62233ff": {
+    "entry_key": "Weinbrand2026-sf",
+    "entry_title": "Framing the future of search: A discourse analysis of Google’s AI Overviews",
+    "cached_at": "2026-05-19T06:30:31.360534",
+    "metadata": {
+      "abstract": "This study investigates how Google’s AI Overviews (AIOs) – a major shift in the search engine landscape – are discursively framed by three key actors: Google, tech journalists, and Search Engine Optimisation (SEO) marketers. Drawing on platform studies and discourse theory, we combine Leximancer concept mapping with Critical Discourse Analysis to examine how these stakeholders construct, legitimise, and contest the meaning of AIOs across a broad corpus of grey literature, media coverage, and corporate blogs. Our findings reveal four dominant thematic frames: Generative AI Technologies and AI-Platform Wars, Reconfiguring Search: Let Google Do the Searching for You, Commercial Implications of AIOs, and AI Overviews – Utopia versus Dystopia. While Google frames AIOs as seamless innovations that enhance the user experience, journalists highlight issues of misinformation and epistemic opacity, and SEO marketers focus on the economic and strategic disruptions to visibility and discoverability. Crucially, our analysis underscores the absence of the user’s voice and a lack of attention to democratic, societal and environmental implications of AI-generated summaries. By analysing the discourse surrounding AIOs, this paper demonstrates that AIOs are not merely a new feature, but rather part of a broader shift in platform power and control over online knowledge. We argue that AIOs represent a key moment in the transformation of search, reshaping how trust, authority, and visibility are defined and challenged in the age of AI.",
+      "keywords": [],
+      "doi": "10.1177/17504813261447684",
+      "doi_url": "https://doi.org/10.1177/17504813261447684",
+      "url": null,
+      "arxiv_url": null,
+      "pdf_url": null,
+      "publication_date": "2026-05-18",
+      "citation_count": 0,
+      "reference_count": 56,
+      "venue": "Discourse &amp; Communication",
+      "authors": [
+        "Shir Weinbrand",
+        "Ashwin Nagappa",
+        "Daniel Angus"
+      ],
+      "subjects": [],
+      "is_open_access": null,
+      "source": "crossref",
+      "confidence_score": 0.8428571428571427
+    }
   }
 }
