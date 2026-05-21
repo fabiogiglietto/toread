@@ -63,12 +63,16 @@ jobs:
         SLACK_TRIGGER_HASHTAG: ${{ vars.SLACK_TRIGGER_HASHTAG || '#zettelkasten' }}
       run: |
         python -m src.slack_ingest -v || true
-        # Did anything actually change on disk?
-        if [ -n "$(git status --porcelain data/slack_inbox.bib data/slack_state.json 2>/dev/null)" ]; then
-          echo "📥 Slack ingest produced changes"
+        # `slack_changed` gates feed regeneration AND the downstream
+        # cascade — so it must track only data/slack_inbox.bib (an actual
+        # new paper). data/slack_state.json moves on every channel message
+        # (cursor advance); it is still committed below, but it must not
+        # cascade.
+        if [ -n "$(git status --porcelain data/slack_inbox.bib 2>/dev/null)" ]; then
+          echo "📥 Slack ingest added a paper"
           echo "slack_changed=true" >> $GITHUB_OUTPUT
         else
-          echo "📥 Slack ingest produced no changes"
+          echo "📥 Slack ingest added no papers"
           echo "slack_changed=false" >> $GITHUB_OUTPUT
         fi
 
@@ -169,11 +173,15 @@ jobs:
     - name: Check for changes
       id: git-check
       run: |
-        # Ensure output directory exists and add generated files
+        # Ensure output directory exists and add generated files.
+        # NOTE: add each path on its own line — `git add a b` aborts the
+        # whole command if any pathspec is missing (e.g. slack_inbox.bib
+        # before the first suggestion), which would silently drop the
+        # other paths.
         mkdir -p output cache
-        git add data/paperpile_export.bib 2>/dev/null || true
-        git add data/slack_inbox.bib data/slack_state.json 2>/dev/null || true
-        git add output/feed.json output/feed.xml 2>/dev/null || true
+        for f in data/paperpile_export.bib data/slack_inbox.bib data/slack_state.json output/feed.json output/feed.xml; do
+          git add "$f" 2>/dev/null || true
+        done
         git add cache/ 2>/dev/null || true
 
         # Check if there are any staged changes
@@ -206,10 +214,14 @@ jobs:
         for i in {1..5}; do
           echo "Push attempt $i of 5..."
 
-          # Sync with remote before each attempt
+          # Sync with remote before each attempt. Per-file add — a missing
+          # pathspec (e.g. slack_inbox.bib) must not abort the whole add.
           git fetch origin main
           git reset --soft origin/main
-          git add data/paperpile_export.bib data/slack_inbox.bib data/slack_state.json output/feed.json output/feed.xml cache/ 2>/dev/null || true
+          for f in data/paperpile_export.bib data/slack_inbox.bib data/slack_state.json output/feed.json output/feed.xml; do
+            git add "$f" 2>/dev/null || true
+          done
+          git add cache/ 2>/dev/null || true
 
           # Check if there are actually changes to commit
           if git diff --staged --quiet; then
