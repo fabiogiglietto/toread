@@ -5337,5 +5337,33 @@
       "source": "crossref",
       "confidence_score": 0.8333333333333333
     }
+  },
+  "5f902bd3bf030182": {
+    "entry_key": "Grusauskaite2026-po",
+    "entry_title": "“We, the conspiracy theorists.” How people do symbolic boundary work in the “Great Reset” debates across social media platforms",
+    "cached_at": "2026-05-21T10:28:05.086685",
+    "metadata": {
+      "abstract": "Conspiracy theories spread rapidly on social media. A growing field of research has examined how social media platforms shape conspiracy narratives and cultures. However, this technological focus has largely overshadowed social media users’ own agency toward collective identity construction. This article examines how users in online conspiracy communities construct collective identities through symbolic boundary work. Focusing on discussions surrounding the “Great Reset” conspiracy theory, across six major social media platforms (Facebook, Instagram, Twitter/X, YouTube, Reddit, and TikTok), we use multimodal discourse analysis to analyze 630 posts and their comments. Our findings reveal that users do symbolic boundary work by defining themselves as “critical thinkers,” reclaiming the label “conspiracy theorist,” and affectively transforming personal struggles into shared narratives, creating a shared identity in contrast to the “mainstream other.” The study contributes to research on social media and conspiracy cultures by foregrounding identity over content, offering insight into how users build solidarity online.",
+      "keywords": [],
+      "doi": "10.1177/14614448261446590",
+      "doi_url": "https://doi.org/10.1177/14614448261446590",
+      "url": null,
+      "arxiv_url": null,
+      "pdf_url": null,
+      "publication_date": "2026-05-19",
+      "citation_count": 0,
+      "reference_count": 64,
+      "venue": "New Media &amp; Society",
+      "authors": [
+        "Kamile Grusauskaite",
+        "Matthias De Bondt",
+        "Lars de Wildt",
+        "Stef Aupers"
+      ],
+      "subjects": [],
+      "is_open_access": null,
+      "source": "crossref",
+      "confidence_score": 0.83
+    }
   }
 }
