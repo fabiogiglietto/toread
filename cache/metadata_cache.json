@@ -5306,5 +5306,36 @@
     "failed": true,
     "failure_reason": "Could not enrich entry: UnknownUnknown-db | No DOI available | Title length: 52 chars | No authors available | APIs: Crossref enabled, Semantic Scholar enabled, ArXiv enabled",
     "last_failure_at": "2026-05-20T18:37:49.782951"
+  },
+  "8a077b3683a99b7a": {
+    "entry_key": "Van_Erkel2026-mk",
+    "entry_title": "The hostile misinformation effect: How ideological congruence drives the assessment of misinformation targets",
+    "cached_at": "2026-05-21T06:31:57.614634",
+    "metadata": {
+      "abstract": null,
+      "keywords": [],
+      "doi": "10.1080/10584609.2026.2671760",
+      "doi_url": "https://doi.org/10.1080/10584609.2026.2671760",
+      "url": null,
+      "arxiv_url": null,
+      "pdf_url": null,
+      "publication_date": "2026-05-18",
+      "citation_count": 0,
+      "reference_count": 48,
+      "venue": "Political Communication",
+      "authors": [
+        "Patrick van Erkel",
+        "Michael Hameleers",
+        "Aqsa Farooq",
+        "Katjana Gattermann",
+        "Marina Tulin",
+        "Elske van den Hoogen",
+        "Claes de Vreese"
+      ],
+      "subjects": [],
+      "is_open_access": null,
+      "source": "crossref",
+      "confidence_score": 0.8333333333333333
+    }
   }
 }
