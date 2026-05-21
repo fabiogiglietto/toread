@@ -45,6 +45,33 @@ jobs:
     # Note: Cache is tracked in git, no need for actions/cache which can overwrite
     # the git-tracked cache with stale data
 
+    # Slack ingest: read messages tagged with the trigger hashtag (default
+    # `#zettelkasten`) from the configured channel, fetch a PDF (Slack
+    # attachment / ArXiv / Unpaywall), upload it to the dedicated Drive
+    # folder, and append a BibTeX entry to data/slack_inbox.bib.
+    # `continue-on-error: true` so a Slack/Drive outage cannot block the
+    # Paperpile refresh.
+    - name: Slack ingest (#zettelkasten suggestions)
+      id: slack-ingest
+      continue-on-error: true
+      env:
+        SLACK_BOT_TOKEN: ${{ secrets.SLACK_BOT_TOKEN }}
+        SLACK_TOREAD_CHANNEL_ID: ${{ secrets.SLACK_TOREAD_CHANNEL_ID }}
+        SLACK_INBOX_DRIVE_FOLDER_ID: ${{ secrets.SLACK_INBOX_DRIVE_FOLDER_ID }}
+        GOOGLE_CREDENTIALS_JSON: ${{ secrets.GOOGLE_CREDENTIALS_JSON }}
+        UNPAYWALL_EMAIL: ${{ secrets.UNPAYWALL_EMAIL }}
+        SLACK_TRIGGER_HASHTAG: ${{ vars.SLACK_TRIGGER_HASHTAG || '#zettelkasten' }}
+      run: |
+        python -m src.slack_ingest -v || true
+        # Did anything actually change on disk?
+        if [ -n "$(git status --porcelain data/slack_inbox.bib data/slack_state.json 2>/dev/null)" ]; then
+          echo "📥 Slack ingest produced changes"
+          echo "slack_changed=true" >> $GITHUB_OUTPUT
+        else
+          echo "📥 Slack ingest produced no changes"
+          echo "slack_changed=false" >> $GITHUB_OUTPUT
+        fi
+
     - name: Download Paperpile export
       run: |
         # Download fresh BibTeX export from Paperpile
@@ -108,7 +135,7 @@ jobs:
         "
     
     - name: Generate feeds (fast mode for scheduled runs)
-      if: github.event_name == 'schedule' && steps.bib-check.outputs.changed == 'true'
+      if: github.event_name == 'schedule' && (steps.bib-check.outputs.changed == 'true' || steps.slack-ingest.outputs.slack_changed == 'true')
       run: |
         echo "Running in fast mode for scheduled execution..."
         for i in {1..3}; do
@@ -121,7 +148,7 @@ jobs:
         done
     
     - name: Generate feeds (full enrichment)
-      if: github.event_name != 'schedule' && steps.bib-check.outputs.changed == 'true'
+      if: github.event_name != 'schedule' && (steps.bib-check.outputs.changed == 'true' || steps.slack-ingest.outputs.slack_changed == 'true')
       run: |
         echo "Running full enrichment for manual/push triggers..."
         for i in {1..3}; do
@@ -134,9 +161,9 @@ jobs:
         done
 
     - name: Skip feed generation (no changes)
-      if: steps.bib-check.outputs.changed != 'true'
+      if: steps.bib-check.outputs.changed != 'true' && steps.slack-ingest.outputs.slack_changed != 'true'
       run: |
-        echo "⏭️  Skipping feed generation - no changes in Paperpile export"
+        echo "⏭️  Skipping feed generation - no changes in Paperpile export or Slack inbox"
         echo "This saves execution time and API quota!"
     
     - name: Check for changes
@@ -145,6 +172,7 @@ jobs:
         # Ensure output directory exists and add generated files
         mkdir -p output cache
         git add data/paperpile_export.bib 2>/dev/null || true
+        git add data/slack_inbox.bib data/slack_state.json 2>/dev/null || true
         git add output/feed.json output/feed.xml 2>/dev/null || true
         git add cache/ 2>/dev/null || true
 
@@ -181,7 +209,7 @@ jobs:
           # Sync with remote before each attempt
           git fetch origin main
           git reset --soft origin/main
-          git add data/paperpile_export.bib output/feed.json output/feed.xml cache/ 2>/dev/null || true
+          git add data/paperpile_export.bib data/slack_inbox.bib data/slack_state.json output/feed.json output/feed.xml cache/ 2>/dev/null || true
 
           # Check if there are actually changes to commit
           if git diff --staged --quiet; then
@@ -223,7 +251,7 @@ jobs:
     # i.e. new or edited papers. bib-check is false for cache-only metadata
     # refreshes (e.g. citation-count updates), so those no longer cascade.
     - name: Trigger downstream pipeline (fg-zettelkasten summarize)
-      if: steps.bib-check.outputs.changed == 'true'
+      if: steps.bib-check.outputs.changed == 'true' || steps.slack-ingest.outputs.slack_changed == 'true'
       uses: peter-evans/repository-dispatch@v4
       with:
         token: ${{ secrets.PIPELINE_DISPATCH_TOKEN }}

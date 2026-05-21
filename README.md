@@ -1,12 +1,13 @@
 # ToRead - Academic Paper Feed Generator
 
-ToRead converts Paperpile BibTeX exports into RSS and JSON Feed formats, enriched with metadata from academic APIs. It automatically syncs with your Paperpile "To Read" folder and generates feeds that work with modern feed readers and academic workflow tools.
+ToRead converts Paperpile BibTeX exports into RSS and JSON Feed formats, enriched with metadata from academic APIs. It automatically syncs with your Paperpile "To Read" folder and generates feeds that work with modern feed readers and academic workflow tools. **It also ingests papers suggested in a Slack channel** (see "Slack ingestion" below).
 
 ## Features
 
 - **Dual Format Output**: Generates both JSON Feed (primary) and RSS (compatibility)
 - **Rich Metadata Enrichment**: Integrates with Crossref, OpenAlex, Semantic Scholar, and ArXiv APIs
 - **Smart Automatic Sync**: Monitors Paperpile exports every 30 minutes, only regenerates when content changes
+- **Slack ingestion**: Team members can suggest papers by tagging a message in `#toread` with `#zettelkasten`; PDFs come from the attachment or Unpaywall
 - **Performance Optimized**: Skips unnecessary processing when no new papers detected, saving execution time and API quota
 - **Academic Focus**: Includes citation counts, DOI links, PDF access, open access status, and venue information
 - **Robust Parsing**: Handles complex BibTeX files with LaTeX formatting and missing fields
@@ -502,6 +503,74 @@ ToRead includes several security measures:
 - Some papers may not be in academic databases
 - Preprint papers often have limited metadata
 - Check logs for API response details
+
+## Slack ingestion
+
+A second input path lets team members suggest papers directly from Slack.
+The `update_feed.yml` workflow runs `python -m src.slack_ingest` on every
+tick (30 min) and processes messages in the configured channel that contain
+the trigger hashtag (default `#zettelkasten`).
+
+### Flow
+
+1. Team member posts in `#toread` something like
+   `#zettelkasten https://doi.org/10.xxxx/yyyy` — optionally with the PDF
+   attached.
+2. `slack_ingest` picks up the message:
+   - **Attached PDF** → uploaded as `Author Year - Title.pdf` to the
+     dedicated Drive folder, and a BibTeX entry is appended to
+     `data/slack_inbox.bib`. The bot posts `✅ added as <bibkey>`.
+   - **No attachment, ArXiv URL** → fetches the PDF from
+     `arxiv.org/pdf/<id>.pdf`.
+   - **No attachment, DOI known** → queries Unpaywall; if a usable OA PDF
+     URL is returned and validates as a real PDF, ingests.
+   - **None of the above** → posts a threaded reply
+     `Couldn't find an open-access copy. Please attach the PDF…` and tracks
+     the message in `data/slack_state.json`. Subsequent ticks re-check the
+     thread for an attached PDF.
+
+### One-time setup
+
+1. **Create a Slack app** (https://api.slack.com/apps → "From scratch").
+2. **Bot scopes**: `channels:history`, `groups:history` (private channels),
+   `files:read`, `chat:write`, `chat:write.public`.
+3. **Install** to the workspace; grab the **Bot User OAuth Token**
+   (`xoxb-…`).
+4. **Invite the bot** to `#toread` (`/invite @your-bot`).
+5. **Create the Drive folder** that will hold Slack-suggested PDFs (e.g.
+   `Paperpile-Slack-Inbox/`), and grant the service account write access.
+6. **Add GitHub repo secrets** to the `toread` repo:
+   - `SLACK_BOT_TOKEN`
+   - `SLACK_TOREAD_CHANNEL_ID` (the channel ID, not its name)
+   - `SLACK_INBOX_DRIVE_FOLDER_ID`
+   - `GOOGLE_CREDENTIALS_JSON` (service-account JSON, raw)
+   - `UNPAYWALL_EMAIL` (optional but recommended)
+7. Optional repo variable: `SLACK_TRIGGER_HASHTAG` (defaults to
+   `#zettelkasten`).
+
+### Behaviour notes
+
+- The BibTeX key minted for Slack-origin entries is
+  `<AuthorSurname><Year>-sl<2hex>` — the `-sl` suffix distinguishes them
+  from Paperpile-minted `-xx` keys.
+- The bot ignores its own outbound digest and any message without the
+  trigger hashtag.
+- No Slack identities (user IDs, names) end up in the published `feed.json`.
+  The item carries `_slack_suggestion = {channel_id, ts, permalink,
+  pdf_source}` — see [SCHEMA.md](SCHEMA.md).
+- If the same paper is later added to Paperpile, the Paperpile entry wins
+  at merge time. Because Paperpile mints a different key, downstream
+  stages will re-summarize / re-podcast that paper once under the new key
+  — an accepted edge case.
+
+### Pending downstream tweak (follow-up)
+
+For Slack-suggested PDFs to feed into the downstream summarize / podcast
+stages, the `drive_client.py` in `fg-zettelkasten` and `research-radio`
+needs a ~10-line change to accept a list of folder IDs (so both the
+Paperpile folder and the Slack-inbox folder are searched). Until that
+ships, Slack-suggested papers are summarized from the abstract only and
+skipped by `research-radio`.
 
 ## Contributing
 

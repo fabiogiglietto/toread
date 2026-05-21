@@ -18,13 +18,18 @@ class FeedGenerator:
                  feed_link: str = "https://github.com/user/toread",
                  feed_language: str = "en-us",
                  author_name: str = "ToRead Bot",
-                 author_url: str = None):
+                 author_url: str = None,
+                 slack_meta: Optional[Dict[str, dict]] = None):
         self.feed_title = feed_title
         self.feed_description = feed_description
         self.feed_link = feed_link
         self.feed_language = feed_language
         self.author_name = author_name
         self.author_url = author_url or feed_link
+        # bibkey -> {channel_id, ts, permalink, pdf_source} for Slack-origin
+        # entries. Used to emit the `_slack_suggestion` item extension.
+        # No suggester identity is included — it stays in slack_state.json.
+        self.slack_meta = slack_meta or {}
     
     def _sort_entries_by_discovery_date(self, entries: List[BibEntry]) -> List[BibEntry]:
         """Sort entries by discovery date in reverse chronological order (newest discoveries first)."""
@@ -139,7 +144,18 @@ class FeedGenerator:
         extensions = self._get_academic_extensions(entry, metadata)
         if extensions:
             item["_academic"] = extensions
-        
+
+        # Slack-origin extension — only when this entry came from a
+        # `#zettelkasten` suggestion. Strip any suggester identity.
+        if entry.source == "slack":
+            sm = self.slack_meta.get(entry.key)
+            if sm:
+                item["_slack_suggestion"] = {
+                    k: v for k, v in sm.items()
+                    if k in ("channel_id", "ts", "permalink", "pdf_source")
+                    and v is not None
+                }
+
         return item
     
     def _add_channel_metadata(self, channel: ET.Element) -> None:

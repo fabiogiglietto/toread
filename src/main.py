@@ -11,6 +11,7 @@ from typing import Optional, Dict, Any
 import yaml
 
 from .bibtex_parser import BibTeXParser
+from .bib_loader import load_sources
 from .metadata_enricher import MetadataEnricher
 from .rss_generator import FeedGenerator
 from .cache import DiscoveryCache
@@ -119,7 +120,8 @@ class ToReadApp:
     def __init__(self, enrich_metadata: bool = True, crossref_config: dict = None,
                  semantic_scholar_config: dict = None, arxiv_config: dict = None,
                  openalex_config: dict = None, cache_config: dict = None,
-                 skip_cached_enrichment: bool = False):
+                 skip_cached_enrichment: bool = False,
+                 extra_sources: Optional[list] = None):
         self.bibtex_parser = BibTeXParser()
         self.metadata_enricher = MetadataEnricher(
             crossref_config, semantic_scholar_config, arxiv_config, openalex_config, cache_config
@@ -127,24 +129,31 @@ class ToReadApp:
         self.feed_generator = FeedGenerator()
         self.skip_cached_enrichment = skip_cached_enrichment
         self.discovery_cache = DiscoveryCache("cache/discovery_cache.json")
+        # Additional `(path, source_tag)` pairs merged into the primary
+        # bibtex_file at conversion time. Configured via `sources` in
+        # config.yml. Falsy → behaviour is unchanged from single-file mode.
+        self.extra_sources = list(extra_sources or [])
     
     def convert_bibtex_to_feeds(self, bibtex_file: str, 
                                json_output_file: Optional[str] = None,
                                rss_output_file: Optional[str] = None) -> tuple[str, str]:
         """Convert a BibTeX file to RSS and JSON Feed formats."""
-        print(f"Parsing BibTeX file: {bibtex_file}")
-        
-        # Parse BibTeX file
+        # Build the full source list: the positional bibtex_file (tagged
+        # "paperpile") plus any extras configured in config.yml. The
+        # `load_sources` helper de-dups across files (Paperpile wins).
+        sources = [(bibtex_file, "paperpile"), *self.extra_sources]
+        print(f"Loading BibTeX sources: {[s[0] for s in sources]}")
+
         try:
-            entries = self.bibtex_parser.parse_file(bibtex_file)
-            print(f"Found {len(entries)} entries")
-            
+            entries = load_sources(sources)
+            print(f"Found {len(entries)} entries (after de-dup)")
+
             # Set discovery dates for all entries
             entries = self.bibtex_parser.set_discovery_dates(entries, self.discovery_cache)
             self.discovery_cache.save_cache()
-            
+
         except Exception as e:
-            print(f"Error parsing BibTeX file: {e}")
+            print(f"Error loading BibTeX sources: {e}")
             return "", ""
         
         if not entries:
@@ -395,7 +404,14 @@ Examples:
         'cache_file': f'{cache_dir}/metadata_cache.json',
         'cache_duration_days': 30
     }
-    
+
+    # Optional extra bib sources, e.g. data/slack_inbox.bib produced by
+    # `src.slack_ingest`. Configured in config.yml under `sources:`.
+    extra_sources = []
+    for src in config.get('sources', []) or []:
+        if isinstance(src, dict) and src.get('path'):
+            extra_sources.append((src['path'], src.get('tag', 'extra')))
+
     # Create application instance
     app = ToReadApp(
         enrich_metadata=not args.no_enrich,
@@ -404,13 +420,27 @@ Examples:
         arxiv_config=arxiv_config,
         openalex_config=openalex_config,
         cache_config=cache_config,
-        skip_cached_enrichment=args.skip_cached_enrichment
+        skip_cached_enrichment=args.skip_cached_enrichment,
+        extra_sources=extra_sources,
     )
     
     # Set feed generator parameters
     app.feed_generator.feed_title = args.feed_title
     app.feed_generator.feed_description = args.feed_description
     app.feed_generator.feed_link = args.feed_link
+
+    # Load Slack-suggestion metadata so the feed generator can emit the
+    # `_slack_suggestion` extension on Slack-origin items. Missing file is
+    # the common case — pipeline runs before any suggestion exists.
+    slack_state_path = Path("data/slack_state.json")
+    if slack_state_path.exists():
+        try:
+            import json as _json
+            with open(slack_state_path, "r", encoding="utf-8") as _f:
+                _slack_state = _json.load(_f) or {}
+            app.feed_generator.slack_meta = _slack_state.get("processed_meta") or {}
+        except Exception as e:
+            print(f"Warning: failed to load {slack_state_path}: {e}")
     
     # Convert BibTeX to feeds
     try:

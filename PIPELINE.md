@@ -6,7 +6,7 @@ re-describing the pipeline, so there is one source of truth.
 
 Repos:
 
-- **toread** — Paperpile BibTeX → enriched JSON feed
+- **toread** — Paperpile BibTeX + Slack `#zettelkasten` suggestions → enriched JSON feed
 - **research-radio** — feed → AI-generated podcast episodes
 - **fabiogiglietto.github.io** — academic website
 - **fg-zettelkasten** — Obsidian Zettelkasten vault
@@ -21,7 +21,7 @@ podcast, and the note/Slack after it. fg-zettelkasten's work is split into a
 `summarize` stage (early) and an `update` stage (late):
 
 ```
-toread                       Paperpile -> output/feed.json
+toread                       Paperpile + Slack #zettelkasten -> output/feed.json
   |  new / edited papers
   v
 fg-zettelkasten : summarize   feed -> data/summaries/<key>.json     (stage 1)
@@ -43,7 +43,7 @@ deployable.
 
 | Stage                      | Consumes                                                        | Produces                              |
 |----------------------------|-----------------------------------------------------------------|---------------------------------------|
-| toread                     | Paperpile BibTeX export                                         | `output/feed.json`                    |
+| toread                     | Paperpile BibTeX export + Slack `#zettelkasten` suggestions     | `output/feed.json`                    |
 | fg-zettelkasten : summarize| feed, Paperpile Drive PDFs                                      | `data/summaries/<key>.json`           |
 | research-radio             | feed, fg-zettelkasten summaries, Drive PDFs                     | `docs/episodes.json` + audio Releases |
 | github.io                  | feed, research-radio episodes                                   | the website                           |
@@ -54,10 +54,13 @@ contract is specified in `SCHEMA.md`.
 
 ## Orchestration — event-driven chain
 
-`toread` polls Paperpile every 30 min (it is the clock). When a run detects a
-change in the **Paperpile library** — new or edited papers, via the `bib-check`
-step; cache-only metadata refreshes such as citation-count updates do **not**
-cascade — it fires a `repository_dispatch` event down the chain. Each stage
+`toread` polls Paperpile every 30 min (it is the clock). It also polls the
+`#toread` Slack channel for messages tagged `#zettelkasten`; see
+`src/slack_ingest.py`. When a run detects either a change in the **Paperpile
+library** (new or edited papers, via the `bib-check` step) **or** new entries
+in `data/slack_inbox.bib` (via the `slack-ingest` step), it fires a
+`repository_dispatch` event down the chain. Cache-only metadata refreshes
+such as citation-count updates do **not** cascade. Each stage
 runs on its event and dispatches the next, so the pipeline runs in strict
 topological order and only when there is genuinely new input.
 

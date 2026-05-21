@@ -6,6 +6,8 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 
 ToRead is an academic paper feed generator that converts Paperpile BibTeX exports into RSS and JSON Feed formats, enriched with metadata from academic APIs (Crossref, OpenAlex, Semantic Scholar, ArXiv). The application processes academic bibliographic data and generates feeds for consumption by feed readers and academic workflow tools.
 
+A second input path lets team members suggest papers from the `#toread` Slack channel by tagging a message with `#zettelkasten`; see [README.md](README.md) for the user-facing flow and `src/slack_ingest.py` for the implementation.
+
 ## Pipeline position
 
 ToRead is the **root** of a four-repo pipeline:
@@ -79,7 +81,11 @@ pytest tests/test_utils.py -v
 
 ### Core Components
 
-**BibTeXParser** (`src/bibtex_parser.py`): Robust BibTeX parsing with error handling for malformed entries, LaTeX formatting, and missing fields. Outputs structured `BibEntry` objects.
+**BibTeXParser** (`src/bibtex_parser.py`): Robust BibTeX parsing with error handling for malformed entries, LaTeX formatting, and missing fields. Outputs structured `BibEntry` objects. Each entry carries an optional `source` tag ("paperpile" / "slack") set by `bib_loader.py`.
+
+**BibLoader** (`src/bib_loader.py`): Loads multiple BibTeX files (Paperpile + Slack inbox) into one stream, de-duplicates by DOI then by `(normalized title, first-author surname, year)`. Paperpile wins on collision. Used by `src/main.py`.
+
+**SlackIngestor** (`src/slack_ingest.py`): Polls the `#toread` channel each CI tick. Messages with the trigger hashtag (`#zettelkasten`) are resolved to a paper + PDF (Slack attachment → ArXiv direct → Unpaywall) and written into `data/slack_inbox.bib`. Posts a threaded reply if no PDF is obtainable, then re-checks the thread on subsequent ticks for an attached PDF. State lives in `data/slack_state.json`. Leaf modules: `src/unpaywall_client.py`, `src/pdf_validator.py`, `src/drive_uploader.py`.
 
 **MetadataEnricher** (`src/metadata_enricher.py`): Multi-API client system that enriches bibliographic entries with:
 - Crossref API: Publication metadata, DOI resolution, venue information

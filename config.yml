@@ -1,6 +1,31 @@
 # ToRead Configuration File
 # Configuration for converting Paperpile BibTeX exports to RSS feeds
 
+# Additional BibTeX sources merged with the primary `bibtex_file` argument.
+# De-dup at merge time prefers the primary (Paperpile) entry when DOIs or
+# (title, first-author, year) collide — see src/bib_loader.py.
+#
+# `data/slack_inbox.bib` is populated by `python -m src.slack_ingest` from
+# messages tagged with the configured trigger hashtag in the Slack channel.
+sources:
+  - path: "data/slack_inbox.bib"
+    tag: "slack"
+
+# Slack ingestion — see src/slack_ingest.py. All values are read from
+# environment variables in CI; this block exists for documentation.
+# Required env: SLACK_BOT_TOKEN, SLACK_TOREAD_CHANNEL_ID,
+#               SLACK_INBOX_DRIVE_FOLDER_ID, GOOGLE_CREDENTIALS_JSON
+# Optional env: UNPAYWALL_EMAIL (enables OA fallback),
+#               SLACK_TRIGGER_HASHTAG (default `#zettelkasten`),
+#               SLACK_CONFIRM_ON_SUCCESS (default `true`)
+slack:
+  trigger_hashtag: "#zettelkasten"
+
+# Unpaywall — used by slack_ingest to find an OA PDF when no PDF is attached
+# to the Slack message. The polite-pool email is the only credential.
+unpaywall:
+  email: "${UNPAYWALL_EMAIL}"
+
 # Paperpile Configuration
 paperpile:
   # Paperpile folder/library settings

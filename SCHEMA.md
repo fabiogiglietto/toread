@@ -61,6 +61,7 @@ ToRead extensions (`_`-prefixed — do not assume a generic reader keeps these):
 | `_discovery_date`  | string  | When ToRead first saw this paper (RFC 3339 UTC)    |
 | `_date_estimated`  | boolean | `true` if `date_published` was inferred            |
 | `_academic`        | object  | See below                                          |
+| `_slack_suggestion`| object  | Present iff this paper entered via a Slack `#zettelkasten` suggestion; see below |
 
 ### `_academic` object
 
@@ -82,6 +83,23 @@ Consumers must tolerate any subset.
 | `confidence_score` | number  | 0–1, match confidence                          |
 | `quality_score`    | number  | 0–100, metadata completeness                   |
 | `quality_issues`   | array   | Strings describing metadata gaps               |
+
+### `_slack_suggestion` object
+
+Emitted only for items whose BibTeX source is the Slack inbox
+(`data/slack_inbox.bib`, populated by `src/slack_ingest.py`). The object
+deliberately omits any suggester identity — that stays in
+`data/slack_state.json` and never reaches the published feed.
+
+| Field        | Type   | Notes                                                  |
+|--------------|--------|--------------------------------------------------------|
+| `channel_id` | string | Slack channel ID (typically `#zettelkasten` / `#toread`) |
+| `ts`         | string | Slack message timestamp (`seconds.microseconds`)        |
+| `permalink`  | string | Slack message permalink (may be absent on dry-runs)     |
+| `pdf_source` | string | `slack_attachment` \| `arxiv` \| `unpaywall` \| `slack_attachment_followup` |
+
+Consumers can use this to render a "Suggested via Slack" badge or to link
+back to the original message.
 
 ## Consumer expectations
 

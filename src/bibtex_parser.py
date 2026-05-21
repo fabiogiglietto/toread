@@ -32,6 +32,9 @@ class BibEntry:
     publisher: Optional[str] = None
     discovery_date: Optional[datetime] = None
     raw_fields: Dict[str, str] = field(default_factory=dict)
+    # Origin of the entry — useful when we merge multiple .bib files (e.g.
+    # "paperpile", "slack"). None means unspecified (back-compat).
+    source: Optional[str] = None
 
 
 class BibTeXParser:
