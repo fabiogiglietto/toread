@@ -5393,5 +5393,30 @@
       "source": "crossref",
       "confidence_score": 0.86
     }
+  },
+  "5b8ab398eaf6db12": {
+    "entry_key": "Hepp2026-oi",
+    "entry_title": "The imaginative landscape of AI: Locating Silicon Valley’s “quiet futuring”",
+    "cached_at": "2026-05-26T19:31:03.729649",
+    "metadata": {
+      "abstract": "Analyses of AI power geometries have so far predominantly focused on the perspectives of Silicon Valley’s Big Tech and its “loud futuring” of AI. However, for comprehending Silicon Valley’s imaginaries surrounding AI, an analysis of the “quiet futuring” of AI-related groups and communities in the San Francisco Bay Area is equally essential because they are an integral part of its imaginative landscape of AI. Based on an ethnographic study conducted between December 2024 and February 2026, this article reveals how Silicon Valley’s imaginative landscape of AI is anchored in appropriated places, constructed within specific social figurations, and characterized by distinct discursive thickenings. Although this landscape may at first appear fragmented or even contradictory, taken together, it forms a coherent “quiet futuring” of AI. The associated visions extend beyond the technology itself, focusing instead on the potential futures it presents. Three themes dominate these visions: the possible futures of AGI, the possible futures of job loss, and the possible futures of AI geopolitics. With such an analysis, the article contributes to the discussion in “Media, Culture &amp; Society” about the power geometries of AI by showing how Silicon Valley’s agency also refers to the local anchoring of AI’s imaginative landscape.",
+      "keywords": [],
+      "doi": "10.1177/01634437261454515",
+      "doi_url": "https://doi.org/10.1177/01634437261454515",
+      "url": null,
+      "arxiv_url": null,
+      "pdf_url": null,
+      "publication_date": "2026-05-22",
+      "citation_count": 0,
+      "reference_count": 64,
+      "venue": "Media, Culture &amp; Society",
+      "authors": [
+        "Andreas Hepp"
+      ],
+      "subjects": [],
+      "is_open_access": null,
+      "source": "crossref",
+      "confidence_score": 0.8999999999999999
+    }
   }
 }
