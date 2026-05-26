@@ -71,364 +71,6 @@
     "failure_reason": "Could not enrich entry: Vincent_undated-re | No DOI available | Title length: 82 chars | Authors: Vincent, Emmanuel, Crisan, Daiana | APIs: Crossref enabled, Semantic Scholar enabled, ArXiv enabled",
     "last_failure_at": "2026-05-20T18:37:46.703874"
   },
-  "88f2087844cd43bc": {
-    "entry_key": "Wang2026-ub",
-    "entry_title": "The failed migration of academic Twitter: A case study of precocious adopters",
-    "cached_at": "2026-04-23T12:56:55.143487",
-    "metadata": {
-      "abstract": "Following changes in Twitter's ownership in 2022 and subsequent changes to content moderation policies, many in academia looked to move their discourse elsewhere and migration to Mastodon was pursued by some. Our study examines the behavior of a self-organized group of early academic adopters who joined Mastodon following changes in Twitter's ownership. Utilizing publicly available user account data drawn from a voluntarily curated list of academics, we track the posting activity of these early adopters on Mastodon over a one year period. We also study follower-followee and interaction relationships to map internal networks, finding that the subset of academics who migrated to Mastodon were well-connected. However, this strong internal connectivity was insufficient to prevent users from returning to Twitter/X. Our analyses show that early adopters struggled to maintain engagement, shaped by Mastodon's decentralized design and competition from alternatives such as Bluesky and Threads. The migration effort lost momentum after an initial surge, as most early adopters reduced activity or returned to Twitter. Our survival analysis further reveals that retention is strongly linked to diverse cross-server engagement and topic-server communities. Users with large pre-existing Twitter presence face significantly higher attrition risk, highlighting the challenge of replicating established social connections in decentralized ecosystem. By examining the coordinated migration attempt of early adopters, we find that even this highly motivated group faced substantial challenges, suggesting that later or less coordinated efforts would likely encounter even greater barriers.",
-      "keywords": [],
-      "doi": null,
-      "doi_url": null,
-      "url": null,
-      "arxiv_url": "http://arxiv.org/abs/2406.04005v3",
-      "pdf_url": "https://arxiv.org/pdf/2406.04005v3",
-      "publication_date": "2024-06-06",
-      "citation_count": null,
-      "reference_count": null,
-      "venue": null,
-      "authors": [
-        "Xinyu Wang",
-        "Sai Koneru",
-        "Sarah Rajtmajer"
-      ],
-      "subjects": [
-        "cs.SI"
-      ],
-      "is_open_access": true,
-      "source": "arxiv",
-      "confidence_score": 0.7428571428571428
-    }
-  },
-  "466ae68d0651c694": {
-    "entry_key": "Efstratiou2026-ij",
-    "entry_title": "Information pathways in online science communication: The role of platform actors and news media",
-    "cached_at": "2026-04-23T12:56:58.301093",
-    "metadata": {
-      "abstract": "Online discussions of science involve complex interactions among experts, news media, and social media users as they interpret and disseminate scientific findings. While prior work has examined these actors in isolation, their interplay in shaping science communication remains poorly understood. Using the COVID-19 pandemic as a case study, we analyze 1.24M tweets and 211k news articles that reference pandemic-related scientific papers. We find that the most influential Twitter accounts in this discourse are predominantly individuals with medical or research credentials. However, we also identify a coordinated network that disproportionately amplifies a small set of prominent credentialed experts who advance contrarian, anti-consensus positions on vaccines, lockdowns, and related topics. The papers promoted by these influential actors substantially overlap with those covered by news media, but with key differences: pro-consensus experts primarily engage with studies featured by mainstream and medical outlets, whereas contrarian experts align more closely with papers promoted by low-quality, pseudoscientific, or conspiratorial sources. Notably, news outlets tend to report on scientific studies after they have been highlighted by social media superspreaders. Together, these findings reveal multi-level pathways of information flow and coordinated amplification structures that shape science communication across social media and news, offering new insights into the dynamics of the broader information ecosystem.",
-      "keywords": [],
-      "doi": null,
-      "doi_url": null,
-      "url": null,
-      "arxiv_url": "http://arxiv.org/abs/2603.17249v1",
-      "pdf_url": "https://arxiv.org/pdf/2603.17249v1",
-      "publication_date": "2026-03-18",
-      "citation_count": null,
-      "reference_count": null,
-      "venue": null,
-      "authors": [
-        "Alexandros Efstratiou",
-        "Giuseppe Russo",
-        "Luca Luceri"
-      ],
-      "subjects": [
-        "cs.SI",
-        "cs.CY"
-      ],
-      "is_open_access": true,
-      "source": "arxiv",
-      "confidence_score": 0.7428571428571428
-    }
-  },
-  "53df38ca99f7b779": {
-    "entry_key": "Gauthier2026-iq",
-    "entry_title": "The political effects of X’s feed algorithm",
-    "cached_at": "2026-04-23T12:56:58.545275",
-    "metadata": {
-      "abstract": null,
-      "keywords": [],
-      "doi": "10.1038/s41586-026-10098-2",
-      "doi_url": "https://doi.org/10.1038/s41586-026-10098-2",
-      "url": null,
-      "arxiv_url": null,
-      "pdf_url": null,
-      "publication_date": "2026-04-09",
-      "citation_count": 1,
-      "reference_count": 47,
-      "venue": "Nature",
-      "authors": [
-        "Germain Gauthier",
-        "Roland Hodler",
-        "Philine Widmer",
-        "Ekaterina Zhuravskaya"
-      ],
-      "subjects": [],
-      "is_open_access": null,
-      "source": "crossref",
-      "confidence_score": 0.8333333333333333
-    }
-  },
-  "7a846947acf48197": {
-    "entry_key": "Balluff2026-if",
-    "entry_title": "Newer, larger, better? A critique of the unreflective LLM adoption in communication research",
-    "cached_at": "2026-04-23T12:57:01.462804",
-    "metadata": {
-      "abstract": null,
-      "keywords": [],
-      "doi": "10.1080/10584609.2026.2618486",
-      "doi_url": "https://doi.org/10.1080/10584609.2026.2618486",
-      "url": null,
-      "arxiv_url": null,
-      "pdf_url": null,
-      "publication_date": "2026-02-20",
-      "citation_count": 0,
-      "reference_count": 38,
-      "venue": "Political Communication",
-      "authors": [
-        "Paul Balluff",
-        "Justin Chun-ting Ho",
-        "Johannes B. Gruber",
-        "Sean Palicki",
-        "Alexis Palmer",
-        "Luca Rossi",
-        "Irina Shklovski",
-        "Chung-hong Chan"
-      ],
-      "subjects": [],
-      "is_open_access": null,
-      "source": "crossref",
-      "confidence_score": 0.8157894736842105
-    }
-  },
-  "03bac3b5433b4b2f": {
-    "entry_key": "Rothut2026-wt",
-    "entry_title": "Radicalization and the internet: 25 years of (online) radicalization research",
-    "cached_at": "2026-04-23T12:57:04.699690",
-    "metadata": {
-      "abstract": null,
-      "keywords": [],
-      "doi": "10.1080/10714421.2026.2658935",
-      "doi_url": "https://doi.org/10.1080/10714421.2026.2658935",
-      "url": null,
-      "arxiv_url": null,
-      "pdf_url": null,
-      "publication_date": "2026-04-22",
-      "citation_count": 0,
-      "reference_count": 165,
-      "venue": "The Communication Review",
-      "authors": [
-        "Sophia Rothut",
-        "Heidi Schulze",
-        "Julian Hohner",
-        "Simon Greipl",
-        "Diana Rieger"
-      ],
-      "subjects": [],
-      "is_open_access": null,
-      "source": "crossref",
-      "confidence_score": 0.8272727272727272
-    }
-  },
-  "25585654a9878a3d": {
-    "entry_key": "Dierickx2026-tw",
-    "entry_title": "What is a fact in the age of generative AI? Fact-checking as an epistemological lens",
-    "cached_at": "2026-04-23T12:57:08.379478",
-    "metadata": {
-      "abstract": null,
-      "keywords": [],
-      "doi": "10.1080/1369118x.2026.2630697",
-      "doi_url": "https://doi.org/10.1080/1369118x.2026.2630697",
-      "url": null,
-      "arxiv_url": null,
-      "pdf_url": null,
-      "publication_date": "2026-02-16",
-      "citation_count": 0,
-      "reference_count": 76,
-      "venue": "Information, Communication &amp; Society",
-      "authors": [
-        "Laurence Dierickx",
-        "Andreas L. Opdahl",
-        "Fredrik Bjerknes",
-        "Carl-Gustav Lindén"
-      ],
-      "subjects": [],
-      "is_open_access": null,
-      "source": "crossref",
-      "confidence_score": 0.83
-    }
-  },
-  "c35a283f3579db9d": {
-    "entry_key": "Shi2026-ko",
-    "entry_title": "The Governance-Embedded Interactive Media Effect: the role of AI-generated disclosure in user credibility and engagement based on fact-checking videos on Chinese TikTok (Douyin)",
-    "cached_at": "2026-04-23T12:57:11.559187",
-    "metadata": {
-      "abstract": null,
-      "keywords": [],
-      "doi": "10.1080/17544750.2026.2623075",
-      "doi_url": "https://doi.org/10.1080/17544750.2026.2623075",
-      "url": null,
-      "arxiv_url": null,
-      "pdf_url": null,
-      "publication_date": "2026-02-13",
-      "citation_count": 0,
-      "reference_count": 49,
-      "venue": "Chinese Journal of Communication",
-      "authors": [
-        "Yiru Shi"
-      ],
-      "subjects": [],
-      "is_open_access": null,
-      "source": "crossref",
-      "confidence_score": 0.8999999999999999
-    }
-  },
-  "c4b0b0077b06cd02": {
-    "entry_key": "Farkas2026-lr",
-    "entry_title": "Defending fact-checking partnerships with platform companies: ‘We can't fight alone against disinformation’",
-    "cached_at": "2026-04-23T12:57:14.307836",
-    "metadata": {
-      "abstract": "This article investigates how professional fact-checkers defend collaborations with major platform companies such as Meta, Alphabet, and ByteDance. Drawing on 12 qualitative interviews with European fact-checkers, the study applies rhetorical apologia theory to analyse recurring justificatory arguments. We identify four modes of differentiation and three modes of transcendence employed by fact-checkers. Arguments of differentiation involve distancing fact-checking from platform company partners to emphasise editorial independence; distinguishing between different platform companies to legitimise partnerships with certain actors while rejecting others (notably TikTok owned by ByteDance); separating platform companies as a whole and specific employees within them; and contrasting platform funding with state funding to defend the former as less compromising for editorial autonomy. Arguments of transcendence invoke counter-factual scenarios of unmitigated misinformation; appealing to broader alliances against disinformation; and highlighting the potential for improving platform companies from within. These findings contribute to existing scholarship by unpacking how fact-checkers negotiate the complex institutional dependencies of platform company partnerships by simultaneously acknowledging risks and asserting pragmatic necessity. As such, the study provides a deeper understanding of the challenges facing fact-checking organisations and their efforts to establish legitimacy as epistemic authorities in the boundary terrain shared with other key actors in today's media landscape.",
-      "keywords": [],
-      "doi": "10.1177/02673231261422085",
-      "doi_url": "https://doi.org/10.1177/02673231261422085",
-      "url": null,
-      "arxiv_url": null,
-      "pdf_url": null,
-      "publication_date": "2026-02-16",
-      "citation_count": 0,
-      "reference_count": 50,
-      "venue": "European Journal of Communication",
-      "authors": [
-        "Johan Farkas",
-        "Mette Bengtsson"
-      ],
-      "subjects": [],
-      "is_open_access": null,
-      "source": "crossref",
-      "confidence_score": 0.86
-    }
-  },
-  "8238adeeb16e0d15": {
-    "entry_key": "Stanusch2026-ec",
-    "entry_title": "How AI is imagined by industry during the Sam Altman controversy",
-    "cached_at": "2026-04-23T12:57:16.640706",
-    "metadata": {
-      "abstract": null,
-      "keywords": [],
-      "doi": "10.31124/advance.174979411.18178682/v1",
-      "doi_url": "https://doi.org/10.31124/advance.174979411.18178682/v1",
-      "url": null,
-      "arxiv_url": null,
-      "pdf_url": null,
-      "publication_date": null,
-      "citation_count": 1,
-      "reference_count": 0,
-      "venue": null,
-      "authors": [
-        "Natalia Stanusch",
-        "Richard Rogers"
-      ],
-      "subjects": [],
-      "is_open_access": null,
-      "source": "crossref",
-      "confidence_score": 0.86
-    }
-  },
-  "f2c3c073e07cd98e": {
-    "entry_key": "De2026-ld",
-    "entry_title": "The discursive flexibility of changecraft: Platform change discourse in Meta, TikTok, YouTube, and X",
-    "cached_at": "2026-04-23T12:57:20.010085",
-    "metadata": {
-      "abstract": "Social media platforms evolve rapidly. While platform studies have often analyzed specific policy or feature changes, there remains a lack of shared language to conceptualize how platforms themselves represent such changes. In this article, we analyze public communications from Meta, YouTube, X, and TikTok to examine how platforms construct and justify change. We explicate platform evolution as a technical but also deeply discursive process. Platforms frame their transformations in interesting ways, especially if these shifts consolidate power or deepen user dependence. We introduce the concept of changecraft : the strategic discursive practices through which platforms manage, legitimize, and normalize change. Changecraft encompasses the rendering of infrastructural shifts as visible, the framing of ideological pivots as continuity, and the deployment of patchworked updates to subtly reorient platform futures. This framework provides scholars a way to interrogate platform change not just by what changes but by how platforms seek to make change meaningful and acceptable to their publics.",
-      "keywords": [],
-      "doi": "10.1177/29768624251408212",
-      "doi_url": "https://doi.org/10.1177/29768624251408212",
-      "url": null,
-      "arxiv_url": null,
-      "pdf_url": null,
-      "publication_date": "2026",
-      "citation_count": 1,
-      "reference_count": 57,
-      "venue": "Platforms &amp; Society",
-      "authors": [
-        "Ankolika De",
-        "Kelley Cotter"
-      ],
-      "subjects": [],
-      "is_open_access": null,
-      "source": "crossref",
-      "confidence_score": 0.86
-    }
-  },
-  "fd4659dec0367388": {
-    "entry_key": "Ahuja2025-ku",
-    "entry_title": "Dark patterns and the EU digital services act: Mapping autonomy violations and design factors",
-    "cached_at": "2026-04-23T12:57:23.026565",
-    "metadata": {
-      "abstract": null,
-      "keywords": [],
-      "doi": "10.2139/ssrn.5555765",
-      "doi_url": "https://doi.org/10.2139/ssrn.5555765",
-      "url": null,
-      "arxiv_url": null,
-      "pdf_url": null,
-      "publication_date": null,
-      "citation_count": 0,
-      "reference_count": 0,
-      "venue": null,
-      "authors": [
-        "Sanju Ahuja",
-        "Johanna Gunawan",
-        "Nataliia Bielova",
-        "Cristiana Santos"
-      ],
-      "subjects": [],
-      "is_open_access": null,
-      "source": "crossref",
-      "confidence_score": 0.8333333333333333
-    }
-  },
-  "0f1f978a541ffd0c": {
-    "entry_key": "Tornberg2026-lc",
-    "entry_title": "Towards a Post-Social Media Studies",
-    "cached_at": "2026-04-24T11:07:03.109366",
-    "metadata": {
-      "abstract": "For two decades, \"social media\" has been the master lens through which scholars have understood digital communication—an era defined by user-generated content, networked publics, and participatory culture. That era is drawing to a close. This paper argues that three interrelated dynamics are dissolving the social media paradigm: an algorithmic shift from social-graph-based to interest-based recommendation, which is remaking the active \"user\" into a passive \"viewer\"; the generative AI revolution, which is replacing user-generated content with synthetic media and decoupling platforms from any dependence on human participation; and an exodus from public platforms toward private, closed spaces. Together, these dynamics are giving rise to three distinct post-social formations: algorithmically governed broadcasting platforms, semi-private spheres and micro-communities, and AI-mediated communication as a new media form in its own right. Understanding this transformation demands a fundamental reorientation of the field—new conceptual tools that move beyond networked publics and participatory culture, new methods suited to synthetic and ephemeral media environments, and renewed attention to the political stakes of communication systems that no longer require human participation.",
-      "keywords": [],
-      "doi": "10.31235/osf.io/6nue7_v1",
-      "doi_url": "https://doi.org/10.31235/osf.io/6nue7_v1",
-      "url": null,
-      "arxiv_url": null,
-      "pdf_url": null,
-      "publication_date": null,
-      "citation_count": 0,
-      "reference_count": 0,
-      "venue": null,
-      "authors": [
-        "Petter Törnberg",
-        "Richard Rogers"
-      ],
-      "subjects": [],
-      "is_open_access": null,
-      "source": "crossref",
-      "confidence_score": 0.86
-    }
-  },
-  "b91474d33e6ce482": {
-    "entry_key": "Gerbaudo2026-fo",
-    "entry_title": "TikTok and the algorithmic transformation of social media publics: From social networks to social interest clusters",
-    "cached_at": "2026-04-25T08:39:39.791501",
-    "metadata": {
-      "abstract": "The rise of TikTok has sparked a debate on the consequences of algorithmic content curation for social experience. My thesis is that TikTok represents a second generation of social media, which differs from first-generation social media in the way users are exposed to content. While first-generation social media revolved around ‘networked publics’ formed by explicit interpersonal connections, second-generation social media introduces ‘clustered publics’. These are statistically constructed ‘neighbourhoods’ of users, in which people are brought together based on their past online behaviour and their similarity in interest and taste. Clustering users around shared interests has proven very effective in driving online engagement, leading other platforms to mimic TikTok, in what can be described as ‘TikTokification’. However, this transformation of online publics carries a series of problematic implications: the depersonalisation of online experience; a growing opacity of the structures of online communication; and the further subcultural fragmentation of an already divided digital public sphere.",
-      "keywords": [],
-      "doi": "10.1177/14614448241304106",
-      "doi_url": "https://doi.org/10.1177/14614448241304106",
-      "url": null,
-      "arxiv_url": null,
-      "pdf_url": null,
-      "publication_date": "2026",
-      "citation_count": 38,
-      "reference_count": 94,
-      "venue": "New Media &amp; Society",
-      "authors": [
-        "Paolo Gerbaudo"
-      ],
-      "subjects": [],
-      "is_open_access": null,
-      "source": "crossref",
-      "confidence_score": 0.8999999999999999
-    }
-  },
   "3eacf232e98df15d": {
     "entry_key": "Bak-Coleman2026-mk",
     "entry_title": "Industry influence in high-profile social media research",
@@ -5364,6 +5006,392 @@
       "is_open_access": null,
       "source": "crossref",
       "confidence_score": 0.83
+    }
+  },
+  "88f2087844cd43bc": {
+    "entry_key": "Wang2026-ub",
+    "entry_title": "The failed migration of academic Twitter: A case study of precocious adopters",
+    "cached_at": "2026-05-26T17:18:00.786055",
+    "metadata": {
+      "abstract": "Following changes in Twitter's ownership in 2022 and subsequent changes to content moderation policies, many in academia looked to move their discourse elsewhere and migration to Mastodon was pursued by some. Our study examines the behavior of a self-organized group of early academic adopters who joined Mastodon following changes in Twitter's ownership. Utilizing publicly available user account data drawn from a voluntarily curated list of academics, we track the posting activity of these early adopters on Mastodon over a one year period. We also study follower-followee and interaction relationships to map internal networks, finding that the subset of academics who migrated to Mastodon were well-connected. However, this strong internal connectivity was insufficient to prevent users from returning to Twitter/X. Our analyses show that early adopters struggled to maintain engagement, shaped by Mastodon's decentralized design and competition from alternatives such as Bluesky and Threads. The migration effort lost momentum after an initial surge, as most early adopters reduced activity or returned to Twitter. Our survival analysis further reveals that retention is strongly linked to diverse cross-server engagement and topic-server communities. Users with large pre-existing Twitter presence face significantly higher attrition risk, highlighting the challenge of replicating established social connections in decentralized ecosystem. By examining the coordinated migration attempt of early adopters, we find that even this highly motivated group faced substantial challenges, suggesting that later or less coordinated efforts would likely encounter even greater barriers.",
+      "keywords": [],
+      "doi": null,
+      "doi_url": null,
+      "url": null,
+      "arxiv_url": "http://arxiv.org/abs/2406.04005v3",
+      "pdf_url": "https://arxiv.org/pdf/2406.04005v3",
+      "publication_date": "2024-06-06",
+      "citation_count": null,
+      "reference_count": null,
+      "venue": null,
+      "authors": [
+        "Xinyu Wang",
+        "Sai Koneru",
+        "Sarah Rajtmajer"
+      ],
+      "subjects": [
+        "cs.SI"
+      ],
+      "is_open_access": true,
+      "source": "arxiv",
+      "confidence_score": 0.7428571428571428
+    }
+  },
+  "466ae68d0651c694": {
+    "entry_key": "Efstratiou2026-ij",
+    "entry_title": "Information pathways in online science communication: The role of platform actors and news media",
+    "cached_at": "2026-05-26T17:18:04.033944",
+    "metadata": {
+      "abstract": "Online discussions of science involve complex interactions among experts, news media, and social media users as they interpret and disseminate scientific findings. While prior work has examined these actors in isolation, their interplay in shaping science communication remains poorly understood. Using the COVID-19 pandemic as a case study, we analyze 1.24M tweets and 211k news articles that reference pandemic-related scientific papers. We find that the most influential Twitter accounts in this discourse are predominantly individuals with medical or research credentials. However, we also identify a coordinated network that disproportionately amplifies a small set of prominent credentialed experts who advance contrarian, anti-consensus positions on vaccines, lockdowns, and related topics. The papers promoted by these influential actors substantially overlap with those covered by news media, but with key differences: pro-consensus experts primarily engage with studies featured by mainstream and medical outlets, whereas contrarian experts align more closely with papers promoted by low-quality, pseudoscientific, or conspiratorial sources. Notably, news outlets tend to report on scientific studies after they have been highlighted by social media superspreaders. Together, these findings reveal multi-level pathways of information flow and coordinated amplification structures that shape science communication across social media and news, offering new insights into the dynamics of the broader information ecosystem.",
+      "keywords": [],
+      "doi": null,
+      "doi_url": null,
+      "url": null,
+      "arxiv_url": "http://arxiv.org/abs/2603.17249v1",
+      "pdf_url": "https://arxiv.org/pdf/2603.17249v1",
+      "publication_date": "2026-03-18",
+      "citation_count": null,
+      "reference_count": null,
+      "venue": null,
+      "authors": [
+        "Alexandros Efstratiou",
+        "Giuseppe Russo",
+        "Luca Luceri"
+      ],
+      "subjects": [
+        "cs.SI",
+        "cs.CY"
+      ],
+      "is_open_access": true,
+      "source": "arxiv",
+      "confidence_score": 0.7428571428571428
+    }
+  },
+  "53df38ca99f7b779": {
+    "entry_key": "Gauthier2026-iq",
+    "entry_title": "The political effects of X’s feed algorithm",
+    "cached_at": "2026-05-26T17:18:04.280345",
+    "metadata": {
+      "abstract": null,
+      "keywords": [],
+      "doi": "10.1038/s41586-026-10098-2",
+      "doi_url": "https://doi.org/10.1038/s41586-026-10098-2",
+      "url": null,
+      "arxiv_url": null,
+      "pdf_url": null,
+      "publication_date": "2026-04-09",
+      "citation_count": 3,
+      "reference_count": 47,
+      "venue": "Nature",
+      "authors": [
+        "Germain Gauthier",
+        "Roland Hodler",
+        "Philine Widmer",
+        "Ekaterina Zhuravskaya"
+      ],
+      "subjects": [],
+      "is_open_access": null,
+      "source": "crossref",
+      "confidence_score": 0.8333333333333333
+    }
+  },
+  "7a846947acf48197": {
+    "entry_key": "Balluff2026-if",
+    "entry_title": "Newer, larger, better? A critique of the unreflective LLM adoption in communication research",
+    "cached_at": "2026-05-26T17:18:07.146298",
+    "metadata": {
+      "abstract": null,
+      "keywords": [],
+      "doi": "10.1080/10584609.2026.2618486",
+      "doi_url": "https://doi.org/10.1080/10584609.2026.2618486",
+      "url": null,
+      "arxiv_url": null,
+      "pdf_url": null,
+      "publication_date": "2026-05-04",
+      "citation_count": 0,
+      "reference_count": 38,
+      "venue": "Political Communication",
+      "authors": [
+        "Paul Balluff",
+        "Justin Chun-ting Ho",
+        "Johannes B. Gruber",
+        "Sean Palicki",
+        "Alexis Palmer",
+        "Luca Rossi",
+        "Irina Shklovski",
+        "Chung-hong Chan"
+      ],
+      "subjects": [],
+      "is_open_access": null,
+      "source": "crossref",
+      "confidence_score": 0.8157894736842105
+    }
+  },
+  "03bac3b5433b4b2f": {
+    "entry_key": "Rothut2026-wt",
+    "entry_title": "Radicalization and the internet: 25 years of (online) radicalization research",
+    "cached_at": "2026-05-26T17:18:10.224478",
+    "metadata": {
+      "abstract": null,
+      "keywords": [],
+      "doi": "10.1080/10714421.2026.2658935",
+      "doi_url": "https://doi.org/10.1080/10714421.2026.2658935",
+      "url": null,
+      "arxiv_url": null,
+      "pdf_url": null,
+      "publication_date": "2026-04-22",
+      "citation_count": 0,
+      "reference_count": 165,
+      "venue": "The Communication Review",
+      "authors": [
+        "Sophia Rothut",
+        "Heidi Schulze",
+        "Julian Hohner",
+        "Simon Greipl",
+        "Diana Rieger"
+      ],
+      "subjects": [],
+      "is_open_access": null,
+      "source": "crossref",
+      "confidence_score": 0.8272727272727272
+    }
+  },
+  "25585654a9878a3d": {
+    "entry_key": "Dierickx2026-tw",
+    "entry_title": "What is a fact in the age of generative AI? Fact-checking as an epistemological lens",
+    "cached_at": "2026-05-26T17:18:13.380115",
+    "metadata": {
+      "abstract": null,
+      "keywords": [],
+      "doi": "10.1080/1369118x.2026.2630697",
+      "doi_url": "https://doi.org/10.1080/1369118x.2026.2630697",
+      "url": null,
+      "arxiv_url": null,
+      "pdf_url": null,
+      "publication_date": "2026-02-16",
+      "citation_count": 1,
+      "reference_count": 76,
+      "venue": "Information, Communication &amp; Society",
+      "authors": [
+        "Laurence Dierickx",
+        "Andreas L. Opdahl",
+        "Fredrik Bjerknes",
+        "Carl-Gustav Lindén"
+      ],
+      "subjects": [],
+      "is_open_access": null,
+      "source": "crossref",
+      "confidence_score": 0.83
+    }
+  },
+  "c35a283f3579db9d": {
+    "entry_key": "Shi2026-ko",
+    "entry_title": "The Governance-Embedded Interactive Media Effect: the role of AI-generated disclosure in user credibility and engagement based on fact-checking videos on Chinese TikTok (Douyin)",
+    "cached_at": "2026-05-26T17:18:16.362016",
+    "metadata": {
+      "abstract": null,
+      "keywords": [],
+      "doi": "10.1080/17544750.2026.2623075",
+      "doi_url": "https://doi.org/10.1080/17544750.2026.2623075",
+      "url": null,
+      "arxiv_url": null,
+      "pdf_url": null,
+      "publication_date": "2026-02-13",
+      "citation_count": 0,
+      "reference_count": 49,
+      "venue": "Chinese Journal of Communication",
+      "authors": [
+        "Yiru Shi"
+      ],
+      "subjects": [],
+      "is_open_access": null,
+      "source": "crossref",
+      "confidence_score": 0.8999999999999999
+    }
+  },
+  "6c7cf40e5054ebd0": {
+    "entry_key": "Schulte2026-df",
+    "entry_title": "Multi-platform analysis of electoral discourse on social media as a research infrastructure problem",
+    "cached_at": "2026-05-26T17:18:19.549524",
+    "metadata": {
+      "abstract": null,
+      "keywords": [],
+      "doi": "10.1145/3795513.3807440",
+      "doi_url": "https://doi.org/10.1145/3795513.3807440",
+      "url": null,
+      "arxiv_url": null,
+      "pdf_url": null,
+      "publication_date": "2026-05-26",
+      "citation_count": 0,
+      "reference_count": 22,
+      "venue": "Companion Publication of the 2026 18th ACM Web Science Conference",
+      "authors": [
+        "Ludwig Schulte",
+        "Dino Pasic",
+        "Catalina Goanta",
+        "Adriana Iamnitchi"
+      ],
+      "subjects": [],
+      "is_open_access": null,
+      "source": "crossref",
+      "confidence_score": 0.8333333333333333
+    }
+  },
+  "c4b0b0077b06cd02": {
+    "entry_key": "Farkas2026-lr",
+    "entry_title": "Defending fact-checking partnerships with platform companies: ‘We can't fight alone against disinformation’",
+    "cached_at": "2026-05-26T17:18:22.593828",
+    "metadata": {
+      "abstract": "This article investigates how professional fact-checkers defend collaborations with major platform companies such as Meta, Alphabet, and ByteDance. Drawing on 12 qualitative interviews with European fact-checkers, the study applies rhetorical apologia theory to analyse recurring justificatory arguments. We identify four modes of differentiation and three modes of transcendence employed by fact-checkers. Arguments of differentiation involve distancing fact-checking from platform company partners to emphasise editorial independence; distinguishing between different platform companies to legitimise partnerships with certain actors while rejecting others (notably TikTok owned by ByteDance); separating platform companies as a whole and specific employees within them; and contrasting platform funding with state funding to defend the former as less compromising for editorial autonomy. Arguments of transcendence invoke counter-factual scenarios of unmitigated misinformation; appealing to broader alliances against disinformation; and highlighting the potential for improving platform companies from within. These findings contribute to existing scholarship by unpacking how fact-checkers negotiate the complex institutional dependencies of platform company partnerships by simultaneously acknowledging risks and asserting pragmatic necessity. As such, the study provides a deeper understanding of the challenges facing fact-checking organisations and their efforts to establish legitimacy as epistemic authorities in the boundary terrain shared with other key actors in today's media landscape.",
+      "keywords": [],
+      "doi": "10.1177/02673231261422085",
+      "doi_url": "https://doi.org/10.1177/02673231261422085",
+      "url": null,
+      "arxiv_url": null,
+      "pdf_url": null,
+      "publication_date": "2026-02-16",
+      "citation_count": 0,
+      "reference_count": 50,
+      "venue": "European Journal of Communication",
+      "authors": [
+        "Johan Farkas",
+        "Mette Bengtsson"
+      ],
+      "subjects": [],
+      "is_open_access": null,
+      "source": "crossref",
+      "confidence_score": 0.86
+    }
+  },
+  "b91474d33e6ce482": {
+    "entry_key": "Gerbaudo2026-fo",
+    "entry_title": "TikTok and the algorithmic transformation of social media publics: From social networks to social interest clusters",
+    "cached_at": "2026-05-26T17:18:25.491547",
+    "metadata": {
+      "abstract": "The rise of TikTok has sparked a debate on the consequences of algorithmic content curation for social experience. My thesis is that TikTok represents a second generation of social media, which differs from first-generation social media in the way users are exposed to content. While first-generation social media revolved around ‘networked publics’ formed by explicit interpersonal connections, second-generation social media introduces ‘clustered publics’. These are statistically constructed ‘neighbourhoods’ of users, in which people are brought together based on their past online behaviour and their similarity in interest and taste. Clustering users around shared interests has proven very effective in driving online engagement, leading other platforms to mimic TikTok, in what can be described as ‘TikTokification’. However, this transformation of online publics carries a series of problematic implications: the depersonalisation of online experience; a growing opacity of the structures of online communication; and the further subcultural fragmentation of an already divided digital public sphere.",
+      "keywords": [],
+      "doi": "10.1177/14614448241304106",
+      "doi_url": "https://doi.org/10.1177/14614448241304106",
+      "url": null,
+      "arxiv_url": null,
+      "pdf_url": null,
+      "publication_date": "2026",
+      "citation_count": 44,
+      "reference_count": 94,
+      "venue": "New Media &amp; Society",
+      "authors": [
+        "Paolo Gerbaudo"
+      ],
+      "subjects": [],
+      "is_open_access": null,
+      "source": "crossref",
+      "confidence_score": 0.8999999999999999
+    }
+  },
+  "8238adeeb16e0d15": {
+    "entry_key": "Stanusch2026-ec",
+    "entry_title": "How AI is imagined by industry during the Sam Altman controversy",
+    "cached_at": "2026-05-26T17:18:28.463087",
+    "metadata": {
+      "abstract": "The aim of this research is to reconstruct how to, both methodologically and conceptually, reassemble AI imaginaries and how to evaluate their performativity. This paper does so empirically by tracking the doing of AI issues (AI issuefication) across X/Twitter and LinkedIn. The scene of the competition is the clash of AI agendas and imaginaries caused by the controversy around the firing and reinstatement of Sam Altman, OpenAI's CEO. By employing issue mapping and digital methods to locate contemporary AI imaginaries, we assess their salience in a cross-platform perspective and describe the stakes gleaned from the prominence of certain dominant framings through AI issuefication. We introduce the notion of AI industry's premediation and preclusion of issues from imaginaries, the two ways through which the AI industry tries to occupy the future and absorb the present; with this research, we join with others on this argument and contribute by demonstrating it empirically.",
+      "keywords": [],
+      "doi": "10.31124/advance.174979411.18178682/v1",
+      "doi_url": "https://doi.org/10.31124/advance.174979411.18178682/v1",
+      "url": null,
+      "arxiv_url": null,
+      "pdf_url": null,
+      "publication_date": null,
+      "citation_count": 1,
+      "reference_count": 0,
+      "venue": null,
+      "authors": [
+        "Natalia Stanusch",
+        "Richard Rogers"
+      ],
+      "subjects": [],
+      "is_open_access": null,
+      "source": "crossref",
+      "confidence_score": 0.86
+    }
+  },
+  "f2c3c073e07cd98e": {
+    "entry_key": "De2026-ld",
+    "entry_title": "The discursive flexibility of changecraft: Platform change discourse in Meta, TikTok, YouTube, and X",
+    "cached_at": "2026-05-26T17:18:32.190035",
+    "metadata": {
+      "abstract": "Social media platforms evolve rapidly. While platform studies have often analyzed specific policy or feature changes, there remains a lack of shared language to conceptualize how platforms themselves represent such changes. In this article, we analyze public communications from Meta, YouTube, X, and TikTok to examine how platforms construct and justify change. We explicate platform evolution as a technical but also deeply discursive process. Platforms frame their transformations in interesting ways, especially if these shifts consolidate power or deepen user dependence. We introduce the concept of changecraft : the strategic discursive practices through which platforms manage, legitimize, and normalize change. Changecraft encompasses the rendering of infrastructural shifts as visible, the framing of ideological pivots as continuity, and the deployment of patchworked updates to subtly reorient platform futures. This framework provides scholars a way to interrogate platform change not just by what changes but by how platforms seek to make change meaningful and acceptable to their publics.",
+      "keywords": [],
+      "doi": "10.1177/29768624251408212",
+      "doi_url": "https://doi.org/10.1177/29768624251408212",
+      "url": null,
+      "arxiv_url": null,
+      "pdf_url": null,
+      "publication_date": "2026",
+      "citation_count": 2,
+      "reference_count": 57,
+      "venue": "Platforms &amp; Society",
+      "authors": [
+        "Ankolika De",
+        "Kelley Cotter"
+      ],
+      "subjects": [],
+      "is_open_access": null,
+      "source": "crossref",
+      "confidence_score": 0.86
+    }
+  },
+  "fd4659dec0367388": {
+    "entry_key": "Ahuja2025-ku",
+    "entry_title": "Dark patterns and the EU digital services act: Mapping autonomy violations and design factors",
+    "cached_at": "2026-05-26T17:18:35.036303",
+    "metadata": {
+      "abstract": null,
+      "keywords": [],
+      "doi": "10.2139/ssrn.5555765",
+      "doi_url": "https://doi.org/10.2139/ssrn.5555765",
+      "url": null,
+      "arxiv_url": null,
+      "pdf_url": null,
+      "publication_date": null,
+      "citation_count": 0,
+      "reference_count": 0,
+      "venue": null,
+      "authors": [
+        "Sanju Ahuja",
+        "Johanna Gunawan",
+        "Nataliia Bielova",
+        "Cristiana Santos"
+      ],
+      "subjects": [],
+      "is_open_access": null,
+      "source": "crossref",
+      "confidence_score": 0.8333333333333333
+    }
+  },
+  "0f1f978a541ffd0c": {
+    "entry_key": "Tornberg2026-lc",
+    "entry_title": "Towards a Post-Social Media Studies",
+    "cached_at": "2026-05-26T17:18:38.539606",
+    "metadata": {
+      "abstract": "For two decades, \"social media\" has been the master lens through which scholars have understood digital communication—an era defined by user-generated content, networked publics, and participatory culture. That era is drawing to a close. This paper argues that three interrelated dynamics are dissolving the social media paradigm: an algorithmic shift from social-graph-based to interest-based recommendation, which is remaking the active \"user\" into a passive \"viewer\"; the generative AI revolution, which is replacing user-generated content with synthetic media and decoupling platforms from any dependence on human participation; and an exodus from public platforms toward private, closed spaces. Together, these dynamics are giving rise to three distinct post-social formations: algorithmically governed broadcasting platforms, semi-private spheres and micro-communities, and AI-mediated communication as a new media form in its own right. Understanding this transformation demands a fundamental reorientation of the field—new conceptual tools that move beyond networked publics and participatory culture, new methods suited to synthetic and ephemeral media environments, and renewed attention to the political stakes of communication systems that no longer require human participation.",
+      "keywords": [],
+      "doi": "10.31235/osf.io/6nue7_v1",
+      "doi_url": "https://doi.org/10.31235/osf.io/6nue7_v1",
+      "url": null,
+      "arxiv_url": null,
+      "pdf_url": null,
+      "publication_date": null,
+      "citation_count": 0,
+      "reference_count": 0,
+      "venue": null,
+      "authors": [
+        "Petter Törnberg",
+        "Richard Rogers"
+      ],
+      "subjects": [],
+      "is_open_access": null,
+      "source": "crossref",
+      "confidence_score": 0.86
     }
   }
 }
