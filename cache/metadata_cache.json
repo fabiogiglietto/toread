@@ -2,74 +2,96 @@
   "c5a7d0326e1f61c6": {
     "entry_key": "Kristensen2025-ni",
     "entry_title": "Platform polarization. Do alternative platforms drive discursive polarization?",
-    "cached_at": "2026-05-20T18:37:28.552370",
+    "cached_at": "2026-05-27T19:56:54.775875",
     "metadata": null,
     "failed": true,
     "failure_reason": "Could not enrich entry: Kristensen2025-ni | No DOI available | Title length: 78 chars | Authors: Kristensen, Jakob Bæk, Kristensen, Jakob Bæk | APIs: Crossref enabled, Semantic Scholar enabled, ArXiv enabled",
-    "last_failure_at": "2026-05-20T18:37:28.552377"
+    "last_failure_at": "2026-05-27T19:56:54.775882"
   },
   "65d46046ae1c898f": {
     "entry_key": "Gaw2025-ru",
     "entry_title": "Influence operations as brokerage: Political-economic infrastructures of manipulation in the 2022 Philippine elections",
-    "cached_at": "2026-05-20T18:37:37.534793",
+    "cached_at": "2026-05-27T19:57:03.418954",
     "metadata": null,
     "failed": true,
     "failure_reason": "Could not enrich entry: Gaw2025-ru | No DOI available | Title length: 118 chars | Authors: Gaw, Fatima, Agonos, Mariam Jayne... | APIs: Crossref enabled, Semantic Scholar enabled, ArXiv enabled",
-    "last_failure_at": "2026-05-20T18:37:37.534799"
+    "last_failure_at": "2026-05-27T19:57:03.418962"
   },
   "b41f425da41887a0": {
     "entry_key": "Marwick2025-vx",
     "entry_title": "True costs of misinformation| mountains of evidence: Processual “redpilling” as a Socio-technical effect of disinformation",
-    "cached_at": "2026-05-20T18:37:31.445773",
+    "cached_at": "2026-05-27T19:56:57.686790",
     "metadata": null,
     "failed": true,
     "failure_reason": "Could not enrich entry: Marwick2025-vx | No DOI available | Title length: 122 chars | Authors: Marwick, Alice E, Furl, Katherine | APIs: Crossref enabled, Semantic Scholar enabled, ArXiv enabled",
-    "last_failure_at": "2026-05-20T18:37:31.445779"
+    "last_failure_at": "2026-05-27T19:56:57.686798"
   },
   "e3b0c44298fc1c14": {
     "entry_key": "noauthor_undated-bz",
     "entry_title": null,
-    "cached_at": "2026-05-20T18:37:53.086434",
+    "cached_at": "2026-05-27T19:57:12.712156",
     "metadata": null,
     "failed": true,
     "failure_reason": "Could not enrich entry: noauthor_undated-bz | No DOI available | No title available | No authors available | APIs: Crossref enabled, Semantic Scholar enabled, ArXiv enabled",
-    "last_failure_at": "2026-05-20T18:37:53.086436"
+    "last_failure_at": "2026-05-27T19:57:12.712159"
   },
   "657c6670d7b624b8": {
     "entry_key": "noauthor_undated-fm",
     "entry_title": "Volume 7 issue 2 article 4",
-    "cached_at": "2026-05-20T18:37:53.086361",
+    "cached_at": "2026-05-27T19:57:12.712020",
     "metadata": null,
     "failed": true,
     "failure_reason": "Could not enrich entry: noauthor_undated-fm | No DOI available | Title length: 26 chars | No authors available | APIs: Crossref enabled, Semantic Scholar enabled, ArXiv enabled",
-    "last_failure_at": "2026-05-20T18:37:53.086371"
+    "last_failure_at": "2026-05-27T19:57:12.712027"
   },
   "7a5bca5477086046": {
     "entry_key": "Schiffrin_undated-gi",
     "entry_title": "Deepfake financial fraud: The global regulation of ai-driven scams",
-    "cached_at": "2026-05-20T18:37:34.560402",
-    "metadata": null,
-    "failed": true,
-    "failure_reason": "Could not enrich entry: Schiffrin_undated-gi | No DOI available | Title length: 66 chars | Authors: Schiffrin, Anya, Marwick, Alice E... | APIs: Crossref enabled, Semantic Scholar enabled, ArXiv enabled",
-    "last_failure_at": "2026-05-20T18:37:34.560410"
+    "cached_at": "2026-05-27T19:57:00.634617",
+    "metadata": {
+      "abstract": "“Deepfakes,” or convincing AI-generated images and videos of real people, are being used to facilitate financial fraud around the world. Scammers use these images to power impersonation scams, fake investment promotions, fraudulent cryptocurrency initiatives, romance scams, and phony charitable donations. The harms have many layers, encompassing financial losses suffered by victims of fraud, reputational damage to those impersonated, and broader social harms that stem from the damage done to public trust. Regulation has lagged far behind the growth of this phenomenon. Around the world, governments are responding through a patchwork of approaches that span online safety, financial regulation, telecommunications law, consumer protection, and criminal enforcement. Regulatory gaps, particularly across borders, allow scammers to exploit jurisdictional fragmentation, liability shields, and weak coordination among enforcement authorities. Deepfake-enabled financial fraud exposes the limits of regulatory frameworks that rely on individual vigilance in the face of industrialized deception. Surveying regulatory approaches around the world, the authors of this brief argue that effective responses to deepfake financial fraud must shift from individual responsibility toward institutional accountability, and outline policy recommendations to that end.",
+      "keywords": [],
+      "doi": "10.69985/enbp3007",
+      "doi_url": "https://doi.org/10.69985/enbp3007",
+      "url": null,
+      "arxiv_url": null,
+      "pdf_url": null,
+      "publication_date": "2026-03-02",
+      "citation_count": 0,
+      "reference_count": 0,
+      "venue": null,
+      "authors": [
+        "Anya Schiffrin",
+        "Alice E. Marwick",
+        "Navya Sinha",
+        "Anusha Wangnoo",
+        "Kaylee Williams",
+        "Elnara Huseynova",
+        "Audrey Hatfield"
+      ],
+      "subjects": [],
+      "is_open_access": null,
+      "source": "crossref",
+      "confidence_score": 0.81875
+    }
   },
   "b909c3af063ea494": {
     "entry_key": "noauthor_undated-bm",
     "entry_title": "cib.pdf",
-    "cached_at": "2026-05-20T18:37:02.906088",
+    "cached_at": "2026-05-27T19:56:52.657646",
     "metadata": null,
     "failed": true,
     "failure_reason": "Could not enrich entry: noauthor_undated-bm | No DOI available | Title length: 7 chars | No authors available | APIs: Crossref enabled, Semantic Scholar enabled, ArXiv enabled",
-    "last_failure_at": "2026-05-20T18:37:02.906092"
+    "last_failure_at": "2026-05-27T19:56:52.657651"
   },
   "9195fcc80574052b": {
     "entry_key": "Vincent_undated-re",
     "entry_title": "What our second measurement says about misinformation on major platforms in Europe",
-    "cached_at": "2026-05-20T18:37:46.703856",
+    "cached_at": "2026-05-27T19:57:06.485274",
     "metadata": null,
     "failed": true,
     "failure_reason": "Could not enrich entry: Vincent_undated-re | No DOI available | Title length: 82 chars | Authors: Vincent, Emmanuel, Crisan, Daiana | APIs: Crossref enabled, Semantic Scholar enabled, ArXiv enabled",
-    "last_failure_at": "2026-05-20T18:37:46.703874"
+    "last_failure_at": "2026-05-27T19:57:06.485282"
   },
   "3eacf232e98df15d": {
     "entry_key": "Bak-Coleman2026-mk",
@@ -4943,11 +4965,11 @@
   "fac502d9bb5bbba8": {
     "entry_key": "UnknownUnknown-db",
     "entry_title": "What 81,000 people told us about the economics of AI",
-    "cached_at": "2026-05-20T18:37:49.782943",
+    "cached_at": "2026-05-27T19:57:09.651150",
     "metadata": null,
     "failed": true,
     "failure_reason": "Could not enrich entry: UnknownUnknown-db | No DOI available | Title length: 52 chars | No authors available | APIs: Crossref enabled, Semantic Scholar enabled, ArXiv enabled",
-    "last_failure_at": "2026-05-20T18:37:49.782951"
+    "last_failure_at": "2026-05-27T19:57:09.651160"
   },
   "8a077b3683a99b7a": {
     "entry_key": "Van_Erkel2026-mk",
@@ -5417,6 +5439,37 @@
       "is_open_access": null,
       "source": "crossref",
       "confidence_score": 0.8999999999999999
+    }
+  },
+  "07e1ee1fbd600391": {
+    "entry_key": "Vertesi2026-lv",
+    "entry_title": "Reckoning with the political economy of AI: Avoiding decoys in pursuit of accountability",
+    "cached_at": "2026-05-27T19:56:53.008900",
+    "metadata": {
+      "abstract": "The Project of AI is a world-building endeavor, wherein those who fund and develop AI systems both operate through and seek to sustain networks of power and wealth. As they expand their access to resources and configure our sociotechnical conditions, they benefit from the ways in which a suite of decoys animate scholars, critics, policymakers, journalists, and the public into co-constructing industry-empowering AI futures. Regardless of who constructs or nurtures them, these decoys often create the illusion of accountability while both masking the emerging political economies that the Project of AI has set into motion, and also contributing to the network-making power that is at the heart of the Project's extraction and exploitation. Drawing on literature at the intersection of communication, science and technology studies, and economic sociology, we examine how the Project of AI is constructed. We then explore five decoys that seemingly critique - but in actuality co-constitute - AI's emergent power relations and material political economy. We argue that advancing meaningful fairness or accountability in AI requires: 1) recognizing when and how decoys serve as a distraction, and 2) grappling directly with the material political economy of the Project of AI. Doing so will enable us to attend to the networks of power that make 'AI' possible, spurring new visions for how to realize a more just technologically entangled world.",
+      "keywords": [],
+      "doi": null,
+      "doi_url": null,
+      "url": null,
+      "arxiv_url": "http://arxiv.org/abs/2604.16106v2",
+      "pdf_url": "https://arxiv.org/pdf/2604.16106v2",
+      "publication_date": "2026-04-17",
+      "citation_count": null,
+      "reference_count": null,
+      "venue": null,
+      "authors": [
+        "Janet Vertesi",
+        "danah boyd",
+        "Alex Taylor",
+        "Benjamin Shestakofsky"
+      ],
+      "subjects": [
+        "cs.CY",
+        "cs.AI"
+      ],
+      "is_open_access": true,
+      "source": "arxiv",
+      "confidence_score": 0.7333333333333333
     }
   }
 }
