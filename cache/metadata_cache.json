@@ -5536,5 +5536,31 @@
       "source": "openalex",
       "confidence_score": 0.7333333333333333
     }
+  },
+  "daac2f03151237e6": {
+    "entry_key": "Lukito2026-nb",
+    "entry_title": "Price, proficiency, or permission: assessing platform data access for election research",
+    "cached_at": "2026-06-01T08:21:14.394444",
+    "metadata": {
+      "abstract": null,
+      "keywords": [],
+      "doi": "10.1080/1369118x.2026.2667921",
+      "doi_url": "https://doi.org/10.1080/1369118x.2026.2667921",
+      "url": null,
+      "arxiv_url": null,
+      "pdf_url": null,
+      "publication_date": "2026-05-27",
+      "citation_count": 0,
+      "reference_count": 83,
+      "venue": "Information, Communication &amp; Society",
+      "authors": [
+        "Josephine Lukito",
+        "Kayo Mimizuka"
+      ],
+      "subjects": [],
+      "is_open_access": null,
+      "source": "crossref",
+      "confidence_score": 0.86
+    }
   }
 }
