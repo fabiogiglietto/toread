@@ -2,47 +2,47 @@
   "c5a7d0326e1f61c6": {
     "entry_key": "Kristensen2025-ni",
     "entry_title": "Platform polarization. Do alternative platforms drive discursive polarization?",
-    "cached_at": "2026-06-04T09:06:34.295472",
+    "cached_at": "2026-06-13T22:35:05.777606",
     "metadata": null,
     "failed": true,
     "failure_reason": "Could not enrich entry: Kristensen2025-ni | No DOI available | Title length: 78 chars | Authors: Kristensen, Jakob Bæk, Kristensen, Jakob Bæk | APIs: Crossref enabled, Semantic Scholar enabled, ArXiv enabled",
-    "last_failure_at": "2026-06-04T09:06:34.295478"
+    "last_failure_at": "2026-06-13T22:35:05.777614"
   },
   "65d46046ae1c898f": {
     "entry_key": "Gaw2025-ru",
     "entry_title": "Influence operations as brokerage: Political-economic infrastructures of manipulation in the 2022 Philippine elections",
-    "cached_at": "2026-06-04T09:06:40.399726",
+    "cached_at": "2026-06-13T22:35:17.947322",
     "metadata": null,
     "failed": true,
     "failure_reason": "Could not enrich entry: Gaw2025-ru | No DOI available | Title length: 118 chars | Authors: Gaw, Fatima, Agonos, Mariam Jayne... | APIs: Crossref enabled, Semantic Scholar enabled, ArXiv enabled",
-    "last_failure_at": "2026-06-04T09:06:40.399735"
+    "last_failure_at": "2026-06-13T22:35:17.947329"
   },
   "b41f425da41887a0": {
     "entry_key": "Marwick2025-vx",
     "entry_title": "True costs of misinformation| mountains of evidence: Processual “redpilling” as a Socio-technical effect of disinformation",
-    "cached_at": "2026-06-04T09:06:37.257019",
+    "cached_at": "2026-06-13T22:35:11.743898",
     "metadata": null,
     "failed": true,
     "failure_reason": "Could not enrich entry: Marwick2025-vx | No DOI available | Title length: 122 chars | Authors: Marwick, Alice E, Furl, Katherine | APIs: Crossref enabled, Semantic Scholar enabled, ArXiv enabled",
-    "last_failure_at": "2026-06-04T09:06:37.257028"
+    "last_failure_at": "2026-06-13T22:35:11.743907"
   },
   "e3b0c44298fc1c14": {
     "entry_key": "noauthor_undated-bz",
     "entry_title": null,
-    "cached_at": "2026-06-04T09:06:49.729617",
+    "cached_at": "2026-06-13T22:35:27.201928",
     "metadata": null,
     "failed": true,
     "failure_reason": "Could not enrich entry: noauthor_undated-bz | No DOI available | No title available | No authors available | APIs: Crossref enabled, Semantic Scholar enabled, ArXiv enabled",
-    "last_failure_at": "2026-06-04T09:06:49.729619"
+    "last_failure_at": "2026-06-13T22:35:27.201930"
   },
   "657c6670d7b624b8": {
     "entry_key": "noauthor_undated-fm",
     "entry_title": "Volume 7 issue 2 article 4",
-    "cached_at": "2026-06-04T09:06:49.729516",
+    "cached_at": "2026-06-13T22:35:27.201843",
     "metadata": null,
     "failed": true,
     "failure_reason": "Could not enrich entry: noauthor_undated-fm | No DOI available | Title length: 26 chars | No authors available | APIs: Crossref enabled, Semantic Scholar enabled, ArXiv enabled",
-    "last_failure_at": "2026-06-04T09:06:49.729524"
+    "last_failure_at": "2026-06-13T22:35:27.201852"
   },
   "7a5bca5477086046": {
     "entry_key": "Schiffrin_undated-gi",
@@ -78,654 +78,20 @@
   "b909c3af063ea494": {
     "entry_key": "noauthor_undated-bm",
     "entry_title": "cib.pdf",
-    "cached_at": "2026-06-04T09:06:27.759312",
+    "cached_at": "2026-06-13T22:33:59.088492",
     "metadata": null,
     "failed": true,
     "failure_reason": "Could not enrich entry: noauthor_undated-bm | No DOI available | Title length: 7 chars | No authors available | APIs: Crossref enabled, Semantic Scholar enabled, ArXiv enabled",
-    "last_failure_at": "2026-06-04T09:06:27.759317"
+    "last_failure_at": "2026-06-13T22:33:59.088497"
   },
   "9195fcc80574052b": {
     "entry_key": "Vincent_undated-re",
     "entry_title": "What our second measurement says about misinformation on major platforms in Europe",
-    "cached_at": "2026-06-04T09:06:43.603667",
+    "cached_at": "2026-06-13T22:35:21.004887",
     "metadata": null,
     "failed": true,
     "failure_reason": "Could not enrich entry: Vincent_undated-re | No DOI available | Title length: 82 chars | Authors: Vincent, Emmanuel, Crisan, Daiana | APIs: Crossref enabled, Semantic Scholar enabled, ArXiv enabled",
-    "last_failure_at": "2026-06-04T09:06:43.603676"
-  },
-  "639a771e905921df": {
-    "entry_key": "Hourigan2026-oc",
-    "entry_title": "Everyday encounters with misinformation online: examining sources, topics and modes",
-    "cached_at": "2026-05-09T16:12:47.212581",
-    "metadata": {
-      "abstract": null,
-      "keywords": [],
-      "doi": "10.1080/1369118x.2026.2636132",
-      "doi_url": "https://doi.org/10.1080/1369118x.2026.2636132",
-      "url": null,
-      "arxiv_url": null,
-      "pdf_url": null,
-      "publication_date": "2026-02-26",
-      "citation_count": 0,
-      "reference_count": 46,
-      "venue": "Information, Communication &amp; Society",
-      "authors": [
-        "Aimee Hourigan",
-        "T.J. Thomson",
-        "Tanya Notley",
-        "Sora Park",
-        "Michael Dezuanni"
-      ],
-      "subjects": [],
-      "is_open_access": null,
-      "source": "crossref",
-      "confidence_score": 0.825
-    }
-  },
-  "df48b78c330b92b4": {
-    "entry_key": "Pierri2025-hm",
-    "entry_title": "Research opportunities and challenges of the EU's Digital Services Act",
-    "cached_at": "2026-05-09T16:15:26.405037",
-    "metadata": {
-      "abstract": "The Digital Services Act (DSA) introduced by the European Union in 2022 offers a landmark framework for platform transparency, with Article 40 enabling vetted researchers to access data from major online platforms. Yet significant legal, technical, and organizational barriers still hinder effective research on systemic online risks. This piece outlines the key challenges emerging from the Article 40 process and proposes practical measures to ensure that the DSA fulfills its transparency and accountability goals.",
-      "keywords": [],
-      "doi": "10.48550/arxiv.2512.14223",
-      "doi_url": "https://doi.org/10.48550/arxiv.2512.14223",
-      "url": "https://lirias.kuleuven.be/handle/20.500.12942/778587",
-      "arxiv_url": null,
-      "pdf_url": "https://arxiv.org/pdf/2512.14223",
-      "publication_date": "2025-12-16",
-      "citation_count": 0,
-      "reference_count": null,
-      "venue": "Lirias (KU Leuven)",
-      "authors": [
-        "Francesco Pierri",
-        "Theo Araujo",
-        "Sanne Kruikemeier",
-        "Philipp Lorenz-Spreen",
-        "Mariek Vanden Abeele",
-        "Laura Vandenbosch",
-        "Joana Gonçalves-Sá",
-        "Przemyslaw A. Grabowicz"
-      ],
-      "subjects": [
-        "Transparency (behavior)",
-        "Accountability",
-        "Key (lock)",
-        "Business",
-        "Process (computing)"
-      ],
-      "is_open_access": true,
-      "source": "openalex",
-      "confidence_score": 0.7142857142857142
-    }
-  },
-  "a1200ca53e8d7d7c": {
-    "entry_key": "Copland2025-em",
-    "entry_title": "Sky News Australia as network propaganda: how a niche cable channel became an international right-wing propaganda machine",
-    "cached_at": "2026-05-09T16:15:28.423875",
-    "metadata": {
-      "abstract": "In the past decade or so, the right-wing news channel, Sky News Australia , has pivoted to publishing online content that speaks to broadly right-wing audiences both in Australia and internationally. While the channel has long been regarded as comparatively unsuccessful, with low TV ratings, such unimpressive pay-TV audience ratings obscure a considerably more significant development elsewhere: Sky News Australia's content is shared and consumed increasingly widely in digital form, via social media. Positioning Sky News Australia as an example of a global system of network propaganda, this article examines how the channel has spread its content online. Studying a core period of Sky News Australia's digital growth during the 2020 COVID pandemic and US presidential race, we use a unique combination of digital methods to document how Sky News Australia has transitioned from a niche cable station to an international right-wing propaganda machine.",
-      "keywords": [],
-      "doi": "10.1177/1329878x251406899",
-      "doi_url": "https://doi.org/10.1177/1329878x251406899",
-      "url": null,
-      "arxiv_url": null,
-      "pdf_url": null,
-      "publication_date": "2025-12-24",
-      "citation_count": 0,
-      "reference_count": 26,
-      "venue": "Media International Australia",
-      "authors": [
-        "Simon Copland",
-        "Axel Bruns",
-        "Timothy Graham"
-      ],
-      "subjects": [],
-      "is_open_access": null,
-      "source": "crossref",
-      "confidence_score": 0.8428571428571427
-    }
-  },
-  "c97d82f1ad871982": {
-    "entry_key": "Emilio2026-ik",
-    "entry_title": "The Generative AI Paradox: GenAI and the erosion of trust, the corrosion of information verification, and the demise of truth",
-    "cached_at": "2026-05-09T16:17:10.157715",
-    "metadata": {
-      "abstract": "Generative AI (GenAI) now produces text, images, audio, and video that can be perceptually convincing at scale and at negligible marginal cost. While public debate often frames the associated harms as “deepfakes” or incremental extensions of misinformation and fraud, this view misses a broader socio-technical shift: GenAI enables synthetic realities—coherent, interactive, and potentially personalized information environments in which content, identity, and social interaction are jointly manufactured and mutually reinforcing. We argue that the most consequential risk is not merely the production of isolated synthetic artifacts, but the progressive erosion of shared epistemic ground and institutional verification practices as synthetic content, synthetic identity, and synthetic interaction become easy to generate and hard to audit. This paper (i) formalizes synthetic reality as a layered stack (content, identity, interaction, institutions), (ii) expands a taxonomy of GenAI harms spanning personal, economic, informational, and socio-technical risks, (iii) articulates the qualitative shifts introduced by GenAI (cost collapse, throughput, customization, micro-segmentation, provenance gaps, and trust erosion), and (iv) synthesizes recent risk realizations (2023–2025) into a compact case bank illustrating how these mechanisms manifest in fraud, elections, harassment, documentation, and supply-chain compromise. We then propose a mitigation stack that treats provenance infrastructure, platform governance, institutional workflow redesign, and public resilience as complementary rather than substitutable, and outline a research agenda focused on measuring epistemic security. We conclude with the Generative AI Paradox: as synthetic media becomes ubiquitous, societies may rationally discount digital evidence altogether, raising the cost of truth for everyday life and for democratic and economic institutions.",
-      "keywords": [],
-      "doi": "10.3390/fi18020073",
-      "doi_url": "https://doi.org/10.3390/fi18020073",
-      "url": null,
-      "arxiv_url": null,
-      "pdf_url": null,
-      "publication_date": "2026-02-01",
-      "citation_count": 2,
-      "reference_count": 39,
-      "venue": "Future Internet",
-      "authors": [
-        "Emilio Ferrara"
-      ],
-      "subjects": [],
-      "is_open_access": null,
-      "source": "crossref",
-      "confidence_score": 0.8999999999999999
-    }
-  },
-  "26dd34dc757b8317": {
-    "entry_key": "Hollingshead2026-vx",
-    "entry_title": "Same platform, different stories: TikTok and the battle over immigration narratives",
-    "cached_at": "2026-05-09T16:17:13.372095",
-    "metadata": {
-      "abstract": "In an era defined by overlapping global crises, immigration has become a key fault line in what scholars term a “polycrisis.” Within this context, social media platforms serve as digital battlegrounds for competing narratives about immigration, with TikTok occupying a distinct and understudied niche. This article examines how immigration-related content in Canada is framed on TikTok and how the platform’s logic of mimesis and interactivity, grounded in its affordances, shape immigration discourse. From a dataset of 5,305 public TikTok videos containing immigration-related terms and hashtags, we selected a sample of 344 English-language videos posted in 2025, each with over 100,000 plays and likely shown to Canadian users. Through a mixed-methods content analysis, we found that, contrary to expectations, the content leaned toward positive portrayals of immigration, accounting for 41% of the sample. Furthermore, despite expressing differing perspectives on immigration, users used TikTok’s affordances in comparable ways. That is, the same affordances that can support immigrants’ information seeking and sense of belonging through practical guidance and relatable storytelling, respectively, can be weaponized to amplify xenophobia by way of manipulated statistics and racist humour performed in skits and AI-generated videos. This highlights how TikTok’s affordances can simultaneously support digital inclusion and community building while also enabling exclusion and hostility. The findings, although rooted in Canada, hold broader relevance for understanding how short-video platforms mediate contentious issues across digitally connected societies.",
-      "keywords": [],
-      "doi": "10.17645/mac.11409",
-      "doi_url": "https://doi.org/10.17645/mac.11409",
-      "url": null,
-      "arxiv_url": null,
-      "pdf_url": null,
-      "publication_date": "2026-01-28",
-      "citation_count": 1,
-      "reference_count": 61,
-      "venue": "Media and Communication",
-      "authors": [
-        "William Hollingshead",
-        "Anatoliy Gruzd",
-        "Philip Mai"
-      ],
-      "subjects": [],
-      "is_open_access": null,
-      "source": "crossref",
-      "confidence_score": 0.8428571428571427
-    }
-  },
-  "667a9bec772d1fb6": {
-    "entry_key": "Elfes2026-jb",
-    "entry_title": "On narrative: The rhetorical mechanisms of online polarisation",
-    "cached_at": "2026-05-09T16:18:55.675488",
-    "metadata": {
-      "abstract": "Polarisation research has demonstrated how people cluster in homogeneous groups with opposing opinions. However, this effect emerges not only through interaction between people, limiting communication between groups, but also between narratives, shaping opinions and partisan identities. Yet, how polarised groups collectively construct and negotiate opposing interpretations of reality, and whether narratives move between groups despite limited interactions, remains unexplored. To address this gap, we formalise the concept of narrative polarisation and demonstrate its measurement in 212 YouTube videos and 90,029 comments on the Israeli-Palestinian conflict. Based on structural narrative theory and implemented through a large language model, we extract the narrative roles assigned to central actors in two partisan information environments. We find that while videos produce highly polarised narratives, comments significantly reduce narrative polarisation, harmonising discourse on the surface level. However, on a deeper narrative level, recurring narrative motifs reveal additional differences between partisan groups.",
-      "keywords": [],
-      "doi": "10.48550/arxiv.2601.07398",
-      "doi_url": "https://doi.org/10.48550/arxiv.2601.07398",
-      "url": "https://doi.org/10.48550/arxiv.2601.07398",
-      "arxiv_url": null,
-      "pdf_url": "https://doi.org/10.48550/arxiv.2601.07398",
-      "publication_date": "2026-01-12",
-      "citation_count": 0,
-      "reference_count": null,
-      "venue": "arXiv (Cornell University)",
-      "authors": [
-        "Jan Elfes",
-        "Marco Bastos",
-        "Aiello, Luca Maria"
-      ],
-      "subjects": [
-        "Narrative",
-        "Rhetorical question",
-        "Construct (python library)",
-        "Negotiation",
-        "Limiting"
-      ],
-      "is_open_access": true,
-      "source": "openalex",
-      "confidence_score": 0.8885714285714286
-    }
-  },
-  "43cacb58212f6871": {
-    "entry_key": "DiGiuseppe2026-pu",
-    "entry_title": "Perceived political bias in LLMs reduces persuasive abilities",
-    "cached_at": "2026-05-09T16:20:55.407398",
-    "metadata": {
-      "abstract": "Conversational AI has been proposed as a scalable way to correct public misconceptions and spread misinformation. Yet its effectiveness may depend on perceptions of its political neutrality. As LLMs enter partisan conflict, elites increasingly portray them as ideologically aligned. We test whether these credibility attacks reduce LLM-based persuasion. In a preregistered U.S. survey experiment (N=2144), participants completed a three-round conversation with ChatGPT about a personally held economic policy misconception. Compared to a neutral control, a short message indicating that the LLM was biased against the respondent's party attenuated persuasion by 28%. Transcript analysis indicates that the warnings alter the interaction: respondents push back more and engage less receptively. These findings suggest that the persuasive impact of conversational AI is politically contingent, constrained by perceptions of partisan alignment.",
-      "keywords": [],
-      "doi": "10.48550/arxiv.2602.18092",
-      "doi_url": "https://doi.org/10.48550/arxiv.2602.18092",
-      "url": null,
-      "arxiv_url": null,
-      "pdf_url": null,
-      "publication_date": "2026-02-20",
-      "citation_count": 0,
-      "reference_count": null,
-      "venue": "Open MIND",
-      "authors": [
-        "Matthew DiGiuseppe",
-        "Joshua Robison"
-      ],
-      "subjects": [
-        "Persuasion",
-        "Conversation",
-        "Credibility",
-        "Social psychology",
-        "Perception"
-      ],
-      "is_open_access": true,
-      "source": "openalex",
-      "confidence_score": 0.76
-    }
-  },
-  "6329180da1f9f3e0": {
-    "entry_key": "Bravo2026-ue",
-    "entry_title": "Visualizing climate change in the media: a systematic literature review, challenges, and future research",
-    "cached_at": "2026-05-09T16:20:58.191130",
-    "metadata": {
-      "abstract": "Abstract Climate change visualizations in the media play a crucial role in conveying information, raising awareness, and motivating action. This study combines systematic and scoping literature review (2005–2024) with content analysis to analyze current research on climate change visualizations of traditional and digital media. The findings show that most existing research concentrates on traditional media, with limited focus on social media and a predominance of studies focused on Western countries. Framing theory emerges as the predominant theoretical framework, especially in qualitative studies. By analyzing and comparing a large corpus of scientific studies, this study identifies predominant topics, methodologies trends, and research gaps, while also highlighting key challenges and implications for future research.",
-      "keywords": [],
-      "doi": "10.1093/anncom/wlag011",
-      "doi_url": "https://doi.org/10.1093/anncom/wlag011",
-      "url": null,
-      "arxiv_url": null,
-      "pdf_url": null,
-      "publication_date": "2026-03-28",
-      "citation_count": 0,
-      "reference_count": 84,
-      "venue": "Annals of the International Communication Association",
-      "authors": [
-        "Isaac Bravo",
-        "Stefanie Walter",
-        "Katharina Prasse",
-        "Margret Keuper"
-      ],
-      "subjects": [],
-      "is_open_access": null,
-      "source": "crossref",
-      "confidence_score": 0.8333333333333333
-    }
-  },
-  "569ea685d926c37d": {
-    "entry_key": "Marwick2026-qd",
-    "entry_title": "Disinformation as cultural narrative: Conceptualizing disinformation as cross-platform, identity-affirming, cathartic stories",
-    "cached_at": "2026-05-09T16:21:01.112041",
-    "metadata": {
-      "abstract": null,
-      "keywords": [],
-      "doi": "10.1080/10584609.2026.2644198",
-      "doi_url": "https://doi.org/10.1080/10584609.2026.2644198",
-      "url": null,
-      "arxiv_url": null,
-      "pdf_url": null,
-      "publication_date": "2026-03-04",
-      "citation_count": 0,
-      "reference_count": 83,
-      "venue": "Political Communication",
-      "authors": [
-        "Alice E. Marwick",
-        "Elaine Schnabel",
-        "Shannon McGregor",
-        "Carolyn Schmitt"
-      ],
-      "subjects": [],
-      "is_open_access": null,
-      "source": "crossref",
-      "confidence_score": 0.83
-    }
-  },
-  "dc3ad3b0088dce44": {
-    "entry_key": "Yang2026-tq",
-    "entry_title": "A systematic review of social science studies analyzing social media data, 2010-2024",
-    "cached_at": "2026-05-09T17:26:24.453255",
-    "metadata": {
-      "abstract": "Social media platforms have long served as important data sources for social scientists. Policies around academic access to platform data, however, have seen substantial changes in recent years. These shifts have introduced profound uncertainty for scholarship relying on social media data. We evaluate the potential research impact of such changes by conducting a systematic analysis of scholarship published between 2010 and 2024 in 59 journals, representing five social science disciplines as well as leading interdisciplinary journals. Using a multi-method design that includes human-in-the-loop AI annotation, we find that 0.78% of papers in our corpus (3.15% when focusing exclusively on social science journals) use social media data for empirical research, with substantial variance across disciplines—ranging from less than 1% in Economics to approximately 13% in Communication. Twitter/X and Facebook are, respectively, the first and second most popular data sources across all disciplines, throughout the 15 years of our study. Further, the percentage of papers using social media data has dramatically increased over this period, tripling its share of social science publications, although this share has plateaued and even declined in the last few years. This recent decline has been driven by Twitter/X and Facebook in particular, and suggests that the empirical study of social media may be on the cusp of significant changes. These changes might affect the study of real-time events and phenomena with widespread sociopolitical ramifications, such as the COVID-19 pandemic and misleading information surrounding the 2016 U.S. presidential election, which we observe to be some of the major topics studied by social scientists using social media data.",
-      "keywords": [],
-      "doi": "10.31235/osf.io/yexp6_v1",
-      "doi_url": "https://doi.org/10.31235/osf.io/yexp6_v1",
-      "url": null,
-      "arxiv_url": null,
-      "pdf_url": null,
-      "publication_date": null,
-      "citation_count": 0,
-      "reference_count": 0,
-      "venue": null,
-      "authors": [
-        "Kai-Cheng Yang",
-        "Pranav Goel",
-        "Meredith L. Pruden",
-        "Qunfang Wu",
-        "Colby Eagan",
-        "David Lazer",
-        "Deen Freelon"
-      ],
-      "subjects": [],
-      "is_open_access": null,
-      "source": "crossref",
-      "confidence_score": 0.81875
-    }
-  },
-  "9318d8da1336a5f7": {
-    "entry_key": "Szabo2026-rd",
-    "entry_title": "Conversational Inoculation to enhance resistance to misinformation",
-    "cached_at": "2026-05-13T05:42:19.000181",
-    "metadata": {
-      "abstract": "Proliferation of misinformation is a globally acknowledged problem. Cognitive Inoculation helps build resistance to different forms of persuasion, such as misinformation. We investigate Conversational Inoculation, a method to help people build resistance to misinformation through dynamic conversations with a chatbot. We built a Web-based system to implement the method, and conducted a within-subject user experiment to compare it with two traditional inoculation methods. Our results validate Conversational Inoculation as a viable novel method, and show how it was able to enhance participants' resistance to misinformation. A qualitative analysis of the conversations between participants and the chatbot reveal independence and trust as factors that boosted the efficiency of Conversational Inoculation, and friction of interaction as a factor hindering it. We discuss the opportunities and challenges of using Conversational Inoculation to combat misinformation. Our work contributes a timely investigation and a promising research direction in scalable ways to combat misinformation.",
-      "keywords": [],
-      "doi": "10.1145/3772318.379095",
-      "doi_url": "https://doi.org/10.1145/3772318.379095",
-      "url": null,
-      "arxiv_url": "http://arxiv.org/abs/2601.22394v1",
-      "pdf_url": "https://arxiv.org/pdf/2601.22394v1",
-      "publication_date": "2026-01-29",
-      "citation_count": null,
-      "reference_count": null,
-      "venue": null,
-      "authors": [
-        "Dániel Szabó",
-        "Chi-Lan Yang",
-        "Aku Visuri",
-        "Jonas Oppenlaender",
-        "Bharathi Sekar",
-        "Koji Yatani",
-        "Simo Hosio"
-      ],
-      "subjects": [
-        "cs.HC"
-      ],
-      "is_open_access": true,
-      "source": "arxiv",
-      "confidence_score": 0.72
-    }
-  },
-  "ca62fa131175f6c5": {
-    "entry_key": "Appel2026-qr",
-    "entry_title": "How deceptive online networks reached millions in the US 2020 elections",
-    "cached_at": "2026-05-13T05:42:20.954477",
-    "metadata": {
-      "abstract": null,
-      "keywords": [],
-      "doi": "10.1038/s41562-026-02435-2",
-      "doi_url": "https://doi.org/10.1038/s41562-026-02435-2",
-      "url": null,
-      "arxiv_url": null,
-      "pdf_url": null,
-      "publication_date": "2026-04-06",
-      "citation_count": 0,
-      "reference_count": 53,
-      "venue": "Nature Human Behaviour",
-      "authors": [
-        "Ruth E. Appel",
-        "Young Mie Kim",
-        "Jennifer Pan",
-        "Yiqing Xu",
-        "Ben Nimmo",
-        "Daniel Robert Thomas",
-        "Hunt Allcott",
-        "Pablo Barberá",
-        "Taylor Brown",
-        "Adriana Crespo-Tenorio",
-        "Drew Dimmery",
-        "Deen Freelon",
-        "Matthew Gentzkow",
-        "Sandra González-Bailón",
-        "Andrew M. Guess",
-        "Shanto Iyengar",
-        "David Lazer",
-        "Neil Malhotra",
-        "Devra Moehler",
-        "Brendan Nyhan",
-        "Jaime Settle",
-        "Emily Thorson",
-        "Rebekah Tromble",
-        "Carlos Velasco Rivera",
-        "Arjun Wilkins",
-        "Magdalena Wojcieszak",
-        "Beixian Xiong",
-        "Chad Kiewiet de Jonge",
-        "Annie Franco",
-        "Winter Mason",
-        "Natalie Jomini Stroud",
-        "Joshua A. Tucker"
-      ],
-      "subjects": [],
-      "is_open_access": null,
-      "source": "crossref",
-      "confidence_score": 0.8081081081081081
-    }
-  },
-  "7a324346d6db24a6": {
-    "entry_key": "Knupfer2025-vt",
-    "entry_title": "The logic of connective faction: How digitally networked elites and hyper-partisan media radicalize politics",
-    "cached_at": "2026-05-13T05:42:25.515537",
-    "metadata": {
-      "abstract": null,
-      "keywords": [],
-      "doi": "10.1080/10584609.2025.2604708",
-      "doi_url": "https://doi.org/10.1080/10584609.2025.2604708",
-      "url": null,
-      "arxiv_url": null,
-      "pdf_url": null,
-      "publication_date": "2025-12-23",
-      "citation_count": 4,
-      "reference_count": 114,
-      "venue": "Political Communication",
-      "authors": [
-        "Curd B. Knüpfer",
-        "Yunkang Yang",
-        "Mike Cowburn"
-      ],
-      "subjects": [],
-      "is_open_access": null,
-      "source": "crossref",
-      "confidence_score": 0.8374999999999999
-    }
-  },
-  "dc0cfdf6e324df5e": {
-    "entry_key": "Arceneaux2026-xk",
-    "entry_title": "Social bots as agenda-builders: Evaluating the impact of algorithmic amplification on organizational messaging",
-    "cached_at": "2026-05-13T05:42:26.523842",
-    "metadata": {
-      "abstract": null,
-      "keywords": [],
-      "doi": "10.1080/1062726x.2025.2606676",
-      "doi_url": "https://doi.org/10.1080/1062726x.2025.2606676",
-      "url": null,
-      "arxiv_url": null,
-      "pdf_url": null,
-      "publication_date": "2026-01-04",
-      "citation_count": 2,
-      "reference_count": 103,
-      "venue": "Journal of Public Relations Research",
-      "authors": [
-        "Phillip Arceneaux",
-        "Joshua Anderson",
-        "Josephine Lukito",
-        "Mansi Shah",
-        "Spiro Kiousis"
-      ],
-      "subjects": [],
-      "is_open_access": null,
-      "source": "crossref",
-      "confidence_score": 0.8272727272727272
-    }
-  },
-  "b4fc2511a88fe5fa": {
-    "entry_key": "Li2026-wq",
-    "entry_title": "Does YouTube shape conspiracy mentality? A three-way interaction effect of partisan YouTube channel use, like-Minded discussion, and interest in politics",
-    "cached_at": "2026-05-13T05:42:30.899232",
-    "metadata": {
-      "abstract": null,
-      "keywords": [],
-      "doi": "10.1080/1369118x.2026.2653097",
-      "doi_url": "https://doi.org/10.1080/1369118x.2026.2653097",
-      "url": null,
-      "arxiv_url": null,
-      "pdf_url": null,
-      "publication_date": "2026-04-05",
-      "citation_count": 0,
-      "reference_count": 106,
-      "venue": "Information, Communication &amp; Society",
-      "authors": [
-        "Xiyue Li",
-        "Yunseung Lee",
-        "Bumsoo Kim"
-      ],
-      "subjects": [],
-      "is_open_access": null,
-      "source": "crossref",
-      "confidence_score": 0.8428571428571427
-    }
-  },
-  "58a00efe5577e253": {
-    "entry_key": "Rohrbach2026-rc",
-    "entry_title": "Conspiracy in the making: The role of journalistic strategies in the formation of new conspiracy beliefs",
-    "cached_at": "2026-05-13T05:42:32.964423",
-    "metadata": {
-      "abstract": null,
-      "keywords": [],
-      "doi": "10.1080/1461670x.2026.2623882",
-      "doi_url": "https://doi.org/10.1080/1461670x.2026.2623882",
-      "url": null,
-      "arxiv_url": null,
-      "pdf_url": null,
-      "publication_date": "2026",
-      "citation_count": 0,
-      "reference_count": 78,
-      "venue": "Journalism Studies",
-      "authors": [
-        "Tobias Rohrbach",
-        "Chiara Valli"
-      ],
-      "subjects": [],
-      "is_open_access": null,
-      "source": "crossref",
-      "confidence_score": 0.86
-    }
-  },
-  "e618cb54ce598e1d": {
-    "entry_key": "Hackenburg2025-dj",
-    "entry_title": "The levers of political persuasion with conversational artificial intelligence",
-    "cached_at": "2026-05-13T05:42:36.229304",
-    "metadata": {
-      "abstract": "There are widespread fears that conversational artificial intelligence (AI) could soon exert unprecedented influence over human beliefs. In this work, in three large-scale experiments ( N = 76,977 participants), we deployed 19 large language models (LLMs)—including some post-trained explicitly for persuasion—to evaluate their persuasiveness on 707 political issues. We then checked the factual accuracy of 466,769 resulting LLM claims. We show that the persuasive power of current and near-future AI is likely to stem more from post-training and prompting methods—which boosted persuasiveness by as much as 51 and 27%, respectively—than from personalization or increasing model scale, which had smaller effects. We further show that these methods increased persuasion by exploiting LLMs’ ability to rapidly access and strategically deploy information and that, notably, where they increased AI persuasiveness, they also systematically decreased factual accuracy.",
-      "keywords": [],
-      "doi": "10.1126/science.aea3884",
-      "doi_url": "https://doi.org/10.1126/science.aea3884",
-      "url": null,
-      "arxiv_url": null,
-      "pdf_url": null,
-      "publication_date": "2025-12-04",
-      "citation_count": 19,
-      "reference_count": 87,
-      "venue": "Science",
-      "authors": [
-        "Kobi Hackenburg",
-        "Ben M. Tappin",
-        "Luke Hewitt",
-        "Ed Saunders",
-        "Sid Black",
-        "Hause Lin",
-        "Catherine Fist",
-        "Helen Margetts",
-        "David G. Rand",
-        "Christopher Summerfield"
-      ],
-      "subjects": [],
-      "is_open_access": null,
-      "source": "crossref",
-      "confidence_score": 0.8130434782608695
-    }
-  },
-  "840d61aac82e11a3": {
-    "entry_key": "Lewandowsky2026-ob",
-    "entry_title": "Internet platforms must be held accountable for their actions",
-    "cached_at": "2026-05-13T05:42:39.135651",
-    "metadata": {
-      "abstract": null,
-      "keywords": [],
-      "doi": "10.1126/science.aee9835",
-      "doi_url": "https://doi.org/10.1126/science.aee9835",
-      "url": null,
-      "arxiv_url": null,
-      "pdf_url": null,
-      "publication_date": "2026-02-05",
-      "citation_count": 0,
-      "reference_count": 0,
-      "venue": "Science",
-      "authors": [
-        "Stephan Lewandowsky"
-      ],
-      "subjects": [],
-      "is_open_access": null,
-      "source": "crossref",
-      "confidence_score": 0.8999999999999999
-    }
-  },
-  "a8663d8c2d65801d": {
-    "entry_key": "Bollenbacher2026-vz",
-    "entry_title": "Effects of antivaccine tweets on COVID-19 vaccinations, cases, and deaths",
-    "cached_at": "2026-05-13T05:42:43.077549",
-    "metadata": {
-      "abstract": "Abstract Despite the wide availability of COVID-19 vaccines in the United States and their effectiveness in reducing hospitalizations and mortality during the pandemic, a majority of Americans chose not to be vaccinated during 2021. Recent work shows that vaccine misinformation affects intentions in controlled settings, but does not link it to real-world vaccination rates. Here, we present observational evidence of a causal relationship between exposure to antivaccine content and vaccination rates, and estimate the size of this effect. We present a compartmental epidemic model that includes vaccination, vaccine hesitancy, and exposure to antivaccine content. We fit the model to data to determine that a geographical pattern of exposure to online antivaccine content across US counties explains reduced vaccine uptake in the same counties. We find observational evidence that exposure to antivaccine content on Twitter caused about 14,000 people to refuse vaccination between February and August 2021 in the US, resulting in at least 545 additional cases and 8 additional deaths. This work provides a methodology for linking online speech with offline epidemic outcomes. Our findings should inform social media moderation policy as well as public health interventions.",
-      "keywords": [],
-      "doi": "10.1140/epjds/s13688-025-00606-1",
-      "doi_url": "https://doi.org/10.1140/epjds/s13688-025-00606-1",
-      "url": null,
-      "arxiv_url": null,
-      "pdf_url": null,
-      "publication_date": "2026-01-07",
-      "citation_count": 0,
-      "reference_count": 44,
-      "venue": "EPJ Data Science",
-      "authors": [
-        "John Bollenbacher",
-        "Filippo Menczer",
-        "John Bryden"
-      ],
-      "subjects": [],
-      "is_open_access": null,
-      "source": "crossref",
-      "confidence_score": 0.8428571428571427
-    }
-  },
-  "180162f4fddd68af": {
-    "entry_key": "Graham2026-fb",
-    "entry_title": "On the Internet no-one knows you’re not a bot: ‘Botting’ on Reddit as participatory culture",
-    "cached_at": "2026-05-13T05:42:44.938228",
-    "metadata": {
-      "abstract": "Repetitive online communication is often labelled a ‘bot problem’ by platforms, policymakers and users. However, repetitive posting does not exclusively indicate automation; humans also engage in bot-like posting for various purposes. We adopt the term ‘botting’ to describe repetitive posting enacted through manual, semi-automated, or fully automated means. While emerging research has linked manual botting practices to commercial or fame-seeking motivations, we extend this scholarship by examining botting on Reddit – a pseudonymous platform that lacks the affordances typically associated with monetisation or personal branding. Through a mixed-methods analysis, we examine a case study in which mass-scale, repetitive posting of the mushroom emoji emerged as ‘in-group’ behaviour within Reddit’s participatory culture, prompting a performative counterpublic response. Our findings challenge the binary between human and automated posting, and underscore the importance of situating research on AI-generated and automated content within the cultural and contextual frameworks that shape its production and reception.",
-      "keywords": [],
-      "doi": "10.1177/14614448251409210",
-      "doi_url": "https://doi.org/10.1177/14614448251409210",
-      "url": null,
-      "arxiv_url": null,
-      "pdf_url": null,
-      "publication_date": "2026-02-04",
-      "citation_count": 0,
-      "reference_count": 71,
-      "venue": "New Media &amp; Society",
-      "authors": [
-        "Timothy Graham",
-        "Dominique Carlon"
-      ],
-      "subjects": [],
-      "is_open_access": null,
-      "source": "crossref",
-      "confidence_score": 0.86
-    }
-  },
-  "053b6b972dea788b": {
-    "entry_key": "Peters2026-mo",
-    "entry_title": "Little mentioning, moderate attention, great relevance: The quality of online platform data in the Digital Services Act",
-    "cached_at": "2026-05-13T05:42:48.257272",
-    "metadata": {
-      "abstract": "Questions regarding the quality of online platform data have gained significant attention and research focus in recent years. Inaccurate, incomplete, or inconsistent data are some of the many examples of data quality problems. At the same time, digital platforms have restricted access to their data in recent years. This strategy by digital platforms has now increasingly become the subject of political efforts of regulation, especially the Digital Services Act (DSA) of the European Union. Therefore, we argue that the quality of online platform data cannot solely be understood as a methodological, internal research construct but also as a contested concept in which various actors from politics, the tech industry, and academia negotiate and represent specific interests. To assess the role of data quality in and around the DSA, we analyze the content of the DSA itself, in particular Art. 40 and the respective Delegated Regulation (DR), as well as the feedback submitted to the European Commission's Call for Evidence and the Delegated Regulation draft. We then apply quantitative content analysis, multiple correspondence analysis, and thematic analysis. Results indicate that data quality plays little to no role in the official EU documents, namely, the DSA and the Delegated Regulation draft. In the public feedback, however, data quality concerns have been raised by various stakeholders in academia. Based on the results, we argue that data quality should play a more prominent role in the debate to fulfill the DSA aims of assessing systemic risks in the EU.",
-      "keywords": [],
-      "doi": "10.1177/29768624261438624",
-      "doi_url": "https://doi.org/10.1177/29768624261438624",
-      "url": null,
-      "arxiv_url": null,
-      "pdf_url": null,
-      "publication_date": "2026",
-      "citation_count": 0,
-      "reference_count": 57,
-      "venue": "Platforms &amp; Society",
-      "authors": [
-        "Yannik Peters",
-        "Katrin Weller"
-      ],
-      "subjects": [],
-      "is_open_access": null,
-      "source": "crossref",
-      "confidence_score": 0.86
-    }
+    "last_failure_at": "2026-06-13T22:35:21.004896"
   },
   "f350e7c89de92c56": {
     "entry_key": "Volpe2026-um",
@@ -756,66 +122,6 @@
       "is_open_access": true,
       "source": "openalex",
       "confidence_score": 0.7999999999999999
-    }
-  },
-  "728f9dde87c89f86": {
-    "entry_key": "van-der-Linden2026-jt",
-    "entry_title": "Prebunking misinformation techniques in social media feeds: Results from an Instagram field study",
-    "cached_at": "2026-05-13T05:42:57.973534",
-    "metadata": {
-      "abstract": "Boosting psychological defences against misleading content online is an active area of research, but transition from the lab to real-world uptake remains a challenge. We developed a 19-second prebunking video about emotionally manipulative content and showed it as a Story Feed ad to N = 375,597 Instagram users in the United Kingdom. Using an innovative method leveraging Instagram’s quiz functionality (N = 806), we found that treatment group users were 21 percentage points better than controls at identifying manipulation in a news headline, with effects persisting for five months. Treated users were also more likely to click on a link to learn more. We outline how inoculation campaigns can be scaled in real-world social media feeds.",
-      "keywords": [],
-      "doi": "10.37016/mr-2020-193",
-      "doi_url": "https://doi.org/10.37016/mr-2020-193",
-      "url": null,
-      "arxiv_url": null,
-      "pdf_url": null,
-      "publication_date": "2026-01-22",
-      "citation_count": 1,
-      "reference_count": 49,
-      "venue": "Harvard Kennedy School Misinformation Review",
-      "authors": [
-        "Sander van der Linden",
-        "Debra Louison-Lavoy",
-        "Nicholas Blazer",
-        "Nancy S. Noble",
-        "Jon Roozenbeek"
-      ],
-      "subjects": [],
-      "is_open_access": null,
-      "source": "crossref",
-      "confidence_score": 0.84
-    }
-  },
-  "e89ae89da5b33c17": {
-    "entry_key": "Waight2026-ts",
-    "entry_title": "State media control influences large language models",
-    "cached_at": "2026-05-14T05:47:09.919980",
-    "metadata": {
-      "abstract": null,
-      "keywords": [],
-      "doi": "10.1038/s41586-026-10506-7",
-      "doi_url": "https://doi.org/10.1038/s41586-026-10506-7",
-      "url": null,
-      "arxiv_url": null,
-      "pdf_url": null,
-      "publication_date": "2026-05-13",
-      "citation_count": 0,
-      "reference_count": 109,
-      "venue": "Nature",
-      "authors": [
-        "Hannah Waight",
-        "Eddie Yang",
-        "Yin Yuan",
-        "Solomon Messing",
-        "Margaret E. Roberts",
-        "Brandon M. Stewart",
-        "Joshua A. Tucker"
-      ],
-      "subjects": [],
-      "is_open_access": null,
-      "source": "crossref",
-      "confidence_score": 0.8166666666666667
     }
   },
   "0f9fb852640bb108": {
@@ -1878,11 +1184,11 @@
   "fac502d9bb5bbba8": {
     "entry_key": "UnknownUnknown-db",
     "entry_title": "What 81,000 people told us about the economics of AI",
-    "cached_at": "2026-06-04T09:06:46.801420",
+    "cached_at": "2026-06-13T22:35:24.121631",
     "metadata": null,
     "failed": true,
     "failure_reason": "Could not enrich entry: UnknownUnknown-db | No DOI available | Title length: 52 chars | No authors available | APIs: Crossref enabled, Semantic Scholar enabled, ArXiv enabled",
-    "last_failure_at": "2026-06-04T09:06:46.801429"
+    "last_failure_at": "2026-06-13T22:35:24.121640"
   },
   "8a077b3683a99b7a": {
     "entry_key": "Van_Erkel2026-mk",
@@ -5616,6 +4922,727 @@
       "is_open_access": null,
       "source": "crossref",
       "confidence_score": 0.8272727272727272
+    }
+  },
+  "df48b78c330b92b4": {
+    "entry_key": "Pierri2025-hm",
+    "entry_title": "Research opportunities and challenges of the EU's Digital Services Act",
+    "cached_at": "2026-06-13T22:33:59.362139",
+    "metadata": {
+      "abstract": "The Digital Services Act (DSA) introduced by the European Union in 2022 offers a landmark framework for platform transparency, with Article 40 enabling vetted researchers to access data from major online platforms. Yet significant legal, technical, and organizational barriers still hinder effective research on systemic online risks. This piece outlines the key challenges emerging from the Article 40 process and proposes practical measures to ensure that the DSA fulfills its transparency and accountability goals.",
+      "keywords": [],
+      "doi": null,
+      "doi_url": null,
+      "url": null,
+      "arxiv_url": "http://arxiv.org/abs/2512.14223v1",
+      "pdf_url": "https://arxiv.org/pdf/2512.14223v1",
+      "publication_date": "2025-12-16",
+      "citation_count": null,
+      "reference_count": null,
+      "venue": null,
+      "authors": [
+        "Francesco Pierri",
+        "Theo Araujo",
+        "Sanne Kruikemeier",
+        "Philipp Lorenz-Spreen",
+        "Mariek M. P. Vanden Abeele",
+        "Laura Vandenbosch",
+        "Joana Gonçalves-Sa",
+        "Przemyslaw A. Grabowicz"
+      ],
+      "subjects": [
+        "cs.CY",
+        "cs.SI"
+      ],
+      "is_open_access": true,
+      "source": "arxiv",
+      "confidence_score": 0.7142857142857142
+    }
+  },
+  "c97d82f1ad871982": {
+    "entry_key": "Emilio2026-ik",
+    "entry_title": "The Generative AI Paradox: GenAI and the erosion of trust, the corrosion of information verification, and the demise of truth",
+    "cached_at": "2026-06-13T22:34:02.522494",
+    "metadata": {
+      "abstract": "Generative AI (GenAI) now produces text, images, audio, and video that can be perceptually convincing at scale and at negligible marginal cost. While public debate often frames the associated harms as \"deepfakes\" or incremental extensions of misinformation and fraud, this view misses a broader socio-technical shift: GenAI enables synthetic realities; coherent, interactive, and potentially personalized information environments in which content, identity, and social interaction are jointly manufactured and mutually reinforcing. We argue that the most consequential risk is not merely the production of isolated synthetic artifacts, but the progressive erosion of shared epistemic ground and institutional verification practices as synthetic content, synthetic identity, and synthetic interaction become easy to generate and hard to audit. This paper (i) formalizes synthetic reality as a layered stack (content, identity, interaction, institutions), (ii) expands a taxonomy of GenAI harms spanning personal, economic, informational, and socio-technical risks, (iii) articulates the qualitative shifts introduced by GenAI (cost collapse, throughput, customization, micro-segmentation, provenance gaps, and trust erosion), and (iv) synthesizes recent risk realizations (2023-2025) into a compact case bank illustrating how these mechanisms manifest in fraud, elections, harassment, documentation, and supply-chain compromise. We then propose a mitigation stack that treats provenance infrastructure, platform governance, institutional workflow redesign, and public resilience as complementary rather than substitutable, and outline a research agenda focused on measuring epistemic security. We conclude with the Generative AI Paradox: as synthetic media becomes ubiquitous, societies may rationally discount digital evidence altogether.",
+      "keywords": [],
+      "doi": null,
+      "doi_url": null,
+      "url": null,
+      "arxiv_url": "http://arxiv.org/abs/2601.00306v1",
+      "pdf_url": "https://arxiv.org/pdf/2601.00306v1",
+      "publication_date": "2026-01-01",
+      "citation_count": null,
+      "reference_count": null,
+      "venue": null,
+      "authors": [
+        "Emilio Ferrara"
+      ],
+      "subjects": [
+        "cs.CY",
+        "cs.AI",
+        "cs.HC"
+      ],
+      "is_open_access": true,
+      "source": "arxiv",
+      "confidence_score": 0.7999999999999999
+    }
+  },
+  "667a9bec772d1fb6": {
+    "entry_key": "Elfes2026-jb",
+    "entry_title": "On narrative: The rhetorical mechanisms of online polarisation",
+    "cached_at": "2026-06-13T22:34:05.674654",
+    "metadata": {
+      "abstract": "Polarisation research has demonstrated how people cluster in homogeneous groups with opposing opinions. However, this effect emerges not only through interaction between people, limiting communication between groups, but also between narratives, shaping opinions and partisan identities. Yet, how polarised groups collectively construct and negotiate opposing interpretations of reality, and whether narratives move between groups despite limited interactions, remains unexplored. To address this gap, we formalise the concept of narrative polarisation and demonstrate its measurement in 212 YouTube videos and 90,029 comments on the Israeli-Palestinian conflict. Based on structural narrative theory and implemented through a large language model, we extract the narrative roles assigned to central actors in two partisan information environments. We find that while videos produce highly polarised narratives, comments significantly reduce narrative polarisation, harmonising discourse on the surface level. However, on a deeper narrative level, recurring narrative motifs reveal additional differences between partisan groups.",
+      "keywords": [],
+      "doi": null,
+      "doi_url": null,
+      "url": null,
+      "arxiv_url": "http://arxiv.org/abs/2601.07398v1",
+      "pdf_url": "https://arxiv.org/pdf/2601.07398v1",
+      "publication_date": "2026-01-12",
+      "citation_count": null,
+      "reference_count": null,
+      "venue": null,
+      "authors": [
+        "Jan Elfes",
+        "Marco Bastos",
+        "Luca Maria Aiello"
+      ],
+      "subjects": [
+        "cs.CY",
+        "cs.CL",
+        "cs.SI"
+      ],
+      "is_open_access": true,
+      "source": "arxiv",
+      "confidence_score": 0.7749999999999999
+    }
+  },
+  "9318d8da1336a5f7": {
+    "entry_key": "Szabo2026-rd",
+    "entry_title": "Conversational Inoculation to enhance resistance to misinformation",
+    "cached_at": "2026-06-13T22:34:08.833095",
+    "metadata": {
+      "abstract": "Proliferation of misinformation is a globally acknowledged problem. Cognitive Inoculation helps build resistance to different forms of persuasion, such as misinformation. We investigate Conversational Inoculation, a method to help people build resistance to misinformation through dynamic conversations with a chatbot. We built a Web-based system to implement the method, and conducted a within-subject user experiment to compare it with two traditional inoculation methods. Our results validate Conversational Inoculation as a viable novel method, and show how it was able to enhance participants' resistance to misinformation. A qualitative analysis of the conversations between participants and the chatbot reveal independence and trust as factors that boosted the efficiency of Conversational Inoculation, and friction of interaction as a factor hindering it. We discuss the opportunities and challenges of using Conversational Inoculation to combat misinformation. Our work contributes a timely investigation and a promising research direction in scalable ways to combat misinformation.",
+      "keywords": [],
+      "doi": "10.1145/3772318.379095",
+      "doi_url": "https://doi.org/10.1145/3772318.379095",
+      "url": null,
+      "arxiv_url": "http://arxiv.org/abs/2601.22394v1",
+      "pdf_url": "https://arxiv.org/pdf/2601.22394v1",
+      "publication_date": "2026-01-29",
+      "citation_count": null,
+      "reference_count": null,
+      "venue": null,
+      "authors": [
+        "Dániel Szabó",
+        "Chi-Lan Yang",
+        "Aku Visuri",
+        "Jonas Oppenlaender",
+        "Bharathi Sekar",
+        "Koji Yatani",
+        "Simo Hosio"
+      ],
+      "subjects": [
+        "cs.HC"
+      ],
+      "is_open_access": true,
+      "source": "arxiv",
+      "confidence_score": 0.72
+    }
+  },
+  "43cacb58212f6871": {
+    "entry_key": "DiGiuseppe2026-pu",
+    "entry_title": "Perceived political bias in LLMs reduces persuasive abilities",
+    "cached_at": "2026-06-13T22:34:12.173491",
+    "metadata": {
+      "abstract": "Conversational AI has been proposed as a scalable way to correct public misconceptions and spread misinformation. Yet its effectiveness may depend on perceptions of its political neutrality. As LLMs enter partisan conflict, elites increasingly portray them as ideologically aligned. We test whether these credibility attacks reduce LLM-based persuasion. In a preregistered U.S. survey experiment (N=2144), participants completed a three-round conversation with ChatGPT about a personally held economic policy misconception. Compared to a neutral control, a short message indicating that the LLM was biased against the respondent's party attenuated persuasion by 28%. Transcript analysis indicates that the warnings alter the interaction: respondents push back more and engage less receptively. These findings suggest that the persuasive impact of conversational AI is politically contingent, constrained by perceptions of partisan alignment.",
+      "keywords": [],
+      "doi": null,
+      "doi_url": null,
+      "url": null,
+      "arxiv_url": "http://arxiv.org/abs/2602.18092v1",
+      "pdf_url": "https://arxiv.org/pdf/2602.18092v1",
+      "publication_date": "2026-02-20",
+      "citation_count": null,
+      "reference_count": null,
+      "venue": null,
+      "authors": [
+        "Matthew DiGiuseppe",
+        "Joshua Robison"
+      ],
+      "subjects": [
+        "cs.CL",
+        "cs.AI",
+        "cs.CY"
+      ],
+      "is_open_access": true,
+      "source": "arxiv",
+      "confidence_score": 0.76
+    }
+  },
+  "ca62fa131175f6c5": {
+    "entry_key": "Appel2026-qr",
+    "entry_title": "How deceptive online networks reached millions in the US 2020 elections",
+    "cached_at": "2026-06-13T22:34:12.467861",
+    "metadata": {
+      "abstract": null,
+      "keywords": [],
+      "doi": "10.1038/s41562-026-02435-2",
+      "doi_url": "https://doi.org/10.1038/s41562-026-02435-2",
+      "url": null,
+      "arxiv_url": null,
+      "pdf_url": null,
+      "publication_date": "2026-04-06",
+      "citation_count": 0,
+      "reference_count": 53,
+      "venue": "Nature Human Behaviour",
+      "authors": [
+        "Ruth E. Appel",
+        "Young Mie Kim",
+        "Jennifer Pan",
+        "Yiqing Xu",
+        "Ben Nimmo",
+        "Daniel Robert Thomas",
+        "Hunt Allcott",
+        "Pablo Barberá",
+        "Taylor Brown",
+        "Adriana Crespo-Tenorio",
+        "Drew Dimmery",
+        "Deen Freelon",
+        "Matthew Gentzkow",
+        "Sandra González-Bailón",
+        "Andrew M. Guess",
+        "Shanto Iyengar",
+        "David Lazer",
+        "Neil Malhotra",
+        "Devra Moehler",
+        "Brendan Nyhan",
+        "Jaime Settle",
+        "Emily Thorson",
+        "Rebekah Tromble",
+        "Carlos Velasco Rivera",
+        "Arjun Wilkins",
+        "Magdalena Wojcieszak",
+        "Beixian Xiong",
+        "Chad Kiewiet de Jonge",
+        "Annie Franco",
+        "Winter Mason",
+        "Natalie Jomini Stroud",
+        "Joshua A. Tucker"
+      ],
+      "subjects": [],
+      "is_open_access": null,
+      "source": "crossref",
+      "confidence_score": 0.8081081081081081
+    }
+  },
+  "e89ae89da5b33c17": {
+    "entry_key": "Waight2026-ts",
+    "entry_title": "State media control influences large language models",
+    "cached_at": "2026-06-13T22:34:16.631320",
+    "metadata": {
+      "abstract": null,
+      "keywords": [],
+      "doi": "10.1038/s41586-026-10506-7",
+      "doi_url": "https://doi.org/10.1038/s41586-026-10506-7",
+      "url": null,
+      "arxiv_url": null,
+      "pdf_url": null,
+      "publication_date": "2026-05-13",
+      "citation_count": 1,
+      "reference_count": 109,
+      "venue": "Nature",
+      "authors": [
+        "Hannah Waight",
+        "Eddie Yang",
+        "Yin Yuan",
+        "Solomon Messing",
+        "Margaret E. Roberts",
+        "Brandon M. Stewart",
+        "Joshua A. Tucker"
+      ],
+      "subjects": [],
+      "is_open_access": null,
+      "source": "crossref",
+      "confidence_score": 0.8166666666666667
+    }
+  },
+  "7a324346d6db24a6": {
+    "entry_key": "Knupfer2025-vt",
+    "entry_title": "The logic of connective faction: How digitally networked elites and hyper-partisan media radicalize politics",
+    "cached_at": "2026-06-13T22:34:19.242463",
+    "metadata": {
+      "abstract": null,
+      "keywords": [],
+      "doi": "10.1080/10584609.2025.2604708",
+      "doi_url": "https://doi.org/10.1080/10584609.2025.2604708",
+      "url": null,
+      "arxiv_url": null,
+      "pdf_url": null,
+      "publication_date": "2026-05-04",
+      "citation_count": 4,
+      "reference_count": 114,
+      "venue": "Political Communication",
+      "authors": [
+        "Curd B. Knüpfer",
+        "Yunkang Yang",
+        "Mike Cowburn"
+      ],
+      "subjects": [],
+      "is_open_access": null,
+      "source": "crossref",
+      "confidence_score": 0.8374999999999999
+    }
+  },
+  "569ea685d926c37d": {
+    "entry_key": "Marwick2026-qd",
+    "entry_title": "Disinformation as cultural narrative: Conceptualizing disinformation as cross-platform, identity-affirming, cathartic stories",
+    "cached_at": "2026-06-13T22:34:21.696691",
+    "metadata": {
+      "abstract": null,
+      "keywords": [],
+      "doi": "10.1080/10584609.2026.2644198",
+      "doi_url": "https://doi.org/10.1080/10584609.2026.2644198",
+      "url": null,
+      "arxiv_url": null,
+      "pdf_url": null,
+      "publication_date": "2026-03-04",
+      "citation_count": 1,
+      "reference_count": 83,
+      "venue": "Political Communication",
+      "authors": [
+        "Alice E. Marwick",
+        "Elaine Schnabel",
+        "Shannon McGregor",
+        "Carolyn Schmitt"
+      ],
+      "subjects": [],
+      "is_open_access": null,
+      "source": "crossref",
+      "confidence_score": 0.83
+    }
+  },
+  "17369b94304d1d1a": {
+    "entry_key": "Brown2026-br",
+    "entry_title": "Evaluating echo chambers, rabbit holes, and radicalization pathways on YouTube",
+    "cached_at": "2026-06-13T22:34:24.451707",
+    "metadata": {
+      "abstract": null,
+      "keywords": [],
+      "doi": "10.1080/10584609.2026.2671765",
+      "doi_url": "https://doi.org/10.1080/10584609.2026.2671765",
+      "url": null,
+      "arxiv_url": null,
+      "pdf_url": null,
+      "publication_date": "2026-06-10",
+      "citation_count": 0,
+      "reference_count": 43,
+      "venue": "Political Communication",
+      "authors": [
+        "Megan A. Brown",
+        "James Bisbee",
+        "Angela Lai",
+        "Richard Bonneau",
+        "Jonathan Nagler",
+        "Joshua A. Tucker"
+      ],
+      "subjects": [],
+      "is_open_access": null,
+      "source": "crossref",
+      "confidence_score": 0.82
+    }
+  },
+  "dc0cfdf6e324df5e": {
+    "entry_key": "Arceneaux2026-xk",
+    "entry_title": "Social bots as agenda-builders: Evaluating the impact of algorithmic amplification on organizational messaging",
+    "cached_at": "2026-06-13T22:34:27.792907",
+    "metadata": {
+      "abstract": null,
+      "keywords": [],
+      "doi": "10.1080/1062726x.2025.2606676",
+      "doi_url": "https://doi.org/10.1080/1062726x.2025.2606676",
+      "url": null,
+      "arxiv_url": null,
+      "pdf_url": null,
+      "publication_date": "2026-05-04",
+      "citation_count": 4,
+      "reference_count": 103,
+      "venue": "Journal of Public Relations Research",
+      "authors": [
+        "Phillip Arceneaux",
+        "Joshua Anderson",
+        "Josephine Lukito",
+        "Mansi Shah",
+        "Spiro Kiousis"
+      ],
+      "subjects": [],
+      "is_open_access": null,
+      "source": "crossref",
+      "confidence_score": 0.8272727272727272
+    }
+  },
+  "639a771e905921df": {
+    "entry_key": "Hourigan2026-oc",
+    "entry_title": "Everyday encounters with misinformation online: examining sources, topics and modes",
+    "cached_at": "2026-06-13T22:34:30.914799",
+    "metadata": {
+      "abstract": null,
+      "keywords": [],
+      "doi": "10.1080/1369118x.2026.2636132",
+      "doi_url": "https://doi.org/10.1080/1369118x.2026.2636132",
+      "url": null,
+      "arxiv_url": null,
+      "pdf_url": null,
+      "publication_date": "2026-02-26",
+      "citation_count": 0,
+      "reference_count": 46,
+      "venue": "Information, Communication &amp; Society",
+      "authors": [
+        "Aimee Hourigan",
+        "T.J. Thomson",
+        "Tanya Notley",
+        "Sora Park",
+        "Michael Dezuanni"
+      ],
+      "subjects": [],
+      "is_open_access": null,
+      "source": "crossref",
+      "confidence_score": 0.825
+    }
+  },
+  "b4fc2511a88fe5fa": {
+    "entry_key": "Li2026-wq",
+    "entry_title": "Does YouTube shape conspiracy mentality? A three-way interaction effect of partisan YouTube channel use, like-Minded discussion, and interest in politics",
+    "cached_at": "2026-06-13T22:34:33.959707",
+    "metadata": {
+      "abstract": null,
+      "keywords": [],
+      "doi": "10.1080/1369118x.2026.2653097",
+      "doi_url": "https://doi.org/10.1080/1369118x.2026.2653097",
+      "url": null,
+      "arxiv_url": null,
+      "pdf_url": null,
+      "publication_date": "2026-04-05",
+      "citation_count": 0,
+      "reference_count": 106,
+      "venue": "Information, Communication &amp; Society",
+      "authors": [
+        "Xiyue Li",
+        "Yunseung Lee",
+        "Bumsoo Kim"
+      ],
+      "subjects": [],
+      "is_open_access": null,
+      "source": "crossref",
+      "confidence_score": 0.8428571428571427
+    }
+  },
+  "58a00efe5577e253": {
+    "entry_key": "Rohrbach2026-rc",
+    "entry_title": "Conspiracy in the making: The role of journalistic strategies in the formation of new conspiracy beliefs",
+    "cached_at": "2026-06-13T22:34:37.571863",
+    "metadata": {
+      "abstract": null,
+      "keywords": [],
+      "doi": "10.1080/1461670x.2026.2623882",
+      "doi_url": "https://doi.org/10.1080/1461670x.2026.2623882",
+      "url": null,
+      "arxiv_url": null,
+      "pdf_url": null,
+      "publication_date": "2026-06-11",
+      "citation_count": 0,
+      "reference_count": 78,
+      "venue": "Journalism Studies",
+      "authors": [
+        "Tobias Rohrbach",
+        "Chiara Valli"
+      ],
+      "subjects": [],
+      "is_open_access": null,
+      "source": "crossref",
+      "confidence_score": 0.86
+    }
+  },
+  "6329180da1f9f3e0": {
+    "entry_key": "Bravo2026-ue",
+    "entry_title": "Visualizing climate change in the media: a systematic literature review, challenges, and future research",
+    "cached_at": "2026-06-13T22:34:40.209305",
+    "metadata": {
+      "abstract": "Abstract Climate change visualizations in the media play a crucial role in conveying information, raising awareness, and motivating action. This study combines systematic and scoping literature review (2005–2024) with content analysis to analyze current research on climate change visualizations of traditional and digital media. The findings show that most existing research concentrates on traditional media, with limited focus on social media and a predominance of studies focused on Western countries. Framing theory emerges as the predominant theoretical framework, especially in qualitative studies. By analyzing and comparing a large corpus of scientific studies, this study identifies predominant topics, methodologies trends, and research gaps, while also highlighting key challenges and implications for future research.",
+      "keywords": [],
+      "doi": "10.1093/anncom/wlag011",
+      "doi_url": "https://doi.org/10.1093/anncom/wlag011",
+      "url": null,
+      "arxiv_url": null,
+      "pdf_url": null,
+      "publication_date": "2026-03-28",
+      "citation_count": 1,
+      "reference_count": 84,
+      "venue": "Annals of the International Communication Association",
+      "authors": [
+        "Isaac Bravo",
+        "Stefanie Walter",
+        "Katharina Prasse",
+        "Margret Keuper"
+      ],
+      "subjects": [],
+      "is_open_access": null,
+      "source": "crossref",
+      "confidence_score": 0.8333333333333333
+    }
+  },
+  "e618cb54ce598e1d": {
+    "entry_key": "Hackenburg2025-dj",
+    "entry_title": "The levers of political persuasion with conversational artificial intelligence",
+    "cached_at": "2026-06-13T22:34:43.298253",
+    "metadata": {
+      "abstract": "There are widespread fears that conversational artificial intelligence (AI) could soon exert unprecedented influence over human beliefs. In this work, in three large-scale experiments ( N = 76,977 participants), we deployed 19 large language models (LLMs)—including some post-trained explicitly for persuasion—to evaluate their persuasiveness on 707 political issues. We then checked the factual accuracy of 466,769 resulting LLM claims. We show that the persuasive power of current and near-future AI is likely to stem more from post-training and prompting methods—which boosted persuasiveness by as much as 51 and 27%, respectively—than from personalization or increasing model scale, which had smaller effects. We further show that these methods increased persuasion by exploiting LLMs’ ability to rapidly access and strategically deploy information and that, notably, where they increased AI persuasiveness, they also systematically decreased factual accuracy.",
+      "keywords": [],
+      "doi": "10.1126/science.aea3884",
+      "doi_url": "https://doi.org/10.1126/science.aea3884",
+      "url": null,
+      "arxiv_url": null,
+      "pdf_url": null,
+      "publication_date": "2025-12-04",
+      "citation_count": 24,
+      "reference_count": 87,
+      "venue": "Science",
+      "authors": [
+        "Kobi Hackenburg",
+        "Ben M. Tappin",
+        "Luke Hewitt",
+        "Ed Saunders",
+        "Sid Black",
+        "Hause Lin",
+        "Catherine Fist",
+        "Helen Margetts",
+        "David G. Rand",
+        "Christopher Summerfield"
+      ],
+      "subjects": [],
+      "is_open_access": null,
+      "source": "crossref",
+      "confidence_score": 0.8130434782608695
+    }
+  },
+  "840d61aac82e11a3": {
+    "entry_key": "Lewandowsky2026-ob",
+    "entry_title": "Internet platforms must be held accountable for their actions",
+    "cached_at": "2026-06-13T22:34:46.467324",
+    "metadata": {
+      "abstract": null,
+      "keywords": [],
+      "doi": "10.1126/science.aee9835",
+      "doi_url": "https://doi.org/10.1126/science.aee9835",
+      "url": null,
+      "arxiv_url": null,
+      "pdf_url": null,
+      "publication_date": "2026-02-05",
+      "citation_count": 0,
+      "reference_count": 0,
+      "venue": "Science",
+      "authors": [
+        "Stephan Lewandowsky"
+      ],
+      "subjects": [],
+      "is_open_access": null,
+      "source": "crossref",
+      "confidence_score": 0.8999999999999999
+    }
+  },
+  "a8663d8c2d65801d": {
+    "entry_key": "Bollenbacher2026-vz",
+    "entry_title": "Effects of antivaccine tweets on COVID-19 vaccinations, cases, and deaths",
+    "cached_at": "2026-06-13T22:34:49.510142",
+    "metadata": {
+      "abstract": "Abstract Despite the wide availability of COVID-19 vaccines in the United States and their effectiveness in reducing hospitalizations and mortality during the pandemic, a majority of Americans chose not to be vaccinated during 2021. Recent work shows that vaccine misinformation affects intentions in controlled settings, but does not link it to real-world vaccination rates. Here, we present observational evidence of a causal relationship between exposure to antivaccine content and vaccination rates, and estimate the size of this effect. We present a compartmental epidemic model that includes vaccination, vaccine hesitancy, and exposure to antivaccine content. We fit the model to data to determine that a geographical pattern of exposure to online antivaccine content across US counties explains reduced vaccine uptake in the same counties. We find observational evidence that exposure to antivaccine content on Twitter caused about 14,000 people to refuse vaccination between February and August 2021 in the US, resulting in at least 545 additional cases and 8 additional deaths. This work provides a methodology for linking online speech with offline epidemic outcomes. Our findings should inform social media moderation policy as well as public health interventions.",
+      "keywords": [],
+      "doi": "10.1140/epjds/s13688-025-00606-1",
+      "doi_url": "https://doi.org/10.1140/epjds/s13688-025-00606-1",
+      "url": null,
+      "arxiv_url": null,
+      "pdf_url": null,
+      "publication_date": "2026-01-07",
+      "citation_count": 0,
+      "reference_count": 44,
+      "venue": "EPJ Data Science",
+      "authors": [
+        "John Bollenbacher",
+        "Filippo Menczer",
+        "John Bryden"
+      ],
+      "subjects": [],
+      "is_open_access": null,
+      "source": "crossref",
+      "confidence_score": 0.8428571428571427
+    }
+  },
+  "a1200ca53e8d7d7c": {
+    "entry_key": "Copland2025-em",
+    "entry_title": "Sky News Australia as network propaganda: how a niche cable channel became an international right-wing propaganda machine",
+    "cached_at": "2026-06-13T22:34:52.530522",
+    "metadata": {
+      "abstract": "In the past decade or so, the right-wing news channel, Sky News Australia , has pivoted to publishing online content that speaks to broadly right-wing audiences both in Australia and internationally. While the channel has long been regarded as comparatively unsuccessful, with low TV ratings, such unimpressive pay-TV audience ratings obscure a considerably more significant development elsewhere: Sky News Australia's content is shared and consumed increasingly widely in digital form, via social media. Positioning Sky News Australia as an example of a global system of network propaganda, this article examines how the channel has spread its content online. Studying a core period of Sky News Australia's digital growth during the 2020 COVID pandemic and US presidential race, we use a unique combination of digital methods to document how Sky News Australia has transitioned from a niche cable station to an international right-wing propaganda machine.",
+      "keywords": [],
+      "doi": "10.1177/1329878x251406899",
+      "doi_url": "https://doi.org/10.1177/1329878x251406899",
+      "url": null,
+      "arxiv_url": null,
+      "pdf_url": null,
+      "publication_date": "2025-12-24",
+      "citation_count": 0,
+      "reference_count": 26,
+      "venue": "Media International Australia",
+      "authors": [
+        "Simon Copland",
+        "Axel Bruns",
+        "Timothy Graham"
+      ],
+      "subjects": [],
+      "is_open_access": null,
+      "source": "crossref",
+      "confidence_score": 0.8428571428571427
+    }
+  },
+  "180162f4fddd68af": {
+    "entry_key": "Graham2026-fb",
+    "entry_title": "On the Internet no-one knows you’re not a bot: ‘Botting’ on Reddit as participatory culture",
+    "cached_at": "2026-06-13T22:34:56.128253",
+    "metadata": {
+      "abstract": "Repetitive online communication is often labelled a ‘bot problem’ by platforms, policymakers and users. However, repetitive posting does not exclusively indicate automation; humans also engage in bot-like posting for various purposes. We adopt the term ‘botting’ to describe repetitive posting enacted through manual, semi-automated, or fully automated means. While emerging research has linked manual botting practices to commercial or fame-seeking motivations, we extend this scholarship by examining botting on Reddit – a pseudonymous platform that lacks the affordances typically associated with monetisation or personal branding. Through a mixed-methods analysis, we examine a case study in which mass-scale, repetitive posting of the mushroom emoji emerged as ‘in-group’ behaviour within Reddit’s participatory culture, prompting a performative counterpublic response. Our findings challenge the binary between human and automated posting, and underscore the importance of situating research on AI-generated and automated content within the cultural and contextual frameworks that shape its production and reception.",
+      "keywords": [],
+      "doi": "10.1177/14614448251409210",
+      "doi_url": "https://doi.org/10.1177/14614448251409210",
+      "url": null,
+      "arxiv_url": null,
+      "pdf_url": null,
+      "publication_date": "2026-02-04",
+      "citation_count": 0,
+      "reference_count": 71,
+      "venue": "New Media &amp; Society",
+      "authors": [
+        "Timothy Graham",
+        "Dominique Carlon"
+      ],
+      "subjects": [],
+      "is_open_access": null,
+      "source": "crossref",
+      "confidence_score": 0.86
+    }
+  },
+  "053b6b972dea788b": {
+    "entry_key": "Peters2026-mo",
+    "entry_title": "Little mentioning, moderate attention, great relevance: The quality of online platform data in the Digital Services Act",
+    "cached_at": "2026-06-13T22:34:58.581360",
+    "metadata": {
+      "abstract": "Questions regarding the quality of online platform data have gained significant attention and research focus in recent years. Inaccurate, incomplete, or inconsistent data are some of the many examples of data quality problems. At the same time, digital platforms have restricted access to their data in recent years. This strategy by digital platforms has now increasingly become the subject of political efforts of regulation, especially the Digital Services Act (DSA) of the European Union. Therefore, we argue that the quality of online platform data cannot solely be understood as a methodological, internal research construct but also as a contested concept in which various actors from politics, the tech industry, and academia negotiate and represent specific interests. To assess the role of data quality in and around the DSA, we analyze the content of the DSA itself, in particular Art. 40 and the respective Delegated Regulation (DR), as well as the feedback submitted to the European Commission's Call for Evidence and the Delegated Regulation draft. We then apply quantitative content analysis, multiple correspondence analysis, and thematic analysis. Results indicate that data quality plays little to no role in the official EU documents, namely, the DSA and the Delegated Regulation draft. In the public feedback, however, data quality concerns have been raised by various stakeholders in academia. Based on the results, we argue that data quality should play a more prominent role in the debate to fulfill the DSA aims of assessing systemic risks in the EU.",
+      "keywords": [],
+      "doi": "10.1177/29768624261438624",
+      "doi_url": "https://doi.org/10.1177/29768624261438624",
+      "url": null,
+      "arxiv_url": null,
+      "pdf_url": null,
+      "publication_date": "2026",
+      "citation_count": 0,
+      "reference_count": 57,
+      "venue": "Platforms &amp; Society",
+      "authors": [
+        "Yannik Peters",
+        "Katrin Weller"
+      ],
+      "subjects": [],
+      "is_open_access": null,
+      "source": "crossref",
+      "confidence_score": 0.86
+    }
+  },
+  "26dd34dc757b8317": {
+    "entry_key": "Hollingshead2026-vx",
+    "entry_title": "Same platform, different stories: TikTok and the battle over immigration narratives",
+    "cached_at": "2026-06-13T22:35:02.197552",
+    "metadata": {
+      "abstract": "In an era defined by overlapping global crises, immigration has become a key fault line in what scholars term a “polycrisis.” Within this context, social media platforms serve as digital battlegrounds for competing narratives about immigration, with TikTok occupying a distinct and understudied niche. This article examines how immigration-related content in Canada is framed on TikTok and how the platform’s logic of mimesis and interactivity, grounded in its affordances, shape immigration discourse. From a dataset of 5,305 public TikTok videos containing immigration-related terms and hashtags, we selected a sample of 344 English-language videos posted in 2025, each with over 100,000 plays and likely shown to Canadian users. Through a mixed-methods content analysis, we found that, contrary to expectations, the content leaned toward positive portrayals of immigration, accounting for 41% of the sample. Furthermore, despite expressing differing perspectives on immigration, users used TikTok’s affordances in comparable ways. That is, the same affordances that can support immigrants’ information seeking and sense of belonging through practical guidance and relatable storytelling, respectively, can be weaponized to amplify xenophobia by way of manipulated statistics and racist humour performed in skits and AI-generated videos. This highlights how TikTok’s affordances can simultaneously support digital inclusion and community building while also enabling exclusion and hostility. The findings, although rooted in Canada, hold broader relevance for understanding how short-video platforms mediate contentious issues across digitally connected societies.",
+      "keywords": [],
+      "doi": "10.17645/mac.11409",
+      "doi_url": "https://doi.org/10.17645/mac.11409",
+      "url": null,
+      "arxiv_url": null,
+      "pdf_url": null,
+      "publication_date": "2026-01-28",
+      "citation_count": 1,
+      "reference_count": 61,
+      "venue": "Media and Communication",
+      "authors": [
+        "William Hollingshead",
+        "Anatoliy Gruzd",
+        "Philip Mai"
+      ],
+      "subjects": [],
+      "is_open_access": null,
+      "source": "crossref",
+      "confidence_score": 0.8428571428571427
+    }
+  },
+  "728f9dde87c89f86": {
+    "entry_key": "van-der-Linden2026-jt",
+    "entry_title": "Prebunking misinformation techniques in social media feeds: Results from an Instagram field study",
+    "cached_at": "2026-06-13T22:35:08.165302",
+    "metadata": {
+      "abstract": "Boosting psychological defences against misleading content online is an active area of research, but transition from the lab to real-world uptake remains a challenge. We developed a 19-second prebunking video about emotionally manipulative content and showed it as a Story Feed ad to N = 375,597 Instagram users in the United Kingdom. Using an innovative method leveraging Instagram’s quiz functionality (N = 806), we found that treatment group users were 21 percentage points better than controls at identifying manipulation in a news headline, with effects persisting for five months. Treated users were also more likely to click on a link to learn more. We outline how inoculation campaigns can be scaled in real-world social media feeds.",
+      "keywords": [],
+      "doi": "10.37016/mr-2020-193",
+      "doi_url": "https://doi.org/10.37016/mr-2020-193",
+      "url": null,
+      "arxiv_url": null,
+      "pdf_url": null,
+      "publication_date": "2026-01-22",
+      "citation_count": 2,
+      "reference_count": 49,
+      "venue": "Harvard Kennedy School Misinformation Review",
+      "authors": [
+        "Sander van der Linden",
+        "Debra Louison-Lavoy",
+        "Nicholas Blazer",
+        "Nancy S. Noble",
+        "Jon Roozenbeek"
+      ],
+      "subjects": [],
+      "is_open_access": null,
+      "source": "crossref",
+      "confidence_score": 0.84
+    }
+  },
+  "dc3ad3b0088dce44": {
+    "entry_key": "Yang2026-tq",
+    "entry_title": "A systematic review of social science studies analyzing social media data, 2010-2024",
+    "cached_at": "2026-06-13T22:35:14.218077",
+    "metadata": {
+      "abstract": "Social media platforms have long served as important data sources for social scientists. Policies around academic access to platform data, however, have seen substantial changes in recent years. These shifts have introduced profound uncertainty for scholarship relying on social media data. We evaluate the potential research impact of such changes by conducting a systematic analysis of scholarship published between 2010 and 2024 in 59 journals, representing five social science disciplines as well as leading interdisciplinary journals. Using a multi-method design that includes human-in-the-loop AI annotation, we find that 0.78% of papers in our corpus (3.15% when focusing exclusively on social science journals) use social media data for empirical research, with substantial variance across disciplines—ranging from less than 1% in Economics to approximately 13% in Communication. Twitter/X and Facebook are, respectively, the first and second most popular data sources across all disciplines, throughout the 15 years of our study. Further, the percentage of papers using social media data has dramatically increased over this period, tripling its share of social science publications, although this share has plateaued and even declined in the last few years. This recent decline has been driven by Twitter/X and Facebook in particular, and suggests that the empirical study of social media may be on the cusp of significant changes. These changes might affect the study of real-time events and phenomena with widespread sociopolitical ramifications, such as the COVID-19 pandemic and misleading information surrounding the 2016 U.S. presidential election, which we observe to be some of the major topics studied by social scientists using social media data.",
+      "keywords": [],
+      "doi": "10.31235/osf.io/yexp6_v1",
+      "doi_url": "https://doi.org/10.31235/osf.io/yexp6_v1",
+      "url": null,
+      "arxiv_url": null,
+      "pdf_url": null,
+      "publication_date": null,
+      "citation_count": 0,
+      "reference_count": 0,
+      "venue": null,
+      "authors": [
+        "Kai-Cheng Yang",
+        "Pranav Goel",
+        "Meredith L. Pruden",
+        "Qunfang Wu",
+        "Colby Eagan",
+        "David Lazer",
+        "Deen Freelon"
+      ],
+      "subjects": [],
+      "is_open_access": null,
+      "source": "crossref",
+      "confidence_score": 0.81875
     }
   }
 }
