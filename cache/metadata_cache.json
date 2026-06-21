@@ -2,47 +2,47 @@
   "c5a7d0326e1f61c6": {
     "entry_key": "Kristensen2025-ni",
     "entry_title": "Platform polarization. Do alternative platforms drive discursive polarization?",
-    "cached_at": "2026-06-13T22:35:05.777606",
+    "cached_at": "2026-06-21T13:44:44.627046",
     "metadata": null,
     "failed": true,
     "failure_reason": "Could not enrich entry: Kristensen2025-ni | No DOI available | Title length: 78 chars | Authors: Kristensen, Jakob Bæk, Kristensen, Jakob Bæk | APIs: Crossref enabled, Semantic Scholar enabled, ArXiv enabled",
-    "last_failure_at": "2026-06-13T22:35:05.777614"
+    "last_failure_at": "2026-06-21T13:44:44.627055"
   },
   "65d46046ae1c898f": {
     "entry_key": "Gaw2025-ru",
     "entry_title": "Influence operations as brokerage: Political-economic infrastructures of manipulation in the 2022 Philippine elections",
-    "cached_at": "2026-06-13T22:35:17.947322",
+    "cached_at": "2026-06-21T13:44:50.374489",
     "metadata": null,
     "failed": true,
     "failure_reason": "Could not enrich entry: Gaw2025-ru | No DOI available | Title length: 118 chars | Authors: Gaw, Fatima, Agonos, Mariam Jayne... | APIs: Crossref enabled, Semantic Scholar enabled, ArXiv enabled",
-    "last_failure_at": "2026-06-13T22:35:17.947329"
+    "last_failure_at": "2026-06-21T13:44:50.374498"
   },
   "b41f425da41887a0": {
     "entry_key": "Marwick2025-vx",
     "entry_title": "True costs of misinformation| mountains of evidence: Processual “redpilling” as a Socio-technical effect of disinformation",
-    "cached_at": "2026-06-13T22:35:11.743898",
+    "cached_at": "2026-06-21T13:44:47.482592",
     "metadata": null,
     "failed": true,
     "failure_reason": "Could not enrich entry: Marwick2025-vx | No DOI available | Title length: 122 chars | Authors: Marwick, Alice E, Furl, Katherine | APIs: Crossref enabled, Semantic Scholar enabled, ArXiv enabled",
-    "last_failure_at": "2026-06-13T22:35:11.743907"
+    "last_failure_at": "2026-06-21T13:44:47.482601"
   },
   "e3b0c44298fc1c14": {
     "entry_key": "noauthor_undated-bz",
     "entry_title": null,
-    "cached_at": "2026-06-13T22:35:27.201928",
+    "cached_at": "2026-06-21T13:44:59.648237",
     "metadata": null,
     "failed": true,
     "failure_reason": "Could not enrich entry: noauthor_undated-bz | No DOI available | No title available | No authors available | APIs: Crossref enabled, Semantic Scholar enabled, ArXiv enabled",
-    "last_failure_at": "2026-06-13T22:35:27.201930"
+    "last_failure_at": "2026-06-21T13:44:59.648239"
   },
   "657c6670d7b624b8": {
     "entry_key": "noauthor_undated-fm",
     "entry_title": "Volume 7 issue 2 article 4",
-    "cached_at": "2026-06-13T22:35:27.201843",
+    "cached_at": "2026-06-21T13:44:59.648166",
     "metadata": null,
     "failed": true,
     "failure_reason": "Could not enrich entry: noauthor_undated-fm | No DOI available | Title length: 26 chars | No authors available | APIs: Crossref enabled, Semantic Scholar enabled, ArXiv enabled",
-    "last_failure_at": "2026-06-13T22:35:27.201852"
+    "last_failure_at": "2026-06-21T13:44:59.648176"
   },
   "7a5bca5477086046": {
     "entry_key": "Schiffrin_undated-gi",
@@ -78,88 +78,29 @@
   "b909c3af063ea494": {
     "entry_key": "noauthor_undated-bm",
     "entry_title": "cib.pdf",
-    "cached_at": "2026-06-13T22:33:59.088492",
+    "cached_at": "2026-06-21T13:44:34.089381",
     "metadata": null,
     "failed": true,
     "failure_reason": "Could not enrich entry: noauthor_undated-bm | No DOI available | Title length: 7 chars | No authors available | APIs: Crossref enabled, Semantic Scholar enabled, ArXiv enabled",
-    "last_failure_at": "2026-06-13T22:33:59.088497"
+    "last_failure_at": "2026-06-21T13:44:34.089392"
   },
   "9195fcc80574052b": {
     "entry_key": "Vincent_undated-re",
     "entry_title": "What our second measurement says about misinformation on major platforms in Europe",
-    "cached_at": "2026-06-13T22:35:21.004887",
+    "cached_at": "2026-06-21T13:44:53.526887",
     "metadata": null,
     "failed": true,
     "failure_reason": "Could not enrich entry: Vincent_undated-re | No DOI available | Title length: 82 chars | Authors: Vincent, Emmanuel, Crisan, Daiana | APIs: Crossref enabled, Semantic Scholar enabled, ArXiv enabled",
-    "last_failure_at": "2026-06-13T22:35:21.004896"
+    "last_failure_at": "2026-06-21T13:44:53.526896"
   },
   "fac502d9bb5bbba8": {
     "entry_key": "UnknownUnknown-db",
     "entry_title": "What 81,000 people told us about the economics of AI",
-    "cached_at": "2026-06-13T22:35:24.121631",
+    "cached_at": "2026-06-21T13:44:56.573004",
     "metadata": null,
     "failed": true,
     "failure_reason": "Could not enrich entry: UnknownUnknown-db | No DOI available | Title length: 52 chars | No authors available | APIs: Crossref enabled, Semantic Scholar enabled, ArXiv enabled",
-    "last_failure_at": "2026-06-13T22:35:24.121640"
-  },
-  "8a077b3683a99b7a": {
-    "entry_key": "Van_Erkel2026-mk",
-    "entry_title": "The hostile misinformation effect: How ideological congruence drives the assessment of misinformation targets",
-    "cached_at": "2026-05-21T06:31:57.614634",
-    "metadata": {
-      "abstract": null,
-      "keywords": [],
-      "doi": "10.1080/10584609.2026.2671760",
-      "doi_url": "https://doi.org/10.1080/10584609.2026.2671760",
-      "url": null,
-      "arxiv_url": null,
-      "pdf_url": null,
-      "publication_date": "2026-05-18",
-      "citation_count": 0,
-      "reference_count": 48,
-      "venue": "Political Communication",
-      "authors": [
-        "Patrick van Erkel",
-        "Michael Hameleers",
-        "Aqsa Farooq",
-        "Katjana Gattermann",
-        "Marina Tulin",
-        "Elske van den Hoogen",
-        "Claes de Vreese"
-      ],
-      "subjects": [],
-      "is_open_access": null,
-      "source": "crossref",
-      "confidence_score": 0.8333333333333333
-    }
-  },
-  "5f902bd3bf030182": {
-    "entry_key": "Grusauskaite2026-po",
-    "entry_title": "“We, the conspiracy theorists.” How people do symbolic boundary work in the “Great Reset” debates across social media platforms",
-    "cached_at": "2026-05-21T10:28:05.086685",
-    "metadata": {
-      "abstract": "Conspiracy theories spread rapidly on social media. A growing field of research has examined how social media platforms shape conspiracy narratives and cultures. However, this technological focus has largely overshadowed social media users’ own agency toward collective identity construction. This article examines how users in online conspiracy communities construct collective identities through symbolic boundary work. Focusing on discussions surrounding the “Great Reset” conspiracy theory, across six major social media platforms (Facebook, Instagram, Twitter/X, YouTube, Reddit, and TikTok), we use multimodal discourse analysis to analyze 630 posts and their comments. Our findings reveal that users do symbolic boundary work by defining themselves as “critical thinkers,” reclaiming the label “conspiracy theorist,” and affectively transforming personal struggles into shared narratives, creating a shared identity in contrast to the “mainstream other.” The study contributes to research on social media and conspiracy cultures by foregrounding identity over content, offering insight into how users build solidarity online.",
-      "keywords": [],
-      "doi": "10.1177/14614448261446590",
-      "doi_url": "https://doi.org/10.1177/14614448261446590",
-      "url": null,
-      "arxiv_url": null,
-      "pdf_url": null,
-      "publication_date": "2026-05-19",
-      "citation_count": 0,
-      "reference_count": 64,
-      "venue": "New Media &amp; Society",
-      "authors": [
-        "Kamile Grusauskaite",
-        "Matthias De Bondt",
-        "Lars de Wildt",
-        "Stef Aupers"
-      ],
-      "subjects": [],
-      "is_open_access": null,
-      "source": "crossref",
-      "confidence_score": 0.83
-    }
+    "last_failure_at": "2026-06-21T13:44:56.573013"
   },
   "88f2087844cd43bc": {
     "entry_key": "Wang2026-ub",
@@ -5754,6 +5695,92 @@
       "is_open_access": null,
       "source": "crossref",
       "confidence_score": 0.8999999999999999
+    }
+  },
+  "8a077b3683a99b7a": {
+    "entry_key": "Van_Erkel2026-mk",
+    "entry_title": "The hostile misinformation effect: How ideological congruence drives the assessment of misinformation targets",
+    "cached_at": "2026-06-21T13:44:35.065723",
+    "metadata": {
+      "abstract": null,
+      "keywords": [],
+      "doi": "10.1080/10584609.2026.2671760",
+      "doi_url": "https://doi.org/10.1080/10584609.2026.2671760",
+      "url": null,
+      "arxiv_url": null,
+      "pdf_url": null,
+      "publication_date": "2026-05-18",
+      "citation_count": 0,
+      "reference_count": 48,
+      "venue": "Political Communication",
+      "authors": [
+        "Patrick van Erkel",
+        "Michael Hameleers",
+        "Aqsa Farooq",
+        "Katjana Gattermann",
+        "Marina Tulin",
+        "Elske van den Hoogen",
+        "Claes de Vreese"
+      ],
+      "subjects": [],
+      "is_open_access": null,
+      "source": "crossref",
+      "confidence_score": 0.8333333333333333
+    }
+  },
+  "1e6deffeb6e35094": {
+    "entry_key": "Costello2024-bg",
+    "entry_title": "Durably reducing conspiracy beliefs through dialogues with AI",
+    "cached_at": "2026-06-21T13:44:37.912693",
+    "metadata": {
+      "abstract": "Conspiracy theories are a paradigmatic example of beliefs that, once adopted, are extremely difficult to dispel. Influential psychological theories propose that conspiracy beliefs are uniquely resistant to counterevidence because they satisfy important needs and motivations. Here, we raise the possibility that previous attempts to correct conspiracy beliefs have been unsuccessful merely because they failed to deliver counterevidence that was sufficiently compelling and tailored to each believer’s specific conspiracy theory (which vary dramatically from believer to believer). To evaluate this possibility, we leverage recent developments in generative artificial intelligence (AI) to deliver well-argued, person-specific debunks to a total of N = 2,190 conspiracy theory believers. Participants in our experiments provided detailed, open-ended explanations of a conspiracy theory they believed, and then engaged in a 3 round dialogue with a frontier generative AI model (GPT-4 Turbo) which was instructed to reduce each participant’s belief in their conspiracy theory (or discuss a banal topic in a control condition). Across two experiments, we find robust evidence that the debunking conversation with the AI reduced belief in conspiracy theories by roughly 20%. This effect did not decay over 2 months time, was consistently observed across a wide range of different conspiracy theories, and occurred even for participants whose conspiracy beliefs were deeply entrenched and of great importance to their identities. Furthermore, although the dialogues were focused on a single conspiracy theory, the intervention spilled over to reduce beliefs in unrelated conspiracies, indicating a general decrease in conspiratorial worldview, as well as increasing intentions to challenge others who espouse their chosen conspiracy. These findings highlight that even many people who strongly believe in seemingly fact-resistant conspiratorial beliefs can change their minds in the face of sufficient evidence.",
+      "keywords": [],
+      "doi": "10.31234/osf.io/xcwdn",
+      "doi_url": "https://doi.org/10.31234/osf.io/xcwdn",
+      "url": null,
+      "arxiv_url": null,
+      "pdf_url": null,
+      "publication_date": null,
+      "citation_count": 12,
+      "reference_count": 0,
+      "venue": null,
+      "authors": [
+        "Thomas H Costello",
+        "Gordon Pennycook",
+        "David Gertler Rand"
+      ],
+      "subjects": [],
+      "is_open_access": null,
+      "source": "crossref",
+      "confidence_score": 0.83
+    }
+  },
+  "5f902bd3bf030182": {
+    "entry_key": "Grusauskaite2026-po",
+    "entry_title": "“We, the conspiracy theorists.” How people do symbolic boundary work in the “Great Reset” debates across social media platforms",
+    "cached_at": "2026-06-21T13:44:40.526226",
+    "metadata": {
+      "abstract": "Conspiracy theories spread rapidly on social media. A growing field of research has examined how social media platforms shape conspiracy narratives and cultures. However, this technological focus has largely overshadowed social media users’ own agency toward collective identity construction. This article examines how users in online conspiracy communities construct collective identities through symbolic boundary work. Focusing on discussions surrounding the “Great Reset” conspiracy theory, across six major social media platforms (Facebook, Instagram, Twitter/X, YouTube, Reddit, and TikTok), we use multimodal discourse analysis to analyze 630 posts and their comments. Our findings reveal that users do symbolic boundary work by defining themselves as “critical thinkers,” reclaiming the label “conspiracy theorist,” and affectively transforming personal struggles into shared narratives, creating a shared identity in contrast to the “mainstream other.” The study contributes to research on social media and conspiracy cultures by foregrounding identity over content, offering insight into how users build solidarity online.",
+      "keywords": [],
+      "doi": "10.1177/14614448261446590",
+      "doi_url": "https://doi.org/10.1177/14614448261446590",
+      "url": null,
+      "arxiv_url": null,
+      "pdf_url": null,
+      "publication_date": "2026-05-19",
+      "citation_count": 0,
+      "reference_count": 64,
+      "venue": "New Media &amp; Society",
+      "authors": [
+        "Kamile Grusauskaite",
+        "Matthias De Bondt",
+        "Lars de Wildt",
+        "Stef Aupers"
+      ],
+      "subjects": [],
+      "is_open_access": null,
+      "source": "crossref",
+      "confidence_score": 0.83
     }
   }
 }
