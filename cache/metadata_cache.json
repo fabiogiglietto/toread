@@ -71,215 +71,6 @@
     "failure_reason": "Could not enrich entry: UnknownUnknown-db | No DOI available | Title length: 52 chars | No authors available | APIs: Crossref enabled, Semantic Scholar enabled, ArXiv enabled",
     "last_failure_at": "2026-06-21T13:44:56.573013"
   },
-  "3eacf232e98df15d": {
-    "entry_key": "Bak-Coleman2026-mk",
-    "entry_title": "Industry influence in high-profile social media research",
-    "cached_at": "2026-05-29T05:49:35.864314",
-    "metadata": {
-      "abstract": "To what extent is social media research independent from industry influence? Leveraging openly available data, we show that half of the research published in top journals has disclosable ties to industry in the form of prior funding, collaboration, or employment. However, the majority of these ties go undisclosed in the published research. These trends do not arise from broad scientific engagement with industry, but rather from a select group of scientists who maintain long-lasting relationships with industry. Undisclosed ties to industry are common not just among authors, but among reviewers and academic editors during manuscript evaluation. Further, industry-tied research garners more attention within the academy, among policymakers, on social media, and in the news. Finally, we find evidence that industry ties are associated with a topical focus away from impacts of platform-scale features. Together, these findings suggest industry influence in social media research is extensive, impactful, and often opaque. Going forward there is a need to strengthen disclosure norms and implement policies to ensure the visibility of independent research, and the integrity of industry supported research.",
-      "keywords": [],
-      "doi": null,
-      "doi_url": null,
-      "url": "http://arxiv.org/abs/2601.11507",
-      "arxiv_url": null,
-      "pdf_url": "https://arxiv.org/pdf/2601.11507",
-      "publication_date": "2026-01-16",
-      "citation_count": 0,
-      "reference_count": null,
-      "venue": "ArXiv.org",
-      "authors": [
-        "Joseph Bak-Coleman",
-        "Jevin D. West",
-        "Cailin O’Connor",
-        "Carl T. Bergstrom"
-      ],
-      "subjects": [
-        "Public relations",
-        "Social media",
-        "Interpersonal ties",
-        "Media industry",
-        "Visibility"
-      ],
-      "is_open_access": true,
-      "source": "openalex",
-      "confidence_score": 0.7272727272727272
-    }
-  },
-  "6d7232062ec16bcb": {
-    "entry_key": "Scalco2026-bd",
-    "entry_title": "How to detect information voids using longitudinal data from social media and web searches",
-    "cached_at": "2026-05-29T05:51:58.261428",
-    "metadata": {
-      "abstract": "The model of the attention economy, where content producers compete for the attention of users, relies on two key forces: information supply and demand. This study leverages the feedback loop between these forces to develop a method for detecting and quantifying information voids, i.e., periods in which little or no reliable information is available on a given topic. Using a case study on COVID-19 vaccines rollout in six European countries, and drawing on data from multiple platforms including Facebook, Google, Twitter, Wikipedia, and online news outlets, we examine how information voids emerge, persist and correlate with a decline in the proportion of high-quality information circulating online. By conceptualising information voids as a specific regime of information spreading, we also quantify their counterpart, information overabundance, which constitute a central component of the current definition of infodemic. We show that information voids are associated with a higher prevalence of misinformation, thus representing problematic hotspots in which individuals are more likely to be misled by low-quality online content. Overall, our findings provide empirical support for the inclusion of information voids in mechanistic explanations of misinformation emergence.",
-      "keywords": [],
-      "doi": null,
-      "doi_url": null,
-      "url": null,
-      "arxiv_url": "http://arxiv.org/abs/2602.15476v1",
-      "pdf_url": "https://arxiv.org/pdf/2602.15476v1",
-      "publication_date": "2026-02-17",
-      "citation_count": null,
-      "reference_count": null,
-      "venue": null,
-      "authors": [
-        "Irene Scalco",
-        "Francesco Gesualdo",
-        "Roy Cerqueti",
-        "Matteo Cinelli"
-      ],
-      "subjects": [
-        "cs.CY",
-        "physics.soc-ph"
-      ],
-      "is_open_access": true,
-      "source": "arxiv",
-      "confidence_score": 0.7333333333333333
-    }
-  },
-  "c5f27c414108d268": {
-    "entry_key": "Di-Domenico2026-zq",
-    "entry_title": "don't you know that you're toxic? how influencer‐driven misinformation fuels online toxicity",
-    "cached_at": "2026-05-29T05:51:58.913830",
-    "metadata": {
-      "abstract": "ABSTRACT Research on misinformation has focused on message content and cognitive bias, overlooking how source type shapes toxic engagement. This study addresses that gap by showing that influencer‐driven misinformation does not merely increase toxicity: it reconfigures its nature and persistence through relational and social influence mechanisms. Drawing on Source Credibility, Parasocial Interaction, and Social Influence theories, we analyse 101 brand‐related misinformation posts (48,821 comments) across major platforms using a mixed‐method design combining automated toxicity detection, topic modeling, and thematic analysis. Results reveal that influencers amplify toxicity under high engagement, sociopolitical salience, and low pseudonymity conditions, producing distinct patterns such as flame‐bait firestorms and toxic debunking. We identify two influencer‐specific mechanisms: brand‐related misinformation legitimation and community enmeshment, that sustain toxic echo chambers by converting credibility and parasocial bonds into collective antagonism. These findings advance marketing theory by reframing toxicity as a source‐amplified, relational phenomenon, and inform ecosystem‐level interventions structured around publishers, platforms, and people to mitigate influencer‐driven harm.",
-      "keywords": [],
-      "doi": "10.1002/mar.70106",
-      "doi_url": "https://doi.org/10.1002/mar.70106",
-      "url": null,
-      "arxiv_url": null,
-      "pdf_url": null,
-      "publication_date": "2026",
-      "citation_count": 0,
-      "reference_count": 139,
-      "venue": "Psychology &amp; Marketing",
-      "authors": [
-        "Giandomenico Di Domenico",
-        "Federico Mangió",
-        "Denitsa Dineva"
-      ],
-      "subjects": [],
-      "is_open_access": null,
-      "source": "crossref",
-      "confidence_score": 0.7875
-    }
-  },
-  "5d1e24155f407c81": {
-    "entry_key": "Brady2026-ln",
-    "entry_title": "Redesigning algorithms to intervene on social norm misperceptions during a national election",
-    "cached_at": "2026-05-29T05:52:01.701308",
-    "metadata": {
-      "abstract": null,
-      "keywords": [],
-      "doi": "10.1038/s41586-026-10536-1",
-      "doi_url": "https://doi.org/10.1038/s41586-026-10536-1",
-      "url": null,
-      "arxiv_url": null,
-      "pdf_url": null,
-      "publication_date": "2026-05-27",
-      "citation_count": 0,
-      "reference_count": 58,
-      "venue": "Nature",
-      "authors": [
-        "William J. Brady",
-        "Meriel Doyle",
-        "Abdo Elnakouri",
-        "Eli J. Finkel",
-        "Joshua Conrad Jackson",
-        "Nour Kteily",
-        "Victoria Parker",
-        "Curtis Puryear",
-        "Trevor Spelman",
-        "Jacob Teeny",
-        "Mark Torres"
-      ],
-      "subjects": [],
-      "is_open_access": null,
-      "source": "crossref",
-      "confidence_score": 0.8119999999999999
-    }
-  },
-  "2584b21be139cef0": {
-    "entry_key": "Tai2026-qk",
-    "entry_title": "Elected officials’ online sharing of misinformation: Institutional and ideological checks",
-    "cached_at": "2026-05-29T05:52:04.605713",
-    "metadata": {
-      "abstract": null,
-      "keywords": [],
-      "doi": "10.1080/10584609.2026.2613661",
-      "doi_url": "https://doi.org/10.1080/10584609.2026.2613661",
-      "url": null,
-      "arxiv_url": null,
-      "pdf_url": null,
-      "publication_date": "2026-02-04",
-      "citation_count": 0,
-      "reference_count": 85,
-      "venue": "Political Communication",
-      "authors": [
-        "Yuehong Cassandra Tai",
-        "Yu-Ru Lin",
-        "Bruce A. Desmarais"
-      ],
-      "subjects": [],
-      "is_open_access": null,
-      "source": "crossref",
-      "confidence_score": 0.8333333333333333
-    }
-  },
-  "ea5be7801546b58c": {
-    "entry_key": "Ohme2026-nv",
-    "entry_title": "Finally, access: How article 40 DSA changes platform research in practice",
-    "cached_at": "2026-05-29T05:52:07.687051",
-    "metadata": {
-      "abstract": null,
-      "keywords": [],
-      "doi": "10.1080/10584609.2026.2664157",
-      "doi_url": "https://doi.org/10.1080/10584609.2026.2664157",
-      "url": null,
-      "arxiv_url": null,
-      "pdf_url": null,
-      "publication_date": "2026-04-24",
-      "citation_count": 0,
-      "reference_count": 11,
-      "venue": "Political Communication",
-      "authors": [
-        "Jakob Ohme",
-        "LK Seiling"
-      ],
-      "subjects": [],
-      "is_open_access": null,
-      "source": "crossref",
-      "confidence_score": 0.7999999999999999
-    }
-  },
-  "97e05290715b1b92": {
-    "entry_key": "Ventura2026-yc",
-    "entry_title": "The partisan effects of social media bans",
-    "cached_at": "2026-05-29T05:52:10.896683",
-    "metadata": {
-      "abstract": "What happens to information environments when democracies ban social media platforms? While a large literature examines information control under authoritarianism, democratic governments have increasingly intervened in major online platforms. We study a prominent case: Brazil's 2024 national ban on the social media platform X. Using an event-study design, we estimate the causal effects of the ban and examine how partisan identity shaped responses. Drawing on a large sample of politically engaged users and ideal-point estimates of ideology, we find strong partisan asymmetries. Conservative users not aligned with the government were more likely to circumvent the ban, and right-leaning news domains became markedly more prevalent on the platform. We describe this dynamic as a ``sorting ratchet\": the ban segmented the digital public sphere along partisan lines, with effects that persisted even after restrictions were lifted. Platform bans in democratic settings may therefore deepen polarization and durably reshape information environments.",
-      "keywords": [],
-      "doi": "10.31235/osf.io/4stfw_v1",
-      "doi_url": "https://doi.org/10.31235/osf.io/4stfw_v1",
-      "url": null,
-      "arxiv_url": null,
-      "pdf_url": null,
-      "publication_date": null,
-      "citation_count": 0,
-      "reference_count": 0,
-      "venue": null,
-      "authors": [
-        "Tiago Ventura",
-        "Christopher Barrie",
-        "Margaret E. Roberts",
-        "Christopher Schwarz",
-        "Joshua A Tucker"
-      ],
-      "subjects": [],
-      "is_open_access": null,
-      "source": "crossref",
-      "confidence_score": 0.8272727272727272
-    }
-  },
   "29d7f292b81de3ba": {
     "entry_key": "DeVerna2025-dl",
     "entry_title": "Large language models require curated context for reliable political fact-checking -- even with reasoning and web search",
@@ -5791,6 +5582,263 @@
       "is_open_access": null,
       "source": "crossref",
       "confidence_score": 0.86
+    }
+  },
+  "3eacf232e98df15d": {
+    "entry_key": "Bak-Coleman2026-mk",
+    "entry_title": "Industry influence in high-profile social media research",
+    "cached_at": "2026-06-28T06:40:07.398253",
+    "metadata": {
+      "abstract": "To what extent is social media research independent from industry influence? Leveraging openly available data, we show that half of the research published in top journals has disclosable ties to industry in the form of prior funding, collaboration, or employment. However, the majority of these ties go undisclosed in the published research. These trends do not arise from broad scientific engagement with industry, but rather from a select group of scientists who maintain long-lasting relationships with industry. Undisclosed ties to industry are common not just among authors, but among reviewers and academic editors during manuscript evaluation. Further, industry-tied research garners more attention within the academy, among policymakers, on social media, and in the news. Finally, we find evidence that industry ties are associated with a topical focus away from impacts of platform-scale features. Together, these findings suggest industry influence in social media research is extensive, impactful, and often opaque. Going forward there is a need to strengthen disclosure norms and implement policies to ensure the visibility of independent research, and the integrity of industry supported research.",
+      "keywords": [],
+      "doi": null,
+      "doi_url": null,
+      "url": null,
+      "arxiv_url": "http://arxiv.org/abs/2601.11507v1",
+      "pdf_url": "https://arxiv.org/pdf/2601.11507v1",
+      "publication_date": "2026-01-16",
+      "citation_count": null,
+      "reference_count": null,
+      "venue": null,
+      "authors": [
+        "Joseph Bak-Coleman",
+        "Jevin West",
+        "Cailin O'Connor",
+        "Carl T. Bergstrom"
+      ],
+      "subjects": [
+        "cs.SI"
+      ],
+      "is_open_access": true,
+      "source": "arxiv",
+      "confidence_score": 0.7272727272727272
+    }
+  },
+  "6d7232062ec16bcb": {
+    "entry_key": "Scalco2026-bd",
+    "entry_title": "How to detect information voids using longitudinal data from social media and web searches",
+    "cached_at": "2026-06-28T06:40:10.855369",
+    "metadata": {
+      "abstract": "The model of the attention economy, where content producers compete for the attention of users, relies on two key forces: information supply and demand. This study leverages the feedback loop between these forces to develop a method for detecting and quantifying information voids, i.e., periods in which little or no reliable information is available on a given topic. Using a case study on COVID-19 vaccines rollout in six European countries, and drawing on data from multiple platforms including Facebook, Google, Twitter, Wikipedia, and online news outlets, we examine how information voids emerge, persist and correlate with a decline in the proportion of high-quality information circulating online. By conceptualising information voids as a specific regime of information spreading, we also quantify their counterpart, information overabundance, which constitute a central component of the current definition of infodemic. We show that information voids are associated with a higher prevalence of misinformation, thus representing problematic hotspots in which individuals are more likely to be misled by low-quality online content. Overall, our findings provide empirical support for the inclusion of information voids in mechanistic explanations of misinformation emergence.",
+      "keywords": [],
+      "doi": null,
+      "doi_url": null,
+      "url": null,
+      "arxiv_url": "http://arxiv.org/abs/2602.15476v1",
+      "pdf_url": "https://arxiv.org/pdf/2602.15476v1",
+      "publication_date": "2026-02-17",
+      "citation_count": null,
+      "reference_count": null,
+      "venue": null,
+      "authors": [
+        "Irene Scalco",
+        "Francesco Gesualdo",
+        "Roy Cerqueti",
+        "Matteo Cinelli"
+      ],
+      "subjects": [
+        "cs.CY",
+        "physics.soc-ph"
+      ],
+      "is_open_access": true,
+      "source": "arxiv",
+      "confidence_score": 0.7333333333333333
+    }
+  },
+  "c5f27c414108d268": {
+    "entry_key": "Di-Domenico2026-zq",
+    "entry_title": "don't you know that you're toxic? how influencer‐driven misinformation fuels online toxicity",
+    "cached_at": "2026-06-28T06:40:12.675277",
+    "metadata": {
+      "abstract": "ABSTRACT Research on misinformation has focused on message content and cognitive bias, overlooking how source type shapes toxic engagement. This study addresses that gap by showing that influencer‐driven misinformation does not merely increase toxicity: it reconfigures its nature and persistence through relational and social influence mechanisms. Drawing on Source Credibility, Parasocial Interaction, and Social Influence theories, we analyse 101 brand‐related misinformation posts (48,821 comments) across major platforms using a mixed‐method design combining automated toxicity detection, topic modeling, and thematic analysis. Results reveal that influencers amplify toxicity under high engagement, sociopolitical salience, and low pseudonymity conditions, producing distinct patterns such as flame‐bait firestorms and toxic debunking. We identify two influencer‐specific mechanisms: brand‐related misinformation legitimation and community enmeshment, that sustain toxic echo chambers by converting credibility and parasocial bonds into collective antagonism. These findings advance marketing theory by reframing toxicity as a source‐amplified, relational phenomenon, and inform ecosystem‐level interventions structured around publishers, platforms, and people to mitigate influencer‐driven harm.",
+      "keywords": [],
+      "doi": "10.1002/mar.70106",
+      "doi_url": "https://doi.org/10.1002/mar.70106",
+      "url": null,
+      "arxiv_url": null,
+      "pdf_url": null,
+      "publication_date": "2026",
+      "citation_count": 0,
+      "reference_count": 139,
+      "venue": "Psychology &amp; Marketing",
+      "authors": [
+        "Giandomenico Di Domenico",
+        "Federico Mangió",
+        "Denitsa Dineva"
+      ],
+      "subjects": [],
+      "is_open_access": null,
+      "source": "crossref",
+      "confidence_score": 0.7875
+    }
+  },
+  "5d1e24155f407c81": {
+    "entry_key": "Brady2026-ln",
+    "entry_title": "Redesigning algorithms to intervene on social norm misperceptions during a national election",
+    "cached_at": "2026-06-28T06:40:15.747912",
+    "metadata": {
+      "abstract": null,
+      "keywords": [],
+      "doi": "10.1038/s41586-026-10536-1",
+      "doi_url": "https://doi.org/10.1038/s41586-026-10536-1",
+      "url": null,
+      "arxiv_url": null,
+      "pdf_url": null,
+      "publication_date": "2026-05-27",
+      "citation_count": 1,
+      "reference_count": 58,
+      "venue": "Nature",
+      "authors": [
+        "William J. Brady",
+        "Meriel Doyle",
+        "Abdo Elnakouri",
+        "Eli J. Finkel",
+        "Joshua Conrad Jackson",
+        "Nour Kteily",
+        "Victoria Parker",
+        "Curtis Puryear",
+        "Trevor Spelman",
+        "Jacob Teeny",
+        "Mark Torres"
+      ],
+      "subjects": [],
+      "is_open_access": null,
+      "source": "crossref",
+      "confidence_score": 0.8119999999999999
+    }
+  },
+  "2584b21be139cef0": {
+    "entry_key": "Tai2026-qk",
+    "entry_title": "Elected officials’ online sharing of misinformation: Institutional and ideological checks",
+    "cached_at": "2026-06-28T06:40:17.970431",
+    "metadata": {
+      "abstract": null,
+      "keywords": [],
+      "doi": "10.1080/10584609.2026.2613661",
+      "doi_url": "https://doi.org/10.1080/10584609.2026.2613661",
+      "url": null,
+      "arxiv_url": null,
+      "pdf_url": null,
+      "publication_date": "2026-02-04",
+      "citation_count": 1,
+      "reference_count": 85,
+      "venue": "Political Communication",
+      "authors": [
+        "Yuehong Cassandra Tai",
+        "Yu-Ru Lin",
+        "Bruce A. Desmarais"
+      ],
+      "subjects": [],
+      "is_open_access": null,
+      "source": "crossref",
+      "confidence_score": 0.8333333333333333
+    }
+  },
+  "ea5be7801546b58c": {
+    "entry_key": "Ohme2026-nv",
+    "entry_title": "Finally, access: How article 40 DSA changes platform research in practice",
+    "cached_at": "2026-06-28T06:40:21.309208",
+    "metadata": {
+      "abstract": null,
+      "keywords": [],
+      "doi": "10.1080/10584609.2026.2664157",
+      "doi_url": "https://doi.org/10.1080/10584609.2026.2664157",
+      "url": null,
+      "arxiv_url": null,
+      "pdf_url": null,
+      "publication_date": "2026-04-24",
+      "citation_count": 0,
+      "reference_count": 11,
+      "venue": "Political Communication",
+      "authors": [
+        "Jakob Ohme",
+        "LK Seiling"
+      ],
+      "subjects": [],
+      "is_open_access": null,
+      "source": "crossref",
+      "confidence_score": 0.7999999999999999
+    }
+  },
+  "4183e6093392cd3d": {
+    "entry_key": "Crosset2026-mq",
+    "entry_title": "Content moderation as traffic control: an analysis of EU and US legislation on platform regulation",
+    "cached_at": "2026-06-28T06:40:24.710718",
+    "metadata": {
+      "abstract": null,
+      "keywords": [],
+      "doi": "10.1080/21624887.2026.2692735",
+      "doi_url": "https://doi.org/10.1080/21624887.2026.2692735",
+      "url": null,
+      "arxiv_url": null,
+      "pdf_url": null,
+      "publication_date": "2026-06-24",
+      "citation_count": 0,
+      "reference_count": 92,
+      "venue": "Critical Studies on Security",
+      "authors": [
+        "Valentine Crosset",
+        "Tommaso Venturini",
+        "Benoît Dupont"
+      ],
+      "subjects": [],
+      "is_open_access": null,
+      "source": "crossref",
+      "confidence_score": 0.8428571428571427
+    }
+  },
+  "11a05036528421cb": {
+    "entry_key": "Manovich2026-ih",
+    "entry_title": "A medium that thinks: Generative AI and media cognition",
+    "cached_at": "2026-06-28T06:40:27.131000",
+    "metadata": {
+      "abstract": "This article analyzes generative AI as a creative medium—examining its specific properties, affordances, and constraints rather than its social or ethical implications. Drawing on media theory and art history, it identifies six key properties of the AI medium. First, probabilistic generation creates a fundamental trade-off between variability and control. Second, the medium offers an unprecedented range of degrees of freedom in creative output. Third, it privileges the conventional logic of our familiar world—including aesthetic conservatism rooted in training data—making it the structural opposite of historical avant-garde practices. Fourth, built-in cognitive capacity makes generative AI the first artistic medium that itself thinks. Fifth, its encyclopedic knowledge of art history and media techniques constitutes what this article calls “media cognition.” Sixth, the entanglement of style and content is a structural feature of how models encode visual knowledge. Together, these properties define what the AI medium makes possible—and what it fundamentally resists.",
+      "keywords": [],
+      "doi": "10.1177/27523543261454458",
+      "doi_url": "https://doi.org/10.1177/27523543261454458",
+      "url": null,
+      "arxiv_url": null,
+      "pdf_url": null,
+      "publication_date": "2026",
+      "citation_count": 0,
+      "reference_count": 4,
+      "venue": "Emerging Media",
+      "authors": [
+        "Lev Manovich"
+      ],
+      "subjects": [],
+      "is_open_access": null,
+      "source": "crossref",
+      "confidence_score": 0.8999999999999999
+    }
+  },
+  "97e05290715b1b92": {
+    "entry_key": "Ventura2026-yc",
+    "entry_title": "The partisan effects of social media bans",
+    "cached_at": "2026-06-28T06:40:29.957424",
+    "metadata": {
+      "abstract": "What happens to information environments when democracies ban social media platforms? While a large literature examines information control under authoritarianism, democratic governments have increasingly intervened in major online platforms. We study a prominent case: Brazil's 2024 national ban on the social media platform X. Using an event-study design, we estimate the causal effects of the ban and examine how partisan identity shaped responses. Drawing on a large sample of politically engaged users and ideal-point estimates of ideology, we find strong partisan asymmetries. Conservative users not aligned with the government were more likely to circumvent the ban, and right-leaning news domains became markedly more prevalent on the platform. We describe this dynamic as a ``sorting ratchet\": the ban segmented the digital public sphere along partisan lines, with effects that persisted even after restrictions were lifted. Platform bans in democratic settings may therefore deepen polarization and durably reshape information environments.",
+      "keywords": [],
+      "doi": "10.31235/osf.io/4stfw_v1",
+      "doi_url": "https://doi.org/10.31235/osf.io/4stfw_v1",
+      "url": null,
+      "arxiv_url": null,
+      "pdf_url": null,
+      "publication_date": null,
+      "citation_count": 0,
+      "reference_count": 0,
+      "venue": null,
+      "authors": [
+        "Tiago Ventura",
+        "Christopher Barrie",
+        "Margaret E. Roberts",
+        "Christopher Schwarz",
+        "Joshua A Tucker"
+      ],
+      "subjects": [],
+      "is_open_access": null,
+      "source": "crossref",
+      "confidence_score": 0.8272727272727272
     }
   }
 }
