@@ -2,74 +2,74 @@
   "c5a7d0326e1f61c6": {
     "entry_key": "Kristensen2025-ni",
     "entry_title": "Platform polarization. Do alternative platforms drive discursive polarization?",
-    "cached_at": "2026-06-21T13:44:44.627046",
+    "cached_at": "2026-06-28T21:34:23.188249",
     "metadata": null,
     "failed": true,
     "failure_reason": "Could not enrich entry: Kristensen2025-ni | No DOI available | Title length: 78 chars | Authors: Kristensen, Jakob Bæk, Kristensen, Jakob Bæk | APIs: Crossref enabled, Semantic Scholar enabled, ArXiv enabled",
-    "last_failure_at": "2026-06-21T13:44:44.627055"
+    "last_failure_at": "2026-06-28T21:34:23.188257"
   },
   "65d46046ae1c898f": {
     "entry_key": "Gaw2025-ru",
     "entry_title": "Influence operations as brokerage: Political-economic infrastructures of manipulation in the 2022 Philippine elections",
-    "cached_at": "2026-06-21T13:44:50.374489",
+    "cached_at": "2026-06-28T21:34:30.040583",
     "metadata": null,
     "failed": true,
     "failure_reason": "Could not enrich entry: Gaw2025-ru | No DOI available | Title length: 118 chars | Authors: Gaw, Fatima, Agonos, Mariam Jayne... | APIs: Crossref enabled, Semantic Scholar enabled, ArXiv enabled",
-    "last_failure_at": "2026-06-21T13:44:50.374498"
+    "last_failure_at": "2026-06-28T21:34:30.040594"
   },
   "b41f425da41887a0": {
     "entry_key": "Marwick2025-vx",
     "entry_title": "True costs of misinformation| mountains of evidence: Processual “redpilling” as a Socio-technical effect of disinformation",
-    "cached_at": "2026-06-21T13:44:47.482592",
+    "cached_at": "2026-06-28T21:34:26.396811",
     "metadata": null,
     "failed": true,
     "failure_reason": "Could not enrich entry: Marwick2025-vx | No DOI available | Title length: 122 chars | Authors: Marwick, Alice E, Furl, Katherine | APIs: Crossref enabled, Semantic Scholar enabled, ArXiv enabled",
-    "last_failure_at": "2026-06-21T13:44:47.482601"
+    "last_failure_at": "2026-06-28T21:34:26.396826"
   },
   "e3b0c44298fc1c14": {
     "entry_key": "noauthor_undated-bz",
     "entry_title": null,
-    "cached_at": "2026-06-21T13:44:59.648237",
+    "cached_at": "2026-06-28T21:34:39.203928",
     "metadata": null,
     "failed": true,
     "failure_reason": "Could not enrich entry: noauthor_undated-bz | No DOI available | No title available | No authors available | APIs: Crossref enabled, Semantic Scholar enabled, ArXiv enabled",
-    "last_failure_at": "2026-06-21T13:44:59.648239"
+    "last_failure_at": "2026-06-28T21:34:39.203931"
   },
   "657c6670d7b624b8": {
     "entry_key": "noauthor_undated-fm",
     "entry_title": "Volume 7 issue 2 article 4",
-    "cached_at": "2026-06-21T13:44:59.648166",
+    "cached_at": "2026-06-28T21:34:39.203829",
     "metadata": null,
     "failed": true,
     "failure_reason": "Could not enrich entry: noauthor_undated-fm | No DOI available | Title length: 26 chars | No authors available | APIs: Crossref enabled, Semantic Scholar enabled, ArXiv enabled",
-    "last_failure_at": "2026-06-21T13:44:59.648176"
+    "last_failure_at": "2026-06-28T21:34:39.203839"
   },
   "b909c3af063ea494": {
     "entry_key": "noauthor_undated-bm",
     "entry_title": "cib.pdf",
-    "cached_at": "2026-06-21T13:44:34.089381",
+    "cached_at": "2026-06-28T21:34:19.061818",
     "metadata": null,
     "failed": true,
     "failure_reason": "Could not enrich entry: noauthor_undated-bm | No DOI available | Title length: 7 chars | No authors available | APIs: Crossref enabled, Semantic Scholar enabled, ArXiv enabled",
-    "last_failure_at": "2026-06-21T13:44:34.089392"
+    "last_failure_at": "2026-06-28T21:34:19.061823"
   },
   "9195fcc80574052b": {
     "entry_key": "Vincent_undated-re",
     "entry_title": "What our second measurement says about misinformation on major platforms in Europe",
-    "cached_at": "2026-06-21T13:44:53.526887",
+    "cached_at": "2026-06-28T21:34:33.091682",
     "metadata": null,
     "failed": true,
     "failure_reason": "Could not enrich entry: Vincent_undated-re | No DOI available | Title length: 82 chars | Authors: Vincent, Emmanuel, Crisan, Daiana | APIs: Crossref enabled, Semantic Scholar enabled, ArXiv enabled",
-    "last_failure_at": "2026-06-21T13:44:53.526896"
+    "last_failure_at": "2026-06-28T21:34:33.091691"
   },
   "fac502d9bb5bbba8": {
     "entry_key": "UnknownUnknown-db",
     "entry_title": "What 81,000 people told us about the economics of AI",
-    "cached_at": "2026-06-21T13:44:56.573004",
+    "cached_at": "2026-06-28T21:34:36.258662",
     "metadata": null,
     "failed": true,
     "failure_reason": "Could not enrich entry: UnknownUnknown-db | No DOI available | Title length: 52 chars | No authors available | APIs: Crossref enabled, Semantic Scholar enabled, ArXiv enabled",
-    "last_failure_at": "2026-06-21T13:44:56.573013"
+    "last_failure_at": "2026-06-28T21:34:36.258671"
   },
   "29d7f292b81de3ba": {
     "entry_key": "DeVerna2025-dl",
@@ -5839,6 +5839,33 @@
       "is_open_access": null,
       "source": "crossref",
       "confidence_score": 0.8272727272727272
+    }
+  },
+  "c7fc8ab3118d580c": {
+    "entry_key": "Zhu2026-tn",
+    "entry_title": "Locate alternative media in the digital news ecosystem: A cross-country comparative study of alternative-mainstream audience overlap networks",
+    "cached_at": "2026-06-28T21:34:19.982719",
+    "metadata": {
+      "abstract": null,
+      "keywords": [],
+      "doi": "10.1080/21670811.2026.2683342",
+      "doi_url": "https://doi.org/10.1080/21670811.2026.2683342",
+      "url": null,
+      "arxiv_url": null,
+      "pdf_url": null,
+      "publication_date": "2026-06-26",
+      "citation_count": 0,
+      "reference_count": 46,
+      "venue": "Digital Journalism",
+      "authors": [
+        "Qinfeng Zhu",
+        "Fan Liang",
+        "Gabriel Miao Li"
+      ],
+      "subjects": [],
+      "is_open_access": null,
+      "source": "crossref",
+      "confidence_score": 0.8749999999999999
     }
   }
 }
