@@ -5867,5 +5867,40 @@
       "source": "crossref",
       "confidence_score": 0.8749999999999999
     }
+  },
+  "36aadb63c06941ee": {
+    "entry_key": "Kim2026-br",
+    "entry_title": "Cross-national information attacks: A two-decade analysis of troll behavior in Korea",
+    "cached_at": "2026-06-29T08:30:16.967521",
+    "metadata": {
+      "abstract": "Coordinated foreign influence operations pose a growing threat to online platforms, but detecting state-linked troll activity and tracking its evolution remain challenging. This paper presents an explainable machine learning framework for theory-guided detection and longitudinal analysis of suspected trolling within Korean online news comment sections. Our hierarchical model classifies comments along three dimensions central to influence campaigns: foreign origin, moral-emotional framing, and target country. To support explainability, it also extracts brief span-level textual evidence that provides human-interpretable rationales. We apply the approach to 112M South Korean news comments authored by 4M users over nearly 20 years, identifying 23,998 accounts exhibiting behavior consistent with coordinated manipulation. Analyzing these accounts, we find that they predominantly rely on morally condemning rhetoric rather than direct promotion of foreign-aligned narratives; this rhetoric receives significantly higher user engagement. Among the highest-engagement comments, the moral condemnation most frequently targets domestic political figures (e.g., presidents or party leaders) on both the left and the right, potentially amplifying polarization. Our framework supports transparent platform governance through explainable, evidence-based moderation. These observed rhetorical and engagement patterns can inform how platforms and observatories prioritize defenses and intervene before harmful narrative-target combinations achieve widespread reach.",
+      "keywords": [],
+      "doi": null,
+      "doi_url": null,
+      "url": null,
+      "arxiv_url": "http://arxiv.org/abs/2606.22785v1",
+      "pdf_url": "https://arxiv.org/pdf/2606.22785v1",
+      "publication_date": "2026-06-22",
+      "citation_count": null,
+      "reference_count": null,
+      "venue": null,
+      "authors": [
+        "Jaehong Kim",
+        "Hyeonseung Kim",
+        "Jiseon Kim",
+        "Alice Oh",
+        "Thorsten Holz",
+        "Wonjae Lee",
+        "Meeyoung Cha"
+      ],
+      "subjects": [
+        "cs.SI",
+        "cs.CL",
+        "cs.CR"
+      ],
+      "is_open_access": true,
+      "source": "arxiv",
+      "confidence_score": 0.7230769230769231
+    }
   }
 }
