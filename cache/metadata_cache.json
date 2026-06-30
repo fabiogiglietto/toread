@@ -5902,5 +5902,14 @@
       "source": "arxiv",
       "confidence_score": 0.7230769230769231
     }
+  },
+  "fc9373f3342e79d3": {
+    "entry_key": "Gottfried2026-ww",
+    "entry_title": "Americans and AI 2026: Chatbots, Smart Devices and Views on Impact",
+    "cached_at": "2026-06-30T10:22:55.966084",
+    "metadata": null,
+    "failed": true,
+    "failure_reason": "Could not enrich entry: Gottfried2026-ww | No DOI available | Title length: 66 chars | Authors: Gottfried, Jeffrey, Bishop, William... | APIs: Crossref enabled, Semantic Scholar enabled, ArXiv enabled",
+    "last_failure_at": "2026-06-30T10:22:55.966093"
   }
 }
