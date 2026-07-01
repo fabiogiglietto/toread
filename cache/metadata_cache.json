@@ -5944,5 +5944,30 @@
       "source": "crossref",
       "confidence_score": 0.86
     }
+  },
+  "a701e6253133693f": {
+    "entry_key": "Bechmann2026-dr",
+    "entry_title": "Platform collective behavior as democratic infrastructure: Beyond causal effects in the DSA era",
+    "cached_at": "2026-07-01T18:20:52.984341",
+    "metadata": {
+      "abstract": null,
+      "keywords": [],
+      "doi": "10.1080/10584609.2026.2679475",
+      "doi_url": "https://doi.org/10.1080/10584609.2026.2679475",
+      "url": null,
+      "arxiv_url": null,
+      "pdf_url": null,
+      "publication_date": "2026-07-04",
+      "citation_count": 0,
+      "reference_count": 20,
+      "venue": "Political Communication",
+      "authors": [
+        "Anja Bechmann"
+      ],
+      "subjects": [],
+      "is_open_access": null,
+      "source": "crossref",
+      "confidence_score": 0.8999999999999999
+    }
   }
 }
