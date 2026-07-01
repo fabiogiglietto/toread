@@ -71,32 +71,6 @@
     "failure_reason": "Could not enrich entry: UnknownUnknown-db | No DOI available | Title length: 52 chars | No authors available | APIs: Crossref enabled, Semantic Scholar enabled, ArXiv enabled",
     "last_failure_at": "2026-06-28T21:34:36.258671"
   },
-  "daac2f03151237e6": {
-    "entry_key": "Lukito2026-nb",
-    "entry_title": "Price, proficiency, or permission: assessing platform data access for election research",
-    "cached_at": "2026-06-01T08:21:14.394444",
-    "metadata": {
-      "abstract": null,
-      "keywords": [],
-      "doi": "10.1080/1369118x.2026.2667921",
-      "doi_url": "https://doi.org/10.1080/1369118x.2026.2667921",
-      "url": null,
-      "arxiv_url": null,
-      "pdf_url": null,
-      "publication_date": "2026-05-27",
-      "citation_count": 0,
-      "reference_count": 83,
-      "venue": "Information, Communication &amp; Society",
-      "authors": [
-        "Josephine Lukito",
-        "Kayo Mimizuka"
-      ],
-      "subjects": [],
-      "is_open_access": null,
-      "source": "crossref",
-      "confidence_score": 0.86
-    }
-  },
   "3f672c7b9c00ed97": {
     "entry_key": "de-Vreese2026-zx",
     "entry_title": "Moving targets, moving politics: The state of play in social media data access",
@@ -5907,6 +5881,63 @@
       "authors": [
         "Jiyoun Suk",
         "Yini Zhang"
+      ],
+      "subjects": [],
+      "is_open_access": null,
+      "source": "crossref",
+      "confidence_score": 0.86
+    }
+  },
+  "c16d52e2ff0289d8": {
+    "entry_key": "Gilardi2026-hw",
+    "entry_title": "Quality perceptions and intended engagement in response to AI-generated and AI-assisted news",
+    "cached_at": "2026-07-01T10:51:25.838971",
+    "metadata": {
+      "abstract": "Abstract The increasing use of artificial intelligence (AI) in news production raises important questions about how audiences perceive and respond to AI-generated journalism. This preregistered survey experiment (N = 599, German-speaking Switzerland) examines (i) perceptions of article quality (measured as credibility, readability, and expertise) across news excerpts that were human-written, AI-assisted, or fully AI-generated, and (ii) self-reported intentions to engage following disclosure of AI involvement. Participants rated two short news excerpts before learning how they had been produced. Articles across all conditions were evaluated similarly in perceived quality. After disclosure, participants in the AI-assisted and AI-generated conditions reported a higher willingness to continue reading their assigned articles compared to the control group, but future willingness to read AI-generated news did not differ across conditions. Overall, the findings suggest that readers assess AI-generated and human-written news comparably in quality, while disclosure of AI use can momentarily increase curiosity or interest without yet changing longer-term reading intentions.",
+      "keywords": [],
+      "doi": "10.1038/s41598-026-58743-0",
+      "doi_url": "https://doi.org/10.1038/s41598-026-58743-0",
+      "url": null,
+      "arxiv_url": null,
+      "pdf_url": null,
+      "publication_date": "2026-06-29",
+      "citation_count": 0,
+      "reference_count": 0,
+      "venue": "Scientific Reports",
+      "authors": [
+        "Fabrizio Gilardi",
+        "Sabrina Di Lorenzo",
+        "Juri Ezzaini",
+        "Beryl Santa",
+        "Benjamin Streiff",
+        "Eric Zurfluh",
+        "Emma Hoes"
+      ],
+      "subjects": [],
+      "is_open_access": null,
+      "source": "crossref",
+      "confidence_score": 0.81875
+    }
+  },
+  "daac2f03151237e6": {
+    "entry_key": "Lukito2026-nb",
+    "entry_title": "Price, proficiency, or permission: assessing platform data access for election research",
+    "cached_at": "2026-07-01T10:51:32.020052",
+    "metadata": {
+      "abstract": null,
+      "keywords": [],
+      "doi": "10.1080/1369118x.2026.2667921",
+      "doi_url": "https://doi.org/10.1080/1369118x.2026.2667921",
+      "url": null,
+      "arxiv_url": null,
+      "pdf_url": null,
+      "publication_date": "2026-05-27",
+      "citation_count": 0,
+      "reference_count": 83,
+      "venue": "Information, Communication &amp; Society",
+      "authors": [
+        "Josephine Lukito",
+        "Kayo Mimizuka"
       ],
       "subjects": [],
       "is_open_access": null,
