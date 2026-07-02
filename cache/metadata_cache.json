@@ -5969,5 +5969,31 @@
       "source": "crossref",
       "confidence_score": 0.8999999999999999
     }
+  },
+  "39b58f98a4783f36": {
+    "entry_key": "Bouchaud2026-np",
+    "entry_title": "Community Notes undermoderate polarizing content by design creating risks in electoral processes",
+    "cached_at": "2026-07-02T05:29:07.004032",
+    "metadata": {
+      "abstract": "Community Notes of X enables users to collaboratively moderate misleading content. To resolve conflicting moderation, Community Notes infers a latent ideological dimension and selects notes garnering cross-partisan support. As this system is now deployed worldwide, we evaluate its operation across diverse polarization contexts. We analyze all 1.9 million moderation notes receiving 135 million ratings by March 2025, cross-referencing ideological scaling data on 13 countries. Our results show that the Community Notes algorithm effectively captures the main polarizing dimensions across countries, surfacing notes that garner cross-partisan support. This also means that, by design, Community Notes systematically undermoderate polarizing content. We analyze notes relating to four recent elections in the United States (2024), the United Kingdom (2024), France (2024), and Germany (2025) and demonstrate that they are systematically undermoderated when compared to other notes, posing potential risks to civic discourse and electoral processes.",
+      "keywords": [],
+      "doi": "10.1126/sciadv.aee6932",
+      "doi_url": "https://doi.org/10.1126/sciadv.aee6932",
+      "url": null,
+      "arxiv_url": null,
+      "pdf_url": null,
+      "publication_date": "2026-07-03",
+      "citation_count": 0,
+      "reference_count": 71,
+      "venue": "Science Advances",
+      "authors": [
+        "Paul Bouchaud",
+        "Pedro Ramaciotti"
+      ],
+      "subjects": [],
+      "is_open_access": null,
+      "source": "crossref",
+      "confidence_score": 0.86
+    }
   }
 }
