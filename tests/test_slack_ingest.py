@@ -448,3 +448,165 @@ def test_reprocessing_after_state_loss_does_not_duplicate(tmp_path):
     assert bib_after_first == bib_after_second
     # Only one entry total.
     assert bib_after_second.count("@article{") == 1
+
+
+# ---- team fork: attribution + cross-archive dedup -----------------------
+
+
+def test_duplicate_in_archive_replies_and_skips(tmp_path):
+    """A submission whose DOI is already in the published feed is not ingested:
+    the bot replies in-thread and the message is counted as a duplicate."""
+    import json
+    resolver = MagicMock(spec=PaperResolver)
+    resolver.resolve.return_value = ResolvedPaper(
+        doi="10.1/known", title="A Paper Already In The Archive",
+        authors=["Jane Smith"], year="2026", source="crossref",
+    )
+    ingestor, slack, drive, unpaywall = _build_ingestor(tmp_path,
+                                                        resolver=resolver)
+    feed_path = tmp_path / "feed.json"
+    feed_path.write_text(json.dumps({"items": [
+        {"title": "A Paper Already In The Archive",
+         "_academic": {"doi": "10.1/known"}},
+    ]}), encoding="utf-8")
+    ingestor.config.feed_file = feed_path
+    slack.fetch_history.return_value = [{
+        "ts": "100.0", "text": "#zettelkasten 10.1/known", "user": "U1",
+        "files": [{"mimetype": "application/pdf",
+                   "url_private_download": "https://files.slack.com/x.pdf"}],
+    }]
+    summary = ingestor.run()
+    assert summary.get("duplicate") == 1
+    assert summary.get("added", 0) == 0
+    drive.upload.assert_not_called()
+    # Replied in-thread and did not append to the inbox bib.
+    slack.post_thread_reply.assert_called()
+    reply = slack.post_thread_reply.call_args.args[2]
+    assert "archive" in reply.lower()
+    assert not ingestor.config.inbox_bib_file.exists() or \
+        "@article{" not in ingestor.config.inbox_bib_file.read_text()
+
+
+def test_duplicate_matched_by_title_when_no_doi(tmp_path):
+    """Title match alone (no DOI) is enough to flag a duplicate."""
+    import json
+    resolver = MagicMock(spec=PaperResolver)
+    resolver.resolve.return_value = ResolvedPaper(
+        title="A Paper Already In The Archive", authors=["Jane Smith"],
+        source="minimal",
+    )
+    ingestor, slack, drive, unpaywall = _build_ingestor(tmp_path,
+                                                        resolver=resolver)
+    feed_path = tmp_path / "feed.json"
+    feed_path.write_text(json.dumps({"items": [
+        {"title": "A Paper Already in the Archive!", "_academic": {}},
+    ]}), encoding="utf-8")
+    ingestor.config.feed_file = feed_path
+    slack.fetch_history.return_value = [{
+        "ts": "100.0", "text": "#zettelkasten a paper already in the archive",
+        "user": "U1",
+    }]
+    summary = ingestor.run()
+    assert summary.get("duplicate") == 1
+
+
+def test_bot_messages_are_skipped(tmp_path):
+    """A hashtag message posted by a bot/app (bot_id present) — e.g. our own
+    ✅ / ask-for-PDF / duplicate replies — is never treated as a submission.
+    The `bot_message` subtype misses chat.postMessage bot posts, which carry
+    a `bot_id` instead."""
+    ingestor, slack, drive, unpaywall = _build_ingestor(tmp_path)
+    slack.fetch_history.return_value = [
+        {"ts": "100.0", "text": "#zettelkasten see https://doi.org/10.9/x",
+         "bot_id": "B999"},
+    ]
+    summary = ingestor.run()
+    assert summary.get("skipped") == 1
+    assert summary.get("added", 0) == 0
+
+
+def test_from_arxiv_uses_client_results(monkeypatch):
+    """_from_arxiv must use arxiv.Client().results() — Search.results() was
+    removed in arxiv>=3, which silently broke arxiv metadata resolution."""
+    import sys, types
+    from src import slack_ingest
+
+    paper = types.SimpleNamespace(
+        title="A Paper", authors=[types.SimpleNamespace(name="Jane Doe")],
+        published=types.SimpleNamespace(year=2026),
+        entry_id="http://arxiv.org/abs/2606.04431", summary="abstract", doi=None,
+    )
+
+    class FakeClient:
+        def results(self, search):
+            return iter([paper])
+
+    fake_arxiv = types.SimpleNamespace(
+        Search=lambda **kw: object(), Client=FakeClient
+    )
+    monkeypatch.setitem(sys.modules, "arxiv", fake_arxiv)
+
+    resolved = slack_ingest.PaperResolver(
+        enable_crossref=False, enable_arxiv=True
+    )._from_arxiv("2606.04431")
+    assert resolved is not None
+    assert resolved.title == "A Paper"
+    assert resolved.authors == ["Jane Doe"]
+    assert resolved.year == "2026"
+    assert resolved.source == "arxiv"
+
+
+# ---- landing-page DOI discovery -----------------------------------------
+
+
+def test_extract_doi_from_html_meta_tags():
+    from src.slack_ingest import extract_doi_from_html
+    # Highwire
+    assert extract_doi_from_html(
+        '<meta name="citation_doi" content="10.1080/abc.123">'
+    ) == "10.1080/abc.123"
+    # Dublin Core with doi: prefix, attribute order reversed
+    assert extract_doi_from_html(
+        '<meta content="doi:10.1177/xyz789" name="DC.Identifier">'
+    ) == "10.1177/xyz789"
+    # PRISM
+    assert extract_doi_from_html(
+        '<meta name="prism.doi" content="10.1016/j.foo.2026.01"/>'
+    ) == "10.1016/j.foo.2026.01"
+    # No DOI meta -> None (don't scrape body / cited refs)
+    assert extract_doi_from_html(
+        '<meta name="description" content="see 10.9/cited in refs">'
+    ) is None
+
+
+def test_resolve_scrapes_doi_from_landing_page():
+    """A link with no DOI in the URL still resolves via the landing page's
+    citation_doi meta tag (Crossref disabled here, so we just check the DOI)."""
+    from src.slack_ingest import PaperResolver
+    html = '<html><head><meta name="citation_doi" content="10.5555/landing.42">' \
+           '</head></html>'
+    resolver = PaperResolver(
+        enable_crossref=False, enable_arxiv=False,
+        html_fetcher=lambda url: html,
+    )
+    resolved = resolver.resolve(
+        text="<https://example.com/articles/some-slug|some paper>",
+        urls=["https://example.com/articles/some-slug"],
+    )
+    assert resolved.doi == "10.5555/landing.42"
+
+
+def test_resolve_landing_fetch_failure_is_safe():
+    """A landing-page fetch error must not break resolution."""
+    from src.slack_ingest import PaperResolver
+
+    def boom(url):
+        raise RuntimeError("network down")
+
+    resolver = PaperResolver(
+        enable_crossref=False, enable_arxiv=False, html_fetcher=boom,
+    )
+    resolved = resolver.resolve(text="no doi here",
+                                urls=["https://example.com/x"])
+    assert resolved.doi is None
+    assert resolved.source == "minimal"
