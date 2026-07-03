@@ -179,6 +179,7 @@ def _build_ingestor(tmp_path, *, downloader=None, unpaywall=None,
     slack.fetch_history.return_value = []
     slack.fetch_thread.return_value = []
     slack.get_permalink.return_value = "https://slack.example/p"
+    slack.display_name.return_value = "Test User"
     drive = MagicMock()
     drive.upload.return_value = {"id": "F", "name": "n.pdf",
                                  "webViewLink": "https://drive/x"}
@@ -519,6 +520,104 @@ def test_bot_messages_are_skipped(tmp_path):
     slack.fetch_history.return_value = [
         {"ts": "100.0", "text": "#zettelkasten see https://doi.org/10.9/x",
          "bot_id": "B999"},
+    ]
+    summary = ingestor.run()
+    assert summary.get("skipped") == 1
+    assert summary.get("added", 0) == 0
+
+
+# ---- attribution flag (attribute_suggesters) ----------------------------
+
+
+def test_attribution_off_keeps_identity_out_of_state(tmp_path):
+    """Default (upstream) behavior: no submitter identity in processed_meta,
+    byte-compatible with the pre-flag state shape."""
+    resolver = MagicMock(spec=PaperResolver)
+    resolver.resolve.return_value = ResolvedPaper(
+        doi="10.1/x", title="A Distinct New Paper", authors=["Jane Smith"],
+        year="2026", source="crossref",
+    )
+    ingestor, slack, drive, unpaywall = _build_ingestor(tmp_path,
+                                                        resolver=resolver)
+    slack.fetch_history.return_value = [{
+        "ts": "100.0",
+        "text": "#zettelkasten please add 10.1/x",
+        "user": "U1",
+        "files": [{"mimetype": "application/pdf",
+                   "url_private_download": "https://files.slack.com/x.pdf"}],
+    }]
+    summary = ingestor.run()
+    assert summary.get("added") == 1
+    slack.display_name.assert_not_called()
+    state = SlackIngestState.load(ingestor.config.state_file)
+    meta = next(iter(state.processed_meta.values()))
+    assert "submitted_by" not in meta
+    assert "submitted_by_id" not in meta
+
+
+def test_submitter_recorded_when_attribution_on(tmp_path):
+    """With attribute_suggesters on (team fork), a successful ingest records
+    the resolved submitter display name + opaque user-id in processed_meta,
+    so the feed/RSS can publish `submitted_by*`."""
+    resolver = MagicMock(spec=PaperResolver)
+    resolver.resolve.return_value = ResolvedPaper(
+        doi="10.1/x", title="A Distinct New Paper", authors=["Jane Smith"],
+        year="2026", source="crossref",
+    )
+    ingestor, slack, drive, unpaywall = _build_ingestor(tmp_path,
+                                                        resolver=resolver)
+    ingestor.config.attribute_suggesters = True
+    slack.display_name.return_value = "Jane Smith"
+    slack.fetch_history.return_value = [{
+        "ts": "100.0",
+        "text": "#zettelkasten please add 10.1/x",
+        "user": "U1",
+        "files": [{"mimetype": "application/pdf",
+                   "url_private_download": "https://files.slack.com/x.pdf"}],
+    }]
+    summary = ingestor.run()
+    assert summary.get("added") == 1
+    slack.display_name.assert_called_with("U1")
+    state = SlackIngestState.load(ingestor.config.state_file)
+    meta = next(iter(state.processed_meta.values()))
+    assert meta["submitted_by"] == "Jane Smith"
+    # The opaque user-id is recorded too, so the team kasten can @-mention.
+    assert meta["submitted_by_id"] == "U1"
+
+
+# ---- dedicated-channel mode (require_hashtag = False) -------------------
+
+
+def test_no_hashtag_mode_ingests_link_message(tmp_path):
+    """With require_hashtag off, a message carrying a paper link (no hashtag)
+    is ingested."""
+    resolver = MagicMock(spec=PaperResolver)
+    resolver.resolve.return_value = ResolvedPaper(
+        doi="10.5/nh", title="No Hashtag Needed Paper", authors=["Jane Smith"],
+        year="2026", source="crossref",
+    )
+    ingestor, slack, drive, unpaywall = _build_ingestor(tmp_path,
+                                                        resolver=resolver)
+    ingestor.config.require_hashtag = False
+    slack.fetch_history.return_value = [{
+        "ts": "100.0",
+        "text": "<https://doi.org/10.5/nh|doi.org/…>",   # link, NO hashtag
+        "user": "U1",
+        "files": [{"mimetype": "application/pdf",
+                   "url_private_download": "https://files.slack.com/x.pdf"}],
+    }]
+    summary = ingestor.run()
+    assert summary.get("added") == 1
+
+
+def test_no_hashtag_mode_skips_plain_chatter(tmp_path):
+    """A message with no link and no PDF is still ignored in dedicated-channel
+    mode — only links/PDFs are submissions."""
+    ingestor, slack, drive, unpaywall = _build_ingestor(tmp_path)
+    ingestor.config.require_hashtag = False
+    slack.fetch_history.return_value = [
+        {"ts": "100.0", "text": "what did everyone think of the talk?",
+         "user": "U1"},
     ]
     summary = ingestor.run()
     assert summary.get("skipped") == 1

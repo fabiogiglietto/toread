@@ -156,3 +156,18 @@ def test_construct_requires_folder_id():
             folder_id="",
             credentials=object(),
         )
+
+
+def test_oauth_user_credentials_take_precedence(monkeypatch):
+    """When OAuth user-cred env vars are set, _resolve_credentials returns
+    user Credentials (the bot uploads as the user, who has Drive quota)."""
+    from src import drive_uploader
+    monkeypatch.setenv("GOOGLE_OAUTH_CLIENT_ID", "cid")
+    monkeypatch.setenv("GOOGLE_OAUTH_CLIENT_SECRET", "csec")
+    monkeypatch.setenv("GOOGLE_OAUTH_REFRESH_TOKEN", "rtok")
+    # Even if a service-account JSON is also present, OAuth wins.
+    monkeypatch.setenv("GOOGLE_CREDENTIALS_JSON", '{"type":"service_account"}')
+    creds = drive_uploader._resolve_credentials()
+    from google.oauth2.credentials import Credentials as UserCredentials
+    assert isinstance(creds, UserCredentials)
+    assert creds.refresh_token == "rtok"
