@@ -3,7 +3,7 @@ urllib3>=2.0.0
 arxiv>=2.1.0
 PyYAML>=6.0
 # Slack ingest path (src/slack_ingest.py)
-slack_sdk>=3.27
+slack_sdk>=3.43.0
 google-api-python-client>=2.100
 google-auth>=2.30
 
