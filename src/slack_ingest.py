@@ -56,6 +56,12 @@ DEFAULT_HASHTAG = "#zettelkasten"
 DEFAULT_STATE_FILE = "data/slack_state.json"
 DEFAULT_INBOX_BIB = "data/slack_inbox.bib"
 DEFAULT_FEED = "output/feed.json"
+# Base URL of the downstream zettelkasten's per-paper notes. The note filename
+# is the bibkey, so `<base>/<bibkey>` is the note's permalink — known already at
+# ingest time, even though the page goes live a few minutes later (after the
+# downstream `update` + site deploy). Overridable via SLACK_NOTE_BASE_URL
+# (the team fork points it at mine-zettelkasten).
+DEFAULT_NOTE_BASE_URL = "https://fabiogiglietto.github.io/fg-zettelkasten/Papers"
 
 
 # ---- Duplicate detection --------------------------------------------------
@@ -616,6 +622,7 @@ class IngestConfig:
     feed_file: Path = Path(DEFAULT_FEED)
     dry_run: bool = False
     confirm_on_success: bool = True
+    note_base_url: str = DEFAULT_NOTE_BASE_URL
     # When False, the trigger hashtag is not required: in a dedicated
     # submissions channel any message carrying a paper link or a PDF is treated
     # as a suggestion. (The MINE team channel is itself named #zettelkasten, so
@@ -948,9 +955,14 @@ class SlackIngestor:
         state.processed_meta[bibkey] = meta
 
         if not self.config.dry_run and self.config.confirm_on_success:
+            # Link the submitter straight to their note. The URL is the note's
+            # permalink (filename = bibkey); it goes live a few minutes later,
+            # once the downstream `update` builds the note and the site deploys.
+            note_url = f"{self.config.note_base_url.rstrip('/')}/{bibkey}"
             self.slack.post_thread_reply(
                 channel, ts,
-                f"✅ Added as `{bibkey}`. It'll appear after the next pipeline tick.",
+                f"✅ Added as `{bibkey}`. Your note will be ready in a few "
+                f"minutes: {note_url}",
             )
 
         return "added"
@@ -1035,6 +1047,8 @@ def _build_config_from_env(args) -> Optional[IngestConfig]:
         dry_run=args.dry_run,
         confirm_on_success=(os.environ.get(
             "SLACK_CONFIRM_ON_SUCCESS", "true") or "true").lower() != "false",
+        note_base_url=(os.environ.get("SLACK_NOTE_BASE_URL")
+                       or DEFAULT_NOTE_BASE_URL),
         require_hashtag=require_hashtag,
         attribute_suggesters=attribute_suggesters,
     )

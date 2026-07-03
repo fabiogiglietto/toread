@@ -624,6 +624,29 @@ def test_no_hashtag_mode_skips_plain_chatter(tmp_path):
     assert summary.get("added", 0) == 0
 
 
+def test_success_reply_links_the_note(tmp_path):
+    """The ✅ confirmation links the note permalink (<note_base_url>/<bibkey>),
+    known at ingest time because the note filename is the bibkey."""
+    resolver = MagicMock(spec=PaperResolver)
+    resolver.resolve.return_value = ResolvedPaper(
+        doi="10.1/x", title="A Distinct New Paper", authors=["Jane Smith"],
+        year="2026", source="crossref",
+    )
+    ingestor, slack, drive, unpaywall = _build_ingestor(tmp_path,
+                                                        resolver=resolver)
+    ingestor.config.note_base_url = "https://example.org/Papers/"
+    slack.fetch_history.return_value = [{
+        "ts": "100.0",
+        "text": "#zettelkasten please add 10.1/x",
+        "user": "U1",
+        "files": [{"mimetype": "application/pdf",
+                   "url_private_download": "https://files.slack.com/x.pdf"}],
+    }]
+    assert ingestor.run().get("added") == 1
+    reply = slack.post_thread_reply.call_args.args[2]
+    assert "https://example.org/Papers/Smith2026-sl" in reply
+
+
 def test_from_arxiv_uses_client_results(monkeypatch):
     """_from_arxiv must use arxiv.Client().results() — Search.results() was
     removed in arxiv>=3, which silently broke arxiv metadata resolution."""
