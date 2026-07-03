@@ -35,8 +35,10 @@ jobs:
         cache: 'pip'
     
     - name: Install dependencies
+      # requirements.lock is compiled from requirements.txt (uv pip compile);
+      # regenerate it when requirements.txt changes.
       run: |
-        pip install -r requirements.txt
+        pip install -r requirements.lock
     
     - name: Create directories
       run: |
@@ -163,6 +165,13 @@ jobs:
           echo "Attempt $i failed, retrying in 60s..."
           sleep 60
         done
+
+    # Contract enforcement — an invalid feed must never be committed or
+    # cascade downstream. schema/feed.schema.json is the normative contract
+    # (SCHEMA.md is commentary). Hard fail -> the failure alert fires.
+    - name: Validate feed against schema
+      if: steps.bib-check.outputs.changed == 'true' || steps.slack-ingest.outputs.slack_changed == 'true'
+      run: check-jsonschema --schemafile schema/feed.schema.json output/feed.json
 
     - name: Skip feed generation (no changes)
       if: steps.bib-check.outputs.changed != 'true' && steps.slack-ingest.outputs.slack_changed != 'true'
