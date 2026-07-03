@@ -8,4 +8,4 @@ google-api-python-client>=2.100
 google-auth>=2.30
 
 # CI feed validation (workflow + tests)
-check-jsonschema>=0.28
+check-jsonschema>=0.37.4
