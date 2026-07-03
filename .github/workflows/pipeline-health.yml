@@ -1,0 +1,51 @@
+name: Pipeline health
+
+# Freshness dead-man's switch for both pipeline chains — see PIPELINE.md and
+# scripts/pipeline_health.py. Catches silent staleness that per-run failure
+# alerts cannot (dropped dispatches, disabled crons, continue-on-error legs).
+#
+# Optional secret HEALTHCHECK_PING_URL (e.g. a healthchecks.io check) closes
+# the who-watches-the-watcher loop: if this workflow itself stops running,
+# the external service alerts.
+
+on:
+  schedule:
+    - cron: '30 7 * * *'   # daily, after the 05:00-07:00 UTC pipeline crons
+  workflow_dispatch:
+    inputs:
+      max_age_override_days:
+        description: "Override every staleness threshold (set 0 to test alerting)"
+        required: false
+        default: ""
+
+jobs:
+  check:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+    steps:
+      - uses: actions/checkout@v6
+
+      - uses: actions/setup-python@v6
+        with:
+          python-version: '3.11'
+
+      - name: Check pipeline freshness
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          SLACK_WEBHOOK_URL: ${{ secrets.SLACK_WEBHOOK_URL }}
+          SLACK_BOT_TOKEN: ${{ secrets.SLACK_BOT_TOKEN }}
+          SLACK_ALERT_CHANNEL: ${{ vars.OPS_SLACK_CHANNEL || secrets.SLACK_TOREAD_CHANNEL_ID }}
+          MAX_AGE_OVERRIDE_DAYS: ${{ inputs.max_age_override_days }}
+        run: python scripts/pipeline_health.py
+
+      - name: Ping healthcheck (watch the watcher)
+        if: success()
+        env:
+          HEALTHCHECK_PING_URL: ${{ secrets.HEALTHCHECK_PING_URL }}
+        run: |
+          if [ -n "$HEALTHCHECK_PING_URL" ]; then
+            curl -sf -m 10 --retry 3 "$HEALTHCHECK_PING_URL" > /dev/null || true
+          else
+            echo "HEALTHCHECK_PING_URL not set — skipping"
+          fi
