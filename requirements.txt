@@ -6,3 +6,6 @@ PyYAML>=6.0
 slack_sdk>=3.27
 google-api-python-client>=2.100
 google-auth>=2.30
+
+# CI feed validation (workflow + tests)
+check-jsonschema>=0.28

@@ -1,5 +1,12 @@
 # Feed Contract — `output/feed.json`
 
+> **Normative contract:** [`schema/feed.schema.json`](schema/feed.schema.json)
+> (JSON Schema 2020-12). This document is the human commentary; where the two
+> disagree, the schema wins. CI validates every regenerated feed against it,
+> and consumers should validate on ingest. Note two places where practice
+> diverges from the tables below: `date_published` and `content_text` can be
+> `null` for unresolved/unenriched items — consumers must handle that.
+
 This file is the **published contract** between ToRead and its downstream
 consumers. ToRead is the producer; `research-radio`, `fabiogiglietto.github.io`,
 and `fg-zettelkasten` are consumers. See `PIPELINE.md` for the full DAG.
