@@ -33,7 +33,31 @@ MAX_TITLE_CHARS = 150  # leaves room for `Surname et al. YYYY - …` prefix
 
 
 def _resolve_credentials():
-    """Return google service-account Credentials from env vars."""
+    """Return Google credentials for the uploader from env vars.
+
+    OAuth *user* credentials take precedence when present
+    (`GOOGLE_OAUTH_CLIENT_ID` + `GOOGLE_OAUTH_CLIENT_SECRET` +
+    `GOOGLE_OAUTH_REFRESH_TOKEN`): the bot then uploads *as that user*, who has
+    normal Drive storage. This is required when the inbox folder is an ordinary
+    My-Drive folder — a service account has no storage quota and cannot own
+    uploaded files there. Falls back to the service account
+    (`GOOGLE_CREDENTIALS_JSON` / `GOOGLE_APPLICATION_CREDENTIALS`), which only
+    works for a Shared Drive target.
+    """
+    client_id = os.environ.get("GOOGLE_OAUTH_CLIENT_ID")
+    client_secret = os.environ.get("GOOGLE_OAUTH_CLIENT_SECRET")
+    refresh_token = os.environ.get("GOOGLE_OAUTH_REFRESH_TOKEN")
+    if client_id and client_secret and refresh_token:
+        from google.oauth2.credentials import Credentials  # local import
+        return Credentials(
+            None,  # no access token yet; the client refreshes on first use
+            refresh_token=refresh_token,
+            client_id=client_id,
+            client_secret=client_secret,
+            token_uri="https://oauth2.googleapis.com/token",
+            scopes=SCOPES,
+        )
+
     from google.oauth2 import service_account  # local import for testability
 
     raw = os.environ.get("GOOGLE_CREDENTIALS_JSON")
@@ -58,8 +82,10 @@ def _resolve_credentials():
         )
 
     raise RuntimeError(
-        "No Google credentials found. Set GOOGLE_CREDENTIALS_JSON (raw JSON) "
-        "or GOOGLE_APPLICATION_CREDENTIALS (path to JSON file)."
+        "No Google credentials found. Set OAuth user creds "
+        "(GOOGLE_OAUTH_CLIENT_ID/SECRET/REFRESH_TOKEN) for a My-Drive inbox, or "
+        "GOOGLE_CREDENTIALS_JSON / GOOGLE_APPLICATION_CREDENTIALS (service "
+        "account) for a Shared-Drive inbox."
     )
 
 

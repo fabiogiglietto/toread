@@ -35,6 +35,10 @@ def test_slack_suggestion_emitted_for_slack_source():
             "ts": "100.0",
             "permalink": "https://slack.example/p",
             "pdf_source": "slack_attachment",
+            # Published in the team fork for attribution.
+            "submitted_by": "John Doe",
+            # Opaque user-id, published so the kasten can @-mention.
+            "submitted_by_id": "U123",
             # Things that must *not* leak through.
             "user": "U999",
             "suggester_email": "secret@example.com",
@@ -56,6 +60,8 @@ def test_slack_suggestion_emitted_for_slack_source():
     assert sug["ts"] == "100.0"
     assert sug["permalink"] == "https://slack.example/p"
     assert sug["pdf_source"] == "slack_attachment"
+    assert sug["submitted_by"] == "John Doe"   # published for attribution
+    assert sug["submitted_by_id"] == "U123"    # published for @-mentioning
     assert "user" not in sug
     assert "suggester_email" not in sug
 

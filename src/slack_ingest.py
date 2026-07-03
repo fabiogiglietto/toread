@@ -584,6 +584,25 @@ class SlackAdapter:
             return None
         return resp.get("permalink")
 
+    def display_name(self, user_id: Optional[str]) -> Optional[str]:
+        """Resolve a Slack user-id to a human display name, or None.
+
+        Needs the `users:read` scope. Used to publish submitter attribution on
+        the team site — unlike upstream toread, which keeps identity private.
+        """
+        from slack_sdk.errors import SlackApiError
+        if not user_id:
+            return None
+        try:
+            resp = self.client.users_info(user=user_id)
+        except SlackApiError as e:
+            self.logger.warning("Slack users_info failed: %s", e)
+            return None
+        u = resp.get("user", {}) or {}
+        prof = u.get("profile", {}) or {}
+        return (prof.get("real_name") or u.get("real_name")
+                or prof.get("display_name") or u.get("name"))
+
 
 # ---- The orchestrator -----------------------------------------------------
 
@@ -597,6 +616,16 @@ class IngestConfig:
     feed_file: Path = Path(DEFAULT_FEED)
     dry_run: bool = False
     confirm_on_success: bool = True
+    # When False, the trigger hashtag is not required: in a dedicated
+    # submissions channel any message carrying a paper link or a PDF is treated
+    # as a suggestion. (The MINE team channel is itself named #zettelkasten, so
+    # the hashtag would render as a channel link, never the literal text.)
+    require_hashtag: bool = True
+    # When True, resolve and publish the suggester's Slack display name and
+    # opaque user-id in the feed (`_slack_suggestion.submitted_by*`). Off by
+    # default: upstream toread keeps suggester identity private; the MINE team
+    # fork turns this on for site attribution and @-mentions.
+    attribute_suggesters: bool = False
 
 
 class SlackIngestor:
@@ -688,8 +717,14 @@ class SlackIngestor:
         if msg.get("bot_id"):
             return "skipped"
 
-        if not has_trigger_hashtag(text, self.config.hashtag):
-            return "skipped"
+        if self.config.require_hashtag:
+            if not has_trigger_hashtag(text, self.config.hashtag):
+                return "skipped"
+        else:
+            # Dedicated-channel mode: a message is a submission when it carries
+            # a paper link or an attached PDF; plain chatter is ignored.
+            if not extract_urls(text) and _first_pdf_file(msg) is None:
+                return "skipped"
 
         return self._ingest(state, msg, text)
 
@@ -888,12 +923,29 @@ class SlackIngestor:
         state.processed[ts] = bibkey
         if remove_from_pending:
             state.pending.pop(ts, None)
-        state.processed_meta[bibkey] = {
+        meta = {
             "channel_id": channel,
             "ts": ts,
             "permalink": permalink,
             "pdf_source": pdf_source,
         }
+        if self.config.attribute_suggesters:
+            # Resolve the submitter's display name for site attribution. The
+            # original author is on the message; for the follow-up path it was
+            # captured in `pending[ts]["user"]` when we asked for the PDF.
+            user_id = msg.get("user") or state.pending.get(ts, {}).get("user")
+            submitted_by = (self.slack.display_name(user_id)
+                            if user_id and not self.config.dry_run else None)
+            # Only a real string is published; anything else (no name
+            # resolved) stays out of the JSON-serialized state.
+            meta["submitted_by"] = (submitted_by
+                                    if isinstance(submitted_by, str) else None)
+            # Opaque Slack user-id, published downstream so the team kasten
+            # can @-mention the submitter in its #toread digest. Strictly less
+            # sensitive than the display name already published above.
+            meta["submitted_by_id"] = (user_id
+                                       if isinstance(user_id, str) else None)
+        state.processed_meta[bibkey] = meta
 
         if not self.config.dry_run and self.config.confirm_on_success:
             self.slack.post_thread_reply(
@@ -966,6 +1018,14 @@ def _build_config_from_env(args) -> Optional[IngestConfig]:
         )
         return None
     hashtag = os.environ.get("SLACK_TRIGGER_HASHTAG", DEFAULT_HASHTAG)
+    # SLACK_REQUIRE_HASHTAG=false → dedicated-channel mode (any link/PDF is a
+    # submission). Defaults to true, preserving upstream toread behavior.
+    require_hashtag = (os.environ.get(
+        "SLACK_REQUIRE_HASHTAG", "true") or "true").lower() != "false"
+    # SLACK_ATTRIBUTE_SUGGESTERS=true → publish submitter identity in the feed
+    # (team fork). Defaults to false, preserving upstream privacy behavior.
+    attribute_suggesters = (os.environ.get(
+        "SLACK_ATTRIBUTE_SUGGESTERS", "false") or "false").lower() == "true"
     return IngestConfig(
         channel_id=channel,
         hashtag=hashtag,
@@ -975,6 +1035,8 @@ def _build_config_from_env(args) -> Optional[IngestConfig]:
         dry_run=args.dry_run,
         confirm_on_success=(os.environ.get(
             "SLACK_CONFIRM_ON_SUCCESS", "true") or "true").lower() != "false",
+        require_hashtag=require_hashtag,
+        attribute_suggesters=attribute_suggesters,
     )
 
 

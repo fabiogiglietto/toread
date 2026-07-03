@@ -94,9 +94,11 @@ Consumers must tolerate any subset.
 ### `_slack_suggestion` object
 
 Emitted only for items whose BibTeX source is the Slack inbox
-(`data/slack_inbox.bib`, populated by `src/slack_ingest.py`). The object
-deliberately omits any suggester identity — that stays in
-`data/slack_state.json` and never reaches the published feed.
+(`data/slack_inbox.bib`, populated by `src/slack_ingest.py`). By default the
+object omits any suggester identity — that stays in `data/slack_state.json`
+and never reaches the published feed. The team (MINE) chain opts in to
+attribution via the `SLACK_ATTRIBUTE_SUGGESTERS` repo variable, which adds
+the two `submitted_by*` fields below.
 
 | Field        | Type   | Notes                                                  |
 |--------------|--------|--------------------------------------------------------|
@@ -104,6 +106,8 @@ deliberately omits any suggester identity — that stays in
 | `ts`         | string | Slack message timestamp (`seconds.microseconds`)        |
 | `permalink`  | string | Slack message permalink (may be absent on dry-runs)     |
 | `pdf_source` | string | `slack_attachment` \| `arxiv` \| `unpaywall` \| `slack_attachment_followup` |
+| `submitted_by` | string | Suggester display name — **team chain only** (attribution flag on) |
+| `submitted_by_id` | string | Opaque Slack user-id for @-mentions — **team chain only** |
 
 Consumers can use this to render a "Suggested via Slack" badge or to link
 back to the original message.

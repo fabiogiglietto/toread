@@ -63,6 +63,16 @@ jobs:
         GOOGLE_CREDENTIALS_JSON: ${{ secrets.GOOGLE_CREDENTIALS_JSON }}
         UNPAYWALL_EMAIL: ${{ secrets.UNPAYWALL_EMAIL }}
         SLACK_TRIGGER_HASHTAG: ${{ vars.SLACK_TRIGGER_HASHTAG || '#zettelkasten' }}
+        # Team-fork knobs (repo Actions variables; defaults = fg behavior).
+        # SLACK_REQUIRE_HASHTAG=false -> dedicated-channel mode;
+        # SLACK_ATTRIBUTE_SUGGESTERS=true -> publish submitter identity.
+        SLACK_REQUIRE_HASHTAG: ${{ vars.SLACK_REQUIRE_HASHTAG || 'true' }}
+        SLACK_ATTRIBUTE_SUGGESTERS: ${{ vars.SLACK_ATTRIBUTE_SUGGESTERS || 'false' }}
+        # OAuth user creds for a My-Drive inbox folder (team fork); empty here,
+        # so the service account above is used.
+        GOOGLE_OAUTH_CLIENT_ID: ${{ secrets.GOOGLE_OAUTH_CLIENT_ID }}
+        GOOGLE_OAUTH_CLIENT_SECRET: ${{ secrets.GOOGLE_OAUTH_CLIENT_SECRET }}
+        GOOGLE_OAUTH_REFRESH_TOKEN: ${{ secrets.GOOGLE_OAUTH_REFRESH_TOKEN }}
       run: |
         python -m src.slack_ingest -v || true
         # `slack_changed` gates feed regeneration AND the downstream
@@ -271,13 +281,21 @@ jobs:
     # fg-zettelkasten:update) only when the Paperpile library itself changed —
     # i.e. new or edited papers. bib-check is false for cache-only metadata
     # refreshes (e.g. citation-count updates), so those no longer cascade.
-    - name: Trigger downstream pipeline (fg-zettelkasten summarize)
+    # Target/event and soft-fail come from repo Actions variables so this
+    # workflow file is byte-identical in the team fork (see PIPELINE.md,
+    # "The MINE team chain"). Defaults = the fg chain. mine-toread sets
+    # PIPELINE_DISPATCH_REPO=fabiogiglietto/mine-zettelkasten,
+    # PIPELINE_DISPATCH_EVENT=pipeline-finalize,
+    # PIPELINE_DISPATCH_SOFT_FAIL=true (its kasten has a daily self-healing
+    # cron, so a missing dispatch token must not fail the feed run).
+    - name: Trigger downstream pipeline
       if: steps.bib-check.outputs.changed == 'true' || steps.slack-ingest.outputs.slack_changed == 'true'
+      continue-on-error: ${{ vars.PIPELINE_DISPATCH_SOFT_FAIL == 'true' }}
       uses: peter-evans/repository-dispatch@v4
       with:
         token: ${{ secrets.PIPELINE_DISPATCH_TOKEN }}
-        repository: fabiogiglietto/fg-zettelkasten
-        event-type: pipeline-summarize
+        repository: ${{ vars.PIPELINE_DISPATCH_REPO || 'fabiogiglietto/fg-zettelkasten' }}
+        event-type: ${{ vars.PIPELINE_DISPATCH_EVENT || 'pipeline-summarize' }}
 
     - name: Upload feeds as artifacts
       uses: actions/upload-artifact@v7
