@@ -36,6 +36,7 @@ import os
 import re
 import sys
 import time
+import unicodedata
 from dataclasses import dataclass, field
 from datetime import datetime, timezone
 from pathlib import Path
@@ -54,6 +55,69 @@ from .unpaywall_client import UnpaywallClient
 DEFAULT_HASHTAG = "#zettelkasten"
 DEFAULT_STATE_FILE = "data/slack_state.json"
 DEFAULT_INBOX_BIB = "data/slack_inbox.bib"
+DEFAULT_FEED = "output/feed.json"
+
+
+# ---- Duplicate detection --------------------------------------------------
+# Normalizers are a deliberate copy of
+# fg-zettelkasten/mine-zettelkasten `src/state.py::normalize_doi/normalize_title`
+# (the two repos can't share code). Keep them identical so the in-Slack
+# "already in the archive" reply here and the downstream fg dedup net agree.
+
+_DOI_PREFIX_RE = re.compile(r"^(?:https?://)?(?:dx\.)?doi\.org/", re.IGNORECASE)
+_TITLE_STRIP_RE = re.compile(r"[^a-z0-9\s]")
+_WS_NORM_RE = re.compile(r"\s+")
+
+
+def _norm_doi(doi: Optional[str]) -> Optional[str]:
+    if not doi:
+        return None
+    d = _DOI_PREFIX_RE.sub("", doi.strip()).lower().rstrip(".")
+    return d or None
+
+
+def _norm_title(title: Optional[str]) -> Optional[str]:
+    if not title:
+        return None
+    folded = unicodedata.normalize("NFKD", title)
+    folded = folded.encode("ascii", "ignore").decode("ascii").lower()
+    folded = _WS_NORM_RE.sub(" ", _TITLE_STRIP_RE.sub(" ", folded)).strip()
+    return folded if len(folded) >= 8 else None
+
+
+def load_archive_index(feed_path: Path,
+                       inbox_path: Path) -> Tuple[set, set]:
+    """Normalized DOIs + titles already in the archive: the published
+    `output/feed.json` (Paperpile curation + earlier Slack adds) plus the
+    current `slack_inbox.bib` (entries from this/earlier ticks not yet folded
+    into the feed). Both reads are best-effort — a missing file yields empty
+    sets, never an error."""
+    dois: set = set()
+    titles: set = set()
+    try:
+        data = json.loads(Path(feed_path).read_text(encoding="utf-8"))
+        for it in data.get("items", []):
+            d = _norm_doi((it.get("_academic") or {}).get("doi"))
+            if d:
+                dois.add(d)
+            t = _norm_title(it.get("title"))
+            if t:
+                titles.add(t)
+    except Exception:
+        pass
+    try:
+        text = Path(inbox_path).read_text(encoding="utf-8")
+        for m in re.finditer(r"(?i)\bdoi\s*=\s*\{([^}]*)\}", text):
+            d = _norm_doi(m.group(1))
+            if d:
+                dois.add(d)
+        for m in re.finditer(r"(?i)\btitle\s*=\s*\{([^}]*)\}", text):
+            t = _norm_title(m.group(1))
+            if t:
+                titles.add(t)
+    except Exception:
+        pass
+    return dois, titles
 
 
 # ---- URL / DOI extraction --------------------------------------------------
@@ -105,6 +169,62 @@ def extract_doi(text: str, urls: Sequence[str] = ()) -> Optional[str]:
             if mm:
                 return mm.group(1).rstrip(".,;)")
     return None
+
+
+# Standard DOI-bearing <meta> names: Highwire (citation_doi), Dublin Core
+# (dc.identifier), PRISM (prism.doi) — used by essentially every academic
+# publisher. We only trust these tags, not a body-text scan, to avoid picking
+# up a cited reference's DOI.
+_META_TAG_RE = re.compile(r"<meta\b[^>]*>", re.IGNORECASE)
+_META_ATTR_RE = re.compile(
+    r"""(name|property|content)\s*=\s*["']([^"']*)["']""", re.IGNORECASE
+)
+_DOI_META_NAMES = frozenset((
+    "citation_doi", "dc.identifier", "dc.identifier.doi", "prism.doi",
+    "bepress_citation_doi", "doi",
+))
+
+
+def extract_doi_from_html(html: str) -> Optional[str]:
+    """Pull a DOI from a landing page's `<meta>` tags, or None.
+
+    Handles attribute order variants and `doi:`-prefixed Dublin Core values.
+    """
+    for tag in _META_TAG_RE.findall(html or ""):
+        attrs = {k.lower(): v for k, v in _META_ATTR_RE.findall(tag)}
+        label = (attrs.get("name") or attrs.get("property") or "").strip().lower()
+        if label in _DOI_META_NAMES and attrs.get("content"):
+            m = _DOI_RE.search(attrs["content"])
+            if m:
+                return m.group(1).rstrip(".,;)")
+    return None
+
+
+def _fetch_html(url: str, *, timeout: int = 15,
+                max_bytes: int = 2_000_000) -> Optional[str]:
+    """Fetch a landing page's HTML, best-effort and size-capped.
+
+    DOIs live in <head> meta tags near the top, so we cap the read rather than
+    pull a whole large page. Returns None for non-HTML responses.
+    """
+    import requests
+
+    resp = requests.get(
+        url,
+        headers={"User-Agent": "ToRead/1.0 (slack-ingest; DOI discovery)"},
+        timeout=timeout, stream=True,
+    )
+    resp.raise_for_status()
+    ctype = (resp.headers.get("content-type") or "").lower()
+    if "html" not in ctype and "xml" not in ctype:
+        return None
+    data = b""
+    for chunk in resp.iter_content(chunk_size=65536):
+        if chunk:
+            data += chunk
+            if len(data) >= max_bytes:
+                break
+    return data.decode(resp.encoding or "utf-8", errors="replace")
 
 
 def extract_arxiv_id(urls: Sequence[str]) -> Optional[str]:
@@ -268,9 +388,15 @@ class PaperResolver:
     """
 
     def __init__(self, enable_crossref: bool = True,
-                 enable_arxiv: bool = True):
+                 enable_arxiv: bool = True,
+                 enable_doi_scrape: bool = True,
+                 html_fetcher=None):
         self.enable_crossref = enable_crossref
         self.enable_arxiv = enable_arxiv
+        # When no DOI is in the message/URL, fetch the landing page and read
+        # its DOI <meta> tags. `html_fetcher` is injectable for tests.
+        self.enable_doi_scrape = enable_doi_scrape
+        self._html_fetcher = html_fetcher or _fetch_html
         self.logger = logging.getLogger(__name__)
 
     def resolve(self, *, text: str, urls: Sequence[str]) -> ResolvedPaper:
@@ -281,6 +407,10 @@ class PaperResolver:
                 return paper
 
         doi = extract_doi(text, urls)
+        # No DOI in the text/URL — try the landing page's meta tags. Covers
+        # publisher links that don't embed the DOI in their path.
+        if not doi and self.enable_doi_scrape:
+            doi = self._doi_from_landing(urls, arxiv_id)
         if doi and self.enable_crossref:
             paper = self._from_crossref(doi)
             if paper:
@@ -293,6 +423,23 @@ class PaperResolver:
             arxiv_id=arxiv_id,
             source="minimal",
         )
+
+    def _doi_from_landing(self, urls: Sequence[str],
+                          arxiv_id: Optional[str]) -> Optional[str]:
+        """Fetch each non-arXiv URL and read a DOI from its <meta> tags."""
+        for url in urls:
+            if arxiv_id and "arxiv.org" in url.lower():
+                continue
+            try:
+                html = self._html_fetcher(url)
+            except Exception as e:  # network/parse issues must never break ingest
+                self.logger.warning("Landing-page fetch failed for %s: %s", url, e)
+                continue
+            doi = extract_doi_from_html(html or "")
+            if doi:
+                self.logger.info("Resolved DOI %s from landing page %s", doi, url)
+                return doi
+        return None
 
     def _from_crossref(self, doi: str) -> Optional[ResolvedPaper]:
         # We need `title` for the Drive filename, but the existing
@@ -349,9 +496,11 @@ class PaperResolver:
         try:
             # The ArxivClient in metadata_enricher takes a title-based query
             # so we use the `arxiv` package directly for an id lookup.
+            # arxiv>=3 removed Search.results(); fetch via Client().results().
             import arxiv
             search = arxiv.Search(id_list=[arxiv_id], max_results=1)
-            paper = next(search.results(), None)
+            results = arxiv.Client().results(search)
+            paper = next(results, None)
         except Exception as e:
             self.logger.warning("ArXiv lookup failed for %s: %s", arxiv_id, e)
             return None
@@ -445,6 +594,7 @@ class IngestConfig:
     hashtag: str = DEFAULT_HASHTAG
     state_file: Path = Path(DEFAULT_STATE_FILE)
     inbox_bib_file: Path = Path(DEFAULT_INBOX_BIB)
+    feed_file: Path = Path(DEFAULT_FEED)
     dry_run: bool = False
     confirm_on_success: bool = True
 
@@ -473,7 +623,13 @@ class SlackIngestor:
     def run(self) -> dict:
         """Process new + pending messages. Returns a small summary dict."""
         state = SlackIngestState.load(self.config.state_file)
-        summary = {"added": 0, "asked_for_pdf": 0, "skipped": 0, "errors": 0}
+        # Papers already in the archive (published feed + inbox) — used to tell
+        # a submitter their paper is a duplicate. Built once per run.
+        self._archive_dois, self._archive_titles = load_archive_index(
+            self.config.feed_file, self.config.inbox_bib_file
+        )
+        summary = {"added": 0, "asked_for_pdf": 0, "skipped": 0,
+                   "duplicate": 0, "errors": 0}
 
         # 1. Re-poll threads we're waiting on.
         for parent_ts in list(state.pending.keys()):
@@ -526,6 +682,12 @@ class SlackIngestor:
         }:
             return "skipped"
 
+        # Never react to messages posted by a bot/app (including our own ✅ /
+        # ask-for-PDF / duplicate replies). The `bot_message` subtype misses
+        # chat.postMessage bot posts, which carry a `bot_id` instead.
+        if msg.get("bot_id"):
+            return "skipped"
+
         if not has_trigger_hashtag(text, self.config.hashtag):
             return "skipped"
 
@@ -541,6 +703,22 @@ class SlackIngestor:
         # Resolve paper-level metadata first (best-effort) so we can name files
         # and mint a key.
         paper = self.resolver.resolve(text=text, urls=urls)
+
+        # Already in the archive? Tell the submitter and stop — no PDF fetch,
+        # no inbox append. Matches on normalized DOI or title.
+        nd, nt = _norm_doi(paper.doi), _norm_title(paper.title)
+        if (nd and nd in self._archive_dois) or (nt and nt in self._archive_titles):
+            self.logger.info(
+                "Duplicate suggestion %s (%s)", ts, paper.doi or paper.title
+            )
+            if not self.config.dry_run:
+                self.slack.post_thread_reply(
+                    channel, ts,
+                    "📚 This paper already looks like it's in the archive — "
+                    "skipping it. Thanks for the suggestion!",
+                )
+            state.processed[ts] = "(duplicate)"
+            return "duplicate"
 
         # Pick a PDF source.
         pdf_candidate: Optional[PDFCandidate] = None
@@ -793,6 +971,7 @@ def _build_config_from_env(args) -> Optional[IngestConfig]:
         hashtag=hashtag,
         state_file=Path(args.state_file),
         inbox_bib_file=Path(args.inbox_bib),
+        feed_file=Path(args.feed_file),
         dry_run=args.dry_run,
         confirm_on_success=(os.environ.get(
             "SLACK_CONFIRM_ON_SUCCESS", "true") or "true").lower() != "false",
@@ -803,6 +982,8 @@ def main(argv: Optional[List[str]] = None) -> int:
     parser = argparse.ArgumentParser(description="Ingest Slack #zettelkasten suggestions.")
     parser.add_argument("--state-file", default=DEFAULT_STATE_FILE)
     parser.add_argument("--inbox-bib", default=DEFAULT_INBOX_BIB)
+    parser.add_argument("--feed-file", default=DEFAULT_FEED,
+                        help="Published feed.json, read for duplicate detection.")
     parser.add_argument("--dry-run", action="store_true",
                         help="Do not write files, post replies, or upload PDFs.")
     parser.add_argument("-v", "--verbose", action="store_true")

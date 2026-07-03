@@ -107,13 +107,14 @@ class TestJsonFeed:
         assert "title" in item
         assert item["title"] == "Test Paper"
 
-    def test_doi_as_guid(self, generator, sample_entry):
-        """Should use DOI as GUID when available."""
+    def test_prefers_bibtex_key_over_doi(self, generator, sample_entry):
+        """The BibTeX key is the canonical id even when a DOI is present — a
+        doi: id contains '/' and breaks downstream filename/path use."""
         output = generator.generate_json_feed([sample_entry])
         feed = json.loads(output)
 
         item = feed["items"][0]
-        assert item["id"] == "doi:10.1234/test"
+        assert item["id"] == "bibtex:test2023"
 
     def test_fallback_guid(self, generator):
         """Should use bibtex key as GUID when DOI unavailable."""
@@ -124,6 +125,14 @@ class TestJsonFeed:
 
         item = feed["items"][0]
         assert item["id"] == "bibtex:nodoi2023"
+
+    def test_doi_guid_only_without_key(self, generator):
+        """DOI is used only as a last resort when there's no key."""
+        entry = BibEntry(entry_type="article", key="", title="No Key",
+                         doi="10.1234/test")
+        output = generator.generate_json_feed([entry])
+        item = json.loads(output)["items"][0]
+        assert item["id"] == "doi:10.1234/test"
 
     def test_academic_extensions(self, generator, sample_entry):
         """Should include academic metadata extensions."""

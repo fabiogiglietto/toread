@@ -313,13 +313,22 @@ class FeedGenerator:
         return None
     
     def _get_entry_guid(self, entry: BibEntry) -> str:
-        """Generate unique identifier for entry."""
-        # Use DOI if available
+        """Generate unique identifier for entry.
+
+        Prefer the BibTeX key: it is the pipeline's canonical id
+        (`bibtex:AuthorYear-xx`), and downstream repos (fg-/mine-zettelkasten,
+        research-radio) assume that shape and use the key as a filename. A
+        `doi:` id contains `/`, which breaks those paths. Paperpile entries
+        carry no `doi` field in the bib (the DOI is added later by enrichment),
+        so they were already keyed by bibtex; Slack-inbox entries DO write a
+        `doi` field, so without this they'd wrongly get a `doi:` id. Fall back
+        to DOI only when an entry somehow has no key.
+        """
+        if entry.key:
+            return f"bibtex:{entry.key}"
         if entry.doi:
             return f"doi:{entry.doi}"
-        
-        # Use entry key as fallback
-        return f"bibtex:{entry.key}"
+        return "bibtex:unknown"
     
     def _get_entry_date(self, entry: BibEntry, metadata: Optional[EnrichedMetadata]) -> Optional[str]:
         """Get publication date in RSS format."""

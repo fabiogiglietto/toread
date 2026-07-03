@@ -42,12 +42,12 @@ def test_slack_suggestion_emitted_for_slack_source():
     }
     gen = FeedGenerator(slack_meta=slack_meta)
     feed = json.loads(gen.generate_json_feed([_paperpile_entry(), _slack_entry()]))
-    # The generator picks `doi:<doi>` over `bibtex:<key>` when DOI is set —
-    # see _get_entry_guid. Look items up by their resolved id.
+    # The generator keys items by the BibTeX key (the pipeline's canonical id),
+    # even when a DOI is present — see _get_entry_guid.
     items_by_id = {item["id"]: item for item in feed["items"]}
 
-    pp_item = items_by_id["doi:10.1/p"]
-    sl_item = items_by_id["doi:10.1/s"]
+    pp_item = items_by_id["bibtex:Smith2026-pp"]
+    sl_item = items_by_id["bibtex:Doe2026-sla1"]
 
     assert "_slack_suggestion" not in pp_item
     assert "_slack_suggestion" in sl_item
