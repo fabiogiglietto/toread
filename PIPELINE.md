@@ -1,15 +1,24 @@
 # Research Pipeline — Orchestration
 
-Canonical description of how four repositories fit together. This file lives in
-`toread` (the pipeline root); the other three repos link here rather than
+Canonical description of how the pipeline repositories fit together. This file
+lives in `toread` (the pipeline root); the other repos link here rather than
 re-describing the pipeline, so there is one source of truth.
 
-Repos:
+There are **two chains**: the personal fg chain (four repos) and the parallel
+team MINE chain (two repos, forks of the fg ones — see
+[The MINE team chain](#the-mine-team-chain)).
+
+fg chain repos:
 
 - **toread** — Paperpile BibTeX + Slack `#zettelkasten` suggestions → enriched JSON feed
 - **research-radio** — feed → AI-generated podcast episodes
 - **fabiogiglietto.github.io** — academic website
 - **fg-zettelkasten** — Obsidian Zettelkasten vault
+
+MINE chain repos:
+
+- **mine-toread** — fork of `toread` for the MINE team Slack workspace
+- **mine-zettelkasten** — fork of `fg-zettelkasten`, the team vault
 
 ## Dependency DAG
 
@@ -93,6 +102,46 @@ use the default `GITHUB_TOKEN`. One fine-grained PAT, stored as the secret
 - **Store the secret in** `toread`, `fg-zettelkasten`, `research-radio`, and
   `github.io` — every repo that dispatches. (fg-zettelkasten dispatches
   research-radio on the summarize leg, so it needs the secret too.)
+
+## The MINE team chain
+
+A second, shorter chain serves the MINE research team. `mine-toread` and
+`mine-zettelkasten` are forks of `toread` and `fg-zettelkasten`, re-pointed at
+the team's Slack workspace and feed:
+
+```
+mine-toread                  Paperpile + team Slack #zettelkasten -> output/feed.json
+  |  pipeline-finalize
+  v
+mine-zettelkasten            feed -> team vault notes + Slack digest + Quartz site
+```
+
+Differences from the fg chain, all deliberate:
+
+- **No podcast / website legs.** The team kasten has no research-radio stage,
+  so mine-toread dispatches `pipeline-finalize` **directly** to
+  mine-zettelkasten (there is no separate `summarize` stage; the vault run
+  summarizes what it needs).
+- **The dispatch step uses `continue-on-error: true`.** A missing or expired
+  `PIPELINE_DISPATCH_TOKEN` must not fail the feed run; mine-zettelkasten's
+  daily cron picks up anything a dropped event missed.
+- **Team attribution.** The feed's `_slack_suggestion` object carries
+  `submitted_by` / `submitted_by_id`, and team-submitted papers render a
+  "suggested by" line in the vault (`kind: team`).
+- **Drive auth.** mine-toread uploads suggestion PDFs with **OAuth user
+  credentials** (`GOOGLE_OAUTH_*`) into a My-Drive inbox folder, instead of the
+  fg chain's service account; mine-zettelkasten reads that folder via
+  `SLACK_INBOX_DRIVE_FOLDER_ID`.
+- Both mine repos still read `research-radio` episodes and
+  `own-publications.json` where relevant, since the team corpus was seeded from
+  the fg one.
+
+The forks are maintained as **config-diff forks**: code changes land in
+`toread` / `fg-zettelkasten` (behind config flags defaulting to fg behavior)
+and flow downstream via `git merge upstream/main`; the mine repos should only
+permanently differ in `config.yml` values, repo Actions variables/secrets, doc
+stubs, and generated content (`data/`, `output/`, `vault/`). Do not land
+feature code directly in a mine repo.
 
 ## Changing the contract
 
