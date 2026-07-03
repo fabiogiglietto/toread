@@ -20,6 +20,10 @@ on:
 
 jobs:
   check:
+    # Canonical-repo guard: this workflow watches ALL pipeline repos, so it
+    # must run only here — the mine fork inherits the file via upstream sync
+    # and would otherwise double-alert into the team workspace.
+    if: github.repository == 'fabiogiglietto/toread'
     runs-on: ubuntu-latest
     permissions:
       contents: read
