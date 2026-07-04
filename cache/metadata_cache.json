@@ -6040,5 +6040,31 @@
     "failed": true,
     "failure_reason": "Could not enrich entry: Hinck2026-yj | No DOI available | Title length: 71 chars | Authors: Hinck, Musashi, King, Gary... | APIs: Crossref enabled, Semantic Scholar enabled, ArXiv enabled",
     "last_failure_at": "2026-07-03T05:40:57.539982"
+  },
+  "5498019bf6b30b0c": {
+    "entry_key": "Mosca2026-yh",
+    "entry_title": "Fake news as a rhetorical weapon: Strategic delegitimization and selective amplification in Italian newspapers",
+    "cached_at": "2026-07-04T05:34:43.327481",
+    "metadata": {
+      "abstract": "Accusations of fake news have become a prominent feature of contemporary political conflict, yet most research continues to treat fake news primarily as a problem of misinformation rather than as a strategic communicative practice. This article advances a novel theoretical framework—the Strategic Delegitimization and Selective Amplification (SDSA) model—to conceptualise fake news accusations as rhetorical weapons in negative campaigning. The model explains how political actors employ this strategic label to delegitimize opponents and how news media selectively amplify these accusations in line with editorial tendencies. This article tests the implications of the SDSA model using a novel dataset of 2778 newspaper articles containing fake news accusations between Italian political parties from 2020 to 2024. The analysis maps patterns of accusations, examines the dual role of populist actors as both accusers and targets, and demonstrates how media partisanship conditions coverage. The findings show how fake news accusations politicize epistemic legitimacy, and contribute to research on misinformation, populism, and media–politics relations.",
+      "keywords": [],
+      "doi": "10.1177/02673231261458935",
+      "doi_url": "https://doi.org/10.1177/02673231261458935",
+      "url": null,
+      "arxiv_url": null,
+      "pdf_url": null,
+      "publication_date": "2026-06-30",
+      "citation_count": 0,
+      "reference_count": 33,
+      "venue": "European Journal of Communication",
+      "authors": [
+        "Lorenzo Mosca",
+        "Fred Paxton"
+      ],
+      "subjects": [],
+      "is_open_access": null,
+      "source": "crossref",
+      "confidence_score": 0.86
+    }
   }
 }
