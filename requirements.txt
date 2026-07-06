@@ -1,6 +1,6 @@
 requests>=2.31.0
 urllib3>=2.7.0
-arxiv>=2.1.0
+arxiv>=4.0.0
 PyYAML>=6.0
 # Slack ingest path (src/slack_ingest.py)
 slack_sdk>=3.43.0
