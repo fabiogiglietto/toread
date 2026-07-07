@@ -1,4 +1,4 @@
-requests>=2.31.0
+requests>=2.34.2
 urllib3>=2.7.0
 arxiv>=2.1.0
 PyYAML>=6.0
