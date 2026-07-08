@@ -2882,11 +2882,11 @@
   "fc9373f3342e79d3": {
     "entry_key": "Gottfried2026-ww",
     "entry_title": "Americans and AI 2026: Chatbots, Smart Devices and Views on Impact",
-    "cached_at": "2026-06-30T10:22:55.966084",
+    "cached_at": "2026-07-08T07:21:50.467177",
     "metadata": null,
     "failed": true,
     "failure_reason": "Could not enrich entry: Gottfried2026-ww | No DOI available | Title length: 66 chars | Authors: Gottfried, Jeffrey, Bishop, William... | APIs: Crossref enabled, Semantic Scholar enabled, ArXiv enabled",
-    "last_failure_at": "2026-06-30T10:22:55.966093"
+    "last_failure_at": "2026-07-08T07:21:50.467187"
   },
   "bb1e983fc3d493b2": {
     "entry_key": "Hameleers2026-mc",
@@ -3053,11 +3053,35 @@
   "c6869c5da4414521": {
     "entry_key": "Ober2026-vd",
     "entry_title": "Integrating topic modeling and LLM prompt engineering into a human-driven approach to analyze interview transcripts",
-    "cached_at": "2026-07-01T07:05:11.386754",
-    "metadata": null,
-    "failed": true,
-    "failure_reason": "Could not enrich entry: Ober2026-vd | No DOI available | Title length: 115 chars | Authors: Ober, Teresa M, Courey, Karyssa A... | APIs: Crossref enabled, Semantic Scholar enabled, ArXiv enabled",
-    "last_failure_at": "2026-07-01T07:05:11.386762"
+    "cached_at": "2026-07-08T07:21:44.814125",
+    "metadata": {
+      "abstract": "Topic modeling has become a widely used unsupervised machine learning method for extracting latent themes from large textual datasets. However, the interpretability of these themes often relies heavily on human judgment, which can limit transparency and reproducibility. Recent advances in large language models (LLMs) and prompt engineering offer new opportunities to enhance the interpretability and scalability of topic modeling outputs. This study presents a hybrid, human-in-the-loop methodological framework that integrates topic modeling, LLM prompting, and human-derived codes to support rigorous qualitative analysis. We apply this framework to focus group interviews with 13 U.S. teachers discussing the conceptualization and assessment of communication and digital literacy skills within competency-based education (CBE) contexts. The multi-stage process includes semantic clustering, LLM-assisted topic labeling, and iterative codebook refinement, enabling both scale and interpretive depth. Our findings demonstrate that this approach supports construct alignment, thematic stability, and methodological transparency, while preserving the contextual richness of qualitative data. We also highlight the importance of human oversight in guiding LLM outputs and ensuring theoretical coherence. This work contributes to emerging best practices for integrating AI tools into qualitative educational research by offering a replicable approach for analyzing complex, open-ended data that maintains both scalability and interpretability. The framework demonstrates how computational tools can augment human interpretive expertise while maintaining the epistemological integrity essential to qualitative inquiry. Supplemental materials are available at: https://doi.org/10.17605/osf.io/4q6w8.",
+      "keywords": [],
+      "doi": "10.5281/zenodo.18733521",
+      "doi_url": "https://doi.org/10.5281/zenodo.18733521",
+      "url": "https://jedm.educationaldatamining.org/index.php/JEDM/article/view/1008",
+      "arxiv_url": null,
+      "pdf_url": "https://jedm.educationaldatamining.org/index.php/JEDM/article/view/1008",
+      "publication_date": "2026-02-22",
+      "citation_count": 0,
+      "reference_count": null,
+      "venue": "Open MIND",
+      "authors": [
+        "Teresa Ober",
+        "Karyssa A. Courey",
+        "Michael Flor"
+      ],
+      "subjects": [
+        "Interpretability",
+        "Computer science",
+        "Construct (python library)",
+        "Topic model",
+        "Conceptualization"
+      ],
+      "is_open_access": true,
+      "source": "openalex",
+      "confidence_score": 0.7333333333333333
+    }
   },
   "78746bd39354b6fa": {
     "entry_key": "Karo2026-dn",
@@ -6075,5 +6099,57 @@
     "failed": true,
     "failure_reason": "Could not enrich entry: Makeev2026-ma | No DOI available | Title length: 103 chars | Authors: Makeev, M, Alley, J... | APIs: Crossref enabled, Semantic Scholar enabled, ArXiv enabled",
     "last_failure_at": "2026-07-07T06:38:10.064701"
+  },
+  "7951fbc98a21d44a": {
+    "entry_key": "Karlsson2026-hd",
+    "entry_title": "Divide and conquer? The impact of media narratives on digital election interference on political and perceived polarisation",
+    "cached_at": "2026-07-08T07:22:00.148465",
+    "metadata": {
+      "abstract": "How does media discourse on digital election interference affect political polarisation? This study investigates this question using a survey experiment conducted in the United Kingdom in 2024. Respondents were exposed to fictitious news stories about digital interference during the 2019 UK general election, and the treatment varied information about which party benefitted from the interference. Attitudes were subsequently measured across ideological, affective and perceived polarisation. The results indicate that news about digital election interference does not increase polarisation at an aggregate level. However, respondents reported higher levels of perceived societal division and affective polarisation against ideological opponents when the opposing party benefitted from the interference. These findings contribute to ongoing discussions regarding digital harms and democratic interference, pointing to the need to consider the effects of interference in democratic processes that stem from the public discourse on the event.",
+      "keywords": [],
+      "doi": "10.1177/14614448251410509",
+      "doi_url": "https://doi.org/10.1177/14614448251410509",
+      "url": null,
+      "arxiv_url": null,
+      "pdf_url": null,
+      "publication_date": "2026",
+      "citation_count": 0,
+      "reference_count": 51,
+      "venue": "New Media &amp; Society",
+      "authors": [
+        "Emelie Karlsson"
+      ],
+      "subjects": [],
+      "is_open_access": null,
+      "source": "crossref",
+      "confidence_score": 0.8999999999999999
+    }
+  },
+  "d38a4098e4b7dde5": {
+    "entry_key": "Beacken2026-zb",
+    "entry_title": "Generative AI, propaganda, and digital authoritarianism: Comparative insights from six democratically weakened countries",
+    "cached_at": "2026-07-08T07:22:06.768450",
+    "metadata": {
+      "abstract": "Generative artificial intelligence (GenAI) is increasingly used by political elites for propaganda, yet adoption and uses vary across weakening democracies. Scholarship often assumes AI's inevitability and transformative impact, overlooking the geographical, political, economic, and social structures that shape propaganda. This study responds to calls for comparative international research on GenAI propaganda by examining six countries—Bolivia, Hungary, India, Nigeria, Tunisia, and Turkey—where distinctions between authoritarian and democratic propaganda increasingly blur. We conducted 93 in-depth, semi-structured interviews and analyzed the data using iterative qualitative thematic analysis to examine how political elites adopt and use GenAI for political purposes. We find that adoption is shaped more by local political, economic, and social conditions than by GenAI's technical capacities. Elites adapt existing propaganda repertoires—cheapfakes, bots, deepfakes, and voice clones—according to country context. We argue that GenAI propaganda reflects the creeping spread of digital authoritarian tactics into semi-democratic spaces, consolidating elite power while eroding democratic norms. These findings contribute to comparative studies of GenAI propaganda, critical disinformation research, and digital authoritarianism scholarship.",
+      "keywords": [],
+      "doi": "10.1177/20539517251410064",
+      "doi_url": "https://doi.org/10.1177/20539517251410064",
+      "url": null,
+      "arxiv_url": null,
+      "pdf_url": null,
+      "publication_date": "2026",
+      "citation_count": 0,
+      "reference_count": 89,
+      "venue": "Big Data &amp; Society",
+      "authors": [
+        "Gabrielle D Beacken",
+        "Inga K Trauthig",
+        "Samuel C Woolley"
+      ],
+      "subjects": [],
+      "is_open_access": null,
+      "source": "crossref",
+      "confidence_score": 0.86
+    }
   }
 }
