@@ -206,6 +206,86 @@ def extract_doi_from_html(html: str) -> Optional[str]:
     return None
 
 
+# Highwire Press tags (OJS and most publisher platforms) first, then Dublin
+# Core / OpenGraph. Order encodes preference.
+_TITLE_META_NAMES: Tuple[str, ...] = (
+    "citation_title", "dc.title", "og:title", "twitter:title",
+)
+_AUTHOR_META_NAMES = frozenset(("citation_author", "dc.creator"))
+_DATE_META_NAMES: Tuple[str, ...] = (
+    "citation_publication_date", "citation_date", "citation_online_date",
+    "dc.date", "article:published_time",
+)
+_TITLE_TAG_RE = re.compile(r"(?is)<title[^>]*>(.*?)</title>")
+_YEAR_RE = re.compile(r"\b(19|20)\d{2}\b")
+
+
+def _strip_page_title_noise(page_title: str) -> Optional[str]:
+    """Clean a weak (non-citation) page title: drop a trailing '| Site Name'
+    suffix and OJS's 'View of …' galley-page prefix. None when what's left is
+    too short to be a plausible paper title."""
+    cleaned = re.split(r"\s+[|–—-]\s+", page_title.strip())[0].strip()
+    cleaned = re.sub(r"^View of\s+", "", cleaned)
+    return cleaned if len(cleaned) >= 8 else None
+
+
+def extract_citation_meta_from_html(html: str) -> Dict[str, Any]:
+    """Best-effort `{title, authors, year}` from a landing page's meta tags.
+
+    Why this exists: a Slack link with no DOI used to be ingested title-less,
+    and title-less entries are silently excluded from output/feed.json — the
+    submitter got an ack but no note was ever built. Publisher pages almost
+    always carry `citation_*` meta tags, so read the paper's identity from
+    them at ingest time. Returns only the keys it could resolve.
+    """
+    from html import unescape
+
+    titles: Dict[str, str] = {}
+    dates: Dict[str, str] = {}
+    authors: List[str] = []
+    for tag in _META_TAG_RE.findall(html or ""):
+        attrs = {k.lower(): v for k, v in _META_ATTR_RE.findall(tag)}
+        label = (attrs.get("name") or attrs.get("property") or "").strip().lower()
+        content = unescape((attrs.get("content") or "").strip())
+        if not label or not content:
+            continue
+        if label in _TITLE_META_NAMES:
+            titles.setdefault(label, content)
+        elif label in _AUTHOR_META_NAMES:
+            authors.append(content)
+        elif label in _DATE_META_NAMES:
+            dates.setdefault(label, content)
+
+    meta: Dict[str, Any] = {}
+    for label in _TITLE_META_NAMES:
+        if label in titles:
+            title = titles[label]
+            if label not in ("citation_title", "dc.title"):
+                title = _strip_page_title_noise(title)
+            if title:
+                meta["title"] = title
+                break
+    else:
+        # Last resort: the <title> element. Weaker than citation meta but far
+        # better than a silent feed drop — and the in-thread ack echoes it
+        # for review.
+        m = _TITLE_TAG_RE.search(html or "")
+        if m:
+            page_title = _strip_page_title_noise(unescape(m.group(1)))
+            if page_title:
+                meta["title"] = page_title
+
+    if authors:
+        meta["authors"] = authors
+    for label in _DATE_META_NAMES:
+        if label in dates:
+            year = _YEAR_RE.search(dates[label])
+            if year:
+                meta["year"] = year.group(0)
+                break
+    return meta
+
+
 def _fetch_html(url: str, *, timeout: int = 15,
                 max_bytes: int = 2_000_000) -> Optional[str]:
     """Fetch a landing page's HTML, best-effort and size-capped.
@@ -415,12 +495,28 @@ class PaperResolver:
         doi = extract_doi(text, urls)
         # No DOI in the text/URL — try the landing page's meta tags. Covers
         # publisher links that don't embed the DOI in their path.
+        landing_meta: Dict[str, Any] = {}
         if not doi and self.enable_doi_scrape:
-            doi = self._doi_from_landing(urls, arxiv_id)
+            doi, landing_meta = self._scrape_landing(urls, arxiv_id)
         if doi and self.enable_crossref:
             paper = self._from_crossref(doi)
             if paper:
                 return paper
+
+        # No (resolvable) DOI, but the landing page named the paper — e.g.
+        # small OJS journals or institutional reports. Use its citation meta
+        # so the entry is feed-eligible; title-less entries are silently
+        # excluded from output/feed.json downstream.
+        if landing_meta.get("title"):
+            return ResolvedPaper(
+                doi=doi,
+                title=landing_meta["title"],
+                authors=list(landing_meta.get("authors") or []),
+                year=landing_meta.get("year"),
+                url=urls[0] if urls else None,
+                arxiv_id=arxiv_id,
+                source="landing_page",
+            )
 
         # Last resort: a "minimal" resolved paper with just the URL/DOI we saw.
         return ResolvedPaper(
@@ -430,9 +526,15 @@ class PaperResolver:
             source="minimal",
         )
 
-    def _doi_from_landing(self, urls: Sequence[str],
-                          arxiv_id: Optional[str]) -> Optional[str]:
-        """Fetch each non-arXiv URL and read a DOI from its <meta> tags."""
+    def _scrape_landing(
+        self, urls: Sequence[str], arxiv_id: Optional[str]
+    ) -> Tuple[Optional[str], Dict[str, Any]]:
+        """Fetch each non-arXiv URL; return `(doi, citation_meta)` best-effort.
+
+        The DOI ends the scan (Crossref beats page meta as a source); the
+        citation meta of the first page that yields any is kept as fallback.
+        """
+        meta: Dict[str, Any] = {}
         for url in urls:
             if arxiv_id and "arxiv.org" in url.lower():
                 continue
@@ -441,11 +543,19 @@ class PaperResolver:
             except Exception as e:  # network/parse issues must never break ingest
                 self.logger.warning("Landing-page fetch failed for %s: %s", url, e)
                 continue
-            doi = extract_doi_from_html(html or "")
+            if not html:
+                continue
+            if not meta:
+                meta = extract_citation_meta_from_html(html)
+                if meta.get("title"):
+                    self.logger.info(
+                        "Resolved citation meta from landing page %s", url
+                    )
+            doi = extract_doi_from_html(html)
             if doi:
                 self.logger.info("Resolved DOI %s from landing page %s", doi, url)
-                return doi
-        return None
+                return doi, meta
+        return None, meta
 
     def _from_crossref(self, doi: str) -> Optional[ResolvedPaper]:
         # We need `title` for the Drive filename, but the existing
@@ -955,15 +1065,30 @@ class SlackIngestor:
         state.processed_meta[bibkey] = meta
 
         if not self.config.dry_run and self.config.confirm_on_success:
-            # Link the submitter straight to their note. The URL is the note's
-            # permalink (filename = bibkey); it goes live a few minutes later,
-            # once the downstream `update` builds the note and the site deploys.
-            note_url = f"{self.config.note_base_url.rstrip('/')}/{bibkey}"
-            self.slack.post_thread_reply(
-                channel, ts,
-                f"✅ Added as `{bibkey}`. Your note will be ready in a few "
-                f"minutes: {note_url}",
-            )
+            if paper.title:
+                # Link the submitter straight to their note. The URL is the
+                # note's permalink (filename = bibkey); it goes live a few
+                # minutes later, once the downstream `update` builds the note
+                # and the site deploys.
+                note_url = f"{self.config.note_base_url.rstrip('/')}/{bibkey}"
+                self.slack.post_thread_reply(
+                    channel, ts,
+                    f"✅ Added as `{bibkey}`. Your note will be ready in a few "
+                    f"minutes: {note_url}",
+                )
+            else:
+                # Be honest instead of promising a note that will never come:
+                # title-less entries are excluded from output/feed.json, so no
+                # note is built until someone backfills the metadata.
+                self.slack.post_thread_reply(
+                    channel, ts,
+                    f"⚠️ Saved the PDF as `{bibkey}`, but I couldn't determine "
+                    "the paper's title from this link, so it is *held out of "
+                    "the feed* for now. A librarian needs to backfill "
+                    "title/author/year in `data/slack_inbox.bib` before the "
+                    "note is built. (Links with a DOI or a publisher landing "
+                    "page resolve automatically.)",
+                )
 
         return "added"
 

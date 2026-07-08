@@ -732,3 +732,137 @@ def test_resolve_landing_fetch_failure_is_safe():
                                 urls=["https://example.com/x"])
     assert resolved.doi is None
     assert resolved.source == "minimal"
+
+# ---- landing-page citation metadata (title-less-drop root cause) ----------
+
+
+_OJS_HTML = """<html><head>
+<title>The Multiple Nuances of Online Firestorms | Italian Sociological Review</title>
+<meta name="citation_title" content="The Multiple Nuances of Online Firestorms"/>
+<meta name="citation_author" content="Nicola Righetti"/>
+<meta name="citation_author" content="Ada Lovelace"/>
+<meta name="citation_publication_date" content="2025/01/21"/>
+</head></html>"""
+
+
+def test_extract_citation_meta_prefers_citation_tags():
+    from src.slack_ingest import extract_citation_meta_from_html
+    meta = extract_citation_meta_from_html(_OJS_HTML)
+    assert meta["title"] == "The Multiple Nuances of Online Firestorms"
+    assert meta["authors"] == ["Nicola Righetti", "Ada Lovelace"]
+    assert meta["year"] == "2025"
+
+
+def test_extract_citation_meta_og_title_fallback():
+    from src.slack_ingest import extract_citation_meta_from_html
+    html = '<meta property="og:title" content="A Report &amp; Its Findings">'
+    assert extract_citation_meta_from_html(html)["title"] == "A Report & Its Findings"
+
+
+def test_extract_citation_meta_title_element_last_resort():
+    from src.slack_ingest import extract_citation_meta_from_html
+    html = "<html><head><title>Networked Publics Revisited | danah.org</title></head></html>"
+    assert extract_citation_meta_from_html(html)["title"] == "Networked Publics Revisited"
+
+
+def test_extract_citation_meta_empty_html():
+    from src.slack_ingest import extract_citation_meta_from_html
+    assert extract_citation_meta_from_html("") == {}
+    # A too-short <title> is not trusted as a paper title.
+    assert extract_citation_meta_from_html("<title>Home</title>") == {}
+
+
+def test_resolve_uses_landing_citation_meta_when_no_doi():
+    """A publisher page with citation meta but no DOI yields a full entry
+    (previously: a title-less 'minimal' entry, silently dropped from the feed)."""
+    resolver = PaperResolver(
+        enable_crossref=False, enable_arxiv=False,
+        html_fetcher=lambda url: _OJS_HTML,
+    )
+    resolved = resolver.resolve(
+        text="#zettelkasten <https://journal.example/article/850>",
+        urls=["https://journal.example/article/850"],
+    )
+    assert resolved.source == "landing_page"
+    assert resolved.title == "The Multiple Nuances of Online Firestorms"
+    assert resolved.authors == ["Nicola Righetti", "Ada Lovelace"]
+    assert resolved.year == "2025"
+    assert resolved.url == "https://journal.example/article/850"
+
+
+def test_resolve_pdf_link_stays_minimal():
+    """Direct PDF URLs (fetcher returns None: non-HTML) still fall through to
+    the minimal path — covered by the in-thread warning instead."""
+    resolver = PaperResolver(
+        enable_crossref=False, enable_arxiv=False,
+        html_fetcher=lambda url: None,
+    )
+    resolved = resolver.resolve(
+        text="no doi", urls=["https://example.org/paper.pdf"])
+    assert resolved.source == "minimal"
+    assert resolved.title is None
+
+
+def test_titleless_ingest_warns_instead_of_promising_note(tmp_path):
+    """The ack must not promise a note for a title-less entry — it is held
+    out of the feed until metadata is backfilled."""
+    from unittest.mock import MagicMock
+    resolver = MagicMock(spec=PaperResolver)
+    resolver.resolve.return_value = ResolvedPaper(
+        url="https://example.org/paper.pdf", source="minimal",
+    )
+    ingestor, slack, drive, unpaywall = _build_ingestor(tmp_path,
+                                                        resolver=resolver)
+    slack.fetch_history.return_value = [
+        {
+            "ts": "100.0",
+            "text": "#zettelkasten https://example.org/paper.pdf",
+            "user": "U1",
+            "files": [{
+                "mimetype": "application/pdf",
+                "url_private_download": "https://files.slack.com/x.pdf",
+            }],
+        },
+    ]
+    summary = ingestor.run()
+    assert summary.get("added") == 1
+    replies = [c.args[2] for c in slack.post_thread_reply.call_args_list]
+    assert any("held out of the feed" in r for r in replies)
+    assert not any("will be ready in a few minutes" in r for r in replies)
+
+
+def test_titled_ingest_still_promises_note(tmp_path):
+    from unittest.mock import MagicMock
+    resolver = MagicMock(spec=PaperResolver)
+    resolver.resolve.return_value = ResolvedPaper(
+        title="A Fine Paper", authors=["Jane Smith"], year="2026",
+        url="https://example.org/x", source="landing_page",
+    )
+    ingestor, slack, drive, unpaywall = _build_ingestor(tmp_path,
+                                                        resolver=resolver)
+    slack.fetch_history.return_value = [
+        {
+            "ts": "100.0",
+            "text": "#zettelkasten https://example.org/x",
+            "user": "U1",
+            "files": [{
+                "mimetype": "application/pdf",
+                "url_private_download": "https://files.slack.com/x.pdf",
+            }],
+        },
+    ]
+    summary = ingestor.run()
+    assert summary.get("added") == 1
+    replies = [c.args[2] for c in slack.post_thread_reply.call_args_list]
+    assert any("will be ready in a few minutes" in r for r in replies)
+
+
+def test_extract_citation_meta_strips_ojs_view_of_prefix():
+    """OJS galley pages title themselves 'View of <paper title>'."""
+    from src.slack_ingest import extract_citation_meta_from_html
+    html = "<title>View of Online Firestorms and Their Nuances | Some Journal</title>"
+    meta = extract_citation_meta_from_html(html)
+    assert meta["title"] == "Online Firestorms and Their Nuances"
+    # citation_title is authoritative — never rewritten.
+    html2 = '<meta name="citation_title" content="View of the Alps from Turin">'
+    assert extract_citation_meta_from_html(html2)["title"] == "View of the Alps from Turin"
