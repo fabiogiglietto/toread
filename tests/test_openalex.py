@@ -114,3 +114,20 @@ class TestOpenAlexResponseParsing:
         assert result.doi is None
         assert result.authors == []
         assert result.venue is None
+
+
+def test_parse_response_normalizes_comma_author_names():
+    """OpenAlex author entities occasionally keep 'Family, Given' form
+    (repository-seeded); the feed must publish natural order."""
+    from src.metadata_enricher import OpenAlexClient
+    client = OpenAlexClient.__new__(OpenAlexClient)  # skip network-y __init__
+    import logging
+    client.logger = logging.getLogger("test")
+    work = {
+        "authorships": [
+            {"author": {"display_name": "Righetti, Nicola"}},
+            {"author": {"display_name": "Fabio Giglietto"}},
+        ],
+    }
+    md = client._parse_response(work)
+    assert md.authors == ["Nicola Righetti", "Fabio Giglietto"]

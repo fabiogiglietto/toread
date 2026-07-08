@@ -25,6 +25,7 @@ from .utils import (
     clean_url,
     extract_title_from_url,
     is_valid_title,
+    natural_name_order as _natural_name_order,
 )
 
 
@@ -1229,7 +1230,11 @@ class OpenAlexClient:
             for authorship in work['authorships'][:20]:  # Limit to first 20 authors
                 author = authorship.get('author', {})
                 if author.get('display_name'):
-                    authors.append(author['display_name'])
+                    # OpenAlex author entities occasionally keep a repository's
+                    # "Family, Given" form (e.g. IRIS deposits). The feed's
+                    # authors are natural-order everywhere else, and downstream
+                    # citation builders assume it — normalize here.
+                    authors.append(_natural_name_order(author['display_name']))
             metadata.authors = authors
 
         # Publication date

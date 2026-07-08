@@ -323,3 +323,21 @@ def is_valid_title(title: str) -> bool:
         return False
 
     return True
+
+
+def natural_name_order(name: str) -> str:
+    """Normalize a person name to natural "Given Family" order.
+
+    Sources occasionally deliver "Family, Given" (e.g. OpenAlex author
+    entities seeded from repository deposits). The feed publishes natural
+    order everywhere else and downstream citation builders assume it.
+    Only a single-comma name is treated as inverted; anything else (suffix
+    commas like "Smith, John, Jr.", organizations with commas) is returned
+    unchanged rather than guessed at.
+    """
+    if not name or name.count(",") != 1:
+        return name
+    family, given = (part.strip() for part in name.split(","))
+    if not family or not given:
+        return name.strip()
+    return f"{given} {family}"

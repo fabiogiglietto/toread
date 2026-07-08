@@ -313,3 +313,25 @@ class TestIsValidTitle:
         """Titles with only numbers should return False."""
         assert not is_valid_title("12345")
         assert not is_valid_title("2023")
+
+
+class TestNaturalNameOrder:
+    """natural_name_order — comma-inverted names normalize, others pass through."""
+
+    def test_inverted_name_normalizes(self):
+        from src.utils import natural_name_order
+        assert natural_name_order("Righetti, Nicola") == "Nicola Righetti"
+
+    def test_natural_name_unchanged(self):
+        from src.utils import natural_name_order
+        assert natural_name_order("Nicola Righetti") == "Nicola Righetti"
+
+    def test_suffix_comma_untouched(self):
+        from src.utils import natural_name_order
+        assert natural_name_order("Smith, John, Jr.") == "Smith, John, Jr."
+
+    def test_degenerate_inputs(self):
+        from src.utils import natural_name_order
+        assert natural_name_order("") == ""
+        assert natural_name_order("Cher") == "Cher"
+        assert natural_name_order("Righetti,") == "Righetti,"
