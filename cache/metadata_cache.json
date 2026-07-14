@@ -2,47 +2,47 @@
   "c5a7d0326e1f61c6": {
     "entry_key": "Kristensen2025-ni",
     "entry_title": "Platform polarization. Do alternative platforms drive discursive polarization?",
-    "cached_at": "2026-07-07T06:37:08.350162",
+    "cached_at": "2026-07-14T08:57:38.645576",
     "metadata": null,
     "failed": true,
     "failure_reason": "Could not enrich entry: Kristensen2025-ni | No DOI available | Title length: 78 chars | Authors: Kristensen, Jakob Bæk, Kristensen, Jakob Bæk | APIs: Crossref enabled, Semantic Scholar enabled, ArXiv enabled",
-    "last_failure_at": "2026-07-07T06:37:08.350171"
+    "last_failure_at": "2026-07-14T08:57:38.645586"
   },
   "65d46046ae1c898f": {
     "entry_key": "Gaw2025-ru",
     "entry_title": "Influence operations as brokerage: Political-economic infrastructures of manipulation in the 2022 Philippine elections",
-    "cached_at": "2026-07-07T06:37:52.581023",
+    "cached_at": "2026-07-14T08:57:44.489761",
     "metadata": null,
     "failed": true,
     "failure_reason": "Could not enrich entry: Gaw2025-ru | No DOI available | Title length: 118 chars | Authors: Gaw, Fatima, Agonos, Mariam Jayne... | APIs: Crossref enabled, Semantic Scholar enabled, ArXiv enabled",
-    "last_failure_at": "2026-07-07T06:37:52.581032"
+    "last_failure_at": "2026-07-14T08:57:44.489771"
   },
   "b41f425da41887a0": {
     "entry_key": "Marwick2025-vx",
     "entry_title": "True costs of misinformation| mountains of evidence: Processual “redpilling” as a Socio-technical effect of disinformation",
-    "cached_at": "2026-07-07T06:37:41.660885",
+    "cached_at": "2026-07-14T08:57:41.544507",
     "metadata": null,
     "failed": true,
     "failure_reason": "Could not enrich entry: Marwick2025-vx | No DOI available | Title length: 122 chars | Authors: Marwick, Alice E, Furl, Katherine | APIs: Crossref enabled, Semantic Scholar enabled, ArXiv enabled",
-    "last_failure_at": "2026-07-07T06:37:41.660894"
+    "last_failure_at": "2026-07-14T08:57:41.544521"
   },
   "e3b0c44298fc1c14": {
     "entry_key": "noauthor_undated-bz",
     "entry_title": null,
-    "cached_at": "2026-07-07T06:38:23.933261",
+    "cached_at": "2026-07-14T08:57:56.688969",
     "metadata": null,
     "failed": true,
     "failure_reason": "Could not enrich entry: noauthor_undated-bz | No DOI available | No title available | No authors available | APIs: Crossref enabled, Semantic Scholar enabled, ArXiv enabled",
-    "last_failure_at": "2026-07-07T06:38:23.933283"
+    "last_failure_at": "2026-07-14T08:57:56.688973"
   },
   "657c6670d7b624b8": {
     "entry_key": "noauthor_undated-fm",
     "entry_title": "Volume 7 issue 2 article 4",
-    "cached_at": "2026-07-07T06:38:23.933191",
+    "cached_at": "2026-07-14T08:57:56.688859",
     "metadata": null,
     "failed": true,
     "failure_reason": "Could not enrich entry: noauthor_undated-fm | No DOI available | Title length: 26 chars | No authors available | APIs: Crossref enabled, Semantic Scholar enabled, ArXiv enabled",
-    "last_failure_at": "2026-07-07T06:38:23.933200"
+    "last_failure_at": "2026-07-14T08:57:56.688867"
   },
   "b909c3af063ea494": {
     "entry_key": "noauthor_undated-bm",
@@ -56,20 +56,20 @@
   "9195fcc80574052b": {
     "entry_key": "Vincent_undated-re",
     "entry_title": "What our second measurement says about misinformation on major platforms in Europe",
-    "cached_at": "2026-07-07T06:38:01.921834",
+    "cached_at": "2026-07-14T08:57:47.559755",
     "metadata": null,
     "failed": true,
     "failure_reason": "Could not enrich entry: Vincent_undated-re | No DOI available | Title length: 82 chars | Authors: Vincent, Emmanuel, Crisan, Daiana | APIs: Crossref enabled, Semantic Scholar enabled, ArXiv enabled",
-    "last_failure_at": "2026-07-07T06:38:01.921843"
+    "last_failure_at": "2026-07-14T08:57:47.559764"
   },
   "fac502d9bb5bbba8": {
     "entry_key": "UnknownUnknown-db",
     "entry_title": "What 81,000 people told us about the economics of AI",
-    "cached_at": "2026-07-07T06:38:17.486856",
+    "cached_at": "2026-07-14T08:57:53.586501",
     "metadata": null,
     "failed": true,
     "failure_reason": "Could not enrich entry: UnknownUnknown-db | No DOI available | Title length: 52 chars | No authors available | APIs: Crossref enabled, Semantic Scholar enabled, ArXiv enabled",
-    "last_failure_at": "2026-07-07T06:38:17.486865"
+    "last_failure_at": "2026-07-14T08:57:53.586509"
   },
   "dcf3557bf613f9b9": {
     "entry_key": "Alizadeh2026-es",
@@ -5373,11 +5373,29 @@
   "46b641d1a6f0ab14": {
     "entry_key": "Makeev2026-ma",
     "entry_title": "Selling war at home and abroad: The dual objective of state media propaganda in the Russo-Ukrainian war",
-    "cached_at": "2026-07-07T06:38:10.064691",
-    "metadata": null,
-    "failed": true,
-    "failure_reason": "Could not enrich entry: Makeev2026-ma | No DOI available | Title length: 103 chars | Authors: Makeev, M, Alley, J... | APIs: Crossref enabled, Semantic Scholar enabled, ArXiv enabled",
-    "last_failure_at": "2026-07-07T06:38:10.064701"
+    "cached_at": "2026-07-14T08:57:50.118856",
+    "metadata": {
+      "abstract": null,
+      "keywords": [],
+      "doi": "10.1080/1461670x.2026.2700614",
+      "doi_url": "https://doi.org/10.1080/1461670x.2026.2700614",
+      "url": null,
+      "arxiv_url": null,
+      "pdf_url": null,
+      "publication_date": "2026-07-13",
+      "citation_count": 0,
+      "reference_count": 60,
+      "venue": "Journalism Studies",
+      "authors": [
+        "Matvei Makeev",
+        "Joshua Alley",
+        "Marco Bastos"
+      ],
+      "subjects": [],
+      "is_open_access": null,
+      "source": "crossref",
+      "confidence_score": 0.7999999999999999
+    }
   },
   "7951fbc98a21d44a": {
     "entry_key": "Karlsson2026-hd",
@@ -6261,6 +6279,33 @@
       "is_open_access": null,
       "source": "crossref",
       "confidence_score": 0.81875
+    }
+  },
+  "b77cac77e2cfc3c6": {
+    "entry_key": "Cullen2026-cb",
+    "entry_title": "Seeing like an API: Platform-mediated research and the politics of access",
+    "cached_at": "2026-07-14T08:57:35.036200",
+    "metadata": {
+      "abstract": "This study examines the challenges that researchers faced while accessing, interpreting, and assessing data accessed via Meta's now-sunset CrowdTangle (CT) application programming interface (API). Drawing on interviews with 20 academic users, we introduce the framework of Seeing like an API to illustrate how CT's technical design, governance rules, and platform-mediated knowledge networks shaped what researchers could see, ask, and conclude about platform activity. Participants adapted to limitations such as follower-count thresholds, the exclusion of comment data, and opaque content removal through three recurring strategies: optimizing the API's capabilities, extending data visibility with supplementary methods, and verifying outputs against external sources. These adaptations were developed in response to ongoing uncertainty about data completeness and provenance, which constrained both the scope of feasible research questions and the reliability of resulting analyses. Our findings show how platform-controlled data infrastructures shape research design, collaboration, and epistemic norms, and they inform emerging models for independent, third-party-regulated data access, such as those envisioned in the European Union's Digital Services Act.",
+      "keywords": [],
+      "doi": "10.1177/20539517261461463",
+      "doi_url": "https://doi.org/10.1177/20539517261461463",
+      "url": null,
+      "arxiv_url": null,
+      "pdf_url": null,
+      "publication_date": "2026",
+      "citation_count": 0,
+      "reference_count": 40,
+      "venue": "Big Data &amp; Society",
+      "authors": [
+        "Zoë Natalia Cullen",
+        "Nicole B Ellison",
+        "Irene V Pasquetto"
+      ],
+      "subjects": [],
+      "is_open_access": null,
+      "source": "crossref",
+      "confidence_score": 0.86
     }
   }
 }
