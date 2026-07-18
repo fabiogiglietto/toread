@@ -71,540 +71,6 @@
     "failure_reason": "Could not enrich entry: UnknownUnknown-db | No DOI available | Title length: 52 chars | No authors available | APIs: Crossref enabled, Semantic Scholar enabled, ArXiv enabled",
     "last_failure_at": "2026-07-14T08:57:53.586509"
   },
-  "f766b42dffbe1516": {
-    "entry_key": "Lee2026-je",
-    "entry_title": "LLMs can infer political alignment from online conversations",
-    "cached_at": "2026-06-15T16:51:30.298933",
-    "metadata": {
-      "abstract": "Due to the correlational structure in our traits such as identities, cultures, and political attitudes, seemingly innocuous preferences like following a band or using a specific slang can reveal private traits. This possibility, especially when combined with massive, public social data and advanced computational methods, poses a fundamental privacy risk. As our data exposure online and the rapid advancement of AI are increasing the risk of misuse, it is critical to understand the capacity of large language models (LLMs) to exploit such potential. Here, using online discussions on DebateOrg and Reddit, we show that LLMs can reliably infer hidden political alignment, significantly outperforming traditional machine learning models. Prediction accuracy further improves as we aggregate multiple text-level inferences into a user-level prediction, and as we use more politics-adjacent domains. We demonstrate that LLMs leverage words that are highly predictive of political alignment while not being explicitly political. Our findings underscore the capacity and risks of LLMs for exploiting socio-cultural correlates.",
-      "keywords": [],
-      "doi": null,
-      "doi_url": null,
-      "url": null,
-      "arxiv_url": "http://arxiv.org/abs/2603.11253v2",
-      "pdf_url": "https://arxiv.org/pdf/2603.11253v2",
-      "publication_date": "2026-03-11",
-      "citation_count": null,
-      "reference_count": null,
-      "venue": null,
-      "authors": [
-        "Byunghwee Lee",
-        "Sangyeon Kim",
-        "Filippo Menczer",
-        "Yong-Yeol Ahn",
-        "Haewoon Kwak",
-        "Jisun An"
-      ],
-      "subjects": [
-        "cs.SI",
-        "cs.CL",
-        "cs.CY"
-      ],
-      "is_open_access": true,
-      "source": "arxiv",
-      "confidence_score": 0.725
-    }
-  },
-  "b14b30a2e84c11b8": {
-    "entry_key": "Lyons2026-ca",
-    "entry_title": "Exposure to low-credibility online health content is limited and is concentrated among older adults",
-    "cached_at": "2026-06-15T16:51:31.199536",
-    "metadata": {
-      "abstract": null,
-      "keywords": [],
-      "doi": "10.1038/s43587-025-01059-x",
-      "doi_url": "https://doi.org/10.1038/s43587-025-01059-x",
-      "url": null,
-      "arxiv_url": null,
-      "pdf_url": null,
-      "publication_date": "2026-02-04",
-      "citation_count": 2,
-      "reference_count": 31,
-      "venue": "Nature Aging",
-      "authors": [
-        "Benjamin Lyons",
-        "Andy J. King",
-        "Rebecca L. Barter",
-        "Kimberly A. Kaphingst"
-      ],
-      "subjects": [],
-      "is_open_access": null,
-      "source": "crossref",
-      "confidence_score": 0.825
-    }
-  },
-  "72956432e72418ef": {
-    "entry_key": "Poliakoff2026-fa",
-    "entry_title": "Prigozhin’s propaganda team: The st Petersburg internet research agency (2013–2021)",
-    "cached_at": "2026-06-15T16:51:34.303031",
-    "metadata": {
-      "abstract": null,
-      "keywords": [],
-      "doi": "10.1080/09668136.2025.2588334",
-      "doi_url": "https://doi.org/10.1080/09668136.2025.2588334",
-      "url": null,
-      "arxiv_url": null,
-      "pdf_url": null,
-      "publication_date": "2026-01-02",
-      "citation_count": 2,
-      "reference_count": 51,
-      "venue": "Europe-Asia Studies",
-      "authors": [
-        "Serge Poliakoff",
-        "Florian Toepfl"
-      ],
-      "subjects": [],
-      "is_open_access": null,
-      "source": "crossref",
-      "confidence_score": 0.86
-    }
-  },
-  "177c13bfa93b2d04": {
-    "entry_key": "Wedel2026-ix",
-    "entry_title": "What is informative to young adults? Decoding informativeness perceptions among audiences of audio-visual digital platforms",
-    "cached_at": "2026-06-15T16:51:37.421254",
-    "metadata": {
-      "abstract": null,
-      "keywords": [],
-      "doi": "10.1080/21670811.2026.2685660",
-      "doi_url": "https://doi.org/10.1080/21670811.2026.2685660",
-      "url": null,
-      "arxiv_url": null,
-      "pdf_url": null,
-      "publication_date": "2026-06-14",
-      "citation_count": 0,
-      "reference_count": 40,
-      "venue": "Digital Journalism",
-      "authors": [
-        "Lion Wedel"
-      ],
-      "subjects": [],
-      "is_open_access": null,
-      "source": "crossref",
-      "confidence_score": 0.85
-    }
-  },
-  "161e106bac6645bb": {
-    "entry_key": "van-Eck2026-xg",
-    "entry_title": "What to do about polarization? Evaluating the evidence base of recommendations for depolarization",
-    "cached_at": "2026-06-15T16:51:40.650852",
-    "metadata": {
-      "abstract": "Abstract The flourishing research on polarization abounds with more or less explicit calls for depolarization and includes various recommendations for how to depolarize, prompting questions about both the evidence base and the normative assumptions guiding the scholars’ conclusions. To assess both, we conducted a systematic literature review of social science literature on (de)polarization. Our findings reveal that most scholarship focuses on polarization, neglecting a systematic examination of depolarization. Although studies do provide evidence for both some factors that drive polarization and depolarization, the recommendations explicitly endorsed by the researchers remain disconnected from the empirical evidence provided in their studies. Recommendations seem to be more closely linked to normative assumptions about desirable ways of communicating, envisioning societies that align with deliberative democracy. We call for making both the normative and evidence base of one’s conclusions more explicit and reflect the connection between the two.",
-      "keywords": [],
-      "doi": "10.1093/anncom/wlag012",
-      "doi_url": "https://doi.org/10.1093/anncom/wlag012",
-      "url": null,
-      "arxiv_url": null,
-      "pdf_url": null,
-      "publication_date": "2026-04-09",
-      "citation_count": 0,
-      "reference_count": 80,
-      "venue": "Annals of the International Communication Association",
-      "authors": [
-        "Christel W van Eck",
-        "Hendrik M A Meyer",
-        "Michael Brüggemann"
-      ],
-      "subjects": [],
-      "is_open_access": null,
-      "source": "crossref",
-      "confidence_score": 0.8545454545454545
-    }
-  },
-  "208b8b483c53e83e": {
-    "entry_key": "Adam2026-tz",
-    "entry_title": "How do media contribute to the dissemination of conspiracy beliefs? A field study combining panel and web tracking at the outbreak of the COVID-19 pandemic",
-    "cached_at": "2026-06-15T16:51:44.242844",
-    "metadata": {
-      "abstract": "Abstract As COVID-19 escalated into a global health crisis, pandemic-related conspiracy theories emerged rapidly. Understanding how and under which conditions media influence their dissemination is essential. This study leverages unique data from 2-wave survey panels in Germany and German-speaking Switzerland, along with online tracking, to explore how individuals’ preexisting beliefs and media exposure influence the formation of pandemic-related conspiracy beliefs. The findings reveal direct exposure effects: alternative media, when supporting the conspiratorial claims, fostered conspiracy beliefs while mainstream media reduced conspiracy beliefs after debunking. Preexisting beliefs further conditioned these effects: individuals with strong populist views or low political trust selectively engaged with alternative media and selectively avoided mainstream sources. This resulted in two indirect pathways to the dissemination of conspiracy beliefs: people who selected into conspiracy-supporting content on alternative media experienced a reinforcement of conspiracy beliefs whereas people who (partially) avoided mainstream media counterargued the conspiracy-opposing information, also strengthening their conspiracy beliefs.",
-      "keywords": [],
-      "doi": "10.1093/joc/jqaf033",
-      "doi_url": "https://doi.org/10.1093/joc/jqaf033",
-      "url": null,
-      "arxiv_url": null,
-      "pdf_url": null,
-      "publication_date": "2026-04-01",
-      "citation_count": 5,
-      "reference_count": 74,
-      "venue": "Journal of Communication",
-      "authors": [
-        "Silke Adam",
-        "Tobias Rohrbach",
-        "Franziska Keller",
-        "Mykola Makhortykh",
-        "Ernesto de León",
-        "Chiara Valli",
-        "Ani Baghumyan",
-        "Maryna Sydorova"
-      ],
-      "subjects": [],
-      "is_open_access": null,
-      "source": "crossref",
-      "confidence_score": 0.8166666666666667
-    }
-  },
-  "e5a19719609563d7": {
-    "entry_key": "Kulichkina2026-zk",
-    "entry_title": "Connective action and digital repression during China’s COVID-19 protests: a computational analysis of multilingual coordinated activity on Twitter",
-    "cached_at": "2026-06-15T16:51:46.583043",
-    "metadata": {
-      "abstract": "Abstract In authoritarian contexts, social media serve as critical platforms for coordinating both protest and repression. This study centers on the unprecedented COVID-19 protests in the People’s Republic of China, which were extensively tweeted and suppressed through contesting narratives. We explore prominent themes, temporal dynamics, and linguistic patterns of coordinated communication during these events. Using a coordination detection algorithm, we identified 13,557 Twitter accounts involved in 739,819 instances of coordinated sharing during the protests. We then applied topic modeling to categorize the coordinated tweets into topics supporting either the protests or repression. Drawing on the theory of authoritarian publics, we classified protest-supporting topics into three categories: leadership-critical , policy-critical , and descriptive . Similarly, building on the digital repression typology, we categorized repression-supporting topics into government propaganda , distracting information , and demoralizing content . Within protest-supporting content, policy-critical tweets were the most widely shared across three analyzed languages. Leadership-critical tweets were more prominent in traditional Chinese, while descriptive tweets were more common in simplified Chinese. Repression-supporting content was most prevalent in English, followed by simplified Chinese, with demoralizing and distracting information dominating discourse. Government propaganda was the least frequent and appeared primarily in simplified Chinese. Community detection revealed that 85.4% of coordinated tweets were amplified by ten major communities, each organized around a single language and goal—either supporting protests or promoting repression. By combining multiple computational approaches, this study offers a comprehensive framework for content-centered analysis of online protest-repression dynamics and contributes to our understanding of connective action and digital repression in authoritarian contexts.",
-      "keywords": [],
-      "doi": "10.1140/epjds/s13688-026-00637-2",
-      "doi_url": "https://doi.org/10.1140/epjds/s13688-026-00637-2",
-      "url": null,
-      "arxiv_url": null,
-      "pdf_url": null,
-      "publication_date": "2026-03-13",
-      "citation_count": 0,
-      "reference_count": 58,
-      "venue": "EPJ Data Science",
-      "authors": [
-        "Aytalina Kulichkina",
-        "Paul Balluff",
-        "Nicola Righetti",
-        "Annie Waldherr"
-      ],
-      "subjects": [],
-      "is_open_access": null,
-      "source": "crossref",
-      "confidence_score": 0.8333333333333333
-    }
-  },
-  "0d7010138f1044be": {
-    "entry_key": "Yoo2026-ev",
-    "entry_title": "The role of the term “fake news” in U.s. alternative media: Shaping political discourse and hyperpartisanship",
-    "cached_at": "2026-06-15T16:51:49.594076",
-    "metadata": {
-      "abstract": "This study examines how the term “fake news” is strategically deployed in U.S. alternative media by analyzing Newsmax and Occupy Democrats as right- and left-leaning outlets. Drawing on Hallin’s sphere model and Egelhofer et al.’s coding categories, it uses manual content analysis and latent Dirichlet allocation topic modeling to identify rhetorical functions and patterns. Findings show that the term “fake news” functions mainly as a weaponized label to delegitimize opponents rather than describe misinformation. The results show how alternative media redraw boundaries between consensus, controversy, and deviance, underscoring their role in intensifying partisan discourse and redefining political communication.",
-      "keywords": [],
-      "doi": "10.1177/10776990251410599",
-      "doi_url": "https://doi.org/10.1177/10776990251410599",
-      "url": null,
-      "arxiv_url": null,
-      "pdf_url": null,
-      "publication_date": "2026-01-22",
-      "citation_count": 0,
-      "reference_count": 56,
-      "venue": "Journalism &amp; Mass Communication Quarterly",
-      "authors": [
-        "Joseph J. Yoo",
-        "Hannah Lee",
-        "Soontae An"
-      ],
-      "subjects": [],
-      "is_open_access": null,
-      "source": "crossref",
-      "confidence_score": 0.8428571428571427
-    }
-  },
-  "aa7cd706239eb8b9": {
-    "entry_key": "Larsson2026-ro",
-    "entry_title": "“Meet the new boss – Same as the old boss”: A longitudinal study of political post sentiment and Facebook engagement",
-    "cached_at": "2026-06-15T16:51:52.826879",
-    "metadata": {
-      "abstract": "This study investigates the dynamics of online political communication on Facebook, focusing on the Facebook posts made by the Norwegian Progress Party and its recent leaders, Siv Jensen and Sylvi Listhaug, over a decade-long period. Answering the call for longitudinal insights into political communication, we utilize a novel hybrid content analysis approach combining large language models (LLMs) and human classification, to assess the sentiment of Facebook posts — categorized as negative, positive, or neutral. Moreover, we assess the levels of engagement reached by posts featuring different sentiment. Our analysis reveals increased negative sentiment and engagement over time, particularly under Listhaug’s leadership, confirming the hypothesis that negative content drives higher engagement. Posts with negative sentiment consistently garnered more shares and comments, reflecting the strategic value of negativity in amplifying political messages. However, likes were more frequently associated with positive content, suggesting more nuanced engagement patterns. These findings contribute to our understanding the evolving landscape of digital politicking, highlighting the interplay between political actors’ communication strategies and audience engagement.",
-      "keywords": [],
-      "doi": "10.5210/fm.v31i1.14448",
-      "doi_url": "https://doi.org/10.5210/fm.v31i1.14448",
-      "url": null,
-      "arxiv_url": null,
-      "pdf_url": null,
-      "publication_date": "2026-01-08",
-      "citation_count": 0,
-      "reference_count": 0,
-      "venue": "First Monday",
-      "authors": [
-        "Anders Olof Larsson"
-      ],
-      "subjects": [],
-      "is_open_access": null,
-      "source": "crossref",
-      "confidence_score": 0.95
-    }
-  },
-  "f2d56655e70a51d3": {
-    "entry_key": "Baym2026-tr",
-    "entry_title": "It’s Bad: What Now?",
-    "cached_at": "2026-06-15T16:51:55.470728",
-    "metadata": {
-      "abstract": "This essay reflects on a decade of worsening social media harms—inequality, algorithmic power, precarious labor, and data extraction—arguing for renewed interdisciplinary and collaborative approaches to create just sociotechnical futures.",
-      "keywords": [],
-      "doi": "10.1177/20563051261432484",
-      "doi_url": "https://doi.org/10.1177/20563051261432484",
-      "url": null,
-      "arxiv_url": null,
-      "pdf_url": null,
-      "publication_date": "2026",
-      "citation_count": 0,
-      "reference_count": 7,
-      "venue": "Social Media + Society",
-      "authors": [
-        "Nancy K. Baym"
-      ],
-      "subjects": [],
-      "is_open_access": null,
-      "source": "crossref",
-      "confidence_score": 0.8749999999999999
-    }
-  },
-  "e0b18cc686e6bac2": {
-    "entry_key": "Dehghan2026-sy",
-    "entry_title": "The entangled dynamics leading to the sedimentation of polarisation on political Reddit",
-    "cached_at": "2026-06-16T10:51:01.784586",
-    "metadata": {
-      "abstract": "Motivated by the dearth of research providing a comprehensive assessment of how various aspects of Reddit contribute to political polarisation on the platform, this study examines the dynamics of cross-ideological communication across 11 major subreddits over 16 years. Going beyond purely textual elements, we analyse a broad range of possibilities for overlaps between subreddits. This includes common users, information-sharing, cross-posting, cross-commenting, links to other subreddits, and discursive identities. We observe minimal overlaps in all these indicators. This is true even for subreddits with highly similar discourses and extends beyond a left-right dichotomy. These patterns, we argue, emerge from an entanglement of platform design, moderation practices, user agency, discourses, and broader socio-political contexts. Our findings show how this entanglement leads to the sedimentation of polarisation on Reddit, wherein the fragmentation of political subreddits is irreducible to discourses, identities, or platform design alone. These findings also challenge the common framing of <i>r/politics</i> as a town square for cross-ideological deliberation and exposure.",
-      "keywords": [],
-      "doi": "10.6084/m9.figshare.31275028",
-      "doi_url": "https://doi.org/10.6084/m9.figshare.31275028",
-      "url": "https://doi.org/10.6084/m9.figshare.31275028",
-      "arxiv_url": null,
-      "pdf_url": "https://doi.org/10.6084/m9.figshare.31275028",
-      "publication_date": "2026-01-01",
-      "citation_count": 0,
-      "reference_count": null,
-      "venue": "Figshare",
-      "authors": [
-        "Ehsan Dehghan",
-        "Dominique Carlon",
-        "Kateryna Kasianenko",
-        "Ashwin Nagappa",
-        "Vish Padinjaredath Suresh"
-      ],
-      "subjects": [
-        "Quantum entanglement",
-        "Deliberation",
-        "Politics",
-        "Framing (construction)",
-        "Moderation"
-      ],
-      "is_open_access": true,
-      "source": "openalex",
-      "confidence_score": 0.75
-    }
-  },
-  "70df243b9adbd73e": {
-    "entry_key": "Iris2026-pg",
-    "entry_title": "Cross-national evidence of disproportionate media visibility for the Radical Right in the 2024 European elections",
-    "cached_at": "2026-06-16T10:51:02.093504",
-    "metadata": {
-      "abstract": "This study provides a systematic comparative analysis of media visibility of different political families during the 2024 European Parliament elections. We analyzed close to 21,500 unique news from leading national outlets in Austria, Germany, Ireland, Poland, and Portugal - countries with diverse political contexts and levels of media trust. Combining computational and human classification, we identified parties, political leaders, and groups from the article's URLs and titles, and clustered them according to European Parliament political families and broad political leanings. Cross-country comparison shows that the Mainstream and the Radical Right were mentioned more often than the other political groups. Moreover, the Radical Right received disproportionate attention relative to electoral results (from 2019 or 2024) and electoral projections, particularly in Austria, Germany, and Ireland. This imbalance increased in the final weeks of the campaign, when media influence on undecided voters is greatest. Outlet-level analysis shows that coverage of right-leaning entities dominated across news sources, especially those generating the highest traffic, suggesting a structural rather than outlet-specific pattern. Media visibility is a central resource, and this systematic mapping of online coverage highlights how traditional media can contribute to structural asymmetries in democratic competition.",
-      "keywords": [],
-      "doi": null,
-      "doi_url": null,
-      "url": null,
-      "arxiv_url": "http://arxiv.org/abs/2601.05826v1",
-      "pdf_url": "https://arxiv.org/pdf/2601.05826v1",
-      "publication_date": "2026-01-09",
-      "citation_count": null,
-      "reference_count": null,
-      "venue": null,
-      "authors": [
-        "Íris Damião",
-        "João Franco",
-        "Mariana Silva",
-        "Paulo Almeida",
-        "Pedro C. Magalhães",
-        "Joana Gonçalves-Sá"
-      ],
-      "subjects": [
-        "cs.CY"
-      ],
-      "is_open_access": true,
-      "source": "arxiv",
-      "confidence_score": 0.7214285714285714
-    }
-  },
-  "ffe4ae12f33e3914": {
-    "entry_key": "Voelkel2026-lc",
-    "entry_title": "A registered report megastudy on the persuasiveness of the most-cited climate messages",
-    "cached_at": "2026-06-16T10:51:14.978322",
-    "metadata": {
-      "abstract": "It is important to understand how persuasive the most-cited climate change messaging strategies are. In five replication studies, we found limited evidence of persuasive effects of three highly cited strategies (N=3,216). We then conducted a registered report megastudy (N=13,544) testing the effects of the 10 most-cited climate change messaging strategies on Americans’ pro-environmental attitudes and behavior. Six messages significantly affected multiple preregistered attitudes, with effects ranging from one to four percentage points. Persuasiveness varied little across party lines, inconsistent with theories predicting heterogeneous effects for targeted messages. No message increased pro-environmental donations, suggesting costly behaviors are difficult to influence with messaging alone. Inference of mechanisms driving effects was limited as the most impactful messages influenced multiple mediating variables. Taken together, these results identify several persuasive strategies, while also highlighting the limits of short-form messages for increasing Americans’ support for action to address climate change.",
-      "keywords": [],
-      "doi": "10.31235/osf.io/xwceg_v1",
-      "doi_url": "https://doi.org/10.31235/osf.io/xwceg_v1",
-      "url": null,
-      "arxiv_url": null,
-      "pdf_url": null,
-      "publication_date": null,
-      "citation_count": 0,
-      "reference_count": 0,
-      "venue": null,
-      "authors": [
-        "Jan G. Voelkel",
-        "Ashwini Ashokkumar",
-        "Adina T. Abeles",
-        "Jarret Crawford",
-        "Kylie Fuller",
-        "Chrystal Redekopp",
-        "Renata Bongiorno",
-        "Troy H. Campbell",
-        "Ullrich K. H. Ecker",
-        "Matthew Feinberg",
-        "P. Sol Hart",
-        "Matthew Hornsey",
-        "John Jost",
-        "Aaron Kay",
-        "Anthony Leiserowitz",
-        "Stephan Lewandowsky",
-        "Edward Maibach",
-        "Erik Nisbet",
-        "Nicholas Pidgeon",
-        "Alexa Spence",
-        "Sander van der Linden",
-        "Christopher V. Wolsko",
-        "Jane K. Willenbring",
-        "neil malhotra",
-        "Robb Willer"
-      ],
-      "subjects": [],
-      "is_open_access": null,
-      "source": "crossref",
-      "confidence_score": 0.809375
-    }
-  },
-  "b7f74078a698644f": {
-    "entry_key": "Rieder2026-pp",
-    "entry_title": "The Tate-space on YouTube: Ambient ideology and the limits of platform moderation",
-    "cached_at": "2026-06-16T10:51:34.630859",
-    "metadata": {
-      "abstract": "This article investigates the persistence and transformation of Andrew Tate’s presence on YouTube following the removal of his official channels in August 2022. Combining two empirical approaches—a small-scale analysis of top-ranked videos from YouTube search results in 2022 and 2024, and a large-scale data set of over 112k videos—we examine how Tate-related content continues to circulate and how the platform moderates such material. Our findings show that Tate remains highly visible through a diffuse and decentralized network of actors who repackage his messaging into interviews, remixes, and YouTube-native formats. This configuration produces what we term the “Tate-space”: an ambient ideological environment where motivational rhetoric, aspirational masculinity, and far-right talking points converge. We find that YouTube’s substantial moderation efforts are outpaced by the speed and scale of recommendation-driven circulation and that deplatforming, while symbolically significant, fails to disrupt the cultural and logistical dynamics that sustain Tate’s influence.",
-      "keywords": [],
-      "doi": "10.1177/14614448251409209",
-      "doi_url": "https://doi.org/10.1177/14614448251409209",
-      "url": null,
-      "arxiv_url": null,
-      "pdf_url": null,
-      "publication_date": "2026-01-12",
-      "citation_count": 0,
-      "reference_count": 59,
-      "venue": "New Media &amp; Society",
-      "authors": [
-        "Bernhard Rieder",
-        "Bastian August",
-        "Brogan Latil"
-      ],
-      "subjects": [],
-      "is_open_access": null,
-      "source": "crossref",
-      "confidence_score": 0.8428571428571427
-    }
-  },
-  "1222553bc321fdf6": {
-    "entry_key": "Dodds2026-df",
-    "entry_title": "AI hype in journalism: Visibility, power, and the politics of media narratives",
-    "cached_at": "2026-06-16T10:52:24.863987",
-    "metadata": {
-      "abstract": null,
-      "keywords": [],
-      "doi": "10.1080/21670811.2026.2630187",
-      "doi_url": "https://doi.org/10.1080/21670811.2026.2630187",
-      "url": null,
-      "arxiv_url": null,
-      "pdf_url": null,
-      "publication_date": "2026-02-07",
-      "citation_count": 1,
-      "reference_count": 40,
-      "venue": "Digital Journalism",
-      "authors": [
-        "Tomás Dodds",
-        "Naomi Mine",
-        "Natali Helberger",
-        "Andrea L. Guzman",
-        "Nicholas Diakopoulos"
-      ],
-      "subjects": [],
-      "is_open_access": null,
-      "source": "crossref",
-      "confidence_score": 0.825
-    }
-  },
-  "b1500f57f1867c59": {
-    "entry_key": "Bailard2024-pj",
-    "entry_title": "“keep your heads held high boys!”: Examining the relationship between the Proud Boys’ online discourse and offline activities",
-    "cached_at": "2026-06-16T10:52:31.899775",
-    "metadata": {
-      "abstract": "This study examines the relationship between online communication by the Proud Boys and their offline activities. We use a supervised machine learning model to analyze a novel dataset of Proud Boys Telegram messages, merged with US Crisis Monitor data of violent and nonviolent events in which group members participated over a 31-month period. Our analysis finds that intensifying expressions of grievances online predict participation in offline violence, whereas motivational appeals to group pride, morale, or solidarity share a reciprocal relationship with participation in offline events. This suggests a potential online messaging–offline action cycle, in which (a) nonviolent offline protests predict an increasing proportion of motivational messaging and (b) increases in the frequency and proportion of motivational appeals online, in turn, predict subsequent violent offline activities. Our findings offer useful theoretical insights for understanding the relationship between online speech and offline behavior.",
-      "keywords": [],
-      "doi": "10.1017/s0003055423001478",
-      "doi_url": "https://doi.org/10.1017/s0003055423001478",
-      "url": null,
-      "arxiv_url": null,
-      "pdf_url": null,
-      "publication_date": "2024",
-      "citation_count": 11,
-      "reference_count": 98,
-      "venue": "American Political Science Review",
-      "authors": [
-        "CATIE SNOW BAILARD",
-        "REBEKAH TROMBLE",
-        "WEI ZHONG",
-        "FEDERICO BIANCHI",
-        "PEDRAM HOSSEINI",
-        "DAVID BRONIATOWSKI"
-      ],
-      "subjects": [],
-      "is_open_access": null,
-      "source": "crossref",
-      "confidence_score": 0.8214285714285714
-    }
-  },
-  "7ba11af711eb4a50": {
-    "entry_key": "Rodarte2026-dk",
-    "entry_title": "Who controls the narrative? How Brazilian parliamentarians pursue epistemic authority in times of crisis",
-    "cached_at": "2026-06-16T10:52:35.524376",
-    "metadata": {
-      "abstract": null,
-      "keywords": [],
-      "doi": "10.1080/21670811.2026.2669534",
-      "doi_url": "https://doi.org/10.1080/21670811.2026.2669534",
-      "url": null,
-      "arxiv_url": null,
-      "pdf_url": null,
-      "publication_date": "2026-05-07",
-      "citation_count": 0,
-      "reference_count": 33,
-      "venue": "Digital Journalism",
-      "authors": [
-        "André K. Rodarte",
-        "Carolina V. Kuahara",
-        "Ahmer Arif"
-      ],
-      "subjects": [],
-      "is_open_access": null,
-      "source": "crossref",
-      "confidence_score": 0.8333333333333333
-    }
-  },
-  "3a31a7280a989e63": {
-    "entry_key": "Richter2026-bt",
-    "entry_title": "Who’s driving the AI hype in its formative phase? A longitudinal analysis of stakeholders in the US and German AI discourse on Twitter 2012–2021",
-    "cached_at": "2026-06-16T10:52:38.408897",
-    "metadata": {
-      "abstract": "Abstract AI has become an ambiguous yet powerful term that routinely refers to different technological advances, with stakeholders competing for public attention to influence public perceptions and decision-makers. Whilst research has focussed on specific AI stakeholders and identified industry dominance in debates around AI, a detailed investigation of the role of different AI stakeholders within public discourses in the formative phase of AI development in the 2010s is missing. This paper proposes a multi-dimension typology for analysing AI stakeholders across different types and different levels. This AI stakeholder typology is exemplified by comparing stakeholders longitudinally in the AI Twitter discourse across the US and Germany from 2012 until 2021. This early period of budding AI hype delineated country-specific trajectories and specific political and economic framings that continue to influence the current discourse and regulation of GenAI within these two countries. The results highlight the institutionalisation of stakeholders in the German discourse, whilst the US dataset reveals strong shifts in stakeholder types and levels. Overall, the analysis offers insights into different cycles of institutionalisation in the early AI discourse on Twitter. It also highlights clear shifts in stakeholder involvement at different stages of public AI discourse in its formative phase in different socio-cultural and geographical contexts.",
-      "keywords": [],
-      "doi": "10.1007/s00146-026-03079-6",
-      "doi_url": "https://doi.org/10.1007/s00146-026-03079-6",
-      "url": null,
-      "arxiv_url": null,
-      "pdf_url": null,
-      "publication_date": "2026-06-10",
-      "citation_count": 0,
-      "reference_count": 82,
-      "venue": "AI &amp; SOCIETY",
-      "authors": [
-        "Vanessa Richter",
-        "Daria Dergacheva",
-        "Vasilisa Kuznetsova",
-        "Christian Katzenbach"
-      ],
-      "subjects": [],
-      "is_open_access": null,
-      "source": "crossref",
-      "confidence_score": 0.8333333333333333
-    }
-  },
   "6abbf835954368b9": {
     "entry_key": "Marwick2026-ss",
     "entry_title": "Broken connections: Fieldnotes from the old internet",
@@ -2044,11 +1510,11 @@
   "fc9373f3342e79d3": {
     "entry_key": "Gottfried2026-ww",
     "entry_title": "Americans and AI 2026: Chatbots, Smart Devices and Views on Impact",
-    "cached_at": "2026-07-08T07:21:50.467177",
+    "cached_at": "2026-07-18T05:55:51.066166",
     "metadata": null,
     "failed": true,
     "failure_reason": "Could not enrich entry: Gottfried2026-ww | No DOI available | Title length: 66 chars | Authors: Gottfried, Jeffrey, Bishop, William... | APIs: Crossref enabled, Semantic Scholar enabled, ArXiv enabled",
-    "last_failure_at": "2026-07-08T07:21:50.467187"
+    "last_failure_at": "2026-07-18T05:55:51.066172"
   },
   "bb1e983fc3d493b2": {
     "entry_key": "Hameleers2026-mc",
@@ -6333,6 +5799,564 @@
       "is_open_access": null,
       "source": "crossref",
       "confidence_score": 0.8428571428571427
+    }
+  },
+  "70df243b9adbd73e": {
+    "entry_key": "Iris2026-pg",
+    "entry_title": "Cross-national evidence of disproportionate media visibility for the Radical Right in the 2024 European elections",
+    "cached_at": "2026-07-18T05:54:58.765922",
+    "metadata": {
+      "abstract": "This study provides a systematic comparative analysis of media visibility of different political families during the 2024 European Parliament elections. We analyzed close to 21,500 unique news from leading national outlets in Austria, Germany, Ireland, Poland, and Portugal - countries with diverse political contexts and levels of media trust. Combining computational and human classification, we identified parties, political leaders, and groups from the article's URLs and titles, and clustered them according to European Parliament political families and broad political leanings. Cross-country comparison shows that the Mainstream and the Radical Right were mentioned more often than the other political groups. Moreover, the Radical Right received disproportionate attention relative to electoral results (from 2019 or 2024) and electoral projections, particularly in Austria, Germany, and Ireland. This imbalance increased in the final weeks of the campaign, when media influence on undecided voters is greatest. Outlet-level analysis shows that coverage of right-leaning entities dominated across news sources, especially those generating the highest traffic, suggesting a structural rather than outlet-specific pattern. Media visibility is a central resource, and this systematic mapping of online coverage highlights how traditional media can contribute to structural asymmetries in democratic competition.",
+      "keywords": [],
+      "doi": null,
+      "doi_url": null,
+      "url": null,
+      "arxiv_url": "http://arxiv.org/abs/2601.05826v1",
+      "pdf_url": "https://arxiv.org/pdf/2601.05826v1",
+      "publication_date": "2026-01-09",
+      "citation_count": null,
+      "reference_count": null,
+      "venue": null,
+      "authors": [
+        "Íris Damião",
+        "João Franco",
+        "Mariana Silva",
+        "Paulo Almeida",
+        "Pedro C. Magalhães",
+        "Joana Gonçalves-Sá"
+      ],
+      "subjects": [
+        "cs.CY"
+      ],
+      "is_open_access": true,
+      "source": "arxiv",
+      "confidence_score": 0.7214285714285714
+    }
+  },
+  "f766b42dffbe1516": {
+    "entry_key": "Lee2026-je",
+    "entry_title": "LLMs can infer political alignment from online conversations",
+    "cached_at": "2026-07-18T05:55:01.931236",
+    "metadata": {
+      "abstract": "Due to the correlational structure in our traits such as identities, cultures, and political attitudes, seemingly innocuous preferences like following a band or using a specific slang can reveal private traits. This possibility, especially when combined with massive, public social data and advanced computational methods, poses a fundamental privacy risk. As our data exposure online and the rapid advancement of AI are increasing the risk of misuse, it is critical to understand the capacity of large language models (LLMs) to exploit such potential. Here, using online discussions on DebateOrg and Reddit, we show that LLMs can reliably infer hidden political alignment, significantly outperforming traditional machine learning models. Prediction accuracy further improves as we aggregate multiple text-level inferences into a user-level prediction, and as we use more politics-adjacent domains. We demonstrate that LLMs leverage words that are highly predictive of political alignment while not being explicitly political. Our findings underscore the capacity and risks of LLMs for exploiting socio-cultural correlates.",
+      "keywords": [],
+      "doi": null,
+      "doi_url": null,
+      "url": null,
+      "arxiv_url": "http://arxiv.org/abs/2603.11253v2",
+      "pdf_url": "https://arxiv.org/pdf/2603.11253v2",
+      "publication_date": "2026-03-11",
+      "citation_count": null,
+      "reference_count": null,
+      "venue": null,
+      "authors": [
+        "Byunghwee Lee",
+        "Sangyeon Kim",
+        "Filippo Menczer",
+        "Yong-Yeol Ahn",
+        "Haewoon Kwak",
+        "Jisun An"
+      ],
+      "subjects": [
+        "cs.SI",
+        "cs.CL",
+        "cs.CY"
+      ],
+      "is_open_access": true,
+      "source": "arxiv",
+      "confidence_score": 0.725
+    }
+  },
+  "3a31a7280a989e63": {
+    "entry_key": "Richter2026-bt",
+    "entry_title": "Who’s driving the AI hype in its formative phase? A longitudinal analysis of stakeholders in the US and German AI discourse on Twitter 2012–2021",
+    "cached_at": "2026-07-18T05:55:02.850098",
+    "metadata": {
+      "abstract": "Abstract AI has become an ambiguous yet powerful term that routinely refers to different technological advances, with stakeholders competing for public attention to influence public perceptions and decision-makers. Whilst research has focussed on specific AI stakeholders and identified industry dominance in debates around AI, a detailed investigation of the role of different AI stakeholders within public discourses in the formative phase of AI development in the 2010s is missing. This paper proposes a multi-dimension typology for analysing AI stakeholders across different types and different levels. This AI stakeholder typology is exemplified by comparing stakeholders longitudinally in the AI Twitter discourse across the US and Germany from 2012 until 2021. This early period of budding AI hype delineated country-specific trajectories and specific political and economic framings that continue to influence the current discourse and regulation of GenAI within these two countries. The results highlight the institutionalisation of stakeholders in the German discourse, whilst the US dataset reveals strong shifts in stakeholder types and levels. Overall, the analysis offers insights into different cycles of institutionalisation in the early AI discourse on Twitter. It also highlights clear shifts in stakeholder involvement at different stages of public AI discourse in its formative phase in different socio-cultural and geographical contexts.",
+      "keywords": [],
+      "doi": "10.1007/s00146-026-03079-6",
+      "doi_url": "https://doi.org/10.1007/s00146-026-03079-6",
+      "url": null,
+      "arxiv_url": null,
+      "pdf_url": null,
+      "publication_date": "2026-06-10",
+      "citation_count": 0,
+      "reference_count": 82,
+      "venue": "AI &amp; SOCIETY",
+      "authors": [
+        "Vanessa Richter",
+        "Daria Dergacheva",
+        "Vasilisa Kuznetsova",
+        "Christian Katzenbach"
+      ],
+      "subjects": [],
+      "is_open_access": null,
+      "source": "crossref",
+      "confidence_score": 0.8333333333333333
+    }
+  },
+  "b1500f57f1867c59": {
+    "entry_key": "Bailard2024-pj",
+    "entry_title": "“keep your heads held high boys!”: Examining the relationship between the Proud Boys’ online discourse and offline activities",
+    "cached_at": "2026-07-18T05:55:05.272493",
+    "metadata": {
+      "abstract": "This study examines the relationship between online communication by the Proud Boys and their offline activities. We use a supervised machine learning model to analyze a novel dataset of Proud Boys Telegram messages, merged with US Crisis Monitor data of violent and nonviolent events in which group members participated over a 31-month period. Our analysis finds that intensifying expressions of grievances online predict participation in offline violence, whereas motivational appeals to group pride, morale, or solidarity share a reciprocal relationship with participation in offline events. This suggests a potential online messaging–offline action cycle, in which (a) nonviolent offline protests predict an increasing proportion of motivational messaging and (b) increases in the frequency and proportion of motivational appeals online, in turn, predict subsequent violent offline activities. Our findings offer useful theoretical insights for understanding the relationship between online speech and offline behavior.",
+      "keywords": [],
+      "doi": "10.1017/s0003055423001478",
+      "doi_url": "https://doi.org/10.1017/s0003055423001478",
+      "url": null,
+      "arxiv_url": null,
+      "pdf_url": null,
+      "publication_date": "2024",
+      "citation_count": 11,
+      "reference_count": 98,
+      "venue": "American Political Science Review",
+      "authors": [
+        "CATIE SNOW BAILARD",
+        "REBEKAH TROMBLE",
+        "WEI ZHONG",
+        "FEDERICO BIANCHI",
+        "PEDRAM HOSSEINI",
+        "DAVID BRONIATOWSKI"
+      ],
+      "subjects": [],
+      "is_open_access": null,
+      "source": "crossref",
+      "confidence_score": 0.8214285714285714
+    }
+  },
+  "ffe4ae12f33e3914": {
+    "entry_key": "Voelkel2026-lc",
+    "entry_title": "A registered report megastudy on the persuasiveness of the most-cited climate messages",
+    "cached_at": "2026-07-18T05:55:08.330531",
+    "metadata": {
+      "abstract": "It is important to understand how persuasive the most-cited climate change messaging strategies are. In five replication studies, we found limited evidence of persuasive effects of three highly cited strategies (N=3,216). We then conducted a registered report megastudy (N=13,544) testing the effects of the 10 most-cited climate change messaging strategies on Americans’ pro-environmental attitudes and behavior. Six messages significantly affected multiple preregistered attitudes, with effects ranging from one to four percentage points. Persuasiveness varied little across party lines, inconsistent with theories predicting heterogeneous effects for targeted messages. No message increased pro-environmental donations, suggesting costly behaviors are difficult to influence with messaging alone. Inference of mechanisms driving effects was limited as the most impactful messages influenced multiple mediating variables. Taken together, these results identify several persuasive strategies, while also highlighting the limits of short-form messages for increasing Americans’ support for action to address climate change.",
+      "keywords": [],
+      "doi": "10.31235/osf.io/xwceg_v2",
+      "doi_url": "https://doi.org/10.31235/osf.io/xwceg_v2",
+      "url": null,
+      "arxiv_url": null,
+      "pdf_url": null,
+      "publication_date": null,
+      "citation_count": 0,
+      "reference_count": 0,
+      "venue": null,
+      "authors": [
+        "Jan G. Voelkel",
+        "Ashwini Ashokkumar",
+        "Adina T. Abeles",
+        "Jarret Crawford",
+        "Kylie Fuller",
+        "Chrystal Redekopp",
+        "Renata Bongiorno",
+        "Troy H. Campbell",
+        "Ullrich K. H. Ecker",
+        "Matthew Feinberg",
+        "P. Sol Hart",
+        "Matthew Hornsey",
+        "John Jost",
+        "Aaron Kay",
+        "Anthony Leiserowitz",
+        "Stephan Lewandowsky",
+        "Edward Maibach",
+        "Erik Nisbet",
+        "Nicholas Pidgeon",
+        "Alexa Spence",
+        "Sander van der Linden",
+        "Christopher V. Wolsko",
+        "Jane K. Willenbring",
+        "neil malhotra",
+        "Robb Willer"
+      ],
+      "subjects": [],
+      "is_open_access": null,
+      "source": "crossref",
+      "confidence_score": 0.809375
+    }
+  },
+  "b14b30a2e84c11b8": {
+    "entry_key": "Lyons2026-ca",
+    "entry_title": "Exposure to low-credibility online health content is limited and is concentrated among older adults",
+    "cached_at": "2026-07-18T05:55:11.170889",
+    "metadata": {
+      "abstract": null,
+      "keywords": [],
+      "doi": "10.1038/s43587-025-01059-x",
+      "doi_url": "https://doi.org/10.1038/s43587-025-01059-x",
+      "url": null,
+      "arxiv_url": null,
+      "pdf_url": null,
+      "publication_date": "2026-02-04",
+      "citation_count": 3,
+      "reference_count": 31,
+      "venue": "Nature Aging",
+      "authors": [
+        "Benjamin Lyons",
+        "Andy J. King",
+        "Rebecca L. Barter",
+        "Kimberly A. Kaphingst"
+      ],
+      "subjects": [],
+      "is_open_access": null,
+      "source": "crossref",
+      "confidence_score": 0.825
+    }
+  },
+  "72956432e72418ef": {
+    "entry_key": "Poliakoff2026-fa",
+    "entry_title": "Prigozhin’s propaganda team: The st Petersburg internet research agency (2013–2021)",
+    "cached_at": "2026-07-18T05:55:14.196160",
+    "metadata": {
+      "abstract": null,
+      "keywords": [],
+      "doi": "10.1080/09668136.2025.2588334",
+      "doi_url": "https://doi.org/10.1080/09668136.2025.2588334",
+      "url": null,
+      "arxiv_url": null,
+      "pdf_url": null,
+      "publication_date": "2026-01-02",
+      "citation_count": 2,
+      "reference_count": 51,
+      "venue": "Europe-Asia Studies",
+      "authors": [
+        "Serge Poliakoff",
+        "Florian Toepfl"
+      ],
+      "subjects": [],
+      "is_open_access": null,
+      "source": "crossref",
+      "confidence_score": 0.86
+    }
+  },
+  "e0b18cc686e6bac2": {
+    "entry_key": "Dehghan2026-sy",
+    "entry_title": "The entangled dynamics leading to the sedimentation of polarisation on political Reddit",
+    "cached_at": "2026-07-18T05:55:17.252702",
+    "metadata": {
+      "abstract": null,
+      "keywords": [],
+      "doi": "10.1080/1369118x.2026.2623523",
+      "doi_url": "https://doi.org/10.1080/1369118x.2026.2623523",
+      "url": null,
+      "arxiv_url": null,
+      "pdf_url": null,
+      "publication_date": "2026-02-05",
+      "citation_count": 0,
+      "reference_count": 75,
+      "venue": "Information, Communication &amp; Society",
+      "authors": [
+        "Ehsan Dehghan",
+        "Dominique Carlon",
+        "Kateryna Kasianenko",
+        "Ashwin Nagappa",
+        "Vish Padinjaredath Suresh"
+      ],
+      "subjects": [],
+      "is_open_access": null,
+      "source": "crossref",
+      "confidence_score": 0.85
+    }
+  },
+  "1222553bc321fdf6": {
+    "entry_key": "Dodds2026-df",
+    "entry_title": "AI hype in journalism: Visibility, power, and the politics of media narratives",
+    "cached_at": "2026-07-18T05:55:21.211759",
+    "metadata": {
+      "abstract": null,
+      "keywords": [],
+      "doi": "10.1080/21670811.2026.2630187",
+      "doi_url": "https://doi.org/10.1080/21670811.2026.2630187",
+      "url": null,
+      "arxiv_url": null,
+      "pdf_url": null,
+      "publication_date": "2026-02-07",
+      "citation_count": 1,
+      "reference_count": 40,
+      "venue": "Digital Journalism",
+      "authors": [
+        "Tomás Dodds",
+        "Naomi Mine",
+        "Natali Helberger",
+        "Andrea L. Guzman",
+        "Nicholas Diakopoulos"
+      ],
+      "subjects": [],
+      "is_open_access": null,
+      "source": "crossref",
+      "confidence_score": 0.825
+    }
+  },
+  "7ba11af711eb4a50": {
+    "entry_key": "Rodarte2026-dk",
+    "entry_title": "Who controls the narrative? How Brazilian parliamentarians pursue epistemic authority in times of crisis",
+    "cached_at": "2026-07-18T05:55:23.618320",
+    "metadata": {
+      "abstract": null,
+      "keywords": [],
+      "doi": "10.1080/21670811.2026.2669534",
+      "doi_url": "https://doi.org/10.1080/21670811.2026.2669534",
+      "url": null,
+      "arxiv_url": null,
+      "pdf_url": null,
+      "publication_date": "2026-05-07",
+      "citation_count": 0,
+      "reference_count": 33,
+      "venue": "Digital Journalism",
+      "authors": [
+        "André K. Rodarte",
+        "Carolina V. Kuahara",
+        "Ahmer Arif"
+      ],
+      "subjects": [],
+      "is_open_access": null,
+      "source": "crossref",
+      "confidence_score": 0.8333333333333333
+    }
+  },
+  "177c13bfa93b2d04": {
+    "entry_key": "Wedel2026-ix",
+    "entry_title": "What is informative to young adults? Decoding informativeness perceptions among audiences of audio-visual digital platforms",
+    "cached_at": "2026-07-18T05:55:26.519456",
+    "metadata": {
+      "abstract": null,
+      "keywords": [],
+      "doi": "10.1080/21670811.2026.2685660",
+      "doi_url": "https://doi.org/10.1080/21670811.2026.2685660",
+      "url": null,
+      "arxiv_url": null,
+      "pdf_url": null,
+      "publication_date": "2026-06-14",
+      "citation_count": 0,
+      "reference_count": 40,
+      "venue": "Digital Journalism",
+      "authors": [
+        "Lion Wedel"
+      ],
+      "subjects": [],
+      "is_open_access": null,
+      "source": "crossref",
+      "confidence_score": 0.85
+    }
+  },
+  "161e106bac6645bb": {
+    "entry_key": "van-Eck2026-xg",
+    "entry_title": "What to do about polarization? Evaluating the evidence base of recommendations for depolarization",
+    "cached_at": "2026-07-18T05:55:29.532719",
+    "metadata": {
+      "abstract": "Abstract The flourishing research on polarization abounds with more or less explicit calls for depolarization and includes various recommendations for how to depolarize, prompting questions about both the evidence base and the normative assumptions guiding the scholars’ conclusions. To assess both, we conducted a systematic literature review of social science literature on (de)polarization. Our findings reveal that most scholarship focuses on polarization, neglecting a systematic examination of depolarization. Although studies do provide evidence for both some factors that drive polarization and depolarization, the recommendations explicitly endorsed by the researchers remain disconnected from the empirical evidence provided in their studies. Recommendations seem to be more closely linked to normative assumptions about desirable ways of communicating, envisioning societies that align with deliberative democracy. We call for making both the normative and evidence base of one’s conclusions more explicit and reflect the connection between the two.",
+      "keywords": [],
+      "doi": "10.1093/anncom/wlag012",
+      "doi_url": "https://doi.org/10.1093/anncom/wlag012",
+      "url": null,
+      "arxiv_url": null,
+      "pdf_url": null,
+      "publication_date": "2026-04-09",
+      "citation_count": 0,
+      "reference_count": 80,
+      "venue": "Annals of the International Communication Association",
+      "authors": [
+        "Christel W van Eck",
+        "Hendrik M A Meyer",
+        "Michael Brüggemann"
+      ],
+      "subjects": [],
+      "is_open_access": null,
+      "source": "crossref",
+      "confidence_score": 0.8545454545454545
+    }
+  },
+  "208b8b483c53e83e": {
+    "entry_key": "Adam2026-tz",
+    "entry_title": "How do media contribute to the dissemination of conspiracy beliefs? A field study combining panel and web tracking at the outbreak of the COVID-19 pandemic",
+    "cached_at": "2026-07-18T05:55:32.710417",
+    "metadata": {
+      "abstract": "Abstract As COVID-19 escalated into a global health crisis, pandemic-related conspiracy theories emerged rapidly. Understanding how and under which conditions media influence their dissemination is essential. This study leverages unique data from 2-wave survey panels in Germany and German-speaking Switzerland, along with online tracking, to explore how individuals’ preexisting beliefs and media exposure influence the formation of pandemic-related conspiracy beliefs. The findings reveal direct exposure effects: alternative media, when supporting the conspiratorial claims, fostered conspiracy beliefs while mainstream media reduced conspiracy beliefs after debunking. Preexisting beliefs further conditioned these effects: individuals with strong populist views or low political trust selectively engaged with alternative media and selectively avoided mainstream sources. This resulted in two indirect pathways to the dissemination of conspiracy beliefs: people who selected into conspiracy-supporting content on alternative media experienced a reinforcement of conspiracy beliefs whereas people who (partially) avoided mainstream media counterargued the conspiracy-opposing information, also strengthening their conspiracy beliefs.",
+      "keywords": [],
+      "doi": "10.1093/joc/jqaf033",
+      "doi_url": "https://doi.org/10.1093/joc/jqaf033",
+      "url": null,
+      "arxiv_url": null,
+      "pdf_url": null,
+      "publication_date": "2026-04-01",
+      "citation_count": 6,
+      "reference_count": 74,
+      "venue": "Journal of Communication",
+      "authors": [
+        "Silke Adam",
+        "Tobias Rohrbach",
+        "Franziska Keller",
+        "Mykola Makhortykh",
+        "Ernesto de León",
+        "Chiara Valli",
+        "Ani Baghumyan",
+        "Maryna Sydorova"
+      ],
+      "subjects": [],
+      "is_open_access": null,
+      "source": "crossref",
+      "confidence_score": 0.8166666666666667
+    }
+  },
+  "e5a19719609563d7": {
+    "entry_key": "Kulichkina2026-zk",
+    "entry_title": "Connective action and digital repression during China’s COVID-19 protests: a computational analysis of multilingual coordinated activity on Twitter",
+    "cached_at": "2026-07-18T05:55:35.614835",
+    "metadata": {
+      "abstract": "Abstract In authoritarian contexts, social media serve as critical platforms for coordinating both protest and repression. This study centers on the unprecedented COVID-19 protests in the People’s Republic of China, which were extensively tweeted and suppressed through contesting narratives. We explore prominent themes, temporal dynamics, and linguistic patterns of coordinated communication during these events. Using a coordination detection algorithm, we identified 13,557 Twitter accounts involved in 739,819 instances of coordinated sharing during the protests. We then applied topic modeling to categorize the coordinated tweets into topics supporting either the protests or repression. Drawing on the theory of authoritarian publics, we classified protest-supporting topics into three categories: leadership-critical , policy-critical , and descriptive . Similarly, building on the digital repression typology, we categorized repression-supporting topics into government propaganda , distracting information , and demoralizing content . Within protest-supporting content, policy-critical tweets were the most widely shared across three analyzed languages. Leadership-critical tweets were more prominent in traditional Chinese, while descriptive tweets were more common in simplified Chinese. Repression-supporting content was most prevalent in English, followed by simplified Chinese, with demoralizing and distracting information dominating discourse. Government propaganda was the least frequent and appeared primarily in simplified Chinese. Community detection revealed that 85.4% of coordinated tweets were amplified by ten major communities, each organized around a single language and goal—either supporting protests or promoting repression. By combining multiple computational approaches, this study offers a comprehensive framework for content-centered analysis of online protest-repression dynamics and contributes to our understanding of connective action and digital repression in authoritarian contexts.",
+      "keywords": [],
+      "doi": "10.1140/epjds/s13688-026-00637-2",
+      "doi_url": "https://doi.org/10.1140/epjds/s13688-026-00637-2",
+      "url": null,
+      "arxiv_url": null,
+      "pdf_url": null,
+      "publication_date": "2026-03-13",
+      "citation_count": 0,
+      "reference_count": 58,
+      "venue": "EPJ Data Science",
+      "authors": [
+        "Aytalina Kulichkina",
+        "Paul Balluff",
+        "Nicola Righetti",
+        "Annie Waldherr"
+      ],
+      "subjects": [],
+      "is_open_access": null,
+      "source": "crossref",
+      "confidence_score": 0.8333333333333333
+    }
+  },
+  "0d7010138f1044be": {
+    "entry_key": "Yoo2026-ev",
+    "entry_title": "The role of the term “fake news” in U.s. alternative media: Shaping political discourse and hyperpartisanship",
+    "cached_at": "2026-07-18T05:55:38.817007",
+    "metadata": {
+      "abstract": "This study examines how the term “fake news” is strategically deployed in U.S. alternative media by analyzing Newsmax and Occupy Democrats as right- and left-leaning outlets. Drawing on Hallin’s sphere model and Egelhofer et al.’s coding categories, it uses manual content analysis and latent Dirichlet allocation topic modeling to identify rhetorical functions and patterns. Findings show that the term “fake news” functions mainly as a weaponized label to delegitimize opponents rather than describe misinformation. The results show how alternative media redraw boundaries between consensus, controversy, and deviance, underscoring their role in intensifying partisan discourse and redefining political communication.",
+      "keywords": [],
+      "doi": "10.1177/10776990251410599",
+      "doi_url": "https://doi.org/10.1177/10776990251410599",
+      "url": null,
+      "arxiv_url": null,
+      "pdf_url": null,
+      "publication_date": "2026-01-22",
+      "citation_count": 0,
+      "reference_count": 56,
+      "venue": "Journalism &amp; Mass Communication Quarterly",
+      "authors": [
+        "Joseph J. Yoo",
+        "Hannah Lee",
+        "Soontae An"
+      ],
+      "subjects": [],
+      "is_open_access": null,
+      "source": "crossref",
+      "confidence_score": 0.8428571428571427
+    }
+  },
+  "b7f74078a698644f": {
+    "entry_key": "Rieder2026-pp",
+    "entry_title": "The Tate-space on YouTube: Ambient ideology and the limits of platform moderation",
+    "cached_at": "2026-07-18T05:55:41.627454",
+    "metadata": {
+      "abstract": "This article investigates the persistence and transformation of Andrew Tate’s presence on YouTube following the removal of his official channels in August 2022. Combining two empirical approaches—a small-scale analysis of top-ranked videos from YouTube search results in 2022 and 2024, and a large-scale data set of over 112k videos—we examine how Tate-related content continues to circulate and how the platform moderates such material. Our findings show that Tate remains highly visible through a diffuse and decentralized network of actors who repackage his messaging into interviews, remixes, and YouTube-native formats. This configuration produces what we term the “Tate-space”: an ambient ideological environment where motivational rhetoric, aspirational masculinity, and far-right talking points converge. We find that YouTube’s substantial moderation efforts are outpaced by the speed and scale of recommendation-driven circulation and that deplatforming, while symbolically significant, fails to disrupt the cultural and logistical dynamics that sustain Tate’s influence.",
+      "keywords": [],
+      "doi": "10.1177/14614448251409209",
+      "doi_url": "https://doi.org/10.1177/14614448251409209",
+      "url": null,
+      "arxiv_url": null,
+      "pdf_url": null,
+      "publication_date": "2026-01-12",
+      "citation_count": 0,
+      "reference_count": 59,
+      "venue": "New Media &amp; Society",
+      "authors": [
+        "Bernhard Rieder",
+        "Bastian August",
+        "Brogan Latil"
+      ],
+      "subjects": [],
+      "is_open_access": null,
+      "source": "crossref",
+      "confidence_score": 0.8428571428571427
+    }
+  },
+  "73b7ae212c5f571a": {
+    "entry_key": "Bruns2026-pn",
+    "entry_title": "The challenges of working with platform data from clean room environments",
+    "cached_at": "2026-07-18T05:55:45.235334",
+    "metadata": {
+      "abstract": null,
+      "keywords": [],
+      "doi": "10.25358/openscience-15825",
+      "doi_url": "https://doi.org/10.25358/openscience-15825",
+      "url": "https://openscience.ub.uni-mainz.de/handle/20.500.12030/15846",
+      "arxiv_url": null,
+      "pdf_url": "https://openscience.ub.uni-mainz.de/handle/20.500.12030/15846",
+      "publication_date": "2026-01-01",
+      "citation_count": 0,
+      "reference_count": null,
+      "venue": "Gutenberg Open Science",
+      "authors": [
+        "Axel Bruns",
+        "Laura Vodden"
+      ],
+      "subjects": [
+        "Computer science",
+        "Work (physics)",
+        "Engineering"
+      ],
+      "is_open_access": true,
+      "source": "openalex",
+      "confidence_score": 0.76
+    }
+  },
+  "aa7cd706239eb8b9": {
+    "entry_key": "Larsson2026-ro",
+    "entry_title": "“Meet the new boss – Same as the old boss”: A longitudinal study of political post sentiment and Facebook engagement",
+    "cached_at": "2026-07-18T05:55:47.788223",
+    "metadata": {
+      "abstract": "This study investigates the dynamics of online political communication on Facebook, focusing on the Facebook posts made by the Norwegian Progress Party and its recent leaders, Siv Jensen and Sylvi Listhaug, over a decade-long period. Answering the call for longitudinal insights into political communication, we utilize a novel hybrid content analysis approach combining large language models (LLMs) and human classification, to assess the sentiment of Facebook posts — categorized as negative, positive, or neutral. Moreover, we assess the levels of engagement reached by posts featuring different sentiment. Our analysis reveals increased negative sentiment and engagement over time, particularly under Listhaug’s leadership, confirming the hypothesis that negative content drives higher engagement. Posts with negative sentiment consistently garnered more shares and comments, reflecting the strategic value of negativity in amplifying political messages. However, likes were more frequently associated with positive content, suggesting more nuanced engagement patterns. These findings contribute to our understanding the evolving landscape of digital politicking, highlighting the interplay between political actors’ communication strategies and audience engagement.",
+      "keywords": [],
+      "doi": "10.5210/fm.v31i1.14448",
+      "doi_url": "https://doi.org/10.5210/fm.v31i1.14448",
+      "url": null,
+      "arxiv_url": null,
+      "pdf_url": null,
+      "publication_date": "2026-01-08",
+      "citation_count": 0,
+      "reference_count": 0,
+      "venue": "First Monday",
+      "authors": [
+        "Anders Olof Larsson"
+      ],
+      "subjects": [],
+      "is_open_access": null,
+      "source": "crossref",
+      "confidence_score": 0.95
+    }
+  },
+  "f2d56655e70a51d3": {
+    "entry_key": "Baym2026-tr",
+    "entry_title": "It’s Bad: What Now?",
+    "cached_at": "2026-07-18T05:55:53.929359",
+    "metadata": {
+      "abstract": "This essay reflects on a decade of worsening social media harms—inequality, algorithmic power, precarious labor, and data extraction—arguing for renewed interdisciplinary and collaborative approaches to create just sociotechnical futures.",
+      "keywords": [],
+      "doi": "10.1177/20563051261432484",
+      "doi_url": "https://doi.org/10.1177/20563051261432484",
+      "url": null,
+      "arxiv_url": null,
+      "pdf_url": null,
+      "publication_date": "2026",
+      "citation_count": 0,
+      "reference_count": 7,
+      "venue": "Social Media + Society",
+      "authors": [
+        "Nancy K. Baym"
+      ],
+      "subjects": [],
+      "is_open_access": null,
+      "source": "crossref",
+      "confidence_score": 0.8749999999999999
     }
   }
 }
