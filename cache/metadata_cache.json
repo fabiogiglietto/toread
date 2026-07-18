@@ -6358,5 +6358,32 @@
       "source": "crossref",
       "confidence_score": 0.8749999999999999
     }
+  },
+  "34bdd3a5da8c985a": {
+    "entry_key": "Rossini2026-mj",
+    "entry_title": "Disrupting democracy: how informational pathways and misinformation shape trust in election results",
+    "cached_at": "2026-07-18T10:44:21.686837",
+    "metadata": {
+      "abstract": null,
+      "keywords": [],
+      "doi": "10.1080/17457289.2026.2701896",
+      "doi_url": "https://doi.org/10.1080/17457289.2026.2701896",
+      "url": null,
+      "arxiv_url": null,
+      "pdf_url": null,
+      "publication_date": "2026-07-13",
+      "citation_count": 0,
+      "reference_count": 85,
+      "venue": "Journal of Elections, Public Opinion and Parties",
+      "authors": [
+        "Patrícia Rossini",
+        "Camila Mont'Alverne",
+        "Antonis Kalogeropoulos"
+      ],
+      "subjects": [],
+      "is_open_access": null,
+      "source": "crossref",
+      "confidence_score": 0.8428571428571427
+    }
   }
 }
