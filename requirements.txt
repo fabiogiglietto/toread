@@ -5,7 +5,7 @@ PyYAML>=6.0
 # Slack ingest path (src/slack_ingest.py)
 slack_sdk>=3.43.0
 google-api-python-client>=2.198.0
-google-auth>=2.55.1
+google-auth>=2.56.0
 
 # CI feed validation (workflow + tests)
 check-jsonschema>=0.37.4
