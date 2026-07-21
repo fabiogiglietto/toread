@@ -47,11 +47,11 @@
   "b909c3af063ea494": {
     "entry_key": "noauthor_undated-bm",
     "entry_title": "cib.pdf",
-    "cached_at": "2026-07-14T06:31:33.821142",
+    "cached_at": "2026-07-21T07:26:09.448223",
     "metadata": null,
     "failed": true,
     "failure_reason": "Could not enrich entry: noauthor_undated-bm | No DOI available | Title length: 7 chars | No authors available | APIs: Crossref enabled, Semantic Scholar enabled, ArXiv enabled",
-    "last_failure_at": "2026-07-14T06:31:33.821145"
+    "last_failure_at": "2026-07-21T07:26:09.448227"
   },
   "9195fcc80574052b": {
     "entry_key": "Vincent_undated-re",
@@ -6412,6 +6412,32 @@
       "is_open_access": null,
       "source": "crossref",
       "confidence_score": 0.8529411764705882
+    }
+  },
+  "5bb567f829e50b0b": {
+    "entry_key": "Rogers2026-cy",
+    "entry_title": "Beyond verification| post-truth spaces: Studying authenticity and influence on the internet",
+    "cached_at": "2026-07-21T07:26:10.818563",
+    "metadata": {
+      "abstract": "This study contributes to a larger research project aiding fact-checkers and verification specialists in their work. It develops a technique to locate and measure the influence of problematic source clusters on social media that serve as leads. We dub these source clusters “post-truth spaces.” We first situate the post-truth space next to other spaces online where problematic information holds sway, including the “alternative influence network,” “fake news” engagement spaces, “coordinated inauthentic behavior” campaigns, and “participatory propaganda” circulation. In the post-truth space mapping technique in focus here, we locate and discuss actors, websites, and social media pages grouped together based on their inter-referencing. Their provenance is studied through digital investigation techniques and their influence through a metric measuring their distance to mainstream (or other) spaces online. We conclude with a case study of one such space on Moldovan Facebook, demonstrating the mapping technique, provenance work, and influence measure, all of which may be applied practically.",
+      "keywords": [],
+      "doi": "10.65476/1fw44702",
+      "doi_url": "https://doi.org/10.65476/1fw44702",
+      "url": null,
+      "arxiv_url": null,
+      "pdf_url": null,
+      "publication_date": "2026-07-20",
+      "citation_count": 0,
+      "reference_count": 0,
+      "venue": "International Journal of Communication",
+      "authors": [
+        "Richard Rogers",
+        "Kamila Koronska"
+      ],
+      "subjects": [],
+      "is_open_access": null,
+      "source": "crossref",
+      "confidence_score": 0.86
     }
   }
 }
