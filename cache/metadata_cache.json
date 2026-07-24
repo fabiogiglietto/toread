@@ -6466,5 +6466,40 @@
       "source": "crossref",
       "confidence_score": 0.83
     }
+  },
+  "dea1b880e2f26f82": {
+    "entry_key": "Wack2026-bt",
+    "entry_title": "Making sense of AI-generated disinformation: How audience interpretations influence the impact of deepfakes in Kenya",
+    "cached_at": "2026-07-24T11:28:38.479136",
+    "metadata": {
+      "abstract": "Does social commentary influence the effects of political deepfakes? To answer this question, we rely on a survey experiment based in Kenya ( N = 7,000). The experiment saw respondents view a generated clip of presidential candidates discussing their role in a fabricated corruption scheme coupled with embedded comments expressing varied levels of skepticism. In line with prior work, we first show that social commentary shapes how audiences interpret media. Next, we go beyond this initial finding to examine how commentary in social environments can shape the perceived authenticity of entire videos by integrating a novel survey instrument aimed at improving the ecological validity of our experimental design. Using this instrument, we find that comments which failed to remark on the synthetic origins of the video reduced support for the politician, while skeptical comments partially restored it. Partisanship also mattered, as respondents more readily dismissed deepfakes targeting candidates they supported compared to opposing candidates. Our findings highlight how the social context in which users view AI-generated disinformation can reshape audience perceptions, particularly in contexts that lack sufficient resources to maintain effective moderation systems. We conclude that audience-driven “collective sensemaking” can critically alter the influence of deepfakes, introducing both challenges and opportunities for the development of countermeasures for mitigating the influence of audio-visual disinformation. Our discussion emphasizes the need for research on deepfakes and related forms of multi-modal AI-generated content to take socio-political contexts into account when considering the direction of influence and potential for harm.",
+      "keywords": [],
+      "doi": "10.1177/20563051261462092",
+      "doi_url": "https://doi.org/10.1177/20563051261462092",
+      "url": null,
+      "arxiv_url": null,
+      "pdf_url": null,
+      "publication_date": "2026",
+      "citation_count": 0,
+      "reference_count": 102,
+      "venue": "Social Media + Society",
+      "authors": [
+        "Morgan Wack",
+        "Stephen Prochaska"
+      ],
+      "subjects": [],
+      "is_open_access": null,
+      "source": "crossref",
+      "confidence_score": 0.86
+    }
+  },
+  "63bf89009a078bb1": {
+    "entry_key": "Falkenberg2026-ka",
+    "entry_title": "Toward an integrated and globally equitable understanding of political polarization",
+    "cached_at": "2026-07-24T11:28:41.806640",
+    "metadata": null,
+    "failed": true,
+    "failure_reason": "Could not enrich entry: Falkenberg2026-ka | No DOI available | Title length: 83 chars | Authors: Falkenberg, Max, Cinelli, Matteo... | APIs: Crossref enabled, Semantic Scholar enabled, ArXiv enabled",
+    "last_failure_at": "2026-07-24T11:28:41.806646"
   }
 }
