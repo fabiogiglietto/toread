@@ -71,33 +71,6 @@
     "failure_reason": "Could not enrich entry: UnknownUnknown-db | No DOI available | Title length: 52 chars | No authors available | APIs: Crossref enabled, Semantic Scholar enabled, ArXiv enabled",
     "last_failure_at": "2026-07-22T09:05:17.562690"
   },
-  "c7fc8ab3118d580c": {
-    "entry_key": "Zhu2026-tn",
-    "entry_title": "Locate alternative media in the digital news ecosystem: A cross-country comparative study of alternative-mainstream audience overlap networks",
-    "cached_at": "2026-06-28T21:34:19.982719",
-    "metadata": {
-      "abstract": null,
-      "keywords": [],
-      "doi": "10.1080/21670811.2026.2683342",
-      "doi_url": "https://doi.org/10.1080/21670811.2026.2683342",
-      "url": null,
-      "arxiv_url": null,
-      "pdf_url": null,
-      "publication_date": "2026-06-26",
-      "citation_count": 0,
-      "reference_count": 46,
-      "venue": "Digital Journalism",
-      "authors": [
-        "Qinfeng Zhu",
-        "Fan Liang",
-        "Gabriel Miao Li"
-      ],
-      "subjects": [],
-      "is_open_access": null,
-      "source": "crossref",
-      "confidence_score": 0.8749999999999999
-    }
-  },
   "36aadb63c06941ee": {
     "entry_key": "Kim2026-br",
     "entry_title": "Cross-national information attacks: A two-decade analysis of troll behavior in Korea",
@@ -6557,6 +6530,60 @@
       "is_open_access": null,
       "source": "crossref",
       "confidence_score": 0.7875
+    }
+  },
+  "c7fc8ab3118d580c": {
+    "entry_key": "Zhu2026-tn",
+    "entry_title": "Locate alternative media in the digital news ecosystem: A cross-country comparative study of alternative-mainstream audience overlap networks",
+    "cached_at": "2026-07-29T07:35:45.424337",
+    "metadata": {
+      "abstract": null,
+      "keywords": [],
+      "doi": "10.1080/21670811.2026.2683342",
+      "doi_url": "https://doi.org/10.1080/21670811.2026.2683342",
+      "url": null,
+      "arxiv_url": null,
+      "pdf_url": null,
+      "publication_date": "2026-06-26",
+      "citation_count": 0,
+      "reference_count": 46,
+      "venue": "Digital Journalism",
+      "authors": [
+        "Qinfeng Zhu",
+        "Fan Liang",
+        "Gabriel Miao Li"
+      ],
+      "subjects": [],
+      "is_open_access": null,
+      "source": "crossref",
+      "confidence_score": 0.8749999999999999
+    }
+  },
+  "22ec746534c399f6": {
+    "entry_key": "Anicker2024-vp",
+    "entry_title": "The matrix of AI agency: On the demarcation problem in social theory",
+    "cached_at": "2026-07-29T07:35:48.574650",
+    "metadata": {
+      "abstract": "Recent developments in artificial intelligence (AI) make the question of machine agency a pressing matter. Contrary to the idea that agency is the inherent quality of a system, we argue that agency should be seen as a social status, or more precisely, a socially granted license to issue actions that is acquired and monitored in social practices. From this perspective, we develop criteria for the theoretical demarcation of agents and nonagents to distinguish entities based on their attributed abilities and their relative power in social networks. We derive a matrix of different types of agents and show how this matrix can inform empirical studies on AI.",
+      "keywords": [],
+      "doi": "10.1177/07352751241289925",
+      "doi_url": "https://doi.org/10.1177/07352751241289925",
+      "url": null,
+      "arxiv_url": null,
+      "pdf_url": null,
+      "publication_date": "2024",
+      "citation_count": 8,
+      "reference_count": 94,
+      "venue": "Sociological Theory",
+      "authors": [
+        "Fabian Anicker",
+        "Golo Flaßhoff",
+        "Frank Marcinkowski"
+      ],
+      "subjects": [],
+      "is_open_access": null,
+      "source": "crossref",
+      "confidence_score": 0.8428571428571427
     }
   }
 }
