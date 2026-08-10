@@ -4,6 +4,12 @@ name: Pipeline health
 # scripts/pipeline_health.py. Catches silent staleness that per-run failure
 # alerts cannot (dropped dispatches, disabled crons, continue-on-error legs).
 #
+# Two independent signals per repo: the age of the producing workflow's last
+# successful *scheduled* run (disabled or failing cron) and the age of its last
+# output commit (a stage that runs but quietly no-ops). Output thresholds are
+# deliberately slack — these pipelines commit only when there is new input, so
+# a few quiet days is the normal duty cycle, not a fault.
+#
 # Optional secret HEALTHCHECK_PING_URL (e.g. a healthchecks.io check) closes
 # the who-watches-the-watcher loop: if this workflow itself stops running,
 # the external service alerts.
@@ -23,6 +29,7 @@ jobs:
     runs-on: ubuntu-latest
     permissions:
       contents: read
+      actions: read   # the cron probe reads workflow-run history
     steps:
       - uses: actions/checkout@v7
 
