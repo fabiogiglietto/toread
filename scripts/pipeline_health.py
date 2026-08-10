@@ -111,15 +111,13 @@ def _age_days(iso: str) -> float:
     return (datetime.now(timezone.utc) - when).total_seconds() / 86400
 
 
-# Never ask GitHub for per_page=1 and trust position 0. On 2026-08-10 the
-# workflow-runs endpoint answered `per_page=1` for toread (14.5k runs) from a
-# stale partial index — total_count=11277 and a newest run 5 days old — while
-# the very same request at per_page=5 returned the correct 14516/0 minutes. The
-# small repo (501 runs) was unaffected, so this only bites where the history is
-# long, which is exactly where the health check matters. Ask for a page and
-# take the max: robust to a short page, to stale tails, and to any ordering
-# surprise. It costs the same single request.
+# Never ask GitHub for per_page=1 and trust position 0. Ask for a page and take
+# the newest: robust to a short page and to any ordering surprise, at the cost
+# of the same single request.
 _PAGE = 10
+
+# A page is not enough on its own, though: a lagging replica returns a wholly
+# stale page, which no page size can rescue. See confirmed_age() below.
 
 
 def last_commit_age_days(repo: str, path: str | None) -> float | None:
@@ -172,13 +170,38 @@ def post_slack(text: str) -> None:
     urllib.request.urlopen(req, timeout=30)
 
 
+def confirmed_age(probe, limit: float, *args) -> float | None:
+    """Read once; if that reads as stale, read again and keep the newer answer.
+
+    GitHub has served this check a stale read for the *first* Actions-API
+    request of a job: `update_feed.yml` came back with a newest scheduled run
+    5 days old, from an index whose total_count was 3k short of the truth,
+    while the same query moments later — and every query from a workstation —
+    returned a run minutes old. Observed twice in CI, always on the first
+    request, never on a later one.
+
+    A stale read can only ever make something look *older*, so confirming
+    before alerting is enough: no extra request on the healthy path, one on
+    the path that was about to page someone. Which is the whole point — an
+    alert nobody can trust is the failure this check is being fixed for.
+    """
+    age = probe(*args)
+    if age is not None and age <= limit:
+        return age
+    second = probe(*args)
+    if age is None or second is None:
+        return second if age is None else age
+    return min(age, second)
+
+
 def check(target: Target, override: float | None) -> tuple[list[str], list[str]]:
     """Return (alerts, errors) for one target."""
     alerts, errors = [], []
 
     cron_limit = override if override is not None else target.cron_max_days
     try:
-        age = last_scheduled_run_age_days(target.repo, target.workflow)
+        age = confirmed_age(last_scheduled_run_age_days, cron_limit,
+                            target.repo, target.workflow)
     except Exception as exc:  # API error is itself worth reporting
         errors.append(f"• {target.repo} `{target.workflow}` — cron check "
                       f"failed: {exc}")
@@ -202,7 +225,8 @@ def check(target: Target, override: float | None) -> tuple[list[str], list[str]]
     out_limit = override if override is not None else target.output_max_days
     label = f"{target.repo}" + (f":{target.path}" if target.path else "")
     try:
-        age = last_commit_age_days(target.repo, target.path)
+        age = confirmed_age(last_commit_age_days, out_limit,
+                            target.repo, target.path)
     except Exception as exc:
         errors.append(f"• {label} — output check failed: {exc}")
         return alerts, errors

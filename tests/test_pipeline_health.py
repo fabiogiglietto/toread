@@ -196,6 +196,48 @@ class TestNewestOfPage:
                             for u in seen), seen
 
 
+class TestConfirmedAge:
+    """GitHub served a 5-day-stale read on a job's first Actions-API call."""
+
+    def test_fresh_reading_is_not_re_queried(self):
+        calls = []
+
+        def probe():
+            calls.append(1)
+            return 0.5
+
+        assert pipeline_health.confirmed_age(probe, 1) == 0.5
+        assert len(calls) == 1
+
+    def test_stale_reading_is_confirmed_and_the_newer_answer_wins(self):
+        answers = iter([4.9, 0.02])  # stale first read, truth on the retry
+
+        assert pipeline_health.confirmed_age(lambda: next(answers), 1) == 0.02
+
+    def test_genuinely_stale_stays_stale(self):
+        """Confirming must not blunt a real outage."""
+        answers = iter([9.0, 9.0])
+        assert pipeline_health.confirmed_age(lambda: next(answers), 1) == 9.0
+
+    def test_none_is_confirmed_before_being_believed(self):
+        """An empty result set is a 'no runs on record' alert — verify it."""
+        answers = iter([None, 0.3])
+        assert pipeline_health.confirmed_age(lambda: next(answers), 1) == 0.3
+
+    def test_none_on_both_reads_stays_none(self):
+        assert pipeline_health.confirmed_age(lambda: None, 1) is None
+
+    def test_second_read_returning_none_keeps_the_first_age(self):
+        answers = iter([9.0, None])
+        assert pipeline_health.confirmed_age(lambda: next(answers), 1) == 9.0
+
+    def test_args_are_forwarded_to_the_probe(self):
+        seen = []
+        pipeline_health.confirmed_age(
+            lambda *a: (seen.append(a), 0.1)[1], 1, "repo", "wf.yml")
+        assert seen == [("repo", "wf.yml")]
+
+
 class TestTargets:
     """The configured targets are the thing that produced the false alarms."""
 
