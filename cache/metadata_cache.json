@@ -116,64 +116,6 @@
       "confidence_score": 0.7999999999999999
     }
   },
-  "41d44e37653aec97": {
-    "entry_key": "Schemer2026-mh",
-    "entry_title": "Does the method affect the outcome? How measures of partisan slant of media outlets and affective polarization drive results about polarization in the United States",
-    "cached_at": "2026-07-12T07:23:36.762279",
-    "metadata": {
-      "abstract": null,
-      "keywords": [],
-      "doi": "10.1080/10584609.2026.2699105",
-      "doi_url": "https://doi.org/10.1080/10584609.2026.2699105",
-      "url": null,
-      "arxiv_url": null,
-      "pdf_url": null,
-      "publication_date": "2026-07-05",
-      "citation_count": 0,
-      "reference_count": 59,
-      "venue": "Political Communication",
-      "authors": [
-        "Christian Schemer",
-        "Klara Langmann",
-        "Ariel Hasell",
-        "Brian Weeks"
-      ],
-      "subjects": [],
-      "is_open_access": null,
-      "source": "crossref",
-      "confidence_score": 0.8333333333333333
-    }
-  },
-  "6f56bea8a24eed0b": {
-    "entry_key": "Kotz2026-lk",
-    "entry_title": "Conversational AI shifts beliefs and policy support among skeptics across contested societal issues",
-    "cached_at": "2026-07-12T07:23:39.613230",
-    "metadata": {
-      "abstract": "Public beliefs and policy attitudes on contested societal issues frequently diverge from empirical evidence and scientific consensus. In a preregistered experiment with 6,558 American participants, we tested the generalizability of evidence-based AI dialogue as a tool to shift beliefs and policy support across three structurally distinct societal issues (climate change, vaccination, and economic inequality), and examined for whom effects are strongest. Participants engaged in interactive dialogues with GPT-5 targeting beliefs, policies, or both. Compared to a neutral control conversation, AI dialogues shifted beliefs across all three domains, suggesting generalizable persuasive potential, and increased support for politically contested policies, especially carbon and estate taxes. Estimated effects were strongest among initially skeptical participants, who are typically hardest to reach, and those with higher trust in science. Text analyses revealed that GPT-5 adapted its approach to skeptical participants. Brief AI dialogues may thus function as a scalable, generalizable tool for evidence-based public communication.",
-      "keywords": [],
-      "doi": "10.31234/osf.io/7szrn_v1",
-      "doi_url": "https://doi.org/10.31234/osf.io/7szrn_v1",
-      "url": null,
-      "arxiv_url": null,
-      "pdf_url": null,
-      "publication_date": null,
-      "citation_count": 0,
-      "reference_count": 0,
-      "venue": null,
-      "authors": [
-        "Johannes Kotz",
-        "Kevin E. Tiede",
-        "Jelena Meyer",
-        "Maj-Britt Sterba",
-        "Christian Breunig",
-        "Wolfgang Gaissmaier"
-      ],
-      "subjects": [],
-      "is_open_access": null,
-      "source": "crossref",
-      "confidence_score": 0.8214285714285714
-    }
-  },
   "df48b78c330b92b4": {
     "entry_key": "Pierri2025-hm",
     "entry_title": "Research opportunities and challenges of the EU's Digital Services Act",
@@ -6664,6 +6606,91 @@
       "is_open_access": null,
       "source": "crossref",
       "confidence_score": 0.83
+    }
+  },
+  "6f56bea8a24eed0b": {
+    "entry_key": "Kotz2026-lk",
+    "entry_title": "Conversational AI shifts beliefs and policy support among skeptics across contested societal issues",
+    "cached_at": "2026-08-11T08:00:59.887666",
+    "metadata": {
+      "abstract": "Public beliefs and policy attitudes on contested societal issues frequently diverge from empirical evidence and scientific consensus. In a preregistered experiment with 6,558 American participants, we tested the generalizability of evidence-based AI dialogue as a tool to shift beliefs and policy support across three structurally distinct societal issues (climate change, vaccination, and economic inequality), and examined for whom effects are strongest. Participants engaged in interactive dialogues with GPT-5 targeting beliefs, policies, or both. Compared to a neutral control conversation, AI dialogues shifted beliefs across all three domains, suggesting generalizable persuasive potential, and increased support for politically contested policies, especially carbon and estate taxes. Estimated effects were strongest among initially skeptical participants, who are typically hardest to reach, and those with higher trust in science. Text analyses revealed that GPT-5 adapted its approach to skeptical participants. Brief AI dialogues may thus function as a scalable, generalizable tool for evidence-based public communication.",
+      "keywords": [],
+      "doi": "10.31234/osf.io/7szrn_v1",
+      "doi_url": "https://doi.org/10.31234/osf.io/7szrn_v1",
+      "url": null,
+      "arxiv_url": null,
+      "pdf_url": null,
+      "publication_date": null,
+      "citation_count": 0,
+      "reference_count": 0,
+      "venue": null,
+      "authors": [
+        "Johannes Kotz",
+        "Kevin E. Tiede",
+        "Jelena Meyer",
+        "Maj-Britt Sterba",
+        "Christian Breunig",
+        "Wolfgang Gaissmaier"
+      ],
+      "subjects": [],
+      "is_open_access": null,
+      "source": "crossref",
+      "confidence_score": 0.8214285714285714
+    }
+  },
+  "41d44e37653aec97": {
+    "entry_key": "Schemer2026-mh",
+    "entry_title": "Does the method affect the outcome? How measures of partisan slant of media outlets and affective polarization drive results about polarization in the United States",
+    "cached_at": "2026-08-11T08:01:03.153659",
+    "metadata": {
+      "abstract": null,
+      "keywords": [],
+      "doi": "10.1080/10584609.2026.2699105",
+      "doi_url": "https://doi.org/10.1080/10584609.2026.2699105",
+      "url": null,
+      "arxiv_url": null,
+      "pdf_url": null,
+      "publication_date": "2026-07-05",
+      "citation_count": 0,
+      "reference_count": 59,
+      "venue": "Political Communication",
+      "authors": [
+        "Christian Schemer",
+        "Klara Langmann",
+        "Ariel Hasell",
+        "Brian Weeks"
+      ],
+      "subjects": [],
+      "is_open_access": null,
+      "source": "crossref",
+      "confidence_score": 0.8333333333333333
+    }
+  },
+  "b21e19e80614338f": {
+    "entry_key": "Kakavand2026-kt",
+    "entry_title": "Multi-platform research in the light of technology affordances: networks of the far right in Germany",
+    "cached_at": "2026-08-11T08:01:06.038921",
+    "metadata": {
+      "abstract": null,
+      "keywords": [],
+      "doi": "10.1080/19331681.2026.2697186",
+      "doi_url": "https://doi.org/10.1080/19331681.2026.2697186",
+      "url": null,
+      "arxiv_url": null,
+      "pdf_url": null,
+      "publication_date": "2026-08-10",
+      "citation_count": 0,
+      "reference_count": 59,
+      "venue": "Journal of Information Technology &amp; Politics",
+      "authors": [
+        "Azade E. Kakavand",
+        "Nicola Righetti",
+        "Annie Waldherr"
+      ],
+      "subjects": [],
+      "is_open_access": null,
+      "source": "crossref",
+      "confidence_score": 0.8374999999999999
     }
   }
 }
