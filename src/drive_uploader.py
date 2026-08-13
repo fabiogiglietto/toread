@@ -90,8 +90,20 @@ def _resolve_credentials():
 
 
 def build_filename(*, authors: Sequence[str], year: Optional[str],
-                   title: str) -> str:
-    """Mirror the Paperpile-style filename the downstream matcher expects."""
+                   title: str, bibkey: Optional[str] = None) -> str:
+    """Mirror the Paperpile-style filename the downstream matcher expects,
+    prefixed with the bibkey.
+
+    The bibkey prefix is what makes PDF retrieval survive a metadata-enrichment
+    failure: when no title resolves, the name degrades to `Unknown - untitled`,
+    whose tokens the downstream title-overlap matcher can never match. The
+    bibkey identifies the record outright (toread issue #13).
+
+    It is always included, never only-when-the-title-is-missing: the matcher
+    can only anchor on the prefix if the prefix is reliably there. The
+    Paperpile-shaped remainder is kept so the author/year tie-breakers and the
+    legacy exact-name path still have something to work with.
+    """
     first_author = "Unknown"
     if authors:
         parts = authors[0].split()
@@ -105,6 +117,11 @@ def build_filename(*, authors: Sequence[str], year: Optional[str],
         name = f"{author_part} {year} - {title_clean}.pdf"
     else:
         name = f"{author_part} - {title_clean}.pdf"
+
+    if bibkey:
+        # ' - ' separator: the downstream matcher anchors on `{bibkey} - ` so a
+        # key is never a prefix of a longer sibling key.
+        name = f"{_scrub_for_filename(bibkey)} - {name}"
     return name
 
 

@@ -56,6 +56,42 @@ def test_build_filename_no_year_no_authors():
     assert name == "Unknown - Lonely.pdf"
 
 
+# ---- bibkey prefix (issue #13) -------------------------------------------
+
+
+def test_build_filename_prefixes_bibkey():
+    name = build_filename(
+        authors=["Jane Smith"], year="2026", title="The widget paradox",
+        bibkey="Smith2026-ab",
+    )
+    assert name == "Smith2026-ab - Smith 2026 - The widget paradox.pdf"
+
+
+def test_build_filename_bibkey_survives_missing_metadata():
+    """The case the prefix exists for: enrichment resolved nothing, so the
+    Paperpile-shaped remainder degrades to `Unknown - untitled` and the bibkey
+    is the only thing left for the downstream matcher to anchor on."""
+    name = build_filename(
+        authors=[], year=None, title="", bibkey="Slack1783075716-sl1c",
+    )
+    assert name == "Slack1783075716-sl1c - Unknown - untitled.pdf"
+    assert name.startswith("Slack1783075716-sl1c - ")
+
+
+def test_build_filename_bibkey_is_scrubbed():
+    """A bibkey with a path separator must not create a Drive subpath."""
+    name = build_filename(
+        authors=["Smith"], year="2026", title="T", bibkey="we/ird",
+    )
+    assert "/" not in name
+
+
+def test_build_filename_without_bibkey_keeps_paperpile_shape():
+    """Paperpile's own uploads carry no bibkey; the legacy name is unchanged."""
+    name = build_filename(authors=["Jane Smith"], year="2026", title="T")
+    assert name == "Smith 2026 - T.pdf"
+
+
 def test_scrub_normalizes_whitespace():
     out = _scrub_for_filename("hello    world\n\t  ")
     assert out == "hello world"
