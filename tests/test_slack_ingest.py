@@ -1088,6 +1088,11 @@ def test_uploaded_filename_has_bibkey_even_when_untitled(tmp_path):
     }]
     ingestor.run()
 
+    import json
+    state = json.loads(ingestor.config.state_file.read_text(encoding="utf-8"))
+    bibkey = state["processed"]["100.0"]
+
     filename = drive.upload.call_args.kwargs["filename"]
-    assert filename.startswith("Slack1000-"), filename
-    assert "untitled" in filename
+    # Derived, not hardcoded: pinning the ts-derived mint format here would
+    # turn a change in `mint_bibkey` into a false failure of the *contract*.
+    assert filename == f"{bibkey} - Unknown - untitled.pdf", filename
