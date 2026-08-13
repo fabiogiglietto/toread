@@ -816,6 +816,27 @@ class SlackAdapter:
 # ---- The orchestrator -----------------------------------------------------
 
 
+# Message subtypes that are channel housekeeping, not somebody suggesting a
+# paper: joins/leaves, topic and description changes, renames, pins.
+#
+# Deliberately NOT here: `file_share`. That is a real user message carrying an
+# attachment, and it is the primary way PDFs reach us — skipping it would break
+# the attached-PDF path entirely.
+_CHANNEL_EVENT_SUBTYPES = frozenset({
+    "channel_join", "channel_leave", "channel_topic", "channel_purpose",
+    "channel_name", "channel_archive", "channel_unarchive",
+    "channel_convert_to_private", "channel_convert_to_public",
+    "group_join", "group_leave", "group_topic", "group_purpose",
+    "group_name", "group_archive", "group_unarchive",
+    "pinned_item", "unpinned_item", "tombstone",
+    "bot_message", "bot_add", "bot_remove", "bot_disable", "bot_enable",
+})
+
+
+def _is_channel_event(subtype: Optional[str]) -> bool:
+    return bool(subtype) and subtype in _CHANNEL_EVENT_SUBTYPES
+
+
 @dataclass
 class IngestConfig:
     channel_id: str
@@ -836,6 +857,10 @@ class IngestConfig:
     # default: upstream toread keeps suggester identity private; the MINE team
     # fork turns this on for site attribution and @-mentions.
     attribute_suggesters: bool = False
+    # Days after which a `pending` entry (we asked for a PDF, none ever came)
+    # is dropped. Without this the queue only grows: every entry costs a
+    # `conversations_replies` call on every tick, forever. 0 disables expiry.
+    pending_max_age_days: int = 30
 
 
 class SlackIngestor:
@@ -868,7 +893,11 @@ class SlackIngestor:
             self.config.feed_file, self.config.inbox_bib_file
         )
         summary = {"added": 0, "asked_for_pdf": 0, "skipped": 0,
-                   "duplicate": 0, "errors": 0}
+                   "duplicate": 0, "errors": 0, "expired": 0}
+
+        # 0. Drop pending entries nobody ever answered. Before the retry loop,
+        #    so an expired entry doesn't cost one more thread fetch.
+        summary["expired"] = self._expire_pending(state)
 
         # 1. Re-poll threads we're waiting on.
         for parent_ts in list(state.pending.keys()):
@@ -916,9 +945,7 @@ class SlackIngestor:
         text = msg.get("text") or ""
         ts = msg["ts"]
 
-        if msg.get("subtype") and msg["subtype"] in {
-            "channel_join", "channel_leave", "bot_message"
-        }:
+        if _is_channel_event(msg.get("subtype")):
             return "skipped"
 
         # Never react to messages posted by a bot/app (including our own ✅ /
@@ -1007,6 +1034,57 @@ class SlackIngestor:
 
         return self._finalise(state, msg, paper, pdf_candidate, pdf_source,
                               unpaywall_pdf_url)
+
+    def _expire_pending(self, state: SlackIngestState) -> int:
+        """Drop `pending` entries older than `pending_max_age_days`.
+
+        The queue is otherwise append-only: an entry is removed only when a PDF
+        finally shows up, so a submission nobody answered is re-polled on every
+        tick forever — one `conversations_replies` call each, indefinitely.
+
+        Age covers both cases the issue describes. A message deleted from Slack
+        is never going to get a PDF either, so it ages out on this same path;
+        that saves inferring deletion from an empty thread read, which
+        `SlackAdapter.fetch_thread` cannot distinguish from an API error (it
+        returns `[]` for both).
+
+        Eviction is silent by design: the "please attach the PDF" reply already
+        set expectations, and posting "giving up" into a six-week-old thread is
+        noise.
+        """
+        max_age = self.config.pending_max_age_days
+        if not max_age or max_age <= 0:
+            return 0
+
+        now = datetime.now(timezone.utc)
+        expired = 0
+        for ts in list(state.pending.keys()):
+            ctx = state.pending[ts]
+            first_seen = ctx.get("first_seen")
+            if not first_seen:
+                # Pre-dates the field, or hand-built. Stamp it now and start
+                # the clock rather than evicting something of unknown age.
+                ctx["first_seen"] = _now_iso()
+                continue
+            try:
+                seen_at = datetime.fromisoformat(first_seen)
+            except (TypeError, ValueError):
+                ctx["first_seen"] = _now_iso()
+                continue
+            if seen_at.tzinfo is None:
+                seen_at = seen_at.replace(tzinfo=timezone.utc)
+
+            age_days = (now - seen_at).days
+            if age_days >= max_age:
+                self.logger.info(
+                    "Expiring pending submission %s after %d days (no PDF ever "
+                    "attached): %s", ts, age_days,
+                    (ctx.get("permalink") or ctx.get("text") or "")[:120],
+                )
+                state.pending.pop(ts, None)
+                expired += 1
+
+        return expired
 
     def _retry_pending(self, state: SlackIngestState, parent_ts: str) -> bool:
         """Re-check a thread for a new PDF attachment. Returns True if ingested."""
@@ -1259,6 +1337,16 @@ def _build_config_from_env(args) -> Optional[IngestConfig]:
     # (team fork). Defaults to false, preserving upstream privacy behavior.
     attribute_suggesters = (os.environ.get(
         "SLACK_ATTRIBUTE_SUGGESTERS", "false") or "false").lower() == "true"
+    # SLACK_PENDING_MAX_AGE_DAYS=0 disables expiry of unanswered submissions.
+    try:
+        pending_max_age_days = int(
+            os.environ.get("SLACK_PENDING_MAX_AGE_DAYS") or 30
+        )
+    except ValueError:
+        logging.getLogger(__name__).warning(
+            "SLACK_PENDING_MAX_AGE_DAYS is not an integer — using 30."
+        )
+        pending_max_age_days = 30
     return IngestConfig(
         channel_id=channel,
         hashtag=hashtag,
@@ -1272,6 +1360,7 @@ def _build_config_from_env(args) -> Optional[IngestConfig]:
                        or DEFAULT_NOTE_BASE_URL),
         require_hashtag=require_hashtag,
         attribute_suggesters=attribute_suggesters,
+        pending_max_age_days=pending_max_age_days,
     )
 
 
