@@ -1096,3 +1096,126 @@ def test_uploaded_filename_has_bibkey_even_when_untitled(tmp_path):
     # Derived, not hardcoded: pinning the ts-derived mint format here would
     # turn a change in `mint_bibkey` into a false failure of the *contract*.
     assert filename == f"{bibkey} - Unknown - untitled.pdf", filename
+
+
+# ---- pending-queue expiry + channel events (issue #13, minor related) ----
+
+
+def _iso_days_ago(days):
+    from datetime import datetime, timedelta, timezone
+    return (datetime.now(timezone.utc) - timedelta(days=days)).isoformat()
+
+
+def _seed_pending(tmp_path, entries, pending_max_age_days=None):
+    """An ingestor whose state file already holds `pending` entries."""
+    import json
+    ingestor, slack, drive, unpaywall = _build_ingestor(tmp_path)
+    if pending_max_age_days is not None:
+        ingestor.config.pending_max_age_days = pending_max_age_days
+    slack.fetch_history.return_value = []
+    ingestor.config.state_file.write_text(
+        json.dumps({"last_ts": "9999999999.0", "processed": {},
+                    "processed_meta": {}, "pending": entries}),
+        encoding="utf-8",
+    )
+    return ingestor, slack, drive
+
+
+def test_pending_entry_expires_after_max_age(tmp_path):
+    """Observed in the fork: four entries, 36-45 days old, none of which will
+    ever get a PDF, each costing a thread fetch on every tick."""
+    ingestor, slack, drive = _seed_pending(tmp_path, {
+        "100.0": {"text": "https://example.org/a", "first_seen": _iso_days_ago(45)},
+    })
+    summary = ingestor.run()
+
+    assert summary["expired"] == 1
+    # And it must not cost a thread fetch on the way out.
+    slack.fetch_thread.assert_not_called()
+
+
+def test_recent_pending_entry_survives(tmp_path):
+    ingestor, slack, drive = _seed_pending(tmp_path, {
+        "100.0": {"text": "https://example.org/a", "first_seen": _iso_days_ago(3)},
+    })
+    summary = ingestor.run()
+
+    assert summary["expired"] == 0
+    slack.fetch_thread.assert_called_once()
+
+
+def test_expiry_can_be_disabled(tmp_path):
+    ingestor, slack, drive = _seed_pending(
+        tmp_path,
+        {"100.0": {"text": "x", "first_seen": _iso_days_ago(400)}},
+        pending_max_age_days=0,
+    )
+    assert ingestor.run()["expired"] == 0
+
+
+def test_pending_without_first_seen_is_stamped_not_evicted(tmp_path):
+    """An entry of unknown age must start the clock, not be dropped on sight."""
+    import json
+    ingestor, slack, drive = _seed_pending(tmp_path, {
+        "100.0": {"text": "https://example.org/a"},
+    })
+    summary = ingestor.run()
+
+    assert summary["expired"] == 0
+    state = json.loads(ingestor.config.state_file.read_text(encoding="utf-8"))
+    assert state["pending"]["100.0"]["first_seen"]
+
+
+def test_expired_entry_is_not_reingested_in_the_same_run(tmp_path):
+    """The loop this could create: an evicted ts is in neither `processed` nor
+    `pending`, so only `last_ts` stops step 2 re-ingesting it, re-asking for a
+    PDF and putting it straight back. Verified against the real fork state,
+    whose `last_ts` leads every pending ts."""
+    import json
+    ingestor, slack, drive = _seed_pending(tmp_path, {
+        "100.0": {"text": "#zettelkasten https://example.org/a",
+                  "first_seen": _iso_days_ago(45)},
+    })
+    summary = ingestor.run()
+    state = json.loads(ingestor.config.state_file.read_text(encoding="utf-8"))
+
+    assert summary["expired"] == 1
+    assert state["pending"] == {}
+
+    # The guard is the cursor, and it is load-bearing: an evicted ts is in
+    # neither `processed` nor `pending`, so the *only* reason step 2 does not
+    # see it again is that `fetch_history` is asked for messages newer than
+    # `last_ts`. Assert that contract rather than a canned history — feeding
+    # the message back in by hand would test a state Slack cannot return.
+    oldest = slack.fetch_history.call_args.kwargs["oldest"]
+    assert float(oldest) > 100.0, (
+        "expired entries are only safe from re-ingest while last_ts leads them"
+    )
+
+
+def test_channel_event_subtypes_are_skipped(tmp_path):
+    """Defensive: today the URL/hashtag gate already skips the channel-purpose
+    message observed in the fork (it carries no link). This covers a future
+    channel event that *does* contain a URL in dedicated-channel mode."""
+    ingestor, slack, drive, _unpaywall = _build_ingestor(tmp_path)
+    ingestor.config.require_hashtag = False
+    slack.fetch_history.return_value = [{
+        "ts": "100.0",
+        "subtype": "channel_purpose",
+        "text": "set the channel description: papers, see https://example.org/x",
+        "user": "U1",
+    }]
+    summary = ingestor.run()
+
+    assert summary["skipped"] == 1
+    assert summary["asked_for_pdf"] == 0
+    drive.upload.assert_not_called()
+
+
+def test_file_share_subtype_is_not_skipped(tmp_path):
+    """`file_share` is a real user message carrying an attachment — the primary
+    way PDFs arrive. It must never be treated as a channel event."""
+    from src.slack_ingest import _is_channel_event
+    assert not _is_channel_event("file_share")
+    assert not _is_channel_event(None)
+    assert _is_channel_event("channel_topic")
