@@ -866,3 +866,233 @@ def test_extract_citation_meta_strips_ojs_view_of_prefix():
     # citation_title is authoritative — never rewritten.
     html2 = '<meta name="citation_title" content="View of the Alps from Turin">'
     assert extract_citation_meta_from_html(html2)["title"] == "View of the Alps from Turin"
+
+
+# ---- DataCite DOI fallback (issue #13, "Untitled" symptom) ----------------
+
+# Trimmed from the real api.datacite.org response for 10.18716/pd.v2i1.11657 —
+# the DOI from the third occurrence in issue #13. Crossref 404s on it.
+_DATACITE_PAYLOAD = {
+    "data": {
+        "attributes": {
+            "titles": [{"title": "Beyond Artificial Intelligence"}],
+            "creators": [{
+                "name": "Esposito, Elena", "nameType": "Personal",
+                "givenName": "Elena", "familyName": "Esposito",
+            }],
+            "publicationYear": 2025,
+            "url": "https://journals.ub.uni-koeln.de/index.php/phidi/article/view/11657",
+            "descriptions": [
+                {"description": "Boilerplate.", "descriptionType": "Other"},
+                {"description": "The remarkable performance of recent algorithms.",
+                 "descriptionType": "Abstract"},
+            ],
+        }
+    }
+}
+
+
+class _FakeResponse:
+    def __init__(self, status_code=200, payload=None):
+        self.status_code = status_code
+        self._payload = payload if payload is not None else {}
+
+    def json(self):
+        return self._payload
+
+
+def _datacite_resolver(monkeypatch, *, status=200, payload=None, calls=None):
+    """PaperResolver with Crossref disabled and `requests.get` stubbed, so the
+    DataCite rung is exercised with no network."""
+    import requests
+    from src.slack_ingest import PaperResolver
+
+    def fake_get(url, **kwargs):
+        if calls is not None:
+            calls.append(url)
+        return _FakeResponse(status, payload if payload is not None
+                             else _DATACITE_PAYLOAD)
+
+    monkeypatch.setattr(requests, "get", fake_get)
+    return PaperResolver(enable_crossref=False, enable_arxiv=False,
+                         enable_doi_scrape=False)
+
+
+def test_datacite_resolves_doi_crossref_does_not_hold(monkeypatch):
+    """The exact failure from issue #13: a DataCite DOI that Crossref 404s on
+    used to fall through to `minimal` — i.e. title-less, then either dropped
+    from the feed or published as "Untitled"."""
+    calls = []
+    resolver = _datacite_resolver(monkeypatch, calls=calls)
+    resolved = resolver.resolve(
+        text="https://doi.org/10.18716/pd.v2i1.11657",
+        urls=["https://doi.org/10.18716/pd.v2i1.11657"],
+    )
+
+    assert resolved.source == "datacite"
+    assert resolved.title == "Beyond Artificial Intelligence"
+    assert resolved.year == "2025"
+    assert resolved.abstract == "The remarkable performance of recent algorithms."
+    assert "datacite.org" in calls[0]
+
+
+def test_datacite_author_is_given_then_family(monkeypatch):
+    """`build_filename` takes the last whitespace token as the surname, so the
+    creator must come back as "Elena Esposito" — "Esposito, Elena" would file
+    the paper under "Elena"."""
+    resolver = _datacite_resolver(monkeypatch)
+    resolved = resolver.resolve(text="", urls=["https://doi.org/10.18716/pd.v2i1.11657"])
+
+    assert resolved.authors == ["Elena Esposito"]
+    assert resolved.authors[0].split()[-1] == "Esposito"
+
+
+def test_datacite_flips_display_name_without_given_family(monkeypatch):
+    """Older DataCite records carry only the "Family, Given" display form."""
+    payload = {"data": {"attributes": {
+        "titles": [{"title": "A Paper"}],
+        "creators": [{"name": "Esposito, Elena"}, {"name": "Cher"}],
+        "publicationYear": 2024,
+    }}}
+    resolver = _datacite_resolver(monkeypatch, payload=payload)
+    resolved = resolver.resolve(text="", urls=["https://doi.org/10.5555/x"])
+
+    assert resolved.authors == ["Elena Esposito", "Cher"]
+
+
+def test_datacite_titleless_record_falls_through(monkeypatch):
+    """A DataCite hit with no title is no better than `minimal`, and must not
+    claim source="datacite" — that would hide the very failure being fixed."""
+    payload = {"data": {"attributes": {"titles": [], "publicationYear": 2024}}}
+    calls = []
+    resolver = _datacite_resolver(monkeypatch, payload=payload, calls=calls)
+    resolved = resolver.resolve(text="", urls=["https://doi.org/10.5555/x"])
+
+    # Assert the rung actually ran: `source == "minimal"` alone would also hold
+    # if DataCite were never consulted.
+    assert any("datacite.org" in c for c in calls)
+    assert resolved.source == "minimal"
+    assert resolved.title is None
+
+
+def test_datacite_non_200_falls_through(monkeypatch):
+    """A DOI in neither registry still degrades to `minimal`, not an exception."""
+    calls = []
+    resolver = _datacite_resolver(monkeypatch, status=404, calls=calls)
+    resolved = resolver.resolve(text="", urls=["https://doi.org/10.5555/nope"])
+
+    assert any("datacite.org" in c for c in calls)
+    assert resolved.source == "minimal"
+
+
+def test_datacite_not_called_when_crossref_resolves(monkeypatch):
+    """Crossref stays the primary: a Crossref hit must not cost a DataCite
+    request."""
+    import requests
+    from src.slack_ingest import PaperResolver
+    calls = []
+
+    crossref_payload = {"message": {
+        "title": ["A Crossref Paper"],
+        "author": [{"given": "Ada", "family": "Lovelace"}],
+        "issued": {"date-parts": [[2021]]},
+        "URL": "https://example.org/p",
+    }}
+
+    def fake_get(url, **kwargs):
+        calls.append(url)
+        return _FakeResponse(200, crossref_payload)
+
+    monkeypatch.setattr(requests, "get", fake_get)
+    resolver = PaperResolver(enable_arxiv=False, enable_doi_scrape=False)
+    resolved = resolver.resolve(text="10.1234/real", urls=[])
+
+    assert resolved.source == "crossref"
+    assert len(calls) == 1
+    assert "datacite.org" not in calls[0]
+
+
+def test_datacite_network_error_is_safe(monkeypatch):
+    """A DataCite outage must not break ingest."""
+    import requests
+    from src.slack_ingest import PaperResolver
+
+    def boom(url, **kwargs):
+        raise RuntimeError("network down")
+
+    monkeypatch.setattr(requests, "get", boom)
+    resolver = PaperResolver(enable_crossref=False, enable_arxiv=False,
+                             enable_doi_scrape=False)
+    resolved = resolver.resolve(text="", urls=["https://doi.org/10.5555/x"])
+
+    assert resolved.source == "minimal"
+
+
+# ---- Drive filename carries the bibkey (issue #13) -----------------------
+
+
+def test_uploaded_filename_is_prefixed_with_bibkey(tmp_path):
+    """Contract with fg-zettelkasten's `drive_client.find_pdf`, which anchors
+    on `{bibkey} - `. Asserted at the call site, not just in `build_filename`,
+    because the failure mode is a caller that stops passing the key."""
+    fake_paper = ResolvedPaper(
+        doi="10.1/x", title="X", authors=["Jane Smith"], year="2026",
+        url="https://doi.org/10.1/x", source="crossref",
+    )
+    resolver = MagicMock(spec=PaperResolver)
+    resolver.resolve.return_value = fake_paper
+
+    ingestor, slack, drive, unpaywall = _build_ingestor(tmp_path,
+                                                        resolver=resolver)
+    slack.fetch_history.return_value = [{
+        "ts": "100.0",
+        "text": "#zettelkasten please add 10.1/x",
+        "user": "U1",
+        "files": [{
+            "mimetype": "application/pdf",
+            "url_private_download": "https://files.slack.com/x.pdf",
+        }],
+    }]
+    ingestor.run()
+
+    # The minted key carries a ts-derived suffix, so derive it rather than
+    # hardcoding: what matters is that the *actual* key is the prefix.
+    import json
+    state = json.loads(ingestor.config.state_file.read_text(encoding="utf-8"))
+    bibkey = state["processed"]["100.0"]
+
+    filename = drive.upload.call_args.kwargs["filename"]
+    assert filename.startswith(f"{bibkey} - "), filename
+    # The Paperpile-shaped remainder is preserved after the prefix.
+    assert filename == f"{bibkey} - Smith 2026 - X.pdf"
+
+
+def test_uploaded_filename_has_bibkey_even_when_untitled(tmp_path):
+    """The issue's cascade: with no resolved title the name degrades to
+    `Unknown - untitled`, which the downstream title-token matcher can never
+    match. The bibkey prefix is what keeps the PDF findable."""
+    fake_paper = ResolvedPaper(source="minimal")
+    resolver = MagicMock(spec=PaperResolver)
+    resolver.resolve.return_value = fake_paper
+
+    ingestor, slack, drive, unpaywall = _build_ingestor(tmp_path,
+                                                        resolver=resolver)
+    slack.fetch_history.return_value = [{
+        "ts": "100.0",
+        "text": "#zettelkasten https://example.org/mystery",
+        "user": "U1",
+        "files": [{
+            "mimetype": "application/pdf",
+            "url_private_download": "https://files.slack.com/x.pdf",
+        }],
+    }]
+    ingestor.run()
+
+    import json
+    state = json.loads(ingestor.config.state_file.read_text(encoding="utf-8"))
+    bibkey = state["processed"]["100.0"]
+
+    filename = drive.upload.call_args.kwargs["filename"]
+    # Derived, not hardcoded: pinning the ts-derived mint format here would
+    # turn a change in `mint_bibkey` into a false failure of the *contract*.
+    assert filename == f"{bibkey} - Unknown - untitled.pdf", filename

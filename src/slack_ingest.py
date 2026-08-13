@@ -459,7 +459,7 @@ class ResolvedPaper:
     url: Optional[str] = None
     abstract: Optional[str] = None
     arxiv_id: Optional[str] = None
-    source: str = ""  # "crossref" | "arxiv" | "minimal"
+    source: str = ""  # "crossref" | "datacite" | "arxiv" | "landing_page" | "minimal"
 
 
 class PaperResolver:
@@ -468,17 +468,23 @@ class PaperResolver:
     The full enrichment still runs later in the main pipeline; we just need
     enough to mint a bibkey and a Drive filename.
 
-    `enable_crossref` / `enable_arxiv` exist for test isolation — they let a
-    unit test disable network calls without monkeypatching. Production code
-    leaves both at the default `True`.
+    `enable_crossref` / `enable_arxiv` / `enable_datacite` exist for test
+    isolation — they let a unit test disable network calls without
+    monkeypatching. Production code leaves them at the default `True`.
     """
 
     def __init__(self, enable_crossref: bool = True,
                  enable_arxiv: bool = True,
                  enable_doi_scrape: bool = True,
+                 enable_datacite: bool = True,
                  html_fetcher=None):
         self.enable_crossref = enable_crossref
         self.enable_arxiv = enable_arxiv
+        # Crossref only holds DOIs deposited with Crossref. A DataCite DOI
+        # (OJS journals, institutional repositories, Zenodo/OSF) 404s there,
+        # which used to drop the entry to `minimal` — i.e. title-less. See
+        # issue #13.
+        self.enable_datacite = enable_datacite
         # When no DOI is in the message/URL, fetch the landing page and read
         # its DOI <meta> tags. `html_fetcher` is injectable for tests.
         self.enable_doi_scrape = enable_doi_scrape
@@ -500,6 +506,15 @@ class PaperResolver:
             doi, landing_meta = self._scrape_landing(urls, arxiv_id)
         if doi and self.enable_crossref:
             paper = self._from_crossref(doi)
+            if paper:
+                return paper
+
+        # Crossref missed. Before giving up on the DOI, ask DataCite: it is the
+        # other half of the DOI namespace, and it is *authoritative* for the
+        # DOIs it mints, so it answers immediately rather than waiting for an
+        # aggregator to index the record.
+        if doi and self.enable_datacite:
+            paper = self._from_datacite(doi)
             if paper:
                 return paper
 
@@ -606,6 +621,84 @@ class PaperResolver:
             url=msg.get("URL") or f"https://doi.org/{doi}",
             abstract=msg.get("abstract"),
             source="crossref",
+        )
+
+    def _from_datacite(self, doi: str) -> Optional[ResolvedPaper]:
+        """Resolve a DataCite-minted DOI. Mirrors `_from_crossref`; only the
+        response shape differs."""
+        try:
+            import requests
+            from urllib.parse import quote
+            resp = requests.get(
+                f"https://api.datacite.org/dois/{quote(doi, safe='')}",
+                headers={"User-Agent": "ToRead/1.0 (slack-ingest)"},
+                timeout=15,
+            )
+        except Exception as e:
+            self.logger.warning("DataCite lookup failed for %s: %s", doi, e)
+            return None
+        if resp.status_code != 200:
+            return None
+        try:
+            attrs = resp.json().get("data", {}).get("attributes", {})
+        except ValueError:
+            return None
+
+        titles = attrs.get("titles") or []
+        title = None
+        for t in titles:
+            if isinstance(t, dict) and (t.get("title") or "").strip():
+                title = t["title"].strip()
+                break
+        # A record with no title is no better than the `minimal` fallback, and
+        # claiming source="datacite" for it would hide that.
+        if not title:
+            return None
+
+        authors: List[str] = []
+        for c in attrs.get("creators") or []:
+            if not isinstance(c, dict):
+                continue
+            given = (c.get("givenName") or "").strip()
+            family = (c.get("familyName") or "").strip()
+            if given or family:
+                name = " ".join(p for p in (given, family) if p)
+            else:
+                # Fall back to the display form, which DataCite writes as
+                # "Family, Given". Flip it: `build_filename` takes the last
+                # whitespace token as the surname, so "Esposito, Elena" would
+                # otherwise file the paper under "Elena".
+                raw = (c.get("name") or "").strip()
+                if not raw:
+                    continue
+                if "," in raw:
+                    family_part, _, given_part = raw.partition(",")
+                    name = " ".join(
+                        p for p in (given_part.strip(), family_part.strip()) if p
+                    )
+                else:
+                    name = raw
+            if name:
+                authors.append(name)
+
+        year = attrs.get("publicationYear")
+        year = str(year) if year else None
+
+        abstract = None
+        for d in attrs.get("descriptions") or []:
+            if isinstance(d, dict) and d.get("descriptionType") == "Abstract":
+                abstract = (d.get("description") or "").strip() or None
+                if abstract:
+                    break
+
+        return ResolvedPaper(
+            doi=doi,
+            title=title,
+            authors=authors,
+            year=year,
+            url=attrs.get("url") or f"https://doi.org/{doi}",
+            abstract=abstract,
+            source="datacite",
         )
 
     def _from_arxiv(self, arxiv_id: str) -> Optional[ResolvedPaper]:
@@ -989,12 +1082,15 @@ class SlackIngestor:
         bibkey = mint_bibkey(authors=paper.authors, year=paper.year,
                              slack_ts=ts)
 
-        # Drive filename mirrors Paperpile's `Author Year - Title.pdf` shape.
+        # Drive filename is `{bibkey} - Author Year - Title.pdf`: Paperpile's
+        # shape, prefixed with the bibkey so the downstream matcher can find
+        # the PDF even when no title resolved (issue #13).
         from .drive_uploader import build_filename  # local for testability
         filename = build_filename(
             authors=paper.authors,
             year=paper.year,
             title=paper.title or (paper.doi or paper.url or "untitled"),
+            bibkey=bibkey,
         )
 
         if not self.config.dry_run:
