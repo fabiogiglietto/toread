@@ -6750,5 +6750,31 @@
       "source": "arxiv",
       "confidence_score": 0.76
     }
+  },
+  "01000fb8eb0231af": {
+    "entry_key": "Sbaraini-Fontes2026-cw",
+    "entry_title": "Trust beyond algorithms: What drives Italian audiences’ perceptions of search results and news produced with AI",
+    "cached_at": "2026-08-16T07:05:41.084718",
+    "metadata": {
+      "abstract": "This article examines what drives audiences’ trust levels across different configurations of artificial intelligence (AI) use within the information ecosystem. We rely on a representative survey of Italian adults, performed in September 2025, to analyse trust patterns when (a) AI acts as an intermediary through automated search results and (b) when it is embedded in news organisations. Our findings show that AI-generated search results are more trusted than news, highlighting the growing role of platforms as primary information providers. Moreover, trust in news is positively associated with trust in news produced with AI, regardless of the source, challenging prevailing assumptions of ‘algorithmic aversion’ even in a traditional setting like Italy. These results suggest a shift in the foundations of media trust, with important implications for the role of journalism in an increasingly platform-driven information ecosystem.",
+      "keywords": [],
+      "doi": "10.1177/02673231261473432",
+      "doi_url": "https://doi.org/10.1177/02673231261473432",
+      "url": null,
+      "arxiv_url": null,
+      "pdf_url": null,
+      "publication_date": "2026-08-07",
+      "citation_count": 0,
+      "reference_count": 40,
+      "venue": "European Journal of Communication",
+      "authors": [
+        "Giulia Sbaraini Fontes",
+        "Sergio Splendore"
+      ],
+      "subjects": [],
+      "is_open_access": null,
+      "source": "crossref",
+      "confidence_score": 0.85
+    }
   }
 }
