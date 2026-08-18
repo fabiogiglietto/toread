@@ -89,33 +89,6 @@
     "failure_reason": "Could not enrich entry: Hinck2026-yj | No DOI available | Title length: 71 chars | Authors: Hinck, Musashi, King, Gary... | APIs: Crossref enabled, Semantic Scholar enabled, ArXiv enabled",
     "last_failure_at": "2026-08-15T07:49:02.491217"
   },
-  "34bdd3a5da8c985a": {
-    "entry_key": "Rossini2026-mj",
-    "entry_title": "Disrupting democracy: how informational pathways and misinformation shape trust in election results",
-    "cached_at": "2026-07-18T10:44:21.686837",
-    "metadata": {
-      "abstract": null,
-      "keywords": [],
-      "doi": "10.1080/17457289.2026.2701896",
-      "doi_url": "https://doi.org/10.1080/17457289.2026.2701896",
-      "url": null,
-      "arxiv_url": null,
-      "pdf_url": null,
-      "publication_date": "2026-07-13",
-      "citation_count": 0,
-      "reference_count": 85,
-      "venue": "Journal of Elections, Public Opinion and Parties",
-      "authors": [
-        "Patrícia Rossini",
-        "Camila Mont'Alverne",
-        "Antonis Kalogeropoulos"
-      ],
-      "subjects": [],
-      "is_open_access": null,
-      "source": "crossref",
-      "confidence_score": 0.8428571428571427
-    }
-  },
   "6abbf835954368b9": {
     "entry_key": "Marwick2026-ss",
     "entry_title": "Broken connections: Fieldnotes from the old internet",
@@ -6800,6 +6773,62 @@
       "is_open_access": null,
       "source": "crossref",
       "confidence_score": 0.8428571428571427
+    }
+  },
+  "34bdd3a5da8c985a": {
+    "entry_key": "Rossini2026-mj",
+    "entry_title": "Disrupting democracy: how informational pathways and misinformation shape trust in election results",
+    "cached_at": "2026-08-18T15:26:59.317777",
+    "metadata": {
+      "abstract": null,
+      "keywords": [],
+      "doi": "10.1080/17457289.2026.2701896",
+      "doi_url": "https://doi.org/10.1080/17457289.2026.2701896",
+      "url": null,
+      "arxiv_url": null,
+      "pdf_url": null,
+      "publication_date": "2026-07-13",
+      "citation_count": 0,
+      "reference_count": 85,
+      "venue": "Journal of Elections, Public Opinion and Parties",
+      "authors": [
+        "Patrícia Rossini",
+        "Camila Mont'Alverne",
+        "Antonis Kalogeropoulos"
+      ],
+      "subjects": [],
+      "is_open_access": null,
+      "source": "crossref",
+      "confidence_score": 0.8428571428571427
+    }
+  },
+  "d3d05b896660e6d4": {
+    "entry_key": "Mannocci2026-kc",
+    "entry_title": "Detection and characterization of coordinated online behavior: A survey",
+    "cached_at": "2026-08-18T15:27:02.195134",
+    "metadata": {
+      "abstract": "Coordination is a fundamental aspect of life. The advent of social media has made it integral also to online human interactions, such as those that characterize thriving online communities and social movements. At the same time, coordination is also core to effective disinformation, manipulation, and hate campaigns. This survey collects, categorizes, and critically discusses the body of work produced as a result of the growing interest on coordinated online behavior. We reconcile industry and academic definitions, propose a comprehensive framework to study coordinated online behavior, and review and critically discuss the existing detection and characterization methods. Our analysis identifies open challenges and promising directions of research, serving as a guide for scholars, practitioners, and policymakers in understanding and addressing the complexities inherent to online coordination. We also provide an interactive companion website for exploring the surveyed literature.",
+      "keywords": [],
+      "doi": "10.1145/3839225",
+      "doi_url": "https://doi.org/10.1145/3839225",
+      "url": null,
+      "arxiv_url": null,
+      "pdf_url": null,
+      "publication_date": "2026-08-08",
+      "citation_count": 0,
+      "reference_count": 150,
+      "venue": "ACM Computing Surveys",
+      "authors": [
+        "Lorenzo Mannocci",
+        "Michele Mazza",
+        "Anna Monreale",
+        "Maurizio Tesconi",
+        "Stefano Cresci"
+      ],
+      "subjects": [],
+      "is_open_access": null,
+      "source": "crossref",
+      "confidence_score": 0.8272727272727272
     }
   }
 }
