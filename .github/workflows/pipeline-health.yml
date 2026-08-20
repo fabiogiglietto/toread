@@ -55,7 +55,7 @@ jobs:
       # A miss is safe: the check then posts unconfirmed rather than staying
       # quiet.
       - name: Restore previous findings
-        uses: actions/cache@v4
+        uses: actions/cache@v6
         with:
           path: .health-state
           key: pipeline-health-state-${{ github.run_id }}
