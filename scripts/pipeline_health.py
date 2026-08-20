@@ -33,9 +33,12 @@ served this check wholly stale reads (see confirmed_age and _runs_page): a
 finding must survive a delayed re-read *and* recur on the next daily run
 before anyone is paged. See hold_until_confirmed.
 
-Run by .github/workflows/pipeline-health.yml (daily). Exit code 0 either way;
-the alert is the signal, not the job status (a red health-check would just be
-one more thing to notice).
+Run by .github/workflows/pipeline-health.yml (daily). Findings do not affect
+the exit code — the alert is the signal, not the job status (a red health-check
+would just be one more thing to notice). The single exception is failing to
+*deliver* an alert, which exits 1: that is the one state nothing else can
+report, and a red job also withholds the healthcheck ping so the external
+watcher notices too.
 
 Env:
   GITHUB_TOKEN         optional, avoids unauthenticated rate limits
@@ -267,6 +270,17 @@ def latest_run_findings(repo: str, workflow: str) -> list[str]:
 
 
 def post_slack(text: str) -> None:
+    """Post the alert, and raise if Slack did not accept it.
+
+    chat.postMessage answers HTTP 200 with {"ok": false, "error": ...} for a
+    channel the bot is not in — the exact state a freshly created private ops
+    channel is in. Ignoring the body, as this did, means every alert can
+    disappear while the job stays green and the healthcheck ping still fires:
+    a dead-man's switch that is itself dead, which is worse than the noise
+    this whole check is being fixed for. Raise instead, so the job goes red
+    and the "Ping healthcheck" step (if: success()) stays silent — that is
+    what makes the external watcher notice.
+    """
     webhook = os.environ.get("SLACK_WEBHOOK_URL")
     bot_token = os.environ.get("SLACK_BOT_TOKEN")
     channel = os.environ.get("SLACK_ALERT_CHANNEL")
@@ -284,7 +298,17 @@ def post_slack(text: str) -> None:
         print("No Slack credentials configured — printing alert instead:")
         print(text)
         return
-    urllib.request.urlopen(req, timeout=30)
+    with urllib.request.urlopen(req, timeout=30) as resp:
+        body = resp.read().decode("utf-8", "replace")
+    # Webhooks answer "ok" as plain text; the Web API answers JSON.
+    try:
+        payload = json.loads(body)
+    except ValueError:
+        return
+    if isinstance(payload, dict) and not payload.get("ok", True):
+        raise RuntimeError(
+            f"Slack rejected the alert: {payload.get('error')} "
+            f"(is the bot in the alert channel?)")
 
 
 def confirmed_age(probe, limit: float, *args) -> float | None:
@@ -481,14 +505,23 @@ def main() -> int:
         print(f"HELD   {finding.key} — first sighting, alerts if it recurs "
               f"tomorrow")
 
-    # An override run is a test of the alerting path, so it must post on the
-    # spot; holding would make MAX_AGE_OVERRIDE_DAYS=0 look broken.
-    if override is not None and held and not post:
-        post = held
+    # An override run is a test of the alerting path, so it must post every
+    # line on the spot — holding any of them would make MAX_AGE_OVERRIDE_DAYS=0
+    # exercise only whichever findings happened to be confirmed already.
+    if override is not None:
+        post = post + held
 
     if post:
-        post_slack(":hourglass_flowing_sand: *Pipeline freshness check* "
-                   "found problems:\n" + "\n".join(f.text for f in post))
+        try:
+            post_slack(":hourglass_flowing_sand: *Pipeline freshness check* "
+                       "found problems:\n" + "\n".join(f.text for f in post))
+        except Exception as exc:
+            # The one failure that must turn the job red: findings exist and
+            # nobody was told. Everything else here exits 0 by design.
+            print(f"FAILED to post {len(post)} finding(s): {exc}")
+            for finding in post:
+                print(finding.text)
+            return 1
     elif findings:
         print(f"{len(findings)} unconfirmed finding(s) held — nothing posted.")
     else:

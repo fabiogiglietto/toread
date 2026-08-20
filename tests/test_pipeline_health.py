@@ -537,3 +537,97 @@ class TestMain:
         pipeline_health.main()
         pipeline_health.main()
         assert posted == []
+
+
+class TestPostSlack:
+    """A transport that can swallow every alert is a dead dead-man's switch."""
+
+    def _capture(self, monkeypatch, body):
+        sent = {}
+
+        def fake_urlopen(req, timeout=None):
+            sent["req"] = req
+
+            class _Resp:
+                def read(self):
+                    return body
+
+                def __enter__(self):
+                    return self
+
+                def __exit__(self, *exc):
+                    return False
+
+            return _Resp()
+
+        monkeypatch.setattr(pipeline_health.urllib.request, "urlopen",
+                            fake_urlopen)
+        return sent
+
+    def test_not_in_channel_raises_instead_of_vanishing(self, monkeypatch):
+        """Slack answers HTTP 200 for a channel the bot was never invited to."""
+        monkeypatch.delenv("SLACK_WEBHOOK_URL", raising=False)
+        monkeypatch.setenv("SLACK_BOT_TOKEN", "tok")
+        monkeypatch.setenv("SLACK_ALERT_CHANNEL", "C123")
+        self._capture(monkeypatch, b'{"ok": false, "error": "not_in_channel"}')
+        with pytest.raises(RuntimeError, match="not_in_channel"):
+            pipeline_health.post_slack("something is broken")
+
+    def test_accepted_post_is_quiet(self, monkeypatch):
+        monkeypatch.delenv("SLACK_WEBHOOK_URL", raising=False)
+        monkeypatch.setenv("SLACK_BOT_TOKEN", "tok")
+        monkeypatch.setenv("SLACK_ALERT_CHANNEL", "C123")
+        self._capture(monkeypatch, b'{"ok": true, "ts": "1.2"}')
+        pipeline_health.post_slack("something is broken")
+
+    def test_webhooks_answer_plain_text_not_json(self, monkeypatch):
+        """The webhook transport must not be broken by the new body check."""
+        monkeypatch.setenv("SLACK_WEBHOOK_URL", "https://hooks.invalid/x")
+        self._capture(monkeypatch, b"ok")
+        pipeline_health.post_slack("something is broken")
+
+
+class TestUndeliveredAlertsFailTheJob:
+    """The only state nothing else can report."""
+
+    def test_a_rejected_post_exits_non_zero(self, monkeypatch, tmp_path,
+                                            fake_ages, capsys):
+        monkeypatch.setenv("HEALTH_STATE_FILE", str(tmp_path / "s.json"))
+        monkeypatch.setattr(pipeline_health, "TARGETS", [TARGET])
+        pipeline_health.save_keys({f"{TARGET.repo}|{TARGET.workflow}|cron"})
+
+        def reject(text):
+            raise RuntimeError("Slack rejected the alert: not_in_channel")
+
+        monkeypatch.setattr(pipeline_health, "post_slack", reject)
+        fake_ages(9.0, 0.1)
+        assert pipeline_health.main() == 1
+        # The findings still reach the log, so the run page is not a dead end.
+        assert "last succeeded on schedule" in capsys.readouterr().out
+
+    def test_a_delivered_alert_exits_zero(self, monkeypatch, tmp_path,
+                                          fake_ages):
+        monkeypatch.setenv("HEALTH_STATE_FILE", str(tmp_path / "s.json"))
+        monkeypatch.setattr(pipeline_health, "TARGETS", [TARGET])
+        pipeline_health.save_keys({f"{TARGET.repo}|{TARGET.workflow}|cron"})
+        monkeypatch.setattr(pipeline_health, "post_slack", lambda text: None)
+        fake_ages(9.0, 0.1)
+        assert pipeline_health.main() == 0
+
+
+class TestOverridePostsEverything:
+    """MAX_AGE_OVERRIDE_DAYS=0 is a test of the alerting path itself."""
+
+    def test_confirmed_and_unconfirmed_findings_are_both_posted(
+            self, monkeypatch, tmp_path, fake_ages):
+        sent = []
+        monkeypatch.setenv("HEALTH_STATE_FILE", str(tmp_path / "s.json"))
+        monkeypatch.setattr(pipeline_health, "post_slack", sent.append)
+        monkeypatch.setattr(pipeline_health, "TARGETS", [TARGET])
+        # Only the cron finding is confirmed; the output one is a first sighting.
+        pipeline_health.save_keys({f"{TARGET.repo}|{TARGET.workflow}|cron"})
+        monkeypatch.setenv("MAX_AGE_OVERRIDE_DAYS", "0")
+        fake_ages(0.1, 0.1)
+        pipeline_health.main()
+        assert len(sent) == 1
+        assert sent[0].count("\n") == 2   # header + both findings

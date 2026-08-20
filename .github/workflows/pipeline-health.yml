@@ -22,7 +22,13 @@ name: Pipeline health
 
 on:
   schedule:
-    - cron: '30 7 * * *'   # daily, after the 05:00-07:00 UTC pipeline crons
+    # Daily, hours after the last producing cron (04:00-07:00 UTC; update_feed
+    # runs every 30min). The gap is what makes the hung-run signal work: a
+    # 07:00 cron that hangs is ~4.5h old by the time this looks, so it trips
+    # the 3h threshold on the day it hangs rather than a day later, as a
+    # cancelled run. Running at 07:30 saw those hangs at ~0.5h — indistinguishable
+    # from a healthy run that had just started.
+    - cron: '30 11 * * *'
   workflow_dispatch:
     inputs:
       max_age_override_days:
