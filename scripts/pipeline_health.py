@@ -18,8 +18,20 @@ Two independent signals, because no single one covers all three failure modes:
             widest gap observed over the preceding months — tightening them
             just recreates the false alarm they replaced.
 
+  run     — the newest *completed* pipeline-triggered run's conclusion, plus
+            any run still going far past this pipeline's normal duration.
+            Catches the break that leaves both signals above green for days:
+            a step that hangs until the runner's 6h ceiling kills it. The
+            cron probe cannot see it (it asks when the last success was, not
+            what happened since) and output age is slack by design.
+
 They are reported separately and never combined: an AND would mean the quiet
 no-op (fresh cron, stale output) never alerts at all.
+
+Every finding is confirmed before it is posted, because the Actions API has
+served this check wholly stale reads (see confirmed_age and _runs_page): a
+finding must survive a delayed re-read *and* recur on the next daily run
+before anyone is paged. See hold_until_confirmed.
 
 Run by .github/workflows/pipeline-health.yml (daily). Exit code 0 either way;
 the alert is the signal, not the job status (a red health-check would just be
@@ -31,15 +43,33 @@ Env:
   SLACK_BOT_TOKEN + SLACK_ALERT_CHANNEL   fallback transport
   MAX_AGE_OVERRIDE_DAYS  optional, force one threshold for every check
                          (set to 0 in a workflow_dispatch run to test alerting)
+  HEALTH_STATE_FILE      where the previous run's findings are remembered, so
+                         a finding can be required to recur before it alerts.
+                         Restored/saved by the workflow's cache step; a miss
+                         degrades to alerting on one run, never to silence.
+  CONFIRM_DELAY_SECONDS  gap before a stale reading is re-read (default 60;
+                         set to 0 in tests)
 """
 
 import json
 import os
 import sys
+import time
 import urllib.error
 import urllib.request
 from datetime import datetime, timezone
+from pathlib import Path
 from typing import NamedTuple
+
+
+class Finding(NamedTuple):
+    """One problem worth posting.
+
+    `key` identifies the finding across runs — same problem, same key — so
+    hold_until_confirmed can tell "still broken" from "flaked once".
+    """
+    key: str
+    text: str
 
 
 class Target(NamedTuple):
@@ -119,6 +149,36 @@ _PAGE = 10
 # A page is not enough on its own, though: a lagging replica returns a wholly
 # stale page, which no page size can rescue. See confirmed_age() below.
 
+# Unfiltered run listing, used by both the cross-check in
+# last_scheduled_run_age_days and the latest-run probe. Wide enough that a
+# scheduled run is somewhere in it for every target: the busiest
+# (update_feed.yml, ~every 30min) still spans ~15h at this size.
+_RUNS_PAGE = 30
+
+# Longest a run may be in flight before it is called hung. Measured
+# 2026-08-20 over the last 100 successful runs of each target workflow:
+# medians 0.5–11min, worst-case max 27min (fg-zettelkasten update-vault.yml).
+# 3h is ~7x the worst legitimate run and still inside GitHub's 6h job ceiling,
+# so a hang is reported while it is hanging rather than after the runner kills
+# it. Re-measure before tightening.
+_HUNG_AFTER_HOURS = 3.0
+
+# Events this pipeline actually runs on. A failed `push` run is someone
+# iterating on a branch, not a broken pipeline — the latest-run probe would
+# page on every WIP commit if it looked at those.
+_PIPELINE_EVENTS = ("schedule", "repository_dispatch")
+
+
+def _runs_page(repo: str, workflow: str) -> list[dict]:
+    """Newest runs of `workflow`, unfiltered by event or conclusion."""
+    runs = _get(f"https://api.github.com/repos/{repo}/actions/workflows/"
+                f"{workflow}/runs?per_page={_RUNS_PAGE}")
+    return runs.get("workflow_runs") or []
+
+
+def _started(run: dict) -> str:
+    return run.get("run_started_at") or run["created_at"]
+
 
 def last_commit_age_days(repo: str, path: str | None) -> float | None:
     """Age of the newest commit touching `path` (whole repo when None)."""
@@ -142,11 +202,68 @@ def last_scheduled_run_age_days(repo: str, workflow: str) -> float | None:
     runs = _get(f"https://api.github.com/repos/{repo}/actions/workflows/"
                 f"{workflow}/runs?event=schedule&status=success"
                 f"&per_page={_PAGE}")
-    workflow_runs = runs.get("workflow_runs") or []
-    if not workflow_runs:
-        return None
-    return min(_age_days(r.get("run_started_at") or r["created_at"])
-               for r in workflow_runs)
+    ages = [_age_days(_started(r)) for r in (runs.get("workflow_runs") or [])]
+
+    # Cross-check against the unfiltered listing. Both false alarms this check
+    # has produced came from the *filtered* query above returning a wholly
+    # stale page (14.9d and 33.0d claimed, ~0d and 2.0d true) while the same
+    # query from a workstation was correct. Whether the unfiltered listing is
+    # served from a different index is not something we can know from outside
+    # — but taking the newer of the two answers can only ever make the reading
+    # fresher, never staler, so a stale filtered read stops being able to page
+    # anyone on its own. The request is one the latest-run probe already makes.
+    try:
+        ages += [_age_days(_started(r)) for r in _runs_page(repo, workflow)
+                 if r.get("event") == "schedule" and r.get("conclusion") == "success"]
+    except Exception:
+        pass  # corroboration only; the filtered read still stands on its own
+
+    return min(ages) if ages else None
+
+
+def latest_run_findings(repo: str, workflow: str) -> list[str]:
+    """Problems visible in the newest runs that age-of-last-success cannot see.
+
+    Two shapes, both observed on research-radio's check_papers.yml while every
+    other signal stayed green:
+
+      hung    — a run still going long past this pipeline's normal duration.
+                Reported while it hangs, before the 6h ceiling kills it.
+      failed  — the newest *completed* pipeline run did not succeed. `cancelled`
+                is only counted when the run had already outlived
+                _HUNG_AFTER_HOURS, because that is a runner kill; a shorter
+                cancel is a human pressing the button or a concurrency group
+                doing its job, neither of which is a fault.
+    """
+    runs = [r for r in _runs_page(repo, workflow)
+            if r.get("event") in _PIPELINE_EVENTS]
+    if not runs:
+        return []
+    runs.sort(key=_started, reverse=True)
+    problems = []
+
+    newest = runs[0]
+    if newest.get("status") != "completed":
+        hours = _age_days(_started(newest)) * 24
+        if hours > _HUNG_AFTER_HOURS:
+            problems.append(
+                f"has been {newest.get('status')} for {hours:.1f}h "
+                f"(normal runs finish well inside {_HUNG_AFTER_HOURS:g}h) — "
+                f"hung, and the runner will kill it at 6h")
+
+    done = next((r for r in runs if r.get("status") == "completed"), None)
+    if done is not None:
+        conclusion = done.get("conclusion")
+        ran_hours = 0.0
+        if done.get("updated_at"):
+            ran_hours = max(0.0, (_age_days(_started(done))
+                                  - _age_days(done["updated_at"])) * 24)
+        killed = conclusion == "cancelled" and ran_hours > _HUNG_AFTER_HOURS
+        if conclusion in ("failure", "timed_out", "startup_failure") or killed:
+            problems.append(
+                f"last completed run {conclusion} after {ran_hours:.1f}h "
+                f"({_age_days(_started(done)):.1f} days ago)")
+    return problems
 
 
 def post_slack(text: str) -> None:
@@ -184,76 +301,196 @@ def confirmed_age(probe, limit: float, *args) -> float | None:
     before alerting is enough: no extra request on the healthy path, one on
     the path that was about to page someone. Which is the whole point — an
     alert nobody can trust is the failure this check is being fixed for.
+
+    The re-read waits first. Confirming immediately, as this did originally,
+    is no confirmation at all: the whole check completed in ~14 seconds, so
+    both reads landed on the same lagging replica milliseconds apart and it
+    alerted anyway — twice, wrongly, in its first ten days.
     """
     age = probe(*args)
     if age is not None and age <= limit:
         return age
+    time.sleep(float(os.environ.get("CONFIRM_DELAY_SECONDS") or 60))
     second = probe(*args)
     if age is None or second is None:
         return second if age is None else age
     return min(age, second)
 
 
-def check(target: Target, override: float | None) -> tuple[list[str], list[str]]:
-    """Return (alerts, errors) for one target."""
+def _runs_url(repo: str, workflow: str) -> str:
+    return f"https://github.com/{repo}/actions/workflows/{workflow}"
+
+
+def _commits_url(repo: str, path: str | None) -> str:
+    url = f"https://github.com/{repo}/commits"
+    return f"{url}/HEAD/{path}" if path else url
+
+
+def check(target: Target, override: float | None
+          ) -> tuple[list[Finding], list[Finding]]:
+    """Return (alerts, errors) for one target.
+
+    Every line carries the link that confirms or refutes it. The old text
+    asserted a cause ("cron disabled or the workflow is failing") that was
+    wrong both times it fired; a reading plus the page it came from lets
+    whoever reads the alert settle it in one click instead of an investigation.
+    """
     alerts, errors = [], []
+    runs_url = _runs_url(target.repo, target.workflow)
 
     cron_limit = override if override is not None else target.cron_max_days
     try:
         age = confirmed_age(last_scheduled_run_age_days, cron_limit,
                             target.repo, target.workflow)
     except Exception as exc:  # API error is itself worth reporting
-        errors.append(f"• {target.repo} `{target.workflow}` — cron check "
-                      f"failed: {exc}")
+        errors.append(Finding(
+            f"{target.repo}|{target.workflow}|cron-error",
+            f"\u2022 {target.repo} `{target.workflow}` \u2014 cron check "
+            f"failed: {exc}"))
     else:
+        key = f"{target.repo}|{target.workflow}|cron"
         if age is None:
             print(f"STALE  {target.repo} `{target.workflow}`: no successful "
                   f"scheduled run on record")
-            alerts.append(f"• *{target.repo}* — `{target.workflow}` has no "
-                          f"successful scheduled run on record — cron disabled?")
+            alerts.append(Finding(key, (
+                f"\u2022 *{target.repo}* \u2014 `{target.workflow}` has no successful "
+                f"scheduled run on record (GitHub keeps 90 days) \u2014 "
+                f"<{runs_url}|run list>")))
         else:
             stale = age > cron_limit
             print(f"{'STALE' if stale else '   ok':>5}  {target.repo} "
                   f"`{target.workflow}`: last scheduled success {age:.1f}d ago "
                   f"(limit {cron_limit:g}d)")
             if stale:
-                alerts.append(
-                    f"• *{target.repo}* — `{target.workflow}` last succeeded on "
-                    f"schedule {age:.1f} days ago (limit {cron_limit:g}) — cron "
-                    f"disabled or the workflow is failing")
+                alerts.append(Finding(key, (
+                    f"\u2022 *{target.repo}* \u2014 `{target.workflow}` last succeeded "
+                    f"on schedule {age:.1f} days ago (limit {cron_limit:g}) "
+                    f"\u2014 <{runs_url}|run list>")))
+
+    try:
+        problems = latest_run_findings(target.repo, target.workflow)
+    except Exception as exc:
+        errors.append(Finding(
+            f"{target.repo}|{target.workflow}|run-error",
+            f"\u2022 {target.repo} `{target.workflow}` \u2014 latest-run check "
+            f"failed: {exc}"))
+    else:
+        for i, problem in enumerate(problems):
+            print(f"STALE  {target.repo} `{target.workflow}`: {problem}")
+            alerts.append(Finding(
+                f"{target.repo}|{target.workflow}|run{i}",
+                f"\u2022 *{target.repo}* \u2014 `{target.workflow}` {problem} "
+                f"\u2014 <{runs_url}|run list>"))
+        if not problems:
+            print(f"   ok  {target.repo} `{target.workflow}`: latest runs clean")
 
     out_limit = override if override is not None else target.output_max_days
     label = f"{target.repo}" + (f":{target.path}" if target.path else "")
+    commits_url = _commits_url(target.repo, target.path)
     try:
         age = confirmed_age(last_commit_age_days, out_limit,
                             target.repo, target.path)
     except Exception as exc:
-        errors.append(f"• {label} — output check failed: {exc}")
+        errors.append(Finding(f"{label}|output-error",
+                              f"\u2022 {label} \u2014 output check failed: {exc}"))
         return alerts, errors
     if age is None:
-        errors.append(f"• {label} — output check failed: no commits found")
+        errors.append(Finding(f"{label}|output-error",
+                              f"\u2022 {label} \u2014 output check failed: no commits "
+                              f"found"))
         return alerts, errors
     stale = age > out_limit
     print(f"{'STALE' if stale else '   ok':>5}  {label}: last commit "
           f"{age:.1f}d ago (limit {out_limit:g}d)")
     if stale:
-        alerts.append(f"• *{label}* — unchanged for {age:.1f} days "
-                      f"(limit {out_limit:g}) — the cron is running, so check "
-                      f"{target.input_hint}")
+        alerts.append(Finding(f"{label}|output", (
+            f"\u2022 *{label}* \u2014 unchanged for {age:.1f} days "
+            f"(limit {out_limit:g}) \u2014 the cron is running, so check "
+            f"{target.input_hint} \u2014 <{commits_url}|commits>")))
     return alerts, errors
+
+
+def state_path() -> Path:
+    return Path(os.environ.get("HEALTH_STATE_FILE")
+                or ".health-state/pipeline_health.json")
+
+
+def load_previous_keys() -> set[str] | None:
+    """Keys flagged by the previous run, or None when that is unknowable.
+
+    None is the important case: a cache miss, a first run, a corrupt file.
+    It must not read as "nothing was wrong yesterday", because that would
+    hold every finding forever and turn the dead-man's switch off silently —
+    a worse failure than the noise this is fixing. Callers alert immediately
+    when they get None.
+    """
+    try:
+        data = json.loads(state_path().read_text())
+    except (OSError, ValueError):
+        return None
+    keys = data.get("keys")
+    return set(keys) if isinstance(keys, list) else None
+
+
+def save_keys(keys: set[str]) -> None:
+    path = state_path()
+    try:
+        path.parent.mkdir(parents=True, exist_ok=True)
+        path.write_text(json.dumps({"keys": sorted(keys)}))
+    except OSError as exc:
+        print(f"could not save state to {path}: {exc}")
+
+
+def hold_until_confirmed(findings: list[Finding],
+                         previous: set[str] | None
+                         ) -> tuple[list[Finding], list[Finding]]:
+    """Split findings into (post now, hold for tomorrow).
+
+    A finding posts once it has been seen on two consecutive daily runs. On a
+    day-scale dead-man's switch that costs at most one day of notice on a real
+    outage — the cron thresholds are 1–7 days — and makes a single stale read
+    structurally unable to page anyone, which is what both false alarms were.
+
+    `previous is None` means the state was unavailable; post everything rather
+    than hold it, so a lost cache degrades to the old, noisier behaviour and
+    never to silence.
+    """
+    if previous is None:
+        return findings, []
+    post = [f for f in findings if f.key in previous]
+    held = [f for f in findings if f.key not in previous]
+    return post, held
 
 
 def main() -> int:
     raw = os.environ.get("MAX_AGE_OVERRIDE_DAYS")
     override = float(raw) if raw not in (None, "") else None
-    alerts, errors = [], []
+    findings = []
     for target in TARGETS:
-        a, e = check(target, override)
-        alerts += a
-        errors += e
-    if alerts or errors:
+        alerts, errors = check(target, override)
+        findings += alerts + errors
+
+    previous = load_previous_keys()
+    if previous is None:
+        print("no previous state (cache miss or first run) — "
+              "posting unconfirmed findings")
+    post, held = hold_until_confirmed(findings, previous)
+    save_keys({f.key for f in findings})
+
+    for finding in held:
+        print(f"HELD   {finding.key} — first sighting, alerts if it recurs "
+              f"tomorrow")
+
+    # An override run is a test of the alerting path, so it must post on the
+    # spot; holding would make MAX_AGE_OVERRIDE_DAYS=0 look broken.
+    if override is not None and held and not post:
+        post = held
+
+    if post:
         post_slack(":hourglass_flowing_sand: *Pipeline freshness check* "
-                   "found problems:\n" + "\n".join(alerts + errors))
+                   "found problems:\n" + "\n".join(f.text for f in post))
+    elif findings:
+        print(f"{len(findings)} unconfirmed finding(s) held — nothing posted.")
     else:
         print("All pipeline outputs fresh.")
     return 0

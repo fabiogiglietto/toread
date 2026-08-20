@@ -172,3 +172,5 @@ temp/
 *.xml
 !output/feed.xml
 !output/feed.json
+# pipeline-health cross-run state (restored from the Actions cache)
+.health-state/
