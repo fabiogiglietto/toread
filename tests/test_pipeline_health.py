@@ -17,8 +17,25 @@ _spec.loader.exec_module(pipeline_health)
 
 Target = pipeline_health.Target
 
+# Captured before quiet_run_probe (autouse) stubs it out, so the probe's own
+# tests exercise the real thing.
+_REAL_LATEST_RUN_FINDINGS = pipeline_health.latest_run_findings
+
 TARGET = Target("owner/repo", "update_feed.yml", 1, "output/feed.json", 10,
                 "the Paperpile export URL")
+
+
+@pytest.fixture(autouse=True)
+def no_confirm_delay(monkeypatch):
+    """confirmed_age sleeps before re-reading; tests must not."""
+    monkeypatch.setenv("CONFIRM_DELAY_SECONDS", "0")
+
+
+@pytest.fixture(autouse=True)
+def quiet_run_probe(monkeypatch):
+    """Default the latest-run probe to clean, so age tests stay about ages."""
+    monkeypatch.setattr(pipeline_health, "latest_run_findings",
+                        lambda repo, workflow: [])
 
 
 @pytest.fixture
@@ -49,7 +66,7 @@ class TestCheck:
         fake_ages(4.0, 0.1)
         alerts, errors = pipeline_health.check(TARGET, None)
         assert len(alerts) == 1
-        assert "cron disabled or the workflow is failing" in alerts[0]
+        assert "last succeeded on schedule 4.0 days ago" in alerts[0].text
         assert errors == []
 
     def test_quiet_no_op_alerts_despite_green_cron(self, fake_ages):
@@ -57,8 +74,8 @@ class TestCheck:
         fake_ages(0.1, 30.0)
         alerts, errors = pipeline_health.check(TARGET, None)
         assert len(alerts) == 1
-        assert "the cron is running" in alerts[0]
-        assert TARGET.input_hint in alerts[0]
+        assert "the cron is running" in alerts[0].text
+        assert TARGET.input_hint in alerts[0].text
 
     def test_both_stale_reports_both(self, fake_ages):
         fake_ages(9.0, 30.0)
@@ -70,7 +87,7 @@ class TestCheck:
         fake_ages(None, 0.1)
         alerts, errors = pipeline_health.check(TARGET, None)
         assert len(alerts) == 1
-        assert "no successful scheduled run on record" in alerts[0]
+        assert "no successful scheduled run on record" in alerts[0].text
 
     def test_override_applies_to_both_thresholds(self, fake_ages):
         """MAX_AGE_OVERRIDE_DAYS=0 must exercise every alert path."""
@@ -90,7 +107,7 @@ class TestCheck:
                             lambda repo, path: 30.0)
         alerts, errors = pipeline_health.check(TARGET, None)
         assert len(errors) == 1
-        assert "403 rate limited" in errors[0]
+        assert "403 rate limited" in errors[0].text
         assert len(alerts) == 1
 
     def test_missing_commits_is_an_error_not_an_alert(self, fake_ages):
@@ -273,3 +290,344 @@ class TestTargets:
     def test_every_target_names_a_workflow_file(self):
         for target in pipeline_health.TARGETS:
             assert target.workflow.endswith(".yml")
+
+
+class TestCrossCheck:
+    """The filtered runs query is what served both false alarms."""
+
+    def test_stale_filtered_read_is_rescued_by_the_unfiltered_listing(
+            self, monkeypatch):
+        """A wholly stale filtered page must not survive as the answer."""
+        monkeypatch.setattr(
+            pipeline_health, "_get",
+            lambda url: {"workflow_runs": [
+                {"run_started_at": "2026-08-05T00:00:00Z"}]})   # 14d-stale read
+        monkeypatch.setattr(pipeline_health, "_runs_page", lambda repo, wf: [
+            {"run_started_at": "2026-08-20T00:00:00Z", "event": "schedule",
+             "conclusion": "success"}])
+        age = pipeline_health.last_scheduled_run_age_days("r", "w.yml")
+        assert age == pytest.approx(
+            pipeline_health._age_days("2026-08-20T00:00:00Z"), abs=1e-4)
+
+    def test_cross_check_ignores_non_scheduled_and_failed_runs(
+            self, monkeypatch):
+        """Corroboration must hold the cron probe to the same question."""
+        monkeypatch.setattr(
+            pipeline_health, "_get",
+            lambda url: {"workflow_runs": [
+                {"run_started_at": "2026-08-05T00:00:00Z"}]})
+        monkeypatch.setattr(pipeline_health, "_runs_page", lambda repo, wf: [
+            {"run_started_at": "2026-08-20T00:00:00Z", "event": "push",
+             "conclusion": "success"},
+            {"run_started_at": "2026-08-20T00:00:00Z", "event": "schedule",
+             "conclusion": "failure"},
+        ])
+        assert pipeline_health.last_scheduled_run_age_days("r", "w.yml") == \
+            pytest.approx(pipeline_health._age_days("2026-08-05T00:00:00Z"),
+                          abs=1e-4)
+
+    def test_a_failing_cross_check_does_not_break_the_probe(self, monkeypatch):
+        """Corroboration is a bonus; losing it must not lose the reading."""
+        monkeypatch.setattr(
+            pipeline_health, "_get",
+            lambda url: {"workflow_runs": [
+                {"run_started_at": "2026-08-05T00:00:00Z"}]})
+
+        def boom(repo, wf):
+            raise RuntimeError("500")
+
+        monkeypatch.setattr(pipeline_health, "_runs_page", boom)
+        assert pipeline_health.last_scheduled_run_age_days("r", "w.yml") \
+            is not None
+
+
+def _run(started, *, status="completed", conclusion="success",
+         event="schedule", updated=None):
+    return {"run_started_at": started, "status": status,
+            "conclusion": conclusion, "event": event,
+            "updated_at": updated or started}
+
+
+def _hours_ago(hours):
+    from datetime import timedelta
+    return (pipeline_health.datetime.now(pipeline_health.timezone.utc)
+            - timedelta(hours=hours)).strftime("%Y-%m-%dT%H:%M:%SZ")
+
+
+class TestLatestRunFindings:
+    """The signal that was missing while research-radio hung for two days."""
+
+    def _page(self, monkeypatch, runs):
+        monkeypatch.setattr(pipeline_health, "_runs_page",
+                            lambda repo, workflow: runs)
+
+    def test_healthy_latest_run_is_silent(self, monkeypatch):
+        self._page(monkeypatch, [_run(_hours_ago(2))])
+        assert _REAL_LATEST_RUN_FINDINGS("r", "w.yml") == []
+
+    def test_run_in_flight_past_the_ceiling_is_hung(self, monkeypatch):
+        """49s is a normal run; 4h in progress is a hang, reported before the
+        runner kills it at 6h."""
+        self._page(monkeypatch, [
+            _run(_hours_ago(4), status="in_progress", conclusion=None),
+            _run(_hours_ago(28))])
+        found = _REAL_LATEST_RUN_FINDINGS("r", "w.yml")
+        assert len(found) == 1
+        assert "hung" in found[0]
+
+    def test_run_in_flight_within_normal_duration_is_not_hung(self, monkeypatch):
+        """The check runs shortly after the crons — an in-flight run is normal."""
+        self._page(monkeypatch, [
+            _run(_hours_ago(0.5), status="in_progress", conclusion=None)])
+        assert _REAL_LATEST_RUN_FINDINGS("r", "w.yml") == []
+
+    def test_failed_latest_completed_run_alerts(self, monkeypatch):
+        self._page(monkeypatch, [_run(_hours_ago(3), conclusion="failure")])
+        found = _REAL_LATEST_RUN_FINDINGS("r", "w.yml")
+        assert len(found) == 1
+        assert "failure" in found[0]
+
+    def test_short_cancel_is_not_a_fault(self, monkeypatch):
+        """A human pressing cancel, or a concurrency group doing its job."""
+        self._page(monkeypatch, [
+            _run(_hours_ago(3), conclusion="cancelled",
+                 updated=_hours_ago(2.9))])
+        assert _REAL_LATEST_RUN_FINDINGS("r", "w.yml") == []
+
+    def test_cancel_at_the_six_hour_ceiling_is_a_runner_kill(self, monkeypatch):
+        """The exact shape of the runs this check failed to report."""
+        self._page(monkeypatch, [
+            _run(_hours_ago(12), conclusion="cancelled",
+                 updated=_hours_ago(6))])
+        found = _REAL_LATEST_RUN_FINDINGS("r", "w.yml")
+        assert len(found) == 1
+        assert "cancelled" in found[0]
+
+    def test_a_failed_push_run_is_not_the_pipeline_breaking(self, monkeypatch):
+        """Someone iterating on a branch must not page anyone."""
+        self._page(monkeypatch, [
+            _run(_hours_ago(1), conclusion="failure", event="push"),
+            _run(_hours_ago(4))])
+        assert _REAL_LATEST_RUN_FINDINGS("r", "w.yml") == []
+
+    def test_an_in_flight_run_does_not_hide_the_last_failure(self, monkeypatch):
+        """The newest run is still going; the newest *completed* one failed."""
+        self._page(monkeypatch, [
+            _run(_hours_ago(0.5), status="in_progress", conclusion=None),
+            _run(_hours_ago(24), conclusion="failure")])
+        found = _REAL_LATEST_RUN_FINDINGS("r", "w.yml")
+        assert len(found) == 1
+        assert "failure" in found[0]
+
+    def test_no_runs_is_not_a_finding(self, monkeypatch):
+        """Absence is the cron probe's question, not this one's."""
+        self._page(monkeypatch, [])
+        assert _REAL_LATEST_RUN_FINDINGS("r", "w.yml") == []
+
+
+class TestHoldUntilConfirmed:
+    """Both false alarms were single stale reads. One run must not page."""
+
+    F1 = pipeline_health.Finding("repo|wf|cron", "cron is stale")
+    F2 = pipeline_health.Finding("repo|out|output", "output is stale")
+
+    def test_a_first_sighting_is_held(self):
+        post, held = pipeline_health.hold_until_confirmed([self.F1], set())
+        assert post == []
+        assert held == [self.F1]
+
+    def test_a_finding_that_recurs_is_posted(self):
+        post, held = pipeline_health.hold_until_confirmed(
+            [self.F1], {self.F1.key})
+        assert post == [self.F1]
+        assert held == []
+
+    def test_holding_is_per_finding_not_per_run(self):
+        post, held = pipeline_health.hold_until_confirmed(
+            [self.F1, self.F2], {self.F2.key})
+        assert post == [self.F2]
+        assert held == [self.F1]
+
+    def test_unknown_state_posts_rather_than_holds(self):
+        """A lost cache must degrade to noise, never to a silent switch."""
+        post, held = pipeline_health.hold_until_confirmed([self.F1], None)
+        assert post == [self.F1]
+        assert held == []
+
+
+class TestState:
+    """State is cache-restored, so every read must tolerate it being absent."""
+
+    def test_missing_file_reads_as_unknown(self, monkeypatch, tmp_path):
+        monkeypatch.setenv("HEALTH_STATE_FILE", str(tmp_path / "none.json"))
+        assert pipeline_health.load_previous_keys() is None
+
+    def test_corrupt_file_reads_as_unknown(self, monkeypatch, tmp_path):
+        path = tmp_path / "s.json"
+        path.write_text("{not json")
+        monkeypatch.setenv("HEALTH_STATE_FILE", str(path))
+        assert pipeline_health.load_previous_keys() is None
+
+    def test_round_trip(self, monkeypatch, tmp_path):
+        monkeypatch.setenv("HEALTH_STATE_FILE", str(tmp_path / "d" / "s.json"))
+        pipeline_health.save_keys({"a", "b"})
+        assert pipeline_health.load_previous_keys() == {"a", "b"}
+
+    def test_an_empty_save_is_remembered_as_empty_not_unknown(
+            self, monkeypatch, tmp_path):
+        """A clean run must let yesterday's held finding be held again."""
+        monkeypatch.setenv("HEALTH_STATE_FILE", str(tmp_path / "s.json"))
+        pipeline_health.save_keys(set())
+        assert pipeline_health.load_previous_keys() == set()
+
+
+class TestMain:
+    """End to end: what actually reaches Slack."""
+
+    @pytest.fixture
+    def posted(self, monkeypatch, tmp_path):
+        sent = []
+        monkeypatch.setenv("HEALTH_STATE_FILE", str(tmp_path / "s.json"))
+        # Steady state: yesterday's run happened and found nothing. Without
+        # this the state is *unknown*, which deliberately posts unconfirmed.
+        pipeline_health.save_keys(set())
+        monkeypatch.setattr(pipeline_health, "post_slack", sent.append)
+        monkeypatch.setattr(pipeline_health, "TARGETS", [TARGET])
+        return sent
+
+    def test_a_one_day_flake_never_reaches_slack(self, posted, fake_ages,
+                                                 monkeypatch):
+        """Day one flags it, day two is clean — nobody is paged."""
+        fake_ages(9.0, 0.1)
+        pipeline_health.main()
+        assert posted == []
+        fake_ages(0.1, 0.1)
+        pipeline_health.main()
+        assert posted == []
+
+    def test_a_real_outage_posts_on_the_second_run(self, posted, fake_ages):
+        fake_ages(9.0, 0.1)
+        pipeline_health.main()
+        assert posted == []
+        pipeline_health.main()
+        assert len(posted) == 1
+        assert "last succeeded on schedule" in posted[0]
+
+    def test_the_alert_carries_the_link_that_settles_it(self, posted,
+                                                        fake_ages):
+        fake_ages(9.0, 0.1)
+        pipeline_health.main()
+        pipeline_health.main()
+        assert (f"https://github.com/{TARGET.repo}/actions/workflows/"
+                f"{TARGET.workflow}") in posted[0]
+
+    def test_override_posts_immediately(self, posted, fake_ages):
+        """MAX_AGE_OVERRIDE_DAYS=0 is a test of the alerting path itself."""
+        fake_ages(0.1, 0.1)
+        import os as _os
+        _os.environ["MAX_AGE_OVERRIDE_DAYS"] = "0"
+        try:
+            pipeline_health.main()
+        finally:
+            del _os.environ["MAX_AGE_OVERRIDE_DAYS"]
+        assert len(posted) == 1
+
+    def test_a_healthy_run_posts_nothing(self, posted, fake_ages):
+        fake_ages(0.1, 0.1)
+        pipeline_health.main()
+        pipeline_health.main()
+        assert posted == []
+
+
+class TestPostSlack:
+    """A transport that can swallow every alert is a dead dead-man's switch."""
+
+    def _capture(self, monkeypatch, body):
+        sent = {}
+
+        def fake_urlopen(req, timeout=None):
+            sent["req"] = req
+
+            class _Resp:
+                def read(self):
+                    return body
+
+                def __enter__(self):
+                    return self
+
+                def __exit__(self, *exc):
+                    return False
+
+            return _Resp()
+
+        monkeypatch.setattr(pipeline_health.urllib.request, "urlopen",
+                            fake_urlopen)
+        return sent
+
+    def test_not_in_channel_raises_instead_of_vanishing(self, monkeypatch):
+        """Slack answers HTTP 200 for a channel the bot was never invited to."""
+        monkeypatch.delenv("SLACK_WEBHOOK_URL", raising=False)
+        monkeypatch.setenv("SLACK_BOT_TOKEN", "tok")
+        monkeypatch.setenv("SLACK_ALERT_CHANNEL", "C123")
+        self._capture(monkeypatch, b'{"ok": false, "error": "not_in_channel"}')
+        with pytest.raises(RuntimeError, match="not_in_channel"):
+            pipeline_health.post_slack("something is broken")
+
+    def test_accepted_post_is_quiet(self, monkeypatch):
+        monkeypatch.delenv("SLACK_WEBHOOK_URL", raising=False)
+        monkeypatch.setenv("SLACK_BOT_TOKEN", "tok")
+        monkeypatch.setenv("SLACK_ALERT_CHANNEL", "C123")
+        self._capture(monkeypatch, b'{"ok": true, "ts": "1.2"}')
+        pipeline_health.post_slack("something is broken")
+
+    def test_webhooks_answer_plain_text_not_json(self, monkeypatch):
+        """The webhook transport must not be broken by the new body check."""
+        monkeypatch.setenv("SLACK_WEBHOOK_URL", "https://hooks.invalid/x")
+        self._capture(monkeypatch, b"ok")
+        pipeline_health.post_slack("something is broken")
+
+
+class TestUndeliveredAlertsFailTheJob:
+    """The only state nothing else can report."""
+
+    def test_a_rejected_post_exits_non_zero(self, monkeypatch, tmp_path,
+                                            fake_ages, capsys):
+        monkeypatch.setenv("HEALTH_STATE_FILE", str(tmp_path / "s.json"))
+        monkeypatch.setattr(pipeline_health, "TARGETS", [TARGET])
+        pipeline_health.save_keys({f"{TARGET.repo}|{TARGET.workflow}|cron"})
+
+        def reject(text):
+            raise RuntimeError("Slack rejected the alert: not_in_channel")
+
+        monkeypatch.setattr(pipeline_health, "post_slack", reject)
+        fake_ages(9.0, 0.1)
+        assert pipeline_health.main() == 1
+        # The findings still reach the log, so the run page is not a dead end.
+        assert "last succeeded on schedule" in capsys.readouterr().out
+
+    def test_a_delivered_alert_exits_zero(self, monkeypatch, tmp_path,
+                                          fake_ages):
+        monkeypatch.setenv("HEALTH_STATE_FILE", str(tmp_path / "s.json"))
+        monkeypatch.setattr(pipeline_health, "TARGETS", [TARGET])
+        pipeline_health.save_keys({f"{TARGET.repo}|{TARGET.workflow}|cron"})
+        monkeypatch.setattr(pipeline_health, "post_slack", lambda text: None)
+        fake_ages(9.0, 0.1)
+        assert pipeline_health.main() == 0
+
+
+class TestOverridePostsEverything:
+    """MAX_AGE_OVERRIDE_DAYS=0 is a test of the alerting path itself."""
+
+    def test_confirmed_and_unconfirmed_findings_are_both_posted(
+            self, monkeypatch, tmp_path, fake_ages):
+        sent = []
+        monkeypatch.setenv("HEALTH_STATE_FILE", str(tmp_path / "s.json"))
+        monkeypatch.setattr(pipeline_health, "post_slack", sent.append)
+        monkeypatch.setattr(pipeline_health, "TARGETS", [TARGET])
+        # Only the cron finding is confirmed; the output one is a first sighting.
+        pipeline_health.save_keys({f"{TARGET.repo}|{TARGET.workflow}|cron"})
+        monkeypatch.setenv("MAX_AGE_OVERRIDE_DAYS", "0")
+        fake_ages(0.1, 0.1)
+        pipeline_health.main()
+        assert len(sent) == 1
+        assert sent[0].count("\n") == 2   # header + both findings
