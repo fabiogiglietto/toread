@@ -16,6 +16,10 @@ on:
       - 'schema/**'
       - 'requirements*'
   workflow_dispatch:
+  # Entry point for dependabot-automerge.yml. Unlike the `pull_request`
+  # trigger above it has no `paths:` filter, so github-actions bumps —
+  # which touch none of those paths — still get a test signal.
+  workflow_call:
 
 jobs:
   test:

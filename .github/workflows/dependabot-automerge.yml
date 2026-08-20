@@ -1,0 +1,52 @@
+name: Dependabot auto-merge
+
+# Dependabot PRs were accumulating unmerged (20+ across these repos by Aug 2026).
+# This merges the one category that is safe to land unattended — github-actions
+# patch and minor bumps, once the suite in tests.yml passes — and leaves
+# everything else for a human.
+#
+# Deliberately NOT `gh pr merge --auto` plus branch protection: update_feed.yml
+# pushes to main every 30 minutes with GITHUB_TOKEN, and classic branch
+# protection with required status checks blocks those pushes (the Actions token
+# gets no admin bypass). Gating on `needs: test` inside the run is equivalent
+# and touches no branch-level rules. Without required checks, `--auto` would
+# merge immediately anyway.
+on: pull_request
+
+permissions:
+  contents: write
+  pull-requests: write
+
+jobs:
+  test:
+    if: github.event.pull_request.user.login == 'dependabot[bot]'
+    # Reused, not copied, so there is only one definition of "the tests".
+    uses: ./.github/workflows/tests.yml
+
+  automerge:
+    needs: test
+    if: github.event.pull_request.user.login == 'dependabot[bot]'
+    runs-on: ubuntu-latest
+    steps:
+      - name: Fetch Dependabot metadata
+        id: meta
+        uses: dependabot/fetch-metadata@25dd0e34f4fe68f24cc83900b1fe3fe149efef98 # v3.1.0
+
+      # `package-ecosystem` is derived from the branch name, so the slug is
+      # `github_actions` / `pip` / `npm_and_yarn`, not the dependabot.yml
+      # spelling. pip is excluded on purpose: version updates are switched off
+      # in dependabot.yml (requirements.lock is what installs), so a pip PR
+      # arriving here is a security update and wants human eyes.
+      #
+      # On a grouped PR `update-type` is the *highest* severity in the group
+      # (maxSemver in the action's output.ts), so a single major anywhere in the
+      # group blocks the whole PR. That is the behaviour we want — the `actions`
+      # group has no update-types filter, so majors do land in it.
+      - name: Merge github-actions patch/minor
+        if: >-
+          steps.meta.outputs.package-ecosystem == 'github_actions' &&
+          contains(fromJSON('["version-update:semver-minor","version-update:semver-patch"]'), steps.meta.outputs.update-type)
+        run: gh pr merge --squash "$PR_URL"
+        env:
+          PR_URL: ${{ github.event.pull_request.html_url }}
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
