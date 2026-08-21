@@ -6855,5 +6855,31 @@
       "source": "crossref",
       "confidence_score": 0.8529411764705882
     }
+  },
+  "91c71f1da5117e49": {
+    "entry_key": "Fletcher2026-lv",
+    "entry_title": "What has happened to trust in news in the long run globally?",
+    "cached_at": "2026-08-21T05:00:11.393319",
+    "metadata": {
+      "abstract": null,
+      "keywords": [],
+      "doi": "10.4324/9781003618041-6",
+      "doi_url": "https://doi.org/10.4324/9781003618041-6",
+      "url": null,
+      "arxiv_url": null,
+      "pdf_url": null,
+      "publication_date": "2026-08-19",
+      "citation_count": 0,
+      "reference_count": 0,
+      "venue": "Mainstream News Media Trust",
+      "authors": [
+        "Richard Fletcher",
+        "Rasmus Kleis Nielsen"
+      ],
+      "subjects": [],
+      "is_open_access": null,
+      "source": "crossref",
+      "confidence_score": 0.8999999999999999
+    }
   }
 }
