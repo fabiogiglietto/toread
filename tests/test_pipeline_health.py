@@ -631,3 +631,51 @@ class TestOverridePostsEverything:
         pipeline_health.main()
         assert len(sent) == 1
         assert sent[0].count("\n") == 2   # header + both findings
+
+
+class TestTransportPreference:
+    """An incoming webhook is bound to the channel it was created for.
+
+    Preferring it silently overrode OPS_SLACK_CHANNEL and put ops alerts back
+    in the content channel, which is what routing them to #pipeline-ops had to
+    undo.
+    """
+
+    def _urlopen(self, monkeypatch):
+        seen = {}
+
+        def fake_urlopen(req, timeout=None):
+            seen["url"] = req.full_url
+
+            class _Resp:
+                def read(self):
+                    return b'{"ok": true}'
+
+                def __enter__(self):
+                    return self
+
+                def __exit__(self, *exc):
+                    return False
+
+            return _Resp()
+
+        monkeypatch.setattr(pipeline_health.urllib.request, "urlopen",
+                            fake_urlopen)
+        return seen
+
+    def test_explicit_channel_wins_over_webhook(self, monkeypatch):
+        monkeypatch.setenv("SLACK_WEBHOOK_URL", "https://hooks.invalid/toread")
+        monkeypatch.setenv("SLACK_BOT_TOKEN", "tok")
+        monkeypatch.setenv("SLACK_ALERT_CHANNEL", "C_OPS")
+        seen = self._urlopen(monkeypatch)
+        pipeline_health.post_slack("x")
+        assert seen["url"] == "https://slack.com/api/chat.postMessage"
+
+    def test_webhook_is_still_used_when_there_is_no_channel(self, monkeypatch):
+        """A repo with no bot token must still be able to alert."""
+        monkeypatch.setenv("SLACK_WEBHOOK_URL", "https://hooks.invalid/toread")
+        monkeypatch.delenv("SLACK_BOT_TOKEN", raising=False)
+        monkeypatch.delenv("SLACK_ALERT_CHANNEL", raising=False)
+        seen = self._urlopen(monkeypatch)
+        pipeline_health.post_slack("x")
+        assert seen["url"] == "https://hooks.invalid/toread"
