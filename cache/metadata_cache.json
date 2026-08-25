@@ -2,240 +2,101 @@
   "c5a7d0326e1f61c6": {
     "entry_key": "Kristensen2025-ni",
     "entry_title": "Platform polarization. Do alternative platforms drive discursive polarization?",
-    "cached_at": "2026-08-15T07:49:20.512697",
+    "cached_at": "2026-08-25T06:24:45.564056",
     "metadata": null,
     "failed": true,
     "failure_reason": "Could not enrich entry: Kristensen2025-ni | No DOI available | Title length: 78 chars | Authors: Kristensen, Jakob Bæk, Kristensen, Jakob Bæk | APIs: Crossref enabled, Semantic Scholar enabled, ArXiv enabled",
-    "last_failure_at": "2026-08-15T07:49:20.512705"
+    "last_failure_at": "2026-08-25T06:24:45.564063"
   },
   "65d46046ae1c898f": {
     "entry_key": "Gaw2025-ru",
     "entry_title": "Influence operations as brokerage: Political-economic infrastructures of manipulation in the 2022 Philippine elections",
-    "cached_at": "2026-08-15T07:49:23.531510",
+    "cached_at": "2026-08-25T06:24:48.669851",
     "metadata": null,
     "failed": true,
     "failure_reason": "Could not enrich entry: Gaw2025-ru | No DOI available | Title length: 118 chars | Authors: Gaw, Fatima, Agonos, Mariam Jayne... | APIs: Crossref enabled, Semantic Scholar enabled, ArXiv enabled",
-    "last_failure_at": "2026-08-15T07:49:23.531518"
+    "last_failure_at": "2026-08-25T06:24:48.669858"
   },
   "b41f425da41887a0": {
     "entry_key": "Marwick2025-vx",
     "entry_title": "True costs of misinformation| mountains of evidence: Processual “redpilling” as a Socio-technical effect of disinformation",
-    "cached_at": "2026-08-15T07:49:26.623076",
+    "cached_at": "2026-08-25T06:24:51.753192",
     "metadata": null,
     "failed": true,
     "failure_reason": "Could not enrich entry: Marwick2025-vx | No DOI available | Title length: 122 chars | Authors: Marwick, Alice E, Furl, Katherine | APIs: Crossref enabled, Semantic Scholar enabled, ArXiv enabled",
-    "last_failure_at": "2026-08-15T07:49:26.623086"
+    "last_failure_at": "2026-08-25T06:24:51.753200"
   },
   "e3b0c44298fc1c14": {
     "entry_key": "noauthor_undated-ue",
     "entry_title": null,
-    "cached_at": "2026-08-15T07:49:26.623193",
+    "cached_at": "2026-08-25T06:24:51.753570",
     "metadata": null,
     "failed": true,
     "failure_reason": "Could not enrich entry: noauthor_undated-ue | No DOI available | No title available | No authors available | APIs: Crossref enabled, Semantic Scholar enabled, ArXiv enabled",
-    "last_failure_at": "2026-08-15T07:49:26.623196"
+    "last_failure_at": "2026-08-25T06:24:51.753574"
   },
   "657c6670d7b624b8": {
     "entry_key": "noauthor_undated-fm",
     "entry_title": "Volume 7 issue 2 article 4",
-    "cached_at": "2026-08-15T07:49:17.435359",
+    "cached_at": "2026-08-25T06:24:34.031669",
     "metadata": null,
     "failed": true,
     "failure_reason": "Could not enrich entry: noauthor_undated-fm | No DOI available | Title length: 26 chars | No authors available | APIs: Crossref enabled, Semantic Scholar enabled, ArXiv enabled",
-    "last_failure_at": "2026-08-15T07:49:17.435368"
+    "last_failure_at": "2026-08-25T06:24:34.031676"
   },
   "b909c3af063ea494": {
     "entry_key": "noauthor_undated-bm",
     "entry_title": "cib.pdf",
-    "cached_at": "2026-08-15T07:48:49.481286",
+    "cached_at": "2026-08-25T06:24:51.753391",
     "metadata": null,
     "failed": true,
     "failure_reason": "Could not enrich entry: noauthor_undated-bm | No DOI available | Title length: 7 chars | No authors available | APIs: Crossref enabled, Semantic Scholar enabled, ArXiv enabled",
-    "last_failure_at": "2026-08-15T07:48:49.481291"
+    "last_failure_at": "2026-08-25T06:24:51.753395"
   },
   "9195fcc80574052b": {
     "entry_key": "Vincent_undated-re",
     "entry_title": "What our second measurement says about misinformation on major platforms in Europe",
-    "cached_at": "2026-08-15T07:48:53.343881",
+    "cached_at": "2026-08-25T06:24:54.945737",
     "metadata": null,
     "failed": true,
     "failure_reason": "Could not enrich entry: Vincent_undated-re | No DOI available | Title length: 82 chars | Authors: Vincent, Emmanuel, Crisan, Daiana | APIs: Crossref enabled, Semantic Scholar enabled, ArXiv enabled",
-    "last_failure_at": "2026-08-15T07:48:53.343888"
+    "last_failure_at": "2026-08-25T06:24:54.945743"
   },
   "fac502d9bb5bbba8": {
     "entry_key": "UnknownUnknown-db",
     "entry_title": "What 81,000 people told us about the economics of AI",
-    "cached_at": "2026-08-15T07:48:56.353198",
+    "cached_at": "2026-08-25T06:25:00.858960",
     "metadata": null,
     "failed": true,
     "failure_reason": "Could not enrich entry: UnknownUnknown-db | No DOI available | Title length: 52 chars | No authors available | APIs: Crossref enabled, Semantic Scholar enabled, ArXiv enabled",
-    "last_failure_at": "2026-08-15T07:48:56.353208"
+    "last_failure_at": "2026-08-25T06:25:00.858967"
   },
   "fc9373f3342e79d3": {
     "entry_key": "Gottfried2026-ww",
     "entry_title": "Americans and AI 2026: Chatbots, Smart Devices and Views on Impact",
-    "cached_at": "2026-08-15T07:48:59.447771",
+    "cached_at": "2026-08-25T06:25:04.007156",
     "metadata": null,
     "failed": true,
     "failure_reason": "Could not enrich entry: Gottfried2026-ww | No DOI available | Title length: 66 chars | Authors: Gottfried, Jeffrey, Bishop, William... | APIs: Crossref enabled, Semantic Scholar enabled, ArXiv enabled",
-    "last_failure_at": "2026-08-15T07:48:59.447779"
+    "last_failure_at": "2026-08-25T06:25:04.007163"
   },
   "06e15083ae69cfa5": {
     "entry_key": "Hinck2026-yj",
     "entry_title": "Where's the Evidence that Respondents Understand Your Survey Questions?",
-    "cached_at": "2026-08-15T07:49:02.491210",
+    "cached_at": "2026-08-25T06:25:07.050238",
     "metadata": null,
     "failed": true,
     "failure_reason": "Could not enrich entry: Hinck2026-yj | No DOI available | Title length: 71 chars | Authors: Hinck, Musashi, King, Gary... | APIs: Crossref enabled, Semantic Scholar enabled, ArXiv enabled",
-    "last_failure_at": "2026-08-15T07:49:02.491217"
-  },
-  "8a077b3683a99b7a": {
-    "entry_key": "Van_Erkel2026-mk",
-    "entry_title": "The hostile misinformation effect: How ideological congruence drives the assessment of misinformation targets",
-    "cached_at": "2026-07-22T09:04:53.620021",
-    "metadata": {
-      "abstract": null,
-      "keywords": [],
-      "doi": "10.1080/10584609.2026.2671760",
-      "doi_url": "https://doi.org/10.1080/10584609.2026.2671760",
-      "url": null,
-      "arxiv_url": null,
-      "pdf_url": null,
-      "publication_date": "2026-05-18",
-      "citation_count": 0,
-      "reference_count": 48,
-      "venue": "Political Communication",
-      "authors": [
-        "Patrick van Erkel",
-        "Michael Hameleers",
-        "Aqsa Farooq",
-        "Katjana Gattermann",
-        "Marina Tulin",
-        "Elske van den Hoogen",
-        "Claes de Vreese"
-      ],
-      "subjects": [],
-      "is_open_access": null,
-      "source": "crossref",
-      "confidence_score": 0.8333333333333333
-    }
-  },
-  "727eb759ad5be8ca": {
-    "entry_key": "Marino2026-he",
-    "entry_title": "Measuring partisan community dynamics: a longitudinal analysis of affective engagement in pro-Bolsonaro Facebook networks",
-    "cached_at": "2026-07-22T09:04:55.385446",
-    "metadata": {
-      "abstract": null,
-      "keywords": [],
-      "doi": "10.1080/1369118x.2026.2696929",
-      "doi_url": "https://doi.org/10.1080/1369118x.2026.2696929",
-      "url": null,
-      "arxiv_url": null,
-      "pdf_url": null,
-      "publication_date": "2026-07-08",
-      "citation_count": 0,
-      "reference_count": 68,
-      "venue": "Information, Communication &amp; Society",
-      "authors": [
-        "Giada Marino",
-        "Bruna Paroni",
-        "Fabio Giglietto"
-      ],
-      "subjects": [],
-      "is_open_access": null,
-      "source": "crossref",
-      "confidence_score": 0.8428571428571427
-    }
-  },
-  "1e6deffeb6e35094": {
-    "entry_key": "Costello2024-bg",
-    "entry_title": "Durably reducing conspiracy beliefs through dialogues with AI",
-    "cached_at": "2026-07-22T09:04:58.144840",
-    "metadata": {
-      "abstract": "Conspiracy theories are a paradigmatic example of beliefs that, once adopted, are extremely difficult to dispel. Influential psychological theories propose that conspiracy beliefs are uniquely resistant to counterevidence because they satisfy important needs and motivations. Here, we raise the possibility that previous attempts to correct conspiracy beliefs have been unsuccessful merely because they failed to deliver counterevidence that was sufficiently compelling and tailored to each believer’s specific conspiracy theory (which vary dramatically from believer to believer). To evaluate this possibility, we leverage recent developments in generative artificial intelligence (AI) to deliver well-argued, person-specific debunks to a total of N = 2,190 conspiracy theory believers. Participants in our experiments provided detailed, open-ended explanations of a conspiracy theory they believed, and then engaged in a 3 round dialogue with a frontier generative AI model (GPT-4 Turbo) which was instructed to reduce each participant’s belief in their conspiracy theory (or discuss a banal topic in a control condition). Across two experiments, we find robust evidence that the debunking conversation with the AI reduced belief in conspiracy theories by roughly 20%. This effect did not decay over 2 months time, was consistently observed across a wide range of different conspiracy theories, and occurred even for participants whose conspiracy beliefs were deeply entrenched and of great importance to their identities. Furthermore, although the dialogues were focused on a single conspiracy theory, the intervention spilled over to reduce beliefs in unrelated conspiracies, indicating a general decrease in conspiratorial worldview, as well as increasing intentions to challenge others who espouse their chosen conspiracy. These findings highlight that even many people who strongly believe in seemingly fact-resistant conspiratorial beliefs can change their minds in the face of sufficient evidence.",
-      "keywords": [],
-      "doi": "10.31234/osf.io/xcwdn",
-      "doi_url": "https://doi.org/10.31234/osf.io/xcwdn",
-      "url": null,
-      "arxiv_url": null,
-      "pdf_url": null,
-      "publication_date": null,
-      "citation_count": 12,
-      "reference_count": 0,
-      "venue": null,
-      "authors": [
-        "Thomas H Costello",
-        "Gordon Pennycook",
-        "David Gertler Rand"
-      ],
-      "subjects": [],
-      "is_open_access": null,
-      "source": "crossref",
-      "confidence_score": 0.83
-    }
-  },
-  "5f902bd3bf030182": {
-    "entry_key": "Grusauskaite2026-po",
-    "entry_title": "“We, the conspiracy theorists.” How people do symbolic boundary work in the “Great Reset” debates across social media platforms",
-    "cached_at": "2026-07-22T09:05:01.318036",
-    "metadata": {
-      "abstract": "Conspiracy theories spread rapidly on social media. A growing field of research has examined how social media platforms shape conspiracy narratives and cultures. However, this technological focus has largely overshadowed social media users’ own agency toward collective identity construction. This article examines how users in online conspiracy communities construct collective identities through symbolic boundary work. Focusing on discussions surrounding the “Great Reset” conspiracy theory, across six major social media platforms (Facebook, Instagram, Twitter/X, YouTube, Reddit, and TikTok), we use multimodal discourse analysis to analyze 630 posts and their comments. Our findings reveal that users do symbolic boundary work by defining themselves as “critical thinkers,” reclaiming the label “conspiracy theorist,” and affectively transforming personal struggles into shared narratives, creating a shared identity in contrast to the “mainstream other.” The study contributes to research on social media and conspiracy cultures by foregrounding identity over content, offering insight into how users build solidarity online.",
-      "keywords": [],
-      "doi": "10.1177/14614448261446590",
-      "doi_url": "https://doi.org/10.1177/14614448261446590",
-      "url": null,
-      "arxiv_url": null,
-      "pdf_url": null,
-      "publication_date": "2026-05-19",
-      "citation_count": 0,
-      "reference_count": 64,
-      "venue": "New Media &amp; Society",
-      "authors": [
-        "Kamile Grusauskaite",
-        "Matthias De Bondt",
-        "Lars de Wildt",
-        "Stef Aupers"
-      ],
-      "subjects": [],
-      "is_open_access": null,
-      "source": "crossref",
-      "confidence_score": 0.83
-    }
-  },
-  "dea1b880e2f26f82": {
-    "entry_key": "Wack2026-bt",
-    "entry_title": "Making sense of AI-generated disinformation: How audience interpretations influence the impact of deepfakes in Kenya",
-    "cached_at": "2026-07-24T11:28:38.479136",
-    "metadata": {
-      "abstract": "Does social commentary influence the effects of political deepfakes? To answer this question, we rely on a survey experiment based in Kenya ( N = 7,000). The experiment saw respondents view a generated clip of presidential candidates discussing their role in a fabricated corruption scheme coupled with embedded comments expressing varied levels of skepticism. In line with prior work, we first show that social commentary shapes how audiences interpret media. Next, we go beyond this initial finding to examine how commentary in social environments can shape the perceived authenticity of entire videos by integrating a novel survey instrument aimed at improving the ecological validity of our experimental design. Using this instrument, we find that comments which failed to remark on the synthetic origins of the video reduced support for the politician, while skeptical comments partially restored it. Partisanship also mattered, as respondents more readily dismissed deepfakes targeting candidates they supported compared to opposing candidates. Our findings highlight how the social context in which users view AI-generated disinformation can reshape audience perceptions, particularly in contexts that lack sufficient resources to maintain effective moderation systems. We conclude that audience-driven “collective sensemaking” can critically alter the influence of deepfakes, introducing both challenges and opportunities for the development of countermeasures for mitigating the influence of audio-visual disinformation. Our discussion emphasizes the need for research on deepfakes and related forms of multi-modal AI-generated content to take socio-political contexts into account when considering the direction of influence and potential for harm.",
-      "keywords": [],
-      "doi": "10.1177/20563051261462092",
-      "doi_url": "https://doi.org/10.1177/20563051261462092",
-      "url": null,
-      "arxiv_url": null,
-      "pdf_url": null,
-      "publication_date": "2026",
-      "citation_count": 0,
-      "reference_count": 102,
-      "venue": "Social Media + Society",
-      "authors": [
-        "Morgan Wack",
-        "Stephen Prochaska"
-      ],
-      "subjects": [],
-      "is_open_access": null,
-      "source": "crossref",
-      "confidence_score": 0.86
-    }
+    "last_failure_at": "2026-08-25T06:25:07.050248"
   },
   "63bf89009a078bb1": {
     "entry_key": "Falkenberg2026-ka",
     "entry_title": "Toward an integrated and globally equitable understanding of political polarization",
-    "cached_at": "2026-08-15T07:49:14.373742",
+    "cached_at": "2026-08-25T06:25:12.957570",
     "metadata": null,
     "failed": true,
     "failure_reason": "Could not enrich entry: Falkenberg2026-ka | No DOI available | Title length: 83 chars | Authors: Falkenberg, Max, Cinelli, Matteo... | APIs: Crossref enabled, Semantic Scholar enabled, ArXiv enabled",
-    "last_failure_at": "2026-08-15T07:49:14.373751"
+    "last_failure_at": "2026-08-25T06:25:12.957577"
   },
   "7a5bca5477086046": {
     "entry_key": "Schiffrin_undated-gi",
@@ -6880,6 +6741,178 @@
       "is_open_access": null,
       "source": "crossref",
       "confidence_score": 0.8999999999999999
+    }
+  },
+  "727eb759ad5be8ca": {
+    "entry_key": "Marino2026-he",
+    "entry_title": "Measuring partisan community dynamics: a longitudinal analysis of affective engagement in pro-Bolsonaro Facebook networks",
+    "cached_at": "2026-08-25T06:24:36.202187",
+    "metadata": {
+      "abstract": null,
+      "keywords": [],
+      "doi": "10.1080/1369118x.2026.2696929",
+      "doi_url": "https://doi.org/10.1080/1369118x.2026.2696929",
+      "url": null,
+      "arxiv_url": null,
+      "pdf_url": null,
+      "publication_date": "2026-07-08",
+      "citation_count": 0,
+      "reference_count": 68,
+      "venue": "Information, Communication &amp; Society",
+      "authors": [
+        "Giada Marino",
+        "Bruna Paroni",
+        "Fabio Giglietto"
+      ],
+      "subjects": [],
+      "is_open_access": null,
+      "source": "crossref",
+      "confidence_score": 0.8428571428571427
+    }
+  },
+  "5f902bd3bf030182": {
+    "entry_key": "Grusauskaite2026-po",
+    "entry_title": "“We, the conspiracy theorists.” How people do symbolic boundary work in the “Great Reset” debates across social media platforms",
+    "cached_at": "2026-08-25T06:24:39.211683",
+    "metadata": {
+      "abstract": "Conspiracy theories spread rapidly on social media. A growing field of research has examined how social media platforms shape conspiracy narratives and cultures. However, this technological focus has largely overshadowed social media users’ own agency toward collective identity construction. This article examines how users in online conspiracy communities construct collective identities through symbolic boundary work. Focusing on discussions surrounding the “Great Reset” conspiracy theory, across six major social media platforms (Facebook, Instagram, Twitter/X, YouTube, Reddit, and TikTok), we use multimodal discourse analysis to analyze 630 posts and their comments. Our findings reveal that users do symbolic boundary work by defining themselves as “critical thinkers,” reclaiming the label “conspiracy theorist,” and affectively transforming personal struggles into shared narratives, creating a shared identity in contrast to the “mainstream other.” The study contributes to research on social media and conspiracy cultures by foregrounding identity over content, offering insight into how users build solidarity online.",
+      "keywords": [],
+      "doi": "10.1177/14614448261446590",
+      "doi_url": "https://doi.org/10.1177/14614448261446590",
+      "url": null,
+      "arxiv_url": null,
+      "pdf_url": null,
+      "publication_date": "2026-05-19",
+      "citation_count": 0,
+      "reference_count": 64,
+      "venue": "New Media &amp; Society",
+      "authors": [
+        "Kamile Grusauskaite",
+        "Matthias De Bondt",
+        "Lars de Wildt",
+        "Stef Aupers"
+      ],
+      "subjects": [],
+      "is_open_access": null,
+      "source": "crossref",
+      "confidence_score": 0.83
+    }
+  },
+  "8a077b3683a99b7a": {
+    "entry_key": "Van_Erkel2026-mk",
+    "entry_title": "The hostile misinformation effect: How ideological congruence drives the assessment of misinformation targets",
+    "cached_at": "2026-08-25T06:24:42.310334",
+    "metadata": {
+      "abstract": null,
+      "keywords": [],
+      "doi": "10.1080/10584609.2026.2671760",
+      "doi_url": "https://doi.org/10.1080/10584609.2026.2671760",
+      "url": null,
+      "arxiv_url": null,
+      "pdf_url": null,
+      "publication_date": "2026-05-18",
+      "citation_count": 0,
+      "reference_count": 48,
+      "venue": "Political Communication",
+      "authors": [
+        "Patrick van Erkel",
+        "Michael Hameleers",
+        "Aqsa Farooq",
+        "Katjana Gattermann",
+        "Marina Tulin",
+        "Elske van den Hoogen",
+        "Claes de Vreese"
+      ],
+      "subjects": [],
+      "is_open_access": null,
+      "source": "crossref",
+      "confidence_score": 0.8333333333333333
+    }
+  },
+  "1e6deffeb6e35094": {
+    "entry_key": "Costello2024-bg",
+    "entry_title": "Durably reducing conspiracy beliefs through dialogues with AI",
+    "cached_at": "2026-08-25T06:24:57.495213",
+    "metadata": {
+      "abstract": "Conspiracy theories are a paradigmatic example of beliefs that, once adopted, are extremely difficult to dispel. Influential psychological theories propose that conspiracy beliefs are uniquely resistant to counterevidence because they satisfy important needs and motivations. Here, we raise the possibility that previous attempts to correct conspiracy beliefs have been unsuccessful merely because they failed to deliver counterevidence that was sufficiently compelling and tailored to each believer’s specific conspiracy theory (which vary dramatically from believer to believer). To evaluate this possibility, we leverage recent developments in generative artificial intelligence (AI) to deliver well-argued, person-specific debunks to a total of N = 2,190 conspiracy theory believers. Participants in our experiments provided detailed, open-ended explanations of a conspiracy theory they believed, and then engaged in a 3 round dialogue with a frontier generative AI model (GPT-4 Turbo) which was instructed to reduce each participant’s belief in their conspiracy theory (or discuss a banal topic in a control condition). Across two experiments, we find robust evidence that the debunking conversation with the AI reduced belief in conspiracy theories by roughly 20%. This effect did not decay over 2 months time, was consistently observed across a wide range of different conspiracy theories, and occurred even for participants whose conspiracy beliefs were deeply entrenched and of great importance to their identities. Furthermore, although the dialogues were focused on a single conspiracy theory, the intervention spilled over to reduce beliefs in unrelated conspiracies, indicating a general decrease in conspiratorial worldview, as well as increasing intentions to challenge others who espouse their chosen conspiracy. These findings highlight that even many people who strongly believe in seemingly fact-resistant conspiratorial beliefs can change their minds in the face of sufficient evidence.",
+      "keywords": [],
+      "doi": "10.31234/osf.io/xcwdn",
+      "doi_url": "https://doi.org/10.31234/osf.io/xcwdn",
+      "url": null,
+      "arxiv_url": null,
+      "pdf_url": null,
+      "publication_date": null,
+      "citation_count": 12,
+      "reference_count": 0,
+      "venue": null,
+      "authors": [
+        "Thomas H Costello",
+        "Gordon Pennycook",
+        "David Gertler Rand"
+      ],
+      "subjects": [],
+      "is_open_access": null,
+      "source": "crossref",
+      "confidence_score": 0.83
+    }
+  },
+  "dea1b880e2f26f82": {
+    "entry_key": "Wack2026-bt",
+    "entry_title": "Making sense of AI-generated disinformation: How audience interpretations influence the impact of deepfakes in Kenya",
+    "cached_at": "2026-08-25T06:25:09.714013",
+    "metadata": {
+      "abstract": "Does social commentary influence the effects of political deepfakes? To answer this question, we rely on a survey experiment based in Kenya ( N = 7,000). The experiment saw respondents view a generated clip of presidential candidates discussing their role in a fabricated corruption scheme coupled with embedded comments expressing varied levels of skepticism. In line with prior work, we first show that social commentary shapes how audiences interpret media. Next, we go beyond this initial finding to examine how commentary in social environments can shape the perceived authenticity of entire videos by integrating a novel survey instrument aimed at improving the ecological validity of our experimental design. Using this instrument, we find that comments which failed to remark on the synthetic origins of the video reduced support for the politician, while skeptical comments partially restored it. Partisanship also mattered, as respondents more readily dismissed deepfakes targeting candidates they supported compared to opposing candidates. Our findings highlight how the social context in which users view AI-generated disinformation can reshape audience perceptions, particularly in contexts that lack sufficient resources to maintain effective moderation systems. We conclude that audience-driven “collective sensemaking” can critically alter the influence of deepfakes, introducing both challenges and opportunities for the development of countermeasures for mitigating the influence of audio-visual disinformation. Our discussion emphasizes the need for research on deepfakes and related forms of multi-modal AI-generated content to take socio-political contexts into account when considering the direction of influence and potential for harm.",
+      "keywords": [],
+      "doi": "10.1177/20563051261462092",
+      "doi_url": "https://doi.org/10.1177/20563051261462092",
+      "url": null,
+      "arxiv_url": null,
+      "pdf_url": null,
+      "publication_date": "2026",
+      "citation_count": 1,
+      "reference_count": 102,
+      "venue": "Social Media + Society",
+      "authors": [
+        "Morgan Wack",
+        "Stephen Prochaska"
+      ],
+      "subjects": [],
+      "is_open_access": null,
+      "source": "crossref",
+      "confidence_score": 0.86
+    }
+  },
+  "d85eaab784544a78": {
+    "entry_key": "Schulz2026-ts",
+    "entry_title": "Online Discourse is Falsely Polarized by Self-Selection",
+    "cached_at": "2026-08-25T06:25:15.862611",
+    "metadata": {
+      "abstract": "We present comprehensive evidence quantifying the magnitude and scope of false polarization (i.e. the impression that opinions on political issues are more polarized than they actually are) on social media, driven by users' selective posting behavior. Using more than a decade of social media behavior connected to individual ideological attitudes in 1.7 million posts, a series of controlled experiments, and a large global survey covering 40 countries (total N = 49,222), we find that (1) strong ideologues post their opinions significantly more often than moderate individuals, and (2) extreme attitudes are posted more often than moderate attitudes. This general pattern replicates robustly across 40 countries, spanning diverse political cultures. Indeed, across studies we find extreme opinions are overrepresented on social media by at least 6% and up to 22% compared to their true prevalence in our samples. Furthermore, the opinions that users post are more hostile and toxic than the beliefs they keep to themselves. These results were not explained by political interest or consistent left-right differences, suggesting that political extremity has an independent effect on social media behavior. Thus, most of the observed polarization of online discourse in recent years may be attributable to the systematic over-representation of pre-existing extreme political views, rather than the causal effects of platforms.",
+      "keywords": [],
+      "doi": "10.31234/osf.io/7z69m_v1",
+      "doi_url": "https://doi.org/10.31234/osf.io/7z69m_v1",
+      "url": null,
+      "arxiv_url": null,
+      "pdf_url": null,
+      "publication_date": null,
+      "citation_count": 0,
+      "reference_count": 0,
+      "venue": null,
+      "authors": [
+        "Will Schulz",
+        "Claire Elizabeth Robertson",
+        "Hallgeir Sjåstad",
+        "Ashwini Ashokkumar",
+        "Lisa Oswald",
+        "JungHwan Yang",
+        "Simon Munzert",
+        "Jay Joseph Van Bavel",
+        "Andrew Markus Guess"
+      ],
+      "subjects": [],
+      "is_open_access": null,
+      "source": "crossref",
+      "confidence_score": 0.825
     }
   }
 }
