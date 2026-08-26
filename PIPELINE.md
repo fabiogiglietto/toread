@@ -103,6 +103,91 @@ use the default `GITHUB_TOKEN`. One fine-grained PAT, stored as the secret
   `github.io` — every repo that dispatches. (fg-zettelkasten dispatches
   research-radio on the summarize leg, so it needs the secret too.)
 
+## Automatic failure triage
+
+Every producing workflow ends with an `if: failure()` step that posts a
+`:rotating_light:` alert into the ops channel named by the `OPS_SLACK_CHANNEL`
+repo variable (`#pipeline-ops`). `.github/workflows/ops-autofix.yml` closes the
+loop on that alert.
+
+It is triggered by `workflow_run: completed` on this repo's producing workflow —
+the same event that posts the alert, so it starts within seconds of it — and
+runs Claude Code (`anthropics/claude-code-action`) against the failed run. The
+agent reads the failing step's log, classifies the failure, and takes one of two
+paths:
+
+- **code defect** → a branch `ops/autofix-<run-id>`, the smallest fix that
+  addresses the root cause, the test suite run as evidence, and a PR labelled
+  `ops-autofix` whose body carries the diagnosis. Slack gets *"merge it into
+  `main` and delete the branch"*.
+- **anything else** — transient, credential, or an upstream contract change →
+  no PR. Slack gets the diagnosis and the exact action required of a human.
+
+An escalation is a successful outcome. The agent is told explicitly that a
+guessed patch is worse than a clear "here is what broke and what you must do",
+because a patch that silences a symptom looks like a fix.
+
+**Auth is workload identity federation, not an API key** — the same
+`ANTHROPIC_FEDERATION_RULE_ID` / `_ORGANIZATION_ID` / `_SERVICE_ACCOUNT_ID` /
+`_WORKSPACE_ID` repo variables the pipeline itself uses, with `id-token: write`
+on the job. Do not add `anthropic_api_key`: it outranks federation in the
+credential chain and would silently shadow it.
+
+### What it will not touch
+
+`data/`, `output/`, `vault/`, `cache/`, `quartz/public/` — all generated. A
+"fix" there is erased by the next producing run and hides the real bug in the
+meantime. It never pushes to `main`, and it cannot read or set a secret.
+
+On `mine-toread` and `mine-zettelkasten` the agent additionally refuses to
+patch `src/` or `scripts/` in place, and escalates naming the upstream repo —
+these are config-diff forks, and a local code fix there would fork the
+codebases for real. See [The MINE team chain](#the-mine-team-chain).
+
+### Guards
+
+The pipeline's alerting is deliberately quiet — one silent Pages-deploy retry
+before alerting, `hold_until_confirmed` in `scripts/pipeline_health.py` — and
+auto-repair must not undo that by opening a PR for every flake. A preflight
+step exits before spending a token when:
+
+| Guard | Why |
+|---|---|
+| head branch starts with `ops/autofix-` | loop break: a test failure on an autofix PR must not trigger another autofix |
+| `run_attempt` > 1 | a re-run that fails again is a human's re-run; they are already watching |
+| a later run of the same workflow succeeded | the failure was transient and has self-healed |
+| an open `ops-autofix` PR carries the same signature | one PR per failure, however often it recurs |
+
+The signature is `sha1(workflow name + failing step name)`, truncated — two runs
+that die in the same step of the same workflow are the same bug. The agent
+writes it into the PR body as `<!-- autofix-signature: … -->`, which is what the
+fourth guard greps for. `workflow_dispatch` with `skip_guards: true` replays a
+past run by id regardless, which is how the workflow is rehearsed.
+
+The Slack report step is `if: always()`: if the triage run itself dies — a
+crash, `--max-turns`, the job timeout — that is reported too. Silence is never
+the outcome, because silence is indistinguishable from success.
+
+### Deliberate gap
+
+The `:hourglass_flowing_sand:` *Pipeline freshness check* digest from
+`pipeline-health.yml` is **not** covered. That workflow succeeds while reporting
+its findings, so a `workflow_run: failure` trigger never sees it, and its
+findings are cross-repo infra — a disabled cron, a dropped dispatch, a hung run
+— rather than a defect in the repo that would fix them. Those still need a human.
+
+### Setup per repo
+
+1. The four `ANTHROPIC_*` repo variables (Console → Workload identity).
+2. Settings → Actions → General → **Allow GitHub Actions to create and approve
+   pull requests**, or `gh pr create` 403s under `GITHUB_TOKEN`.
+3. The `ops-autofix` label, which the fourth guard queries.
+
+Note that a PR opened with `GITHUB_TOKEN` does not itself trigger `tests.yml` —
+GitHub suppresses workflow-triggering-workflow. That is why the agent runs the
+suite inside its own job and pastes the output into the PR body: evidence, not a
+green check. Merging to `main` runs the real thing.
+
 ## The MINE team chain
 
 A second, shorter chain serves the MINE research team. `mine-toread` and
