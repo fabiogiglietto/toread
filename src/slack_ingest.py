@@ -408,16 +408,22 @@ class SlackIngestState:
 
 
 def _escape_bib(value: str) -> str:
-    """Light BibTeX escaping. Sufficient for values we write ourselves."""
+    """Light BibTeX escaping. Sufficient for values we write ourselves.
+
+    Whitespace is collapsed, not merely newline-flattened: publishers wrap
+    `citation_title` and Crossref `title` across indented source lines, so a
+    real title arrives as "CONTENT,\n        MALICIOUS ACTORS" and would
+    otherwise be written — and displayed downstream — with the indentation
+    baked in.
+    """
     if value is None:
         return ""
-    return (
+    escaped = (
         value.replace("\\", "\\\\")
         .replace("{", r"\{")
         .replace("}", r"\}")
-        .replace("\n", " ")
-        .strip()
     )
+    return _WS_NORM_RE.sub(" ", escaped).strip()
 
 
 def render_bib_entry(*, key: str, doi: Optional[str], title: Optional[str],
@@ -1489,6 +1495,114 @@ def _inbox_contains(path: Path, *, bibkey: str,
     return False
 
 
+# ---- Backfill of title-less inbox entries ---------------------------------
+
+# `@article{key,` … `}` — the shape `_append_bib` writes, and the only shape in
+# this file.
+_BIB_ENTRY_RE = re.compile(r"(@\w+\{)([^,\s]+)(,\n)(.*?)(\n\})", re.S)
+_BIB_FIELD_RE = re.compile(r"^\s*(\w+)\s*=\s*\{(.*)\}\s*,?\s*$", re.S)
+
+
+def _entry_field(body: str, name: str) -> Optional[str]:
+    for line in body.split("\n"):
+        m = _BIB_FIELD_RE.match(line)
+        if m and m.group(1).lower() == name:
+            return m.group(2).strip()
+    return None
+
+
+def backfill_inbox(
+    inbox_bib: Path, resolver: "PaperResolver", *, apply: bool = True,
+    logger: Optional[logging.Logger] = None,
+) -> Dict[str, Any]:
+    """Re-resolve every inbox entry that has no title, and fill it in.
+
+    Why this exists: metadata resolution used to run exactly once, at ingest,
+    and freeze into an append-only file. When the resolver improved, the
+    entries it had already given up on stayed broken — one of them resolves
+    perfectly today and failed only because the fix landed hours after it was
+    submitted. Three rounds of hand-editing `slack_inbox.bib` are in this
+    repo's history; this is that chore, done by the resolver that is now able
+    to do it.
+
+    The bibkey is deliberately **not** re-minted. It is the note filename
+    downstream, the key of `state.processed_meta`, and the live site URL of any
+    note already built from the broken entry — re-keying would orphan all
+    three to gain nothing but a prettier key.
+
+    Existing field lines are preserved byte-for-byte; resolved fields are
+    inserted above them in `render_bib_entry` order, matching how these
+    entries were backfilled by hand. Returns a per-key report; writes nothing
+    when `apply` is False.
+    """
+    log = logger or logging.getLogger(__name__)
+    report: Dict[str, Any] = {"fixed": {}, "unresolved": [], "no_source": []}
+    if not inbox_bib.exists():
+        return report
+    text = inbox_bib.read_text(encoding="utf-8")
+
+    def _rewrite(m: "re.Match") -> str:
+        head, key, sep, body, tail = m.groups()
+        if _entry_field(body, "title"):
+            return m.group(0)
+
+        doi = _entry_field(body, "doi")
+        url = _entry_field(body, "url")
+        if not doi and not url:
+            # Nothing to re-resolve *from*. The observed case is a submission
+            # whose Slack message was deleted before the PDF arrived; it needs
+            # dropping, not backfilling, and that is a separate decision.
+            report["no_source"].append(key)
+            return m.group(0)
+
+        paper = resolver.resolve(text=doi or url or "",
+                                 urls=[url] if url else [])
+        if not paper.title:
+            report["unresolved"].append(key)
+            return m.group(0)
+
+        lines = body.split("\n")
+        # A corrected DOI replaces the stored one — the whole point when the
+        # stored DOI is the malformed greedy match.
+        if paper.doi:
+            lines = [ln for ln in lines
+                     if not (_BIB_FIELD_RE.match(ln)
+                             and _BIB_FIELD_RE.match(ln).group(1).lower() == "doi")]
+        # Record provenance on the note, so the next reader can tell a
+        # machine backfill from a hand-typed one.
+        provenance = f"; backfilled={paper.source}" + (
+            "; doi_trimmed=true" if paper.doi_trimmed else "")
+        for i, ln in enumerate(lines):
+            fm = _BIB_FIELD_RE.match(ln)
+            if fm and fm.group(1).lower() == "note":
+                trailing = "," if ln.rstrip().endswith(",") else ""
+                lines[i] = (f"  note = {{{fm.group(2).strip()}"
+                            f"{_escape_bib(provenance)}}}{trailing}")
+                break
+
+        new_fields: List[str] = [f"  title = {{{_escape_bib(paper.title)}}},"]
+        if paper.authors:
+            new_fields.append(
+                f"  author = {{{_escape_bib(' and '.join(paper.authors))}}},")
+        if paper.year:
+            new_fields.append(f"  year = {{{_escape_bib(paper.year)}}},")
+        if paper.doi:
+            new_fields.append(f"  doi = {{{_escape_bib(paper.doi)}}},")
+
+        report["fixed"][key] = {
+            "title": paper.title, "authors": paper.authors,
+            "year": paper.year, "doi": paper.doi, "source": paper.source,
+            "doi_trimmed": paper.doi_trimmed,
+        }
+        log.info("Backfilled %s -> %s (%s)", key, paper.title, paper.source)
+        return head + key + sep + "\n".join(new_fields + lines) + tail
+
+    new_text = _BIB_ENTRY_RE.sub(_rewrite, text)
+    if apply and new_text != text:
+        inbox_bib.write_text(new_text, encoding="utf-8")
+    return report
+
+
 # ---- CLI entry point ------------------------------------------------------
 
 
@@ -1543,6 +1657,11 @@ def main(argv: Optional[List[str]] = None) -> int:
                         help="Published feed.json, read for duplicate detection.")
     parser.add_argument("--dry-run", action="store_true",
                         help="Do not write files, post replies, or upload PDFs.")
+    parser.add_argument("--backfill", action="store_true",
+                        help="Re-resolve title-less entries in the inbox bib "
+                             "and fill them in, then exit. Needs no Slack, "
+                             "Drive or Unpaywall credentials — only the "
+                             "resolver — so it runs locally.")
     parser.add_argument("-v", "--verbose", action="store_true")
     args = parser.parse_args(argv)
 
@@ -1550,6 +1669,21 @@ def main(argv: Optional[List[str]] = None) -> int:
         level=logging.DEBUG if args.verbose else logging.INFO,
         format="%(asctime)s - %(name)s - %(levelname)s - %(message)s",
     )
+
+    if args.backfill:
+        report = backfill_inbox(Path(args.inbox_bib), PaperResolver(),
+                                apply=not args.dry_run)
+        for key, fields in report["fixed"].items():
+            logging.info("fixed %s: %s (%s)", key, fields["title"],
+                         fields["source"])
+        for key in report["unresolved"]:
+            logging.warning("still unresolved: %s", key)
+        for key in report["no_source"]:
+            logging.warning("no DOI and no URL to re-resolve from: %s", key)
+        logging.info("Backfill: %d fixed, %d unresolved, %d without a source",
+                     len(report["fixed"]), len(report["unresolved"]),
+                     len(report["no_source"]))
+        return 0
 
     cfg = _build_config_from_env(args)
     if cfg is None:
