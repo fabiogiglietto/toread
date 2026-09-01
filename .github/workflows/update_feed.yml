@@ -4,6 +4,17 @@ on:
   schedule:
     - cron: '*/30 * * * *'  # Every 30 minutes (reduces queue buildup)
   workflow_dispatch:  # Manual trigger
+    inputs:
+      force:
+        description: >-
+          Regenerate the feed even when this run produced no changes. The
+          change gates below compare the working tree against HEAD *after*
+          the ingest, so an edit that arrived already committed — a metadata
+          backfill of data/slack_inbox.bib, a hand-fixed entry — leaves them
+          both false and never reaches output/feed.json. It would otherwise
+          wait for the next unrelated submission to rebuild the feed for it.
+        type: boolean
+        default: false
   push:
     branches: [ main ]
     paths:
@@ -153,7 +164,7 @@ jobs:
         "
     
     - name: Generate feeds (fast mode for scheduled runs)
-      if: github.event_name == 'schedule' && (steps.bib-check.outputs.changed == 'true' || steps.slack-ingest.outputs.slack_changed == 'true')
+      if: github.event_name == 'schedule' && (steps.bib-check.outputs.changed == 'true' || steps.slack-ingest.outputs.slack_changed == 'true' || inputs.force)
       run: |
         echo "Running in fast mode for scheduled execution..."
         for i in {1..3}; do
@@ -166,7 +177,7 @@ jobs:
         done
     
     - name: Generate feeds (full enrichment)
-      if: github.event_name != 'schedule' && (steps.bib-check.outputs.changed == 'true' || steps.slack-ingest.outputs.slack_changed == 'true')
+      if: github.event_name != 'schedule' && (steps.bib-check.outputs.changed == 'true' || steps.slack-ingest.outputs.slack_changed == 'true' || inputs.force)
       run: |
         echo "Running full enrichment for manual/push triggers..."
         for i in {1..3}; do
@@ -182,11 +193,11 @@ jobs:
     # cascade downstream. schema/feed.schema.json is the normative contract
     # (SCHEMA.md is commentary). Hard fail -> the failure alert fires.
     - name: Validate feed against schema
-      if: steps.bib-check.outputs.changed == 'true' || steps.slack-ingest.outputs.slack_changed == 'true'
+      if: steps.bib-check.outputs.changed == 'true' || steps.slack-ingest.outputs.slack_changed == 'true' || inputs.force
       run: check-jsonschema --schemafile schema/feed.schema.json output/feed.json
 
     - name: Skip feed generation (no changes)
-      if: steps.bib-check.outputs.changed != 'true' && steps.slack-ingest.outputs.slack_changed != 'true'
+      if: steps.bib-check.outputs.changed != 'true' && steps.slack-ingest.outputs.slack_changed != 'true' && !inputs.force
       run: |
         echo "⏭️  Skipping feed generation - no changes in Paperpile export or Slack inbox"
         echo "This saves execution time and API quota!"
@@ -291,7 +302,7 @@ jobs:
     # PIPELINE_DISPATCH_SOFT_FAIL=true (its kasten has a daily self-healing
     # cron, so a missing dispatch token must not fail the feed run).
     - name: Trigger downstream pipeline
-      if: steps.bib-check.outputs.changed == 'true' || steps.slack-ingest.outputs.slack_changed == 'true'
+      if: steps.bib-check.outputs.changed == 'true' || steps.slack-ingest.outputs.slack_changed == 'true' || inputs.force
       continue-on-error: ${{ vars.PIPELINE_DISPATCH_SOFT_FAIL == 'true' }}
       uses: peter-evans/repository-dispatch@v4
       with:
