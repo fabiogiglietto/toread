@@ -171,6 +171,13 @@ def _build_ingestor(tmp_path, *, downloader=None, unpaywall=None,
         hashtag=DEFAULT_HASHTAG,
         state_file=tmp_path / "state.json",
         inbox_bib_file=tmp_path / "inbox.bib",
+        # Isolated, and deliberately absent: `IngestConfig` defaults
+        # `feed_file` to the repo's real output/feed.json, so without this
+        # every test here consults the *published* archive for its duplicate
+        # check. A test paper that happens to share a title with a real one
+        # then fails as a duplicate — which is exactly what a backfilled
+        # entry reaching the feed did to the provenance test in the fork.
+        feed_file=tmp_path / "feed.json",
         dry_run=False,
         confirm_on_success=True,
     )
