@@ -1467,3 +1467,156 @@ def test_scraped_doi_wins_the_minimal_fallback():
 
     assert resolved.source == "minimal"
     assert resolved.doi == "10.5555/from.the.page"
+
+
+# ---- backfill of title-less inbox entries ---------------------------------
+
+
+_STUCK_BIB = """@article{Slack1787858551-sl4d,
+  doi = {10.4324/9781003477570-5/privatization-public-discourse-raquel-recuero},
+  url = {https://www.taylorfrancis.com/chapters/edit/10.4324/9781003477570-5/x},
+  note = {Suggested via Slack on 2026-08-28; pdf_source=slack_attachment_followup; ts=1787858551.834329}
+}
+
+@article{Smith2026-slaa,
+  title = {A Paper That Already Resolved},
+  author = {Jane Smith},
+  year = {2026},
+  url = {https://example.org/ok},
+  note = {Suggested via Slack on 2026-08-01; pdf_source=arxiv; ts=1.0}
+}
+
+@article{Slack1783437956-sld1,
+  note = {Suggested via Slack on 2026-07-07; pdf_source=slack_attachment; ts=1783437956.970489}
+}
+"""
+
+
+class _StubResolver:
+    def __init__(self, paper):
+        self._paper = paper
+        self.seen = []
+
+    def resolve(self, *, text, urls):
+        self.seen.append((text, tuple(urls)))
+        return self._paper
+
+
+def _stuck_inbox(tmp_path):
+    path = tmp_path / "slack_inbox.bib"
+    path.write_text(_STUCK_BIB, encoding="utf-8")
+    return path
+
+
+def test_backfill_fills_the_titleless_entry(tmp_path):
+    from src.slack_ingest import backfill_inbox
+    path = _stuck_inbox(tmp_path)
+    resolver = _StubResolver(ResolvedPaper(
+        doi="10.4324/9781003477570-5",
+        title="The Privatization of Public Discourse",
+        authors=["Raquel Recuero", "Camilla Quesada Tavares"],
+        year="2025", source="crossref", doi_trimmed=True,
+    ))
+    report = backfill_inbox(path, resolver)
+    out = path.read_text(encoding="utf-8")
+
+    assert list(report["fixed"]) == ["Slack1787858551-sl4d"]
+    assert "title = {The Privatization of Public Discourse}," in out
+    assert "author = {Raquel Recuero and Camilla Quesada Tavares}," in out
+    assert "year = {2025}," in out
+    # The corrected DOI replaces the malformed one rather than joining it.
+    assert "doi = {10.4324/9781003477570-5}," in out
+    assert "privatization-public-discourse-raquel-recuero}" not in out
+    # Provenance, so a later reader can tell this from a hand-typed fix.
+    assert "backfilled=crossref; doi_trimmed=true}" in out
+
+
+def test_backfill_keeps_the_bibkey(tmp_path):
+    """The key is the note filename, the `processed_meta` key and the live site
+    URL of any note already built from the broken entry. Re-minting it to
+    `Recuero2025-sl4d` would orphan all three."""
+    from src.slack_ingest import backfill_inbox
+    path = _stuck_inbox(tmp_path)
+    backfill_inbox(path, _StubResolver(ResolvedPaper(
+        title="T", authors=["Raquel Recuero"], year="2025", source="crossref")))
+    out = path.read_text(encoding="utf-8")
+
+    assert "@article{Slack1787858551-sl4d," in out
+    assert "Recuero2025" not in out
+
+
+def test_backfill_leaves_resolved_entries_untouched(tmp_path):
+    from src.slack_ingest import backfill_inbox
+    path = _stuck_inbox(tmp_path)
+    before = path.read_text(encoding="utf-8")
+    resolver = _StubResolver(ResolvedPaper(title="X", source="crossref"))
+    backfill_inbox(path, resolver)
+    after = path.read_text(encoding="utf-8")
+
+    # The already-good entry is byte-identical, and was never re-resolved.
+    good = before[before.index("@article{Smith2026-slaa"):
+                  before.index("@article{Slack1783437956-sld1")]
+    assert good in after
+    assert all("example.org/ok" not in t for t, _ in resolver.seen)
+
+
+def test_backfill_reports_entry_with_nothing_to_resolve_from(tmp_path):
+    """The deleted-Slack-message case: no DOI, no URL, nothing to ask about.
+    It needs dropping, which is a separate decision — so report, never guess."""
+    from src.slack_ingest import backfill_inbox
+    path = _stuck_inbox(tmp_path)
+    report = backfill_inbox(path, _StubResolver(
+        ResolvedPaper(title="Wrong", source="crossref")))
+
+    assert report["no_source"] == ["Slack1783437956-sld1"]
+    assert "title = {Wrong}" not in path.read_text(
+        encoding="utf-8").split("@article{Slack1783437956-sld1")[1]
+
+
+def test_backfill_records_entries_the_resolver_still_cannot_name(tmp_path):
+    from src.slack_ingest import backfill_inbox
+    path = _stuck_inbox(tmp_path)
+    before = path.read_text(encoding="utf-8")
+    report = backfill_inbox(path, _StubResolver(ResolvedPaper(source="minimal")))
+
+    assert report["unresolved"] == ["Slack1787858551-sl4d"]
+    assert report["fixed"] == {}
+    assert path.read_text(encoding="utf-8") == before
+
+
+def test_backfill_dry_run_writes_nothing(tmp_path):
+    from src.slack_ingest import backfill_inbox
+    path = _stuck_inbox(tmp_path)
+    before = path.read_text(encoding="utf-8")
+    report = backfill_inbox(path, _StubResolver(ResolvedPaper(
+        title="T", authors=["A B"], year="2025", source="crossref")),
+        apply=False)
+
+    assert report["fixed"]
+    assert path.read_text(encoding="utf-8") == before
+
+
+def test_backfill_reresolves_from_the_url_when_there_is_no_doi(tmp_path):
+    from src.slack_ingest import backfill_inbox
+    path = tmp_path / "inbox.bib"
+    path.write_text(
+        "@article{Slack1783507719-slc1,\n"
+        "  url = {https://spir.aoir.org/ojs/index.php/spir/article/view/12170},\n"
+        "  note = {Suggested via Slack on 2026-07-08; ts=1783507719.893499}\n"
+        "}\n", encoding="utf-8")
+    resolver = _StubResolver(ResolvedPaper(
+        doi="10.5210/spir.v2021i0.12170", title="COORNET",
+        authors=["Fabio Giglietto"], year="2021", source="crossref"))
+    backfill_inbox(path, resolver)
+
+    text, urls = resolver.seen[0]
+    assert urls == ("https://spir.aoir.org/ojs/index.php/spir/article/view/12170",)
+    assert "doi = {10.5210/spir.v2021i0.12170}," in path.read_text(encoding="utf-8")
+
+
+def test_escape_bib_collapses_wrapped_whitespace():
+    """Crossref and `citation_title` wrap long titles across indented source
+    lines; the indentation must not survive into the bib entry."""
+    from src.slack_ingest import _escape_bib
+    assert _escape_bib("COORNET: SURFACE CONTENT,\n        MALICIOUS ACTORS") == \
+        "COORNET: SURFACE CONTENT, MALICIOUS ACTORS"
