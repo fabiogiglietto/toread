@@ -6950,5 +6950,37 @@
     "failed": true,
     "failure_reason": "Could not enrich entry: Park2026-tr | No DOI available | Title length: 91 chars | Authors: Park, Sunoo, Thomas, Daniel R | APIs: Crossref enabled, Semantic Scholar enabled, ArXiv enabled",
     "last_failure_at": "2026-08-31T14:32:33.567193"
+  },
+  "09f22309ff6d8e37": {
+    "entry_key": "Pierri2026-ib",
+    "entry_title": "Research opportunities and challenges of the EU’s Digital Services Act",
+    "cached_at": "2026-09-01T20:02:07.799802",
+    "metadata": {
+      "abstract": "Proposing practical measures to ensure the Digital Services Act fulfills its transparency and accountability goals.",
+      "keywords": [],
+      "doi": "10.1145/3779412",
+      "doi_url": "https://doi.org/10.1145/3779412",
+      "url": null,
+      "arxiv_url": null,
+      "pdf_url": null,
+      "publication_date": "2026-08-31",
+      "citation_count": 0,
+      "reference_count": 10,
+      "venue": "Communications of the ACM",
+      "authors": [
+        "Francesco Pierri",
+        "Theo Araujo",
+        "Sanne Kruikemeier",
+        "Philipp Lorenz-Spreen",
+        "Mariek M.P. Vanden Abeele",
+        "Laura Vandenbosch",
+        "Joana Gonçalves-Sa",
+        "Przemyslaw Grabowicz"
+      ],
+      "subjects": [],
+      "is_open_access": null,
+      "source": "crossref",
+      "confidence_score": 0.8285714285714285
+    }
   }
 }
