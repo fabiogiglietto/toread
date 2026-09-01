@@ -203,6 +203,38 @@ class DriveUploader:
         ).execute()
         return created
 
+    def list_pdfs(self) -> List[dict]:
+        """Every PDF in the configured folder, as {id, name}.
+
+        Used by the rename pass, which has to work out which existing file
+        belongs to which bibkey — the upload path never recorded the Drive
+        file id in state, so the name is the only link back.
+        """
+        files: List[dict] = []
+        page_token = None
+        query = (
+            f"'{self.folder_id}' in parents and "
+            f"mimeType='application/pdf' and trashed = false"
+        )
+        while True:
+            resp = self.service.files().list(
+                q=query, fields="nextPageToken, files(id,name)",
+                pageSize=1000, pageToken=page_token,
+                # The Slack-inbox folder may live on a Shared Drive.
+                supportsAllDrives=True, includeItemsFromAllDrives=True,
+            ).execute()
+            files.extend(resp.get("files", []))
+            page_token = resp.get("nextPageToken")
+            if not page_token:
+                return files
+
+    def rename(self, file_id: str, new_name: str) -> dict:
+        """Rename one file in place, keeping its id (and so its URL)."""
+        return self.service.files().update(
+            fileId=file_id, body={"name": new_name},
+            fields="id,name", supportsAllDrives=True,
+        ).execute()
+
     def _find_by_name(self, filename: str) -> Optional[dict]:
         # Drive's `name = '...'` is exact; escape single quotes per API rules.
         safe = filename.replace("'", "\\'")

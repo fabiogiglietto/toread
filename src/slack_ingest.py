@@ -1603,6 +1603,102 @@ def backfill_inbox(
     return report
 
 
+# ---- Drive filename repair ------------------------------------------------
+
+
+def _bib_entries(inbox_bib: Path) -> Dict[str, str]:
+    """`{bibkey: entry body}` for every entry in the inbox file."""
+    if not inbox_bib.exists():
+        return {}
+    text = inbox_bib.read_text(encoding="utf-8")
+    return {m.group(2): m.group(4) for m in _BIB_ENTRY_RE.finditer(text)}
+
+
+def legacy_name_candidates(*, title: Optional[str], authors: Sequence[str],
+                           year: Optional[str], doi: Optional[str],
+                           url: Optional[str]) -> List[str]:
+    """Every filename this entry's PDF could already be sitting under.
+
+    Uploads predating the bibkey prefix were named from whatever metadata had
+    resolved at ingest — which for the entries that matter here was *none*, so
+    `build_filename` fell back to `title=doi or url` and produced
+    `Unknown - <a mangled DOI or URL>.pdf`.
+
+    The greedy-DOI candidate is the subtle one: an entry whose DOI has since
+    been corrected by `--backfill` was uploaded under the *malformed* DOI, and
+    `extract_doi` regenerates exactly that string from the stored URL. So the
+    old name is recoverable without needing the pre-backfill bib.
+
+    Exact names only — never a fuzzy match. Renaming the wrong file would
+    silently attach one paper's PDF to another paper's note, which is worse
+    than leaving every one of them unmatched.
+    """
+    from .drive_uploader import build_filename
+
+    seen: List[str] = []
+
+    def add(authors_, year_, title_):
+        if not title_:
+            return
+        name = build_filename(authors=authors_, year=year_, title=title_)
+        if name not in seen:
+            seen.append(name)
+
+    # Resolved at ingest: the Paperpile-shaped name, no prefix.
+    add(list(authors), year, title)
+    # Degraded at ingest: `Unknown - <doi|url>`, in the order build_filename
+    # would have tried them.
+    greedy = extract_doi(url or "", [url] if url else [])
+    for fallback in (greedy, doi, url):
+        add([], None, fallback)
+    return seen
+
+
+def plan_drive_renames(
+    entries: Dict[str, str], filenames: Sequence[str],
+) -> Dict[str, Any]:
+    """Work out which Drive file to rename to which `{bibkey} - …` name.
+
+    Pure: takes the parsed inbox entries and a listing of names, returns a
+    plan. Everything that talks to Drive stays in the caller, so the matching
+    — the part that can do damage — is testable offline.
+    """
+    from .drive_uploader import build_filename
+
+    by_name = {n: n for n in filenames}
+    plan: List[Dict[str, str]] = []
+    already: List[str] = []
+    unmatched: List[str] = []
+
+    for bibkey, body in entries.items():
+        prefix = f"{bibkey} - "
+        if any(n.startswith(prefix) for n in filenames):
+            already.append(bibkey)
+            continue
+
+        title = _entry_field(body, "title")
+        doi = _entry_field(body, "doi")
+        url = _entry_field(body, "url")
+        author_field = _entry_field(body, "author") or ""
+        authors = [a.strip() for a in author_field.split(" and ") if a.strip()]
+        year = _entry_field(body, "year")
+
+        target = build_filename(
+            authors=authors, year=year,
+            title=title or doi or url or "untitled", bibkey=bibkey,
+        )
+        for candidate in legacy_name_candidates(
+            title=title, authors=authors, year=year, doi=doi, url=url,
+        ):
+            if candidate in by_name:
+                plan.append({"bibkey": bibkey, "old": candidate, "new": target})
+                break
+        else:
+            unmatched.append(bibkey)
+
+    return {"rename": plan, "already_prefixed": already, "unmatched": unmatched}
+
+
 # ---- CLI entry point ------------------------------------------------------
 
 
@@ -1657,6 +1753,14 @@ def main(argv: Optional[List[str]] = None) -> int:
                         help="Published feed.json, read for duplicate detection.")
     parser.add_argument("--dry-run", action="store_true",
                         help="Do not write files, post replies, or upload PDFs.")
+    parser.add_argument("--rename-drive", action="store_true",
+                        help="Rename Slack-inbox PDFs to the "
+                             "`{bibkey} - …` form the downstream matcher "
+                             "anchors on, then exit. Reports the plan and "
+                             "changes nothing unless --apply is passed. "
+                             "Needs Drive credentials, so this is a CI task.")
+    parser.add_argument("--apply", action="store_true",
+                        help="With --rename-drive: perform the renames.")
     parser.add_argument("--backfill", action="store_true",
                         help="Re-resolve title-less entries in the inbox bib "
                              "and fill them in, then exit. Needs no Slack, "
@@ -1669,6 +1773,37 @@ def main(argv: Optional[List[str]] = None) -> int:
         level=logging.DEBUG if args.verbose else logging.INFO,
         format="%(asctime)s - %(name)s - %(levelname)s - %(message)s",
     )
+
+    if args.rename_drive:
+        folder = os.environ.get("SLACK_INBOX_DRIVE_FOLDER_ID")
+        if not folder:
+            logging.error("SLACK_INBOX_DRIVE_FOLDER_ID not set.")
+            return 1
+        from .drive_uploader import DriveUploader
+        drive = DriveUploader(folder_id=folder)
+        files = drive.list_pdfs()
+        by_name = {f["name"]: f for f in files}
+        plan = plan_drive_renames(_bib_entries(Path(args.inbox_bib)),
+                                  list(by_name))
+        for key in plan["already_prefixed"]:
+            logging.debug("already prefixed: %s", key)
+        for item in plan["rename"]:
+            logging.info("%s\n    %r\n -> %r",
+                         "RENAME" if args.apply else "would rename",
+                         item["old"], item["new"])
+            if args.apply:
+                drive.rename(by_name[item["old"]]["id"], item["new"])
+        for key in plan["unmatched"]:
+            # Not an error: an entry whose PDF never reached Drive, or whose
+            # name no longer matches anything we can reconstruct. Reported so
+            # a human can look rather than guessed at.
+            logging.warning("no Drive file matched for %s", key)
+        logging.info(
+            "Drive rename: %d %s, %d already prefixed, %d unmatched "
+            "(%d PDFs in folder)",
+            len(plan["rename"]), "renamed" if args.apply else "to rename",
+            len(plan["already_prefixed"]), len(plan["unmatched"]), len(files))
+        return 0
 
     if args.backfill:
         report = backfill_inbox(Path(args.inbox_bib), PaperResolver(),
