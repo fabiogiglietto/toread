@@ -226,12 +226,17 @@ class FeedGenerator:
         return item
     
     def _get_entry_title(self, entry: BibEntry, metadata: Optional[EnrichedMetadata] = None) -> str:
-        """Extract title from entry with HTML escaping for safety.
+        """Extract the entry title as **plain text** (no HTML escaping).
 
         Tries multiple sources in order:
         1. Entry title (if valid)
         2. URL-extracted title (if entry has URL)
         3. Fallback to 'Untitled'
+
+        Both consumers escape for their own format, so escaping here is wrong
+        twice over: JSON Feed `title` is plain text by spec (an escaped title
+        reaches downstream repos as a literal `&quot;`), and the RSS branch
+        hands the string to ElementTree, which escapes again on serialize.
         """
         title = entry.title
 
@@ -250,9 +255,7 @@ class FeedGenerator:
 
         # Clean up LaTeX formatting
         title = title.replace('{', '').replace('}', '')
-        # Escape HTML to prevent XSS
-        title = self._escape_html(title.strip())
-        return title
+        return title.strip()
     
     def _get_entry_description(self, entry: BibEntry, metadata: Optional[EnrichedMetadata]) -> Optional[str]:
         """Get description for RSS item."""

@@ -270,20 +270,45 @@ class TestHtmlEscaping:
     def generator(self):
         return FeedGenerator()
 
-    def test_escapes_html_in_title(self, generator):
-        """Should escape HTML characters in title."""
+    def test_json_feed_title_is_plain_text(self, generator):
+        """JSON Feed `title` is a plain-text field — it carries no entities.
+
+        Escaping it here surfaced downstream as a literal `&quot;` in
+        fg-zettelkasten note titles and on the published Quartz site.
+        """
+        title = '"Sticking their heads out above the parapets": Risk & Research'
+        entry = BibEntry(entry_type="article", key="quotes2026", title=title)
+
+        feed = json.loads(generator.generate_json_feed([entry]))
+
+        assert feed["items"][0]["title"] == title
+
+    def test_rss_title_is_escaped_exactly_once(self, generator):
+        """The RSS branch hands plain text to ElementTree, which escapes on
+        serialize — so the title round-trips instead of arriving as
+        `&amp;quot;` in readers."""
+        title = '"Quoted" & ampersand'
+        entry = BibEntry(entry_type="article", key="quotes2026", title=title)
+
+        root = ET.fromstring(generator.generate_rss([entry]))
+
+        assert root.find(".//item/title").text == title
+
+    def test_escapes_html_in_rich_content(self, generator):
+        """`content_html` is HTML and still escapes at every call site."""
         entry = BibEntry(
             entry_type="article",
             key="html2023",
-            title="<script>alert('XSS')</script> Paper"
+            title="Paper",
+            abstract='Risk & "reward" in <10% of cases',
         )
 
-        output = generator.generate_json_feed([entry])
-        feed = json.loads(output)
+        content_html = json.loads(
+            generator.generate_json_feed([entry])
+        )["items"][0]["content_html"]
 
-        # Title should be escaped or safe
-        title = feed["items"][0]["title"]
-        assert "<script>" not in title or "&lt;script&gt;" in title
+        assert "Risk &amp; &quot;reward&quot;" in content_html
+        assert "<10%" not in content_html
 
     def test_escapes_html_in_abstract(self, generator):
         """Should escape HTML in content."""
