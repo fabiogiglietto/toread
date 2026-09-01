@@ -50,6 +50,36 @@ class EnrichedMetadata:
     confidence_score: Optional[float] = None  # Match confidence
 
 
+# Everything a later source may contribute. `source` and `confidence_score`
+# describe the *record*, not the work, so they are never copied across.
+_MERGEABLE_FIELDS = (
+    "abstract", "keywords", "doi", "doi_url", "url", "arxiv_url", "pdf_url",
+    "publication_date", "citation_count", "reference_count", "venue",
+    "authors", "subjects", "is_open_access",
+)
+
+
+def fill_missing_fields(base: EnrichedMetadata,
+                        other: EnrichedMetadata) -> List[str]:
+    """Copy fields `base` is missing from `other`. Returns what was filled.
+
+    Only empty values are filled — an earlier, more trusted source is never
+    overwritten. Empty means None, or an empty list for the list-valued
+    fields; `citation_count: 0` and `is_open_access: False` are real answers
+    and are left alone.
+    """
+    filled: List[str] = []
+    for name in _MERGEABLE_FIELDS:
+        current = getattr(base, name, None)
+        if current is None or (isinstance(current, list) and not current):
+            incoming = getattr(other, name, None)
+            if incoming is None or (isinstance(incoming, list) and not incoming):
+                continue
+            setattr(base, name, incoming)
+            filled.append(name)
+    return filled
+
+
 class CrossrefClient:
     """Client for querying Crossref API with robust error handling and rate limiting."""
     
@@ -1196,7 +1226,7 @@ class OpenAlexClient:
             # Author similarity (30% weight)
             if query_author and work.get('authorships'):
                 author_names = [
-                    authorship.get('author', {}).get('display_name', '')
+                    (authorship.get('author') or {}).get('display_name', '')
                     for authorship in work['authorships']
                     if authorship.get('author')
                 ]
@@ -1228,7 +1258,7 @@ class OpenAlexClient:
         if work.get('authorships'):
             authors = []
             for authorship in work['authorships'][:20]:  # Limit to first 20 authors
-                author = authorship.get('author', {})
+                author = authorship.get('author') or {}
                 if author.get('display_name'):
                     # OpenAlex author entities occasionally keep a repository's
                     # "Family, Given" form (e.g. IRIS deposits). The feed's
@@ -1259,7 +1289,13 @@ class OpenAlexClient:
         # PDF URL - try multiple locations
         if open_access.get('oa_url'):
             metadata.pdf_url = open_access['oa_url']
-        elif work.get('best_oa_location', {}).get('pdf_url'):
+        # `or {}`, not `.get(k, {})`: OpenAlex sends these keys with a *null*
+        # value rather than omitting them, and a default only applies to a
+        # missing key. This raised AttributeError for every work OpenAlex has
+        # no OA location for — swallowed as "Unexpected error querying
+        # OpenAlex", which silently took the whole OpenAlex rung out of
+        # service.
+        elif (work.get('best_oa_location') or {}).get('pdf_url'):
             metadata.pdf_url = work['best_oa_location']['pdf_url']
         elif primary_location.get('pdf_url'):
             metadata.pdf_url = primary_location['pdf_url']
@@ -1517,48 +1553,63 @@ class MetadataEnricher:
         return enriched
     
     def _enrich_by_doi(self, doi: str) -> Optional[EnrichedMetadata]:
-        """Try to enrich using DOI with multiple APIs."""
-        # Try Crossref first (more reliable and comprehensive)
-        if self.crossref_client and self.api_failure_counts['crossref'] < self.max_consecutive_failures:
-            try:
-                metadata = self.crossref_client.query_by_doi(doi)
-                if metadata:
-                    self.api_failure_counts['crossref'] = 0  # Reset on success
-                    return metadata
-                else:
-                    self.api_failure_counts['crossref'] += 1
-            except Exception as e:
-                self.api_failure_counts['crossref'] += 1
-                self.logger.debug(f"Crossref DOI query failed: {e}")
+        """Enrich from a DOI, filling gaps the first source leaves behind.
 
-        # Try OpenAlex (good coverage, open access info)
-        if self.openalex_client and self.api_failure_counts['openalex'] < self.max_consecutive_failures:
-            try:
-                metadata = self.openalex_client.query_by_doi(doi)
-                if metadata:
-                    self.api_failure_counts['openalex'] = 0  # Reset on success
-                    return metadata
-                else:
-                    self.api_failure_counts['openalex'] += 1
-            except Exception as e:
-                self.api_failure_counts['openalex'] += 1
-                self.logger.debug(f"OpenAlex DOI query failed: {e}")
+        This used to return the first source that answered at all. Crossref
+        answers for most registered works — but Crossref holds an abstract for
+        only some of them, and book chapters especially have none. The record
+        came back abstract-less, OpenAlex was never asked, and downstream the
+        paper was summarized from a title and a byline. Three of the team
+        fork's Slack submissions degraded exactly that way while OpenAlex had
+        an abstract for every one of them.
 
-        # Fall back to Semantic Scholar
-        if self.semantic_scholar_client and self.api_failure_counts['semantic_scholar'] < self.max_consecutive_failures:
-            try:
-                metadata = self.semantic_scholar_client.query_by_doi(doi)
-                if metadata:
-                    self.api_failure_counts['semantic_scholar'] = 0  # Reset on success
-                    return metadata
-                else:
-                    self.api_failure_counts['semantic_scholar'] += 1
-            except Exception as e:
-                self.api_failure_counts['semantic_scholar'] += 1
-                self.logger.debug(f"Semantic Scholar DOI query failed: {e}")
+        So the first hit becomes the base and later sources fill only what it
+        is missing. The extra call is paid for solely when it might buy
+        something: the moment an abstract is in hand the loop stops, so a
+        complete Crossref record still costs exactly one request, as before.
 
-        return None
-    
+        A DOI is an exact identifier, which is what makes merging safe here.
+        `_enrich_by_title` deliberately keeps its first-match behavior — its
+        matches are fuzzy and confidence-gated, and filling a gap from a
+        second fuzzy match risks stitching two different papers into one
+        record.
+        """
+        base: Optional[EnrichedMetadata] = None
+        for name, client in (
+            ("crossref", self.crossref_client),
+            ("openalex", self.openalex_client),
+            ("semantic_scholar", self.semantic_scholar_client),
+        ):
+            if (client is None
+                    or self.api_failure_counts[name] >= self.max_consecutive_failures):
+                continue
+            try:
+                metadata = client.query_by_doi(doi)
+            except Exception as e:
+                self.api_failure_counts[name] += 1
+                self.logger.debug(f"{name} DOI query failed: {e}")
+                continue
+            if not metadata:
+                self.api_failure_counts[name] += 1
+                continue
+
+            self.api_failure_counts[name] = 0  # Reset on success
+            if base is None:
+                base = metadata
+            else:
+                filled = fill_missing_fields(base, metadata)
+                if filled:
+                    # Provenance is published as `_academic.metadata_source`,
+                    # so say plainly that the record is a merge.
+                    base.source = f"{base.source}+{name}"
+                    self.logger.debug(
+                        f"{name} filled {', '.join(filled)} for {doi}"
+                    )
+            if base.abstract:
+                break  # Nothing left that another request would buy.
+
+        return base
+
     def _enrich_by_title(self, title: str, author: str = None, year: str = None) -> Optional[EnrichedMetadata]:
         """Try to enrich using title with multiple APIs."""
         # Try Crossref first (more reliable for title matching)
