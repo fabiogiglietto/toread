@@ -1,0 +1,49 @@
+# Rename Slack-inbox PDFs to the `{bibkey} - …` form.
+#
+# The downstream matcher (fg-zettelkasten `drive_client.find_pdf`) anchors on
+# the bibkey prefix precisely so PDF retrieval survives a metadata-enrichment
+# failure. Uploads predating that convention (toread issue #13) are named from
+# whatever resolved at ingest — `Unknown - <a mangled DOI>.pdf` when nothing
+# did — and their notes are summarized from the abstract, or from nothing,
+# while the full PDF sits unreachable in Drive.
+#
+# Manual only, and a dry run by default: renaming the wrong file would attach
+# one paper's PDF to another paper's note. Run it once to read the plan, then
+# again with apply.
+name: Rename Drive PDFs to bibkey
+
+on:
+  workflow_dispatch:
+    inputs:
+      apply:
+        description: "Perform the renames (unchecked = report the plan only)"
+        type: boolean
+        default: false
+
+jobs:
+  rename:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v7
+
+      - name: Set up Python
+        uses: actions/setup-python@v6
+        with:
+          python-version: '3.11'
+
+      - name: Install dependencies
+        run: |
+          python -m pip install --upgrade pip
+          pip install -r requirements.txt
+
+      - name: Rename
+        env:
+          SLACK_INBOX_DRIVE_FOLDER_ID: ${{ secrets.SLACK_INBOX_DRIVE_FOLDER_ID }}
+          GOOGLE_CREDENTIALS_JSON: ${{ secrets.GOOGLE_CREDENTIALS_JSON }}
+          GOOGLE_OAUTH_CLIENT_ID: ${{ secrets.GOOGLE_OAUTH_CLIENT_ID }}
+          GOOGLE_OAUTH_CLIENT_SECRET: ${{ secrets.GOOGLE_OAUTH_CLIENT_SECRET }}
+          GOOGLE_OAUTH_REFRESH_TOKEN: ${{ secrets.GOOGLE_OAUTH_REFRESH_TOKEN }}
+        run: |
+          python -m src.slack_ingest --rename-drive \
+            ${{ inputs.apply && '--apply' || '' }} -v

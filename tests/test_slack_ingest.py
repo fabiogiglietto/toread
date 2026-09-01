@@ -171,6 +171,13 @@ def _build_ingestor(tmp_path, *, downloader=None, unpaywall=None,
         hashtag=DEFAULT_HASHTAG,
         state_file=tmp_path / "state.json",
         inbox_bib_file=tmp_path / "inbox.bib",
+        # Isolated, and deliberately absent: `IngestConfig` defaults
+        # `feed_file` to the repo's real output/feed.json, so without this
+        # every test here consults the *published* archive for its duplicate
+        # check. A test paper that happens to share a title with a real one
+        # then fails as a duplicate — which is exactly what a backfilled
+        # entry reaching the feed did to the provenance test in the fork.
+        feed_file=tmp_path / "feed.json",
         dry_run=False,
         confirm_on_success=True,
     )
@@ -1620,3 +1627,108 @@ def test_escape_bib_collapses_wrapped_whitespace():
     from src.slack_ingest import _escape_bib
     assert _escape_bib("COORNET: SURFACE CONTENT,\n        MALICIOUS ACTORS") == \
         "COORNET: SURFACE CONTENT, MALICIOUS ACTORS"
+
+
+# ---- Drive filename repair ------------------------------------------------
+
+
+def _entries_from(bib_text):
+    import tempfile, pathlib
+    from src.slack_ingest import _bib_entries
+    d = pathlib.Path(tempfile.mkdtemp())
+    p = d / "inbox.bib"
+    p.write_text(bib_text, encoding="utf-8")
+    return _bib_entries(p)
+
+
+_BACKFILLED = """@article{Slack1787858551-sl4d,
+  title = {The Privatization of Public Discourse},
+  author = {Raquel Recuero and Camilla Quesada Tavares},
+  year = {2025},
+  doi = {10.4324/9781003477570-5},
+  url = {https://www.taylorfrancis.com/chapters/edit/10.4324/9781003477570-5/privatization-public-discourse-raquel-recuero-camilla-quesada-tavares},
+  note = {ts=1787858551.834329; backfilled=crossref; doi_trimmed=true}
+}
+"""
+
+
+def test_greedy_doi_recovers_the_name_a_backfilled_entry_was_uploaded_under():
+    """The subtle case: the PDF was uploaded under the *malformed* DOI, which
+    `--backfill` has since replaced. `extract_doi` regenerates exactly that
+    string from the stored URL, so the old name is recoverable without the
+    pre-backfill bib."""
+    from src.slack_ingest import plan_drive_renames
+    legacy = ("Unknown - 10.4324-9781003477570-5-privatization-public-discourse-"
+              "raquel-recuero-camilla-quesada-tavares.pdf")
+    plan = plan_drive_renames(_entries_from(_BACKFILLED), [legacy])
+
+    assert plan["unmatched"] == []
+    assert len(plan["rename"]) == 1
+    item = plan["rename"][0]
+    assert item["old"] == legacy
+    assert item["new"].startswith("Slack1787858551-sl4d - ")
+    assert "Recuero et al. 2025 - The Privatization of Public Discourse" in item["new"]
+
+
+def test_already_prefixed_files_are_left_alone():
+    """Idempotent: a second run must be a no-op, not a double-prefix."""
+    from src.slack_ingest import plan_drive_renames
+    good = "Slack1787858551-sl4d - Recuero et al. 2025 - The Privatization.pdf"
+    plan = plan_drive_renames(_entries_from(_BACKFILLED), [good])
+
+    assert plan["rename"] == []
+    assert plan["already_prefixed"] == ["Slack1787858551-sl4d"]
+
+
+def test_entry_with_no_matching_file_is_reported_not_guessed():
+    """A wrong rename silently attaches one paper's PDF to another paper's
+    note — worse than leaving it unmatched. Only exact names match."""
+    from src.slack_ingest import plan_drive_renames
+    plan = plan_drive_renames(
+        _entries_from(_BACKFILLED),
+        ["Unknown - something entirely unrelated.pdf",
+         "Smith 2020 - A Different Paper.pdf"],
+    )
+
+    assert plan["rename"] == []
+    assert plan["unmatched"] == ["Slack1787858551-sl4d"]
+
+
+def test_entry_that_resolved_at_ingest_matches_its_paperpile_shaped_name():
+    from src.slack_ingest import plan_drive_renames
+    bib = """@article{Smith2026-slaa,
+  title = {A Paper That Resolved},
+  author = {Jane Smith},
+  year = {2026},
+  url = {https://example.org/ok},
+  note = {ts=1.0}
+}
+"""
+    plan = plan_drive_renames(_entries_from(bib),
+                              ["Smith 2026 - A Paper That Resolved.pdf"])
+
+    assert len(plan["rename"]) == 1
+    assert plan["rename"][0]["new"] == (
+        "Smith2026-slaa - Smith 2026 - A Paper That Resolved.pdf")
+
+
+def test_url_only_entry_matches_the_url_derived_name():
+    """slc1's shape: no DOI at ingest, so build_filename fell back to the URL."""
+    from src.slack_ingest import plan_drive_renames
+    bib = """@article{Slack1783507719-slc1,
+  title = {COORNET},
+  author = {Fabio Giglietto and Nicola Righetti},
+  year = {2021},
+  doi = {10.5210/spir.v2021i0.12170},
+  url = {https://spir.aoir.org/ojs/index.php/spir/article/view/12170},
+  note = {ts=1783507719.893499; backfilled=crossref}
+}
+"""
+    from src.drive_uploader import build_filename
+    legacy = build_filename(
+        authors=[], year=None,
+        title="https://spir.aoir.org/ojs/index.php/spir/article/view/12170")
+    plan = plan_drive_renames(_entries_from(bib), [legacy])
+
+    assert len(plan["rename"]) == 1
+    assert plan["rename"][0]["new"].startswith("Slack1783507719-slc1 - ")
