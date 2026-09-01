@@ -2,101 +2,101 @@
   "c5a7d0326e1f61c6": {
     "entry_key": "Kristensen2025-ni",
     "entry_title": "Platform polarization. Do alternative platforms drive discursive polarization?",
-    "cached_at": "2026-08-25T06:24:45.564056",
+    "cached_at": "2026-09-01T10:37:23.075204",
     "metadata": null,
     "failed": true,
     "failure_reason": "Could not enrich entry: Kristensen2025-ni | No DOI available | Title length: 78 chars | Authors: Kristensen, Jakob Bæk, Kristensen, Jakob Bæk | APIs: Crossref enabled, Semantic Scholar enabled, ArXiv enabled",
-    "last_failure_at": "2026-08-25T06:24:45.564063"
+    "last_failure_at": "2026-09-01T10:37:23.075214"
   },
   "65d46046ae1c898f": {
     "entry_key": "Gaw2025-ru",
     "entry_title": "Influence operations as brokerage: Political-economic infrastructures of manipulation in the 2022 Philippine elections",
-    "cached_at": "2026-08-25T06:24:48.669851",
+    "cached_at": "2026-09-01T10:37:25.204345",
     "metadata": null,
     "failed": true,
     "failure_reason": "Could not enrich entry: Gaw2025-ru | No DOI available | Title length: 118 chars | Authors: Gaw, Fatima, Agonos, Mariam Jayne... | APIs: Crossref enabled, Semantic Scholar enabled, ArXiv enabled",
-    "last_failure_at": "2026-08-25T06:24:48.669858"
+    "last_failure_at": "2026-09-01T10:37:25.204354"
   },
   "b41f425da41887a0": {
     "entry_key": "Marwick2025-vx",
     "entry_title": "True costs of misinformation| mountains of evidence: Processual “redpilling” as a Socio-technical effect of disinformation",
-    "cached_at": "2026-08-25T06:24:51.753192",
+    "cached_at": "2026-09-01T10:37:27.259116",
     "metadata": null,
     "failed": true,
     "failure_reason": "Could not enrich entry: Marwick2025-vx | No DOI available | Title length: 122 chars | Authors: Marwick, Alice E, Furl, Katherine | APIs: Crossref enabled, Semantic Scholar enabled, ArXiv enabled",
-    "last_failure_at": "2026-08-25T06:24:51.753200"
+    "last_failure_at": "2026-09-01T10:37:27.259124"
   },
   "e3b0c44298fc1c14": {
     "entry_key": "noauthor_undated-ue",
     "entry_title": null,
-    "cached_at": "2026-08-25T06:24:51.753570",
+    "cached_at": "2026-09-01T10:37:27.259528",
     "metadata": null,
     "failed": true,
     "failure_reason": "Could not enrich entry: noauthor_undated-ue | No DOI available | No title available | No authors available | APIs: Crossref enabled, Semantic Scholar enabled, ArXiv enabled",
-    "last_failure_at": "2026-08-25T06:24:51.753574"
+    "last_failure_at": "2026-09-01T10:37:27.259532"
   },
   "657c6670d7b624b8": {
     "entry_key": "noauthor_undated-fm",
     "entry_title": "Volume 7 issue 2 article 4",
-    "cached_at": "2026-08-25T06:24:34.031669",
+    "cached_at": "2026-09-01T10:37:21.446370",
     "metadata": null,
     "failed": true,
     "failure_reason": "Could not enrich entry: noauthor_undated-fm | No DOI available | Title length: 26 chars | No authors available | APIs: Crossref enabled, Semantic Scholar enabled, ArXiv enabled",
-    "last_failure_at": "2026-08-25T06:24:34.031676"
+    "last_failure_at": "2026-09-01T10:37:21.446380"
   },
   "b909c3af063ea494": {
     "entry_key": "noauthor_undated-bm",
     "entry_title": "cib.pdf",
-    "cached_at": "2026-08-25T06:24:51.753391",
+    "cached_at": "2026-09-01T10:37:27.259336",
     "metadata": null,
     "failed": true,
     "failure_reason": "Could not enrich entry: noauthor_undated-bm | No DOI available | Title length: 7 chars | No authors available | APIs: Crossref enabled, Semantic Scholar enabled, ArXiv enabled",
-    "last_failure_at": "2026-08-25T06:24:51.753395"
+    "last_failure_at": "2026-09-01T10:37:27.259341"
   },
   "9195fcc80574052b": {
     "entry_key": "Vincent_undated-re",
     "entry_title": "What our second measurement says about misinformation on major platforms in Europe",
-    "cached_at": "2026-08-25T06:24:54.945737",
+    "cached_at": "2026-09-01T10:37:29.305391",
     "metadata": null,
     "failed": true,
     "failure_reason": "Could not enrich entry: Vincent_undated-re | No DOI available | Title length: 82 chars | Authors: Vincent, Emmanuel, Crisan, Daiana | APIs: Crossref enabled, Semantic Scholar enabled, ArXiv enabled",
-    "last_failure_at": "2026-08-25T06:24:54.945743"
+    "last_failure_at": "2026-09-01T10:37:29.305401"
   },
   "fac502d9bb5bbba8": {
     "entry_key": "UnknownUnknown-db",
     "entry_title": "What 81,000 people told us about the economics of AI",
-    "cached_at": "2026-08-25T06:25:00.858960",
+    "cached_at": "2026-09-01T10:37:31.360214",
     "metadata": null,
     "failed": true,
     "failure_reason": "Could not enrich entry: UnknownUnknown-db | No DOI available | Title length: 52 chars | No authors available | APIs: Crossref enabled, Semantic Scholar enabled, ArXiv enabled",
-    "last_failure_at": "2026-08-25T06:25:00.858967"
+    "last_failure_at": "2026-09-01T10:37:31.360223"
   },
   "fc9373f3342e79d3": {
     "entry_key": "Gottfried2026-ww",
     "entry_title": "Americans and AI 2026: Chatbots, Smart Devices and Views on Impact",
-    "cached_at": "2026-08-25T06:25:04.007156",
+    "cached_at": "2026-09-01T10:37:33.385521",
     "metadata": null,
     "failed": true,
     "failure_reason": "Could not enrich entry: Gottfried2026-ww | No DOI available | Title length: 66 chars | Authors: Gottfried, Jeffrey, Bishop, William... | APIs: Crossref enabled, Semantic Scholar enabled, ArXiv enabled",
-    "last_failure_at": "2026-08-25T06:25:04.007163"
+    "last_failure_at": "2026-09-01T10:37:33.385530"
   },
   "06e15083ae69cfa5": {
     "entry_key": "Hinck2026-yj",
     "entry_title": "Where's the Evidence that Respondents Understand Your Survey Questions?",
-    "cached_at": "2026-08-25T06:25:07.050238",
+    "cached_at": "2026-09-01T10:37:35.410308",
     "metadata": null,
     "failed": true,
     "failure_reason": "Could not enrich entry: Hinck2026-yj | No DOI available | Title length: 71 chars | Authors: Hinck, Musashi, King, Gary... | APIs: Crossref enabled, Semantic Scholar enabled, ArXiv enabled",
-    "last_failure_at": "2026-08-25T06:25:07.050248"
+    "last_failure_at": "2026-09-01T10:37:35.410317"
   },
   "63bf89009a078bb1": {
     "entry_key": "Falkenberg2026-ka",
     "entry_title": "Toward an integrated and globally equitable understanding of political polarization",
-    "cached_at": "2026-08-25T06:25:12.957570",
+    "cached_at": "2026-09-01T10:37:37.342645",
     "metadata": null,
     "failed": true,
     "failure_reason": "Could not enrich entry: Falkenberg2026-ka | No DOI available | Title length: 83 chars | Authors: Falkenberg, Max, Cinelli, Matteo... | APIs: Crossref enabled, Semantic Scholar enabled, ArXiv enabled",
-    "last_failure_at": "2026-08-25T06:25:12.957577"
+    "last_failure_at": "2026-09-01T10:37:37.342653"
   },
   "8d6a688f7db9234c": {
     "entry_key": "Fan2026-af",
