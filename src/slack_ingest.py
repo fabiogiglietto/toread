@@ -177,6 +177,35 @@ def extract_doi(text: str, urls: Sequence[str] = ()) -> Optional[str]:
     return None
 
 
+# One trim, never two. A publisher that appends a slug to the DOI in its URL
+# (`…/10.4324/9781003477570-5/privatization-public-discourse-…`) makes the
+# greedy `_DOI_RE` swallow the slug, and the malformed DOI 404s everywhere.
+# Trimming once recovers the chapter. Trimming twice would reach
+# `10.4324/9781003477570` — the *book*: a valid DOI for the wrong work, which
+# would resolve to a plausible title and be ingested with no warning at all.
+# Held-out beats silently-wrong.
+_MAX_DOI_TRIMS = 1
+
+
+def doi_candidates(doi: Optional[str]) -> List[str]:
+    """`doi` first, then at most one right-trimmed variant.
+
+    The trim stops at the registrant prefix: `10.4324/9781003477570` never
+    degrades to the bare `10.4324`, which is not a DOI at all.
+    """
+    if not doi:
+        return []
+    candidates = [doi]
+    trimmed = doi
+    for _ in range(_MAX_DOI_TRIMS):
+        head, sep, _tail = trimmed.rpartition("/")
+        if not sep or "/" not in head:
+            break
+        trimmed = head
+        candidates.append(trimmed)
+    return candidates
+
+
 # Standard DOI-bearing <meta> names: Highwire (citation_doi), Dublin Core
 # (dc.identifier), PRISM (prism.doi) — used by essentially every academic
 # publisher. We only trust these tags, not a body-text scan, to avoid picking
@@ -415,6 +444,29 @@ def render_bib_entry(*, key: str, doi: Optional[str], title: Optional[str],
     return f"@article{{{key},\n{body}\n}}\n"
 
 
+def _csl_person_name(author: Dict[str, Any]) -> Optional[str]:
+    """"Given Family" from one CSL author object.
+
+    `build_filename` and `mint_bibkey` both take the *last* whitespace token as
+    the surname, so the order matters: "Esposito, Elena" would file the paper
+    under "Elena". Institutional authors and agencies that emit only a
+    `literal` are handled too — mEDRA writes "Nicola Righetti" there.
+    """
+    given = (author.get("given") or "").strip()
+    family = (author.get("family") or "").strip()
+    if given or family:
+        return " ".join(p for p in (given, family) if p) or None
+    raw = (author.get("literal") or author.get("name") or "").strip()
+    if not raw:
+        return None
+    if "," in raw:
+        family_part, _, given_part = raw.partition(",")
+        return " ".join(
+            p for p in (given_part.strip(), family_part.strip()) if p
+        ) or None
+    return raw
+
+
 # ---- Key minting ----------------------------------------------------------
 
 
@@ -459,7 +511,11 @@ class ResolvedPaper:
     url: Optional[str] = None
     abstract: Optional[str] = None
     arxiv_id: Optional[str] = None
-    source: str = ""  # "crossref" | "datacite" | "arxiv" | "landing_page" | "minimal"
+    # "crossref" | "datacite" | "doi.org" | "arxiv" | "landing_page" | "minimal"
+    source: str = ""
+    # True when the DOI only resolved after trimming a publisher slug off it.
+    # Recorded in the bib `note` so a librarian can audit the guess.
+    doi_trimmed: bool = False
 
 
 class PaperResolver:
@@ -477,9 +533,14 @@ class PaperResolver:
                  enable_arxiv: bool = True,
                  enable_doi_scrape: bool = True,
                  enable_datacite: bool = True,
+                 enable_doi_org: bool = True,
                  html_fetcher=None):
         self.enable_crossref = enable_crossref
         self.enable_arxiv = enable_arxiv
+        # Crossref and DataCite are two registration agencies out of ten.
+        # doi.org content negotiation reaches all of them — the universal
+        # catch-all rung, tried last because it costs a redirect hop.
+        self.enable_doi_org = enable_doi_org
         # Crossref only holds DOIs deposited with Crossref. A DataCite DOI
         # (OJS journals, institutional repositories, Zenodo/OSF) 404s there,
         # which used to drop the entry to `minimal` — i.e. title-less. See
@@ -499,24 +560,24 @@ class PaperResolver:
                 return paper
 
         doi = extract_doi(text, urls)
-        # No DOI in the text/URL — try the landing page's meta tags. Covers
-        # publisher links that don't embed the DOI in their path.
-        landing_meta: Dict[str, Any] = {}
-        if not doi and self.enable_doi_scrape:
-            doi, landing_meta = self._scrape_landing(urls, arxiv_id)
-        if doi and self.enable_crossref:
-            paper = self._from_crossref(doi)
-            if paper:
-                return paper
+        paper = self._resolve_doi_candidates(doi)
+        if paper:
+            return paper
 
-        # Crossref missed. Before giving up on the DOI, ask DataCite: it is the
-        # other half of the DOI namespace, and it is *authoritative* for the
-        # DOIs it mints, so it answers immediately rather than waiting for an
-        # aggregator to index the record.
-        if doi and self.enable_datacite:
-            paper = self._from_datacite(doi)
-            if paper:
-                return paper
+        # The DOI we extracted resolved nowhere — or there was none. Either
+        # way the landing page is still worth a look. This used to be gated on
+        # `not doi`, so a *malformed* DOI (the greedy-match case) suppressed
+        # the fallback entirely and dropped the paper to `minimal`.
+        landing_meta: Dict[str, Any] = {}
+        if self.enable_doi_scrape:
+            scraped_doi, landing_meta = self._scrape_landing(urls, arxiv_id)
+            if scraped_doi and scraped_doi != doi:
+                paper = self._resolve_doi_candidates(scraped_doi)
+                if paper:
+                    return paper
+            # A `citation_doi` meta tag is a better guess than a greedy text
+            # match, so it wins the DOI recorded on the fallbacks below.
+            doi = scraped_doi or doi
 
         # No (resolvable) DOI, but the landing page named the paper — e.g.
         # small OJS journals or institutional reports. Use its citation meta
@@ -540,6 +601,44 @@ class PaperResolver:
             arxiv_id=arxiv_id,
             source="minimal",
         )
+
+    def _resolve_doi_candidates(self, doi: Optional[str]) -> Optional[ResolvedPaper]:
+        """Walk `doi_candidates(doi)` through every metadata source in turn.
+
+        The first candidate that any source can name wins. `doi_trimmed` marks
+        a win that needed the trim, so the bib `note` can carry the fact that
+        the DOI was a guess.
+        """
+        for candidate in doi_candidates(doi):
+            paper = self._resolve_one_doi(candidate)
+            if paper:
+                if candidate != doi:
+                    self.logger.info(
+                        "DOI %s resolved only after trimming to %s", doi, candidate
+                    )
+                    paper.doi_trimmed = True
+                return paper
+        return None
+
+    def _resolve_one_doi(self, doi: str) -> Optional[ResolvedPaper]:
+        """Crossref, then DataCite, then doi.org, for a single DOI.
+
+        A hit without a title is not a hit: it is no better than `minimal` and
+        returning it early would shadow a later source that *can* name the
+        paper — the whole failure this ladder exists to prevent.
+        """
+        rungs = []
+        if self.enable_crossref:
+            rungs.append(self._from_crossref)
+        if self.enable_datacite:
+            rungs.append(self._from_datacite)
+        if self.enable_doi_org:
+            rungs.append(self._from_doi_org)
+        for rung in rungs:
+            paper = rung(doi)
+            if paper and paper.title:
+                return paper
+        return None
 
     def _scrape_landing(
         self, urls: Sequence[str], arxiv_id: Optional[str]
@@ -699,6 +798,74 @@ class PaperResolver:
             url=attrs.get("url") or f"https://doi.org/{doi}",
             abstract=abstract,
             source="datacite",
+        )
+
+    def _from_doi_org(self, doi: str) -> Optional[ResolvedPaper]:
+        """Resolve any DOI through doi.org content negotiation (CSL-JSON).
+
+        Crossref and DataCite between them miss a real slice of the namespace:
+        mEDRA (most Italian publishers), JaLC, OP and the smaller agencies
+        answer on neither. doi.org proxies to whichever agency actually minted
+        the DOI, so this rung reaches all of them — e.g. `10.3270/101610`
+        (Comunicazione politica, Il Mulino, mEDRA), which 404s on both
+        `api.crossref.org` and `api.datacite.org` and used to land title-less.
+        """
+        try:
+            import requests
+            from urllib.parse import quote
+            resp = requests.get(
+                f"https://doi.org/{quote(doi, safe='/')}",
+                headers={
+                    "Accept": "application/vnd.citationstyles.csl+json",
+                    "User-Agent": "ToRead/1.0 (slack-ingest)",
+                },
+                timeout=15,
+            )
+        except Exception as e:
+            self.logger.warning("doi.org lookup failed for %s: %s", doi, e)
+            return None
+        if resp.status_code != 200:
+            return None
+        try:
+            csl = resp.json()
+        except ValueError:
+            return None
+        if not isinstance(csl, dict):
+            return None
+
+        title = csl.get("title")
+        # CSL allows a list here, though most agencies emit a string.
+        if isinstance(title, list):
+            title = title[0] if title else None
+        title = (title or "").strip() or None
+        if not title:
+            return None
+
+        authors: List[str] = []
+        for a in csl.get("author") or []:
+            if not isinstance(a, dict):
+                continue
+            name = _csl_person_name(a)
+            if name:
+                authors.append(name)
+
+        year = None
+        for date_field in ("issued", "published-print", "published-online"):
+            parts = (csl.get(date_field) or {}).get("date-parts") or []
+            if parts and parts[0]:
+                year = str(parts[0][0])
+                break
+
+        abstract = (csl.get("abstract") or "").strip() or None
+
+        return ResolvedPaper(
+            doi=csl.get("DOI") or doi,
+            title=title,
+            authors=authors,
+            year=year,
+            url=csl.get("URL") or f"https://doi.org/{doi}",
+            abstract=abstract,
+            source="doi.org",
         )
 
     def _from_arxiv(self, arxiv_id: str) -> Optional[ResolvedPaper]:
@@ -1189,6 +1356,10 @@ class SlackIngestor:
             suggested_note=(
                 f"Suggested via Slack on {datetime.now(timezone.utc).date()}; "
                 f"pdf_source={pdf_source}; ts={ts}"
+                + (f"; metadata_source={paper.source}" if paper.source else "")
+                # The DOI was recovered by trimming a publisher slug off it, so
+                # it is a (bounded) guess — say so where a librarian will see it.
+                + ("; doi_trimmed=true" if paper.doi_trimmed else "")
                 + (f"; unpaywall_pdf_url={unpaywall_pdf_url}"
                    if unpaywall_pdf_url else "")
             ),

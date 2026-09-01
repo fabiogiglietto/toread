@@ -1219,3 +1219,251 @@ def test_file_share_subtype_is_not_skipped(tmp_path):
     assert not _is_channel_event("file_share")
     assert not _is_channel_event(None)
     assert _is_channel_event("channel_topic")
+
+
+# ---- DOI candidate ladder (greedy-match root cause) -----------------------
+
+
+def test_doi_candidates_trims_publisher_slug():
+    """The Taylor & Francis shape: the chapter DOI with the URL slug glued on.
+    `_DOI_RE` cannot avoid swallowing it, so the ladder trims it back."""
+    from src.slack_ingest import doi_candidates
+    raw = ("10.4324/9781003477570-5/privatization-public-discourse-"
+           "raquel-recuero-camilla-quesada-tavares")
+    assert doi_candidates(raw) == [raw, "10.4324/9781003477570-5"]
+
+
+def test_doi_candidates_never_reaches_the_parent_work():
+    """One trim, never two: `10.4324/9781003477570` is the *book*, a valid DOI
+    for the wrong work that would resolve to a plausible title with no
+    warning."""
+    from src.slack_ingest import doi_candidates
+    assert doi_candidates("10.4324/9781003477570-5") == ["10.4324/9781003477570-5"]
+    assert doi_candidates("10.1177/1461444810365313") == ["10.1177/1461444810365313"]
+    assert doi_candidates(None) == []
+
+
+def test_extract_doi_still_greedy_by_design():
+    """The regex is deliberately left greedy — a DOI may legitimately contain
+    slashes, so the trimming decision belongs to the ladder, which can *test*
+    each candidate, not to the matcher, which cannot."""
+    from src.slack_ingest import extract_doi
+    url = ("https://www.taylorfrancis.com/chapters/edit/10.4324/9781003477570-5/"
+           "privatization-public-discourse-raquel-recuero-camilla-quesada-tavares")
+    assert extract_doi(f"<{url}|t&f>", [url]).startswith("10.4324/9781003477570-5/")
+
+
+def _crossref_payload(title="The Privatization of Public Discourse"):
+    return {"message": {
+        "title": [title],
+        "author": [{"given": "Raquel", "family": "Recuero"},
+                   {"given": "Camilla Quesada", "family": "Tavares"}],
+        "issued": {"date-parts": [[2025, 12, 22]]},
+        "URL": "https://doi.org/10.4324/9781003477570-5",
+    }}
+
+
+def test_trimmed_doi_resolves_and_is_flagged(monkeypatch):
+    """End-to-end on the real failure: the slug-laden DOI 404s, the trimmed one
+    resolves, and the entry records that the DOI was a guess."""
+    import requests
+    from src.slack_ingest import PaperResolver
+    calls = []
+
+    def fake_get(url, **kwargs):
+        calls.append(url)
+        if "9781003477570-5%2Fprivatization" in url or "privatization" in url:
+            return _FakeResponse(404, {})
+        return _FakeResponse(200, _crossref_payload())
+
+    monkeypatch.setattr(requests, "get", fake_get)
+    resolver = PaperResolver(enable_arxiv=False, enable_doi_scrape=False)
+    url = ("https://www.taylorfrancis.com/chapters/edit/10.4324/9781003477570-5/"
+           "privatization-public-discourse-raquel-recuero-camilla-quesada-tavares")
+    resolved = resolver.resolve(text=f"<{url}|t&f>", urls=[url])
+
+    assert resolved.title == "The Privatization of Public Discourse"
+    assert resolved.doi == "10.4324/9781003477570-5"
+    assert resolved.authors == ["Raquel Recuero", "Camilla Quesada Tavares"]
+    assert resolved.year == "2025"
+    assert resolved.doi_trimmed is True
+    # The untrimmed candidate must be tried first — trimming is a fallback,
+    # not the default.
+    assert "privatization" in calls[0]
+
+
+def test_unresolvable_doi_no_longer_suppresses_the_landing_page():
+    """The gate was `if not doi`, so a malformed DOI skipped the landing-page
+    fallback altogether. Now the fallback runs whenever nothing resolved."""
+    from src.slack_ingest import PaperResolver
+    resolver = PaperResolver(
+        enable_crossref=False, enable_datacite=False, enable_doi_org=False,
+        enable_arxiv=False, html_fetcher=lambda url: _OJS_HTML,
+    )
+    url = "https://publisher.example/chapters/10.4324/9781003477570-5/some-slug"
+    resolved = resolver.resolve(text=f"<{url}|chapter>", urls=[url])
+
+    assert resolved.source == "landing_page"
+    assert resolved.title == "The Multiple Nuances of Online Firestorms"
+
+
+# ---- doi.org content negotiation (registration agencies beyond the big two)
+
+
+# Trimmed from the real doi.org CSL-JSON for 10.3270/101610 (Comunicazione
+# politica, Il Mulino — an mEDRA DOI). Crossref and DataCite both 404 on it.
+_CSL_PAYLOAD = {
+    "type": "article-journal",
+    "title": "Il ruolo dei media nella percezione del rischio",
+    "author": [{"literal": "Nicola Righetti"}],
+    "issued": {"date-parts": [[2021]]},
+    "DOI": "10.3270/101610",
+    "container-title": "Comunicazione politica",
+}
+
+
+def _doi_org_resolver(monkeypatch, *, status=200, payload=None, calls=None):
+    """PaperResolver with only the doi.org rung live and `requests.get` stubbed."""
+    import requests
+    from src.slack_ingest import PaperResolver
+
+    def fake_get(url, **kwargs):
+        if calls is not None:
+            calls.append((url, (kwargs.get("headers") or {}).get("Accept")))
+        return _FakeResponse(status, payload if payload is not None
+                             else _CSL_PAYLOAD)
+
+    monkeypatch.setattr(requests, "get", fake_get)
+    return PaperResolver(enable_crossref=False, enable_datacite=False,
+                         enable_arxiv=False, enable_doi_scrape=False)
+
+
+def test_doi_org_resolves_what_crossref_and_datacite_miss(monkeypatch):
+    calls = []
+    resolver = _doi_org_resolver(monkeypatch, calls=calls)
+    resolved = resolver.resolve(text="", urls=["https://doi.org/10.3270/101610"])
+
+    assert resolved.source == "doi.org"
+    assert resolved.title == "Il ruolo dei media nella percezione del rischio"
+    assert resolved.year == "2021"
+    # Content negotiation is the whole mechanism — assert the Accept header.
+    assert calls[0][1] == "application/vnd.citationstyles.csl+json"
+
+
+def test_doi_org_literal_author_is_given_then_family(monkeypatch):
+    """`mint_bibkey` takes the last token as the surname, so a `literal` name
+    must come back in "Given Family" order."""
+    resolver = _doi_org_resolver(monkeypatch)
+    resolved = resolver.resolve(text="", urls=["https://doi.org/10.3270/101610"])
+    assert resolved.authors == ["Nicola Righetti"]
+    assert resolved.authors[0].split()[-1] == "Righetti"
+
+
+def test_doi_org_flips_comma_separated_literal(monkeypatch):
+    payload = dict(_CSL_PAYLOAD, author=[{"literal": "Righetti, Nicola"}])
+    resolver = _doi_org_resolver(monkeypatch, payload=payload)
+    resolved = resolver.resolve(text="", urls=["https://doi.org/10.3270/101610"])
+    assert resolved.authors == ["Nicola Righetti"]
+
+
+def test_doi_org_title_as_list(monkeypatch):
+    payload = dict(_CSL_PAYLOAD, title=["A Paper In A List"])
+    resolver = _doi_org_resolver(monkeypatch, payload=payload)
+    resolved = resolver.resolve(text="", urls=["https://doi.org/10.3270/101610"])
+    assert resolved.title == "A Paper In A List"
+
+
+def test_doi_org_titleless_record_falls_through(monkeypatch):
+    """Same contract as the DataCite rung: no title is no better than
+    `minimal`, and must not claim source="doi.org"."""
+    calls = []
+    resolver = _doi_org_resolver(monkeypatch, payload={"DOI": "10.3270/101610"},
+                                 calls=calls)
+    resolved = resolver.resolve(text="", urls=["https://doi.org/10.3270/101610"])
+    assert calls, "the doi.org rung never ran"
+    assert resolved.source == "minimal"
+    assert resolved.title is None
+
+
+def test_titleless_crossref_hit_falls_through_to_doi_org(monkeypatch):
+    """A Crossref record with no title used to be returned as-is, shadowing the
+    rungs below it — the same silent title-less drop, one layer up."""
+    import requests
+    from src.slack_ingest import PaperResolver
+    calls = []
+
+    def fake_get(url, **kwargs):
+        calls.append(url)
+        if "crossref.org" in url:
+            return _FakeResponse(200, {"message": {"DOI": "10.3270/101610"}})
+        if "datacite.org" in url:
+            return _FakeResponse(404, {})
+        return _FakeResponse(200, _CSL_PAYLOAD)
+
+    monkeypatch.setattr(requests, "get", fake_get)
+    resolver = PaperResolver(enable_arxiv=False, enable_doi_scrape=False)
+    resolved = resolver.resolve(text="", urls=["https://doi.org/10.3270/101610"])
+
+    assert resolved.source == "doi.org"
+    assert resolved.title == "Il ruolo dei media nella percezione del rischio"
+
+
+def test_trimmed_doi_provenance_reaches_the_bib(tmp_path):
+    """The trim is a bounded guess, so the entry must say so where a librarian
+    reads it — the audit trail that justifies allowing the trim at all."""
+    resolver = MagicMock(spec=PaperResolver)
+    resolver.resolve.return_value = ResolvedPaper(
+        doi="10.4324/9781003477570-5",
+        title="The Privatization of Public Discourse",
+        authors=["Raquel Recuero"], year="2025",
+        source="crossref", doi_trimmed=True,
+    )
+    ingestor, slack, drive, unpaywall = _build_ingestor(tmp_path,
+                                                        resolver=resolver)
+    slack.fetch_history.return_value = [{
+        "ts": "100.0", "text": "#zettelkasten a chapter", "user": "U1",
+        "files": [{"mimetype": "application/pdf",
+                   "url_private_download": "https://files.slack.com/x.pdf"}],
+    }]
+    assert ingestor.run().get("added") == 1
+
+    bib = ingestor.config.inbox_bib_file.read_text(encoding="utf-8")
+    assert "doi_trimmed=true" in bib
+    assert "metadata_source=crossref" in bib
+
+
+def test_untrimmed_doi_carries_no_trim_marker(tmp_path):
+    """`doi_trimmed=true` must mark the exception, not every entry."""
+    resolver = MagicMock(spec=PaperResolver)
+    resolver.resolve.return_value = ResolvedPaper(
+        doi="10.1/x", title="X", authors=["Jane Smith"], year="2026",
+        source="crossref",
+    )
+    ingestor, slack, drive, unpaywall = _build_ingestor(tmp_path,
+                                                        resolver=resolver)
+    slack.fetch_history.return_value = [{
+        "ts": "100.0", "text": "#zettelkasten 10.1/x", "user": "U1",
+        "files": [{"mimetype": "application/pdf",
+                   "url_private_download": "https://files.slack.com/x.pdf"}],
+    }]
+    assert ingestor.run().get("added") == 1
+    bib = ingestor.config.inbox_bib_file.read_text(encoding="utf-8")
+    assert "doi_trimmed" not in bib
+    assert "metadata_source=crossref" in bib
+
+
+def test_scraped_doi_wins_the_minimal_fallback():
+    """When neither DOI resolves, the one from a `citation_doi` meta tag is
+    recorded — it beats a greedy text match, and it is what the dedup check
+    and the downstream enricher will retry on."""
+    from src.slack_ingest import PaperResolver
+    html = '<meta name="citation_doi" content="10.5555/from.the.page">'
+    resolver = PaperResolver(
+        enable_crossref=False, enable_datacite=False, enable_doi_org=False,
+        enable_arxiv=False, html_fetcher=lambda url: html,
+    )
+    url = "https://publisher.example/chapters/10.4324/9781003477570-5/some-slug"
+    resolved = resolver.resolve(text=f"<{url}|chapter>", urls=[url])
+
+    assert resolved.source == "minimal"
+    assert resolved.doi == "10.5555/from.the.page"
