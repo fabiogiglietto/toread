@@ -7015,5 +7015,39 @@
       "source": "crossref",
       "confidence_score": 0.8285714285714285
     }
+  },
+  "3758715a0df699ec": {
+    "entry_key": "Holland_Levin2026-qx",
+    "entry_title": "From \\#StayWoke to “culture wars”: How social justice discourse is separately and synergistically politicized on twitter and YouTube",
+    "cached_at": "2026-09-05T13:35:16.164763",
+    "metadata": {
+      "abstract": null,
+      "keywords": [],
+      "doi": "10.1080/10584609.2026.2717428",
+      "doi_url": "https://doi.org/10.1080/10584609.2026.2717428",
+      "url": null,
+      "arxiv_url": null,
+      "pdf_url": null,
+      "publication_date": "2026-08-31",
+      "citation_count": 0,
+      "reference_count": 82,
+      "venue": "Political Communication",
+      "authors": [
+        "Sara Holland Levin",
+        "Rui Wang",
+        "Junwan Seo",
+        "Yi Yin Leong",
+        "Emma Bennett",
+        "Dongdong Yang",
+        "Zhuohui Yang",
+        "Matt Chen",
+        "Yini Zhang",
+        "Jiyoun Suk"
+      ],
+      "subjects": [],
+      "is_open_access": null,
+      "source": "crossref",
+      "confidence_score": 0.8136363636363636
+    }
   }
 }
