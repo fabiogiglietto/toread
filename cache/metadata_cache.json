@@ -134,91 +134,6 @@
       "confidence_score": 0.8119999999999999
     }
   },
-  "6f56bea8a24eed0b": {
-    "entry_key": "Kotz2026-lk",
-    "entry_title": "Conversational AI shifts beliefs and policy support among skeptics across contested societal issues",
-    "cached_at": "2026-08-11T08:00:59.887666",
-    "metadata": {
-      "abstract": "Public beliefs and policy attitudes on contested societal issues frequently diverge from empirical evidence and scientific consensus. In a preregistered experiment with 6,558 American participants, we tested the generalizability of evidence-based AI dialogue as a tool to shift beliefs and policy support across three structurally distinct societal issues (climate change, vaccination, and economic inequality), and examined for whom effects are strongest. Participants engaged in interactive dialogues with GPT-5 targeting beliefs, policies, or both. Compared to a neutral control conversation, AI dialogues shifted beliefs across all three domains, suggesting generalizable persuasive potential, and increased support for politically contested policies, especially carbon and estate taxes. Estimated effects were strongest among initially skeptical participants, who are typically hardest to reach, and those with higher trust in science. Text analyses revealed that GPT-5 adapted its approach to skeptical participants. Brief AI dialogues may thus function as a scalable, generalizable tool for evidence-based public communication.",
-      "keywords": [],
-      "doi": "10.31234/osf.io/7szrn_v1",
-      "doi_url": "https://doi.org/10.31234/osf.io/7szrn_v1",
-      "url": null,
-      "arxiv_url": null,
-      "pdf_url": null,
-      "publication_date": null,
-      "citation_count": 0,
-      "reference_count": 0,
-      "venue": null,
-      "authors": [
-        "Johannes Kotz",
-        "Kevin E. Tiede",
-        "Jelena Meyer",
-        "Maj-Britt Sterba",
-        "Christian Breunig",
-        "Wolfgang Gaissmaier"
-      ],
-      "subjects": [],
-      "is_open_access": null,
-      "source": "crossref",
-      "confidence_score": 0.8214285714285714
-    }
-  },
-  "41d44e37653aec97": {
-    "entry_key": "Schemer2026-mh",
-    "entry_title": "Does the method affect the outcome? How measures of partisan slant of media outlets and affective polarization drive results about polarization in the United States",
-    "cached_at": "2026-08-11T08:01:03.153659",
-    "metadata": {
-      "abstract": null,
-      "keywords": [],
-      "doi": "10.1080/10584609.2026.2699105",
-      "doi_url": "https://doi.org/10.1080/10584609.2026.2699105",
-      "url": null,
-      "arxiv_url": null,
-      "pdf_url": null,
-      "publication_date": "2026-07-05",
-      "citation_count": 0,
-      "reference_count": 59,
-      "venue": "Political Communication",
-      "authors": [
-        "Christian Schemer",
-        "Klara Langmann",
-        "Ariel Hasell",
-        "Brian Weeks"
-      ],
-      "subjects": [],
-      "is_open_access": null,
-      "source": "crossref",
-      "confidence_score": 0.8333333333333333
-    }
-  },
-  "b21e19e80614338f": {
-    "entry_key": "Kakavand2026-kt",
-    "entry_title": "Multi-platform research in the light of technology affordances: networks of the far right in Germany",
-    "cached_at": "2026-08-11T08:01:06.038921",
-    "metadata": {
-      "abstract": null,
-      "keywords": [],
-      "doi": "10.1080/19331681.2026.2697186",
-      "doi_url": "https://doi.org/10.1080/19331681.2026.2697186",
-      "url": null,
-      "arxiv_url": null,
-      "pdf_url": null,
-      "publication_date": "2026-08-10",
-      "citation_count": 0,
-      "reference_count": 59,
-      "venue": "Journal of Information Technology &amp; Politics",
-      "authors": [
-        "Azade E. Kakavand",
-        "Nicola Righetti",
-        "Annie Waldherr"
-      ],
-      "subjects": [],
-      "is_open_access": null,
-      "source": "crossref",
-      "confidence_score": 0.8374999999999999
-    }
-  },
   "639a771e905921df": {
     "entry_key": "Hourigan2026-oc",
     "entry_title": "Everyday encounters with misinformation online: examining sources, topics and modes",
@@ -7107,6 +7022,156 @@
       "is_open_access": null,
       "source": "crossref",
       "confidence_score": 0.83
+    }
+  },
+  "6f56bea8a24eed0b": {
+    "entry_key": "Kotz2026-lk",
+    "entry_title": "Conversational AI shifts beliefs and policy support among skeptics across contested societal issues",
+    "cached_at": "2026-09-10T09:18:47.245900",
+    "metadata": {
+      "abstract": "Public beliefs and policy attitudes on contested societal issues frequently diverge from empirical evidence and scientific consensus. In a preregistered experiment with 6,558 American participants, we tested the generalizability of evidence-based AI dialogue as a tool to shift beliefs and policy support across three structurally distinct societal issues (climate change, vaccination, and economic inequality), and examined for whom effects are strongest. Participants engaged in interactive dialogues with GPT-5 targeting beliefs, policies, or both. Compared to a neutral control conversation, AI dialogues shifted beliefs across all three domains, suggesting generalizable persuasive potential, and increased support for politically contested policies, especially carbon and estate taxes. Estimated effects were strongest among initially skeptical participants, who are typically hardest to reach, and those with higher trust in science. Text analyses revealed that GPT-5 adapted its approach to skeptical participants. Brief AI dialogues may thus function as a scalable, generalizable tool for evidence-based public communication.",
+      "keywords": [],
+      "doi": "10.31234/osf.io/7szrn_v1",
+      "doi_url": "https://doi.org/10.31234/osf.io/7szrn_v1",
+      "url": null,
+      "arxiv_url": null,
+      "pdf_url": null,
+      "publication_date": null,
+      "citation_count": 0,
+      "reference_count": 0,
+      "venue": null,
+      "authors": [
+        "Johannes Kotz",
+        "Kevin E. Tiede",
+        "Jelena Meyer",
+        "Maj-Britt Sterba",
+        "Christian Breunig",
+        "Wolfgang Gaissmaier"
+      ],
+      "subjects": [],
+      "is_open_access": null,
+      "source": "crossref",
+      "confidence_score": 0.8214285714285714
+    }
+  },
+  "41d44e37653aec97": {
+    "entry_key": "Schemer2026-mh",
+    "entry_title": "Does the method affect the outcome? How measures of partisan slant of media outlets and affective polarization drive results about polarization in the United States",
+    "cached_at": "2026-09-10T09:18:51.827736",
+    "metadata": {
+      "abstract": null,
+      "keywords": [],
+      "doi": "10.1080/10584609.2026.2699105",
+      "doi_url": "https://doi.org/10.1080/10584609.2026.2699105",
+      "url": null,
+      "arxiv_url": null,
+      "pdf_url": null,
+      "publication_date": "2026-07-05",
+      "citation_count": 0,
+      "reference_count": 59,
+      "venue": "Political Communication",
+      "authors": [
+        "Christian Schemer",
+        "Klara Langmann",
+        "Ariel Hasell",
+        "Brian Weeks"
+      ],
+      "subjects": [],
+      "is_open_access": null,
+      "source": "crossref",
+      "confidence_score": 0.8333333333333333
+    }
+  },
+  "b21e19e80614338f": {
+    "entry_key": "Kakavand2026-kt",
+    "entry_title": "Multi-platform research in the light of technology affordances: networks of the far right in Germany",
+    "cached_at": "2026-09-10T09:18:54.807490",
+    "metadata": {
+      "abstract": null,
+      "keywords": [],
+      "doi": "10.1080/19331681.2026.2697186",
+      "doi_url": "https://doi.org/10.1080/19331681.2026.2697186",
+      "url": null,
+      "arxiv_url": null,
+      "pdf_url": null,
+      "publication_date": "2026-08-10",
+      "citation_count": 0,
+      "reference_count": 59,
+      "venue": "Journal of Information Technology &amp; Politics",
+      "authors": [
+        "Azade E. Kakavand",
+        "Nicola Righetti",
+        "Annie Waldherr"
+      ],
+      "subjects": [],
+      "is_open_access": null,
+      "source": "crossref",
+      "confidence_score": 0.8374999999999999
+    }
+  },
+  "5375e61030529ae8": {
+    "entry_key": "Lukito2026-il",
+    "entry_title": "Cross-platformization: How U.S. right-leaning media curate their posts on Twitter and Truth Social",
+    "cached_at": "2026-09-10T09:18:57.002368",
+    "metadata": {
+      "abstract": "This study examines how seven right-leaning media organizations utilize cross-platformization strategies to reach audiences across multiple platforms; in this case, Twitter and Truth Social. Focusing on both content volume and story packaging, we collect right-leaning media organizations’ social media posts and content from the 2022 U.S. midterm election. Combining computational and qualitative methods, we find that outlets posted only a small share of total stories across the two platforms and were selective in their content, often posting only on Twitter or Truth Social. For content posted on both platforms, the outlets posted content that ideologically aligned with the users of that platform. More specifically, right-leaning outlets on Truth Social tailored their posts to ideologically aligned users.",
+      "keywords": [],
+      "doi": "10.1177/14614448261470889",
+      "doi_url": "https://doi.org/10.1177/14614448261470889",
+      "url": null,
+      "arxiv_url": null,
+      "pdf_url": null,
+      "publication_date": "2026-09-05",
+      "citation_count": 0,
+      "reference_count": 70,
+      "venue": "New Media &amp; Society",
+      "authors": [
+        "Josephine Lukito",
+        "Yini Zhang",
+        "Bin Chen",
+        "Stephen Prochaska",
+        "Meredith L. Pruden",
+        "Yunkang Yang",
+        "Wei Zhong",
+        "Megan A. Brown",
+        "Ross Dahlke",
+        "Jason Greenfield",
+        "Jiyoun Suk",
+        "Porismita Borah"
+      ],
+      "subjects": [],
+      "is_open_access": null,
+      "source": "crossref",
+      "confidence_score": 0.811111111111111
+    }
+  },
+  "4aedbec388b7cd1c": {
+    "entry_key": "Much2026-gu",
+    "entry_title": "Did podcasts help Trump win young men? Gendered media spaces and gender gaps",
+    "cached_at": "2026-09-10T09:19:01.088032",
+    "metadata": {
+      "abstract": "In the 2024 election, the gender gap among young voters widened sharply. To examine the role of podcasts in this pattern, we combine two survey datasets with the first large-scale analysis of political content from leading U.S. podcasts, covering 36,659 episodes in 2024. We introduce and demonstrate the occurrence of gendered media spaces, digital entertainment environments where preferences for masculine or feminine content, rather than political ideology, sort audiences and expose men and women to systematically different political messages on non-political podcasts. We examine the extent to which candidate podcast appearances align with gendered interests versus ideology, and whether exposure to conservative content on podcasts is correlated with Trump vote choice among young men. Our results suggest that podcasts are one potentially relevant feature of the media environment surrounding the widening youth gender gap, though they appear to only account for a small portion of the change.",
+      "keywords": [],
+      "doi": "10.33774/apsa-2026-cdb6x",
+      "doi_url": "https://doi.org/10.33774/apsa-2026-cdb6x",
+      "url": null,
+      "arxiv_url": null,
+      "pdf_url": null,
+      "publication_date": null,
+      "citation_count": 0,
+      "reference_count": 0,
+      "venue": null,
+      "authors": [
+        "Melina Much",
+        "Kylan Rutherford",
+        "Jason Greenfield",
+        "Joshua A. Tucker",
+        "Jonathan Nagler"
+      ],
+      "subjects": [],
+      "is_open_access": null,
+      "source": "crossref",
+      "confidence_score": 0.825
     }
   }
 }
