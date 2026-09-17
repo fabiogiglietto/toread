@@ -15,6 +15,15 @@ on:
           wait for the next unrelated submission to rebuild the feed for it.
         type: boolean
         default: false
+  repository_dispatch:
+    # Fired by an external relay (e.g. a Slack Workflow Builder webhook) the
+    # moment a paper link lands in the Slack channel, so the bot replies in
+    # minutes instead of waiting for the cron — which GitHub throttles to one
+    # run every few hours on quiet repos. Inert unless something dispatches
+    # it, so a deployment without a relay needs no setup. See README
+    # "Instant replies". Bursts are collapsed by the `update-feed`
+    # concurrency group below.
+    types: [slack-message]
   push:
     branches: [ main ]
     paths:
@@ -163,10 +172,13 @@ jobs:
             yaml.dump(config, f, default_flow_style=False)
         "
     
-    - name: Generate feeds (fast mode for scheduled runs)
-      if: github.event_name == 'schedule' && (steps.bib-check.outputs.changed == 'true' || steps.slack-ingest.outputs.slack_changed == 'true' || inputs.force)
+    # A Slack-relayed run (repository_dispatch) takes the fast path too: it
+    # holds the `update-feed` concurrency group, so a slow full enrichment
+    # would delay the bot's reply to the *next* submission.
+    - name: Generate feeds (fast mode for scheduled and Slack-relayed runs)
+      if: (github.event_name == 'schedule' || github.event_name == 'repository_dispatch') && (steps.bib-check.outputs.changed == 'true' || steps.slack-ingest.outputs.slack_changed == 'true' || inputs.force)
       run: |
-        echo "Running in fast mode for scheduled execution..."
+        echo "Running in fast mode for scheduled / Slack-relayed execution..."
         for i in {1..3}; do
           python -m src.main data/paperpile_export.bib -o output/ \
             --feed-title "To Read - Research Papers" \
@@ -177,7 +189,7 @@ jobs:
         done
     
     - name: Generate feeds (full enrichment)
-      if: github.event_name != 'schedule' && (steps.bib-check.outputs.changed == 'true' || steps.slack-ingest.outputs.slack_changed == 'true' || inputs.force)
+      if: github.event_name != 'schedule' && github.event_name != 'repository_dispatch' && (steps.bib-check.outputs.changed == 'true' || steps.slack-ingest.outputs.slack_changed == 'true' || inputs.force)
       run: |
         echo "Running full enrichment for manual/push triggers..."
         for i in {1..3}; do
