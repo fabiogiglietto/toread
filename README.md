@@ -327,6 +327,8 @@ This repository includes a production-ready GitHub Actions workflow with advance
 2. **The workflow runs automatically**:
    - Every 30 minutes via cron schedule
    - On manual trigger via workflow_dispatch
+   - On `repository_dispatch` type `slack-message` (optional; see
+     *Instant replies* under the Slack setup)
    - On code changes to src/, data/, or config.yml
 
 3. **Monitor workflow runs**:
@@ -547,6 +549,30 @@ the trigger hashtag (default `#zettelkasten`).
    - `UNPAYWALL_EMAIL` (optional but recommended)
 7. Optional repo variable: `SLACK_TRIGGER_HASHTAG` (defaults to
    `#zettelkasten`).
+8. Optional — **instant replies** (paid Slack plans). The bot replies from
+   inside the feed workflow, and GitHub throttles the `*/30` cron to one run
+   every few hours on quiet repos, so a submission can wait half a day for
+   its reply. To start a run the moment a link is posted, relay the message
+   to the workflow's `repository_dispatch` trigger with Slack's Workflow
+   Builder:
+   - **GitHub PAT** (fine-grained): repository access limited to *this*
+     repo; permission `Contents` → Read and write. It lives in the Slack
+     workflow, not in a repo secret — note its expiry and rotate it there.
+   - **Workflow Builder** → new workflow → trigger *When a message is posted
+     to a channel* (your `#toread` channel) → step *Send a webhook*:
+     - URL: `https://api.github.com/repos/<owner>/<repo>/dispatches` (POST)
+     - Headers: `Authorization: Bearer <PAT>`,
+       `Accept: application/vnd.github+json`,
+       `X-GitHub-Api-Version: 2022-11-28`
+     - Body: `{"event_type": "slack-message"}`
+   - GitHub answers `204 No Content`; the run starts within seconds and the
+     reply lands in roughly 1–3 minutes.
+
+   The trigger fires on top-level messages only, so a PDF attached later
+   *in a thread* still waits for the next cron run; the cron stays as the
+   fallback for that and for any dropped webhook. Messages from the bot
+   itself also fire a run — a ~30 s no-op, collapsed by the workflow's
+   concurrency group.
 
 ### Behaviour notes
 

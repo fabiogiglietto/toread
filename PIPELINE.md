@@ -79,6 +79,7 @@ topological order and only when there is genuinely new input.
 | fg-zettelkasten → research-radio | `pipeline-tick`      |
 | research-radio → github.io       | `pipeline-tick`      |
 | github.io → fg-zettelkasten      | `pipeline-finalize`  |
+| Slack relay → toread / mine-toread (optional) | `slack-message` |
 
 `fg-zettelkasten`'s `update-vault.yml` listens for both events and branches on
 `github.event.action`:
@@ -102,6 +103,15 @@ use the default `GITHUB_TOKEN`. One fine-grained PAT, stored as the secret
 - **Store the secret in** `toread`, `fg-zettelkasten`, `research-radio`, and
   `github.io` — every repo that dispatches. (fg-zettelkasten dispatches
   research-radio on the summarize leg, so it needs the secret too.)
+
+**The optional `slack-message` hop uses its own token.** `update_feed.yml` also
+listens for `repository_dispatch` type `slack-message`, fired by a Slack Workflow
+Builder webhook when a link is posted in the submission channel, so the bot's
+reply does not wait on GitHub's throttled cron (setup: README, *Instant
+replies*). That relay holds a **separate** fine-grained PAT scoped to the single
+toread repo it targets (`Contents` → Read and write), stored in the Slack
+workflow rather than in any repo secret — never reuse `PIPELINE_DISPATCH_TOKEN`
+there. The hop is inert where no relay is configured.
 
 ## Automatic failure triage
 
