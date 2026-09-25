@@ -150,6 +150,12 @@ class FeedGenerator:
         # `submitted_by_id` (opaque Slack user-id, for @-mentioning) are
         # published here (unlike upstream toread, which strips identity) so the
         # team kasten can show / mention who suggested each paper.
+        # Classic extension — a foundational work from the Paperpile "Classics"
+        # folder. An ordinary paper in every other respect; the flag only lets
+        # downstream skip the #toread digest for works added in bulk.
+        if getattr(entry, "is_classic", False):
+            item["_classic"] = True
+
         if entry.source == "slack":
             sm = self.slack_meta.get(entry.key)
             if sm:

@@ -506,6 +506,26 @@ ToRead includes several security measures:
 - Preprint papers often have limited metadata
 - Check logs for API response details
 
+## Classics
+
+Foundational works added in bulk (e.g. the works the archive cites most but
+does not hold) go in a **top-level Paperpile folder named `Classics`**, not
+inside To Read. CI downloads that folder's BibTeX export as a second source
+(`data/paperpile_classics.bib`, tag `classic`). Each classic becomes an
+ordinary feed item plus `"_classic": true` (see `SCHEMA.md`), so downstream
+can skip announcing it. fg-zettelkasten, for example, builds the note and the
+podcast as usual but posts no `#toread` digest. A work filed in both folders
+appears once and stays flagged.
+
+One-time setup:
+
+1. In Paperpile, create the `Classics` folder, then *Export → BibTeX → Get
+   link* on it (same as the To Read export).
+2. Add the link as the repo secret `PAPERPILE_CLASSICS_EXPORT_URL`.
+
+While the secret is unset, the step is a no-op. A failed download keeps the
+previous file, so classics never drop out of the feed.
+
 ## Slack ingestion
 
 A second input path lets team members suggest papers directly from Slack.

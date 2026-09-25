@@ -35,6 +35,9 @@ class BibEntry:
     # Origin of the entry — useful when we merge multiple .bib files (e.g.
     # "paperpile", "slack"). None means unspecified (back-compat).
     source: Optional[str] = None
+    # True for a foundational work filed in the Paperpile "Classics" folder
+    # (source tag "classic"); emitted as the `_classic` feed extension.
+    is_classic: bool = False
 
 
 class BibTeXParser:

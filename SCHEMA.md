@@ -69,6 +69,7 @@ ToRead extensions (`_`-prefixed — do not assume a generic reader keeps these):
 | `_date_estimated`  | boolean | `true` if `date_published` was inferred            |
 | `_academic`        | object  | See below                                          |
 | `_slack_suggestion`| object  | Present iff this paper entered via a Slack `#zettelkasten` suggestion; see below |
+| `_classic`         | boolean | `true` iff the paper is filed in the Paperpile **Classics** folder; absent otherwise. See below |
 
 ### `_academic` object
 
@@ -90,6 +91,16 @@ Consumers must tolerate any subset.
 | `confidence_score` | number  | 0–1, match confidence                          |
 | `quality_score`    | number  | 0–100, metadata completeness                   |
 | `quality_issues`   | array   | Strings describing metadata gaps               |
+
+### `_classic` flag
+
+A foundational work added in bulk — e.g. the works the archive cites most but
+did not hold — filed in a top-level Paperpile **Classics** folder whose BibTeX
+export CI downloads to `data/paperpile_classics.bib` (source tag `classic`).
+The item is otherwise an ordinary paper: same fields, same enrichment. A work
+filed in both To Read and Classics appears once, still flagged. Consumers may
+use it to skip announcements (fg-zettelkasten skips the `#toread` digest);
+ignoring it is always safe. Additive — older consumers are unaffected.
 
 ### `_slack_suggestion` object
 

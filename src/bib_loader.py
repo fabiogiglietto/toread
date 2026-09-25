@@ -1,10 +1,12 @@
 """Load and merge multiple BibTeX sources into one stream.
 
-Today there are two sources:
+Today there are three sources:
 
   - `data/paperpile_export.bib` (the Paperpile export polled by CI)
   - `data/slack_inbox.bib` (papers suggested via the `#zettelkasten` Slack
     hashtag — see `src/slack_ingest.py`)
+  - `data/paperpile_classics.bib` (the Paperpile "Classics" folder export,
+    tag `classic` — foundational works flagged `_classic` in the feed)
 
 The two are merged here so the rest of the pipeline doesn't need to care.
 Each loaded entry is tagged with its source so the feed generator can emit
@@ -37,6 +39,11 @@ from .bibtex_parser import BibEntry, BibTeXParser
 # dedup, so put the canonical source (Paperpile) first.
 BibSource = Tuple[str, str]
 
+# Source tag of the Paperpile "Classics" folder export. Its entries are
+# ordinary papers flagged `_classic` in the feed, so downstream can skip the
+# #toread digest for foundational works added in bulk.
+CLASSIC_TAG = "classic"
+
 
 def load_sources(sources: Sequence[BibSource]) -> List[BibEntry]:
     """Parse each file in `sources` and return one deduped list of entries.
@@ -59,6 +66,7 @@ def load_sources(sources: Sequence[BibSource]) -> List[BibEntry]:
         entries = parser.parse_file(str(p))
         for e in entries:
             e.source = tag
+            e.is_classic = tag == CLASSIC_TAG
         logger.info("Loaded %d entries from %s (source=%s)",
                     len(entries), path, tag)
         all_entries.extend(entries)
@@ -95,6 +103,10 @@ def _dedup(entries: Iterable[BibEntry]) -> List[BibEntry]:
         if prior is not None and (prior.source or None) != (entry.source or None):
             logger.debug("Dropping %s (source=%s) — duplicate of %s (source=%s)",
                          entry.key, entry.source, prior.key, prior.source)
+            # A work filed in both To Read and Classics is still a classic:
+            # the kept entry inherits the flag, not just the metadata.
+            if entry.is_classic:
+                prior.is_classic = True
             dropped += 1
             continue
 
