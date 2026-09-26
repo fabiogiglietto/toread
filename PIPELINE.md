@@ -52,7 +52,7 @@ deployable.
 
 | Stage                      | Consumes                                                        | Produces                              |
 |----------------------------|-----------------------------------------------------------------|---------------------------------------|
-| toread                     | Paperpile BibTeX export + Slack `#zettelkasten` suggestions     | `output/feed.json`                    |
+| toread                     | Paperpile BibTeX exports (To Read + Classics) + Slack `#zettelkasten` suggestions | `output/feed.json`                    |
 | fg-zettelkasten : summarize| feed, Paperpile Drive PDFs                                      | `data/summaries/<key>.json`           |
 | research-radio             | feed, fg-zettelkasten summaries, Drive PDFs                     | `docs/episodes.json` + audio Releases |
 | github.io                  | feed, research-radio episodes                                   | the website                           |

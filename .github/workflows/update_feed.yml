@@ -158,6 +158,34 @@ jobs:
         mv /tmp/paperpile_export_new.bib data/paperpile_export.bib
         echo "changed=true" >> $GITHUB_OUTPUT
     
+    # Optional second Paperpile export: the top-level "Classics" folder. Its
+    # entries become ordinary feed items flagged `_classic` (SCHEMA.md). Unset
+    # secret = no classics source; a failed download keeps the previous file
+    # rather than wiping every classic from the feed.
+    - name: Download Paperpile Classics export
+      id: classics-check
+      run: |
+        if [ -z "${{ secrets.PAPERPILE_CLASSICS_EXPORT_URL }}" ]; then
+          echo "📚 PAPERPILE_CLASSICS_EXPORT_URL not set — no classics source"
+          echo "changed=false" >> $GITHUB_OUTPUT
+          exit 0
+        fi
+        curl -L -H "Cache-Control: no-cache" -H "Pragma: no-cache" \
+          "${{ secrets.PAPERPILE_CLASSICS_EXPORT_URL }}" -o /tmp/paperpile_classics_new.bib || true
+        if [ ! -s /tmp/paperpile_classics_new.bib ]; then
+          echo "::warning::Classics export download failed or empty — keeping the previous file"
+          echo "changed=false" >> $GITHUB_OUTPUT
+          exit 0
+        fi
+        if [ -f data/paperpile_classics.bib ] && diff -q data/paperpile_classics.bib /tmp/paperpile_classics_new.bib > /dev/null 2>&1; then
+          echo "📚 No changes in the Classics export"
+          echo "changed=false" >> $GITHUB_OUTPUT
+          exit 0
+        fi
+        echo "📚 Classics export changed: $(grep -c '^@' /tmp/paperpile_classics_new.bib) entries"
+        mv /tmp/paperpile_classics_new.bib data/paperpile_classics.bib
+        echo "changed=true" >> $GITHUB_OUTPUT
+
     - name: Update config with API key
       if: env.SEMANTIC_SCHOLAR_API_KEY != ''
       env:
@@ -176,7 +204,7 @@ jobs:
     # holds the `update-feed` concurrency group, so a slow full enrichment
     # would delay the bot's reply to the *next* submission.
     - name: Generate feeds (fast mode for scheduled and Slack-relayed runs)
-      if: (github.event_name == 'schedule' || github.event_name == 'repository_dispatch') && (steps.bib-check.outputs.changed == 'true' || steps.slack-ingest.outputs.slack_changed == 'true' || inputs.force)
+      if: (github.event_name == 'schedule' || github.event_name == 'repository_dispatch') && (steps.bib-check.outputs.changed == 'true' || steps.classics-check.outputs.changed == 'true' || steps.slack-ingest.outputs.slack_changed == 'true' || inputs.force)
       run: |
         echo "Running in fast mode for scheduled / Slack-relayed execution..."
         for i in {1..3}; do
@@ -189,7 +217,7 @@ jobs:
         done
     
     - name: Generate feeds (full enrichment)
-      if: github.event_name != 'schedule' && github.event_name != 'repository_dispatch' && (steps.bib-check.outputs.changed == 'true' || steps.slack-ingest.outputs.slack_changed == 'true' || inputs.force)
+      if: github.event_name != 'schedule' && github.event_name != 'repository_dispatch' && (steps.bib-check.outputs.changed == 'true' || steps.classics-check.outputs.changed == 'true' || steps.slack-ingest.outputs.slack_changed == 'true' || inputs.force)
       run: |
         echo "Running full enrichment for manual/push triggers..."
         for i in {1..3}; do
@@ -205,11 +233,11 @@ jobs:
     # cascade downstream. schema/feed.schema.json is the normative contract
     # (SCHEMA.md is commentary). Hard fail -> the failure alert fires.
     - name: Validate feed against schema
-      if: steps.bib-check.outputs.changed == 'true' || steps.slack-ingest.outputs.slack_changed == 'true' || inputs.force
+      if: steps.bib-check.outputs.changed == 'true' || steps.classics-check.outputs.changed == 'true' || steps.slack-ingest.outputs.slack_changed == 'true' || inputs.force
       run: check-jsonschema --schemafile schema/feed.schema.json output/feed.json
 
     - name: Skip feed generation (no changes)
-      if: steps.bib-check.outputs.changed != 'true' && steps.slack-ingest.outputs.slack_changed != 'true' && !inputs.force
+      if: steps.bib-check.outputs.changed != 'true' && steps.classics-check.outputs.changed != 'true' && steps.slack-ingest.outputs.slack_changed != 'true' && !inputs.force
       run: |
         echo "⏭️  Skipping feed generation - no changes in Paperpile export or Slack inbox"
         echo "This saves execution time and API quota!"
@@ -223,7 +251,7 @@ jobs:
         # before the first suggestion), which would silently drop the
         # other paths.
         mkdir -p output cache
-        for f in data/paperpile_export.bib data/slack_inbox.bib data/slack_state.json output/feed.json output/feed.xml; do
+        for f in data/paperpile_export.bib data/paperpile_classics.bib data/slack_inbox.bib data/slack_state.json output/feed.json output/feed.xml; do
           git add "$f" 2>/dev/null || true
         done
         git add cache/ 2>/dev/null || true
@@ -262,7 +290,7 @@ jobs:
           # pathspec (e.g. slack_inbox.bib) must not abort the whole add.
           git fetch origin main
           git reset --soft origin/main
-          for f in data/paperpile_export.bib data/slack_inbox.bib data/slack_state.json output/feed.json output/feed.xml; do
+          for f in data/paperpile_export.bib data/paperpile_classics.bib data/slack_inbox.bib data/slack_state.json output/feed.json output/feed.xml; do
             git add "$f" 2>/dev/null || true
           done
           git add cache/ 2>/dev/null || true
@@ -314,7 +342,7 @@ jobs:
     # PIPELINE_DISPATCH_SOFT_FAIL=true (its kasten has a daily self-healing
     # cron, so a missing dispatch token must not fail the feed run).
     - name: Trigger downstream pipeline
-      if: steps.bib-check.outputs.changed == 'true' || steps.slack-ingest.outputs.slack_changed == 'true' || inputs.force
+      if: steps.bib-check.outputs.changed == 'true' || steps.classics-check.outputs.changed == 'true' || steps.slack-ingest.outputs.slack_changed == 'true' || inputs.force
       continue-on-error: ${{ vars.PIPELINE_DISPATCH_SOFT_FAIL == 'true' }}
       uses: peter-evans/repository-dispatch@v4
       with:

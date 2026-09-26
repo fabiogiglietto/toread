@@ -10,6 +10,11 @@
 sources:
   - path: "data/slack_inbox.bib"
     tag: "slack"
+  # Paperpile "Classics" folder (a top-level folder, not inside To Read),
+  # downloaded by CI from the PAPERPILE_CLASSICS_EXPORT_URL secret. Its items
+  # carry `_classic: true` in the feed — see SCHEMA.md.
+  - path: "data/paperpile_classics.bib"
+    tag: "classic"
 
 # Slack ingestion — see src/slack_ingest.py. All values are read from
 # environment variables in CI; this block exists for documentation.

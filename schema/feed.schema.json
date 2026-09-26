@@ -89,6 +89,10 @@
             "quality_issues": { "type": "array", "items": { "type": "string" } }
           }
         },
+        "_classic": {
+          "const": true,
+          "description": "Present iff the paper is filed in the Paperpile Classics folder: a foundational work, otherwise an ordinary item."
+        },
         "_slack_suggestion": {
           "type": "object",
           "description": "Present iff the paper entered via a Slack suggestion. submitted_by/submitted_by_id are emitted only by the MINE chain (team attribution).",
