@@ -7231,5 +7231,1306 @@
       "source": "crossref",
       "confidence_score": 0.8374999999999999
     }
+  },
+  "cd312f9baf9a8a9b": {
+    "entry_key": "Lewandowsky2012-vn",
+    "entry_title": "Misinformation and its correction: Continued influence and successful debiasing: Continued influence and successful debiasing",
+    "cached_at": "2026-09-26T08:39:40.217229",
+    "metadata": null,
+    "failed": true,
+    "failure_reason": "Could not enrich entry: Lewandowsky2012-vn | No DOI available | Title length: 125 chars | Authors: Lewandowsky, Stephan, Ecker, Ullrich K H... | APIs: Crossref enabled, Semantic Scholar enabled, ArXiv enabled",
+    "last_failure_at": "2026-09-26T08:39:40.217235"
+  },
+  "e61267057a0797f0": {
+    "entry_key": "Del-Vicario2016-uj",
+    "entry_title": "The spreading of misinformation online",
+    "cached_at": "2026-09-26T08:39:41.837972",
+    "metadata": {
+      "abstract": "Significance The wide availability of user-provided content in online social media facilitates the aggregation of people around common interests, worldviews, and narratives. However, the World Wide Web is a fruitful environment for the massive diffusion of unverified rumors. In this work, using a massive quantitative analysis of Facebook, we show that information related to distinct narratives––conspiracy theories and scientific news––generates homogeneous and polarized communities (i.e., echo chambers) having similar information consumption patterns. Then, we derive a data-driven percolation model of rumor spreading that demonstrates that homogeneity and polarization are the main determinants for predicting cascades’ size.",
+      "keywords": [],
+      "doi": "10.1073/pnas.1517441113",
+      "doi_url": "https://doi.org/10.1073/pnas.1517441113",
+      "url": null,
+      "arxiv_url": null,
+      "pdf_url": null,
+      "publication_date": "2016-01-19",
+      "citation_count": 1854,
+      "reference_count": 42,
+      "venue": "Proceedings of the National Academy of Sciences",
+      "authors": [
+        "Michela Del Vicario",
+        "Alessandro Bessi",
+        "Fabiana Zollo",
+        "Fabio Petroni",
+        "Antonio Scala",
+        "Guido Caldarelli",
+        "H. Eugene Stanley",
+        "Walter Quattrociocchi"
+      ],
+      "subjects": [],
+      "is_open_access": null,
+      "source": "crossref",
+      "confidence_score": 0.8157894736842105
+    }
+  },
+  "e60bde1b5f1b9c94": {
+    "entry_key": "Keller2019-nk",
+    "entry_title": "Political Astroturfing on Twitter: How to Coordinate a Disinformation Campaign",
+    "cached_at": "2026-09-26T08:39:43.711088",
+    "metadata": {
+      "abstract": null,
+      "keywords": [],
+      "doi": "10.1080/10584609.2019.1661888",
+      "doi_url": "https://doi.org/10.1080/10584609.2019.1661888",
+      "url": null,
+      "arxiv_url": null,
+      "pdf_url": null,
+      "publication_date": "2020-03-03",
+      "citation_count": 283,
+      "reference_count": 43,
+      "venue": "Political Communication",
+      "authors": [
+        "Franziska B. Keller",
+        "David Schoch",
+        "Sebastian Stier",
+        "JungHwan Yang"
+      ],
+      "subjects": [],
+      "is_open_access": null,
+      "source": "crossref",
+      "confidence_score": 0.83
+    }
+  },
+  "d2daa47e5311bb58": {
+    "entry_key": "Barbera2015-je",
+    "entry_title": "Birds of the Same Feather Tweet Together: Bayesian Ideal Point Estimation Using Twitter Data",
+    "cached_at": "2026-09-26T08:39:45.687620",
+    "metadata": {
+      "abstract": "Politicians and citizens increasingly engage in political conversations on social media outlets such as Twitter. In this article, I show that the structure of the social networks in which they are embedded can be a source of information about their ideological positions. Under the assumption that social networks are homophilic, I develop a Bayesian Spatial Following model that considers ideology as a latent variable, whose value can be inferred by examining which politics actors each user is following. This method allows us to estimate ideology for more actors than any existing alternative, at any point in time and across many polities. I apply this method to estimate ideal points for a large sample of both elite and mass public Twitter users in the United States and five European countries. The estimated positions of legislators and political parties replicate conventional measures of ideology. The method is also able to successfully classify individuals who state their political preferences publicly and a sample of users matched with their party registration records. To illustrate the potential contribution of these estimates, I examine the extent to which online behavior during the 2012 US presidential election campaign is clustered along ideological lines.",
+      "keywords": [],
+      "doi": "10.1093/pan/mpu011",
+      "doi_url": "https://doi.org/10.1093/pan/mpu011",
+      "url": null,
+      "arxiv_url": null,
+      "pdf_url": null,
+      "publication_date": "2015",
+      "citation_count": 634,
+      "reference_count": 75,
+      "venue": "Political Analysis",
+      "authors": [
+        "Pablo Barberá"
+      ],
+      "subjects": [],
+      "is_open_access": null,
+      "source": "crossref",
+      "confidence_score": 0.8999999999999999
+    }
+  },
+  "5665a7d9ebaadc6f": {
+    "entry_key": "Messing2014-jc",
+    "entry_title": "Selective Exposure in the Age of Social Media: Endorsements Trump Partisan Source Affiliation When Selecting News Online",
+    "cached_at": "2026-09-26T08:39:47.911814",
+    "metadata": null,
+    "failed": true,
+    "failure_reason": "Could not enrich entry: Messing2014-jc | No DOI available | Title length: 120 chars | Authors: Messing, Solomon, Westwood, Sean J | APIs: Crossref enabled, Semantic Scholar enabled, ArXiv enabled",
+    "last_failure_at": "2026-09-26T08:39:47.911821"
+  },
+  "82fb86d427732d13": {
+    "entry_key": "Lazer2018-mm",
+    "entry_title": "The science of fake news",
+    "cached_at": "2026-09-26T08:39:49.792612",
+    "metadata": {
+      "abstract": "Addressing fake news requires a multidisciplinary effort",
+      "keywords": [],
+      "doi": "10.1126/science.aao2998",
+      "doi_url": "https://doi.org/10.1126/science.aao2998",
+      "url": null,
+      "arxiv_url": null,
+      "pdf_url": null,
+      "publication_date": "2018-03-09",
+      "citation_count": 3293,
+      "reference_count": 15,
+      "venue": "Science",
+      "authors": [
+        "David M. J. Lazer",
+        "Matthew A. Baum",
+        "Yochai Benkler",
+        "Adam J. Berinsky",
+        "Kelly M. Greenhill",
+        "Filippo Menczer",
+        "Miriam J. Metzger",
+        "Brendan Nyhan",
+        "Gordon Pennycook",
+        "David Rothschild",
+        "Michael Schudson",
+        "Steven A. Sloman",
+        "Cass R. Sunstein",
+        "Emily A. Thorson",
+        "Duncan J. Watts",
+        "Jonathan L. Zittrain"
+      ],
+      "subjects": [],
+      "is_open_access": null,
+      "source": "crossref",
+      "confidence_score": 0.8076923076923076
+    }
+  },
+  "6d107a41ee2b13d5": {
+    "entry_key": "Guess2019-ym",
+    "entry_title": "Less than you think: Prevalence and predictors of fake news dissemination on Facebook",
+    "cached_at": "2026-09-26T08:39:51.933276",
+    "metadata": {
+      "abstract": "Fake news sharing in 2016 was rare but significantly more common among older Americans.",
+      "keywords": [],
+      "doi": "10.1126/sciadv.aau4586",
+      "doi_url": "https://doi.org/10.1126/sciadv.aau4586",
+      "url": null,
+      "arxiv_url": null,
+      "pdf_url": null,
+      "publication_date": "2019-01-04",
+      "citation_count": 1139,
+      "reference_count": 27,
+      "venue": "Science Advances",
+      "authors": [
+        "Andrew Guess",
+        "Jonathan Nagler",
+        "Joshua Tucker"
+      ],
+      "subjects": [],
+      "is_open_access": null,
+      "source": "crossref",
+      "confidence_score": 0.8428571428571427
+    }
+  },
+  "bcc7dcfa40daea9a": {
+    "entry_key": "Allcott2019-gn",
+    "entry_title": "Trends in the diffusion of misinformation on social media",
+    "cached_at": "2026-09-26T08:39:54.070272",
+    "metadata": {
+      "abstract": "In recent years, there has been widespread concern that misinformation on social media is damaging societies and democratic institutions. In response, social media platforms have announced actions to limit the spread of false content. We measure trends in the diffusion of content from 569 fake news websites and 9540 fake news stories on Facebook and Twitter between January 2015 and July 2018. User interactions with false content rose steadily on both Facebook and Twitter through the end of 2016. Since then, however, interactions with false content have fallen sharply on Facebook while continuing to rise on Twitter, with the ratio of Facebook engagements to Twitter shares decreasing by 60%. In comparison, interactions with other news, business, or culture sites have followed similar trends on both platforms. Our results suggest that the relative magnitude of the misinformation problem on Facebook has declined since its peak.",
+      "keywords": [],
+      "doi": "10.1177/2053168019848554",
+      "doi_url": "https://doi.org/10.1177/2053168019848554",
+      "url": null,
+      "arxiv_url": null,
+      "pdf_url": null,
+      "publication_date": "2019",
+      "citation_count": 459,
+      "reference_count": 29,
+      "venue": "Research &amp; Politics",
+      "authors": [
+        "Hunt Allcott",
+        "Matthew Gentzkow",
+        "Chuan Yu"
+      ],
+      "subjects": [],
+      "is_open_access": null,
+      "source": "crossref",
+      "confidence_score": 0.8428571428571427
+    }
+  },
+  "28854bb72b11cdd4": {
+    "entry_key": "Grinberg2019-ua",
+    "entry_title": "Fake news on Twitter during the 2016 U.S. presidential election",
+    "cached_at": "2026-09-26T08:39:56.170053",
+    "metadata": {
+      "abstract": "Finding facts about fake news There was a proliferation of fake news during the 2016 election cycle. Grinberg et al. analyzed Twitter data by matching Twitter accounts to specific voters to determine who was exposed to fake news, who spread fake news, and how fake news interacted with factual news (see the Perspective by Ruths). Fake news accounted for nearly 6% of all news consumption, but it was heavily concentrated—only 1% of users were exposed to 80% of fake news, and 0.1% of users were responsible for sharing 80% of fake news. Interestingly, fake news was most concentrated among conservative voters. Science , this issue p. 374 ; see also p. 348",
+      "keywords": [],
+      "doi": "10.1126/science.aau2706",
+      "doi_url": "https://doi.org/10.1126/science.aau2706",
+      "url": null,
+      "arxiv_url": null,
+      "pdf_url": null,
+      "publication_date": "2019-01-25",
+      "citation_count": 1287,
+      "reference_count": 68,
+      "venue": "Science",
+      "authors": [
+        "Nir Grinberg",
+        "Kenneth Joseph",
+        "Lisa Friedland",
+        "Briony Swire-Thompson",
+        "David Lazer"
+      ],
+      "subjects": [],
+      "is_open_access": null,
+      "source": "crossref",
+      "confidence_score": 0.8272727272727272
+    }
+  },
+  "7561abb52109d0e3": {
+    "entry_key": "Bruns2019-nr",
+    "entry_title": "After the ‘APIcalypse’: social media platforms and their fight against critical scholarly research",
+    "cached_at": "2026-09-26T08:39:57.966294",
+    "metadata": {
+      "abstract": null,
+      "keywords": [],
+      "doi": "10.4324/9781003206972-2",
+      "doi_url": "https://doi.org/10.4324/9781003206972-2",
+      "url": null,
+      "arxiv_url": null,
+      "pdf_url": null,
+      "publication_date": "2021-11-08",
+      "citation_count": 18,
+      "reference_count": 0,
+      "venue": "Disinformation and Data Lockdown on Social Platforms",
+      "authors": [
+        "Axel Bruns"
+      ],
+      "subjects": [],
+      "is_open_access": null,
+      "source": "crossref",
+      "confidence_score": 0.8999999999999999
+    }
+  },
+  "d5d9f456650b11bf": {
+    "entry_key": "Starbird2019-qv",
+    "entry_title": "Disinformation as Collaborative Work: Surfacing the Participatory Nature of Strategic Information Operations",
+    "cached_at": "2026-09-26T08:40:00.243108",
+    "metadata": null,
+    "failed": true,
+    "failure_reason": "Could not enrich entry: Starbird2019-qv | No DOI available | Title length: 108 chars | Authors: Starbird, Kate, Arif, Ahmer... | APIs: Crossref enabled, Semantic Scholar enabled, ArXiv enabled",
+    "last_failure_at": "2026-09-26T08:40:00.243112"
+  },
+  "5bf441d982a68561": {
+    "entry_key": "Barbera2015-fw",
+    "entry_title": "Tweeting From Left to Right: Is Online Political Communication More Than an Echo Chamber?",
+    "cached_at": "2026-09-26T08:40:04.029918",
+    "metadata": {
+      "abstract": "We estimated ideological preferences of 3.8 million Twitter users and, using a dataset of 150 million tweets concerning 12 political and non-political issues, explored whether online communication resembles an “echo chamber” due to selective exposure and ideological segregation or a “national conversation.” We observed that information was exchanged primarily among individuals with similar ideological preferences for political issues (e.g., presidential election, government shutdown) but not for many other current events (e.g., Boston marathon bombing, Super Bowl). Discussion of the Newtown shootings in 2012 reflected a dynamic process, beginning as a “national conversation” before being transformed into a polarized exchange. With respect to political and non-political issues, liberals were more likely than conservatives to engage in cross-ideological dissemination, highlighting an important asymmetry with respect to the structure of communication that is consistent with psychological theory and research. We conclude that previous work may have overestimated the degree of ideological segregation in social media usage.",
+      "keywords": [],
+      "doi": "10.7910/dvn/f9ichh",
+      "doi_url": "https://doi.org/10.7910/dvn/f9ichh",
+      "url": "https://doi.org/10.7910/dvn/f9ichh",
+      "arxiv_url": null,
+      "pdf_url": "https://doi.org/10.7910/dvn/f9ichh",
+      "publication_date": "2015-06-09",
+      "citation_count": 1,
+      "reference_count": null,
+      "venue": "Harvard Dataverse",
+      "authors": [
+        "Pablo Barberá",
+        "John Jost",
+        "Jonathan Nagler",
+        "Joshua Tucker",
+        "Richard Bonneau"
+      ],
+      "subjects": [
+        "Echo (communications protocol)",
+        "Left and right",
+        "Replication (statistics)",
+        "Politics",
+        "Political science"
+      ],
+      "is_open_access": true,
+      "source": "openalex",
+      "confidence_score": 0.8099999999999999
+    }
+  },
+  "dd3f6f943573e210": {
+    "entry_key": "Allcott2017-yz",
+    "entry_title": "Social Media and Fake News in the 2016 Election",
+    "cached_at": "2026-09-26T08:40:04.741489",
+    "metadata": {
+      "abstract": "Following the 2016 US presidential election, many have expressed concern about the effects of false stories (“fake news”), circulated largely through social media. We discuss the economics of fake news and present new data on its consumption prior to the election. Drawing on web browsing data, archives of fact-checking websites, and results from a new online survey, we find: 1) social media was an important but not dominant source of election news, with 14 percent of Americans calling social media their “most important” source; 2) of the known false news stories that appeared in the three months before the election, those favoring Trump were shared a total of 30 million times on Facebook, while those favoring Clinton were shared 8 million times; 3) the average American adult saw on the order of one or perhaps several fake news stories in the months around the election, with just over half of those who recalled seeing them believing them; and 4) people are much more likely to believe stories that favor their preferred candidate, especially if they have ideologically segregated social media networks.",
+      "keywords": [],
+      "doi": "10.1257/jep.31.2.211",
+      "doi_url": "https://doi.org/10.1257/jep.31.2.211",
+      "url": null,
+      "arxiv_url": null,
+      "pdf_url": null,
+      "publication_date": "2017-05-01",
+      "citation_count": 4534,
+      "reference_count": 39,
+      "venue": "Journal of Economic Perspectives",
+      "authors": [
+        "Hunt Allcott",
+        "Matthew Gentzkow"
+      ],
+      "subjects": [],
+      "is_open_access": null,
+      "source": "crossref",
+      "confidence_score": 0.86
+    }
+  },
+  "2ba95106ff0bb503": {
+    "entry_key": "Hallin2004-kg",
+    "entry_title": "Comparing Media Systems: Three Models of Media and Politics",
+    "cached_at": "2026-09-26T08:40:06.671442",
+    "metadata": null,
+    "failed": true,
+    "failure_reason": "Could not enrich entry: Hallin2004-kg | No DOI available | Title length: 59 chars | Authors: Hallin, Daniel C, Mancini, Paolo | APIs: Crossref enabled, Semantic Scholar enabled, ArXiv enabled",
+    "last_failure_at": "2026-09-26T08:40:06.671450"
+  },
+  "6382236b05a33c7e": {
+    "entry_key": "Humprecht2020-gd",
+    "entry_title": "Resilience to Online Disinformation: A Framework for Cross-National Comparative Research",
+    "cached_at": "2026-09-26T08:40:08.353482",
+    "metadata": {
+      "abstract": "Online disinformation is considered a major challenge for modern democracies. It is widely understood as misleading content produced to generate profits, pursue political goals, or maliciously deceive. Our starting point is the assumption that some countries are more resilient to online disinformation than others. To understand what conditions influence this resilience, we choose a comparative cross-national approach. In the first step, we develop a theoretical framework that presents these country conditions as theoretical dimensions. In the second step, we translate the dimensions into quantifiable indicators that allow us to measure their significance on a comparative cross-country basis. In the third part of the study, we empirically examine eighteen Western democracies. A cluster analysis yields three country groups: one group with high resilience to online disinformation (including the Northern European systems, for instance) and two country groups with low resilience (including the polarized Southern European countries and the United States). In the final part, we discuss the heuristic value of the framework for comparative political communication research in the age of information pollution.",
+      "keywords": [],
+      "doi": "10.1177/1940161219900126",
+      "doi_url": "https://doi.org/10.1177/1940161219900126",
+      "url": null,
+      "arxiv_url": null,
+      "pdf_url": null,
+      "publication_date": "2020",
+      "citation_count": 375,
+      "reference_count": 86,
+      "venue": "The International Journal of Press/Politics",
+      "authors": [
+        "Edda Humprecht",
+        "Frank Esser",
+        "Peter Van Aelst"
+      ],
+      "subjects": [],
+      "is_open_access": null,
+      "source": "crossref",
+      "confidence_score": 0.8749999999999999
+    }
+  },
+  "47dec642292a9cc5": {
+    "entry_key": "Freelon2020-yp",
+    "entry_title": "Disinformation as Political Communication",
+    "cached_at": "2026-09-26T08:40:10.593723",
+    "metadata": {
+      "abstract": null,
+      "keywords": [],
+      "doi": "10.1080/10584609.2020.1723755",
+      "doi_url": "https://doi.org/10.1080/10584609.2020.1723755",
+      "url": null,
+      "arxiv_url": null,
+      "pdf_url": null,
+      "publication_date": "2020-03-03",
+      "citation_count": 448,
+      "reference_count": 74,
+      "venue": "Political Communication",
+      "authors": [
+        "Deen Freelon",
+        "Chris Wells"
+      ],
+      "subjects": [],
+      "is_open_access": null,
+      "source": "crossref",
+      "confidence_score": 0.86
+    }
+  },
+  "8a11dfcb6fccd6e2": {
+    "entry_key": "Chadwick2013-ns",
+    "entry_title": "The Hybrid Media System: Politics and Power",
+    "cached_at": "2026-09-26T08:40:12.758097",
+    "metadata": {
+      "abstract": "Acknowledgements Introduction 1. An Ontology of Hybridity 2. All Media Systems Have Been Hybrid 3. The Contemporary Contexts of Hybridity 4. The Political Information Cycle 5. Power, Interdependence, and Hybridity in the Construction of Political News: Understanding WikiLeaks 6. Symphonic Consonance in Campaign Communication: Reinterpreting Obama for America 7. Systemic Hybridity in the Mediation of the American Presidential Campaign 8. Hybrid Norms in News and Journalism 9. Hybrid Norms in Activism, Parties, and Government Conclusion: Politics and Power in the Hybrid Media System List of Interviews Notes Bibliography Index",
+      "keywords": [],
+      "doi": "10.5860/choice.51-6974",
+      "doi_url": "https://doi.org/10.5860/choice.51-6974",
+      "url": "https://doi.org/10.5860/choice.51-6974",
+      "arxiv_url": null,
+      "pdf_url": "http://digitale-objekte.hbz-nrw.de/storage2/2017/11/05/file_24/7451950.pdf",
+      "publication_date": "2014-07-16",
+      "citation_count": 842,
+      "reference_count": null,
+      "venue": "Choice Reviews Online",
+      "authors": [
+        "Andrew T. Chadwick"
+      ],
+      "subjects": [
+        "Politics",
+        "Power (physics)",
+        "Political science",
+        "Media studies",
+        "History"
+      ],
+      "is_open_access": true,
+      "source": "openalex",
+      "confidence_score": 0.7749999999999999
+    }
+  },
+  "baf4a54fa3c2ae36": {
+    "entry_key": "Nizzoli2020-cf",
+    "entry_title": "Coordinated Behavior on Social Media in 2019 UK General Election",
+    "cached_at": "2026-09-26T08:40:12.987867",
+    "metadata": {
+      "abstract": "Coordinated online behaviors are an essential part of information and influence operations, as they allow a more effective disinformation's spread. Most studies on coordinated behaviors involved manual investigations, and the few existing computational approaches make bold assumptions or oversimplify the problem to make it tractable. Here, we propose a new network-based framework for uncovering and studying coordinated behaviors on social media. Our research extends existing systems and goes beyond limiting binary classifications of coordinated and uncoordinated behaviors. It allows to expose different coordination patterns and to estimate the degree of coordination that characterizes diverse communities. We apply our framework to a dataset collected during the 2019 UK General Election, detecting and characterizing coordinated communities that participated in the electoral debate. Our work conveys both theoretical and practical implications and provides more nuanced and fine-grained results for studying online information manipulation.",
+      "keywords": [],
+      "doi": null,
+      "doi_url": null,
+      "url": null,
+      "arxiv_url": "http://arxiv.org/abs/2008.08370v2",
+      "pdf_url": "https://arxiv.org/pdf/2008.08370v2",
+      "publication_date": "2020-08-19",
+      "citation_count": null,
+      "reference_count": null,
+      "venue": "Proc. AAAI Intl. Conference on Web and Social Media (ICWSM) 2021",
+      "authors": [
+        "Leonardo Nizzoli",
+        "Serena Tardelli",
+        "Marco Avvenuti",
+        "Stefano Cresci",
+        "Maurizio Tesconi"
+      ],
+      "subjects": [
+        "cs.SI"
+      ],
+      "is_open_access": true,
+      "source": "arxiv",
+      "confidence_score": 0.7
+    }
+  },
+  "9b02d2d314e03ade": {
+    "entry_key": "Guess2021-ym",
+    "entry_title": "Cracking open the news feed",
+    "cached_at": "2026-09-26T08:40:14.553993",
+    "metadata": {
+      "abstract": "In this study, we analyze for the first time newly available engagement data covering millions of web links shared on Facebook to describe how and by which categories of U.S. users different types of news are seen and shared on the platform. We focus on articles from low-credibility news publishers, credible news sources, purveyors of clickbait, and news specifically about politics, which we identify through a combination of curated lists and supervised classifiers. Our results support recent findings that more fake news is shared by older users and conservatives and that both viewing and sharing patterns suggest a preference for ideologically congenial misinformation. We also find that fake news articles related to politics are more popular among older Americans than other types, while the youngest users share relatively more articles with clickbait headlines. Across the platform, however, articles from credible news sources are shared over 5 times more often and viewed over 7 times more often than articles from low-credibility sources. These findings offer important context for researchers studying the spread and consumption of information — including misinformation — on social media.",
+      "keywords": [],
+      "doi": "10.51685/jqd.2021.006",
+      "doi_url": "https://doi.org/10.51685/jqd.2021.006",
+      "url": null,
+      "arxiv_url": null,
+      "pdf_url": null,
+      "publication_date": "2021-04-26",
+      "citation_count": 41,
+      "reference_count": 0,
+      "venue": "Journal of Quantitative Description: Digital Media",
+      "authors": [
+        "Andy Guess",
+        "Kevin Aslett",
+        "Joshua Tucker",
+        "Richard Bonneau",
+        "Jonathan Nagler"
+      ],
+      "subjects": [],
+      "is_open_access": null,
+      "source": "crossref",
+      "confidence_score": 0.8272727272727272
+    }
+  },
+  "f93c1a33c87a54df": {
+    "entry_key": "Allen2021-ai",
+    "entry_title": "Research note: Examining potential bias in large-scale censored data",
+    "cached_at": "2026-09-26T08:40:16.586692",
+    "metadata": {
+      "abstract": "We examine potential bias in Facebook’s 10-trillion cell URLs dataset, consisting of URLs shared on its platform and their engagement metrics. Despite the unprecedented size of the dataset, it was altered to protect user privacy in two ways: 1) by adding differentially private noise to engagement counts, and 2) by censoring the data with a 100-public-share threshold for a URL’s inclusion. To understand how these alterations affect conclusions drawn from the data, we estimate the preva-lence of fake news in the massive, censored URLs dataset and compare it to an estimate from a smaller, representative dataset. We show that censoring can substantially alter conclusions that are drawn from the Facebook dataset. Because of this 100-public-share threshold, descriptive statis-tics from the Facebook URLs dataset overestimate the share of fake news and news overall by as much as 4X. We conclude with more general implications for censoring data.",
+      "keywords": [],
+      "doi": "10.37016/mr-2020-74",
+      "doi_url": "https://doi.org/10.37016/mr-2020-74",
+      "url": null,
+      "arxiv_url": null,
+      "pdf_url": null,
+      "publication_date": "2021-07-26",
+      "citation_count": 20,
+      "reference_count": 13,
+      "venue": "Harvard Kennedy School Misinformation Review",
+      "authors": [
+        "Jennifer Allen",
+        "Markus Mobius",
+        "David M. Rothschild",
+        "Duncan J. Watts"
+      ],
+      "subjects": [],
+      "is_open_access": null,
+      "source": "crossref",
+      "confidence_score": 0.825
+    }
+  },
+  "60e67ff4d03734d9": {
+    "entry_key": "Vosoughi2018-at",
+    "entry_title": "The spread of true and false news online",
+    "cached_at": "2026-09-26T08:40:18.637024",
+    "metadata": {
+      "abstract": "Lies spread faster than the truth There is worldwide concern over false news and the possibility that it can influence political, economic, and social well-being. To understand how false news spreads, Vosoughi et al. used a data set of rumor cascades on Twitter from 2006 to 2017. About 126,000 rumors were spread by ∼3 million people. False news reached more people than the truth; the top 1% of false news cascades diffused to between 1000 and 100,000 people, whereas the truth rarely diffused to more than 1000 people. Falsehood also diffused faster than the truth. The degree of novelty and the emotional reactions of recipients may be responsible for the differences observed. Science , this issue p. 1146",
+      "keywords": [],
+      "doi": "10.1126/science.aap9559",
+      "doi_url": "https://doi.org/10.1126/science.aap9559",
+      "url": null,
+      "arxiv_url": null,
+      "pdf_url": null,
+      "publication_date": "2018-03-09",
+      "citation_count": 6665,
+      "reference_count": 73,
+      "venue": "Science",
+      "authors": [
+        "Soroush Vosoughi",
+        "Deb Roy",
+        "Sinan Aral"
+      ],
+      "subjects": [],
+      "is_open_access": null,
+      "source": "crossref",
+      "confidence_score": 0.8428571428571427
+    }
+  },
+  "cdf75f7fcfa37c15": {
+    "entry_key": "Allen2020-nj",
+    "entry_title": "Evaluating the fake news problem at the scale of the information ecosystem",
+    "cached_at": "2026-09-26T08:40:20.837778",
+    "metadata": {
+      "abstract": "“Fake news,” broadly defined as deliberately false or misleading information masquerading as legitimate news, is frequently asserted to be pervasive on the web, and on social media in particular, with serious consequences for public opinion, political polarization, and ultimately democracy. Using a unique multimode data set that comprises a nationally representative sample of mobile, desktop, and television consumption across all categories of media content, we refute this conventional wisdom on three levels. First, news consumption of any sort is heavily outweighed by other forms of media consumption, comprising at most 14.2% of Americans’ daily media diets. Second, to the extent that Americans do consume news, it is overwhelmingly from television, which accounts for roughly five times as much as news consumption as online, while a supermajority of Americans consume little or no news online at all. Third, fake news comprises only about 1% of overall news consumption and 0.15% of Americans’ daily media diet. Although consumption data alone cannot determine that online misinformation in any dose is not dangerous to democracy, our results suggest that the origins of public mis-informedness and polarization are more likely to lie in the content of ordinary news--especially on television--or alternatively in the avoidance of news altogether as they are in overt fakery.",
+      "keywords": [],
+      "doi": "10.2139/ssrn.3502581",
+      "doi_url": "https://doi.org/10.2139/ssrn.3502581",
+      "url": null,
+      "arxiv_url": null,
+      "pdf_url": null,
+      "publication_date": null,
+      "citation_count": 6,
+      "reference_count": 0,
+      "venue": null,
+      "authors": [
+        "Jennifer Allen",
+        "Baird Howland",
+        "Markus M. Mobius",
+        "David M. Rothschild",
+        "Duncan Watts"
+      ],
+      "subjects": [],
+      "is_open_access": null,
+      "source": "crossref",
+      "confidence_score": 0.825
+    }
+  },
+  "f3f6cfa2e3e92efd": {
+    "entry_key": "Yang2023-cg",
+    "entry_title": "Visual misinformation on Facebook",
+    "cached_at": "2026-09-26T08:40:22.832015",
+    "metadata": {
+      "abstract": "Abstract We conduct the first large-scale study of image-based political misinformation on Facebook. We collect 13,723,654 posts from 14,532 pages and 11,454 public groups from August through October 2020, posts that together account for nearly all engagement of U.S. public political content on Facebook. We use perceptual hashing to identify duplicate images and computer vision to identify political figures. Twenty-three percent of sampled political images (N = 1,000) contained misinformation, as did 20% of sampled images (N = 1,000) containing political figures. We find enormous partisan asymmetry in misinformation posts, with right-leaning images 5–8 times more likely to be misleading, but little evidence that misleading images generate higher engagement. Previous scholarship, which mostly cataloged links to noncredible domains, has ignored image posts which account for a higher volume of misinformation. This research shows that new computer-assisted methods can scale to millions of images, and help address perennial and long-unanswered calls for more systematic study of visual political communication.",
+      "keywords": [],
+      "doi": "10.1093/joc/jqac051",
+      "doi_url": "https://doi.org/10.1093/joc/jqac051",
+      "url": null,
+      "arxiv_url": null,
+      "pdf_url": null,
+      "publication_date": "2023-07-27",
+      "citation_count": 81,
+      "reference_count": 81,
+      "venue": "Journal of Communication",
+      "authors": [
+        "Yunkang Yang",
+        "Trevor Davis",
+        "Matthew Hindman"
+      ],
+      "subjects": [],
+      "is_open_access": null,
+      "source": "crossref",
+      "confidence_score": 0.8428571428571427
+    }
+  },
+  "1f87e6abe8d934b1": {
+    "entry_key": "Eady2023-xg",
+    "entry_title": "Exposure to the Russian Internet Research Agency foreign influence campaign on Twitter in the 2016 US election and its relationship to attitudes and voting behavior",
+    "cached_at": "2026-09-26T08:40:24.625849",
+    "metadata": {
+      "abstract": "Abstract There is widespread concern that foreign actors are using social media to interfere in elections worldwide. Yet data have been unavailable to investigate links between exposure to foreign influence campaigns and political behavior. Using longitudinal survey data from US respondents linked to their Twitter feeds, we quantify the relationship between exposure to the Russian foreign influence campaign and attitudes and voting behavior in the 2016 US election. We demonstrate, first, that exposure to Russian disinformation accounts was heavily concentrated: only 1% of users accounted for 70% of exposures. Second, exposure was concentrated among users who strongly identified as Republicans. Third, exposure to the Russian influence campaign was eclipsed by content from domestic news media and politicians. Finally, we find no evidence of a meaningful relationship between exposure to the Russian foreign influence campaign and changes in attitudes, polarization, or voting behavior. The results have implications for understanding the limits of election interference campaigns on social media.",
+      "keywords": [],
+      "doi": "10.1038/s41467-022-35576-9",
+      "doi_url": "https://doi.org/10.1038/s41467-022-35576-9",
+      "url": null,
+      "arxiv_url": null,
+      "pdf_url": null,
+      "publication_date": "2023-01-09",
+      "citation_count": 104,
+      "reference_count": 65,
+      "venue": "Nature Communications",
+      "authors": [
+        "Gregory Eady",
+        "Tom Paskhalis",
+        "Jan Zilinsky",
+        "Richard Bonneau",
+        "Jonathan Nagler",
+        "Joshua A. Tucker"
+      ],
+      "subjects": [],
+      "is_open_access": null,
+      "source": "crossref",
+      "confidence_score": 0.8214285714285714
+    }
+  },
+  "da37eb3069dbaad6": {
+    "entry_key": "Nyhan2023-gb",
+    "entry_title": "Like-minded sources on Facebook are prevalent but not polarizing",
+    "cached_at": "2026-09-26T08:40:26.722958",
+    "metadata": {
+      "abstract": "Abstract Many critics raise concerns about the prevalence of ‘echo chambers’ on social media and their potential role in increasing political polarization. However, the lack of available data and the challenges of conducting large-scale field experiments have made it difficult to assess the scope of the problem 1,2 . Here we present data from 2020 for the entire population of active adult Facebook users in the USA showing that content from ‘like-minded’ sources constitutes the majority of what people see on the platform, although political information and news represent only a small fraction of these exposures. To evaluate a potential response to concerns about the effects of echo chambers, we conducted a multi-wave field experiment on Facebook among 23,377 users for whom we reduced exposure to content from like-minded sources during the 2020 US presidential election by about one-third. We found that the intervention increased their exposure to content from cross-cutting sources and decreased exposure to uncivil language, but had no measurable effects on eight preregistered attitudinal measures such as affective polarization, ideological extremity, candidate evaluations and belief in false claims. These precisely estimated results suggest that although exposure to content from like-minded sources on social media is common, reducing its prevalence during the 2020 US presidential election did not correspondingly reduce polarization in beliefs or attitudes.",
+      "keywords": [],
+      "doi": "10.1038/s41586-023-06297-w",
+      "doi_url": "https://doi.org/10.1038/s41586-023-06297-w",
+      "url": null,
+      "arxiv_url": null,
+      "pdf_url": null,
+      "publication_date": "2023-08-03",
+      "citation_count": 254,
+      "reference_count": 47,
+      "venue": "Nature",
+      "authors": [
+        "Brendan Nyhan",
+        "Jaime Settle",
+        "Emily Thorson",
+        "Magdalena Wojcieszak",
+        "Pablo Barberá",
+        "Annie Y. Chen",
+        "Hunt Allcott",
+        "Taylor Brown",
+        "Adriana Crespo-Tenorio",
+        "Drew Dimmery",
+        "Deen Freelon",
+        "Matthew Gentzkow",
+        "Sandra González-Bailón",
+        "Andrew M. Guess",
+        "Edward Kennedy",
+        "Young Mie Kim",
+        "David Lazer",
+        "Neil Malhotra",
+        "Devra Moehler",
+        "Jennifer Pan",
+        "Daniel Robert Thomas",
+        "Rebekah Tromble",
+        "Carlos Velasco Rivera",
+        "Arjun Wilkins",
+        "Beixian Xiong",
+        "Chad Kiewiet de Jonge",
+        "Annie Franco",
+        "Winter Mason",
+        "Natalie Jomini Stroud",
+        "Joshua A. Tucker"
+      ],
+      "subjects": [],
+      "is_open_access": null,
+      "source": "crossref",
+      "confidence_score": 0.8085714285714285
+    }
+  },
+  "c4f9ff9ee403272c": {
+    "entry_key": "Gonzalez-Bailon2023-uy",
+    "entry_title": "Asymmetric ideological segregation in exposure to political news on Facebook",
+    "cached_at": "2026-09-26T08:40:28.897635",
+    "metadata": {
+      "abstract": "Does Facebook enable ideological segregation in political news consumption? We analyzed exposure to news during the US 2020 election using aggregated data for 208 million US Facebook users. We compared the inventory of all political news that users could have seen in their feeds with the information that they saw (after algorithmic curation) and the information with which they engaged. We show that (i) ideological segregation is high and increases as we shift from potential exposure to actual exposure to engagement; (ii) there is an asymmetry between conservative and liberal audiences, with a substantial corner of the news ecosystem consumed exclusively by conservatives; and (iii) most misinformation, as identified by Meta’s Third-Party Fact-Checking Program, exists within this homogeneously conservative corner, which has no equivalent on the liberal side. Sources favored by conservative audiences were more prevalent on Facebook’s news ecosystem than those favored by liberals.",
+      "keywords": [],
+      "doi": "10.1126/science.ade7138",
+      "doi_url": "https://doi.org/10.1126/science.ade7138",
+      "url": null,
+      "arxiv_url": null,
+      "pdf_url": null,
+      "publication_date": "2023-07-28",
+      "citation_count": 256,
+      "reference_count": 35,
+      "venue": "Science",
+      "authors": [
+        "Sandra González-Bailón",
+        "David Lazer",
+        "Pablo Barberá",
+        "Meiqing Zhang",
+        "Hunt Allcott",
+        "Taylor Brown",
+        "Adriana Crespo-Tenorio",
+        "Deen Freelon",
+        "Matthew Gentzkow",
+        "Andrew M. Guess",
+        "Shanto Iyengar",
+        "Young Mie Kim",
+        "Neil Malhotra",
+        "Devra Moehler",
+        "Brendan Nyhan",
+        "Jennifer Pan",
+        "Carlos Velasco Rivera",
+        "Jaime Settle",
+        "Emily Thorson",
+        "Rebekah Tromble",
+        "Arjun Wilkins",
+        "Magdalena Wojcieszak",
+        "Chad Kiewiet de Jonge",
+        "Annie Franco",
+        "Winter Mason",
+        "Natalie Jomini Stroud",
+        "Joshua A. Tucker"
+      ],
+      "subjects": [],
+      "is_open_access": null,
+      "source": "crossref",
+      "confidence_score": 0.8096774193548386
+    }
+  },
+  "b3ff887a1eba3ef7": {
+    "entry_key": "Guess2023-ur",
+    "entry_title": "How do social media feed algorithms affect attitudes and behavior in an election campaign?",
+    "cached_at": "2026-09-26T08:40:30.869374",
+    "metadata": {
+      "abstract": "We investigated the effects of Facebook’s and Instagram’s feed algorithms during the 2020 US election. We assigned a sample of consenting users to reverse-chronologically-ordered feeds instead of the default algorithms. Moving users out of algorithmic feeds substantially decreased the time they spent on the platforms and their activity. The chronological feed also affected exposure to content: The amount of political and untrustworthy content they saw increased on both platforms, the amount of content classified as uncivil or containing slur words they saw decreased on Facebook, and the amount of content from moderate friends and sources with ideologically mixed audiences they saw increased on Facebook. Despite these substantial changes in users’ on-platform experience, the chronological feed did not significantly alter levels of issue polarization, affective polarization, political knowledge, or other key attitudes during the 3-month study period.",
+      "keywords": [],
+      "doi": "10.1126/science.abp9364",
+      "doi_url": "https://doi.org/10.1126/science.abp9364",
+      "url": null,
+      "arxiv_url": null,
+      "pdf_url": null,
+      "publication_date": "2023-07-28",
+      "citation_count": 325,
+      "reference_count": 75,
+      "venue": "Science",
+      "authors": [
+        "Andrew M. Guess",
+        "Neil Malhotra",
+        "Jennifer Pan",
+        "Pablo Barberá",
+        "Hunt Allcott",
+        "Taylor Brown",
+        "Adriana Crespo-Tenorio",
+        "Drew Dimmery",
+        "Deen Freelon",
+        "Matthew Gentzkow",
+        "Sandra González-Bailón",
+        "Edward Kennedy",
+        "Young Mie Kim",
+        "David Lazer",
+        "Devra Moehler",
+        "Brendan Nyhan",
+        "Carlos Velasco Rivera",
+        "Jaime Settle",
+        "Daniel Robert Thomas",
+        "Emily Thorson",
+        "Rebekah Tromble",
+        "Arjun Wilkins",
+        "Magdalena Wojcieszak",
+        "Beixian Xiong",
+        "Chad Kiewiet de Jonge",
+        "Annie Franco",
+        "Winter Mason",
+        "Natalie Jomini Stroud",
+        "Joshua A. Tucker"
+      ],
+      "subjects": [],
+      "is_open_access": null,
+      "source": "crossref",
+      "confidence_score": 0.8089552238805969
+    }
+  },
+  "212986182af047af": {
+    "entry_key": "Guess2023-ai",
+    "entry_title": "Reshares on social media amplify political news but do not detectably affect beliefs or opinions",
+    "cached_at": "2026-09-26T08:40:32.717153",
+    "metadata": {
+      "abstract": "We studied the effects of exposure to reshared content on Facebook during the 2020 US election by assigning a random set of consenting, US-based users to feeds that did not contain any reshares over a 3-month period. We find that removing reshared content substantially decreases the amount of political news, including content from untrustworthy sources, to which users are exposed; decreases overall clicks and reactions; and reduces partisan news clicks. Further, we observe that removing reshared content produces clear decreases in news knowledge within the sample, although there is some uncertainty about how this would generalize to all users. Contrary to expectations, the treatment does not significantly affect political polarization or any measure of individual-level political attitudes.",
+      "keywords": [],
+      "doi": "10.1126/science.add8424",
+      "doi_url": "https://doi.org/10.1126/science.add8424",
+      "url": null,
+      "arxiv_url": null,
+      "pdf_url": null,
+      "publication_date": "2023-07-28",
+      "citation_count": 144,
+      "reference_count": 59,
+      "venue": "Science",
+      "authors": [
+        "Andrew M. Guess",
+        "Neil Malhotra",
+        "Jennifer Pan",
+        "Pablo Barberá",
+        "Hunt Allcott",
+        "Taylor Brown",
+        "Adriana Crespo-Tenorio",
+        "Drew Dimmery",
+        "Deen Freelon",
+        "Matthew Gentzkow",
+        "Sandra González-Bailón",
+        "Edward Kennedy",
+        "Young Mie Kim",
+        "David Lazer",
+        "Devra Moehler",
+        "Brendan Nyhan",
+        "Carlos Velasco Rivera",
+        "Jaime Settle",
+        "Daniel Robert Thomas",
+        "Emily Thorson",
+        "Rebekah Tromble",
+        "Arjun Wilkins",
+        "Magdalena Wojcieszak",
+        "Beixian Xiong",
+        "Chad Kiewiet de Jonge",
+        "Annie Franco",
+        "Winter Mason",
+        "Natalie Jomini Stroud",
+        "Joshua A. Tucker"
+      ],
+      "subjects": [],
+      "is_open_access": null,
+      "source": "crossref",
+      "confidence_score": 0.8089552238805969
+    }
+  },
+  "cdd7b7304ce819d1": {
+    "entry_key": "Allen2024-av",
+    "entry_title": "Quantifying the impact of misinformation and vaccine-skeptical content on Facebook",
+    "cached_at": "2026-09-26T08:40:35.181894",
+    "metadata": {
+      "abstract": "Low uptake of the COVID-19 vaccine in the US has been widely attributed to social media misinformation. To evaluate this claim, we introduce a framework combining lab experiments (total N = 18,725), crowdsourcing, and machine learning to estimate the causal effect of 13,206 vaccine-related URLs on the vaccination intentions of US Facebook users ( N ≈ 233 million). We estimate that the impact of unflagged content that nonetheless encouraged vaccine skepticism was 46-fold greater than that of misinformation flagged by fact-checkers. Although misinformation reduced predicted vaccination intentions significantly more than unflagged vaccine content when viewed, Facebook users’ exposure to flagged content was limited. In contrast, unflagged stories highlighting rare deaths after vaccination were among Facebook’s most-viewed stories. Our work emphasizes the need to scrutinize factually accurate but potentially misleading content in addition to outright falsehoods.",
+      "keywords": [],
+      "doi": "10.1126/science.adk3451",
+      "doi_url": "https://doi.org/10.1126/science.adk3451",
+      "url": null,
+      "arxiv_url": null,
+      "pdf_url": null,
+      "publication_date": "2024-05-31",
+      "citation_count": 130,
+      "reference_count": 106,
+      "venue": "Science",
+      "authors": [
+        "Jennifer Allen",
+        "Duncan J. Watts",
+        "David G. Rand"
+      ],
+      "subjects": [],
+      "is_open_access": null,
+      "source": "crossref",
+      "confidence_score": 0.83
+    }
+  },
+  "128f69493aa26a96": {
+    "entry_key": "Gillespie2022-jx",
+    "entry_title": "Do not recommend? Reduction as a form of content moderation",
+    "cached_at": "2026-09-26T08:40:36.817427",
+    "metadata": {
+      "abstract": "Public debate about content moderation has overwhelmingly focused on removal: social media platforms deleting content and suspending users, or opting not to do so. However, removal is not the only available remedy. Reducing the visibility of problematic content is becoming a commonplace element of platform governance. Platforms use machine learning classifiers to identify content they judge misleading enough, risky enough, or offensive enough that, while it does not warrant removal according to the site guidelines, warrants demoting them in algorithmic rankings and recommendations. In this essay, I document this shift and explain how reduction works. I then raise questions about what it means to use recommendation as a means of content moderation.",
+      "keywords": [],
+      "doi": "10.1177/20563051221117552",
+      "doi_url": "https://doi.org/10.1177/20563051221117552",
+      "url": null,
+      "arxiv_url": null,
+      "pdf_url": null,
+      "publication_date": "2022",
+      "citation_count": 162,
+      "reference_count": 70,
+      "venue": "Social Media + Society",
+      "authors": [
+        "Tarleton Gillespie"
+      ],
+      "subjects": [],
+      "is_open_access": null,
+      "source": "crossref",
+      "confidence_score": 0.8999999999999999
+    }
+  },
+  "6cef66a46540feba": {
+    "entry_key": "Bennett2018-ys",
+    "entry_title": "The disinformation order: Disruptive communication and the decline of democratic institutions",
+    "cached_at": "2026-09-26T08:40:38.740266",
+    "metadata": {
+      "abstract": "Many democratic nations are experiencing increased levels of false information circulating through social media and political websites that mimic journalism formats. In many cases, this disinformation is associated with the efforts of movements and parties on the radical right to mobilize supporters against centre parties and the mainstream press that carries their messages. The spread of disinformation can be traced to growing legitimacy problems in many democracies. Declining citizen confidence in institutions undermines the credibility of official information in the news and opens publics to alternative information sources. Those sources are often associated with both nationalist (primarily radical right) and foreign (commonly Russian) strategies to undermine institutional legitimacy and destabilize centre parties, governments and elections. The Brexit campaign in the United Kingdom and the election of Donald Trump in the United States are among the most prominent examples of disinformation campaigns intended to disrupt normal democratic order, but many other nations display signs of disinformation and democratic disruption. The origins of these problems and their implications for political communication research are explored.",
+      "keywords": [],
+      "doi": "10.1177/0267323118760317",
+      "doi_url": "https://doi.org/10.1177/0267323118760317",
+      "url": null,
+      "arxiv_url": null,
+      "pdf_url": null,
+      "publication_date": "2018",
+      "citation_count": 1089,
+      "reference_count": 56,
+      "venue": "European Journal of Communication",
+      "authors": [
+        "W Lance Bennett",
+        "Steven Livingston"
+      ],
+      "subjects": [],
+      "is_open_access": null,
+      "source": "crossref",
+      "confidence_score": 0.85
+    }
+  },
+  "808f5cf6ee5ca4ce": {
+    "entry_key": "Benkler2018-lw",
+    "entry_title": "Network propaganda: Manipulation, disinformation, and radicalization in American politics",
+    "cached_at": "2026-09-26T08:40:41.044376",
+    "metadata": {
+      "abstract": "\"Is social media destroying democracy? Are Russian propaganda or \"Fake news\" entrepreneurs on Facebook undermining our sense of a shared reality? A conventional wisdom has emerged since the election of Donald Trump in 2016 that new technologies and their manipulation by foreign actors played a decisive role in his victory and are responsible for the sense of a \"post-truth\" moment in which disinformation and propaganda thrives. \\n \\nNetwork Propaganda challenges that received wisdom through the most comprehensive study yet published on media coverage of American presidential politics from the start of the election cycle in April 2015 to the one year anniversary of the Trump presidency. Analysing millions of news stories together with Twitter and Facebook shares, broadcast television and YouTube, the book provides a comprehensive overview of the architecture of contemporary American political communications. Through data analysis and detailed qualitative case studies of coverage of immigration, Clinton scandals, and the Trump Russia investigation, the book finds that the right-wing media ecosystem operates fundamentally differently than the rest of the media environment. \\n \\nThe authors argue that longstanding institutional, political, and cultural patterns in American politics interacted with technological change since the 1970s to create a propaganda feedback loop in American conservative media. This dynamic has marginalized centre-right media and politicians, radicalized the right wing ecosystem, and rendered it susceptible to propaganda efforts, foreign and domestic. For readers outside the United States, the book offers a new perspective and methods for diagnosing the sources of, and potential solutions for, the perceived global crisis of democratic politics.\"",
+      "keywords": [],
+      "doi": null,
+      "doi_url": null,
+      "url": "https://aquila.usm.edu/katrinagulfcoast_photos/42",
+      "arxiv_url": null,
+      "pdf_url": "http://www.oapen.org/search?identifier=1001606",
+      "publication_date": "2018-09-17",
+      "citation_count": 772,
+      "reference_count": null,
+      "venue": "Aquila Digital Community (University of Southern Mississippi)",
+      "authors": [
+        "Yochai Roberts Benkler",
+        "Robert Farris",
+        "Hal Roberts"
+      ],
+      "subjects": [
+        "Disinformation",
+        "Radicalization",
+        "Politics",
+        "Political science",
+        "Media studies"
+      ],
+      "is_open_access": true,
+      "source": "openalex",
+      "confidence_score": 0.7428571428571428
+    }
+  },
+  "9ac0d278fa81bcf8": {
+    "entry_key": "Guess2020-rr",
+    "entry_title": "Exposure to untrustworthy websites in the 2016 US election",
+    "cached_at": "2026-09-26T08:40:43.266709",
+    "metadata": {
+      "abstract": null,
+      "keywords": [],
+      "doi": "10.1038/s41562-020-0833-x",
+      "doi_url": "https://doi.org/10.1038/s41562-020-0833-x",
+      "url": null,
+      "arxiv_url": null,
+      "pdf_url": null,
+      "publication_date": "2020-03-02",
+      "citation_count": 437,
+      "reference_count": 50,
+      "venue": "Nature Human Behaviour",
+      "authors": [
+        "Andrew M. Guess",
+        "Brendan Nyhan",
+        "Jason Reifler"
+      ],
+      "subjects": [],
+      "is_open_access": null,
+      "source": "crossref",
+      "confidence_score": 0.8374999999999999
+    }
+  },
+  "f3ce6f7f70a30931": {
+    "entry_key": "Tsfati2020-uo",
+    "entry_title": "Causes and consequences of mainstream media dissemination of fake news: literature review and synthesis",
+    "cached_at": "2026-09-26T08:40:44.996380",
+    "metadata": {
+      "abstract": null,
+      "keywords": [],
+      "doi": "10.1080/23808985.2020.1759443",
+      "doi_url": "https://doi.org/10.1080/23808985.2020.1759443",
+      "url": null,
+      "arxiv_url": null,
+      "pdf_url": null,
+      "publication_date": "2020-04-02",
+      "citation_count": 246,
+      "reference_count": 80,
+      "venue": "Annals of the International Communication Association",
+      "authors": [
+        "Yariv Tsfati",
+        "H. G. Boomgaarden",
+        "J. Strömbäck",
+        "R. Vliegenthart",
+        "A. Damstra",
+        "E. Lindgren"
+      ],
+      "subjects": [],
+      "is_open_access": null,
+      "source": "crossref",
+      "confidence_score": 0.7999999999999999
+    }
+  },
+  "e04014dc20e76f01": {
+    "entry_key": "Kunda1990-cg",
+    "entry_title": "The case for motivated reasoning",
+    "cached_at": "2026-09-26T08:40:47.192721",
+    "metadata": {
+      "abstract": null,
+      "keywords": [],
+      "doi": "10.1037/0033-2909.108.3.480",
+      "doi_url": "https://doi.org/10.1037/0033-2909.108.3.480",
+      "url": null,
+      "arxiv_url": null,
+      "pdf_url": null,
+      "publication_date": "1990",
+      "citation_count": 6595,
+      "reference_count": 0,
+      "venue": "Psychological Bulletin",
+      "authors": [
+        "Ziva Kunda"
+      ],
+      "subjects": [],
+      "is_open_access": null,
+      "source": "crossref",
+      "confidence_score": 0.7999999999999999
+    }
+  },
+  "6a7a8999d8ccb551": {
+    "entry_key": "Flaxman2016-lm",
+    "entry_title": "Filter bubbles, echo chambers, and online news consumption",
+    "cached_at": "2026-09-26T08:40:49.056982",
+    "metadata": {
+      "abstract": "Online publishing, social networks, and web search have dramatically lowered the costs of producing, distributing, and discovering news articles. Some scholars argue that such technological changes increase exposure to diverse perspectives, while others worry that they increase ideological segregation. We address the issue by examining webbrowsing histories for 50,000 US-located users who regularly read online news. We find that social networks and search engines are associated with an increase in the mean ideological distance between individuals. However, somewhat counterintuitively, these same channels also are associated with an increase in an individual's exposure to material from his or her less preferred side of the political spectrum. Finally, the vast majority of online news consumption is accounted for by individuals simply visiting the home pages of their favorite, typically mainstream, news outlets, tempering the consequences -- both positive and negative -- of recent technological changes. We thus uncover evidence for both sides of the debate, while also finding that the magnitude of the effects is relatively modest",
+      "keywords": [],
+      "doi": "10.2139/ssrn.2363701",
+      "doi_url": "https://doi.org/10.2139/ssrn.2363701",
+      "url": null,
+      "arxiv_url": null,
+      "pdf_url": null,
+      "publication_date": null,
+      "citation_count": 27,
+      "reference_count": 46,
+      "venue": null,
+      "authors": [
+        "Seth Flaxman",
+        "Sharad Goel",
+        "Justin M. Rao"
+      ],
+      "subjects": [],
+      "is_open_access": null,
+      "source": "crossref",
+      "confidence_score": 0.8333333333333333
+    }
+  },
+  "a9cdc8b5eeb2bfbc": {
+    "entry_key": "Bail2018-fk",
+    "entry_title": "Exposure to opposing views on social media can increase political polarization",
+    "cached_at": "2026-09-26T08:40:51.027708",
+    "metadata": {
+      "abstract": "Significance Social media sites are often blamed for exacerbating political polarization by creating “echo chambers” that prevent people from being exposed to information that contradicts their preexisting beliefs. We conducted a field experiment that offered a large group of Democrats and Republicans financial compensation to follow bots that retweeted messages by elected officials and opinion leaders with opposing political views. Republican participants expressed substantially more conservative views after following a liberal Twitter bot, whereas Democrats’ attitudes became slightly more liberal after following a conservative Twitter bot—although this effect was not statistically significant. Despite several limitations, this study has important implications for the emerging field of computational social science and ongoing efforts to reduce political polarization online.",
+      "keywords": [],
+      "doi": "10.1073/pnas.1804840115",
+      "doi_url": "https://doi.org/10.1073/pnas.1804840115",
+      "url": null,
+      "arxiv_url": null,
+      "pdf_url": null,
+      "publication_date": "2018-09-11",
+      "citation_count": 1405,
+      "reference_count": 47,
+      "venue": "Proceedings of the National Academy of Sciences",
+      "authors": [
+        "Christopher A. Bail",
+        "Lisa P. Argyle",
+        "Taylor W. Brown",
+        "John P. Bumpus",
+        "Haohan Chen",
+        "M. B. Fallin Hunzaker",
+        "Jaemin Lee",
+        "Marcus Mann",
+        "Friedolin Merhout",
+        "Alexander Volfovsky"
+      ],
+      "subjects": [],
+      "is_open_access": null,
+      "source": "crossref",
+      "confidence_score": 0.8115384615384614
+    }
+  },
+  "6aeef4812eedc76e": {
+    "entry_key": "Heft2021-ky",
+    "entry_title": "Toward a transnational information ecology on the right? Hyperlink networking among right-wing digital news sites in Europe and the United States",
+    "cached_at": "2026-09-26T08:40:53.122095",
+    "metadata": {
+      "abstract": "The recent rise of a more transnationally networked political right across Europe and the United States has been accompanied by an emerging alternative digital news infrastructure through which information circulates and shared epistemologies are established. This paper examines the extent to which digital news sites on the right are interconnected within and across countries. It further explores which additional sites serve as transnationally shared reference points of such news ecology on a transnational scale. To do so, we investigate hyperlink networks between alternative right-wing online news sites (RNS) in six western democracies (Austria, Germany, United States, United Kingdom, Denmark, Sweden). Our analysis draws on hyperlink data harvested from 65 RNS for three months in 2018. The results show that RNS do establish interlinked alternative right-wing news ecologies, as they connect to likeminded RNS within and across borders. Furthermore, we see substantial variation across countries, where RNS from countries with less established alternative right-wing news infrastructure are more likely to link transnationally to RNS. The United States represents an outlier in that it features the largest and domestically most integrated network of RNS, while U.S. sites function as hubs for transnational connections from European RNS. Apart from connections between RNS, we find that legacy news media are crucial transnationally shared reference points. We conclude that rather than presenting an insulated, alternative sphere, the emerging digital news ecology on the right seeks to link up to the broader information environment across borders.",
+      "keywords": [],
+      "doi": "10.1177/1940161220963670",
+      "doi_url": "https://doi.org/10.1177/1940161220963670",
+      "url": null,
+      "arxiv_url": null,
+      "pdf_url": null,
+      "publication_date": "2021",
+      "citation_count": 91,
+      "reference_count": 58,
+      "venue": "The International Journal of Press/Politics",
+      "authors": [
+        "Annett Heft",
+        "Curd Knüpfer",
+        "Susanne Reinhardt",
+        "Eva Mayerhöffer"
+      ],
+      "subjects": [],
+      "is_open_access": null,
+      "source": "crossref",
+      "confidence_score": 0.8333333333333333
+    }
+  },
+  "91036e3c644d9427": {
+    "entry_key": "Gillespie2010-as",
+    "entry_title": "The politics of ‘platforms’",
+    "cached_at": "2026-09-26T08:40:55.074133",
+    "metadata": {
+      "abstract": null,
+      "keywords": [],
+      "doi": "10.1002/9781118321607.ch28",
+      "doi_url": "https://doi.org/10.1002/9781118321607.ch28",
+      "url": null,
+      "arxiv_url": null,
+      "pdf_url": null,
+      "publication_date": "2013-02-09",
+      "citation_count": 17,
+      "reference_count": 43,
+      "venue": "A Companion to New Media Dynamics",
+      "authors": [
+        "Tarleton Gillespie"
+      ],
+      "subjects": [],
+      "is_open_access": null,
+      "source": "crossref",
+      "confidence_score": 0.8999999999999999
+    }
+  },
+  "9d98cff9c0ffd4fa": {
+    "entry_key": "Freelon2018-ao",
+    "entry_title": "Computational research in the post-API age",
+    "cached_at": "2026-09-26T08:40:57.184106",
+    "metadata": {
+      "abstract": "Briefly describes the implications of the emerging post-API age for social science research methods.",
+      "keywords": [],
+      "doi": "10.31235/osf.io/56f4q",
+      "doi_url": "https://doi.org/10.31235/osf.io/56f4q",
+      "url": null,
+      "arxiv_url": null,
+      "pdf_url": null,
+      "publication_date": null,
+      "citation_count": 7,
+      "reference_count": 0,
+      "venue": null,
+      "authors": [
+        "Deen Freelon"
+      ],
+      "subjects": [],
+      "is_open_access": null,
+      "source": "crossref",
+      "confidence_score": 0.8999999999999999
+    }
+  },
+  "f5523f5de6f847ff": {
+    "entry_key": "Pennycook2021-jq",
+    "entry_title": "The psychology of fake news",
+    "cached_at": "2026-09-26T08:40:59.264636",
+    "metadata": {
+      "abstract": "We synthesize a burgeoning literature investigating why people believe and share false or highly misleading news online. Contrary to a common narrative whereby politics drives susceptibility to fake news, people are better at discerning truth from falsehood when evaluating politically concordant news. Instead, poor truth discernment is associated with lack of careful reasoning and relevant knowledge, and the use of heuristics like familiarity. Furthermore, there is a substantial disconnect between what people believe and what they share on social media. This dissociation is largely driven by inattention, more so than purposeful sharing of misinformation. Thus, interventions can successfully nudge social media users to focus more on accuracy. Crowdsourced veracity ratings can also be leveraged to improve social media ranking algorithms.",
+      "keywords": [],
+      "doi": "10.31234/osf.io/ar96c",
+      "doi_url": "https://doi.org/10.31234/osf.io/ar96c",
+      "url": null,
+      "arxiv_url": null,
+      "pdf_url": null,
+      "publication_date": null,
+      "citation_count": 9,
+      "reference_count": 0,
+      "venue": null,
+      "authors": [
+        "Gordon Pennycook",
+        "David Gertler Rand"
+      ],
+      "subjects": [],
+      "is_open_access": null,
+      "source": "crossref",
+      "confidence_score": 0.8428571428571427
+    }
+  },
+  "c00cf7d86e7c17bf": {
+    "entry_key": "Berlinski2023-rj",
+    "entry_title": "The effects of unsubstantiated claims of voter fraud on confidence in elections",
+    "cached_at": "2026-09-26T08:41:01.524237",
+    "metadata": {
+      "abstract": "Abstract Political elites sometimes seek to delegitimize election results using unsubstantiated claims of fraud. Most recently, Donald Trump sought to overturn his loss in the 2020 US presidential election by falsely alleging widespread fraud. Our study provides new evidence demonstrating the corrosive effect of fraud claims like these on trust in the election system. Using a nationwide survey experiment conducted after the 2018 midterm elections – a time when many prominent Republicans also made unsubstantiated fraud claims – we show that exposure to claims of voter fraud reduces confidence in electoral integrity, though not support for democracy itself. The effects are concentrated among Republicans and Trump approvers. Worryingly, corrective messages from mainstream sources do not measurably reduce the damage these accusations inflict. These results suggest that unsubstantiated voter-fraud claims undermine confidence in elections, particularly when the claims are politically congenial, and that their effects cannot easily be mitigated by fact-checking.",
+      "keywords": [],
+      "doi": "10.1017/xps.2021.18",
+      "doi_url": "https://doi.org/10.1017/xps.2021.18",
+      "url": null,
+      "arxiv_url": null,
+      "pdf_url": null,
+      "publication_date": "2023",
+      "citation_count": 170,
+      "reference_count": 67,
+      "venue": "Journal of Experimental Political Science",
+      "authors": [
+        "Nicolas Berlinski",
+        "Margaret Doyle",
+        "Andrew M. Guess",
+        "Gabrielle Levy",
+        "Benjamin Lyons",
+        "Jacob M. Montgomery",
+        "Brendan Nyhan",
+        "Jason Reifler"
+      ],
+      "subjects": [],
+      "is_open_access": null,
+      "source": "crossref",
+      "confidence_score": 0.8166666666666667
+    }
+  },
+  "f3c2a0e9c462a44e": {
+    "entry_key": "Osmundsen2021-et",
+    "entry_title": "Partisan polarization is the primary psychological motivation behind political fake news sharing on twitter",
+    "cached_at": "2026-09-26T08:41:04.014842",
+    "metadata": {
+      "abstract": "Abstract The rise of “fake news” is a major concern in contemporary Western democracies. Yet, research on the psychological motivations behind the spread of political fake news on social media is surprisingly limited. Are citizens who share fake news ignorant and lazy? Are they fueled by sinister motives, seeking to disrupt the social status quo? Or do they seek to attack partisan opponents in an increasingly polarized political environment? This article is the first to test these competing hypotheses based on a careful mapping of psychological profiles of over 2,300 American Twitter users linked to behavioral sharing data and sentiment analyses of more than 500,000 news story headlines. The findings contradict the ignorance perspective but provide some support for the disruption perspective and strong support for the partisan polarization perspective. Thus, individuals who report hating their political opponents are the most likely to share political fake news and selectively share content that is useful for derogating these opponents. Overall, our findings show that fake news sharing is fueled by the same psychological motivations that drive other forms of partisan behavior, including sharing partisan news from traditional and credible news sources.",
+      "keywords": [],
+      "doi": "10.1017/s0003055421000290",
+      "doi_url": "https://doi.org/10.1017/s0003055421000290",
+      "url": null,
+      "arxiv_url": null,
+      "pdf_url": null,
+      "publication_date": "2021",
+      "citation_count": 374,
+      "reference_count": 51,
+      "venue": "American Political Science Review",
+      "authors": [
+        "MATHIAS OSMUNDSEN",
+        "ALEXANDER BOR",
+        "PETER BJERREGAARD VAHLSTRUP",
+        "ANJA BECHMANN",
+        "MICHAEL BANG PETERSEN"
+      ],
+      "subjects": [],
+      "is_open_access": null,
+      "source": "crossref",
+      "confidence_score": 0.8461538461538461
+    }
+  },
+  "6e6c1905899b26fd": {
+    "entry_key": "Iyengar2019-jj",
+    "entry_title": "The origins and consequences of affective polarization in the United States",
+    "cached_at": "2026-09-26T08:41:05.843033",
+    "metadata": {
+      "abstract": "While previously polarization was primarily seen only in issue-based terms, a new type of division has emerged in the mass public in recent years: Ordinary Americans increasingly dislike and distrust those from the other party. Democrats and Republicans both say that the other party's members are hypocritical, selfish, and closed-minded, and they are unwilling to socialize across party lines. This phenomenon of animosity between the parties is known as affective polarization. We trace its origins to the power of partisanship as a social identity, and explain the factors that intensify partisan animus. We also explore the consequences of affective polarization, highlighting how partisan affect influences attitudes and behaviors well outside the political sphere. Finally, we discuss strategies that might mitigate partisan discord and conclude with suggestions for future work.",
+      "keywords": [],
+      "doi": "10.1146/annurev-polisci-051117-073034",
+      "doi_url": "https://doi.org/10.1146/annurev-polisci-051117-073034",
+      "url": null,
+      "arxiv_url": null,
+      "pdf_url": null,
+      "publication_date": "2019-05-11",
+      "citation_count": 2350,
+      "reference_count": 96,
+      "venue": "Annual Review of Political Science",
+      "authors": [
+        "Shanto Iyengar",
+        "Yphtach Lelkes",
+        "Matthew Levendusky",
+        "Neil Malhotra",
+        "Sean J. Westwood"
+      ],
+      "subjects": [],
+      "is_open_access": null,
+      "source": "crossref",
+      "confidence_score": 0.823076923076923
+    }
+  },
+  "eb16aef05bb83115": {
+    "entry_key": "Chadwick2015-ii",
+    "entry_title": "Politics in the age of hybrid media",
+    "cached_at": "2026-09-26T08:41:07.581944",
+    "metadata": {
+      "abstract": null,
+      "keywords": [],
+      "doi": "10.4324/9781315716299-2",
+      "doi_url": "https://doi.org/10.4324/9781315716299-2",
+      "url": null,
+      "arxiv_url": null,
+      "pdf_url": null,
+      "publication_date": "2015-12-22",
+      "citation_count": 33,
+      "reference_count": 1,
+      "venue": "The Routledge Companion to Social Media and Politics",
+      "authors": [
+        "Andrew Chadwick",
+        "James Dennis",
+        "Amy P. Smith"
+      ],
+      "subjects": [],
+      "is_open_access": null,
+      "source": "crossref",
+      "confidence_score": 0.8333333333333333
+    }
   }
 }
