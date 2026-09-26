@@ -8532,5 +8532,32 @@
       "source": "crossref",
       "confidence_score": 0.8333333333333333
     }
+  },
+  "ca60de87f2566b5b": {
+    "entry_key": "van-Dijck2018-up",
+    "entry_title": "The platform society",
+    "cached_at": "2026-09-26T13:26:54.841865",
+    "metadata": {
+      "abstract": "Abstract Individuals all over the world can use Airbnb to rent an apartment in a foreign city, check Coursera to find a course on statistics, join PatientsLikeMe to exchange information about one’s disease, hail a cab using Uber, or read the news through Facebook’s Instant Articles. In The Platform Society, Van Dijck, Poell, and De Waal offer a comprehensive analysis of a connective world where platforms have penetrated the heart of societies—disrupting markets and labor relations, transforming social and civic practices, and affecting democratic processes. The Platform Society analyzes intense struggles between competing ideological systems and contesting societal actors—market, government, and civil society—asking who is or should be responsible for anchoring public values and the common good in a platform society. Public values include, of course, privacy, accuracy, safety, and security; but they also pertain to broader societal effects, such as fairness, accessibility, democratic control, and accountability. Such values are the very stakes in the struggle over the platformization of societies around the globe. The Platform Society highlights how these struggles play out in four private and public sectors: news, urban transport, health, and education. Some of these conflicts highlight local dimensions, for instance, fights over regulation between individual platforms and city councils, while others address the geopolitical level where power clashes between global markets and (supra-)national governments take place.",
+      "keywords": [],
+      "doi": "10.1093/oso/9780190889760.001.0001",
+      "doi_url": "https://doi.org/10.1093/oso/9780190889760.001.0001",
+      "url": null,
+      "arxiv_url": null,
+      "pdf_url": null,
+      "publication_date": "2018-11-29",
+      "citation_count": 2783,
+      "reference_count": 511,
+      "venue": null,
+      "authors": [
+        "José van Dijck",
+        "Thomas Poell",
+        "Martijn de Waal"
+      ],
+      "subjects": [],
+      "is_open_access": null,
+      "source": "crossref",
+      "confidence_score": 0.8666666666666666
+    }
   }
 }
