@@ -8615,5 +8615,64 @@
       "source": "crossref",
       "confidence_score": 0.8333333333333333
     }
+  },
+  "fac6c3eb6607315f": {
+    "entry_key": "Perez-Curiel2026-ld",
+    "entry_title": "When populism meets artificial intelligence: AI-generated multimedia content and far-right digital campaigning on Instagram and X in the 2024 European elections",
+    "cached_at": "2026-09-27T15:41:53.225555",
+    "metadata": {
+      "abstract": null,
+      "keywords": [],
+      "doi": "10.1016/j.ssaho.2026.103611",
+      "doi_url": "https://doi.org/10.1016/j.ssaho.2026.103611",
+      "url": null,
+      "arxiv_url": null,
+      "pdf_url": null,
+      "publication_date": "2026",
+      "citation_count": 0,
+      "reference_count": 55,
+      "venue": "Social Sciences &amp; Humanities Open",
+      "authors": [
+        "Concha Pérez-Curiel",
+        "Cristian López-Domínguez",
+        "Sandra Méndez-Muros",
+        "Andrea Mila-Maldonado"
+      ],
+      "subjects": [],
+      "is_open_access": null,
+      "source": "crossref",
+      "confidence_score": 0.8333333333333333
+    }
+  },
+  "17fc5919bca1f808": {
+    "entry_key": "Di_Marco2026-xu",
+    "entry_title": "Optimal and heuristic strategies for evaluating the influence of coordinated behavior in information cascades and retweet networks",
+    "cached_at": "2026-09-27T15:41:53.539235",
+    "metadata": {
+      "abstract": "Coordinated Inauthentic Behavior (CIB) has become a major concern in online social platforms, yet its actual impact on information diffusion remains poorly understood. Existing research has primarily focused on detecting coordinated activity, while comparatively little attention has been devoted to quantifying its influence once detected. In this work, we introduce two complementary frameworks for the post-hoc evaluation of coordinated accounts. First, we formulate the problem on information cascades as a constrained influence maximization problem over directed trees and develop a polynomial-time dynamic programming algorithm that computes the optimal placement of coordinated nodes, providing an upper bound on their achievable influence. Second, motivated by the limited availability of diffusion cascades in real-world platforms, we propose a network-based framework that estimates influence directly from retweet networks using the independent cascade model and compares the observed placement of coordinated accounts against established heuristic baselines. We evaluate both approaches on Twitter/X data from the 2019 UK General Election and on a collection of verified state-backed information operation campaigns spanning multiple countries. While coordinated accounts exhibit limited influence in the UK cascades, the network-based analysis reveals substantial differences across campaigns, with several operations achieving influence comparable to or exceeding that of structurally central seed sets. Finally, by reconstructing cascades from the retweet networks, we show that the two frameworks produce consistent results, suggesting that the observed effects reflect intrinsic structural properties of coordinated activity rather than artifacts of the underlying methodology.",
+      "keywords": [],
+      "doi": null,
+      "doi_url": null,
+      "url": null,
+      "arxiv_url": "http://arxiv.org/abs/2609.24398v1",
+      "pdf_url": "https://arxiv.org/pdf/2609.24398v1",
+      "publication_date": "2026-09-21",
+      "citation_count": null,
+      "reference_count": null,
+      "venue": null,
+      "authors": [
+        "Niccolò Di Marco",
+        "Matteo Cinelli",
+        "Shinichi Nakano",
+        "Andrea Frosini"
+      ],
+      "subjects": [
+        "cs.SI",
+        "cs.CY"
+      ],
+      "is_open_access": true,
+      "source": "arxiv",
+      "confidence_score": 0.73
+    }
   }
 }
