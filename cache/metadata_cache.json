@@ -166,38 +166,6 @@
       "confidence_score": 0.75
     }
   },
-  "09f22309ff6d8e37": {
-    "entry_key": "Pierri2026-ib",
-    "entry_title": "Research opportunities and challenges of the EU’s Digital Services Act",
-    "cached_at": "2026-09-01T20:02:07.799802",
-    "metadata": {
-      "abstract": "Proposing practical measures to ensure the Digital Services Act fulfills its transparency and accountability goals.",
-      "keywords": [],
-      "doi": "10.1145/3779412",
-      "doi_url": "https://doi.org/10.1145/3779412",
-      "url": null,
-      "arxiv_url": null,
-      "pdf_url": null,
-      "publication_date": "2026-08-31",
-      "citation_count": 0,
-      "reference_count": 10,
-      "venue": "Communications of the ACM",
-      "authors": [
-        "Francesco Pierri",
-        "Theo Araujo",
-        "Sanne Kruikemeier",
-        "Philipp Lorenz-Spreen",
-        "Mariek M.P. Vanden Abeele",
-        "Laura Vandenbosch",
-        "Joana Gonçalves-Sa",
-        "Przemyslaw Grabowicz"
-      ],
-      "subjects": [],
-      "is_open_access": null,
-      "source": "crossref",
-      "confidence_score": 0.8285714285714285
-    }
-  },
   "49b2cb70274be0d4": {
     "entry_key": "Kasianenko2026-tn",
     "entry_title": "Searching for the truth? search engines and their AI affordances’ responses to conspiratorial search practices",
@@ -8698,6 +8666,64 @@
       "is_open_access": null,
       "source": "crossref",
       "confidence_score": 0.8176470588235294
+    }
+  },
+  "3f55cfea60dd3093": {
+    "entry_key": "Crichton2026-kn",
+    "entry_title": "Re-generating hate",
+    "cached_at": "2026-10-02T06:43:34.911464",
+    "metadata": {
+      "abstract": "This short piece examines how generative AI is becoming embedded in far-right propaganda ecosystems, drawing on examples from the 2023 Dublin riots and the 2024 Southport unrest. Using a media experiment, it traces a re-generative pipeline in which extremist images collected from Telegram and X are first converted into text prompts and then re-created through commercial image models. The results suggest that AI systems do not simply neutralize hateful content: they often sanitize its most explicit markers while preserving, displacing or rearticulating underlying ideological bias. The article argues that this affinity between far-right visual culture and generative AI is not accidental, but rooted in the biases and aesthetic logics built into contemporary commercial models.",
+      "keywords": [],
+      "doi": "10.1177/29768624261449726",
+      "doi_url": "https://doi.org/10.1177/29768624261449726",
+      "url": null,
+      "arxiv_url": null,
+      "pdf_url": null,
+      "publication_date": "2026",
+      "citation_count": 1,
+      "reference_count": 12,
+      "venue": "Platforms &amp; Society",
+      "authors": [
+        "Fraser Crichton",
+        "Guillen Torres"
+      ],
+      "subjects": [],
+      "is_open_access": null,
+      "source": "crossref",
+      "confidence_score": 0.86
+    }
+  },
+  "09f22309ff6d8e37": {
+    "entry_key": "Pierri2026-ib",
+    "entry_title": "Research opportunities and challenges of the EU’s Digital Services Act",
+    "cached_at": "2026-10-02T06:43:37.793634",
+    "metadata": {
+      "abstract": "Proposing practical measures to ensure the Digital Services Act fulfills its transparency and accountability goals.",
+      "keywords": [],
+      "doi": "10.1145/3779412",
+      "doi_url": "https://doi.org/10.1145/3779412",
+      "url": null,
+      "arxiv_url": null,
+      "pdf_url": null,
+      "publication_date": "2026-09-01",
+      "citation_count": 0,
+      "reference_count": 10,
+      "venue": "Communications of the ACM",
+      "authors": [
+        "Francesco Pierri",
+        "Theo Araujo",
+        "Sanne Kruikemeier",
+        "Philipp Lorenz-Spreen",
+        "Mariek M.P. Vanden Abeele",
+        "Laura Vandenbosch",
+        "Joana Gonçalves-Sa",
+        "Przemyslaw Grabowicz"
+      ],
+      "subjects": [],
+      "is_open_access": null,
+      "source": "crossref",
+      "confidence_score": 0.8285714285714285
     }
   }
 }
