@@ -2,29 +2,29 @@
   "c5a7d0326e1f61c6": {
     "entry_key": "Kristensen2025-ni",
     "entry_title": "Platform polarization. Do alternative platforms drive discursive polarization?",
-    "cached_at": "2026-09-25T13:19:35.153569",
+    "cached_at": "2026-10-03T16:50:08.289193",
     "metadata": null,
     "failed": true,
     "failure_reason": "Could not enrich entry: Kristensen2025-ni | No DOI available | Title length: 78 chars | Authors: Kristensen, Jakob Bæk, Kristensen, Jakob Bæk | APIs: Crossref enabled, Semantic Scholar enabled, ArXiv enabled",
-    "last_failure_at": "2026-09-25T13:19:35.153578"
+    "last_failure_at": "2026-10-03T16:50:08.289200"
   },
   "65d46046ae1c898f": {
     "entry_key": "Gaw2025-ru",
     "entry_title": "Influence operations as brokerage: Political-economic infrastructures of manipulation in the 2022 Philippine elections",
-    "cached_at": "2026-09-25T13:19:17.007201",
+    "cached_at": "2026-10-03T16:50:11.340428",
     "metadata": null,
     "failed": true,
     "failure_reason": "Could not enrich entry: Gaw2025-ru | No DOI available | Title length: 118 chars | Authors: Gaw, Fatima, Agonos, Mariam Jayne... | APIs: Crossref enabled, Semantic Scholar enabled, ArXiv enabled",
-    "last_failure_at": "2026-09-25T13:19:17.007209"
+    "last_failure_at": "2026-10-03T16:50:11.340434"
   },
   "b41f425da41887a0": {
     "entry_key": "Marwick2025-vx",
     "entry_title": "True costs of misinformation| mountains of evidence: Processual “redpilling” as a Socio-technical effect of disinformation",
-    "cached_at": "2026-09-25T13:19:32.059484",
+    "cached_at": "2026-10-03T16:50:14.431447",
     "metadata": null,
     "failed": true,
     "failure_reason": "Could not enrich entry: Marwick2025-vx | No DOI available | Title length: 122 chars | Authors: Marwick, Alice E, Furl, Katherine | APIs: Crossref enabled, Semantic Scholar enabled, ArXiv enabled",
-    "last_failure_at": "2026-09-25T13:19:32.059493"
+    "last_failure_at": "2026-10-03T16:50:14.431455"
   },
   "e3b0c44298fc1c14": {
     "entry_key": "noauthor_undated-bz",
@@ -38,11 +38,11 @@
   "657c6670d7b624b8": {
     "entry_key": "noauthor_undated-fm",
     "entry_title": "Volume 7 issue 2 article 4",
-    "cached_at": "2026-09-25T13:18:47.694488",
+    "cached_at": "2026-10-03T16:50:05.284406",
     "metadata": null,
     "failed": true,
     "failure_reason": "Could not enrich entry: noauthor_undated-fm | No DOI available | Title length: 26 chars | No authors available | APIs: Crossref enabled, Semantic Scholar enabled, ArXiv enabled",
-    "last_failure_at": "2026-09-25T13:18:47.694496"
+    "last_failure_at": "2026-10-03T16:50:05.284414"
   },
   "b909c3af063ea494": {
     "entry_key": "noauthor_undated-bm",
@@ -56,38 +56,38 @@
   "9195fcc80574052b": {
     "entry_key": "Vincent_undated-re",
     "entry_title": "What our second measurement says about misinformation on major platforms in Europe",
-    "cached_at": "2026-09-25T13:20:39.462846",
+    "cached_at": "2026-10-03T16:49:50.218192",
     "metadata": null,
     "failed": true,
     "failure_reason": "Could not enrich entry: Vincent_undated-re | No DOI available | Title length: 82 chars | Authors: Vincent, Emmanuel, Crisan, Daiana | APIs: Crossref enabled, Semantic Scholar enabled, ArXiv enabled",
-    "last_failure_at": "2026-09-25T13:20:39.462859"
+    "last_failure_at": "2026-10-03T16:49:50.218200"
   },
   "fac502d9bb5bbba8": {
     "entry_key": "UnknownUnknown-db",
     "entry_title": "What 81,000 people told us about the economics of AI",
-    "cached_at": "2026-09-25T13:18:50.548489",
+    "cached_at": "2026-10-03T16:49:53.053882",
     "metadata": null,
     "failed": true,
     "failure_reason": "Could not enrich entry: UnknownUnknown-db | No DOI available | Title length: 52 chars | No authors available | APIs: Crossref enabled, Semantic Scholar enabled, ArXiv enabled",
-    "last_failure_at": "2026-09-25T13:18:50.548498"
+    "last_failure_at": "2026-10-03T16:49:53.053890"
   },
   "fc9373f3342e79d3": {
     "entry_key": "Gottfried2026-ww",
     "entry_title": "Americans and AI 2026: Chatbots, Smart Devices and Views on Impact",
-    "cached_at": "2026-09-25T13:19:59.792295",
+    "cached_at": "2026-10-03T16:49:56.117236",
     "metadata": null,
     "failed": true,
     "failure_reason": "Could not enrich entry: Gottfried2026-ww | No DOI available | Title length: 66 chars | Authors: Gottfried, Jeffrey, Bishop, William... | APIs: Crossref enabled, Semantic Scholar enabled, ArXiv enabled",
-    "last_failure_at": "2026-09-25T13:19:59.792303"
+    "last_failure_at": "2026-10-03T16:49:56.117243"
   },
   "06e15083ae69cfa5": {
     "entry_key": "Hinck2026-yj",
     "entry_title": "Where's the Evidence that Respondents Understand Your Survey Questions?",
-    "cached_at": "2026-09-25T13:19:56.752523",
+    "cached_at": "2026-10-03T16:49:59.159981",
     "metadata": null,
     "failed": true,
     "failure_reason": "Could not enrich entry: Hinck2026-yj | No DOI available | Title length: 71 chars | Authors: Hinck, Musashi, King, Gary... | APIs: Crossref enabled, Semantic Scholar enabled, ArXiv enabled",
-    "last_failure_at": "2026-09-25T13:19:56.752532"
+    "last_failure_at": "2026-10-03T16:49:59.159993"
   },
   "63bf89009a078bb1": {
     "entry_key": "Falkenberg2026-ka",
@@ -164,39 +164,6 @@
       "is_open_access": false,
       "source": "openalex",
       "confidence_score": 0.75
-    }
-  },
-  "49b2cb70274be0d4": {
-    "entry_key": "Kasianenko2026-tn",
-    "entry_title": "Searching for the truth? search engines and their AI affordances’ responses to conspiratorial search practices",
-    "cached_at": "2026-09-02T09:44:55.175962",
-    "metadata": {
-      "abstract": "Search engines are a common pathway to conspiracy theories, and producers of conspiratorial narratives actively encourage users to search for particular terms. Understanding how search engines respond to different information-seeking practices is therefore essential for explaining the dynamics of online conspiracy theories. Existing audits of search engines rarely account for systematic variation in query formulation arising from users’ differing levels of engagement with conspiratorial beliefs, nor do they consider recently introduced AI-powered search features. To address this gap, we developed search query sets informed by conspiratorial and non-conspiratorial information-seeking practices of online forums, using the chemtrails and 15-minute cities conspiracy theories as case studies. We performed algorithmic audits of Google's first-page search results and AI Overview responses. Our findings show substantial differences in the information returned for queries representative of general public information seeking compared with those reflecting conspiratorial perspectives. These differences appear to arise partly from Google's efforts to moderate sensitive topics, but also from the limitations of those interventions in recognising and responding to conspiratorial modes of query formulation. AI Overviews likewise vary according to query framing and generally attempt to debunk conspiratorial claims. However, these responses are often brief, provide limited supporting evidence, and are less effective for the newer 15-minute cities conspiracy theory, suggesting that current AI-mediated search guardrails remain uneven and require further development.",
-      "keywords": [],
-      "doi": "10.1177/1329878x261481856",
-      "doi_url": "https://doi.org/10.1177/1329878x261481856",
-      "url": null,
-      "arxiv_url": null,
-      "pdf_url": null,
-      "publication_date": "2026-09-01",
-      "citation_count": 0,
-      "reference_count": 67,
-      "venue": "Media International Australia",
-      "authors": [
-        "Kateryna Kasianenko",
-        "Caroline Gardam",
-        "Katherine M. FitzGerald",
-        "Ashwin Nagappa",
-        "Axel Bruns",
-        "Shir Weinbrand",
-        "Daniel Angus",
-        "Samantha Vilkins",
-        "Abdul Karim Obeid"
-      ],
-      "subjects": [],
-      "is_open_access": null,
-      "source": "crossref",
-      "confidence_score": 0.8285714285714285
     }
   },
   "3758715a0df699ec": {
@@ -4851,11 +4818,11 @@
   "667a9bec772d1fb6": {
     "entry_key": "Elfes2026-jb",
     "entry_title": "On narrative: The rhetorical mechanisms of online polarisation",
-    "cached_at": "2026-09-25T13:20:32.673782",
+    "cached_at": "2026-10-03T16:50:37.249669",
     "metadata": null,
     "failed": true,
     "failure_reason": "Could not enrich entry: Elfes2026-jb | No DOI available | Title length: 62 chars | Authors: Elfes, Jan, Bastos, Marco... | APIs: Crossref enabled, Semantic Scholar enabled, ArXiv enabled",
-    "last_failure_at": "2026-09-25T13:20:32.673791"
+    "last_failure_at": "2026-10-03T16:50:37.249675"
   },
   "a8663d8c2d65801d": {
     "entry_key": "Bollenbacher2026-vz",
@@ -5965,11 +5932,11 @@
   "cd312f9baf9a8a9b": {
     "entry_key": "Lewandowsky2012-vn",
     "entry_title": "Misinformation and its correction: Continued influence and successful debiasing: Continued influence and successful debiasing",
-    "cached_at": "2026-09-26T08:39:40.217229",
+    "cached_at": "2026-10-03T16:50:43.346098",
     "metadata": null,
     "failed": true,
     "failure_reason": "Could not enrich entry: Lewandowsky2012-vn | No DOI available | Title length: 125 chars | Authors: Lewandowsky, Stephan, Ecker, Ullrich K H... | APIs: Crossref enabled, Semantic Scholar enabled, ArXiv enabled",
-    "last_failure_at": "2026-09-26T08:39:40.217235"
+    "last_failure_at": "2026-10-03T16:50:43.346105"
   },
   "e61267057a0797f0": {
     "entry_key": "Del-Vicario2016-uj",
@@ -6059,11 +6026,11 @@
   "5665a7d9ebaadc6f": {
     "entry_key": "Messing2014-jc",
     "entry_title": "Selective Exposure in the Age of Social Media: Endorsements Trump Partisan Source Affiliation When Selecting News Online",
-    "cached_at": "2026-09-26T08:39:47.911814",
+    "cached_at": "2026-10-03T16:50:40.281337",
     "metadata": null,
     "failed": true,
     "failure_reason": "Could not enrich entry: Messing2014-jc | No DOI available | Title length: 120 chars | Authors: Messing, Solomon, Westwood, Sean J | APIs: Crossref enabled, Semantic Scholar enabled, ArXiv enabled",
-    "last_failure_at": "2026-09-26T08:39:47.911821"
+    "last_failure_at": "2026-10-03T16:50:40.281342"
   },
   "82fb86d427732d13": {
     "entry_key": "Lazer2018-mm",
@@ -6216,11 +6183,11 @@
   "d5d9f456650b11bf": {
     "entry_key": "Starbird2019-qv",
     "entry_title": "Disinformation as Collaborative Work: Surfacing the Participatory Nature of Strategic Information Operations",
-    "cached_at": "2026-09-26T08:40:00.243108",
+    "cached_at": "2026-10-03T16:50:49.466185",
     "metadata": null,
     "failed": true,
     "failure_reason": "Could not enrich entry: Starbird2019-qv | No DOI available | Title length: 108 chars | Authors: Starbird, Kate, Arif, Ahmer... | APIs: Crossref enabled, Semantic Scholar enabled, ArXiv enabled",
-    "last_failure_at": "2026-09-26T08:40:00.243112"
+    "last_failure_at": "2026-10-03T16:50:49.466191"
   },
   "5bf441d982a68561": {
     "entry_key": "Barbera2015-fw",
@@ -6286,11 +6253,11 @@
   "2ba95106ff0bb503": {
     "entry_key": "Hallin2004-kg",
     "entry_title": "Comparing Media Systems: Three Models of Media and Politics",
-    "cached_at": "2026-09-26T08:40:06.671442",
+    "cached_at": "2026-10-03T16:50:46.524371",
     "metadata": null,
     "failed": true,
     "failure_reason": "Could not enrich entry: Hallin2004-kg | No DOI available | Title length: 59 chars | Authors: Hallin, Daniel C, Mancini, Paolo | APIs: Crossref enabled, Semantic Scholar enabled, ArXiv enabled",
-    "last_failure_at": "2026-09-26T08:40:06.671450"
+    "last_failure_at": "2026-10-03T16:50:46.524379"
   },
   "6382236b05a33c7e": {
     "entry_key": "Humprecht2020-gd",
@@ -8724,6 +8691,65 @@
       "is_open_access": null,
       "source": "crossref",
       "confidence_score": 0.8285714285714285
+    }
+  },
+  "49b2cb70274be0d4": {
+    "entry_key": "Kasianenko2026-tn",
+    "entry_title": "Searching for the truth? search engines and their AI affordances’ responses to conspiratorial search practices",
+    "cached_at": "2026-10-03T16:49:46.921738",
+    "metadata": {
+      "abstract": "Search engines are a common pathway to conspiracy theories, and producers of conspiratorial narratives actively encourage users to search for particular terms. Understanding how search engines respond to different information-seeking practices is therefore essential for explaining the dynamics of online conspiracy theories. Existing audits of search engines rarely account for systematic variation in query formulation arising from users’ differing levels of engagement with conspiratorial beliefs, nor do they consider recently introduced AI-powered search features. To address this gap, we developed search query sets informed by conspiratorial and non-conspiratorial information-seeking practices of online forums, using the chemtrails and 15-minute cities conspiracy theories as case studies. We performed algorithmic audits of Google's first-page search results and AI Overview responses. Our findings show substantial differences in the information returned for queries representative of general public information seeking compared with those reflecting conspiratorial perspectives. These differences appear to arise partly from Google's efforts to moderate sensitive topics, but also from the limitations of those interventions in recognising and responding to conspiratorial modes of query formulation. AI Overviews likewise vary according to query framing and generally attempt to debunk conspiratorial claims. However, these responses are often brief, provide limited supporting evidence, and are less effective for the newer 15-minute cities conspiracy theory, suggesting that current AI-mediated search guardrails remain uneven and require further development.",
+      "keywords": [],
+      "doi": "10.1177/1329878x261481856",
+      "doi_url": "https://doi.org/10.1177/1329878x261481856",
+      "url": null,
+      "arxiv_url": null,
+      "pdf_url": null,
+      "publication_date": "2026-09-01",
+      "citation_count": 1,
+      "reference_count": 67,
+      "venue": "Media International Australia",
+      "authors": [
+        "Kateryna Kasianenko",
+        "Caroline Gardam",
+        "Katherine M. FitzGerald",
+        "Ashwin Nagappa",
+        "Axel Bruns",
+        "Shir Weinbrand",
+        "Daniel Angus",
+        "Samantha Vilkins",
+        "Abdul Karim Obeid"
+      ],
+      "subjects": [],
+      "is_open_access": null,
+      "source": "crossref",
+      "confidence_score": 0.8285714285714285
+    }
+  },
+  "1f7e8b400b7e9155": {
+    "entry_key": "Rogers2026-zz",
+    "entry_title": "The performance of borderline content on Facebook",
+    "cached_at": "2026-10-03T16:50:02.477513",
+    "metadata": {
+      "abstract": null,
+      "keywords": [],
+      "doi": "10.4324/9781003693192-4",
+      "doi_url": "https://doi.org/10.4324/9781003693192-4",
+      "url": null,
+      "arxiv_url": null,
+      "pdf_url": null,
+      "publication_date": "2026-09-22",
+      "citation_count": 0,
+      "reference_count": 0,
+      "venue": "Content Moderation across Social Media Platforms",
+      "authors": [
+        "Richard Rogers",
+        "Kamila Koronska"
+      ],
+      "subjects": [],
+      "is_open_access": null,
+      "source": "crossref",
+      "confidence_score": 0.86
     }
   }
 }
