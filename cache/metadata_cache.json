@@ -166,40 +166,6 @@
       "confidence_score": 0.75
     }
   },
-  "3758715a0df699ec": {
-    "entry_key": "Holland_Levin2026-qx",
-    "entry_title": "From \\#StayWoke to “culture wars”: How social justice discourse is separately and synergistically politicized on twitter and YouTube",
-    "cached_at": "2026-09-05T13:35:16.164763",
-    "metadata": {
-      "abstract": null,
-      "keywords": [],
-      "doi": "10.1080/10584609.2026.2717428",
-      "doi_url": "https://doi.org/10.1080/10584609.2026.2717428",
-      "url": null,
-      "arxiv_url": null,
-      "pdf_url": null,
-      "publication_date": "2026-08-31",
-      "citation_count": 0,
-      "reference_count": 82,
-      "venue": "Political Communication",
-      "authors": [
-        "Sara Holland Levin",
-        "Rui Wang",
-        "Junwan Seo",
-        "Yi Yin Leong",
-        "Emma Bennett",
-        "Dongdong Yang",
-        "Zhuohui Yang",
-        "Matt Chen",
-        "Yini Zhang",
-        "Jiyoun Suk"
-      ],
-      "subjects": [],
-      "is_open_access": null,
-      "source": "crossref",
-      "confidence_score": 0.8136363636363636
-    }
-  },
   "8d6a688f7db9234c": {
     "entry_key": "Fan2026-af",
     "entry_title": "Exploring temporal dynamics in digital trace data: mining user-sequences for communication research",
@@ -8750,6 +8716,65 @@
       "is_open_access": null,
       "source": "crossref",
       "confidence_score": 0.86
+    }
+  },
+  "ec06b80d2198af67": {
+    "entry_key": "Annabell2026-ev",
+    "entry_title": "Regulating a floating signifier: Interpretations of “data” in the digital services act researcher access provision",
+    "cached_at": "2026-10-06T06:38:16.336479",
+    "metadata": {
+      "abstract": "The European Union's Digital Services Act promises to disrupt the power held by platform companies to determine how data needed to understand risks is accessed by researchers. Article 40 brings researcher data access into a governance of platforms framework, but how data are conceptualized in this regime is overlooked. This article uses discourse analysis to examine how data are understood in the legal texts, public submissions of feedback during the drafting process and published data catalogs by the platforms that fall within the regulation. I argue that the meaning of data “floats” across and within regulatory and commercial discourses, aligning and disconnecting with how data are understood in research disciplines. Platform companies narrowly interpret and operationalize data as aggregated, quantified presentations structured through predefined datasets, which is in tension with the multiplicity of understandings of data in academic research. The attempt to narrow the definitional boundaries of data seeks to impose limitations on how researchers might envisage data for their academic work, which is overlooked in current discussions of this data access provision.",
+      "keywords": [],
+      "doi": "10.1177/29777984261486601",
+      "doi_url": "https://doi.org/10.1177/29777984261486601",
+      "url": null,
+      "arxiv_url": null,
+      "pdf_url": null,
+      "publication_date": "2026-09-14",
+      "citation_count": 0,
+      "reference_count": 44,
+      "venue": "Media, Technology and Governance",
+      "authors": [
+        "Taylor Annabell"
+      ],
+      "subjects": [],
+      "is_open_access": null,
+      "source": "crossref",
+      "confidence_score": 0.8999999999999999
+    }
+  },
+  "3758715a0df699ec": {
+    "entry_key": "Holland_Levin2026-qx",
+    "entry_title": "From \\#StayWoke to “culture wars”: How social justice discourse is separately and synergistically politicized on twitter and YouTube",
+    "cached_at": "2026-10-06T06:38:19.034604",
+    "metadata": {
+      "abstract": null,
+      "keywords": [],
+      "doi": "10.1080/10584609.2026.2717428",
+      "doi_url": "https://doi.org/10.1080/10584609.2026.2717428",
+      "url": null,
+      "arxiv_url": null,
+      "pdf_url": null,
+      "publication_date": "2026-08-31",
+      "citation_count": 0,
+      "reference_count": 82,
+      "venue": "Political Communication",
+      "authors": [
+        "Sara Holland Levin",
+        "Rui Wang",
+        "Junwan Seo",
+        "Yi Yin Leong",
+        "Emma Bennett",
+        "Dongdong Yang",
+        "Zhuohui Yang",
+        "Matt Chen",
+        "Yini Zhang",
+        "Jiyoun Suk"
+      ],
+      "subjects": [],
+      "is_open_access": null,
+      "source": "crossref",
+      "confidence_score": 0.8136363636363636
     }
   }
 }
