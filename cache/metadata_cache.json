@@ -2,29 +2,29 @@
   "c5a7d0326e1f61c6": {
     "entry_key": "Kristensen2025-ni",
     "entry_title": "Platform polarization. Do alternative platforms drive discursive polarization?",
-    "cached_at": "2026-10-12T19:13:34.011029",
+    "cached_at": "2026-10-23T17:34:01.838210",
     "metadata": null,
     "failed": true,
     "failure_reason": "Could not enrich entry: Kristensen2025-ni | No DOI available | Title length: 78 chars | Authors: Kristensen, Jakob Bæk, Kristensen, Jakob Bæk | APIs: Crossref enabled, Semantic Scholar enabled, ArXiv enabled",
-    "last_failure_at": "2026-10-12T19:13:34.011038"
+    "last_failure_at": "2026-10-23T17:34:01.838218"
   },
   "65d46046ae1c898f": {
     "entry_key": "Gaw2025-ru",
     "entry_title": "Influence operations as brokerage: Political-economic infrastructures of manipulation in the 2022 Philippine elections",
-    "cached_at": "2026-10-12T19:13:37.086552",
+    "cached_at": "2026-10-23T17:34:05.329514",
     "metadata": null,
     "failed": true,
     "failure_reason": "Could not enrich entry: Gaw2025-ru | No DOI available | Title length: 118 chars | Authors: Gaw, Fatima, Agonos, Mariam Jayne... | APIs: Crossref enabled, Semantic Scholar enabled, ArXiv enabled",
-    "last_failure_at": "2026-10-12T19:13:37.086561"
+    "last_failure_at": "2026-10-23T17:34:05.329522"
   },
   "b41f425da41887a0": {
     "entry_key": "Marwick2025-vx",
     "entry_title": "True costs of misinformation| mountains of evidence: Processual “redpilling” as a Socio-technical effect of disinformation",
-    "cached_at": "2026-10-12T19:13:40.175635",
+    "cached_at": "2026-10-23T17:34:08.282327",
     "metadata": null,
     "failed": true,
     "failure_reason": "Could not enrich entry: Marwick2025-vx | No DOI available | Title length: 122 chars | Authors: Marwick, Alice E, Furl, Katherine | APIs: Crossref enabled, Semantic Scholar enabled, ArXiv enabled",
-    "last_failure_at": "2026-10-12T19:13:40.175648"
+    "last_failure_at": "2026-10-23T17:34:08.282335"
   },
   "e3b0c44298fc1c14": {
     "entry_key": "noauthor_undated-bz",
@@ -38,11 +38,11 @@
   "657c6670d7b624b8": {
     "entry_key": "noauthor_undated-fm",
     "entry_title": "Volume 7 issue 2 article 4",
-    "cached_at": "2026-10-12T19:13:31.011253",
+    "cached_at": "2026-10-23T17:33:58.904673",
     "metadata": null,
     "failed": true,
     "failure_reason": "Could not enrich entry: noauthor_undated-fm | No DOI available | Title length: 26 chars | No authors available | APIs: Crossref enabled, Semantic Scholar enabled, ArXiv enabled",
-    "last_failure_at": "2026-10-12T19:13:31.011263"
+    "last_failure_at": "2026-10-23T17:33:58.904683"
   },
   "b909c3af063ea494": {
     "entry_key": "noauthor_undated-bm",
@@ -56,132 +56,47 @@
   "9195fcc80574052b": {
     "entry_key": "Vincent_undated-re",
     "entry_title": "What our second measurement says about misinformation on major platforms in Europe",
-    "cached_at": "2026-10-12T19:12:55.384982",
+    "cached_at": "2026-10-23T17:33:32.511749",
     "metadata": null,
     "failed": true,
     "failure_reason": "Could not enrich entry: Vincent_undated-re | No DOI available | Title length: 82 chars | Authors: Vincent, Emmanuel, Crisan, Daiana | APIs: Crossref enabled, Semantic Scholar enabled, ArXiv enabled",
-    "last_failure_at": "2026-10-12T19:12:55.384991"
+    "last_failure_at": "2026-10-23T17:33:32.511757"
   },
   "fac502d9bb5bbba8": {
     "entry_key": "UnknownUnknown-db",
     "entry_title": "What 81,000 people told us about the economics of AI",
-    "cached_at": "2026-10-12T19:12:58.405678",
+    "cached_at": "2026-10-23T17:33:35.413856",
     "metadata": null,
     "failed": true,
     "failure_reason": "Could not enrich entry: UnknownUnknown-db | No DOI available | Title length: 52 chars | No authors available | APIs: Crossref enabled, Semantic Scholar enabled, ArXiv enabled",
-    "last_failure_at": "2026-10-12T19:12:58.405686"
+    "last_failure_at": "2026-10-23T17:33:35.413869"
   },
   "fc9373f3342e79d3": {
     "entry_key": "Gottfried2026-ww",
     "entry_title": "Americans and AI 2026: Chatbots, Smart Devices and Views on Impact",
-    "cached_at": "2026-10-12T19:13:01.422630",
+    "cached_at": "2026-10-23T17:33:38.562293",
     "metadata": null,
     "failed": true,
     "failure_reason": "Could not enrich entry: Gottfried2026-ww | No DOI available | Title length: 66 chars | Authors: Gottfried, Jeffrey, Bishop, William... | APIs: Crossref enabled, Semantic Scholar enabled, ArXiv enabled",
-    "last_failure_at": "2026-10-12T19:13:01.422642"
+    "last_failure_at": "2026-10-23T17:33:38.562302"
   },
   "06e15083ae69cfa5": {
     "entry_key": "Hinck2026-yj",
     "entry_title": "Where's the Evidence that Respondents Understand Your Survey Questions?",
-    "cached_at": "2026-10-12T19:13:04.434175",
+    "cached_at": "2026-10-23T17:33:41.527935",
     "metadata": null,
     "failed": true,
     "failure_reason": "Could not enrich entry: Hinck2026-yj | No DOI available | Title length: 71 chars | Authors: Hinck, Musashi, King, Gary... | APIs: Crossref enabled, Semantic Scholar enabled, ArXiv enabled",
-    "last_failure_at": "2026-10-12T19:13:04.434185"
+    "last_failure_at": "2026-10-23T17:33:41.527943"
   },
   "667a9bec772d1fb6": {
     "entry_key": "Elfes2026-jb",
     "entry_title": "On narrative: The rhetorical mechanisms of online polarisation",
-    "cached_at": "2026-10-12T19:13:45.603227",
+    "cached_at": "2026-10-23T17:34:13.692558",
     "metadata": null,
     "failed": true,
     "failure_reason": "Could not enrich entry: Elfes2026-jb | No DOI available | Title length: 62 chars | Authors: Elfes, Jan, Bastos, Marco... | APIs: Crossref enabled, Semantic Scholar enabled, ArXiv enabled",
-    "last_failure_at": "2026-10-12T19:13:45.603236"
-  },
-  "34bdd3a5da8c985a": {
-    "entry_key": "Rossini2026-mj",
-    "entry_title": "Disrupting democracy: how informational pathways and misinformation shape trust in election results",
-    "cached_at": "2026-09-18T06:05:33.213175",
-    "metadata": {
-      "abstract": null,
-      "keywords": [],
-      "doi": "10.1080/17457289.2026.2701896",
-      "doi_url": "https://doi.org/10.1080/17457289.2026.2701896",
-      "url": null,
-      "arxiv_url": null,
-      "pdf_url": null,
-      "publication_date": "2026-07-13",
-      "citation_count": 1,
-      "reference_count": 85,
-      "venue": "Journal of Elections, Public Opinion and Parties",
-      "authors": [
-        "Patrícia Rossini",
-        "Camila Mont'Alverne",
-        "Antonis Kalogeropoulos"
-      ],
-      "subjects": [],
-      "is_open_access": null,
-      "source": "crossref",
-      "confidence_score": 0.8428571428571427
-    }
-  },
-  "d3d05b896660e6d4": {
-    "entry_key": "Mannocci2026-kc",
-    "entry_title": "Detection and characterization of coordinated online behavior: A survey",
-    "cached_at": "2026-09-18T06:05:36.166034",
-    "metadata": {
-      "abstract": "Coordination is a fundamental aspect of life. The advent of social media has made it integral also to online human interactions, such as those that characterize thriving online communities and social movements. At the same time, coordination is also core to effective disinformation, manipulation, and hate campaigns. This survey collects, categorizes, and critically discusses the body of work produced as a result of the growing interest on coordinated online behavior. We reconcile industry and academic definitions, propose a comprehensive framework to study coordinated online behavior, and review and critically discuss the existing detection and characterization methods. Our analysis identifies open challenges and promising directions of research, serving as a guide for scholars, practitioners, and policymakers in understanding and addressing the complexities inherent to online coordination. We also provide an interactive companion website for exploring the surveyed literature.",
-      "keywords": [],
-      "doi": "10.1145/3839225",
-      "doi_url": "https://doi.org/10.1145/3839225",
-      "url": null,
-      "arxiv_url": null,
-      "pdf_url": null,
-      "publication_date": "2026-08-08",
-      "citation_count": 0,
-      "reference_count": 150,
-      "venue": "ACM Computing Surveys",
-      "authors": [
-        "Lorenzo Mannocci",
-        "Michele Mazza",
-        "Anna Monreale",
-        "Maurizio Tesconi",
-        "Stefano Cresci"
-      ],
-      "subjects": [],
-      "is_open_access": null,
-      "source": "crossref",
-      "confidence_score": 0.8272727272727272
-    }
-  },
-  "eafd803cddaf8506": {
-    "entry_key": "Gomez-Zara2026-as",
-    "entry_title": "Revisiting framing codebooks with AI: Employing large language models as analytical collaborators in deductive content analysis",
-    "cached_at": "2026-09-18T06:05:38.143720",
-    "metadata": {
-      "abstract": null,
-      "keywords": [],
-      "doi": "10.1080/21670811.2026.2730327",
-      "doi_url": "https://doi.org/10.1080/21670811.2026.2730327",
-      "url": null,
-      "arxiv_url": null,
-      "pdf_url": null,
-      "publication_date": "2026-09-15",
-      "citation_count": 0,
-      "reference_count": 54,
-      "venue": "Digital Journalism",
-      "authors": [
-        "Diego Gómez-Zará",
-        "Hernán Valdivieso",
-        "Jorge Pérez",
-        "Denis Parra",
-        "Sebastián Valenzuela"
-      ],
-      "subjects": [],
-      "is_open_access": null,
-      "source": "crossref",
-      "confidence_score": 0.8272727272727272
-    }
+    "last_failure_at": "2026-10-23T17:34:13.692565"
   },
   "4e26266a28ecf9b2": {
     "entry_key": "Bruns2026-yv",
@@ -1036,11 +951,11 @@
   "cd312f9baf9a8a9b": {
     "entry_key": "Lewandowsky2012-vn",
     "entry_title": "Misinformation and its correction: Continued influence and successful debiasing: Continued influence and successful debiasing",
-    "cached_at": "2026-10-12T19:13:51.752738",
+    "cached_at": "2026-10-23T17:34:19.939090",
     "metadata": null,
     "failed": true,
     "failure_reason": "Could not enrich entry: Lewandowsky2012-vn | No DOI available | Title length: 125 chars | Authors: Lewandowsky, Stephan, Ecker, Ullrich K H... | APIs: Crossref enabled, Semantic Scholar enabled, ArXiv enabled",
-    "last_failure_at": "2026-10-12T19:13:51.752748"
+    "last_failure_at": "2026-10-23T17:34:19.939096"
   },
   "e61267057a0797f0": {
     "entry_key": "Del-Vicario2016-uj",
@@ -1130,11 +1045,11 @@
   "5665a7d9ebaadc6f": {
     "entry_key": "Messing2014-jc",
     "entry_title": "Selective Exposure in the Age of Social Media: Endorsements Trump Partisan Source Affiliation When Selecting News Online",
-    "cached_at": "2026-10-12T19:13:48.679967",
+    "cached_at": "2026-10-23T17:34:16.942837",
     "metadata": null,
     "failed": true,
     "failure_reason": "Could not enrich entry: Messing2014-jc | No DOI available | Title length: 120 chars | Authors: Messing, Solomon, Westwood, Sean J | APIs: Crossref enabled, Semantic Scholar enabled, ArXiv enabled",
-    "last_failure_at": "2026-10-12T19:13:48.679976"
+    "last_failure_at": "2026-10-23T17:34:16.942845"
   },
   "82fb86d427732d13": {
     "entry_key": "Lazer2018-mm",
@@ -1287,11 +1202,11 @@
   "d5d9f456650b11bf": {
     "entry_key": "Starbird2019-qv",
     "entry_title": "Disinformation as Collaborative Work: Surfacing the Participatory Nature of Strategic Information Operations",
-    "cached_at": "2026-10-12T19:13:57.937983",
+    "cached_at": "2026-10-23T17:34:29.926396",
     "metadata": null,
     "failed": true,
     "failure_reason": "Could not enrich entry: Starbird2019-qv | No DOI available | Title length: 108 chars | Authors: Starbird, Kate, Arif, Ahmer... | APIs: Crossref enabled, Semantic Scholar enabled, ArXiv enabled",
-    "last_failure_at": "2026-10-12T19:13:57.937992"
+    "last_failure_at": "2026-10-23T17:34:29.926403"
   },
   "5bf441d982a68561": {
     "entry_key": "Barbera2015-fw",
@@ -1357,11 +1272,11 @@
   "2ba95106ff0bb503": {
     "entry_key": "Hallin2004-kg",
     "entry_title": "Comparing Media Systems: Three Models of Media and Politics",
-    "cached_at": "2026-10-12T19:13:54.893203",
+    "cached_at": "2026-10-23T17:34:26.305847",
     "metadata": null,
     "failed": true,
     "failure_reason": "Could not enrich entry: Hallin2004-kg | No DOI available | Title length: 59 chars | Authors: Hallin, Daniel C, Mancini, Paolo | APIs: Crossref enabled, Semantic Scholar enabled, ArXiv enabled",
-    "last_failure_at": "2026-10-12T19:13:54.893211"
+    "last_failure_at": "2026-10-23T17:34:26.305857"
   },
   "6382236b05a33c7e": {
     "entry_key": "Humprecht2020-gd",
@@ -8856,5 +8771,111 @@
       "source": "crossref",
       "confidence_score": 0.8428571428571427
     }
+  },
+  "34bdd3a5da8c985a": {
+    "entry_key": "Rossini2026-mj",
+    "entry_title": "Disrupting democracy: how informational pathways and misinformation shape trust in election results",
+    "cached_at": "2026-10-23T17:33:45.079244",
+    "metadata": {
+      "abstract": "Recent electoral cycles have renewed concerns around democratic backsliding as political elites systematically use misinformation and disinformation to undermine electoral integrity. Focusing on the 2022 Presidential Elections in Brazil, this study leverages a three-wave panel design to examine how beliefs in electoral misinformation and citizens’ media habits explain changes in citizens’ levels of trust in the election results. Our findings underscore the potential of mainstream media use to strengthen electoral trust, with consistently positive associations among voters – highlighting the contribution of professional journalism to democratic resilience. By contrast, citizens who believed disinformation targeting electoral integrity exhibited declining levels of electoral trust, pointing to a pathway through which elite rhetoric can erode democratic legitimacy. These results highlight both the important role of mainstream media in increasing democratic resilience and the dangers of elite-driven attacks on electoral legitimacy. As digital platforms continue to shape political discourse and increasingly challenge conventional pathways for citizens to become informed, understanding how informational environments influence trust in elections is essential for understanding democratic resilience in contemporary democracies.",
+      "keywords": [],
+      "doi": "10.1080/17457289.2026.2701896",
+      "doi_url": "https://doi.org/10.1080/17457289.2026.2701896",
+      "url": "https://doi.org/10.1080/17457289.2026.2701896",
+      "arxiv_url": null,
+      "pdf_url": "https://doi.org/10.1080/17457289.2026.2701896",
+      "publication_date": "2026-07-13",
+      "citation_count": 1,
+      "reference_count": null,
+      "venue": "Journal of Elections Public Opinion and Parties",
+      "authors": [
+        "Patrícia Rossini",
+        "Camila Mont’Alverne",
+        "Antonis Kalogeropoulos"
+      ],
+      "subjects": [
+        "Misinformation",
+        "Internet privacy",
+        "Social psychology",
+        "Public relations",
+        "Political science"
+      ],
+      "is_open_access": true,
+      "source": "openalex",
+      "confidence_score": 0.7428571428571428
+    }
+  },
+  "d3d05b896660e6d4": {
+    "entry_key": "Mannocci2026-kc",
+    "entry_title": "Detection and characterization of coordinated online behavior: A survey",
+    "cached_at": "2026-10-23T17:33:45.219439",
+    "metadata": {
+      "abstract": "Coordination is a fundamental aspect of life. The advent of social media has made it integral also to online human interactions, such as those that characterize thriving online communities and social movements. At the same time, coordination is also core to effective disinformation, manipulation, and hate campaigns. This survey collects, categorizes, and critically discusses the body of work produced as a result of the growing interest on coordinated online behavior. We reconcile industry and academic definitions, propose a comprehensive framework to study coordinated online behavior, and review and critically discuss the existing detection and characterization methods. Our analysis identifies open challenges and promising directions of research, serving as a guide for scholars, practitioners, and policymakers in understanding and addressing the complexities inherent to online coordination. We also provide an interactive companion website for exploring the surveyed literature.",
+      "keywords": [],
+      "doi": "10.1145/3839225",
+      "doi_url": "https://doi.org/10.1145/3839225",
+      "url": null,
+      "arxiv_url": null,
+      "pdf_url": null,
+      "publication_date": "2026-12-31",
+      "citation_count": 1,
+      "reference_count": 150,
+      "venue": "ACM Computing Surveys",
+      "authors": [
+        "Lorenzo Mannocci",
+        "Michele Mazza",
+        "Anna Monreale",
+        "Maurizio Tesconi",
+        "Stefano Cresci"
+      ],
+      "subjects": [],
+      "is_open_access": null,
+      "source": "crossref",
+      "confidence_score": 0.8272727272727272
+    }
+  },
+  "eafd803cddaf8506": {
+    "entry_key": "Gomez-Zara2026-as",
+    "entry_title": "Revisiting framing codebooks with AI: Employing large language models as analytical collaborators in deductive content analysis",
+    "cached_at": "2026-10-23T17:33:51.713410",
+    "metadata": {
+      "abstract": "Codebooks are central to framing research, providing theoretically grounded criteria for analyzing news content. While traditionally codebooks are built from theoretical frameworks and researchers' knowledge, applying these codebooks to large news corpora often exposes ambiguities, borderline cases, and underspecified rules that are difficult to resolve through theory alone. Moreover, news corpora evolve over time and differ across cultures, necessitating that researchers revisit the theoretical frameworks underlying these codebooks. In this article, we propose a workflow that uses Large Language Models (LLMs) to augment the creation and refinement of framing codebooks by combining theoretical frameworks with data-driven exploration. Rather than treating LLMs as automated classifiers, this approach positions them as analytic collaborators that help externalize decision rules, surface latent dimensions, and support iterative revisions of codebooks through dialogues between researchers and their data. We illustrate this workflow using a dataset of Latin American news coverage, demonstrating how the application of LLMs' capabilities has led to the surfacing of latent patterns, the generation of frame distinctions, and the adaptation of frameworks to new contexts. This method provides an LLM-assisted strategy that supports methodology creativity while preserving researchers' interpretative authority.",
+      "keywords": [],
+      "doi": "10.1080/21670811.2026.2730327",
+      "doi_url": "https://doi.org/10.1080/21670811.2026.2730327",
+      "url": "https://doi.org/10.1080/21670811.2026.2730327",
+      "arxiv_url": null,
+      "pdf_url": "https://doi.org/10.1080/21670811.2026.2730327",
+      "publication_date": "2026-09-15",
+      "citation_count": 0,
+      "reference_count": null,
+      "venue": "Digital Journalism",
+      "authors": [
+        "Diego Gómez-Zará",
+        "Hernan Valdivieso",
+        "Jorge Pérez",
+        "Denis Parra",
+        "Sebastián Valenzuela"
+      ],
+      "subjects": [
+        "Framing (construction)",
+        "Computer science",
+        "Workflow",
+        "Narrative",
+        "Natural language processing"
+      ],
+      "is_open_access": true,
+      "source": "openalex",
+      "confidence_score": 0.7272727272727272
+    }
+  },
+  "3cddee86d2b1320d": {
+    "entry_key": "King2026-av",
+    "entry_title": "AI article reviews dominate human peer reviews at their best: Evidence and policy choices",
+    "cached_at": "2026-10-23T17:33:55.342964",
+    "metadata": null,
+    "failed": true,
+    "failure_reason": "Could not enrich entry: King2026-av | No DOI available | Title length: 89 chars | Authors: King, Gary, Worthington, Steven | APIs: Crossref enabled, Semantic Scholar enabled, ArXiv enabled",
+    "last_failure_at": "2026-10-23T17:33:55.342972"
   }
 }
