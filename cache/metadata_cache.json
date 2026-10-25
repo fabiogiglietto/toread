@@ -8877,5 +8877,107 @@
     "failed": true,
     "failure_reason": "Could not enrich entry: King2026-av | No DOI available | Title length: 89 chars | Authors: King, Gary, Worthington, Steven | APIs: Crossref enabled, Semantic Scholar enabled, ArXiv enabled",
     "last_failure_at": "2026-10-23T17:33:55.342972"
+  },
+  "6192e24080f96240": {
+    "entry_key": "Kuznetsova2026-hw",
+    "entry_title": "All talk, no rules: Content moderation practices and discursive strategies in platform governance of climate misinformation",
+    "cached_at": "2026-10-25T11:50:19.066119",
+    "metadata": {
+      "abstract": "The spread of misinformation plays a significant role in shaping how climate change is understood—or misunderstood—in public discourse. Social media platforms have become central environments in which climate change is discussed and in which climate misinformation emerges, circulates, and gains visibility. This article explores how major social media platforms—Meta, YouTube, TikTok, and X/Twitter—govern climate misinformation and what discursive strategies they use to legitimize their interventions and negotiate responsibility. Through qualitative content analysis of 95 documents, pertaining to platforms’ rules and public communications, the paper shows that climate misinformation is rarely treated as a distinct, high-priority category in platform policies: commitments articulated in public communication are frequently absent from formal rules, and platforms primarily rely on “soft” interventions such as labeling and demotion while largely avoiding content removal. The analysis further identifies three cross-platform discursive strategies through which platforms construct responsibility and legitimize their interventions: increasing the good, decreasing the bad ; empowering others ; and authorizing content creators . Together, these strategies allow platforms to cultivate a narrative of benevolence and neutrality that legitimizes limited regulatory effort, whereas governance labor and responsibility is redistributed. Platforms thereby replace enforceable duties with performative evidence of care. The paper highlights the limits of platform self-governance and points to the need of external oversight that specifies and enforces platform governance of climate misinformation.",
+      "keywords": [],
+      "doi": "10.1177/29768624261499168",
+      "doi_url": "https://doi.org/10.1177/29768624261499168",
+      "url": null,
+      "arxiv_url": null,
+      "pdf_url": null,
+      "publication_date": "2026",
+      "citation_count": 0,
+      "reference_count": 59,
+      "venue": "Platforms &amp; Society",
+      "authors": [
+        "Vasilisa Kuznetsova"
+      ],
+      "subjects": [],
+      "is_open_access": null,
+      "source": "crossref",
+      "confidence_score": 0.8999999999999999
+    }
+  },
+  "ac310a81dcd5244a": {
+    "entry_key": "Petre2019-zh",
+    "entry_title": "“gaming the system”: Platform paternalism and the politics of algorithmic visibility",
+    "cached_at": "2026-10-25T11:50:22.025155",
+    "metadata": {
+      "abstract": "As the logic of data-driven metrification reconfigures various realms of social and economic life, cultural workers—from journalists and musicians to photographers and social media content creators—are pursuing online visibility in earnest. Despite workers’ patterned deployment of search engine optimization, reciprocal linking, and automated engagement-boosting, tech companies routinely denigrate such practices as gaming the system. This article critically probes discourses and practices of so-called system-gaming by analyzing three key moments when platforms accused cultural producers of algorithmic manipulation. Empirically, we draw upon textual analyses of news articles ( n = 105) and user guidelines published by Google, Facebook, and Instagram. Our findings suggest that the line between what platforms deem illegitimate algorithmic manipulation and legitimate strategy is nebulous and largely reflective of their material interests. However, the language used to invoke this distinction is strongly normative, condemning “system gamers” as morally bankrupt, while casting platform companies as neutral actors working to uphold the ideals of authenticity and integrity. We term this dynamic “platform paternalism” and conclude that gaming accusations constitute an important mechanism through which platforms legitimate their power and authority, to the detriment of less well-established cultural producers.",
+      "keywords": [],
+      "doi": "10.1177/2056305119879995",
+      "doi_url": "https://doi.org/10.1177/2056305119879995",
+      "url": null,
+      "arxiv_url": null,
+      "pdf_url": null,
+      "publication_date": "2019",
+      "citation_count": 149,
+      "reference_count": 76,
+      "venue": "Social Media + Society",
+      "authors": [
+        "Caitlin Petre",
+        "Brooke Erin Duffy",
+        "Emily Hund"
+      ],
+      "subjects": [],
+      "is_open_access": null,
+      "source": "crossref",
+      "confidence_score": 0.8374999999999999
+    }
+  },
+  "6c824339964b097c": {
+    "entry_key": "Cotter2019-js",
+    "entry_title": "Playing the visibility game: How digital influencers and algorithms negotiate influence on Instagram",
+    "cached_at": "2026-10-25T11:50:24.997976",
+    "metadata": {
+      "abstract": "Algorithms are said to affect social realities, often in unseen ways. This article explores conscious, instrumental interactions with algorithms, as a window into the complexities and extent of algorithmic power. Through a thematic analysis of online discussions among Instagram influencers, I observed that influencers’ pursuit of influence resembles a game constructed around “rules” encoded in algorithms. Within the “visibility game,” influencers’ interpretations of Instagram’s algorithmic architecture—and the “game” more broadly—act as a lens through which to view and mechanize the rules of the game. Illustrating this point, this article describes two prominent interpretations, which combine information influencers glean about Instagram’s algorithms with preexisting discourses within influencer communities on authenticity and entrepreneurship. This article shows how directing inquiries toward the visibility game makes present the interdependency between users, algorithms, and platform owners and demonstrates how algorithms structure, but do not unilaterally determine user behavior.",
+      "keywords": [],
+      "doi": "10.1177/1461444818815684",
+      "doi_url": "https://doi.org/10.1177/1461444818815684",
+      "url": null,
+      "arxiv_url": null,
+      "pdf_url": null,
+      "publication_date": "2019",
+      "citation_count": 816,
+      "reference_count": 63,
+      "venue": "New Media &amp; Society",
+      "authors": [
+        "Kelley Cotter"
+      ],
+      "subjects": [],
+      "is_open_access": null,
+      "source": "crossref",
+      "confidence_score": 0.8999999999999999
+    }
+  },
+  "015dab56dfd85845": {
+    "entry_key": "Bucher2017-qh",
+    "entry_title": "The algorithmic imaginary: exploring the ordinary affects of Facebook algorithms",
+    "cached_at": "2026-10-25T11:50:28.044302",
+    "metadata": {
+      "abstract": null,
+      "keywords": [],
+      "doi": "10.1080/1369118x.2016.1154086",
+      "doi_url": "https://doi.org/10.1080/1369118x.2016.1154086",
+      "url": null,
+      "arxiv_url": null,
+      "pdf_url": null,
+      "publication_date": "2017-01-02",
+      "citation_count": 1066,
+      "reference_count": 28,
+      "venue": "Information, Communication &amp; Society",
+      "authors": [
+        "Taina Bucher"
+      ],
+      "subjects": [],
+      "is_open_access": null,
+      "source": "crossref",
+      "confidence_score": 0.8999999999999999
+    }
   }
 }
