@@ -116,65 +116,6 @@
     "failure_reason": "Could not enrich entry: Hallin2004-kg | No DOI available | Title length: 59 chars | Authors: Hallin, Daniel C, Mancini, Paolo | APIs: Crossref enabled, Semantic Scholar enabled, ArXiv enabled",
     "last_failure_at": "2026-10-31T11:50:31.168973"
   },
-  "49b2cb70274be0d4": {
-    "entry_key": "Kasianenko2026-tn",
-    "entry_title": "Searching for the truth? search engines and their AI affordances’ responses to conspiratorial search practices",
-    "cached_at": "2026-10-03T16:49:46.921738",
-    "metadata": {
-      "abstract": "Search engines are a common pathway to conspiracy theories, and producers of conspiratorial narratives actively encourage users to search for particular terms. Understanding how search engines respond to different information-seeking practices is therefore essential for explaining the dynamics of online conspiracy theories. Existing audits of search engines rarely account for systematic variation in query formulation arising from users’ differing levels of engagement with conspiratorial beliefs, nor do they consider recently introduced AI-powered search features. To address this gap, we developed search query sets informed by conspiratorial and non-conspiratorial information-seeking practices of online forums, using the chemtrails and 15-minute cities conspiracy theories as case studies. We performed algorithmic audits of Google's first-page search results and AI Overview responses. Our findings show substantial differences in the information returned for queries representative of general public information seeking compared with those reflecting conspiratorial perspectives. These differences appear to arise partly from Google's efforts to moderate sensitive topics, but also from the limitations of those interventions in recognising and responding to conspiratorial modes of query formulation. AI Overviews likewise vary according to query framing and generally attempt to debunk conspiratorial claims. However, these responses are often brief, provide limited supporting evidence, and are less effective for the newer 15-minute cities conspiracy theory, suggesting that current AI-mediated search guardrails remain uneven and require further development.",
-      "keywords": [],
-      "doi": "10.1177/1329878x261481856",
-      "doi_url": "https://doi.org/10.1177/1329878x261481856",
-      "url": null,
-      "arxiv_url": null,
-      "pdf_url": null,
-      "publication_date": "2026-09-01",
-      "citation_count": 1,
-      "reference_count": 67,
-      "venue": "Media International Australia",
-      "authors": [
-        "Kateryna Kasianenko",
-        "Caroline Gardam",
-        "Katherine M. FitzGerald",
-        "Ashwin Nagappa",
-        "Axel Bruns",
-        "Shir Weinbrand",
-        "Daniel Angus",
-        "Samantha Vilkins",
-        "Abdul Karim Obeid"
-      ],
-      "subjects": [],
-      "is_open_access": null,
-      "source": "crossref",
-      "confidence_score": 0.8285714285714285
-    }
-  },
-  "1f7e8b400b7e9155": {
-    "entry_key": "Rogers2026-zz",
-    "entry_title": "The performance of borderline content on Facebook",
-    "cached_at": "2026-10-03T16:50:02.477513",
-    "metadata": {
-      "abstract": null,
-      "keywords": [],
-      "doi": "10.4324/9781003693192-4",
-      "doi_url": "https://doi.org/10.4324/9781003693192-4",
-      "url": null,
-      "arxiv_url": null,
-      "pdf_url": null,
-      "publication_date": "2026-09-22",
-      "citation_count": 0,
-      "reference_count": 0,
-      "venue": "Content Moderation across Social Media Platforms",
-      "authors": [
-        "Richard Rogers",
-        "Kamila Koronska"
-      ],
-      "subjects": [],
-      "is_open_access": null,
-      "source": "crossref",
-      "confidence_score": 0.86
-    }
-  },
   "ec06b80d2198af67": {
     "entry_key": "Annabell2026-ev",
     "entry_title": "Regulating a floating signifier: Interpretations of “data” in the digital services act researcher access provision",
@@ -9019,6 +8960,94 @@
       "is_open_access": null,
       "source": "crossref",
       "confidence_score": 0.8999999999999999
+    }
+  },
+  "49b2cb70274be0d4": {
+    "entry_key": "Kasianenko2026-tn",
+    "entry_title": "Searching for the truth? search engines and their AI affordances’ responses to conspiratorial search practices",
+    "cached_at": "2026-11-03T18:30:33.778152",
+    "metadata": {
+      "abstract": "Search engines are a common pathway to conspiracy theories, and producers of conspiratorial narratives actively encourage users to search for particular terms. Understanding how search engines respond to different information-seeking practices is therefore essential for explaining the dynamics of online conspiracy theories. Existing audits of search engines rarely account for systematic variation in query formulation arising from users’ differing levels of engagement with conspiratorial beliefs, nor do they consider recently introduced AI-powered search features. To address this gap, we developed search query sets informed by conspiratorial and non-conspiratorial information-seeking practices of online forums, using the chemtrails and 15-minute cities conspiracy theories as case studies. We performed algorithmic audits of Google's first-page search results and AI Overview responses. Our findings show substantial differences in the information returned for queries representative of general public information seeking compared with those reflecting conspiratorial perspectives. These differences appear to arise partly from Google's efforts to moderate sensitive topics, but also from the limitations of those interventions in recognising and responding to conspiratorial modes of query formulation. AI Overviews likewise vary according to query framing and generally attempt to debunk conspiratorial claims. However, these responses are often brief, provide limited supporting evidence, and are less effective for the newer 15-minute cities conspiracy theory, suggesting that current AI-mediated search guardrails remain uneven and require further development.",
+      "keywords": [],
+      "doi": "10.1177/1329878x261481856",
+      "doi_url": "https://doi.org/10.1177/1329878x261481856",
+      "url": null,
+      "arxiv_url": null,
+      "pdf_url": null,
+      "publication_date": "2026",
+      "citation_count": 1,
+      "reference_count": 67,
+      "venue": "Media International Australia",
+      "authors": [
+        "Kateryna Kasianenko",
+        "Caroline Gardam",
+        "Katherine M. FitzGerald",
+        "Ashwin Nagappa",
+        "Axel Bruns",
+        "Shir Weinbrand",
+        "Daniel Angus",
+        "Samantha Vilkins",
+        "Abdul Karim Obeid"
+      ],
+      "subjects": [],
+      "is_open_access": null,
+      "source": "crossref",
+      "confidence_score": 0.8285714285714285
+    }
+  },
+  "9559cb3212677059": {
+    "entry_key": "noauthor_undated-yy",
+    "entry_title": "Statistical detectability of coordination",
+    "cached_at": "2026-11-03T18:30:34.088678",
+    "metadata": {
+      "abstract": "Information operations exploit coordinated activity on social media to amplify messages and manipulate public discourse. A common approach to coordination detection is to project account-entity interactions into account similarity networks based on temporal proximity, action counts, or behavioural similarity, and identify dense subgraphs or behavioural clusters. However, the current methodology finds groups of co-activated accounts or partitions all users into most similarly acting clusters, even when the accounts are acting independently of each other or the co-activity is due to some expected source. We formulate coordination detection based on hypothesis testing of account pairs and compare different null models. We connect the resulting pairwise scores to the planted-submatrix detection problem and derive statistical and computational limits as functions of group size, population size, and signal strength. We estimate the signal for 7 modalities of coordination over 26 labelled information-operation datasets, and compare the predicted regime with the performance of recovery heuristics. Our method achieves higher agreement with the labelled ground truth than previously reported, but the choice of null model is important and it changes the regime of most modalities. While it is always possible to extract a set of significantly densely co-acting accounts across nearly all modalities regardless of regime, density alone is uninformative of detection performance, rendering anomalous cluster discovery a poor proxy for recovering an information operation. Detectability boundaries establish whether an operation of a given size and signal can be recovered at all, and how much confidence a flagged group warrants.",
+      "keywords": [],
+      "doi": null,
+      "doi_url": null,
+      "url": null,
+      "arxiv_url": "http://arxiv.org/abs/2610.37970v1",
+      "pdf_url": "https://arxiv.org/pdf/2610.37970v1",
+      "publication_date": "2026-10-27",
+      "citation_count": null,
+      "reference_count": null,
+      "venue": null,
+      "authors": [
+        "Letizia Iannucci",
+        "Antonis Matakos",
+        "Mikko Kivelä"
+      ],
+      "subjects": [
+        "cs.SI"
+      ],
+      "is_open_access": true,
+      "source": "arxiv",
+      "confidence_score": 0.7
+    }
+  },
+  "1f7e8b400b7e9155": {
+    "entry_key": "Rogers2026-zz",
+    "entry_title": "The performance of borderline content on Facebook",
+    "cached_at": "2026-11-03T18:30:36.489024",
+    "metadata": {
+      "abstract": null,
+      "keywords": [],
+      "doi": "10.4324/9781003693192-4",
+      "doi_url": "https://doi.org/10.4324/9781003693192-4",
+      "url": null,
+      "arxiv_url": null,
+      "pdf_url": null,
+      "publication_date": "2026-09-22",
+      "citation_count": 0,
+      "reference_count": 0,
+      "venue": "Content Moderation across Social Media Platforms",
+      "authors": [
+        "Richard Rogers",
+        "Kamila Koronska"
+      ],
+      "subjects": [],
+      "is_open_access": null,
+      "source": "crossref",
+      "confidence_score": 0.86
     }
   }
 }
