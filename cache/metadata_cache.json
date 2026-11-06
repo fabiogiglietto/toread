@@ -9074,5 +9074,34 @@
       "source": "crossref",
       "confidence_score": 0.8999999999999999
     }
+  },
+  "eb3f8a0c960fbe4f": {
+    "entry_key": "Iannucci2026-my",
+    "entry_title": "Statistical Detectability of Coordination",
+    "cached_at": "2026-11-06T16:26:06.065918",
+    "metadata": {
+      "abstract": "Information operations exploit coordinated activity on social media to amplify messages and manipulate public discourse. A common approach to coordination detection is to project account-entity interactions into account similarity networks based on temporal proximity, action counts, or behavioural similarity, and identify dense subgraphs or behavioural clusters. However, the current methodology finds groups of co-activated accounts or partitions all users into most similarly acting clusters, even when the accounts are acting independently of each other or the co-activity is due to some expected source. We formulate coordination detection based on hypothesis testing of account pairs and compare different null models. We connect the resulting pairwise scores to the planted-submatrix detection problem and derive statistical and computational limits as functions of group size, population size, and signal strength. We estimate the signal for 7 modalities of coordination over 26 labelled information-operation datasets, and compare the predicted regime with the performance of recovery heuristics. Our method achieves higher agreement with the labelled ground truth than previously reported, but the choice of null model is important and it changes the regime of most modalities. While it is always possible to extract a set of significantly densely co-acting accounts across nearly all modalities regardless of regime, density alone is uninformative of detection performance, rendering anomalous cluster discovery a poor proxy for recovering an information operation. Detectability boundaries establish whether an operation of a given size and signal can be recovered at all, and how much confidence a flagged group warrants.",
+      "keywords": [],
+      "doi": null,
+      "doi_url": null,
+      "url": null,
+      "arxiv_url": "http://arxiv.org/abs/2610.37970v1",
+      "pdf_url": "https://arxiv.org/pdf/2610.37970v1",
+      "publication_date": "2026-10-27",
+      "citation_count": null,
+      "reference_count": null,
+      "venue": null,
+      "authors": [
+        "Letizia Iannucci",
+        "Antonis Matakos",
+        "Mikko Kivelä"
+      ],
+      "subjects": [
+        "cs.SI"
+      ],
+      "is_open_access": true,
+      "source": "arxiv",
+      "confidence_score": 0.7428571428571428
+    }
   }
 }
