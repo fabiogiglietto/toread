@@ -9103,5 +9103,61 @@
       "source": "crossref",
       "confidence_score": 0.83
     }
+  },
+  "8696add04d3693dd": {
+    "entry_key": "Altoe2026-wu",
+    "entry_title": "Predicting narrative virality on social media streams for pre-peak misinformation triage",
+    "cached_at": "2026-11-08T08:13:10.306362",
+    "metadata": {
+      "abstract": null,
+      "keywords": [],
+      "doi": "10.1145/3799682.3840688",
+      "doi_url": "https://doi.org/10.1145/3799682.3840688",
+      "url": null,
+      "arxiv_url": null,
+      "pdf_url": null,
+      "publication_date": "2026-11-07",
+      "citation_count": 0,
+      "reference_count": 54,
+      "venue": "Proceedings of the 35th ACM International Conference on Information and Knowledge Management",
+      "authors": [
+        "Filipe Altoe",
+        "Sérgio Miguel Gonçalves Pinto",
+        "H. Sofia Pinto"
+      ],
+      "subjects": [],
+      "is_open_access": null,
+      "source": "crossref",
+      "confidence_score": 0.86
+    }
+  },
+  "33537008e9a4aa6b": {
+    "entry_key": "Li2026-zv",
+    "entry_title": "Defective, amplified, contested: Folk conceptualizations of AI slop",
+    "cached_at": "2026-11-08T08:13:10.529361",
+    "metadata": {
+      "abstract": "AI slop has flooded social media feeds with overprocessed and derivative content--Jesus fusing with a shrimp, a humanoid orange chubby cat shoplifting, and a \"hero\" dog rescuing a human child after a plane crash. This might be no laughing matter, as waves of media coverage have taken a distinctly negative bent, emphasizing its low quality, ethical concerns, and threats to human creativity. Despite extensive attention from politicians and technologists, the perspectives of everyday users--the very audience most exposed to this phenomenon--remain largely unexplored. This descriptive work explored how Reddit users experience, conceptualize and contest AI slop. Inductive thematic analysis of posts and comments across six slop-related subreddits identified four themes covering constitutional defects, algorithmic overreach, user resistance, and entertainment outcomes--ranging from anxieties about eroding agency, moral norms, creativity, and existential questions to defensive distinctions between quality AI content and slop. We derive a user-driven definition: AI slop is audience-contested AI-generated content characterized by constitutional defects and enabled by platform logics. We operationalize slop through a facet-theoretical framework to inform future research into this fuzzy category.",
+      "keywords": [],
+      "doi": null,
+      "doi_url": null,
+      "url": null,
+      "arxiv_url": "http://arxiv.org/abs/2610.14231v1",
+      "pdf_url": "https://arxiv.org/pdf/2610.14231v1",
+      "publication_date": "2026-10-09",
+      "citation_count": null,
+      "reference_count": null,
+      "venue": null,
+      "authors": [
+        "Zhixin Li",
+        "Jaime Banks"
+      ],
+      "subjects": [
+        "cs.CY",
+        "cs.HC"
+      ],
+      "is_open_access": true,
+      "source": "arxiv",
+      "confidence_score": 0.76
+    }
   }
 }
