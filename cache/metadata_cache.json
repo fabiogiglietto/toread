@@ -9184,5 +9184,60 @@
       "source": "crossref",
       "confidence_score": 0.95
     }
+  },
+  "50654c90dc5000a2": {
+    "entry_key": "Hartley2006-oi",
+    "entry_title": "The public sphere on the beach",
+    "cached_at": "2026-11-13T10:39:25.780258",
+    "metadata": {
+      "abstract": "This article discusses the idea of a ‘cultural public sphere’ together with related notions of ‘the’ public sphere, ‘counterpublics’ and ‘discourse publics’. It argues that the cultural public sphere emerges from cultural sources (e.g. ethnic identity) rather than political ones and is organized through private pursuits such as music, domestic life and leisure or entertainment venues. The article investigates the formation of a cultural public sphere by using the December 2005 ‘race riots’ on Australian beaches as a case study. It argues that culture interacts with politics as ‘new’ media interact with mainstream news; and that counterpublic spheres interact with the cultural public sphere as ‘internal’ communication coexists with ‘external’. The role of mainstream media in reporting and commenting on extreme displays is in part to stage conflict so that the general public can think through cultural-political issues via the theatrics.",
+      "keywords": [],
+      "doi": "10.1177/1367549406066077",
+      "doi_url": "https://doi.org/10.1177/1367549406066077",
+      "url": null,
+      "arxiv_url": null,
+      "pdf_url": null,
+      "publication_date": "2006",
+      "citation_count": 55,
+      "reference_count": 61,
+      "venue": "European Journal of Cultural Studies",
+      "authors": [
+        "John Hartley",
+        "Joshua Green"
+      ],
+      "subjects": [],
+      "is_open_access": null,
+      "source": "crossref",
+      "confidence_score": 0.86
+    }
+  },
+  "ed1ad830993c0506": {
+    "entry_key": "Klinger2023-qu",
+    "entry_title": "From the fringes into mainstream politics: intermediary networks and movement-party coordination of a global anti-immigration campaign in Germany",
+    "cached_at": "2026-11-13T10:39:28.716645",
+    "metadata": {
+      "abstract": null,
+      "keywords": [],
+      "doi": "10.1080/1369118x.2022.2050415",
+      "doi_url": "https://doi.org/10.1080/1369118x.2022.2050415",
+      "url": null,
+      "arxiv_url": null,
+      "pdf_url": null,
+      "publication_date": "2023-07-04",
+      "citation_count": 40,
+      "reference_count": 54,
+      "venue": "Information, Communication &amp; Society",
+      "authors": [
+        "Ulrike Klinger",
+        "W. Lance Bennett",
+        "Curd Benjamin Knüpfer",
+        "Franziska Martini",
+        "Xixuan Zhang"
+      ],
+      "subjects": [],
+      "is_open_access": null,
+      "source": "crossref",
+      "confidence_score": 0.823076923076923
+    }
   }
 }
