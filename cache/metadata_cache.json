@@ -2,83 +2,83 @@
   "c5a7d0326e1f61c6": {
     "entry_key": "Kristensen2025-ni",
     "entry_title": "Platform polarization. Do alternative platforms drive discursive polarization?",
-    "cached_at": "2026-11-17T17:58:15.976157",
+    "cached_at": "2026-11-28T12:32:35.908658",
     "metadata": null,
     "failed": true,
     "failure_reason": "Could not enrich entry: Kristensen2025-ni | No DOI available | Title length: 78 chars | Authors: Kristensen, Jakob Bæk, Kristensen, Jakob Bæk | APIs: Crossref enabled, Semantic Scholar enabled, ArXiv enabled",
-    "last_failure_at": "2026-11-17T17:58:15.976165"
+    "last_failure_at": "2026-11-28T12:32:35.908667"
   },
   "65d46046ae1c898f": {
     "entry_key": "Gaw2025-ru",
     "entry_title": "Influence operations as brokerage: Political-economic infrastructures of manipulation in the 2022 Philippine elections",
-    "cached_at": "2026-11-17T17:58:19.609536",
+    "cached_at": "2026-11-28T12:32:38.938537",
     "metadata": null,
     "failed": true,
     "failure_reason": "Could not enrich entry: Gaw2025-ru | No DOI available | Title length: 118 chars | Authors: Gaw, Fatima, Agonos, Mariam Jayne... | APIs: Crossref enabled, Semantic Scholar enabled, ArXiv enabled",
-    "last_failure_at": "2026-11-17T17:58:19.609545"
+    "last_failure_at": "2026-11-28T12:32:38.938545"
   },
   "b41f425da41887a0": {
     "entry_key": "Marwick2025-vx",
     "entry_title": "True costs of misinformation| mountains of evidence: Processual “redpilling” as a Socio-technical effect of disinformation",
-    "cached_at": "2026-11-17T17:58:22.639596",
+    "cached_at": "2026-11-28T12:32:42.106857",
     "metadata": null,
     "failed": true,
     "failure_reason": "Could not enrich entry: Marwick2025-vx | No DOI available | Title length: 122 chars | Authors: Marwick, Alice E, Furl, Katherine | APIs: Crossref enabled, Semantic Scholar enabled, ArXiv enabled",
-    "last_failure_at": "2026-11-17T17:58:22.639604"
+    "last_failure_at": "2026-11-28T12:32:42.106866"
   },
   "657c6670d7b624b8": {
     "entry_key": "noauthor_undated-fm",
     "entry_title": "Volume 7 issue 2 article 4",
-    "cached_at": "2026-11-17T17:57:44.929270",
+    "cached_at": "2026-11-28T12:32:32.994441",
     "metadata": null,
     "failed": true,
     "failure_reason": "Could not enrich entry: noauthor_undated-fm | No DOI available | Title length: 26 chars | No authors available | APIs: Crossref enabled, Semantic Scholar enabled, ArXiv enabled",
-    "last_failure_at": "2026-11-17T17:57:44.929279"
+    "last_failure_at": "2026-11-28T12:32:32.994450"
   },
   "9195fcc80574052b": {
     "entry_key": "Vincent_undated-re",
     "entry_title": "What our second measurement says about misinformation on major platforms in Europe",
-    "cached_at": "2026-11-17T17:58:26.065366",
+    "cached_at": "2026-11-28T12:31:36.773607",
     "metadata": null,
     "failed": true,
     "failure_reason": "Could not enrich entry: Vincent_undated-re | No DOI available | Title length: 82 chars | Authors: Vincent, Emmanuel, Crisan, Daiana | APIs: Crossref enabled, Semantic Scholar enabled, ArXiv enabled",
-    "last_failure_at": "2026-11-17T17:58:26.065374"
+    "last_failure_at": "2026-11-28T12:31:36.773617"
   },
   "fac502d9bb5bbba8": {
     "entry_key": "UnknownUnknown-db",
     "entry_title": "What 81,000 people told us about the economics of AI",
-    "cached_at": "2026-11-17T17:59:48.006834",
+    "cached_at": "2026-11-28T12:32:10.344120",
     "metadata": null,
     "failed": true,
     "failure_reason": "Could not enrich entry: UnknownUnknown-db | No DOI available | Title length: 52 chars | No authors available | APIs: Crossref enabled, Semantic Scholar enabled, ArXiv enabled",
-    "last_failure_at": "2026-11-17T17:59:48.006840"
+    "last_failure_at": "2026-11-28T12:32:10.344132"
   },
   "fc9373f3342e79d3": {
     "entry_key": "Gottfried2026-ww",
     "entry_title": "Americans and AI 2026: Chatbots, Smart Devices and Views on Impact",
-    "cached_at": "2026-11-17T17:59:58.354100",
+    "cached_at": "2026-11-28T12:32:13.503428",
     "metadata": null,
     "failed": true,
     "failure_reason": "Could not enrich entry: Gottfried2026-ww | No DOI available | Title length: 66 chars | Authors: Gottfried, Jeffrey, Bishop, William... | APIs: Crossref enabled, Semantic Scholar enabled, ArXiv enabled",
-    "last_failure_at": "2026-11-17T17:59:58.354108"
+    "last_failure_at": "2026-11-28T12:32:13.503437"
   },
   "06e15083ae69cfa5": {
     "entry_key": "Hinck2026-yj",
     "entry_title": "Where's the Evidence that Respondents Understand Your Survey Questions?",
-    "cached_at": "2026-11-17T18:00:02.194637",
+    "cached_at": "2026-11-28T12:32:25.975861",
     "metadata": null,
     "failed": true,
     "failure_reason": "Could not enrich entry: Hinck2026-yj | No DOI available | Title length: 71 chars | Authors: Hinck, Musashi, King, Gary... | APIs: Crossref enabled, Semantic Scholar enabled, ArXiv enabled",
-    "last_failure_at": "2026-11-17T18:00:02.194645"
+    "last_failure_at": "2026-11-28T12:32:25.975873"
   },
   "667a9bec772d1fb6": {
     "entry_key": "Elfes2026-jb",
     "entry_title": "On narrative: The rhetorical mechanisms of online polarisation",
-    "cached_at": "2026-11-17T17:58:54.119833",
+    "cached_at": "2026-11-28T12:32:47.710603",
     "metadata": null,
     "failed": true,
     "failure_reason": "Could not enrich entry: Elfes2026-jb | No DOI available | Title length: 62 chars | Authors: Elfes, Jan, Bastos, Marco... | APIs: Crossref enabled, Semantic Scholar enabled, ArXiv enabled",
-    "last_failure_at": "2026-11-17T17:58:54.119841"
+    "last_failure_at": "2026-11-28T12:32:47.710611"
   },
   "cd312f9baf9a8a9b": {
     "entry_key": "Lewandowsky2012-vn",
@@ -215,11 +215,11 @@
   "3cddee86d2b1320d": {
     "entry_key": "King2026-av",
     "entry_title": "AI article reviews dominate human peer reviews at their best: Evidence and policy choices",
-    "cached_at": "2026-11-17T18:00:34.390905",
+    "cached_at": "2026-11-28T12:32:29.052546",
     "metadata": null,
     "failed": true,
     "failure_reason": "Could not enrich entry: King2026-av | No DOI available | Title length: 89 chars | Authors: King, Gary, Worthington, Steven | APIs: Crossref enabled, Semantic Scholar enabled, ArXiv enabled",
-    "last_failure_at": "2026-11-17T18:00:34.390913"
+    "last_failure_at": "2026-11-28T12:32:29.052570"
   },
   "6abbf835954368b9": {
     "entry_key": "Marwick2026-ss",
@@ -9470,6 +9470,32 @@
       "is_open_access": null,
       "source": "crossref",
       "confidence_score": 0.8999999999999999
+    }
+  },
+  "3c4ad9f7e699fd10": {
+    "entry_key": "Larsson2026-ga",
+    "entry_title": "From content to likes – how political parties’ campaign posts trigger user engagement across Facebook, Instagram and Twitter",
+    "cached_at": "2026-11-28T12:32:29.227951",
+    "metadata": {
+      "abstract": null,
+      "keywords": [],
+      "doi": "10.1080/19331681.2026.2767282",
+      "doi_url": "https://doi.org/10.1080/19331681.2026.2767282",
+      "url": null,
+      "arxiv_url": null,
+      "pdf_url": null,
+      "publication_date": "2026-11-27",
+      "citation_count": 0,
+      "reference_count": 53,
+      "venue": "Journal of Information Technology &amp; Politics",
+      "authors": [
+        "Anders Olof Larsson",
+        "Eli Skogerbø"
+      ],
+      "subjects": [],
+      "is_open_access": null,
+      "source": "crossref",
+      "confidence_score": 0.85
     }
   }
 }
